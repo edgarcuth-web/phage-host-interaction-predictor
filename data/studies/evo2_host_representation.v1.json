@@ -1,0 +1,153 @@
+{
+  "study_id": "evo2-host-representation:v1",
+  "task": "Unseen bacterial strain -> rank a fixed known-phage library for source-defined MLC positivity",
+  "development_status": "New ranking analysis on an already inspected cohort; no independent confirmation or model promotion",
+  "subset_manifest": "data/registry/genophi_ecoli_subset.v1.json",
+  "host_manifest": "data/studies/results/genophi_host_split.v1.csv",
+  "repo_files_sha256": {
+    "data/studies/genophi_host_baseline.resources.v1.json": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+    "data/studies/results/genophi_host_split.v1.csv": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+    "data/registry/genophi_ecoli_subset.v1.json": "0fdd836ca207121ac382814302efeedbdb9939b219a76e3130eb554f1b60bc97",
+    "data/studies/genophi_host_baseline.v1.json": "b717e0c5a5c788f19be84d441548fa0a89b111065827df9b39783ea6fecb12bf",
+    "data/studies/host_retrieval.v1.json": "32d75d4b54717d01f47a792e208685e3789671741071a2e5fa97734e92fe25b0",
+    "data/studies/host_similarity.v1.json": "33b9eb6eff92509104af12ca8ef8f64da7960d84a84b6275f0fa3a02bf029fdb",
+    "data/studies/genome_host_retrieval.v1.json": "f7d2e4114cf994d16282db59fbb72f9140fdbd21283b92a0a9922e8af1ff991d"
+  },
+  "resources": [
+    {
+      "id": "core_distances",
+      "kind": "table",
+      "path": "core_distances.tsv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/isolation_strains/panacota/tree/370+host_distance_matrix_orignames.tsv",
+      "size_bytes": 1917070,
+      "sha256": "1e65a30083d33f8f67b1c009049b473ae38ab3f3d6c7d91fb8639c013af64eb8"
+    },
+    {
+      "id": "defenses",
+      "kind": "table",
+      "path": "defenses.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/defense_finder/370+host_defense_systems_subtypes.csv",
+      "size_bytes": 115523,
+      "sha256": "5a950619a4a76206817869b30b8faaf9cd17f9ce17e4c8aa9e5f312781ddd5dd"
+    },
+    {
+      "id": "metadata",
+      "kind": "table",
+      "path": "metadata.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/picard_collection.csv",
+      "size_bytes": 42739,
+      "sha256": "e880b60cdc3df6f000b2f0e74985415bd11737d474ab68dd35d0085940cf5b13"
+    },
+    {
+      "id": "mlc",
+      "kind": "table",
+      "path": "mlc.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv",
+      "size_bytes": 158199,
+      "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829"
+    },
+    {
+      "id": "subset",
+      "kind": "table",
+      "path": "subset.csv",
+      "url": "https://raw.githubusercontent.com/Noonanav/GenoPHI/f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f/data/interaction_matrices/ecoli_interaction_matrix_subset.csv",
+      "size_bytes": 283309,
+      "sha256": "9a7caa8c48d475a2d0fa153ae61dab3b3484be8c266b0ef965f171218606a6e6"
+    }
+  ],
+  "expected_candidate_phages": 94,
+  "candidate_rule": "All 94 named library phages, fixed before evaluation; score every candidate, including pairs without labels; never filter by held-out positives",
+  "label_rule": "Reconcile source MLC with the registered binary subset; missing MLC is unknown, not zero. Primary metrics require every panel label for a host.",
+  "k": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "tie_policy": "Exact expectation over uniform within-score-tie permutations; random and constant global prevalence are identical expectations",
+  "denominators": "Report complete-panel host coverage, all complete-panel hosts and eligible complete-panel hosts with >=1 observed positive; no-positive hosts have Hit/MRR=0 and undefined Recall",
+  "primary": "Grouped-host test all-complete-host Hit@2: host_evo2_logistic minus phage_prevalence; all pairwise representation comparisons and phylogroups descriptive. No release promotion.",
+  "scenarios": [
+    "frozen grouped-host primary",
+    "random-host sensitivity",
+    "leave each published Clermont phylogroup out, purging any touching near-clonal host components from train"
+  ],
+  "random_split": {
+    "seed": 42,
+    "fractions": [
+      0.7,
+      0.15,
+      0.15
+    ]
+  },
+  "categorical_features": [
+    "O-type",
+    "H-type",
+    "LPS_type",
+    "ABC_serotype"
+  ],
+  "estimator": {
+    "C": 0.1,
+    "max_iter": 2000,
+    "rule": "Refit the unchanged host model in each scenario; unique train hosts only for preprocessing; no model selection"
+  },
+  "bootstrap": {
+    "metric": "hit@2",
+    "resamples": 2000,
+    "seed": 20261024,
+    "confidence": 0.95
+  },
+  "not_run": {
+    "GenoPHI": "No aligned full-panel strain-held-out scores available; official 25x25 demo is a separate cohort",
+    "Omnii": "No Omnii weights/scores; this is an analogous task definition, not numerical reproduction",
+    "Evo2": "Protocol and cache/evaluation path only until a real 40B deployment lock and complete verified cache are supplied; no GPU-derived result is claimed."
+  },
+  "limitations": [
+    "Already inspected development cohort and a fixed source assay; not an independent release holdout.",
+    "Published near-clonal groups are reused from the hashed frozen manifest; raw genomes and core distances are not re-verified by this table-only runner.",
+    "Random strain splitting may share related host groups with fitting; overlaps are reported.",
+    "Clermont phylogroups are published metadata, not reconstructed clades or the Omnii 37-strain holdout. All observed groups are reported, including small panels; intervals condition on each chosen group and fixed library.",
+    "Missing-panel hosts are excluded as whole hosts and counted. No claim for unevaluable hosts or unmeasured candidates.",
+    "Named phages include exact sequence duplicates; library is fixed by source IDs, with no phenotype-based merging.",
+    "Scores are uncalibrated MLC positivity scores; Hit@K describes finding at least one source-positive individual phage, not cocktail efficacy or clinical benefit.",
+    "All contrasts are descriptive development intervals; no multiplicity-adjusted discovery claim or automatic retraining.",
+    "The published distance matrix was built jointly on the source collection: label-free but transductive. This diagnostic is not a deployable online distance estimator or independent prospective validation.",
+    "Neighbour transfer measures similarity-associated predictive signal; it does not establish why a phage works or fails.",
+    "The fixed k=5 is prespecified without a sweep; boundary weights define a fractional kernel, not an expectation of a nonlinear missing-label estimator.",
+    "Unknown overlap of source genomes with Evo2 pretraining; held-out hosts refer only to supervised fitting.",
+    "8192-dimensional embeddings have much greater capacity than 136 4-mer features, and fixed C does not equalize capacity or effective regularization.",
+    "Sampled windows may miss causal loci; embeddings do not establish a mechanistic susceptibility explanation."
+  ],
+  "parent_protocol": "data/studies/host_similarity.v1.json",
+  "neighbours": {
+    "k": 5,
+    "distance": "Pinned source core-genome distance; no distance fitting or outcome-based selection",
+    "tie_policy": "Fractional boundary weights: all strictly nearer hosts get weight 1; equal-distance boundary hosts share remaining neighbour mass",
+    "score": "For each phage, (weighted observed positives + 1) / (weighted observed labels + 2); no observed neighbour labels -> train-only Beta(1,1) phage prevalence. Missing labels never replaced by zero. Select neighbours globally before consulting phage labels."
+  },
+  "embedding": {
+    "model_name": "evo2_40b",
+    "layer": "blocks.28.mlp.l3",
+    "dimension": 8192,
+    "window_bp": 8192,
+    "max_windows_per_host": 32,
+    "contigs": "Canonicalize each IUPAC contig as min(forward,reverse-complement), sort lexicographically including duplicates. Do not concatenate or rotate circular genomes.",
+    "windows": "Non-overlapping windows within each canonical contig, including short final windows. Flatten in contig/start order. Select min(32,N) indices floor(i*(N-1)/(m-1)), or index 0 if m=1.",
+    "ambiguity": "Map non-ACGT IUPAC bases to N at the same position after canonicalization. Never delete bases.",
+    "strands": "Forward and reverse complement of every selected window; no BOS, EOS, padding, species tag or context carried between windows.",
+    "pooling": "Token mean per orientation in float32; average both orientations; host mean weighted by original window length, accumulated in float64 then stored float32. No layer selection, PCA, normalization or fine-tuning.",
+    "coverage": "Systematic sampled-window representation, not full-genome or whole-context encoding; export selected bases and total assembly bases.",
+    "deployment_lock": "Before even the pilot, bind local checkpoint SHA256, installed config SHA256 and software versions/revisions plus precision and hardware. Actual runtime hashes unavailable in this session; protocol alone is not a frozen deployed checkpoint.",
+    "pilot": "First three lexicographically sorted cohort hosts; hardware/time/QC only, never examine pilot interaction outcomes. Same weights/layer/precision/windows for full run; changes require a versioned amendment before scoring.",
+    "source_revision": "53f195997257c56c00e5ef8d33a54f5baad143a6",
+    "source_url": "https://github.com/ArcInstitute/evo2/tree/53f195997257c56c00e5ef8d33a54f5baad143a6",
+    "source_note": "Upstream demonstrates embeddings at blocks.28.mlp.l3 on 7B; using that module on 40B is a prespecified engineering choice, not a published optimal phage-host representation. Confirm module and output width during pilot; fail rather than substitute."
+  },
+  "representation_comparison": [
+    "annotations",
+    "host_4mer_logistic",
+    "hybrid_4mer_logistic",
+    "host_evo2_logistic",
+    "hybrid_evo2_logistic"
+  ]
+}

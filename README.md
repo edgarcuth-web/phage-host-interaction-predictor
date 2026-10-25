@@ -183,6 +183,19 @@ concatenation under the same splits, 94-candidate panel and fixed per-known-phag
 logistic specification. It needs no GPU and reports every phylogroup failure.
 See [the protocol, full results and verification](docs/genome-host-retrieval.md).
 
+## Host similarity and Evo2 comparison protocol
+
+The next host comparison adds a fixed five-neighbour control, per-host distance
+and prevalence-shift diagnostics, and a separately specified Evo2-40B cache path:
+
+```bash
+python scripts/run_host_similarity.py --fetch --outdir artifacts/host_similarity_v1
+```
+
+See [similarity results, the Evo2 protocol and GPU handoff](docs/host-similarity-evo2.md).
+The real 40B extraction and hardware pilot have not run; the deployment lock must
+be created on the existing GPU installation before extraction.
+
 ## Optional GenoPHI genome-aware reference
 
 GenoPHI's official 25-strain x 25-phage protein-family demo can verify the path
