@@ -1,0 +1,41 @@
+{
+  "study_id": "host-window-sampling:v1",
+  "parent_protocol": "data/studies/genome_host_retrieval.v1.json",
+  "parent_sha256": "f7d2e4114cf994d16282db59fbb72f9140fdbd21283b92a0a9922e8af1ff991d",
+  "sampling_control": {
+    "window_bp": 8192,
+    "pool_windows": 32,
+    "budgets": [
+      1,
+      4,
+      32
+    ]
+  },
+  "rule": "Canonical contigs and existing 32-window selection first; retain full-length windows. Budget 1 selects first full window (matches API pilot); budget 4 uses evenly spaced floor indices within that full-window pool; budget 32 uses all full windows. If fewer windows exist, use all and report actual coverage. No outcome-dependent replacement.",
+  "overrides": {
+    "study_id": "host-window-sampling:v1",
+    "primary": "Descriptive grouped-test all-complete-host Hit@2 contrasts: each sampled 4-mer representation minus full-genome 4-mer. No noninferiority, representation selection or release promotion; all validation/random/phylogroup results retained.",
+    "not_run": {
+      "GenoPHI": "No aligned full-panel strain-held-out scores available; official 25x25 demo is a separate cohort",
+      "Omnii": "No Omnii weights/scores; this is an analogous task definition, not numerical reproduction",
+      "Evo2": "No new inference. CPU sampling control only; cannot establish Evo2 quality, superiority or an optimal embedding sampling budget."
+    },
+    "limitations": [
+      "Already inspected development cohort and a fixed source assay; not an independent release holdout.",
+      "Host FASTA bytes and canonical assembly identities are reverified; near-clonal groups remain the previously frozen groups, not newly reconstructed.",
+      "Random strain splitting may share related host groups with fitting; overlaps are reported.",
+      "Clermont phylogroups are published metadata, not reconstructed clades or the Omnii 37-strain holdout. All observed groups are reported, including small panels; intervals condition on each chosen group and fixed library.",
+      "Missing-panel hosts are excluded as whole hosts and counted. No claim for unevaluable hosts or unmeasured candidates.",
+      "Named phages include exact sequence duplicates; library is fixed by source IDs, with no phenotype-based merging.",
+      "Scores are uncalibrated MLC positivity scores; Hit@K describes finding at least one source-positive individual phage, not cocktail efficacy or clinical benefit.",
+      "All contrasts are descriptive development intervals; no multiplicity-adjusted discovery claim or automatic retraining.",
+      "Simple host composition with known-phage identity; not a foundation model or explicit host-phage mechanistic model.",
+      "Regularization is fixed at C=0.1 from the prior study; concatenating features changes effective regularization. No best representation is selected for release.",
+      "This is a separate CPU sampling control, not the exact local Evo2 32-window protocol: short sampled tails are excluded, actual support is reported.",
+      "4-mer reverse-complement invariance makes a separate reverse-strand count unnecessary. This does not hold for contextual embeddings.",
+      "Sampling preserves composition signal differently from a foundation model; no inference that similar 4-mer performance implies sufficient Evo2 coverage.",
+      "Already inspected development splits; every sampling contrast is exploratory. No held-out group is used for tuning or model promotion.",
+      "All sampled feature sets contain the same 136 frequencies. Frequencies are normalized by valid within-window 4-mer counts; no cross-window adjacency, labels or QC covariates enter a model."
+    ]
+  }
+}
