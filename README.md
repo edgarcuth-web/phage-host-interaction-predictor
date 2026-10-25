@@ -208,6 +208,12 @@ use a separately frozen hosted protocol, per-orientation checkpoints and an
 aggregate download budget. They measure access, pooling and cache recovery;
 susceptibility prediction and the full representation comparison remain separate.
 
+The [CPU window-sampling control](docs/host-window-sampling.md) compares 1, 4
+and up to 32 full windows with whole-genome 4-mer composition under the same
+fixed-panel retrieval protocol. It reports sampling loss, actual coverage and
+transfer projections without new NVIDIA calls. Its results do not establish
+Evo2 quality or a sufficient embedding sampling budget.
+
 ## Optional GenoPHI genome-aware reference
 
 GenoPHI's official 25-strain x 25-phage protein-family demo can verify the path
