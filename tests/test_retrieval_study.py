@@ -126,3 +126,25 @@ def test_fit_failure_does_not_publish_partial_run(local_study, monkeypatch):
         run_retrieval_study(repo, source, output)
     assert not output.exists()
     assert not list(output.parent.glob(".output.*"))
+
+
+def test_similarity_study_keeps_diagnostics_and_old_scores(local_study):
+    repo, source, output, plan = local_study
+    original = run_retrieval_study(repo, source, output)
+    hosts = list("ABCDEFGHI")
+    pd.DataFrame(np.abs(np.arange(9)[:, None] - np.arange(9)[None, :]),
+                 index=hosts, columns=hosts).to_csv(source / "core.tsv", sep="\t")
+    plan["resources"].append({"kind": "table", "id": "core_distances", "path": "core.tsv",
+                               "size_bytes": (source / "core.tsv").stat().st_size,
+                               "sha256": sha256_file(source / "core.tsv")})
+    plan["neighbours"] = {"k": 5}
+    (repo / "data/studies/host_similarity.v1.json").write_text(json.dumps(plan))
+    out = output.with_name("similarity")
+    result = run_retrieval_study(repo, source, out, similarity=True)
+    assert [r for r in result["metrics"] if r["model"] != "core_neighbour"] == original["metrics"]
+    d = pd.read_csv(out / "host_diagnostics.csv")
+    assert len(d) == len(pd.read_csv(out / "per_host_metrics.csv"))
+    assert np.isfinite(d.nearest_train_distance).all()
+    assert d.loc[d.model.eq("phage_prevalence"), "hit@2_delta_vs_prevalence"].eq(0).all()
+    shifts = pd.read_csv(out / "phage_prevalence_shift.csv")
+    assert set(shifts.groupby(["scenario", "partition"]).size()) == {3}

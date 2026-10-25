@@ -16,8 +16,11 @@ MISSING = "__NOT_REPORTED__"
 
 def _numeric(frame, columns):
     values = frame.loc[:, columns].to_numpy(dtype=float)
-    if not np.isfinite(values).all() or (values < 0).any():
-        raise ValueError("defense counts must be finite and non-negative")
+    # Only the explicitly named embedding dimensions may be signed. Preserve
+    # the historical count/frequency validation and all old model serialization.
+    nonnegative = [i for i, column in enumerate(columns) if not column.startswith("evo2:")]
+    if not np.isfinite(values).all() or (values[:, nonnegative] < 0).any():
+        raise ValueError("numeric features must be finite; counts/frequencies must be non-negative")
     return values
 
 
