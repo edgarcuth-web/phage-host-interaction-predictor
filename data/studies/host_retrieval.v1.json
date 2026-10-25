@@ -1,0 +1,104 @@
+{
+  "study_id": "known-phage-host-retrieval:v1",
+  "task": "Unseen bacterial strain -> rank a fixed known-phage library for source-defined MLC positivity",
+  "development_status": "New ranking analysis on an already inspected cohort; no independent confirmation or model promotion",
+  "subset_manifest": "data/registry/genophi_ecoli_subset.v1.json",
+  "host_manifest": "data/studies/results/genophi_host_split.v1.csv",
+  "repo_files_sha256": {
+    "data/studies/genophi_host_baseline.resources.v1.json": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+    "data/studies/results/genophi_host_split.v1.csv": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+    "data/registry/genophi_ecoli_subset.v1.json": "0fdd836ca207121ac382814302efeedbdb9939b219a76e3130eb554f1b60bc97",
+    "data/studies/genophi_host_baseline.v1.json": "b717e0c5a5c788f19be84d441548fa0a89b111065827df9b39783ea6fecb12bf"
+  },
+  "resources": [
+    {
+      "id": "defenses",
+      "kind": "table",
+      "path": "defenses.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/defense_finder/370+host_defense_systems_subtypes.csv",
+      "size_bytes": 115523,
+      "sha256": "5a950619a4a76206817869b30b8faaf9cd17f9ce17e4c8aa9e5f312781ddd5dd"
+    },
+    {
+      "id": "metadata",
+      "kind": "table",
+      "path": "metadata.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/picard_collection.csv",
+      "size_bytes": 42739,
+      "sha256": "e880b60cdc3df6f000b2f0e74985415bd11737d474ab68dd35d0085940cf5b13"
+    },
+    {
+      "id": "mlc",
+      "kind": "table",
+      "path": "mlc.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv",
+      "size_bytes": 158199,
+      "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829"
+    },
+    {
+      "id": "subset",
+      "kind": "table",
+      "path": "subset.csv",
+      "url": "https://raw.githubusercontent.com/Noonanav/GenoPHI/f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f/data/interaction_matrices/ecoli_interaction_matrix_subset.csv",
+      "size_bytes": 283309,
+      "sha256": "9a7caa8c48d475a2d0fa153ae61dab3b3484be8c266b0ef965f171218606a6e6"
+    }
+  ],
+  "expected_candidate_phages": 94,
+  "candidate_rule": "All 94 named library phages, fixed before evaluation; score every candidate, including pairs without labels; never filter by held-out positives",
+  "label_rule": "Reconcile source MLC with the registered binary subset; missing MLC is unknown, not zero. Primary metrics require every panel label for a host.",
+  "k": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "tie_policy": "Exact expectation over uniform within-score-tie permutations; random and constant global prevalence are identical expectations",
+  "denominators": "Report complete-panel host coverage, all complete-panel hosts and eligible complete-panel hosts with >=1 observed positive; no-positive hosts have Hit/MRR=0 and undefined Recall",
+  "primary": "Grouped-host test, host-macro all-complete-host Hit@2 difference: host logistic minus train-only per-phage prevalence; descriptive paired 95% host-group interval",
+  "scenarios": [
+    "frozen grouped-host primary",
+    "random-host sensitivity",
+    "leave each published Clermont phylogroup out, purging any touching near-clonal host components from train"
+  ],
+  "random_split": {
+    "seed": 42,
+    "fractions": [
+      0.7,
+      0.15,
+      0.15
+    ]
+  },
+  "categorical_features": [
+    "O-type",
+    "H-type",
+    "LPS_type",
+    "ABC_serotype"
+  ],
+  "estimator": {
+    "C": 0.1,
+    "max_iter": 2000,
+    "rule": "Refit the unchanged host model in each scenario; unique train hosts only for preprocessing; no model selection"
+  },
+  "bootstrap": {
+    "metric": "hit@2",
+    "resamples": 2000,
+    "seed": 20261024,
+    "confidence": 0.95
+  },
+  "not_run": {
+    "GenoPHI": "No aligned full-panel strain-held-out scores available; official 25x25 demo is a separate cohort",
+    "genome_model": "No genome representations or GPU inference in this ranking study",
+    "Omnii": "No Omnii weights/scores; this is an analogous task definition, not numerical reproduction"
+  },
+  "limitations": [
+    "Already inspected development cohort and a fixed source assay; not an independent release holdout.",
+    "Published near-clonal groups are reused from the hashed frozen manifest; raw genomes and core distances are not re-verified by this table-only runner.",
+    "Random strain splitting may share related host groups with fitting; overlaps are reported.",
+    "Clermont phylogroups are published metadata, not reconstructed clades or the Omnii 37-strain holdout. All observed groups are reported, including small panels; intervals condition on each chosen group and fixed library.",
+    "Missing-panel hosts are excluded as whole hosts and counted. No claim for unevaluable hosts or unmeasured candidates.",
+    "Named phages include exact sequence duplicates; library is fixed by source IDs, with no phenotype-based merging.",
+    "Scores are uncalibrated MLC positivity scores; Hit@K describes finding at least one source-positive individual phage, not cocktail efficacy or clinical benefit.",
+    "All contrasts are descriptive development intervals; no multiplicity-adjusted discovery claim or automatic retraining."
+  ]
+}
