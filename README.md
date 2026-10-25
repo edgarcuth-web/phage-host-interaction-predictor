@@ -165,6 +165,22 @@ GenoPHI is pinned to version 1.0.3 and its demo data to commit
 `f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f`. See
 [`docs/step3_genophi_reference.md`](docs/step3_genophi_reference.md).
 
+## Evo2 retrieval reference
+
+Reproduce the upstream species-level retrieval metrics without a GPU:
+
+```bash
+python scripts/run_evo2_reference.py --fetch
+```
+
+This downloads approximately 49 MB of pinned upstream scripts, mapping and
+precomputed score matrices, verifies every file's SHA-256, and runs the original
+five single-method evaluations and prespecified four-way RRF. All six methods
+match the published rounded reference metrics on 4,490 phages. This is a
+**precomputed-score reproduction**; Evo2 embedding generation and the 40B
+comparison have not been run. See the
+[results and next experiment](docs/evo2-retrieval-reference.md).
+
 ## Milestones
 
 - [x] Create a reproducible Python project skeleton
@@ -186,6 +202,8 @@ GenoPHI is pinned to version 1.0.3 and its demo data to commit
 - [x] Evaluate unseen-phage regimes with frozen sequence groups and report inconclusive additive-baseline gains
 - [ ] Add repeated group evaluation and an independent release holdout
 - [ ] Compare explicit host–phage pair features with available pretrained representations under the same protocol
+- [x] Reproduce Evo2 species-level retrieval metrics from pinned published score matrices
+- [ ] Regenerate the Evo2-7B embeddings and compare 40B under a separately frozen protocol
 
 ## Scope
 

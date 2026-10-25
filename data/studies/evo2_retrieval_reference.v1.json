@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "study_id": "evo2_retrieval_reference.v1",
+  "source_repository": "https://github.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction",
+  "source_revision": "ec5b77384609dd8a11e3476b5212e893faaa6b27",
+  "task": "closed_world_phage_to_host_species_retrieval",
+  "mapping_path": "data/taxids/gram_neg_phage_host_pairs.csv",
+  "matrices": {
+    "blastn": "data/matrices/gram_neg/phage_host_score_blastn.csv",
+    "virhostmatcher": "data/matrices/gram_neg/phage_host_score_virhostmatcher.csv",
+    "phist": "data/matrices/gram_neg/phage_host_score_phist.csv",
+    "wish": "data/matrices/gram_neg/phage_host_score_wish.csv",
+    "evo2": "data/matrices/gram_neg/phage_host_score_evo2_virusbankonly.csv"
+  },
+  "fusion": {
+    "methods": [
+      "blastn",
+      "virhostmatcher",
+      "phist",
+      "evo2"
+    ],
+    "rrf_k": 60
+  },
+  "expected_evaluated_phages": 4490,
+  "expected_metrics": {
+    "blastn": {
+      "mrr": 0.303,
+      "hit@1": 0.2221,
+      "hit@5": 0.3802,
+      "hit@10": 0.4602
+    },
+    "virhostmatcher": {
+      "mrr": 0.3207,
+      "hit@1": 0.2315,
+      "hit@5": 0.3902,
+      "hit@10": 0.4929
+    },
+    "phist": {
+      "mrr": 0.2676,
+      "hit@1": 0.2209,
+      "hit@5": 0.3083,
+      "hit@10": 0.3381
+    },
+    "wish": {
+      "mrr": 0.2476,
+      "hit@1": 0.1692,
+      "hit@5": 0.302,
+      "hit@10": 0.4246
+    },
+    "evo2": {
+      "mrr": 0.3106,
+      "hit@1": 0.1939,
+      "hit@5": 0.4368,
+      "hit@10": 0.5541
+    },
+    "rrf": {
+      "mrr": 0.3681,
+      "hit@1": 0.2688,
+      "hit@5": 0.4689,
+      "hit@10": 0.5847
+    }
+  },
+  "absolute_tolerance": 5.1e-05,
+  "expected_metrics_source": "Pinned upstream README.md, Headline Reproduced Results; four-decimal rounding plus fusion CLI six-decimal rounding.",
+  "limitations": [
+    "Published precomputed scores only; this does not reproduce embedding generation or run Evo2-40B.",
+    "Closed-world species-level recorded-host retrieval is not strain-level susceptibility prediction.",
+    "Missing host associations are unknown, not measured negatives.",
+    "Transposing the matrix does not validate host-to-phage ranking, strain-level generalization or cocktail efficacy.",
+    "Frozen development and test cohorts and the independent 1500-phage normalization bank must be preserved for later embedding replication.",
+    "These results do not establish calibrated probabilities or experimental/clinical efficacy."
+  ],
+  "resources": [
+    {
+      "kind": "upstream",
+      "id": "README.md",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/README.md",
+      "size_bytes": 5141,
+      "sha256": "03e32b007729d2d3e494edf4864c56819aaab9dc95b257c1bf1ac3474e49818a"
+    },
+    {
+      "kind": "upstream",
+      "id": "LICENSE",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/LICENSE",
+      "size_bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "kind": "upstream",
+      "id": "code/compute_metrics.py",
+      "path": "code/compute_metrics.py",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/code/compute_metrics.py",
+      "size_bytes": 11877,
+      "sha256": "10462e7523433c24594d144ff41caa75fa38f19139c8e769d6e8da1c9b2e6cac"
+    },
+    {
+      "kind": "upstream",
+      "id": "code/rank_fusion.py",
+      "path": "code/rank_fusion.py",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/code/rank_fusion.py",
+      "size_bytes": 7831,
+      "sha256": "7fcc45d218665d830279c20d3c3eb9a6578e7c00bb667a15b144695cd298d6fb"
+    },
+    {
+      "kind": "upstream",
+      "id": "code/evaluate_rank_fusion_overall.py",
+      "path": "code/evaluate_rank_fusion_overall.py",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/code/evaluate_rank_fusion_overall.py",
+      "size_bytes": 8221,
+      "sha256": "6c06aae61dffff80cadf6ff17e6799fa7803a18fbdf0ddf4efb55259d564e734"
+    },
+    {
+      "kind": "upstream",
+      "id": "data/taxids/gram_neg_phage_host_pairs.csv",
+      "path": "data/taxids/gram_neg_phage_host_pairs.csv",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/data/taxids/gram_neg_phage_host_pairs.csv",
+      "size_bytes": 58576,
+      "sha256": "e7f3321efe3c40e0ad0e4c6196da6a8d3651115aa57141a8f1253132616515c8"
+    },
+    {
+      "kind": "upstream",
+      "id": "data/matrices/gram_neg/phage_host_score_blastn.csv",
+      "path": "data/matrices/gram_neg/phage_host_score_blastn.csv",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/data/matrices/gram_neg/phage_host_score_blastn.csv",
+      "size_bytes": 7377627,
+      "sha256": "de9856cbeb45c053b27fe7828655e63e312b5e92e3c8aa9eff96ad9587964e84"
+    },
+    {
+      "kind": "upstream",
+      "id": "data/matrices/gram_neg/phage_host_score_virhostmatcher.csv",
+      "path": "data/matrices/gram_neg/phage_host_score_virhostmatcher.csv",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/data/matrices/gram_neg/phage_host_score_virhostmatcher.csv",
+      "size_bytes": 13712723,
+      "sha256": "dcefe3f6eb10632473e3e1d02581518a80c2f4fba03c87cc2ab1ddeb49f7b4ec"
+    },
+    {
+      "kind": "upstream",
+      "id": "data/matrices/gram_neg/phage_host_score_phist.csv",
+      "path": "data/matrices/gram_neg/phage_host_score_phist.csv",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/data/matrices/gram_neg/phage_host_score_phist.csv",
+      "size_bytes": 2831899,
+      "sha256": "57ecd336aa940c1306ff088c2f917bcb156b5589043b61b40d0b80fae1560935"
+    },
+    {
+      "kind": "upstream",
+      "id": "data/matrices/gram_neg/phage_host_score_wish.csv",
+      "path": "data/matrices/gram_neg/phage_host_score_wish.csv",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/data/matrices/gram_neg/phage_host_score_wish.csv",
+      "size_bytes": 12329443,
+      "sha256": "b8eba5244cbee51ad6179206db685c1045613560353ceefd671aab0ab6e6bc5f"
+    },
+    {
+      "kind": "upstream",
+      "id": "data/matrices/gram_neg/phage_host_score_evo2_virusbankonly.csv",
+      "path": "data/matrices/gram_neg/phage_host_score_evo2_virusbankonly.csv",
+      "url": "https://raw.githubusercontent.com/Arsuaga-Vazquez-Lab/Evo2-Host-Prediction/ec5b77384609dd8a11e3476b5212e893faaa6b27/data/matrices/gram_neg/phage_host_score_evo2_virusbankonly.csv",
+      "size_bytes": 12947844,
+      "sha256": "7b494bfd49490fd16f9d9e4e27dde66302d81802fdcca3d777192d1c315298f3"
+    }
+  ]
+}

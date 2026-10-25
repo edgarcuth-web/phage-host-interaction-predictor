@@ -1,0 +1,205 @@
+{
+  "study_id": "evo2_retrieval_reference.v1",
+  "task": "closed_world_phage_to_host_species_retrieval",
+  "source_revision": "ec5b77384609dd8a11e3476b5212e893faaa6b27",
+  "protocol_sha256": "1b614e72c01c0a6ba6e6a344f38f198ece11d91103a10eec508e8ea0366c000e",
+  "code_base_revision": "ac7789f7182c779a124878f3a17396f9ae4831b6",
+  "code_sha256": {
+    "scripts/run_evo2_reference.py": "38db2141621f0786f4ea55d5d553d99f0e501381505c22011360259056d4c00c",
+    "src/phage_cocktail/__init__.py": "280d2957c45f8f0c4fc7d8746cd9ffd38c6f804663d17eb3802a80edec62ab2f",
+    "src/phage_cocktail/analysis.py": "a5a5bd05886499bb7fc7cac43e876678e09f9b070d765469518042c93a0ecf7e",
+    "src/phage_cocktail/artifacts.py": "a96f901d3b653bf22dbbc80d59adcf0f2f855d117db93f19580a131bcb0cc659",
+    "src/phage_cocktail/benchmark.py": "be6be1e3abaa2347e7eff42f507cc6eb0f4ed93823d13e6293bfc7eca199b992",
+    "src/phage_cocktail/cohort.py": "f54e1f19a82a3165b0bec523d80ed3f356990a903e7af7ea13b4d6f553a9c688",
+    "src/phage_cocktail/data.py": "7ed230c370d99cd451929171ce2a8db76a245d1e1455c37cdeef1f1db366e916",
+    "src/phage_cocktail/evo2_reference.py": "9c16500836e98ccc513e94f24d6d742dd128d54ef384f1a26b13c0096b24daef",
+    "src/phage_cocktail/genophi_reference.py": "29b113336119e963c8e0b9eef821346501e96d5967506104d475142d63bd9f62",
+    "src/phage_cocktail/host_baseline.py": "16c7b97f7d42a75abe1ddf4e3d40d4937e004eedaee9f22149367285b3da41f3",
+    "src/phage_cocktail/host_study.py": "d3eaf3b5738ef45a65905e3c4b05e32b4fa8c89127c8a09784fd00ae8a68b496",
+    "src/phage_cocktail/input_bundle.py": "d6ef3fe2ae342a166da0b6bed52ef99cd53394557a55d30fd7c18abc43f1f96a",
+    "src/phage_cocktail/model_interface.py": "2426b6573ca8128f45d2e1e0e0e39869ae80c7336c6c3a0cffd6b1a2a41b4e5a",
+    "src/phage_cocktail/pair_cohort.py": "4b0ec4dc6d23b12e767ff102c75f197bb049b04870cacffd970a73183a3e7560",
+    "src/phage_cocktail/paired_baseline.py": "22df6d5a3b3ef295ea9acf322deba477b29e3bb46926d85655649ab89b97864f",
+    "src/phage_cocktail/paired_splits.py": "4ea669786f653aca0d2ce5eacae14c96bf3df46bb81d267ebf9f9310abe5ae55",
+    "src/phage_cocktail/registry.py": "a33cb7484bcdbb3d26c699f02a45c9e00354f21fdd52818c5abb52f807cef194",
+    "src/phage_cocktail/split.py": "aed316aa5cd265ac65df7dd8e906b148fd891ad2e3da86dffcac9fa6fbabe5dd"
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "input_sha256": {
+    "README.md": "03e32b007729d2d3e494edf4864c56819aaab9dc95b257c1bf1ac3474e49818a",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "code/compute_metrics.py": "10462e7523433c24594d144ff41caa75fa38f19139c8e769d6e8da1c9b2e6cac",
+    "code/rank_fusion.py": "7fcc45d218665d830279c20d3c3eb9a6578e7c00bb667a15b144695cd298d6fb",
+    "code/evaluate_rank_fusion_overall.py": "6c06aae61dffff80cadf6ff17e6799fa7803a18fbdf0ddf4efb55259d564e734",
+    "data/taxids/gram_neg_phage_host_pairs.csv": "e7f3321efe3c40e0ad0e4c6196da6a8d3651115aa57141a8f1253132616515c8",
+    "data/matrices/gram_neg/phage_host_score_blastn.csv": "de9856cbeb45c053b27fe7828655e63e312b5e92e3c8aa9eff96ad9587964e84",
+    "data/matrices/gram_neg/phage_host_score_virhostmatcher.csv": "dcefe3f6eb10632473e3e1d02581518a80c2f4fba03c87cc2ab1ddeb49f7b4ec",
+    "data/matrices/gram_neg/phage_host_score_phist.csv": "57ecd336aa940c1306ff088c2f917bcb156b5589043b61b40d0b80fae1560935",
+    "data/matrices/gram_neg/phage_host_score_wish.csv": "b8eba5244cbee51ad6179206db685c1045613560353ceefd671aab0ab6e6bc5f",
+    "data/matrices/gram_neg/phage_host_score_evo2_virusbankonly.csv": "7b494bfd49490fd16f9d9e4e27dde66302d81802fdcca3d777192d1c315298f3"
+  },
+  "comparisons": {
+    "blastn": {
+      "evaluated_phages": 4490,
+      "observed": {
+        "mrr": 0.3030146251765644,
+        "hit@1": 0.22206747039485428,
+        "hit@5": 0.3801630692581672,
+        "hit@10": 0.46024832023563106
+      },
+      "expected": {
+        "mrr": 0.303,
+        "hit@1": 0.2221,
+        "hit@5": 0.3802,
+        "hit@10": 0.4602
+      },
+      "delta": {
+        "mrr": 1.4625176564420084e-05,
+        "hit@1": -3.252960514571468e-05,
+        "hit@5": -3.693074183280798e-05,
+        "hit@10": 4.8320235631060804e-05
+      },
+      "matches_reference": true
+    },
+    "virhostmatcher": {
+      "evaluated_phages": 4490,
+      "observed": {
+        "mrr": 0.3207238121177469,
+        "hit@1": 0.2315386763931789,
+        "hit@5": 0.39019965690318853,
+        "hit@10": 0.4928668754836889
+      },
+      "expected": {
+        "mrr": 0.3207,
+        "hit@1": 0.2315,
+        "hit@5": 0.3902,
+        "hit@10": 0.4929
+      },
+      "delta": {
+        "mrr": 2.3812117746935257e-05,
+        "hit@1": 3.86763931788936e-05,
+        "hit@5": -3.430968114614963e-07,
+        "hit@10": -3.312451631110047e-05
+      },
+      "matches_reference": true
+    },
+    "phist": {
+      "evaluated_phages": 4490,
+      "observed": {
+        "mrr": 0.26764825321493,
+        "hit@1": 0.22087826064858662,
+        "hit@5": 0.30827454338169347,
+        "hit@10": 0.3381454039178977
+      },
+      "expected": {
+        "mrr": 0.2676,
+        "hit@1": 0.2209,
+        "hit@5": 0.3083,
+        "hit@10": 0.3381
+      },
+      "delta": {
+        "mrr": 4.825321493001633e-05,
+        "hit@1": -2.1739351413391228e-05,
+        "hit@5": -2.545661830655188e-05,
+        "hit@10": 4.5403917897701707e-05
+      },
+      "matches_reference": true
+    },
+    "wish": {
+      "evaluated_phages": 4490,
+      "observed": {
+        "mrr": 0.24758755177224548,
+        "hit@1": 0.1692100854587596,
+        "hit@5": 0.30203643012174214,
+        "hit@10": 0.42455182346471504
+      },
+      "expected": {
+        "mrr": 0.2476,
+        "hit@1": 0.1692,
+        "hit@5": 0.302,
+        "hit@10": 0.4246
+      },
+      "delta": {
+        "mrr": -1.2448227754507935e-05,
+        "hit@1": 1.0085458759606647e-05,
+        "hit@5": 3.64301217421481e-05,
+        "hit@10": -4.817653528493837e-05
+      },
+      "matches_reference": true
+    },
+    "evo2": {
+      "evaluated_phages": 4490,
+      "observed": {
+        "mrr": 0.3105625136037579,
+        "hit@1": 0.19388513021540088,
+        "hit@5": 0.4367808905255437,
+        "hit@10": 0.5540521220512888
+      },
+      "expected": {
+        "mrr": 0.3106,
+        "hit@1": 0.1939,
+        "hit@5": 0.4368,
+        "hit@10": 0.5541
+      },
+      "delta": {
+        "mrr": -3.7486396242070175e-05,
+        "hit@1": -1.4869784599108593e-05,
+        "hit@5": -1.9109474456324715e-05,
+        "hit@10": -4.787794871119466e-05
+      },
+      "matches_reference": true
+    },
+    "rrf": {
+      "evaluated_phages": 4490,
+      "observed": {
+        "mrr": 0.368147,
+        "hit@1": 0.268762,
+        "hit@5": 0.468856,
+        "hit@10": 0.584731
+      },
+      "expected": {
+        "mrr": 0.3681,
+        "hit@1": 0.2688,
+        "hit@5": 0.4689,
+        "hit@10": 0.5847
+      },
+      "delta": {
+        "mrr": 4.700000000001925e-05,
+        "hit@1": -3.799999999998249e-05,
+        "hit@5": -4.399999999998849e-05,
+        "hit@10": 3.100000000000325e-05
+      },
+      "matches_reference": true
+    }
+  },
+  "matches_reference": true,
+  "generated_embeddings": false,
+  "trained_model": false,
+  "limitations": [
+    "Published precomputed scores only; this does not reproduce embedding generation or run Evo2-40B.",
+    "Closed-world species-level recorded-host retrieval is not strain-level susceptibility prediction.",
+    "Missing host associations are unknown, not measured negatives.",
+    "Transposing the matrix does not validate host-to-phage ranking, strain-level generalization or cocktail efficacy.",
+    "Frozen development and test cohorts and the independent 1500-phage normalization bank must be preserved for later embedding replication.",
+    "These results do not establish calibrated probabilities or experimental/clinical efficacy."
+  ],
+  "output_sha256": {
+    "blastn.json": "9e8dab0f989047a93e02a26d976331a08ab106b15f1994149e30c97e03e10a21",
+    "blastn.log": "9e8dab0f989047a93e02a26d976331a08ab106b15f1994149e30c97e03e10a21",
+    "evo2.json": "3081f20c8413e53a94fde5598dd1ef8c2d63b92de4eed91398cbd6094123bbf0",
+    "evo2.log": "3081f20c8413e53a94fde5598dd1ef8c2d63b92de4eed91398cbd6094123bbf0",
+    "phist.json": "3c3ade1fa41212c48ea000686e5259bcbdc405e6667e47f40cf578f778e7b0d7",
+    "phist.log": "3c3ade1fa41212c48ea000686e5259bcbdc405e6667e47f40cf578f778e7b0d7",
+    "rrf.csv": "91aae77b9327afd9218b4dcbd24a3af11395d5ce5f4e7af3bba6cc1c30fd4f38",
+    "rrf.log": "1d77094073cc0990a472270e901dd2b7bdd3d9879cd9c4577f0ce9812869570d",
+    "virhostmatcher.json": "fd866e976716538847b88cbe7c0772c0d2a4eb20daf475ed59068aa702098f77",
+    "virhostmatcher.log": "fd866e976716538847b88cbe7c0772c0d2a4eb20daf475ed59068aa702098f77",
+    "wish.json": "b3c3abc6f4e346f9bbc24e8989d5a492abbb8d2de7a763f6c70d099c86c6d1c5",
+    "wish.log": "b3c3abc6f4e346f9bbc24e8989d5a492abbb8d2de7a763f6c70d099c86c6d1c5"
+  },
+  "execution_note": "Aggregate record of a local run of the pinned upstream CLIs; full command logs and metric files are generated by scripts/run_evo2_reference.py."
+}
