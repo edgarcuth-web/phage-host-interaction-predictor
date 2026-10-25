@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import gzip
+import importlib.metadata
 from pathlib import Path
 import platform
 
@@ -14,6 +15,7 @@ from .artifacts import atomic_write_json, code_provenance, read_json_object, sha
 from .cohort import curate_mlc, host_aliases, host_key
 from .data import load_interactions
 from .host_baseline import fit_host_model, predict_host_model
+from .host_genome import host_genome_features
 from .host_study import host_features, verify_resources
 from .registry import verify_registered_dataset
 from .retrieval import evaluate_retrieval, paired_retrieval_bootstrap
@@ -73,12 +75,13 @@ def score_known_panel(train, candidates, features, numeric, categorical, estimat
     }
 
 
-def run_retrieval_study(repo, data_root, output_dir, *, fetch=False):
+def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=False):
     """Verify pinned tables/manifests, freeze splits, refit and publish atomically."""
     repo, output = Path(repo).resolve(), Path(output_dir).resolve()
     if output.exists():
         raise ValueError("retrieval output directory must be new")
-    protocol_path = repo / "data/studies/host_retrieval.v1.json"
+    protocol_path = repo / ("data/studies/genome_host_retrieval.v1.json" if genome
+                            else "data/studies/host_retrieval.v1.json")
     plan = read_json_object(protocol_path)
     for path, expected in plan["repo_files_sha256"].items():
         if sha256_file(repo / path) != expected:
@@ -100,14 +103,27 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False):
         raise ValueError("candidate library differs from the fixed panel")
     features, numeric = host_features(sorted(observed.bacterium.unique()), metadata, defenses,
                                       plan["categorical_features"])
+    extra_features, genome_audit = {}, None
+    if genome:
+        sequence_features, genome_audit = host_genome_features(manifest, resources)
+        extra_features = {
+            "host_4mer_logistic": (sequence_features, sequence_features.columns.tolist(), []),
+            "hybrid_4mer_logistic": (features.join(sequence_features),
+                                      numeric + sequence_features.columns.tolist(),
+                                      plan["categorical_features"]),
+        }
     provenance = {
-        **code_provenance(repo, repo / "scripts/run_host_retrieval.py"),
+        **code_provenance(repo, repo / ("scripts/run_genome_host_retrieval.py" if genome
+                                       else "scripts/run_host_retrieval.py")),
         "protocol_sha256": sha256_file(protocol_path),
         "repo_files_sha256": plan["repo_files_sha256"],
         "resources_sha256": {entry["path"]: entry["sha256"] for entry in plan["resources"]},
         "versions": {"python": platform.python_version(), "numpy": np.__version__,
                      "pandas": pd.__version__, "scikit_learn": sklearn.__version__},
     }
+    if genome:
+        provenance["versions"].update({name: importlib.metadata.version(name)
+                                       for name in ("scipy", "joblib", "threadpoolctl")})
     summaries, contrasts, per_host_tables, prediction_tables = [], [], [], []
     groups = manifest.set_index("bacterium").host_group.to_dict()
     with staged_directory(output) as stage:
@@ -117,6 +133,9 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False):
         excluded.to_csv(stage / "excluded_pairs.csv", index=False)
         observed.to_csv(stage / "observed_pairs.csv", index=False)
         atomic_write_json(plan, stage / "protocol.json")
+        if genome:
+            genome_audit.to_csv(stage / "genome_audit.csv", index=False)
+            sequence_features.to_csv(stage / "host_genome_features.csv", index_label="bacterium")
         for number, (scenario, split) in enumerate(scenarios.items()):
             train_hosts = set(split.loc[split.split.eq("train"), "bacterium"])
             train = observed[observed.bacterium.isin(train_hosts)].copy()
@@ -129,6 +148,13 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False):
             )
             model["provenance"] = provenance
             atomic_write_json(model, stage / f"model_{number:02d}.json")
+            for name, (frame, columns, categories) in extra_features.items():
+                fitted, values = score_known_panel(
+                    train, candidates, frame, columns, categories, plan["estimator"]
+                )
+                fitted["provenance"] = provenance
+                atomic_write_json(fitted, stage / f"model_{number:02d}_{name}.json")
+                score_arrays[name] = values["host_logistic"]
             for partition in ("validation", "test"):
                 hosts = sorted(split.loc[split.split.eq(partition), "bacterium"])
                 if not hosts:
@@ -155,13 +181,19 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False):
                     scored["rank_min"] = scored.groupby("bacterium").score.rank(method="min", ascending=False)
                     scored["rank_max"] = scored.groupby("bacterium").score.rank(method="max", ascending=False)
                     prediction_tables.append(scored.assign(**context))
-                for eligible_only in (False, True):
-                    contrast = paired_retrieval_bootstrap(
-                        metrics["host_logistic"], metrics["phage_prevalence"], groups,
-                        eligible_only=eligible_only, **plan["bootstrap"]
-                    )
-                    contrasts.append({"scenario": scenario, "partition": partition,
-                                      "comparison": "host_logistic - phage_prevalence", **contrast})
+                comparisons = [("host_logistic", "phage_prevalence")]
+                for name in extra_features:
+                    comparisons.extend([(name, "phage_prevalence"), (name, "host_logistic")])
+                if genome:
+                    comparisons.append(("hybrid_4mer_logistic", "host_4mer_logistic"))
+                for left, right in comparisons:
+                    for eligible_only in (False, True):
+                        contrast = paired_retrieval_bootstrap(
+                            metrics[left], metrics[right], groups,
+                            eligible_only=eligible_only, **plan["bootstrap"]
+                        )
+                        contrasts.append({"scenario": scenario, "partition": partition,
+                                          "comparison": f"{left} - {right}", **contrast})
             print(f"Completed {scenario}: {len(train_hosts)} fit hosts", flush=True)
         pd.DataFrame(contrasts).to_csv(stage / "contrasts.csv", index=False)
         pd.concat(per_host_tables, ignore_index=True).to_csv(stage / "per_host_metrics.csv", index=False)
@@ -176,5 +208,8 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False):
             "not_run": plan["not_run"], "limitations": plan["limitations"],
             "output_sha256": {p.name: sha256_file(p) for p in sorted(stage.iterdir())},
         }
+        if genome:
+            report["audit"].update(host_genomes_verified=len(genome_audit),
+                                    genome_features=sequence_features.shape[1])
         atomic_write_json(report, stage / "report.json")
     return report
