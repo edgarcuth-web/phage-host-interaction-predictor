@@ -13,7 +13,7 @@ The task, label evidence, generalization limits and acceptance criteria are in
 
 Current delivery: a working file-based model boundary, a real-data label/genome
 audit, frozen host-feature weights, a completed additive host–phage benchmark
-and a fixed-library unseen-host retrieval benchmark.
+and fixed-library unseen-host retrieval comparisons using annotations and host genome composition.
 The first host model did not establish improvement over phage prevalence. The new
 4-mer pair baseline also did not meet its cold-phage improvement criterion across
 the prespecified sensitivities. Both remain uncalibrated research scores; see the
@@ -22,6 +22,9 @@ the prespecified sensitivities. Both remain uncalibrated research scores; see th
 The [retrieval study](docs/host-retrieval-benchmark.md) finds test Hit@2 of 82.4%
 versus 73.5% for phage prevalence, with an inconclusive paired gain interval and
 weaker performance on several phylogroup holdouts.
+The [host-genome comparison](docs/genome-host-retrieval.md) reaches 88.2% Hit@2
+on the primary split, but falls to 75.4% on B2 holdout versus prevalence's 90.2%.
+This inspected development result does not justify model promotion.
 Pairwise matrices and offline union coverage do not establish cocktail efficacy.
 
 | Capability | Current status |
@@ -30,7 +33,8 @@ Pairwise matrices and offline union coverage do not establish cocktail efficacy.
 | Trained host baseline | Host features plus known phage identity; uncalibrated source-MLC scores; no demonstrated improvement |
 | Baseline serving through PairPrediction | Not implemented; weights and the generic exchange are separate paths |
 | Mechanistic predictions / unseen phages | Not established by the current baseline |
-| Pair representations and pretrained genomic models | Future benchmark candidates; no backbone selected |
+| Host genome composition | Fixed 4-mer and annotation-hybrid retrieval comparison; cross-phylogroup failures retained |
+| Pretrained genomic models | Evo2 published species-score reproduction only; no aligned strain-level embeddings |
 
 ## Repository layout
 
@@ -166,6 +170,18 @@ reports all-host and eligible-host denominators, exact expectations for ties,
 Recall@K/MRR and paired host-group Hit@2 intervals. Missing panel labels exclude
 whole hosts from primary metrics. No GPU is required. See the
 [protocol, results and limits](docs/host-retrieval-benchmark.md).
+
+## Host genome and annotation comparison
+
+```bash
+python scripts/run_genome_host_retrieval.py --fetch --outdir artifacts/genome_host_retrieval_v1
+```
+
+This separately frozen experiment verifies 177 host FASTAs (approximately 911 MB
+including tables) and compares host 4-mer composition, annotations and their
+concatenation under the same splits, 94-candidate panel and fixed per-known-phage
+logistic specification. It needs no GPU and reports every phylogroup failure.
+See [the protocol, full results and verification](docs/genome-host-retrieval.md).
 
 ## Optional GenoPHI genome-aware reference
 
