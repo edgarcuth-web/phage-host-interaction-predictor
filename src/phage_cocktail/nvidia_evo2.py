@@ -20,6 +20,12 @@ DIMENSION = 8192
 class NvidiaForwardError(RuntimeError):
     """Errors exclude request headers, credentials and arbitrary server bodies."""
 
+    def __init__(self, message, *, http_status=None, request_id=None, response_bytes=None):
+        super().__init__(message)
+        self.http_status = http_status
+        self.request_id = request_id
+        self.response_bytes = response_bytes
+
 
 @dataclass
 class ForwardResult:
@@ -53,7 +59,7 @@ def decode_layer(document, sequence_length, *, max_tensor_bytes):
 
 
 def forward(sequence, api_key, *, timeout=55, max_response_bytes=32 * 1024 * 1024,
-            max_tensor_bytes=128 * 1024 * 1024):
+            max_tensor_bytes=128 * 1024 * 1024, poll_seconds=10):
     """One authenticated request, with bounded downloads and no automatic retries.
 
     This client does not claim a hosted service exposes local weight/runtime hashes.
@@ -65,30 +71,37 @@ def forward(sequence, api_key, *, timeout=55, max_response_bytes=32 * 1024 * 102
         raise ValueError("a non-empty NVIDIA API key without whitespace is required")
     if max_response_bytes < 1 or max_tensor_bytes < 1 or timeout <= 0:
         raise ValueError("request limits must be positive")
+    if type(poll_seconds) is not int or not 1 <= poll_seconds <= 60:
+        raise ValueError("server wait must be an integer between 1 and 60 seconds")
     body = json.dumps({"sequence": sequence, "output_layers": [LAYER]}).encode("ascii")
     request = urllib.request.Request(
         FORWARD_URL, data=body, method="POST",
         headers={"Authorization": "Bearer " + api_key, "Content-Type": "application/json",
-                 "Accept": "application/json", "NVCF-POLL-SECONDS": "10"})
+                 "Accept": "application/json", "NVCF-POLL-SECONDS": str(poll_seconds)})
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
             status = response.status
             request_id = response.headers.get("NVCF-REQID")
             if status != 200:
-                raise NvidiaForwardError(f"NVIDIA forward returned HTTP {status}; no retry or polling was submitted")
+                raise NvidiaForwardError(f"NVIDIA forward returned HTTP {status}; no retry or polling was submitted",
+                                         http_status=status, request_id=request_id)
             if "application/json" not in response.headers.get("Content-Type", ""):
-                raise NvidiaForwardError("NVIDIA forward returned an unexpected content type")
+                raise NvidiaForwardError("NVIDIA forward returned an unexpected content type",
+                                         http_status=status, request_id=request_id)
             length = response.headers.get("Content-Length")
             if length is not None and int(length) > max_response_bytes:
-                raise NvidiaForwardError("NVIDIA response exceeds the configured download limit")
+                raise NvidiaForwardError("NVIDIA response exceeds the configured download limit",
+                                         http_status=status, request_id=request_id, response_bytes=0)
             raw = response.read(max_response_bytes + 1)
             if len(raw) > max_response_bytes:
-                raise NvidiaForwardError("NVIDIA response exceeds the configured download limit")
+                raise NvidiaForwardError("NVIDIA response exceeds the configured download limit",
+                                         http_status=status, request_id=request_id, response_bytes=len(raw))
     except NvidiaForwardError:
         raise
     except urllib.error.HTTPError as exc:
         # Never include arbitrary remote messages: they can echo credentials.
-        raise NvidiaForwardError(f"NVIDIA forward returned HTTP {exc.code}; no retry was submitted") from None
+        raise NvidiaForwardError(f"NVIDIA forward returned HTTP {exc.code}; no retry was submitted",
+                                 http_status=exc.code, request_id=exc.headers.get("NVCF-REQID") if exc.headers else None) from None
     except (OSError, urllib.error.URLError, ValueError):
         raise NvidiaForwardError("NVIDIA forward connection or response failed; no retry was submitted") from None
     try:

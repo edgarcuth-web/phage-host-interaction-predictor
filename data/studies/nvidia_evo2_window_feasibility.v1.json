@@ -1,0 +1,29 @@
+{
+  "study_id": "nvidia-evo2-window-feasibility:v1",
+  "scope": "One authenticated hosted forward request on one real frozen-host window; no phenotype access, fitting or ranking",
+  "genome_protocol": "data/studies/genome_host_retrieval.v1.json",
+  "repo_files_sha256": {
+    "data/studies/genome_host_retrieval.v1.json": "f7d2e4114cf994d16282db59fbb72f9140fdbd21283b92a0a9922e8af1ff991d",
+    "data/studies/results/genophi_host_split.v1.csv": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4"
+  },
+  "host": "370D",
+  "host_rule": "First lexicographically sorted host in frozen manifest; chosen without outcomes. 370D has incomplete panel labels, irrelevant to this engineering-only probe.",
+  "window_bp": 8192,
+  "sampling_max_windows": 32,
+  "selection": "First full-length window among the existing canonical-contig, evenly spaced 32-window selection; forward orientation only, no alternate host/window on failure",
+  "layer": "blocks.28.mlp.l3",
+  "dimension": 8192,
+  "request_budget": {
+    "inference_post_attempts": 1,
+    "max_response_bytes": 268435456,
+    "max_tensor_bytes": 671088640,
+    "io_timeout_seconds": 180,
+    "server_wait_seconds": 60,
+    "retry_attempts": 0,
+    "status_get_attempts": 0
+  },
+  "budget_semantics": "Only one POST; socket I/O timeout is not an absolute end-to-end deadline. HTTP 202 is recorded with request ID, never resubmitted. Limits bound one response plus one decoded archive member, not peak process memory.",
+  "pooling": "After shape/finiteness checks, token mean in float64, persist one float32 8192-vector; do not retain full token tensor or raw source sequence in committed results.",
+  "provider_identity": "Hosted checkpoint and runtime hashes remain unknown. Never admit this as a local v1 deployment/cache.",
+  "next_gate": "Measure response size, wall/server time and integrity before a distinct hosted three-host pilot protocol. No automatic expansion to full genomes."
+}

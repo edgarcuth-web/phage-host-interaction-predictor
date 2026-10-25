@@ -93,8 +93,25 @@ def test_download_limit_and_async_response_do_not_trigger_more_calls(monkeypatch
         forward("AC", "fixture-secret", max_response_bytes=32)
     assert response.read_sizes == [33]
     response.status = 202
-    with pytest.raises(NvidiaForwardError, match="HTTP 202"):
+    with pytest.raises(NvidiaForwardError, match="HTTP 202") as error:
         forward("AC", "fixture-secret")
+    assert error.value.http_status == 202
+    assert error.value.request_id == "fixture-request"
+
+
+def test_server_wait_is_explicit_and_bounded(monkeypatch):
+    requests = []
+    response = Response(json.dumps(document(np.zeros((1, 2, DIMENSION)))).encode())
+    def open_request(request, *, timeout):
+        requests.append((request, timeout))
+        return response
+    monkeypatch.setattr("urllib.request.urlopen", open_request)
+    forward("AC", "fixture-secret", poll_seconds=60, timeout=180)
+    assert requests[0][0].get_header("Nvcf-poll-seconds") == "60"
+    assert requests[0][1] == 180
+    with pytest.raises(ValueError, match="between 1 and 60"):
+        forward("AC", "fixture-secret", poll_seconds=61)
+    assert len(requests) == 1
 
 
 def test_invalid_input_is_rejected_before_network(monkeypatch):
