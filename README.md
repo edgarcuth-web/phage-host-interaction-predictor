@@ -196,6 +196,13 @@ See [similarity results, the Evo2 protocol and GPU handoff](docs/host-similarity
 The real 40B extraction and hardware pilot have not run; the deployment lock must
 be created on the existing GPU installation before extraction.
 
+Authenticated NVIDIA-hosted 40B forward access has now been verified on short
+controls, including the fixed layer's 8,192-dimensional outputs. This is separate
+from the local GPU/genome pilot. See [API access, transfer measurements and the
+bounded probe](docs/nvidia-evo2-api.md); the unchanged full plan would require
+roughly 2 TB of JSON downloads by short-input extrapolation, so full hosted
+extraction has not been started.
+
 ## Optional GenoPHI genome-aware reference
 
 GenoPHI's official 25-strain x 25-phage protein-family demo can verify the path
