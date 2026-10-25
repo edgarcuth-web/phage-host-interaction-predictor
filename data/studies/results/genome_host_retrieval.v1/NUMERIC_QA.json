@@ -1,0 +1,10 @@
+{
+  "output_hashes_verified": 45,
+  "input_resources_verified": 181,
+  "reloaded_models_exact_scores": 36,
+  "annotation_baseline_per_host_metrics_identical_to_v1": true,
+  "independently_enumerated_top2_host_method_panels": 204,
+  "repeat_output_hashes_identical": true,
+  "repeat_report_identical": true,
+  "protocol_frozen_implementation_commit": "88d031bafe759f0bf4a79faa2b5b7394358dc719"
+}
