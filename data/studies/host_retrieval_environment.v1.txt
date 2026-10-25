@@ -1,0 +1,7 @@
+# Numerical environment for host_retrieval.v1; Python 3.12.14.
+numpy==2.3.5
+pandas==2.2.3
+scikit-learn==1.8.0
+scipy==1.17.0
+joblib==1.5.3
+threadpoolctl==3.6.0

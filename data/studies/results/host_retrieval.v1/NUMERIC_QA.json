@@ -1,0 +1,23 @@
+{
+  "all_checks_passed": true,
+  "upstream_base_revision": "afe450d825d4924d35593a5afb8f5647da93755e",
+  "tests": "89 passed, 8 subtests passed",
+  "verified_report_output_hashes": 19,
+  "verified_current_code_hashes": true,
+  "all_score_panels_have_94_candidates": true,
+  "reloaded_models_reproduce_all_host_scores_bit_for_bit": 12,
+  "repeat_run_identical_metrics_and_contrasts": true,
+  "repeat_run_identical_artifacts": [
+    "predictions.csv.gz",
+    "host_splits.csv",
+    "per_host_metrics.csv",
+    "contrasts.csv"
+  ],
+  "independent_top2_choice_enumeration": {
+    "global_prevalence": 0.4371458947340089,
+    "host_logistic": 0.8235294117647058,
+    "phage_prevalence": 0.7352941176470589,
+    "random": 0.4371458947340089
+  },
+  "protocol_sha256": "32d75d4b54717d01f47a792e208685e3789671741071a2e5fa97734e92fe25b0"
+}

@@ -12,12 +12,16 @@ The task, label evidence, generalization limits and acceptance criteria are in
 [`docs/first-model-task.md`](docs/first-model-task.md).
 
 Current delivery: a working file-based model boundary, a real-data label/genome
-audit, frozen host-feature weights and a completed additive host–phage benchmark.
+audit, frozen host-feature weights, a completed additive host–phage benchmark
+and a fixed-library unseen-host retrieval benchmark.
 The first host model did not establish improvement over phage prevalence. The new
 4-mer pair baseline also did not meet its cold-phage improvement criterion across
 the prespecified sensitivities. Both remain uncalibrated research scores; see the
 [host study](docs/host-baseline-results.md) and
 [paired study](docs/paired-baseline-results.md).
+The [retrieval study](docs/host-retrieval-benchmark.md) finds test Hit@2 of 82.4%
+versus 73.5% for phage prevalence, with an inconclusive paired gain interval and
+weaker performance on several phylogroup holdouts.
 Pairwise matrices and offline union coverage do not establish cocktail efficacy.
 
 | Capability | Current status |
@@ -54,6 +58,8 @@ src/phage_cocktail/
   pair_cohort.py      # exact-sequence identity audit for paired inputs
   paired_splits.py    # phage-neighbour grouping and crossed paired partitions
   paired_baseline.py  # 4-mer features, additive pair models and grouped metrics
+  retrieval.py        # fixed-panel Hit@K/Recall@K/MRR, exact ties and paired intervals
+  retrieval_study.py  # locked known-phage retrieval fits and host/phylogroup holdouts
   genophi_reference.py # optional GenoPHI reference workflow helpers
   schemas/            # ModelInputBundle / PairPrediction v1 wire schemas
 tests/              # automated tests
@@ -145,6 +151,22 @@ runs host-only, phage-only and additive pair models, plus applicable comparators
 under both weighting policies. Cold-phage gains remain inconclusive. The already
 inspected cohort cannot serve as independent release validation.
 
+## Unseen-host candidate retrieval
+
+Evaluate how often the first 1/2/3/5 recommended phages include a source-positive
+candidate, on a fixed 94-phage panel:
+
+```bash
+python scripts/run_host_retrieval.py --fetch --outdir artifacts/host_retrieval_v1
+```
+
+This table-only study refits the fixed host baseline on the frozen grouped-host
+split, a random-host sensitivity and every published phylogroup holdout. It
+reports all-host and eligible-host denominators, exact expectations for ties,
+Recall@K/MRR and paired host-group Hit@2 intervals. Missing panel labels exclude
+whole hosts from primary metrics. No GPU is required. See the
+[protocol, results and limits](docs/host-retrieval-benchmark.md).
+
 ## Optional GenoPHI genome-aware reference
 
 GenoPHI's official 25-strain x 25-phage protein-family demo can verify the path
@@ -195,6 +217,7 @@ comparison have not been run. See the
 - [x] Verify all cohort genomes and supplied biological annotations
 - [x] Freeze genomic host groups and run a fixed host-feature baseline
 - [x] Report paired host-group uncertainty, including an inconclusive result
+- [x] Evaluate fixed-panel unseen-host Hit@K/Recall@K/MRR with explicit eligibility and phylogroup sensitivities
 - [ ] Finish row-level assay-context and separate dataset-license review
 - [ ] Reproduce GenoPHI demo metrics locally
 - [ ] Define target-specific label mapping before training mechanistic targets
