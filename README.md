@@ -193,7 +193,7 @@ python scripts/run_host_similarity.py --fetch --outdir artifacts/host_similarity
 ```
 
 See [similarity results, the Evo2 protocol and GPU handoff](docs/host-similarity-evo2.md).
-The real 40B extraction and hardware pilot have not run; the deployment lock must
+The local-checkpoint 40B extraction and GPU hardware pilot have not run; the deployment lock must
 be created on the existing GPU installation before extraction.
 
 Authenticated NVIDIA-hosted 40B forward access has now been verified on short
@@ -202,6 +202,11 @@ from the local GPU/genome pilot. See [API access, transfer measurements and the
 bounded probe](docs/nvidia-evo2-api.md); the unchanged full plan would require
 roughly 2 TB of JSON downloads by short-input extrapolation, so full hosted
 extraction has not been started.
+
+The [real-host feasibility and bounded engineering pilot](docs/nvidia-evo2-host-pilot.md)
+use a separately frozen hosted protocol, per-orientation checkpoints and an
+aggregate download budget. They measure access, pooling and cache recovery;
+susceptibility prediction and the full representation comparison remain separate.
 
 ## Optional GenoPHI genome-aware reference
 

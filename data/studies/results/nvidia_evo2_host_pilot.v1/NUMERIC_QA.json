@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "six_oriented_vectors_verified": true,
+  "three_host_vectors_reconstructed_exactly": true,
+  "new_post_attempts": 5,
+  "new_response_bytes": 893489254,
+  "within_frozen_budget": true,
+  "report_sha256": "fe1a57c4506570816608468e8a5428f2146059114067ac8d7f6383fd9ece1449",
+  "vector_qc": [
+    {
+      "host": "370D",
+      "strand": "forward",
+      "sampled_assembly_fraction": 0.001551872258483723,
+      "pooled_l2": 1.2297435975501867e-10
+    },
+    {
+      "host": "370D",
+      "strand": "reverse_complement",
+      "sampled_assembly_fraction": 0.001551872258483723,
+      "pooled_l2": 1.20207082455515e-10
+    },
+    {
+      "host": "381A",
+      "strand": "forward",
+      "sampled_assembly_fraction": 0.0015994820427291318,
+      "pooled_l2": 1.3296711584586792e-10
+    },
+    {
+      "host": "381A",
+      "strand": "reverse_complement",
+      "sampled_assembly_fraction": 0.0015994820427291318,
+      "pooled_l2": 1.457524088868846e-10
+    },
+    {
+      "host": "536",
+      "strand": "forward",
+      "sampled_assembly_fraction": 0.0016838342253694537,
+      "pooled_l2": 1.9107794298278607e-10
+    },
+    {
+      "host": "536",
+      "strand": "reverse_complement",
+      "sampled_assembly_fraction": 0.0016838342253694537,
+      "pooled_l2": 1.9028885333171804e-10
+    }
+  ],
+  "prediction_performance_claimed": false,
+  "completed_cache_resume_without_api_calls": true,
+  "resume_preserved_all_payload_hashes": true
+}
