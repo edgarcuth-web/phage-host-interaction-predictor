@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "historical_per_host_metrics_exact": true,
+  "reloaded_annotation_models_exact": 12,
+  "independent_scalar_neighbour_scores": 27260,
+  "independent_top2_tie_panels": 170,
+  "second_run_all_report_and_output_hashes_equal": true,
+  "report_sha256": "cd195a9a048e239e487d53277b0911e28485567852476451f64e7a20feb3eaad"
+}
