@@ -381,7 +381,7 @@ def test_completed_full_panel_store_loads_as_separate_hosted_representation(extr
     np.testing.assert_array_equal(
         features.to_numpy(), np.tile(np.array([1.0, 2.0], dtype=np.float32), (3, 1))
     )
-    assert features.columns.tolist() == ["hosted_evo2:0", "hosted_evo2:1"]
+    assert features.columns.tolist() == ["evo2:hosted:0", "evo2:hosted:1"]
     assert fourmers.shape == (3, 136)
     assert qc.bacterium.tolist() == list("ABC")
     assert qc.selected_windows.tolist() == [2, 2, 2]
