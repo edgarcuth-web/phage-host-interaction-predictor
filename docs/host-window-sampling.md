@@ -144,7 +144,7 @@ generalization. No model or sampling strategy is promoted.
 | 4 | 4 | 0.643% | 252.97 GB |
 | 32 | 21 | 3.423% | 1308.10 GB |
 
-For cap 32, actual full-window support ranges from 9 to 32, with median 21.
+For cap 32, actual full-window support ranges from 9 to 31, with median 21.
 Short tails explain much of the gap between a nominal 32-window count and
 its effective input coverage. The original Evo2 protocol retains those short
 windows; it remains a distinct representation from this full-window control.
