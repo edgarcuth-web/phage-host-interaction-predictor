@@ -18,6 +18,7 @@ from .host_baseline import fit_host_model, predict_host_model
 from .host_genome import host_genome_features
 from .host_sampling import sampling_features
 from .evo2_host import load_cache
+from .hosted_evo2 import load_hosted_cache
 from .host_similarity import align_core_distances, neighbour_scores, prevalence_shift
 from .host_study import host_features, verify_resources
 from .registry import verify_registered_dataset
@@ -79,21 +80,25 @@ def score_known_panel(train, candidates, features, numeric, categorical, estimat
 
 
 def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=False,
-                        similarity=False, embedding_cache=None, sampling=False):
+                        similarity=False, embedding_cache=None, hosted_embedding=None,
+                        sampling=False):
     """Verify pinned tables/manifests, freeze splits, refit and publish atomically."""
     repo, output = Path(repo).resolve(), Path(output_dir).resolve()
     if output.exists():
         raise ValueError("retrieval output directory must be new")
     if sampling:
-        if genome or similarity or embedding_cache is not None:
+        if genome or similarity or embedding_cache is not None or hosted_embedding is not None:
             raise ValueError("sampling control must use its own protocol")
         genome = True
-    if embedding_cache is not None:
+    if embedding_cache is not None and hosted_embedding is not None:
+        raise ValueError("choose one Evo2 representation source")
+    if embedding_cache is not None or hosted_embedding is not None:
         similarity = True
     if genome and similarity:
         raise ValueError("choose a single study protocol")
     protocol_path = repo / ("data/studies/host_window_sampling.v1.json" if sampling else
-                            "data/studies/evo2_host_representation.v1.json" if embedding_cache is not None else
+                            "data/studies/evo2_host_representation.v1.json"
+                            if embedding_cache is not None or hosted_embedding is not None else
                             "data/studies/host_similarity.v1.json" if similarity else
                             "data/studies/genome_host_retrieval.v1.json" if genome else
                             "data/studies/host_retrieval.v1.json")
@@ -156,8 +161,43 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
             "hybrid_evo2_logistic": (features.join(embedding_features),
                                       numeric + embedding_features.columns.tolist(), plan["categorical_features"]),
         }
+    elif hosted_embedding is not None:
+        hosted_plan, hosted_store = hosted_embedding
+        embedding_features, sequence_features, genome_audit, cache_sha, representation = load_hosted_cache(
+            repo, data_root, hosted_plan, hosted_store, manifest)
+        extra_features = {
+            "host_4mer_logistic": (sequence_features, sequence_features.columns.tolist(), []),
+            "hybrid_4mer_logistic": (features.join(sequence_features),
+                                      numeric + sequence_features.columns.tolist(), plan["categorical_features"]),
+            "host_hosted_evo2_logistic": (embedding_features, embedding_features.columns.tolist(), []),
+            "hybrid_hosted_evo2_logistic": (features.join(embedding_features),
+                                             numeric + embedding_features.columns.tolist(),
+                                             plan["categorical_features"]),
+        }
+        plan = dict(plan)
+        plan["study_id"] = "hosted-evo2-host-representation:v1"
+        plan["primary"] = (
+            "Grouped-host test all-complete-host Hit@2: host_hosted_evo2_logistic minus "
+            "phage_prevalence; all other contrasts and phylogroup results are descriptive."
+        )
+        plan["embedding"] = representation
+        plan["representation_comparison"] = [
+            "annotations",
+            "host_4mer_logistic",
+            "hybrid_4mer_logistic",
+            "host_hosted_evo2_logistic",
+            "hybrid_hosted_evo2_logistic",
+        ]
+        plan["limitations"] = list(plan["limitations"]) + [
+            "The NVIDIA-hosted representation uses its own frozen pooling arithmetic and is "
+            "not numerically interchangeable with the local-checkpoint Evo2 v1 cache.",
+            "Hosted checkpoint and server runtime hashes are unavailable from the service; "
+            "the extraction plan, exact inputs, response metadata and immutable receipts are "
+            "bound, but this is a weaker model-identity claim than a local checkpoint digest.",
+        ]
     provenance = {
         **code_provenance(repo, repo / ("scripts/run_host_window_sampling.py" if sampling else
+                                       "scripts/run_hosted_evo2_host_comparison.py" if hosted_embedding is not None else
                                        "scripts/run_evo2_host_comparison.py" if embedding_cache is not None else
                                        "scripts/run_host_similarity.py" if similarity else
                                        "scripts/run_genome_host_retrieval.py" if genome else
@@ -170,6 +210,8 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
     }
     if embedding_cache is not None:
         provenance["embedding_cache_sha256"] = cache_sha
+    if hosted_embedding is not None:
+        provenance["hosted_embedding_sha256"] = cache_sha
     if genome:
         provenance["versions"].update({name: importlib.metadata.version(name)
                                        for name in ("scipy", "joblib", "threadpoolctl")})
@@ -189,7 +231,7 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
             sampling_windows.to_csv(stage / "sampling_windows.csv", index=False)
             for budget, frame in sampled_features.items():
                 frame.to_csv(stage / f"host_window{budget}_features.csv", index_label="bacterium")
-        if genome or embedding_cache is not None:
+        if genome or embedding_cache is not None or hosted_embedding is not None:
             genome_audit.to_csv(stage / "genome_audit.csv", index=False)
             sequence_features.to_csv(stage / "host_genome_features.csv", index_label="bacterium")
         for number, (scenario, split) in enumerate(scenarios.items()):
@@ -253,7 +295,7 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                                         ("core_neighbour", "host_logistic")])
                 for name in extra_features:
                     comparisons.extend([(name, "phage_prevalence"), (name, "host_logistic")])
-                if genome or embedding_cache is not None:
+                if genome or embedding_cache is not None or hosted_embedding is not None:
                     comparisons.append(("hybrid_4mer_logistic", "host_4mer_logistic"))
                 if sampling:
                     budgets = plan["sampling_control"]["budgets"]
@@ -266,6 +308,13 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                         ("host_evo2_logistic", "core_neighbour"),
                         ("hybrid_evo2_logistic", "host_evo2_logistic"),
                         ("hybrid_evo2_logistic", "hybrid_4mer_logistic"),
+                    ])
+                if hosted_embedding is not None:
+                    comparisons.extend([
+                        ("host_hosted_evo2_logistic", "host_4mer_logistic"),
+                        ("host_hosted_evo2_logistic", "core_neighbour"),
+                        ("hybrid_hosted_evo2_logistic", "host_hosted_evo2_logistic"),
+                        ("hybrid_hosted_evo2_logistic", "hybrid_4mer_logistic"),
                     ])
                 for left, right in comparisons:
                     for eligible_only in (False, True):
@@ -301,10 +350,11 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                       "candidate_phages": len(panel)},
             "metrics": summaries, "contrasts": contrasts,
             "not_run": ({k: v for k, v in plan["not_run"].items() if k != "Evo2"}
-                        if embedding_cache is not None else plan["not_run"]), "limitations": plan["limitations"],
+                        if embedding_cache is not None or hosted_embedding is not None
+                        else plan["not_run"]), "limitations": plan["limitations"],
             "output_sha256": {p.name: sha256_file(p) for p in sorted(stage.iterdir())},
         }
-        if genome or embedding_cache is not None:
+        if genome or embedding_cache is not None or hosted_embedding is not None:
             report["audit"].update(host_genomes_verified=len(genome_audit),
                                     genome_features=sequence_features.shape[1])
         if sampling:
