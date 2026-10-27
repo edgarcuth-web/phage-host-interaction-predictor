@@ -199,9 +199,9 @@ be created on the existing GPU installation before extraction.
 Authenticated NVIDIA-hosted 40B forward access has now been verified on short
 controls, including the fixed layer's 8,192-dimensional outputs. This is separate
 from the local GPU/genome pilot. See [API access, transfer measurements and the
-bounded probe](docs/nvidia-evo2-api.md); the unchanged full plan would require
-roughly 2 TB of JSON downloads by short-input extrapolation, so full hosted
-extraction has not been started.
+bounded probe](docs/nvidia-evo2-api.md). Actual selected lengths refine the full
+plan's JSON-transfer projection to about 1.425 TB, versus the earlier full-window
+estimate of about 2 TB. Full hosted extraction has not been started.
 
 The [real-host feasibility and bounded engineering pilot](docs/nvidia-evo2-host-pilot.md)
 use a separately frozen hosted protocol, per-orientation checkpoints and an
@@ -213,6 +213,12 @@ and up to 32 full windows with whole-genome 4-mer composition under the same
 fixed-panel retrieval protocol. It reports sampling loss, actual coverage and
 transfer projections without new NVIDIA calls. Its results do not establish
 Evo2 quality or a sufficient embedding sampling budget.
+
+The [resumable hosted executor](docs/nvidia-evo2-extraction.md) adds local/S3
+immutable checkpoints, frozen call/download budgets, exact pilot-cache imports
+and offline verification. Its defaults make no new NVIDIA requests. A real-vector
+replay checks interrupted and completed-cache recovery; a live cloud deployment
+and hosted prediction-study adapter remain separate work.
 
 ## Optional GenoPHI genome-aware reference
 

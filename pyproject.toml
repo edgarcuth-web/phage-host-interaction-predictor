@@ -29,6 +29,9 @@ dev = [
 reference = [
     "genophi==1.0.3",
 ]
+cloud = [
+    "boto3>=1.36,<2",
+]
 
 [tool.setuptools.package-data]
 phage_cocktail = ["schemas/*.schema.json"]
