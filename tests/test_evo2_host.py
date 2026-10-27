@@ -129,7 +129,7 @@ def test_hosted_evo2_uses_distinct_methods_and_provenance(fixture_cache, monkeyp
     extract_cache(repo, source, local_cache, encode, identity)
     features, fourmers, qc, _ = load_cache(local_cache, repo, manifest)
     hosted_features = features.copy()
-    hosted_features.columns = [f"hosted_evo2:{i}" for i in range(hosted_features.shape[1])]
+    hosted_features.columns = [f"evo2:hosted:{i}" for i in range(hosted_features.shape[1])]
     representation = {
         "source": "nvidia_hosted_forward",
         "model_name": "evo2_40b",
