@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "response": {
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-40b/forward",
+    "layer": "blocks.28.mlp.l3",
+    "request_id": "36277820-9ee7-4e35-8d35-bd6968ecedf9",
+    "http_status": 200,
+    "elapsed_ms": 50698,
+    "sequence_length": 8192,
+    "input_sha256": "f045df7a942dcd72e5bbc19164735ff8972bdeba69bdc701148cc9cf2433a3f1",
+    "response_bytes": 178653288,
+    "response_sha256": "89f8c56d5080d1a28e574d8ffc4d80986e63d9ae95a6c7cf9d7373be370e5f39",
+    "shape": [
+      8192,
+      8192
+    ],
+    "returned_dtype": "float64",
+    "finite": true,
+    "weights_sha256": null,
+    "server_runtime_version": null
+  },
+  "pooled_shape": [
+    8192
+  ],
+  "pooled_dtype": "float32",
+  "pooled_l2": 1.229743597058731e-10,
+  "float32_pool_max_abs_error": 1.3552527156068805e-19,
+  "token_rms": 1.606328626333559e-12,
+  "transfer_extrapolation": {
+    "basis": "One measured real-host 8192-base response; other windows/hosts can compress differently",
+    "three_hosts_32windows_two_strands_json_bytes": 34301431296,
+    "full_177hosts_32windows_two_strands_json_bytes": 2023784446464
+  },
+  "observed_at_utc": "2026-10-25T08:24:55.206677+00:00",
+  "client_elapsed_seconds": 66.94620166899995,
+  "provenance": {
+    "protocol_sha256": "6e067447990adaa5275e185400736f2fb02d3bfdb6a5175b7581761638e177e2",
+    "code_base_revision": "ed417ea59d9b6982829ea716d52defb94b898d52",
+    "code_sha256": {
+      "scripts/probe_nvidia_host_window.py": "aac16c28ebd3fb84c513823d7d436a5d4c16385520b1622d9250179a86e64cda",
+      "src/phage_cocktail/__init__.py": "280d2957c45f8f0c4fc7d8746cd9ffd38c6f804663d17eb3802a80edec62ab2f",
+      "src/phage_cocktail/analysis.py": "a5a5bd05886499bb7fc7cac43e876678e09f9b070d765469518042c93a0ecf7e",
+      "src/phage_cocktail/artifacts.py": "a96f901d3b653bf22dbbc80d59adcf0f2f855d117db93f19580a131bcb0cc659",
+      "src/phage_cocktail/benchmark.py": "be6be1e3abaa2347e7eff42f507cc6eb0f4ed93823d13e6293bfc7eca199b992",
+      "src/phage_cocktail/cohort.py": "f54e1f19a82a3165b0bec523d80ed3f356990a903e7af7ea13b4d6f553a9c688",
+      "src/phage_cocktail/data.py": "7ed230c370d99cd451929171ce2a8db76a245d1e1455c37cdeef1f1db366e916",
+      "src/phage_cocktail/evo2_host.py": "348d228010a2633ce0d6006dcfc342dc20aac9af1d1af1788ec0cb9f23c74936",
+      "src/phage_cocktail/evo2_reference.py": "9c16500836e98ccc513e94f24d6d742dd128d54ef384f1a26b13c0096b24daef",
+      "src/phage_cocktail/genophi_reference.py": "29b113336119e963c8e0b9eef821346501e96d5967506104d475142d63bd9f62",
+      "src/phage_cocktail/host_baseline.py": "38757f454aa6e9c7f8873f7fa00ebecd481c0998c264420b415e6b163b5fb0a3",
+      "src/phage_cocktail/host_genome.py": "146331d3331d45a4a8eb8d4920aca6e034148040cacba2f930e45104247e955d",
+      "src/phage_cocktail/host_similarity.py": "43012d980cb0b5f7168a8971669a5b7dfa09d7fea21be9fff2a8f7b1b1068029",
+      "src/phage_cocktail/host_study.py": "d3eaf3b5738ef45a65905e3c4b05e32b4fa8c89127c8a09784fd00ae8a68b496",
+      "src/phage_cocktail/input_bundle.py": "d6ef3fe2ae342a166da0b6bed52ef99cd53394557a55d30fd7c18abc43f1f96a",
+      "src/phage_cocktail/model_interface.py": "2426b6573ca8128f45d2e1e0e0e39869ae80c7336c6c3a0cffd6b1a2a41b4e5a",
+      "src/phage_cocktail/nvidia_evo2.py": "7d26484c46b0cbf6e9bbeb9d2725c7502cbab54337c9c611abe1c7c8fcfba33f",
+      "src/phage_cocktail/pair_cohort.py": "4b0ec4dc6d23b12e767ff102c75f197bb049b04870cacffd970a73183a3e7560",
+      "src/phage_cocktail/paired_baseline.py": "22df6d5a3b3ef295ea9acf322deba477b29e3bb46926d85655649ab89b97864f",
+      "src/phage_cocktail/paired_splits.py": "4ea669786f653aca0d2ce5eacae14c96bf3df46bb81d267ebf9f9310abe5ae55",
+      "src/phage_cocktail/registry.py": "a33cb7484bcdbb3d26c699f02a45c9e00354f21fdd52818c5abb52f807cef194",
+      "src/phage_cocktail/retrieval.py": "378705d8655647450aac214e67501f0495077e5f69fe559e00640c85e0189034",
+      "src/phage_cocktail/retrieval_study.py": "d897a74e00236b925be0b79092c28fd6f7ed2dd7a4e55f9d0afb1533cb730405",
+      "src/phage_cocktail/split.py": "aed316aa5cd265ac65df7dd8e906b148fd891ad2e3da86dffcac9fa6fbabe5dd"
+    },
+    "input": {
+      "host": "370D",
+      "assembly_sha256": "ef529eed6ecf246dd1b35b2ab19e450c6404b7af88d66a290daa87d71a0ab9ed",
+      "fasta_sha256": "dafe6c2aef08ffb62502889461fc0aec71b265ece004ee25132576a61ae6db95",
+      "selected_window_ordinal": 0,
+      "contig_ordinal": 0,
+      "start": 0,
+      "length": 8192,
+      "input_sha256": "f045df7a942dcd72e5bbc19164735ff8972bdeba69bdc701148cc9cf2433a3f1",
+      "ambiguous_bases_mapped_to_N": 316
+    }
+  },
+  "inference_post_attempts": 1,
+  "scope": "Single-window feasibility only; not a host embedding, full pilot or prediction benchmark",
+  "output_sha256": {
+    "pooled_mean.npy": "c1c5374508d2b58a4ad87e844c2a07c395f7433c9b1eedb8a996abbaf952d3b7",
+    "protocol.json": "6e067447990adaa5275e185400736f2fb02d3bfdb6a5175b7581761638e177e2"
+  }
+}

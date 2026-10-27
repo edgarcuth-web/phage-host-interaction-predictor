@@ -1,0 +1,40 @@
+{
+  "protocol_sha256": "d60c8ffb848d6deca0988370413d6e18b85907ddb1e2cbeb258df082736e7698",
+  "code_sha256": {
+    "scripts/run_nvidia_host_pilot.py": "0d64119ec030691fd1a1cf406fad35da913d167ea440039bb421fb8febd8f9e1",
+    "src/phage_cocktail/__init__.py": "280d2957c45f8f0c4fc7d8746cd9ffd38c6f804663d17eb3802a80edec62ab2f",
+    "src/phage_cocktail/analysis.py": "a5a5bd05886499bb7fc7cac43e876678e09f9b070d765469518042c93a0ecf7e",
+    "src/phage_cocktail/artifacts.py": "a96f901d3b653bf22dbbc80d59adcf0f2f855d117db93f19580a131bcb0cc659",
+    "src/phage_cocktail/benchmark.py": "be6be1e3abaa2347e7eff42f507cc6eb0f4ed93823d13e6293bfc7eca199b992",
+    "src/phage_cocktail/cohort.py": "f54e1f19a82a3165b0bec523d80ed3f356990a903e7af7ea13b4d6f553a9c688",
+    "src/phage_cocktail/data.py": "7ed230c370d99cd451929171ce2a8db76a245d1e1455c37cdeef1f1db366e916",
+    "src/phage_cocktail/evo2_host.py": "348d228010a2633ce0d6006dcfc342dc20aac9af1d1af1788ec0cb9f23c74936",
+    "src/phage_cocktail/evo2_reference.py": "9c16500836e98ccc513e94f24d6d742dd128d54ef384f1a26b13c0096b24daef",
+    "src/phage_cocktail/genophi_reference.py": "29b113336119e963c8e0b9eef821346501e96d5967506104d475142d63bd9f62",
+    "src/phage_cocktail/host_baseline.py": "38757f454aa6e9c7f8873f7fa00ebecd481c0998c264420b415e6b163b5fb0a3",
+    "src/phage_cocktail/host_genome.py": "146331d3331d45a4a8eb8d4920aca6e034148040cacba2f930e45104247e955d",
+    "src/phage_cocktail/host_similarity.py": "43012d980cb0b5f7168a8971669a5b7dfa09d7fea21be9fff2a8f7b1b1068029",
+    "src/phage_cocktail/host_study.py": "d3eaf3b5738ef45a65905e3c4b05e32b4fa8c89127c8a09784fd00ae8a68b496",
+    "src/phage_cocktail/input_bundle.py": "d6ef3fe2ae342a166da0b6bed52ef99cd53394557a55d30fd7c18abc43f1f96a",
+    "src/phage_cocktail/model_interface.py": "2426b6573ca8128f45d2e1e0e0e39869ae80c7336c6c3a0cffd6b1a2a41b4e5a",
+    "src/phage_cocktail/nvidia_evo2.py": "7d26484c46b0cbf6e9bbeb9d2725c7502cbab54337c9c611abe1c7c8fcfba33f",
+    "src/phage_cocktail/nvidia_host_pilot.py": "6a161fec6ce43f26e914d0cc6667720ffe3776661421645a5544b609bdf6ec4f",
+    "src/phage_cocktail/pair_cohort.py": "4b0ec4dc6d23b12e767ff102c75f197bb049b04870cacffd970a73183a3e7560",
+    "src/phage_cocktail/paired_baseline.py": "22df6d5a3b3ef295ea9acf322deba477b29e3bb46926d85655649ab89b97864f",
+    "src/phage_cocktail/paired_splits.py": "4ea669786f653aca0d2ce5eacae14c96bf3df46bb81d267ebf9f9310abe5ae55",
+    "src/phage_cocktail/registry.py": "a33cb7484bcdbb3d26c699f02a45c9e00354f21fdd52818c5abb52f807cef194",
+    "src/phage_cocktail/retrieval.py": "378705d8655647450aac214e67501f0495077e5f69fe559e00640c85e0189034",
+    "src/phage_cocktail/retrieval_study.py": "d897a74e00236b925be0b79092c28fd6f7ed2dd7a4e55f9d0afb1533cb730405",
+    "src/phage_cocktail/split.py": "aed316aa5cd265ac65df7dd8e906b148fd891ad2e3da86dffcac9fa6fbabe5dd"
+  },
+  "new_post_attempts": 5,
+  "new_response_bytes": 893489254,
+  "jobs": {
+    "job_00": "complete",
+    "job_01": "complete",
+    "job_02": "complete",
+    "job_03": "complete",
+    "job_04": "complete",
+    "job_05": "complete"
+  }
+}

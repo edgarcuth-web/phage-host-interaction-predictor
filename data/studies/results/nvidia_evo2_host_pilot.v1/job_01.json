@@ -1,0 +1,39 @@
+{
+  "input": {
+    "host": "370D",
+    "assembly_sha256": "ef529eed6ecf246dd1b35b2ab19e450c6404b7af88d66a290daa87d71a0ab9ed",
+    "fasta_sha256": "dafe6c2aef08ffb62502889461fc0aec71b265ece004ee25132576a61ae6db95",
+    "window_ordinal": 0,
+    "contig_ordinal": 0,
+    "start": 0,
+    "strand": "reverse_complement",
+    "length": 8192,
+    "assembly_bases": 5278785,
+    "sampled_assembly_fraction": 0.001551872258483723,
+    "N_bases": 316,
+    "input_sha256": "6229997e378efad2afd89b71f56dfc010acc16be7777e737f3a6a701b09bf2f6"
+  },
+  "origin": "new_hosted_forward",
+  "response": {
+    "endpoint": "https://health.api.nvidia.com/v1/biology/arc/evo2-40b/forward",
+    "layer": "blocks.28.mlp.l3",
+    "request_id": "e1170e08-5d36-419f-a840-4f571ba0479f",
+    "http_status": 200,
+    "elapsed_ms": 50564,
+    "sequence_length": 8192,
+    "input_sha256": "6229997e378efad2afd89b71f56dfc010acc16be7777e737f3a6a701b09bf2f6",
+    "response_bytes": 178667332,
+    "response_sha256": "7be86a0a4e15e7cfafc34a0573a9633968971daa2dd96549082e5a1731f0f3e7",
+    "shape": [
+      8192,
+      8192
+    ],
+    "returned_dtype": "float64",
+    "finite": true,
+    "weights_sha256": null,
+    "server_runtime_version": null
+  },
+  "client_elapsed_seconds": 65.81582055800027,
+  "pool_float32_max_abs_error": 1.0842021724855044e-19,
+  "pooled_sha256": "09ac1f6b274609b2791bf7a4530674e61fdbb7e0f7e7b764bc27346421c65219"
+}
