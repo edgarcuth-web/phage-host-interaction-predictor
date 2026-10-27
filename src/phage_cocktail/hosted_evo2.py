@@ -120,7 +120,7 @@ def load_hosted_cache(repo, data_root, plan_path, store, manifest):
     features = pd.DataFrame(
         values,
         index=hosts,
-        columns=[f"hosted_evo2:{i}" for i in range(plan["dimension"])],
+        columns=[f"evo2:hosted:{i}" for i in range(plan["dimension"])],
     )
     plan_sha = sha256(plan_payload).hexdigest()
     source_identity = sha256(
