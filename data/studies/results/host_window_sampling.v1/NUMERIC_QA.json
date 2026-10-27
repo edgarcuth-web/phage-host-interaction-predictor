@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "historical_six_methods_per_host_exact": true,
+  "saved_models_reloaded_with_exact_scores": 72,
+  "independent_scalar_sampled_features": 9,
+  "pilot_one_window_inputs_match": true,
+  "independent_primary_top2_tie_panels": 306,
+  "second_run_all_report_and_output_hashes_equal": true,
+  "report_sha256": "cadb4524ebc49924e5a20ba3cd2b54d65405b76c7d3c26c50f04c4ba6551fa35",
+  "new_nvidia_inference_calls": 0
+}

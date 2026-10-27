@@ -16,6 +16,7 @@ from .cohort import curate_mlc, host_aliases, host_key
 from .data import load_interactions
 from .host_baseline import fit_host_model, predict_host_model
 from .host_genome import host_genome_features
+from .host_sampling import sampling_features
 from .evo2_host import load_cache
 from .host_similarity import align_core_distances, neighbour_scores, prevalence_shift
 from .host_study import host_features, verify_resources
@@ -78,20 +79,34 @@ def score_known_panel(train, candidates, features, numeric, categorical, estimat
 
 
 def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=False,
-                        similarity=False, embedding_cache=None):
+                        similarity=False, embedding_cache=None, sampling=False):
     """Verify pinned tables/manifests, freeze splits, refit and publish atomically."""
     repo, output = Path(repo).resolve(), Path(output_dir).resolve()
     if output.exists():
         raise ValueError("retrieval output directory must be new")
+    if sampling:
+        if genome or similarity or embedding_cache is not None:
+            raise ValueError("sampling control must use its own protocol")
+        genome = True
     if embedding_cache is not None:
         similarity = True
     if genome and similarity:
         raise ValueError("choose a single study protocol")
-    protocol_path = repo / ("data/studies/evo2_host_representation.v1.json" if embedding_cache is not None else
+    protocol_path = repo / ("data/studies/host_window_sampling.v1.json" if sampling else
+                            "data/studies/evo2_host_representation.v1.json" if embedding_cache is not None else
                             "data/studies/host_similarity.v1.json" if similarity else
                             "data/studies/genome_host_retrieval.v1.json" if genome else
                             "data/studies/host_retrieval.v1.json")
     plan = read_json_object(protocol_path)
+    if sampling:
+        amendment = plan
+        parent = repo / amendment["parent_protocol"]
+        if sha256_file(parent) != amendment["parent_sha256"]:
+            raise ValueError("changed frozen sampling parent protocol")
+        plan = read_json_object(parent)
+        plan.update(amendment["overrides"])
+        plan["sampling_control"] = amendment["sampling_control"]
+        plan["repo_files_sha256"][amendment["parent_protocol"]] = amendment["parent_sha256"]
     for path, expected in plan["repo_files_sha256"].items():
         if sha256_file(repo / path) != expected:
             raise ValueError(f"changed frozen retrieval input: {path}")
@@ -125,6 +140,11 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                                       numeric + sequence_features.columns.tolist(),
                                       plan["categorical_features"]),
         }
+    if sampling:
+        sampled_features, sampling_audit, sampling_windows = sampling_features(
+            manifest, resources, plan["sampling_control"])
+        for budget, frame in sampled_features.items():
+            extra_features[f"host_window{budget}_4mer_logistic"] = (frame, frame.columns.tolist(), [])
     if embedding_cache is not None:
         embedding_features, sequence_features, genome_audit, cache_sha = load_cache(
             embedding_cache, repo, manifest)
@@ -137,7 +157,8 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                                       numeric + embedding_features.columns.tolist(), plan["categorical_features"]),
         }
     provenance = {
-        **code_provenance(repo, repo / ("scripts/run_evo2_host_comparison.py" if embedding_cache is not None else
+        **code_provenance(repo, repo / ("scripts/run_host_window_sampling.py" if sampling else
+                                       "scripts/run_evo2_host_comparison.py" if embedding_cache is not None else
                                        "scripts/run_host_similarity.py" if similarity else
                                        "scripts/run_genome_host_retrieval.py" if genome else
                                        "scripts/run_host_retrieval.py")),
@@ -162,6 +183,12 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
         excluded.to_csv(stage / "excluded_pairs.csv", index=False)
         observed.to_csv(stage / "observed_pairs.csv", index=False)
         atomic_write_json(plan, stage / "protocol.json")
+        if sampling:
+            (stage / "sampling_protocol.json").write_bytes(protocol_path.read_bytes())
+            sampling_audit.to_csv(stage / "sampling_audit.csv", index=False)
+            sampling_windows.to_csv(stage / "sampling_windows.csv", index=False)
+            for budget, frame in sampled_features.items():
+                frame.to_csv(stage / f"host_window{budget}_features.csv", index_label="bacterium")
         if genome or embedding_cache is not None:
             genome_audit.to_csv(stage / "genome_audit.csv", index=False)
             sequence_features.to_csv(stage / "host_genome_features.csv", index_label="bacterium")
@@ -228,6 +255,11 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                     comparisons.extend([(name, "phage_prevalence"), (name, "host_logistic")])
                 if genome or embedding_cache is not None:
                     comparisons.append(("hybrid_4mer_logistic", "host_4mer_logistic"))
+                if sampling:
+                    budgets = plan["sampling_control"]["budgets"]
+                    comparisons.extend((f"host_window{k}_4mer_logistic", "host_4mer_logistic") for k in budgets)
+                    comparisons.extend((f"host_window{b}_4mer_logistic", f"host_window{a}_4mer_logistic")
+                                       for a, b in zip(budgets, budgets[1:]))
                 if embedding_cache is not None:
                     comparisons.extend([
                         ("host_evo2_logistic", "host_4mer_logistic"),
@@ -275,5 +307,7 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
         if genome or embedding_cache is not None:
             report["audit"].update(host_genomes_verified=len(genome_audit),
                                     genome_features=sequence_features.shape[1])
+        if sampling:
+            report["audit"]["sampling_control_rows"] = len(sampling_audit)
         atomic_write_json(report, stage / "report.json")
     return report

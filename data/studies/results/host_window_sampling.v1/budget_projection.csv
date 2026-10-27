@@ -1,0 +1,5 @@
+strategy,window_budget,hosts,two_strand_calls,hosts_with_fewer_windows_than_budget,median_assembly_fraction,estimated_json_bytes_no_reuse_credit,serial_server_seconds_projection,reference_report_sha256,scope
+full_windows_1,1,177,354,0,0.0016076403736743,63243263952,17947.092,16c712d012c0866dd204ebf197813cd4951b90098118bde028c91abbebcfb789,"Projection from one real 8192bp response, not a measured full run, invoice or schedule"
+full_windows_4,4,177,1416,0,0.0064305614946973,252973055808,71788.368,16c712d012c0866dd204ebf197813cd4951b90098118bde028c91abbebcfb789,"Projection from one real 8192bp response, not a measured full run, invoice or schedule"
+full_windows_32,32,177,7322,177,0.0342310539158472,1308099374736,371210.756,16c712d012c0866dd204ebf197813cd4951b90098118bde028c91abbebcfb789,"Projection from one real 8192bp response, not a measured full run, invoice or schedule"
+original_32_including_short_tails,32,177,11328,0,0.03745858143182785,1425165736336,404431.6973374023,16c712d012c0866dd204ebf197813cd4951b90098118bde028c91abbebcfb789,"Linear input-base projection including short tails; unmeasured service behavior, not an invoice or schedule"
