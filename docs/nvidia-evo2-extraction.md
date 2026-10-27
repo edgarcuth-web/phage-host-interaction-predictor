@@ -12,6 +12,38 @@ as the measured engineering pilot. Both strands are retained. An explicit
 32-window sampling, including partial tails; it is not whole-genome coverage.
 No labels, fitting, ranking, or prediction metrics enter this executor.
 
+## Hosted evaluation boundary
+
+The hosted executor and the local-checkpoint Evo2 v1 cache intentionally use
+different pooling arithmetic. Hosted outputs therefore **must not** be copied or
+renamed into the local cache layout. A completed full-panel hosted run is
+evaluated through the explicit hosted adapter, which verifies the extraction
+plan, immutable receipts, final host matrix and exact source FASTAs before
+reusing the existing host splits, candidate panel, estimator and retrieval
+metrics.
+
+The hosted study uses distinct method names
+`host_hosted_evo2_logistic` and `hybrid_hosted_evo2_logistic`. Its output
+protocol records the hosted extraction plan as the representation definition and
+retains `local_v1_cache_compatible: false`.
+
+After a full `original_32_including_short_tails` extraction is complete:
+
+```bash
+python scripts/run_hosted_evo2_host_comparison.py \
+  --plan artifacts/full_hosted_extraction_plan.json \
+  --store s3://YOUR_BUCKET/evo2/full-run-001 \
+  --outdir artifacts/hosted_evo2_host_comparison_v1
+```
+
+Use a local checkpoint directory instead of the S3 URI when applicable. The
+comparison command performs no NVIDIA inference. It refuses incomplete runs,
+partial host panels, the one-window engineering selection, changed source
+FASTA/code identity, corrupted final vectors, or a plan that differs from the
+stored immutable plan. Hosted checkpoint and server-runtime hashes remain
+unavailable from the service and are reported as a limitation rather than
+invented.
+
 ## Offline acceptance using real existing results
 
 Use the verified source FASTAs from the preceding study and the current checkout:
