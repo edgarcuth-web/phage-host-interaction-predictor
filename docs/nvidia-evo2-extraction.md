@@ -31,6 +31,14 @@ All request budgets are zero. No NVIDIA key or S3 account is used. Synthetic CPU
 fixtures in the test suite separately exercise failures, budgets and claim races;
 they are not biological results.
 
+The [recorded replay](../data/studies/results/nvidia_host_extraction_replay.v1.json)
+uses published implementation `db062825be52b9fa66cfb4f72d4a79b9b7ff5680`.
+It passes the two-job pause, six-job resume, exact three-host reconstruction,
+key-free verification and hash-preserving completed replay. Its 15 checkpoint
+objects total 380,370 bytes, including the plan, base64 receipts and final matrix.
+New NVIDIA calls are zero; no live S3 service was tested. The full local suite
+passes 145 tests and eight subtests, including the Boto3 stubbed transport test.
+
 ## Plan first, then run
 
 ```bash
