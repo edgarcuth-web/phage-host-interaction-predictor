@@ -11,6 +11,7 @@ import pytest
 from phage_cocktail.artifacts import atomic_write_json, sha256_file
 from phage_cocktail.cohort import canonical_assembly_digest
 from phage_cocktail.extraction_store import LocalStore, S3Store, StoreError
+from phage_cocktail.hosted_evo2 import load_hosted_cache
 from phage_cocktail.nvidia_evo2 import ForwardResult, NvidiaForwardError
 from phage_cocktail import nvidia_host_extraction as ex
 
@@ -348,3 +349,45 @@ def test_local_store_does_not_overwrite_or_allow_escape(tmp_path):
     for key in ("../outside", "/absolute", "jobs//one", "jobs/./one", "jobs\\one"):
         with pytest.raises(ValueError):
             store.create(key, b"bad")
+
+
+def test_completed_full_panel_store_loads_as_separate_hosted_representation(extraction):
+    repo, source, store = extraction
+    plan = plan_for(extraction, 12, 1200, "original_32_including_short_tails")
+    plan_path = source.parent / "hosted_plan.json"
+    atomic_write_json(plan, plan_path)
+
+    calls = []
+    def encode(sequence, key, **kwargs):
+        calls.append(sequence)
+        return response(sequence, [1.0, 2.0])
+
+    result = ex.run_extraction(
+        repo,
+        source,
+        plan,
+        store,
+        allow_live=True,
+        key_provider=lambda: "fixture",
+        call_forward=encode,
+    )
+    assert result["status"] == "complete_engineering_extraction"
+    assert len(calls) == 12
+
+    manifest = pd.read_csv(repo / "data/studies/hosts.csv", dtype=str)
+    features, fourmers, qc, identity, representation = load_hosted_cache(
+        repo, source, plan_path, store, manifest
+    )
+    np.testing.assert_array_equal(
+        features.to_numpy(), np.tile(np.array([1.0, 2.0], dtype=np.float32), (3, 1))
+    )
+    assert features.columns.tolist() == ["evo2:hosted:0", "evo2:hosted:1"]
+    assert fourmers.shape == (3, 136)
+    assert qc.bacterium.tolist() == list("ABC")
+    assert qc.selected_windows.tolist() == [2, 2, 2]
+    assert qc.selected_bases.tolist() == [10240, 10240, 10240]
+    assert qc.sampled_fraction.eq(1.0).all()
+    assert len(identity) == 64
+    assert representation["source"] == "nvidia_hosted_forward"
+    assert representation["selection"] == "original_32_including_short_tails"
+    assert representation["local_v1_cache_compatible"] is False

@@ -121,3 +121,50 @@ def test_bad_layer_or_assembly_cannot_publish_partial_cache(fixture_cache):
         extract_cache(repo, source, output, lambda s: None,
                       {**identity, "checkpoint_sha256": "unknown"})
     assert not output.exists()
+
+
+def test_hosted_evo2_uses_distinct_methods_and_provenance(fixture_cache, monkeypatch):
+    repo, source, output, manifest, identity, encode = fixture_cache
+    local_cache = output.with_name("local_cache_for_hosted_fixture")
+    extract_cache(repo, source, local_cache, encode, identity)
+    features, fourmers, qc, _ = load_cache(local_cache, repo, manifest)
+    hosted_features = features.copy()
+    hosted_features.columns = [f"evo2:hosted:{i}" for i in range(hosted_features.shape[1])]
+    representation = {
+        "source": "nvidia_hosted_forward",
+        "model_name": "evo2_40b",
+        "endpoint": "fixture",
+        "layer": "fixture",
+        "dimension": hosted_features.shape[1],
+        "selection": "original_32_including_short_tails",
+        "pooling": "fixture hosted pooling",
+        "weights_sha256": None,
+        "server_runtime_version": None,
+        "local_v1_cache_compatible": False,
+        "source_plan_sha256": "a" * 64,
+    }
+
+    def fake_hosted_loader(*args, **kwargs):
+        return hosted_features, fourmers, qc, "b" * 64, representation
+
+    monkeypatch.setattr(
+        "phage_cocktail.retrieval_study.load_hosted_cache", fake_hosted_loader
+    )
+    hosted_plan = output.with_name("hosted_plan.json")
+    hosted_plan.write_text("{}")
+    report = run_retrieval_study(
+        repo,
+        source,
+        output,
+        hosted_embedding=(hosted_plan, object()),
+    )
+    models = {row["model"] for row in report["metrics"]}
+    assert "host_hosted_evo2_logistic" in models
+    assert "hybrid_hosted_evo2_logistic" in models
+    assert "host_evo2_logistic" not in models
+    assert report["provenance"]["hosted_embedding_sha256"] == "b" * 64
+    assert "Evo2" not in report["not_run"]
+    protocol = json.loads((output / "protocol.json").read_text())
+    assert protocol["study_id"] == "hosted-evo2-host-representation:v1"
+    assert protocol["embedding"]["source"] == "nvidia_hosted_forward"
+    assert protocol["embedding"]["local_v1_cache_compatible"] is False
