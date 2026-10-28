@@ -1,12 +1,17 @@
 """Offline preflight of real-plan metadata; no provider or credentials."""
 from pathlib import Path
+import importlib.util
 
 import pandas as pd
 import pytest
 
 from phage_cocktail.artifacts import atomic_write_json
 from phage_cocktail import nvidia_host_extraction as ex
-from scripts import preflight_nvidia_host_extraction as preflight
+# The standalone CLI is not an installed package; load it by its checked-in path.
+SCRIPT = Path(__file__).resolve().parents[1] / "scripts/preflight_nvidia_host_extraction.py"
+SPEC = importlib.util.spec_from_file_location("preflight_nvidia_host_extraction", SCRIPT)
+preflight = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(preflight)
 from test_nvidia_host_extraction import extraction
 
 
