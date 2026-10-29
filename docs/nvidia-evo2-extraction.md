@@ -12,6 +12,53 @@ as the measured engineering pilot. Both strands are retained. An explicit
 32-window sampling, including partial tails; it is not whole-genome coverage.
 No labels, fitting, ranking, or prediction metrics enter this executor.
 
+## Full-cohort budget review (no provider calls)
+
+A full hosted `original_32_including_short_tails` plan for the 177 previously
+verified host assemblies requires an unusually large intermediate tensor
+transfer. The existing independent CPU sampling audit predicts **11,328
+orientation requests** and **about 1.425 TB of JSON body downloads**. It
+retains only about 5.8 MB of final float32 host-vector data; the large transfer
+occurs before local token pooling.
+
+The current executor reserves the response cap plus one sentinel byte for
+each live attempt. With the default 256 MiB cap, the **no-reuse full-cap
+reservation** for 11,328 requests would be **3,040,836,856,896 bytes (3.04 TB)**.
+This is a conservative *budget reservation*, not a predicted actual download,
+invoice, provider quota or authorization. The independent published estimate
+and the exact-plan estimate must match before an execution plan is reviewed.
+
+Create a **zero-request** full-panel plan on a machine with the verified
+GenoPHI FASTAs already downloaded:
+
+```bash
+python scripts/run_nvidia_host_extraction.py plan \
+  --all-hosts --selection original_32_including_short_tails \
+  --plan artifacts/full_hosted_plan_zero_budget.json \
+  --max-new-calls 0 --max-new-response-bytes 0
+
+python scripts/preflight_nvidia_host_extraction.py \
+  --plan artifacts/full_hosted_plan_zero_budget.json \
+  --out artifacts/full_hosted_plan_preflight.json \
+  --verify-sources
+```
+
+The preflight cross-checks the actual plan job lengths and calls against the
+independently committed sampling projection. It reports per-host coverage,
+estimated download size, conservative full-cap reservation and the frozen
+budget's sufficiency. `--verify-sources` also verifies each local FASTA,
+the source resource lock and executor code. Without this flag the output
+explicitly says source FASTA verification was not performed. Neither command
+reads an NVIDIA key or issues a provider POST.
+
+The zero-budget plan cannot later be edited to increase limits. Any proposed
+paid run must receive a **new immutable plan**, separately reviewed against the
+preflight and with appropriate external quota/cost approval. Do not run with
+`--allow-live` solely because a preflight was produced. The independent
+sampling experiment also found reduced 4-mer retrieval performance on
+sampled windows; that result is a cost/information warning, not an Evo2
+performance result.
+
 ## Hosted evaluation boundary
 
 The hosted executor and the local-checkpoint Evo2 v1 cache intentionally use
