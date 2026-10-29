@@ -23,6 +23,11 @@ def prepare(extraction):
     lock_path = repo / extraction_module_path()
     data = read_json_object(lock_path)
     for item in data["resources"]:
+        original = root / item["path"]
+        final = root / "host" / Path(item["path"]).name
+        final.parent.mkdir(parents=True, exist_ok=True)
+        original.rename(final)
+        item["path"] = final.relative_to(root).as_posix()
         item["url"] = "https://ndownloader.figshare.com/files/" + str(len(item["id"]))
     atomic_write_json(data, lock_path)
     return repo, root, store
@@ -48,8 +53,8 @@ def test_existing_locked_fastas_are_checked_without_fetch(source_fixture):
 
 def test_fetch_missing_exact_resource_and_reuse_without_network(source_fixture):
     repo, root, _ = prepare(source_fixture)
-    payload = (root / "A.fasta").read_bytes()
-    (root / "A.fasta").unlink()
+    payload = (root / "host/A.fasta").read_bytes()
+    (root / "host/A.fasta").unlink()
     urls = []
     def response(request, timeout):
         urls.append(request.full_url)
@@ -59,14 +64,14 @@ def test_fetch_missing_exact_resource_and_reuse_without_network(source_fixture):
     assert report["verified_hosts"] == 3
     assert report["downloaded_hosts"] == 1
     assert report["reused_hosts"] == 2
-    assert (root / "A.fasta").read_bytes() == payload
-    assert not (root / "A.fasta.download-partial").exists()
+    assert (root / "host/A.fasta").read_bytes() == payload
+    assert not (root / "host/A.fasta.download-partial").exists()
 
 
 def test_retries_transient_http_error_only(source_fixture):
     repo, root, _ = prepare(source_fixture)
-    payload = (root / "A.fasta").read_bytes()
-    (root / "A.fasta").unlink()
+    payload = (root / "host/A.fasta").read_bytes()
+    (root / "host/A.fasta").unlink()
     attempts, backoffs = [], []
     def response(request, timeout):
         attempts.append(1)
@@ -83,18 +88,18 @@ def test_retries_transient_http_error_only(source_fixture):
 
 def test_bad_source_digest_rejected_without_admission(source_fixture):
     repo, root, _ = prepare(source_fixture)
-    original = (root / "A.fasta").read_bytes()
-    (root / "A.fasta").unlink()
+    original = (root / "host/A.fasta").read_bytes()
+    (root / "host/A.fasta").unlink()
     changed = b"X" + original[1:]
     with pytest.raises(ValueError, match="digest/size mismatch"):
         fetcher.fetch_locked_fastas(repo, root, opener=lambda *a, **kw: io.BytesIO(changed))
-    assert not (root / "A.fasta").exists()
-    assert not (root / "A.fasta.download-partial").exists()
+    assert not (root / "host/A.fasta").exists()
+    assert not (root / "host/A.fasta.download-partial").exists()
 
 
 def test_existing_corrupt_source_fails_without_overwrite(source_fixture):
     repo, root, _ = prepare(source_fixture)
-    (root / "B.fasta").write_bytes(b"corrupt")
+    (root / "host/B.fasta").write_bytes(b"corrupt")
     def no_network(*args, **kwargs):
         raise AssertionError("corrupt existing source must never be overwritten")
     with pytest.raises(ValueError, match="existing host resource differs"):
