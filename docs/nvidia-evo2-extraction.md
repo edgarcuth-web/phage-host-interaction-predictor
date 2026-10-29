@@ -12,6 +12,34 @@ as the measured engineering pilot. Both strands are retained. An explicit
 32-window sampling, including partial tails; it is not whole-genome coverage.
 No labels, fitting, ranking, or prediction metrics enter this executor.
 
+## Running Phase 1 without a preexisting local FASTA folder
+
+The manual [Evo2 full-host offline preflight](../.github/workflows/evo2-host-offline-preflight.yml)
+GitHub Actions workflow reconstructs the missing input folder directly from the
+177 published and SHA-256-pinned host FASTA URLs. It has no NVIDIA credentials,
+performs no inference, and is not a budget approval. The downloaded raw genomes
+stay on the ephemeral Actions runner and are **not uploaded**.
+
+After the workflow has been merged into the default branch, open **Actions →
+Evo2 full-host offline preflight → Run workflow**. A PR that adds or changes the
+workflow can also exercise it. Its run uploads a seven-day artifact named
+`full-host-evo2-offline-preflight`, containing only:
+
+- `host_fasta_source_receipt.json` — SHA-256-locked source download/verification receipt;
+- `full_hosted_plan_zero_budget.json` — immutable zero-call, zero-response-budget plan;
+- `full_hosted_plan_preflight.json` — verified host coverage, request count and projected transfer.
+
+This step fetches about 910 MB of public source FASTAs on the Actions runner,
+but transfers **zero token-level Evo2 outputs** and makes **zero NVIDIA calls**.
+If a public source is unavailable or differs from its pinned SHA-256/size, the
+workflow fails closed; it never substitutes a sequence or runs provider inference.
+The source fetch helper uses limited retries only for transient HTTP/network
+errors and will not overwrite an existing mismatched resource.
+
+The output plan is bound to the exact code and immutable manifest of that run.
+Do not edit its budgets or assume it can be replayed under changed code. A
+separate reviewed execution plan would be necessary for any future paid run.
+
 ## Full-cohort budget review (no provider calls)
 
 A full hosted `original_32_including_short_tails` plan for the 177 previously
