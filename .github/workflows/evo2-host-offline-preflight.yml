@@ -1,0 +1,98 @@
+name: Evo2 full-host offline preflight
+
+# This workflow only downloads published SHA-256-locked FASTAs and writes a
+# zero-provider-request plan. It does not read provider credentials or infer.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflows/evo2-host-offline-preflight.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evo2-host-offline-preflight-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install project without NVIDIA dependencies
+        run: pip install -e .
+
+      - name: Download and verify the 177 pinned public host FASTAs
+        run: |
+          mkdir -p artifacts
+          python scripts/fetch_pinned_host_fastas.py \
+            --data-root data/raw/genophi_host_study \
+            --out artifacts/host_fasta_source_receipt.json
+
+      - name: Generate a zero-request immutable full-host plan
+        run: |
+          python scripts/run_nvidia_host_extraction.py plan \
+            --data-root data/raw/genophi_host_study \
+            --all-hosts \
+            --selection original_32_including_short_tails \
+            --plan artifacts/full_hosted_plan_zero_budget.json \
+            --max-new-calls 0 \
+            --max-new-response-bytes 0
+
+      - name: Run source-verified budget preflight
+        run: |
+          python scripts/preflight_nvidia_host_extraction.py \
+            --plan artifacts/full_hosted_plan_zero_budget.json \
+            --data-root data/raw/genophi_host_study \
+            --out artifacts/full_hosted_plan_preflight.json \
+            --verify-sources
+
+      - name: Assert frozen coverage and zero provider request budget
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          receipt = json.loads(Path("artifacts/host_fasta_source_receipt.json").read_text())
+          report = json.loads(Path("artifacts/full_hosted_plan_preflight.json").read_text())
+          plan = json.loads(Path("artifacts/full_hosted_plan_zero_budget.json").read_text())
+          assert receipt["verified_hosts"] == 177
+          assert receipt["new_nvidia_requests"] == 0
+          assert report["source_fasta_verification"] == "completed"
+          assert report["hosts"] == 177
+          assert report["two_strand_jobs"] == 11328
+          assert report["estimated_json_bytes_no_reuse_credit"] == 1425165736336
+          assert report["new_nvidia_requests"] == 0
+          assert report["plan_ready_to_run"] is False
+          assert report["frozen_max_new_calls"] == 0
+          assert report["frozen_max_new_response_bytes"] == 0
+          assert not report["full_cap_budget_sufficient_no_reuse"]
+          assert plan["budget"]["max_new_calls"] == 0
+          assert plan["budget"]["max_new_response_bytes"] == 0
+          print({
+              "status": "source_verified_zero_request_plan_complete",
+              "hosts": report["hosts"],
+              "two_strand_jobs": report["two_strand_jobs"],
+              "estimated_json_bytes": report["estimated_json_bytes_no_reuse_credit"],
+              "new_nvidia_requests": 0,
+          })
+          PY
+
+      - name: Publish only small plan and audit files, never raw FASTAs
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-host-evo2-offline-preflight
+          path: |
+            artifacts/host_fasta_source_receipt.json
+            artifacts/full_hosted_plan_zero_budget.json
+            artifacts/full_hosted_plan_preflight.json
+          if-no-files-found: error
+          retention-days: 7
