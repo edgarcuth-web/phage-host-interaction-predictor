@@ -6,6 +6,16 @@ authorize a provider/GPU run. The historical source-pair model task remains
 frozen in [first-model-task.md](first-model-task.md); the full-cohort Evo2
 representation comparison in issue #24 retains its unchanged protocol.
 
+## Next milestone: proposed offline discovery benchmark
+
+A concrete but **not yet frozen** evaluation design now lives in
+[retrieval-rescue benchmark v0](retrieval-rescue-benchmark-v0.md). It
+predefines equal-budget learned/evidence candidate discovery comparisons,
+source-positive rescue accounting, tie and missing-label semantics, and the
+separate cold-phage generalization requirements. Review its checklist and
+freeze a new versioned protocol before fitting any new retrieval model. The
+already-inspected 177-host/94-phage development cohort remains exploratory.
+
 ## Why a retrieval-first objective
 
 A mechanism-first workflow can lose true activity-positive phages before a
