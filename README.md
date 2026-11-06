@@ -4,6 +4,29 @@ Research infrastructure for phage-host interaction prediction and phage-cocktail
 baselines. Dataset provenance, label semantics and evaluation boundaries are
 explicit; this repository does not establish clinical efficacy.
 
+## Next research direction: host-conditioned phage discovery
+
+The proposed next-generation objective is **input a bacterial genome and retrieve
+activity-supported existing phages from a versioned library**, including candidates
+that known receptor/defense annotations cannot confidently identify. Model
+retrieval and evidence/mechanism retrieval should be **complementary discovery
+routes**, not an irreversible "mechanism gate, then model reranking" cascade.
+Unknown annotations must remain unknown, not hard evidence of non-infection.
+
+This does **not** imply the learned retriever exists, that Evo2 embeddings alone
+predict infection, or that an AI-retrieved candidate has a verified novel
+mechanism. The predictor owns representation/learned retrieval and evaluation;
+SDL owns candidate-pool provenance, mechanism evidence, union/decision policies
+and experimental feedback. A pair scorer may also be used to rank an entire
+fixed library; a separate dual encoder is optional and must earn its complexity
+through controlled evaluation.
+
+See [host-conditioned retrieval roadmap](docs/host-conditioned-phage-retrieval-roadmap.md)
+for non-goals, frozen-study boundaries, proposed data handoff, fair retrieval
+benchmarks, and what it would take to claim discovery beyond known annotations.
+Current implementation status and the original source-pair endpoint remain as
+described below.
+
 ## First task
 
 Predict a named source-defined binary outcome for one bacterial strain and one
@@ -277,6 +300,10 @@ comparison have not been run. See the
 - [ ] Demonstrate improvement and validate calibration before model promotion
 - [x] Evaluate unseen-phage regimes with frozen sequence groups and report inconclusive additive-baseline gains
 - [ ] Add repeated group evaluation and an independent release holdout
+- [ ] Freeze a separate host-conditioned retrieval study with a fixed phage-library snapshot and labels
+- [ ] Evaluate genome-only, evidence-only, fusion and union retrieval on the same candidate pool
+- [ ] Measure rescued source-positive candidates, recall at equal K, and cold-host / cold-phage failures
+- [ ] Define a reviewed, versioned learned-retrieval result and SDL admission contract before serving
 - [ ] Compare explicit host–phage pair features with available pretrained representations under the same protocol
 - [x] Reproduce Evo2 species-level retrieval metrics from pinned published score matrices
 - [ ] Regenerate the Evo2-7B embeddings and compare 40B under a separately frozen protocol
