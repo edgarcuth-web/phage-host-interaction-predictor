@@ -275,3 +275,67 @@ Wilcoxon 配对 p = 8.8e-15。血清型取值携带超出缺失模式的信号�
    即汇总模型或 per-phage 模型的事后校准。
 4. 把第五节读数 (2) 做成独立的方法学论点——同一组特征在两个排序方向上的
    有用性排序相反，这对整个 strain-level 预测文献的评估设计有直接含义。
+
+## 九、跨数据集可行性：Klebsiella 支撑不了这个分析
+
+GenoPHI 仓库（`github.com/Noonanav/GenoPHI`，Noonan et al. 2026 Nature Microbiology）
+在 `data/interaction_matrices/` 下附带了六个长格式二值交互矩阵，外加 BASEL 验证矩阵。
+全部可直接从 GitHub 获取，无需 Zenodo。
+
+| 数据集 | 菌株 × phage | 对数 | 阳性数 | 阳性率 |
+|---|---|---|---|---|
+| ecoli（Gaborieau） | 402 × 94 | 37,788 | 7,813 | 20.68% |
+| ecoli_subset | 177 × 94 | 16,638 | 3,813 | 22.92% |
+| klebsiella1 | 62 × 59 | 3,658 | 180 | 4.92% |
+| klebsiella2 | 138 × 46 | 6,348 | 153 | 2.41% |
+| pseudomonas | 23 × 19 | 437 | 158 | 36.16% |
+| vibrio | 256 × 248 | 63,488 | 1,364 | 2.15% |
+| BASEL_ECOR | 25 × 52 | — | — | — |
+
+### 规则分析的功效
+
+第四节的规则推导要求每个 phage 至少 5 个阳性。各数据集满足这一条的 phage 数：
+
+| 数据集 | 每 phage 阳性数中位 | ≥5 阳性 | ≥20 阳性 | phage 总数 |
+|---|---|---|---|---|
+| ecoli | 56 | 92 | 78 | 94 |
+| ecoli_subset | 31.5 | 86 | 64 | 94 |
+| klebsiella1 | **1** | **9** | 2 | 59 |
+| klebsiella2 | **2** | **8** | 0 | 46 |
+| pseudomonas | 8 | 16 | 0 | 19 |
+| vibrio | 2 | 68 | 17 | 248 |
+| BASEL_ECOR | 4 | 24 | 0 | 52 |
+
+**GenoPHI 附带的两个 Klebsiella 矩阵无法复现第四节的分析。** 每 phage 阳性数中位
+只有 1 和 2，能导出规则的 phage 只有 9 和 8 个（Escherichia 是 75/96）。
+klebsiella2 还有 63/138 株对整个 panel 全抗。
+
+要做 Klebsiella 的规则迁移，需要 PhageHostLearn 的原始数据
+（Zenodo 10.5281/zenodo.11061100，105 phage × 200 株，含 Kaptive 的 K-locus 蛋白
+和 RBP 序列）。该档案不在 GitHub 上。
+
+### 一个反转：第五节读数 (4) 只在密集数据上成立
+
+每株的 oracle recall@k 与 prevalence 基线：
+
+| 数据集 | 每株阳性数中位 | oracle r@2 | prevalence r@2 | 占 oracle | prevalence hit@2 |
+|---|---|---|---|---|---|
+| ecoli | 16.5 | 0.210 | 0.092 | 0.441 | 0.792 |
+| ecoli_subset | 19 | 0.198 | 0.088 | 0.443 | 0.816 |
+| pseudomonas | 8 | 0.315 | 0.178 | 0.567 | 0.800 |
+| klebsiella1 | 2.5 | 0.715 | 0.270 | 0.378 | 0.643 |
+| klebsiella2 | 1 | 0.875 | 0.238 | 0.272 | 0.333 |
+| vibrio | 3 | 0.652 | 0.024 | **0.038** | **0.176** |
+
+第五节读数 (4) 说"找到至少一个有效 phage 已接近解决"（Escherichia 上
+全部注释 hit@2 = 0.910，prevalence 0.792）。**这个结论在稀疏数据集上反转**：
+Vibrio 上 prevalence 的 hit@2 只有 0.176，仅达到 oracle 的 3.8%。
+
+这个模式是单调的：数据越稀疏，prevalence 基线越无力，预测的潜在价值越大。
+原因直白——当每个 phage 都很罕见时，"按流行度排序"没有信息可用。
+
+**所以存在一个真实的张力：预测的临床价值在数据最稀疏处最高，
+而那里恰恰也是现有数据集最无法训练和评估的地方。**
+Escherichia 的密集矩阵让方法看起来比实际更接近解决，也让 prevalence 基线
+看起来比实际更强。任何只在 Escherichia 上报告的结论，包括本文件第五节的，
+都继承这个偏倚。
