@@ -1,0 +1,56 @@
+=== phl_inspect.py -> /home/claude/work/data_phl ===
+========================================================================
+interaction matrix
+========================================================================
+raw shape (215, 132)
+after dropping all-empty rows/cols: 215 strains x 132 phages
+cells 28380   observed 12970 (45.7%)   positives 465 (3.59% of observed)
+values present: [np.float64(0.0), np.float64(1.0)]
+
+per-phage positives: median 2  min 0  max 38
+  phages with >=  5 positives:  24 / 132
+  phages with >= 10 positives:   9 / 132
+  phages with >= 20 positives:   3 / 132
+per-phage observed cells: median 77  min 77  max 138
+
+per-strain positives: median 1  min 0  max 16
+  strains with 0 positives: 64 / 215
+per-strain observed cells: median 46  min 46  max 86
+
+========================================================================
+Locibase and the K-locus similarity matrix
+========================================================================
+
+Locibase.json: 200 strains
+  first keys: ['KP_HGUA02_071', '205KP-HG', '52KP-HG', 'Kpcas042', 'HGUA4_08']
+  value type list, 16 entries for KP_HGUA02_071
+  first protein, 298 aa: MNMANLKAVIPVAGLGMHMLPATKAIPKEMLPIVDKPMIQYIVDEIVAAGIKEIVLVTHSSKNAVENHFD...
+  proteins per strain: median 19 min 10 max 25
+
+Locibase_invitro.json: 30 strains
+  first keys: ['A1002KPN', 'E0204', 'k4159', '9517_7_8', 'A1009KPN']
+  value type list, 18 entries for A1002KPN
+  first protein, 298 aa: MNMANLKAVIPVAGLGMHMLPATKAIPKEMLPIVDKPMIQYIVDEIVAAGIKEIVLVTHSSKNAVENHFD...
+  proteins per strain: median 19 min 16 max 24
+
+all_loci_score_matrix: (200, 200)
+  symmetric: True   diagonal all 1: True
+  off-diagonal: min 0.411  median 0.619  max 1.000
+  pairs with similarity >= 0.99: 156 of 19900
+  pairs with similarity >= 0.95: 180 of 19900
+  pairs with similarity >= 0.9: 222 of 19900
+  pairs with similarity >= 0.8: 351 of 19900
+
+Locibase keys 200 vs score matrix dim 200: MATCH
+
+========================================================================
+identifier overlap
+========================================================================
+matrix strains 215   Locibase 200   overlap 200
+matrix strains absent from Locibase: 15 ['K2', 'K21', 'K23', 'K27', 'K28', 'K40', 'K45', 'K48']
+
+matrix phages 132   RBPbase phages 105   overlap 105
+matrix phages with no RBP: 27 ['K19PH14C4P1', 'K1lambda5', 'K2069PH2', 'K22PH164C1', 'K24PH164C1', 'K26PH128C1', 'K31PH164', 'K36PH128C2B']
+RBPs per phage: median 2 max 8
+
+esm2_embeddings_loci: 1280 columns, index e.g. ['KP_HGUA02_071', '205KP-HG', '52KP-HG']

@@ -1,0 +1,61 @@
+=== step5_klebsiella_coverage.py -> /home/claude/work/data_phl ===
+strains with locus data and interactions: 200
+ESM-2 embeddings available for 200 of them
+matrix 200 x 132   observed 11680   positives 393
+
+K-locus identity between strains: median 0.619, 1.12% of pairs >= 0.90
+ESM-2 cosine between strains:      median 0.999
+
+computing leave-one-out nearest-infected-host similarity ...
+cells usable: 10511  of which positive 348
+
+K-locus identity rule: predict lytic if some infected host is >= t similar
+   threshold   recall  precision  n predicted
+        0.99    0.282      0.632          155
+        0.95    0.302      0.629          167
+        0.90    0.319      0.607          183
+        0.85    0.319      0.572          194
+        0.80    0.325      0.318          355
+        0.75    0.365      0.215          590
+        0.70    0.537      0.128         1466
+
+ESM-2 cosine rule: same, with learned locus embeddings
+   threshold   recall  precision  n predicted
+        0.99    1.000      0.033        10511
+        0.95    1.000      0.033        10511
+        0.90    1.000      0.033        10511
+        0.85    1.000      0.033        10511
+        0.80    1.000      0.033        10511
+        0.75    1.000      0.033        10511
+        0.70    1.000      0.033        10511
+
+========================================================================
+how many positives lie outside the reach of K-locus identity?
+========================================================================
+positives considered: 348
+  no infected host at K-locus identity >= 0.99:  250 / 348  (71.8%)
+  no infected host at K-locus identity >= 0.95:  243 / 348  (69.8%)
+  no infected host at K-locus identity >= 0.90:  237 / 348  (68.1%)
+  no infected host at K-locus identity >= 0.85:  237 / 348  (68.1%)
+  no infected host at K-locus identity >= 0.80:  235 / 348  (67.5%)
+  no infected host at K-locus identity >= 0.75:  221 / 348  (63.5%)
+  no infected host at K-locus identity >= 0.70:  161 / 348  (46.3%)
+
+  distribution of each positive's nearest infected host (K-locus identity):
+     5th percentile 0.589
+    25th percentile 0.642
+    50th percentile 0.703
+    75th percentile 0.994
+    95th percentile 1.000
+
+========================================================================
+does the learned embedding reach positives that K-locus identity misses?
+========================================================================
+  at precision >= 0.90   K-locus: t=None recall=na   ESM-2: t=1.0 recall=0.034
+  at precision >= 0.80   K-locus: t=None recall=na   ESM-2: t=1.0 recall=0.034
+  at precision >= 0.70   K-locus: t=None recall=na   ESM-2: t=1.0 recall=0.034
+  at precision >= 0.60   K-locus: t=0.901 recall=0.319   ESM-2: t=1.0 recall=0.144
+  at precision >= 0.50   K-locus: t=0.833 recall=0.325   ESM-2: t=1.0 recall=0.25
+
+  rescued positives: reached by ESM-2 but not by K-locus identity,
+  at each route's own threshold for precision >= 0.70

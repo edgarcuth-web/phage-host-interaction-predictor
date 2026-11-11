@@ -1,0 +1,56 @@
+=== step1b.py -> /home/claude/work/data ===
+
+======================================================================
+D. are the curated annotations redundant with phylogeny?
+======================================================================
+adjusted mutual information with Clermont phylogroup
+  (0 = independent of phylogeny, 1 = a relabelling of phylogeny)
+
+  O-type               AMI 0.247   levels   95   missing   1/403
+  H-type               AMI 0.329   levels   46   missing   1/403
+  LPS_type             AMI 0.294   levels    7   missing   1/403
+  ST_Warwick           AMI 0.461   levels  164   missing   1/403
+  ABC_serotype         AMI 0.188   levels   16   missing 252/403
+  Klebs_capsule_type   AMI 0.016   levels   12   missing 381/403
+
+======================================================================
+D2. defense systems
+======================================================================
+  404 strains x 137 systems
+  systems never present: 0
+  per-strain count: median 8  min 1  max 16
+  most common: MazEF=340, RM_Type_I=328, RM_Type_IV=270, CAS_Class1-Subtype-I-E=217, Mok_Hok_Sok=195, RM_Type_II=157, PsyrTA=110, Mokosh_TypeII=92
+
+  Spearman(n defense systems, n susceptible phages) = 0.054 (p=0.28)
+  the paper's claim: defense systems play only a marginal role
+
+======================================================================
+E. is the published model's low recall a small-sample artefact?
+======================================================================
+phages in performance table: 96
+
+recall: median 0.412  mean 0.424
+precision: median 0.519
+auc: median 0.775
+
+Spearman(n_infections, recall) = 0.678 (p=3.4e-14)
+Spearman(n_infections, auc)    = -0.278 (p=0.0061)
+
+recall by how many strains the phage actually infects:
+              n_phages  median_recall  median_precision  median_auc
+n_infections                                                       
+<10                  7       0.000000          0.000000    0.805627
+10-19                9       0.277778          0.263158    0.856226
+20-49               23       0.294118          0.538462    0.807556
+50-99               29       0.410959          0.485149    0.725484
+100-199             19       0.690058          0.655556    0.794266
+>=200                9       0.792952          0.719403    0.774316
+
+phages with >= 50 infections: 57
+  median recall    0.563
+  median precision 0.556
+  median auc       0.748
+  phages with recall < 0.5: 21 / 57
+
+implied missed positives summed over phages: 3318 of 7966 (41.7%)
+  of which from phages with >= 50 infections: 2640

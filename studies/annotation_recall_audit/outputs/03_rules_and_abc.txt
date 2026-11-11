@@ -1,0 +1,59 @@
+=== step2_rules.py -> /home/claude/work/data ===
+========================================================================
+2a. single-feature annotation rules and how they transfer (score >= 1)
+========================================================================
+
+phages for which a rule with precision >= 0.5 exists: 75 of 96
+  on its own phage: median precision 0.619, median recall 0.405
+
+  which feature supplies the rule:
+    ABC_serotype        32 phages
+    LPS_type            22 phages
+    O-type               7 phages
+    Clermont_Phylo       6 phages
+    H-type               4 phages
+    ST_Warwick           4 phages
+
+  10 strongest rules by F1:
+    409_P6         ABC_serotype==K5         prec 0.79  rec 0.88  ( 17 positives)
+    409_P5         ABC_serotype==K5         prec 0.68  rec 0.93  ( 14 positives)
+    LF82_P9        LPS_type==R1         prec 0.77  rec 0.76  (209 positives)
+    412_P2         ABC_serotype==K1         prec 0.86  rec 0.68  ( 53 positives)
+    416_P5         ABC_serotype==K5         prec 0.74  rec 0.78  ( 18 positives)
+    LF110_P2       LPS_type==R1         prec 0.72  rec 0.79  (187 positives)
+    LF82_P2        LPS_type==R1         prec 0.70  rec 0.76  (192 positives)
+    LF82_P5        LPS_type==R1         prec 0.68  rec 0.77  (183 positives)
+    LF82_P4        LPS_type==R1         prec 0.66  rec 0.79  (173 positives)
+    416_P4         ABC_serotype==K5         prec 0.79  rec 0.65  ( 23 positives)
+
+------------------------------------------------------------------------
+transfer of each rule to OTHER phages, grouped by phage relatedness
+------------------------------------------------------------------------
+
+source phage itself:               n=   75   median precision 0.619   median recall 0.405
+  transferred, same genus            n=  738   median precision 0.456   median recall 0.172
+  transferred, same family only      n= 1698   median precision 0.250   median recall 0.152
+  transferred, different family      n= 4539   median precision 0.243   median recall 0.140
+
+  interpretation: a mechanism rule derived on one phage, applied to a
+  relative of that phage. The paper's K1 example is one row of this table.
+
+  ABC_serotype==K1 rules were derived for 18 phages: BCH953_P4, BCH953_P5, NIC06_P2, LF31_P1, 536_P6, NAN33_P1, NAN33_P2, 427_P3, AN17_P1, BDX03_P1, MT1B1_3A1, 412_P2, AL505_Sd2, 412_P5, LF7074_P1, LF7074_P3, LM08_P1, LF50_P3
+    on their own phages : median precision 0.571  median recall 0.349
+    same genus elsewhere: median precision 0.214  median recall 0.138  (n=146)
+
+========================================================================
+2b. is the ABC capsule signal presence, or serotype identity?
+========================================================================
+strains with an ABC serotype: 151 / 402
+serotype levels among them  : 15
+  level counts: K1=42, K5=19, HP=13, CatB=11, K4=11, 5=10, K2=10, Unknown=7
+
+phages with >= 20 positives: 80
+  AUROC of 'has an ABC capsule' alone        : median 0.632
+  AUROC of serotype identity within capsulated: median 0.795   (in-sample, an upper bound)
+  Wilcoxon on the pair: p = 8.8e-15
+
+  presence alone above 0.5 means capsulated strains differ in susceptibility
+  from uncapsulated ones; the serotype column is the authors' load-bearing
+  feature, so which half carries it matters for any mechanism claim.

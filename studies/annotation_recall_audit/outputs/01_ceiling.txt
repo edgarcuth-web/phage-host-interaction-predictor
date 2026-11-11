@@ -1,0 +1,101 @@
+=== step1_ceiling.py -> /home/claude/work/data ===
+
+======================================================================
+A. shape, scores, missingness
+======================================================================
+matrix: 402 strains x 96 phages = 38592 cells
+picard_collection: 403 strains   guelin_collection: 96 phages
+phylo distance matrix: (501, 501)
+
+NaN cells: 157 (0.41%)
+
+score distribution (observed cells):
+  score 0.0:   30459  (79.25%)
+  score 1.0:    3014  ( 7.84%)
+  score 2.0:    2306  ( 6.00%)
+  score 3.0:    1368  ( 3.56%)
+  score 4.0:    1288  ( 3.35%)
+
+binarisation sensitivity:
+  score >= 1:   7976 positives  rate 20.75%
+  score >= 2:   4962 positives  rate 12.91%
+  score >= 3:   2656 positives  rate  6.91%
+  score >= 4:   1288 positives  rate  3.35%
+
+strains in matrix not in picard_collection: 0 []
+strains in picard_collection not in matrix: 1 ['LF110']
+
+======================================================================
+B. per-phage / per-strain positive counts (statistical power)
+======================================================================
+per-phage positive counts (out of ~402 strains):
+  median 57   mean 83.1   min 3   max 263
+  phages with <   5 positives:  2 / 96  (2%)
+  phages with <  10 positives:  7 / 96  (7%)
+  phages with <  20 positives: 16 / 96  (17%)
+  phages with <  30 positives: 23 / 96  (24%)
+  phages with <  50 positives: 39 / 96  (41%)
+
+  10 narrowest phages: 411_P1=3, 411_P2=4, AN24_P2=5, AN24_P3=8, BCH953_P3=9, 409_P8=9, 536_P12=9, 409_P1=11, 409_P3=12, 409_P5=14
+  10 broadest  phages: LF82_P6=193, LF73_P4=204, LF82_P9=209, 55989_P2=214, LF82_P8=227, LF73_P1=228, DIJ07_P1=239, 536_P9=242, 536_P7=245, DIJ07_P2=263
+
+per-strain positive counts (out of 96 phages):
+  median 17   mean 19.8   min 0   max 68
+  strains with <  1 susceptible phages:  12 / 402  (3%)
+  strains with <  3 susceptible phages:  31 / 402  (8%)
+  strains with <  5 susceptible phages:  52 / 402  (13%)
+  strains with < 10 susceptible phages: 129 / 402  (32%)
+
+  strains with ZERO susceptible phage: 12
+
+======================================================================
+C. how much of susceptibility is explained by core-genome phylogeny
+======================================================================
+strains with both susceptibility profile and phylogenetic distance: 402
+usable strain pairs (co-observed >= 50 phages): 80133 of 80601
+
+Spearman(phylogenetic distance, susceptibility-profile Jaccard) = -0.106  (p=1.85e-200)
+  negative = closer relatives share susceptibility profiles
+
+  mean profile Jaccard by phylogenetic distance bin:
+          <0.001: Jaccard 0.322  (n=  1110)
+     0.001-0.005: Jaccard 0.196  (n=  2559)
+      0.005-0.01: Jaccard 0.255  (n=  9022)
+       0.01-0.02: Jaccard 0.170  (n= 14986)
+       0.02-0.03: Jaccard 0.197  (n= 36071)
+           >0.03: Jaccard 0.157  (n= 16385)
+
+  same phylogroup   : mean Jaccard 0.233  (n=13345)
+  different phylogroup: mean Jaccard 0.184  (n=66788)
+
+======================================================================
+D. are the curated annotations redundant with phylogeny?
+======================================================================
+adjusted mutual information with Clermont phylogroup (0 = independent, 1 = identical):
+Traceback (most recent call last):
+  File "/home/claude/work/src/step1_ceiling.py", line 138, in <module>
+    ami = adjusted_mutual_info_score(pg_all, v)
+  File "/usr/local/lib/python3.13/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.13/site-packages/sklearn/metrics/cluster/_supervised.py", line 1033, in adjusted_mutual_info_score
+    labels_true, labels_pred = check_clusterings(labels_true, labels_pred)
+                               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/site-packages/sklearn/metrics/cluster/_supervised.py", line 45, in check_clusterings
+    labels_true = check_array(
+        labels_true,
+    ...<2 lines>...
+        dtype=None,
+    )
+  File "/usr/local/lib/python3.13/site-packages/sklearn/utils/validation.py", line 1090, in check_array
+    _assert_all_finite(
+    ~~~~~~~~~~~~~~~~~~^
+        array,
+        ^^^^^^
+    ...<2 lines>...
+        allow_nan=ensure_all_finite == "allow-nan",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/site-packages/sklearn/utils/validation.py", line 122, in _assert_all_finite
+    raise ValueError("Input contains NaN")
+ValueError: Input contains NaN
