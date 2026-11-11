@@ -131,6 +131,13 @@ See [the audit](docs/host-baseline-results.md),
 [`docs/dataset_contract.md`](docs/dataset_contract.md) and
 [`data/README.md`](data/README.md).
 
+Genomes are not committed either. The 177 host genomes (910.4 MB) and 94 phage
+genomes (6.8 MB) are pinned by URL, SHA-256 and byte size in the resource locks,
+so they are rebuilt by verification rather than re-derived.
+[`data/README.md`](data/README.md#rebuilding-the-locked-genome-inputs) gives the
+commands, the expected sizes and which download hosts each half needs; the phage
+half and every table need only GitHub.
+
 ## Model exchange
 
 SDL exports **ModelInputBundle v1** with complete pair snapshots, an explicit
