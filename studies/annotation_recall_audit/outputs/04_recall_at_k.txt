@@ -1,0 +1,64 @@
+=== step2c_recall_at_k.py -> /home/claude/work/data ===
+strains 402   phages 96   phylogenetic groups at 1e-4: 302
+
+recall at k, averaged over strains with >= 1 susceptible phage (score >= 1)
+feature set          k=1      k=2      k=3      k=5     k=10
+------------------------------------------------------------
+prevalence         0.047    0.088    0.129    0.210    0.377
+nn_phylo           0.064    0.114    0.162    0.247    0.403
+proxy              0.067    0.131    0.181    0.275    0.428
+mechanism          0.052    0.101    0.153    0.235    0.409
+all_annot          0.068    0.132    0.183    0.269    0.441
+mech+defense       0.056    0.104    0.157    0.232    0.394
+all+defense        0.057    0.112    0.165    0.253    0.414
+
+strains evaluated: 390 of 402
+
+gain over the prevalence baseline (percentage points of recall):
+feature set          k=1      k=2      k=3      k=5     k=10
+nn_phylo             1.7      2.5      3.3      3.8      2.6
+proxy                2.0      4.3      5.2      6.5      5.0
+mechanism            0.5      1.3      2.4      2.5      3.2
+all_annot            2.1      4.3      5.4      6.0      6.4
+mech+defense         0.9      1.5      2.8      2.2      1.7
+all+defense          1.0      2.4      3.6      4.4      3.7
+
+note: per-phage models give per-phage probabilities, so ranking phages
+for one strain compares uncalibrated scores. The flaw is identical across
+feature sets, so the comparison between rows is fair; absolute values are not.
+
+============================================================
+ceiling, precision@k and hit@k
+============================================================
+oracle recall@k    0.115    0.205    0.283    0.419    0.630
+  (perfect ranking; bounded by each strain's own number of positives)
+
+fraction of the oracle achieved:
+feature set          k=1      k=2      k=3      k=5     k=10
+prevalence         0.407    0.432    0.456    0.501    0.599
+nn_phylo           0.559    0.556    0.572    0.590    0.640
+proxy              0.579    0.640    0.640    0.657    0.679
+mechanism          0.450    0.495    0.542    0.561    0.650
+all_annot          0.593    0.644    0.649    0.643    0.700
+mech+defense       0.486    0.506    0.554    0.553    0.626
+all+defense        0.491    0.547    0.583    0.605    0.657
+
+precision@k   (of the k phages you test, how many work)
+feature set          k=1      k=2      k=3      k=5     k=10
+prevalence         0.674    0.637    0.628    0.616    0.579
+nn_phylo           0.767    0.723    0.689    0.668    0.606
+proxy              0.818    0.785    0.755    0.722    0.632
+mechanism          0.703    0.712    0.705    0.684    0.638
+all_annot          0.828    0.803    0.770    0.725    0.660
+mech+defense       0.736    0.709    0.709    0.674    0.615
+all+defense        0.774    0.745    0.732    0.701    0.634
+
+hit@k   (at least one working phage among the k tested)
+feature set          k=1      k=2      k=3      k=5     k=10
+prevalence         0.674    0.759    0.803    0.869    0.956
+nn_phylo           0.767    0.851    0.887    0.941    0.982
+proxy              0.818    0.897    0.944    0.974    0.992
+mechanism          0.703    0.836    0.895    0.931    0.962
+all_annot          0.828    0.910    0.949    0.974    0.990
+mech+defense       0.736    0.838    0.915    0.946    0.969
+all+defense        0.774    0.859    0.926    0.962    0.982

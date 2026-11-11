@@ -1,0 +1,24 @@
+=== step5b_rescue.py -> /home/claude/work/data_phl ===
+centred ESM-2 cosine: median -0.007  min -0.837  max 1.000
+Spearman(K-locus identity, centred ESM-2 cosine) = 0.248
+
+per-phage AUROC of nearest-infected-host similarity (phages with >=3 positives
+and >=3 negatives among observed cells), leave-one-out:
+  phages evaluated: 40  (total positives in them: 278)
+  K-locus   median AUROC 0.669   mean 0.673
+  ESM-2     median AUROC 0.664   mean 0.628
+  paired Wilcoxon: p = 0.036
+  phages where ESM-2 beats K-locus: 8/40
+
+pooled over all phages, ranking every observed cell:
+  K-locus   AUROC 0.750   positives 348  negatives 10163
+  ESM-2     AUROC 0.778   positives 348  negatives 10163
+
+rescue at matched budget: take the top N cells by each route,
+N = number of cells the K-locus rule selects at identity >= 0.90
+  N = 183   total positives 348
+  found by both                93
+  only by K-locus identity     18
+  only by ESM-2 (rescued)      2
+  by neither                   280
+  union recall 0.325 vs K-locus alone 0.319

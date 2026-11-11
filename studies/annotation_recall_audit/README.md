@@ -74,6 +74,13 @@ on the ordinal 0-4 plaque score. `step3a` sweeps all four itself.
 `step3b`'s third argument is the number of partitions; it is the slow one
 (roughly five minutes per partition on one core).
 
+## Outputs
+
+`outputs/` holds the raw stdout of every script, regenerated in one pass, plus
+`00_provenance.md`: interpreter and package versions, and sha256 of every input
+table and every script. Every figure quoted in the report traces to a file there.
+File numbering follows report order, not run order.
+
 ## What supersedes what
 
 `step3a_rule_robust.py` supersedes the transfer table in `step2_rules.py`: it

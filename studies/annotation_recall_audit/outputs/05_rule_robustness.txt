@@ -1,0 +1,53 @@
+=== step3a_rule_robust.py -> /home/claude/work/data ===
+==============================================================================
+rule transfer across binarisation thresholds
+==============================================================================
+
+score >= 1   positives  7976   phages with a rule 75/96   same-genus pairs 680
+  rule on its own phage (in-sample upper bound)
+     median recall    0.405   median precision 0.619
+  SAME-GENUS TARGET, evaluated on identical labels:
+     own rule        median recall 0.419  95% CI [0.405, 0.471]
+     transferred rule median recall 0.196  95% CI [0.135, 0.273]
+     paired Wilcoxon (own vs transferred): p = 1.80e-30
+     relative recall retained: 0.47
+  lift over chance (recall minus the rule's strain coverage):
+     own rule        median +0.244
+     transferred     median +0.104
+     transferred lift 95% CI [+0.069, +0.179]   (excludes 0)
+
+score >= 2   positives  4962   phages with a rule 53/96   same-genus pairs 354
+  rule on its own phage (in-sample upper bound)
+     median recall    0.333   median precision 0.583
+  SAME-GENUS TARGET, evaluated on identical labels:
+     own rule        median recall 0.429  95% CI [0.350, 0.467]
+     transferred rule median recall 0.161  95% CI [0.125, 0.202]
+     paired Wilcoxon (own vs transferred): p = 7.35e-17
+     relative recall retained: 0.38
+  lift over chance (recall minus the rule's strain coverage):
+     own rule        median +0.283
+     transferred     median +0.076
+     transferred lift 95% CI [+0.058, +0.134]   (excludes 0)
+
+score >= 3   positives  2656   phages with a rule 28/96   same-genus pairs 64
+  rule on its own phage (in-sample upper bound)
+     median recall    0.204   median precision 0.558
+  SAME-GENUS TARGET, evaluated on identical labels:
+     own rule        median recall 0.218  95% CI [0.162, 0.326]
+     transferred rule median recall 0.116  95% CI [0.072, 0.133]
+     paired Wilcoxon (own vs transferred): p = 5.09e-08
+     relative recall retained: 0.53
+  lift over chance (recall minus the rule's strain coverage):
+     own rule        median +0.155
+     transferred     median +0.059
+     transferred lift 95% CI [+0.035, +0.095]   (excludes 0)
+
+score >= 4   positives  1288   phages with a rule 4/96   same-genus pairs 0 -- too few to test
+
+==============================================================================
+summary across thresholds
+==============================================================================
+ thr  n_rules  n_pairs  src_rec  own_rec  trans_rec  trans_lo  trans_hi  lift  lift_lo  lift_hi     p
+   1       75      680    0.405    0.419      0.196     0.135     0.273 0.104    0.069    0.179 0.000
+   2       53      354    0.333    0.429      0.161     0.125     0.202 0.076    0.058    0.134 0.000
+   3       28       64    0.204    0.218      0.116     0.072     0.133 0.059    0.035    0.095 0.000

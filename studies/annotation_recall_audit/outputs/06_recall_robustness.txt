@@ -1,0 +1,47 @@
+=== step3b_recall_robust.py -> /home/claude/work/data ===
+strains 402  phages 96  groups 302  threshold score>=1  repeats 5
+  repeat 1/5 done
+  repeat 2/5 done
+  repeat 3/5 done
+  repeat 4/5 done
+  repeat 5/5 done
+
+oracle recall@k: k=1:0.115  k=2:0.205  k=3:0.283  k=5:0.419  k=10:0.630
+
+mean recall@k over repeats, with min-max across the 5 partitions
+feature set                   k=1               k=2               k=3               k=5              k=10
+---------------------------------------------------------------------------------------------------------
+prevalence     0.047 [0.047,0.047]0.088 [0.087,0.089]0.130 [0.127,0.134]0.208 [0.207,0.210]0.377 [0.377,0.378]
+nn_phylo       0.065 [0.064,0.068]0.115 [0.112,0.117]0.162 [0.158,0.166]0.247 [0.244,0.249]0.405 [0.403,0.409]
+proxy          0.066 [0.065,0.068]0.126 [0.121,0.131]0.175 [0.171,0.181]0.266 [0.261,0.275]0.423 [0.416,0.428]
+mechanism      0.051 [0.049,0.054]0.101 [0.100,0.102]0.152 [0.151,0.153]0.234 [0.232,0.237]0.410 [0.408,0.412]
+all_annot      0.067 [0.062,0.071]0.127 [0.122,0.132]0.177 [0.174,0.183]0.264 [0.260,0.269]0.439 [0.436,0.443]
+mech+defense   0.054 [0.053,0.056]0.102 [0.098,0.105]0.148 [0.140,0.157]0.228 [0.225,0.232]0.387 [0.383,0.394]
+all+defense    0.056 [0.055,0.058]0.111 [0.108,0.113]0.160 [0.158,0.165]0.243 [0.239,0.253]0.405 [0.400,0.414]
+
+fraction of oracle (mean over repeats)
+feature set          k=1      k=2      k=3      k=5     k=10
+prevalence         0.407    0.428    0.461    0.496    0.599
+nn_phylo           0.568    0.560    0.573    0.590    0.643
+proxy              0.571    0.616    0.618    0.634    0.672
+mechanism          0.446    0.494    0.538    0.558    0.650
+all_annot          0.581    0.618    0.626    0.631    0.697
+mech+defense       0.469    0.499    0.522    0.544    0.614
+all+defense        0.490    0.540    0.566    0.580    0.643
+
+gain over prevalence in percentage points, paired across strains
+  (Wilcoxon on per-strain differences, pooled over repeats)
+feature set                       k=1                   k=2                   k=3                   k=5                  k=10
+nn_phylo                +1.9  p=2e-18         +2.7  p=6e-24         +3.2  p=3e-18         +3.9  p=1e-22         +2.8  p=8e-14
+proxy                   +1.9  p=8e-26         +3.8  p=9e-44         +4.5  p=2e-41         +5.8  p=6e-54         +4.6  p=6e-39
+mechanism                +0.5  p=0.04         +1.3  p=6e-08         +2.2  p=1e-16         +2.6  p=3e-18         +3.3  p=6e-31
+all_annot               +2.0  p=1e-25         +3.9  p=2e-44         +4.7  p=1e-42         +5.6  p=9e-55         +6.2  p=7e-65
+mech+defense            +0.7  p=9e-06         +1.4  p=5e-09         +1.7  p=4e-10         +2.0  p=2e-13         +1.0  p=2e-10
+all+defense             +1.0  p=1e-10         +2.3  p=6e-19         +3.0  p=4e-22         +3.5  p=3e-26         +2.8  p=6e-22
+
+does adding defense systems help or hurt? paired per-strain difference
+  (positive = adding defense systems improves recall)
+  mech+defense - mechanism    k=2: +0.11 pp   p=0.084
+  mech+defense - mechanism    k=5: -0.61 pp   p=0.2
+  all+defense - all_annot    k=2: -1.60 pp   p=5.6e-10
+  all+defense - all_annot    k=5: -2.14 pp   p=2.1e-15

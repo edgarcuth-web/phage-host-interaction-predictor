@@ -1,0 +1,22 @@
+=== step5c_phage_side.py -> /home/claude/work/data_phl ===
+phages with RBP data: 105 of 105 in RBPbase
+matrix 215 strains x 105 phages   observed 10891  positives 394
+RBPs per phage: median 2
+phage RBP similarity (best matching pair): median 0.197  min 0.041  max 1.000
+
+pooled AUROC of nearest-co-infecting-phage RBP similarity: 0.716
+  positives 341  negatives 7245
+
+  threshold   recall  precision  n predicted
+       0.99    0.070      0.615           39
+       0.95    0.317      0.295          366
+       0.90    0.396      0.211          640
+       0.80    0.440      0.147         1017
+       0.70    0.446      0.123         1231
+       0.60    0.463      0.125         1259
+
+  how many positives have no co-infecting phage with similar RBPs?
+    none at RBP similarity >= 0.95:  233 / 341  (68.3%)
+    none at RBP similarity >= 0.90:  206 / 341  (60.4%)
+    none at RBP similarity >= 0.80:  191 / 341  (56.0%)
+    none at RBP similarity >= 0.70:  189 / 341  (55.4%)
