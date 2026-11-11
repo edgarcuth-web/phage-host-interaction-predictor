@@ -8,6 +8,11 @@ is involved. The proposed scientific comparison is in
 until merged). This utility remains valid independently of whether the
 proposed protocol is approved.
 
+> **Related, different estimand.** `docs/annotation-recall-audit.md` measures the
+> evidence route's own recall loss on different data, with a global rather than
+> per-host budget and without tie-expected metrics. Its numbers are not values of
+> this evaluator's `primary_k_rescue`. See `docs/estimand-reconciliation.md`.
+
 ## Question it can answer
 
 Given **the same exact full host x phage panel** and existing source-endpoint

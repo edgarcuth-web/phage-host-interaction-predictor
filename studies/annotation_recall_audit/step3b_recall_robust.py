@@ -89,6 +89,14 @@ def scores_for(kind, cols, extra, groups):
     return S
 
 
+PHAGE_RANK = np.argsort(np.argsort(np.array(list(B.columns), dtype=object)))
+
+
+def _order(scores, mask):
+    """score descending, ties broken by phage identifier ascending (declared)."""
+    return np.lexsort((PHAGE_RANK[mask], -scores[mask]))
+
+
 def per_strain_recall(S):
     """returns a per-strain recall@k array for each k (for paired tests)"""
     out = {k: [] for k in KS}
@@ -98,7 +106,7 @@ def per_strain_recall(S):
         tot = y[m].sum()
         if tot < 1:
             continue
-        yy = y[m][np.argsort(-s[m])]
+        yy = y[m][_order(s, m)]
         for k in KS:
             out[k].append(yy[:k].sum() / tot)
     return {k: np.array(v) for k, v in out.items()}
