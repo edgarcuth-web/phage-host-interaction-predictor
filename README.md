@@ -27,6 +27,27 @@ benchmarks, and what it would take to claim discovery beyond known annotations.
 Current implementation status and the original source-pair endpoint remain as
 described below.
 
+## Offline two-route retrieval rescue audit
+
+A **provider-free, source-endpoint-specific evaluation utility** now accepts
+immutable, hash-verified candidate-score panels for independent `evidence`
+and `learned` retrieval routes. It evaluates each complete host x phage
+panel with the existing exact-tie metrics, builds a deterministic **equal-K**
+union candidate ordering, and reports known-positive phages rescued from
+evidence-only top-K, unknown-label exclusions and grouped uncertainty.
+
+This is **software for comparing externally supplied score files**, not a
+trained learned retriever, mechanism detector, Evo2 inference, or clinical
+prediction. It neither filters the phage library based on missing mechanism
+annotations nor converts source-MLC labels to productive infection. See
+[offline retrieval-rescue evaluator](docs/offline-retrieval-rescue-evaluator.md)
+for the manifest, CLI and output contract.
+
+```bash
+pytest -q tests/test_retrieval_rescue.py
+python scripts/run_retrieval_rescue.py --manifest /path/to/manifest.json --outdir /path/to/new-audit-dir
+```
+
 ## First task
 
 Predict a named source-defined binary outcome for one bacterial strain and one
