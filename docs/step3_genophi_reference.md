@@ -53,8 +53,17 @@ and install MMseqs2 separately.
 
 Verify:
 
-    genophi --version
+    python -c "from importlib.metadata import version; print(version('genophi'))"
     mmseqs version
+
+Do not verify the pinned version with `genophi --version`: it reports `1.0.2`
+for the `1.0.3` distribution, because the upstream version string is out of step
+with the package metadata.
+
+`scripts/run_genophi_reference.py` locates the executable with
+`shutil.which("genophi")`, so the environment must be activated. Invoking the
+interpreter by path alone, as in `.venv/bin/python scripts/run_genophi_reference.py`,
+reports GenoPHI as missing even when it is installed.
 
 ## Fetch the pinned demo data
 
@@ -99,6 +108,11 @@ precision, recall, F1 and MCC when present.
 
 The 25 x 25 demo is for verifying the complete genome-to-prediction pipeline.
 It is too small to replace the 177 x 94 benchmark from Steps 1-2.
+
+It also cannot reproduce the reference output shipped in the upstream
+repository, and that output should not be cited as GenoPHI's performance. See
+[`docs/genophi-demo-reproduction.md`](genophi-demo-reproduction.md) for the
+measured result and the evidence.
 
 After the reference workflow runs successfully, the next task is to connect
 genome-derived features to our fixed held-out-strain benchmark and compare
