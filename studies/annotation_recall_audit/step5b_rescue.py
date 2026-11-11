@@ -91,13 +91,21 @@ print("\nrescue at matched budget: take the top N cells by each route,")
 print("N = number of cells the K-locus rule selects at identity >= 0.90")
 Npick = int(np.sum(obs & ~np.isnan(bK) & (bK >= 0.90)))
 both = obs & ~np.isnan(bK) & ~np.isnan(bC)
+# declared tie-break: score descending, then strain identifier ascending,
+# then phage identifier ascending (matching docs/retrieval-rescue-benchmark-v0.md)
+_sr = np.argsort(np.argsort(np.array(strains, dtype=object)))
+_pr = np.argsort(np.argsort(np.array(list(M.columns), dtype=object)))
+CELL_S = np.repeat(_sr[:, None], len(_pr), axis=1).ravel()
+CELL_P = np.repeat(_pr[None, :], len(_sr), axis=0).ravel()
+
+
 def topN(best, N):
     m = both.copy()
-    s = np.where(m, best, -np.inf)
-    flat = np.argsort(s.ravel())[::-1][:N]
-    out = np.zeros_like(m)
-    out.ravel()[flat] = True
-    return out & m
+    s = np.where(m, best, -np.inf).ravel()
+    order = np.lexsort((CELL_P, CELL_S, -s))[:N]
+    out = np.zeros(s.shape, dtype=bool)
+    out[order] = True
+    return out.reshape(m.shape) & m
 pk, pc = topN(bK, Npick), topN(bC, Npick)
 tot = int(np.sum(ypos & both))
 print(f"  N = {Npick}   total positives {tot}")

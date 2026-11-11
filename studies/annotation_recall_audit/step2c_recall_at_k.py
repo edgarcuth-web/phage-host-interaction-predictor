@@ -113,6 +113,15 @@ def nn_phylo_scores():
     return S
 
 
+PHAGE_RANK = np.argsort(np.argsort(np.array(list(B.columns), dtype=object)))
+
+
+def _order(scores, mask):
+    """rank by score descending, ties broken by phage identifier ascending.
+    Declared policy, matching docs/retrieval-rescue-benchmark-v0.md."""
+    return np.lexsort((PHAGE_RANK[mask], -scores[mask]))
+
+
 def recall_at_k(S):
     """per-strain: rank the 96 phages, recall of that strain's true positives"""
     Y = B.to_numpy()
@@ -124,8 +133,7 @@ def recall_at_k(S):
         if y[m].sum() < 1:
             continue
         n_used += 1
-        order = np.argsort(-s[m])
-        yy = y[m][order]
+        yy = y[m][_order(s, m)]
         tot = yy.sum()
         for k in KS:
             out[k].append(yy[:k].sum() / tot)
@@ -184,8 +192,7 @@ def oracle_and_more(S):
         tot = y[m].sum()
         if tot < 1:
             continue
-        order = np.argsort(-s[m])
-        yy = y[m][order]
+        yy = y[m][_order(s, m)]
         for k in KS:
             orc[k].append(min(k, tot) / tot)
             prec[k].append(yy[:k].sum() / k)

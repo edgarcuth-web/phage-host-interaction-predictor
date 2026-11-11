@@ -1,6 +1,6 @@
 # Provenance
 
-Generated: 2026-11-11T04:52:31Z
+Generated: 2026-11-11T05:43:26Z
 Host: Linux 6.18.44-fc-v378 x86_64
 
 ## Interpreter and packages
@@ -9,6 +9,12 @@ pandas 3.0.5
 numpy 2.5.3
 scipy 1.18.1
 scikit-learn 1.9.1
+
+## Tie policy
+
+Ranking: score descending, ties broken by identifier ascending.
+Matches the membership policy in docs/retrieval-rescue-benchmark-v0.md.
+Metrics are NOT tie-expected; see docs/estimand-reconciliation.md.
 
 ## Input digests (sha256)
 
@@ -44,10 +50,10 @@ b9d8822ca73de87036bfe46c05db5e8efc1a31804a7ea07915cf1503d9d8c8c1  phage_host_int
 e9d13f4c769381c0580b28196ea38b6bbdeb35daabce0404d74d55c9c7960d43  step1_ceiling.py
 0ecf5b2ae743ecf1dee7c4acf8ae0ed601eab507429bf2037bcdd0904379b27f  step1b.py
 9bd03d4d720c3aa953e7e64d49c78e8f3175b028ef370ce6a234e58370c85ef0  step2_rules.py
-348e178f4daf9a3971989af0b25a826cd26d2ebb8b9cf9810289b6c0f67abf63  step2c_recall_at_k.py
+0fe98ccb50d938d490e4bda6fd767c4714271786cdc4761c2cc8277b1adc6aab  step2c_recall_at_k.py
 c05fc423ed6d4ffeb0890ce9771cee13e5e569b1c455858e1083143f8843f5b8  step3a_rule_robust.py
-2b7f44ed0996f0bc93f76ae6620d927aa71cee4f7d3f0bd9bbcb23ea81bec7b8  step3b_recall_robust.py
+8352885a56384ec75e8961072a39de7a1df4d11ff741c191c9e8768536fa2034  step3b_recall_robust.py
 fec0e1392258b7d2910754515361c925b3be0688319903350d9505c56687baba  step4_cross_dataset.py
 eb208782bc4b9f8d7a4c383571ee1e49d0c45228e226370e13e6c726656f5b4b  step5_klebsiella_coverage.py
-a6e2cf1d4a60aa6fc14dc48f0149a707587a6ac3e32652602677e4b64645f18a  step5b_rescue.py
+12f9eb91637f7e046c715cfec94ea16e082c63444200b3c4330259f56b603c3c  step5b_rescue.py
 34b512c4c3bf56a214620f364fd9e63e0ea67ece16007ba22deccdee3807b819  step5c_phage_side.py

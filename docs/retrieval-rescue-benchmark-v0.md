@@ -6,6 +6,15 @@ the next implementation testable without silently reusing the already-inspected
 development results as independent confirmation. Review and version the protocol,
 source licensing, split manifests and hashes **before** any new model fit.
 
+> **Related, different estimand.** `docs/annotation-recall-audit.md` measures how
+> much of the evidence route's recall is lost in the first place, on the public
+> Gaborieau matrix and the PhageHostLearn Klebsiella data. It supplies the
+> *measured coverage* this document requires before baseline A may be called a
+> mechanistic screen. Its budget unit, tie handling, incomplete-host policy and
+> label endpoint all differ from this protocol, so its figures are not values of
+> the estimands defined here. See `docs/estimand-reconciliation.md` before
+> comparing any number across the two.
+
 ## Question and hypothesis
 
 Given a query bacterial genome and a fixed, versioned collection of existing
