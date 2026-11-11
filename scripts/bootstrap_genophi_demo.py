@@ -9,6 +9,16 @@ import subprocess
 from phage_cocktail.genophi_reference import GENOPHI_COMMIT, GENOPHI_REPOSITORY
 
 TARGET = Path("external/GenoPHI")
+REQUIRED_RELATIVE = (
+    Path("data/test_data/strain_AAs"),
+    Path("data/test_data/phage_AAs"),
+    Path("data/test_data/ecoli_test_interaction_matrix.csv"),
+)
+
+
+def worktree_is_populated() -> bool:
+    """True only when every required demo path is actually checked out."""
+    return all((TARGET / relative).exists() for relative in REQUIRED_RELATIVE)
 
 
 def run(*args: str) -> None:
@@ -17,6 +27,11 @@ def run(*args: str) -> None:
 
 def current_commit() -> str | None:
     if not (TARGET / ".git").exists():
+        return None
+
+    if not worktree_is_populated():
+        # A --no-checkout clone leaves HEAD at the remote tip with an empty
+        # worktree. Reporting that commit would skip the checkout below.
         return None
 
     result = subprocess.run(
@@ -78,12 +93,11 @@ def main() -> None:
         )
 
     data_root = TARGET / "data" / "test_data"
-    required = [
-        data_root / "strain_AAs",
-        data_root / "phage_AAs",
-        data_root / "ecoli_test_interaction_matrix.csv",
+    missing = [
+        TARGET / relative
+        for relative in REQUIRED_RELATIVE
+        if not (TARGET / relative).exists()
     ]
-    missing = [path for path in required if not path.exists()]
     if missing:
         names = "\n".join(str(path) for path in missing)
         raise SystemExit(f"GenoPHI checkout is missing expected demo data:\n{names}")

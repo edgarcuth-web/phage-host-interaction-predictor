@@ -284,6 +284,17 @@ GenoPHI is pinned to version 1.0.3 and its demo data to commit
 `f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f`. See
 [`docs/step3_genophi_reference.md`](docs/step3_genophi_reference.md).
 
+This demo now runs end to end here, taking 1,893 s on 2 cores. It verifies the
+pipeline only. The reference output shipped in the upstream repository is not a
+valid comparison target: its `cutoff_8` to `cutoff_10` rows are unreachable at
+the documented demo setting of `--num_runs_fs 5`, because feature occurrence is
+capped by the number of feature-selection runs, and its generating parameters
+are recorded nowhere upstream. The upstream code at the commit that ships that
+output also cannot complete the documented demo at all. Measured curves,
+the excluded explanations and the consequences for using GenoPHI as a
+comparator are in
+[`docs/genophi-demo-reproduction.md`](docs/genophi-demo-reproduction.md).
+
 ## Evo2 retrieval reference
 
 Reproduce the upstream species-level retrieval metrics without a GPU:
@@ -316,7 +327,7 @@ comparison have not been run. See the
 - [x] Report paired host-group uncertainty, including an inconclusive result
 - [x] Evaluate fixed-panel unseen-host Hit@K/Recall@K/MRR with explicit eligibility and phylogroup sensitivities
 - [ ] Finish row-level assay-context and separate dataset-license review
-- [ ] Reproduce GenoPHI demo metrics locally
+- [x] Run the GenoPHI reference workflow end to end and establish that its shipped reference output is not a reproduction target
 - [ ] Define target-specific label mapping before training mechanistic targets
 - [ ] Demonstrate improvement and validate calibration before model promotion
 - [x] Evaluate unseen-phage regimes with frozen sequence groups and report inconclusive additive-baseline gains
