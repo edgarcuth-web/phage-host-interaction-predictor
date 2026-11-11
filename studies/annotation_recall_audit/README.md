@@ -37,6 +37,15 @@ check its terms before reuse.
 The ablation figures the report compares against come from
 `github.com/viti1igo/coli_phage_interactions_2023_replica` (also no licence file).
 
+Section 9 uses the interaction matrices shipped in `github.com/Noonanav/GenoPHI`
+under `data/interaction_matrices/` and `data/experimental_validation/`
+(`step4_cross_dataset.py` takes a directory of those long-format CSVs).
+
+Section 10 uses the PhageHostLearn archive, Zenodo 10.5281/zenodo.11061100:
+`phage_host_interactions.csv`, `Locibase.json`, `all_loci_score_matrix.txt`,
+`esm2_embeddings_loci.csv` and `RBPbase.csv`, all in one directory. The
+genome archives in that record are not needed.
+
 ## Running
 
 Python 3.13 with pandas, numpy, scipy, scikit-learn. No GPU. Each script takes a
@@ -49,7 +58,16 @@ python -I step2_rules.py     DATA_DIR 1      # single-feature rules, transfer, A
 python -I step2c_recall_at_k.py DATA_DIR 1   # recall@k, precision@k, hit@k against the oracle
 python -I step3a_rule_robust.py DATA_DIR     # all thresholds, paired test, chance level, bootstrap CI
 python -I step3b_recall_robust.py DATA_DIR 1 5   # recall@k over 5 cross-validation partitions
+python -I step4_cross_dataset.py GENOPHI_MATRIX_DIR   # which datasets can support the analysis
+python -I phl_inspect.py PHL_DIR                 # PhageHostLearn shapes and identifier overlap
+python -I step5_klebsiella_coverage.py PHL_DIR   # K-locus identity coverage ceiling
+python -I step5b_rescue.py PHL_DIR               # centred ESM-2 versus K-locus identity
+python -I step5c_phage_side.py PHL_DIR           # RBP similarity on the phage side
 ```
+
+`step5b_rescue.py` supersedes the embedding comparison inside
+`step5_klebsiella_coverage.py`: raw ESM-2 cosine over K-locus embeddings is
+degenerate (median 0.999 between strains) and must be mean-centred first.
 
 The second argument of the `step2*`/`step3b` scripts is the binarisation threshold
 on the ordinal 0-4 plaque score. `step3a` sweeps all four itself.
