@@ -114,6 +114,14 @@ repository, and that output should not be cited as GenoPHI's performance. See
 [`docs/genophi-demo-reproduction.md`](genophi-demo-reproduction.md) for the
 measured result and the evidence.
 
+Running GenoPHI as a comparator on the 177 x 94 cohort needs that cohort's
+genomes on disk first, and they are not committed. Rebuild them from the
+resource locks as described in
+[`data/README.md`](../data/README.md#rebuilding-the-locked-genome-inputs). Note
+that GenoPHI consumes per-genome amino-acid FASTAs while the locks pin
+nucleotide assemblies, so gene calling stands between the two and its output is
+derived data needing its own hashes and a pinned caller version.
+
 After the reference workflow runs successfully, the next task is to connect
 genome-derived features to our fixed held-out-strain benchmark and compare
 against the Step 2 phage-prevalence baseline on exactly the same split.
