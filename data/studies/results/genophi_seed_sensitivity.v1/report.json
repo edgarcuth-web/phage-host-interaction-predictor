@@ -1,0 +1,1580 @@
+{
+  "study_id": "genophi-grouped-host-seed-sensitivity:v1",
+  "status": "verified",
+  "registration_sha256": "f113ac29bf47de521baef8de8fac380150c4fcb1e1439198c9dcd0c0bfa2b36c",
+  "input_freeze_sha256": "3efb657820e809bf0ad0fa831394c47afef80829c64b2e385dd9aa1529b80e62",
+  "reporting_script_sha256": "4ff9a95b89e79df9f0783b86769f93df2af952439a2ebeb51aba4fbd405c062d",
+  "statistical_code_sha256": "1f8638713ff624c1c5691166fdf1f40bb240b3651e8d58f03edeae00a2effd2a",
+  "source_provenance": {
+    "42": {
+      "comparator_report_sha256": "2372f45e22fc7c5789dd668d1fddb11d28eb7c40cd0717ff70e73423ddf9e471",
+      "baseline_report_sha256": "4aa4cbb91310216d12d850d54d0731f35457bd7821cc6cd9d9a78268beaee15d",
+      "comparator_per_host_sha256": "eff92c59deabb4409241db8ded66827e38af4977fc3a960bb7f7afecdfb0fdd6",
+      "baseline_per_host_sha256": "ffaa3817d0f49f7d88f04fa02f5be9f6b0dfe10cf85d5c218a1e05a8a538ee9d",
+      "host_manifest_sha256": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+      "comparator_versions": {
+        "python": "3.12.3",
+        "genophi": "1.0.3",
+        "pyrodigal": "3.7.1",
+        "numpy": "2.5.4",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "catboost": "1.2.10",
+        "biopython": "1.88",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0",
+        "matplotlib": "3.11.2",
+        "seaborn": "0.13.2",
+        "plotnine": "0.15.9",
+        "shap": "0.54.1",
+        "hdbscan": "0.8.44",
+        "mmseqs2": "15-6f452+ds-2"
+      },
+      "baseline_versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.8.0",
+        "scipy": "1.17.0",
+        "joblib": "1.5.3",
+        "threadpoolctl": "3.6.0"
+      }
+    },
+    "43": {
+      "comparator_report_sha256": "f630232b2c4d7d4ac9facc2981219fa2eada748aeca7735bee5e8c20c34b4524",
+      "baseline_report_sha256": "87b68f7cdefc4453695842722d9b05bca5e3f647c4843c1d99bcb96f38016df7",
+      "comparator_per_host_sha256": "668c8f96ce2b71bd4107ce2d208456ca3caa6ca31f9bdacccf6b52f1411bc878",
+      "baseline_per_host_sha256": "e5b83406acdd5ae5725c841398b84ea15f9c35d62e4b0a85407ed16dd3f3ec4d",
+      "host_manifest_sha256": "5ba9fb759c38bf4a35d2053fbedecf3d547e53e2338f6c28c1154466f7d2f91e",
+      "comparator_versions": {
+        "python": "3.12.3",
+        "genophi": "1.0.3",
+        "pyrodigal": "3.7.1",
+        "numpy": "2.5.4",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "catboost": "1.2.10",
+        "biopython": "1.88",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0",
+        "matplotlib": "3.11.2",
+        "seaborn": "0.13.2",
+        "plotnine": "0.15.9",
+        "shap": "0.54.1",
+        "hdbscan": "0.8.44",
+        "mmseqs2": "15-6f452+ds-2"
+      },
+      "baseline_versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.8.0",
+        "scipy": "1.17.0",
+        "joblib": "1.5.3",
+        "threadpoolctl": "3.6.0"
+      }
+    },
+    "44": {
+      "comparator_report_sha256": "9a7e484eef5c19cd34f0bfd29e04860963b7155286bb7a4b9f17ee77a5952f43",
+      "baseline_report_sha256": "1a61f6d334b48ed728b410f829e78fdaf6c253ae520db1157e333f53a6ff01da",
+      "comparator_per_host_sha256": "e1239ca5fcd97ae61d1d8de07851a77d6ce26b4d8b9117a29f66befdf23a83aa",
+      "baseline_per_host_sha256": "938ac9b7c0458f7a08367a593558dbb7ceef7c30e97567a00c5eadf7ea478a2d",
+      "host_manifest_sha256": "246b94bd335930a505dbcd4a0a0a5111d7777654d950e08627227260fa023614",
+      "comparator_versions": {
+        "python": "3.12.3",
+        "genophi": "1.0.3",
+        "pyrodigal": "3.7.1",
+        "numpy": "2.5.4",
+        "pandas": "2.3.3",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1",
+        "catboost": "1.2.10",
+        "biopython": "1.88",
+        "joblib": "1.6.0",
+        "threadpoolctl": "3.8.0",
+        "matplotlib": "3.11.2",
+        "seaborn": "0.13.2",
+        "plotnine": "0.15.9",
+        "shap": "0.54.1",
+        "hdbscan": "0.8.44",
+        "mmseqs2": "15-6f452+ds-2"
+      },
+      "baseline_versions": {
+        "python": "3.12.14",
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scikit_learn": "1.8.0",
+        "scipy": "1.17.0",
+        "joblib": "1.5.3",
+        "threadpoolctl": "3.6.0"
+      }
+    }
+  },
+  "seed_accounting": {
+    "42": {
+      "status": "existing_primary_reference_no_refit"
+    },
+    "43": {
+      "status": "verified",
+      "components": {
+        "baseline_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genome_host_retrieval.py",
+            "--protocol",
+            "data/studies/genome_host_retrieval.seed43.v1.json",
+            "--scenario",
+            "grouped_host",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/baseline",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 69.648353332
+        },
+        "baseline_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--baseline-protocol",
+            "data/studies/genome_host_retrieval.seed43.v1.json",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/baseline",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/BASELINE_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genome_host_retrieval.seed43.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 66.460878671
+        },
+        "comparator_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genophi_comparator.py",
+            "--protocol",
+            "data/studies/genophi_comparator.seed43.v1.json",
+            "--feature-cache",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_comparator_v1",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/comparator",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "interrupted_before_run_binding": true,
+          "returncode": 0,
+          "wall_seconds": 3368.823051684
+        },
+        "comparator_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/comparator",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/COMPARATOR_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genophi_comparator.seed43.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 147.8602693300004
+        }
+      }
+    },
+    "44": {
+      "status": "verified",
+      "components": {
+        "baseline_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genome_host_retrieval.py",
+            "--protocol",
+            "data/studies/genome_host_retrieval.seed44.v1.json",
+            "--scenario",
+            "grouped_host",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/baseline",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 44.86115023499997
+        },
+        "baseline_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--baseline-protocol",
+            "data/studies/genome_host_retrieval.seed44.v1.json",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/baseline",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/BASELINE_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genome_host_retrieval.seed44.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 39.98889630099984
+        },
+        "comparator_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genophi_comparator.py",
+            "--protocol",
+            "data/studies/genophi_comparator.seed44.v1.json",
+            "--feature-cache",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_comparator_v1",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/comparator",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 3710.3797485360005
+        },
+        "comparator_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/comparator",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/COMPARATOR_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genophi_comparator.seed44.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 169.11836230900008
+        }
+      }
+    }
+  },
+  "metrics": [
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "genophi_median",
+      "train_hosts": 117,
+      "held_out_hosts": 26,
+      "complete_panel_hosts": 26,
+      "eligible_hosts": 26,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 17.5,
+      "all_hosts": {
+        "hit@1": 0.6923076923076923,
+        "hit@2": 0.7692307692307693,
+        "hit@3": 0.8076923076923077,
+        "hit@5": 0.9230769230769231,
+        "mrr": 0.7773175542406311
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.6923076923076923,
+        "hit@2": 0.7692307692307693,
+        "hit@3": 0.8076923076923077,
+        "hit@5": 0.9230769230769231,
+        "mrr": 0.7773175542406311,
+        "recall@1": 0.04628619186858131,
+        "recall@2": 0.09272701711548022,
+        "recall@3": 0.1325664213430058,
+        "recall@5": 0.20394774483820755
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 8
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "phage_prevalence",
+      "train_hosts": 117,
+      "held_out_hosts": 26,
+      "complete_panel_hosts": 26,
+      "eligible_hosts": 26,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 17.5,
+      "all_hosts": {
+        "hit@1": 0.7307692307692307,
+        "hit@2": 0.8461538461538461,
+        "hit@3": 0.8846153846153846,
+        "hit@5": 0.9230769230769231,
+        "mrr": 0.8211538461538462
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.7307692307692307,
+        "hit@2": 0.8461538461538461,
+        "hit@3": 0.8846153846153846,
+        "hit@5": 0.9230769230769231,
+        "mrr": 0.8211538461538462,
+        "recall@1": 0.05081353586960952,
+        "recall@2": 0.10909406024226845,
+        "recall@3": 0.1641607808748079,
+        "recall@5": 0.27458110106402595
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 7
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "host_4mer_logistic",
+      "train_hosts": 117,
+      "held_out_hosts": 26,
+      "complete_panel_hosts": 26,
+      "eligible_hosts": 26,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 17.5,
+      "all_hosts": {
+        "hit@1": 0.6153846153846154,
+        "hit@2": 0.6923076923076923,
+        "hit@3": 0.8076923076923077,
+        "hit@5": 0.9230769230769231,
+        "mrr": 0.7311355311355311
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.6153846153846154,
+        "hit@2": 0.6923076923076923,
+        "hit@3": 0.8076923076923077,
+        "hit@5": 0.9230769230769231,
+        "mrr": 0.7311355311355311,
+        "recall@1": 0.03602415858023223,
+        "recall@2": 0.08013081437339646,
+        "recall@3": 0.1073866085479381,
+        "recall@5": 0.2061937879186986
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 10
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "hybrid_4mer_logistic",
+      "train_hosts": 117,
+      "held_out_hosts": 26,
+      "complete_panel_hosts": 26,
+      "eligible_hosts": 26,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 17.5,
+      "all_hosts": {
+        "hit@1": 0.5769230769230769,
+        "hit@2": 0.8461538461538461,
+        "hit@3": 0.9230769230769231,
+        "hit@5": 0.9615384615384616,
+        "mrr": 0.7522893772893772
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.5769230769230769,
+        "hit@2": 0.8461538461538461,
+        "hit@3": 0.9230769230769231,
+        "hit@5": 0.9615384615384616,
+        "mrr": 0.7522893772893772,
+        "recall@1": 0.03838784022022967,
+        "recall@2": 0.08959156561046348,
+        "recall@3": 0.14747264142804775,
+        "recall@5": 0.22592147257538422
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 11
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "genophi_median",
+      "train_hosts": 117,
+      "held_out_hosts": 34,
+      "complete_panel_hosts": 34,
+      "eligible_hosts": 33,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 25.0,
+      "all_hosts": {
+        "hit@1": 0.8235294117647058,
+        "hit@2": 0.9117647058823529,
+        "hit@3": 0.9117647058823529,
+        "hit@5": 0.9705882352941176,
+        "mrr": 0.8808823529411764
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.8484848484848485,
+        "hit@2": 0.9393939393939394,
+        "hit@3": 0.9393939393939394,
+        "hit@5": 1.0,
+        "mrr": 0.9075757575757576,
+        "recall@1": 0.057639024752363,
+        "recall@2": 0.1046040761381981,
+        "recall@3": 0.12757642505782357,
+        "recall@5": 0.19651005183097953
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 5
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "phage_prevalence",
+      "train_hosts": 117,
+      "held_out_hosts": 34,
+      "complete_panel_hosts": 34,
+      "eligible_hosts": 33,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 25.0,
+      "all_hosts": {
+        "hit@1": 0.5588235294117647,
+        "hit@2": 0.7352941176470589,
+        "hit@3": 0.8529411764705882,
+        "hit@5": 0.8529411764705882,
+        "mrr": 0.702064281594991
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.5757575757575758,
+        "hit@2": 0.7575757575757576,
+        "hit@3": 0.8787878787878788,
+        "hit@5": 0.8787878787878788,
+        "mrr": 0.7233389567948391,
+        "recall@1": 0.021199060479670365,
+        "recall@2": 0.05159780315428999,
+        "recall@3": 0.09251066598793652,
+        "recall@5": 0.14119700152487655
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 14
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "host_4mer_logistic",
+      "train_hosts": 117,
+      "held_out_hosts": 34,
+      "complete_panel_hosts": 34,
+      "eligible_hosts": 33,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 25.0,
+      "all_hosts": {
+        "hit@1": 0.7647058823529411,
+        "hit@2": 0.8823529411764706,
+        "hit@3": 0.8823529411764706,
+        "hit@5": 0.9117647058823529,
+        "mrr": 0.83390522875817
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.7878787878787878,
+        "hit@2": 0.9090909090909091,
+        "hit@3": 0.9090909090909091,
+        "hit@5": 0.9393939393939394,
+        "mrr": 0.8591750841750841,
+        "recall@1": 0.0456765204523974,
+        "recall@2": 0.10242949168712795,
+        "recall@3": 0.12151722689430615,
+        "recall@5": 0.18075786556652737
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 7
+      }
+    },
+    {
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "hybrid_4mer_logistic",
+      "train_hosts": 117,
+      "held_out_hosts": 34,
+      "complete_panel_hosts": 34,
+      "eligible_hosts": 33,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 25.0,
+      "all_hosts": {
+        "hit@1": 0.7352941176470589,
+        "hit@2": 0.8823529411764706,
+        "hit@3": 0.9411764705882353,
+        "hit@5": 0.9411764705882353,
+        "mrr": 0.8299019607843138
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.7575757575757576,
+        "hit@2": 0.9090909090909091,
+        "hit@3": 0.9696969696969697,
+        "hit@5": 0.9696969696969697,
+        "mrr": 0.855050505050505,
+        "recall@1": 0.04229333421411791,
+        "recall@2": 0.07911364551618852,
+        "recall@3": 0.11345367824252219,
+        "recall@5": 0.15764973308214666
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 8
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "genophi_median",
+      "train_hosts": 125,
+      "held_out_hosts": 25,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 13.0,
+      "all_hosts": {
+        "hit@1": 0.6666666666666666,
+        "hit@2": 0.8333333333333334,
+        "hit@3": 0.875,
+        "hit@5": 0.9166666666666666,
+        "mrr": 0.7812184343434344
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.6666666666666666,
+        "hit@2": 0.8333333333333334,
+        "hit@3": 0.875,
+        "hit@5": 0.9166666666666666,
+        "mrr": 0.7812184343434344,
+        "recall@1": 0.04174478101413853,
+        "recall@2": 0.12347272701144206,
+        "recall@3": 0.15802955708762964,
+        "recall@5": 0.20783243161550105
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 8
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "phage_prevalence",
+      "train_hosts": 125,
+      "held_out_hosts": 25,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 13.0,
+      "all_hosts": {
+        "hit@1": 0.6666666666666666,
+        "hit@2": 0.7916666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.875,
+        "mrr": 0.7691798941798943
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.6666666666666666,
+        "hit@2": 0.7916666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.875,
+        "mrr": 0.7691798941798943,
+        "recall@1": 0.038512732265785436,
+        "recall@2": 0.0871425878936571,
+        "recall@3": 0.12419310483853158,
+        "recall@5": 0.21913076013091462
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 8
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "host_4mer_logistic",
+      "train_hosts": 125,
+      "held_out_hosts": 25,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 13.0,
+      "all_hosts": {
+        "hit@1": 0.5416666666666666,
+        "hit@2": 0.7083333333333334,
+        "hit@3": 0.875,
+        "hit@5": 0.875,
+        "mrr": 0.6979166666666666
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.5416666666666666,
+        "hit@2": 0.7083333333333334,
+        "hit@3": 0.875,
+        "hit@5": 0.875,
+        "mrr": 0.6979166666666666,
+        "recall@1": 0.02760787625223377,
+        "recall@2": 0.0670927102350838,
+        "recall@3": 0.14612575774007505,
+        "recall@5": 0.18596932766487917
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 11
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "hybrid_4mer_logistic",
+      "train_hosts": 125,
+      "held_out_hosts": 25,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 13.0,
+      "all_hosts": {
+        "hit@1": 0.4583333333333333,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.875,
+        "hit@5": 0.9166666666666666,
+        "mrr": 0.6527777777777778
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.4583333333333333,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.875,
+        "hit@5": 0.9166666666666666,
+        "mrr": 0.6527777777777778,
+        "recall@1": 0.029205372958426127,
+        "recall@2": 0.051381891619995936,
+        "recall@3": 0.11129796893043076,
+        "recall@5": 0.19862216064699603
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 13
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "genophi_median",
+      "train_hosts": 125,
+      "held_out_hosts": 27,
+      "complete_panel_hosts": 27,
+      "eligible_hosts": 25,
+      "all_negative_hosts": 2,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 15.0,
+      "all_hosts": {
+        "hit@1": 0.6481481481481481,
+        "hit@2": 0.7037037037037037,
+        "hit@3": 0.7777777777777778,
+        "hit@5": 0.8888888888888888,
+        "mrr": 0.7325102880658436
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.7,
+        "hit@2": 0.76,
+        "hit@3": 0.84,
+        "hit@5": 0.96,
+        "mrr": 0.7911111111111111,
+        "recall@1": 0.05139602848187875,
+        "recall@2": 0.07905338100556934,
+        "recall@3": 0.157775668594195,
+        "recall@5": 0.24021676576796833
+      },
+      "fractional_hosts": {
+        "hit@1": 1,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 8
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "phage_prevalence",
+      "train_hosts": 125,
+      "held_out_hosts": 27,
+      "complete_panel_hosts": 27,
+      "eligible_hosts": 25,
+      "all_negative_hosts": 2,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 15.0,
+      "all_hosts": {
+        "hit@1": 0.37037037037037035,
+        "hit@2": 0.6296296296296297,
+        "hit@3": 0.8148148148148148,
+        "hit@5": 0.8148148148148148,
+        "mrr": 0.5714285714285714
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.4,
+        "hit@2": 0.68,
+        "hit@3": 0.88,
+        "hit@5": 0.88,
+        "mrr": 0.6171428571428571,
+        "recall@1": 0.020981526317376584,
+        "recall@2": 0.05988696408915243,
+        "recall@3": 0.13991612998465638,
+        "recall@5": 0.1870548268297136
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 15
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "host_4mer_logistic",
+      "train_hosts": 125,
+      "held_out_hosts": 27,
+      "complete_panel_hosts": 27,
+      "eligible_hosts": 25,
+      "all_negative_hosts": 2,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 15.0,
+      "all_hosts": {
+        "hit@1": 0.7037037037037037,
+        "hit@2": 0.7407407407407407,
+        "hit@3": 0.7407407407407407,
+        "hit@5": 0.7777777777777778,
+        "mrr": 0.7379508131319725
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.76,
+        "hit@2": 0.8,
+        "hit@3": 0.8,
+        "hit@5": 0.84,
+        "mrr": 0.7969868781825303,
+        "recall@1": 0.054841915927766195,
+        "recall@2": 0.09303306798525635,
+        "recall@3": 0.12688089669942312,
+        "recall@5": 0.1921479826991853
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 6
+      }
+    },
+    {
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "hybrid_4mer_logistic",
+      "train_hosts": 125,
+      "held_out_hosts": 27,
+      "complete_panel_hosts": 27,
+      "eligible_hosts": 25,
+      "all_negative_hosts": 2,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 15.0,
+      "all_hosts": {
+        "hit@1": 0.5925925925925926,
+        "hit@2": 0.7407407407407407,
+        "hit@3": 0.7407407407407407,
+        "hit@5": 0.8148148148148148,
+        "mrr": 0.6892870503981614
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.64,
+        "hit@2": 0.8,
+        "hit@3": 0.8,
+        "hit@5": 0.88,
+        "mrr": 0.7444300144300143,
+        "recall@1": 0.04645363753948781,
+        "recall@2": 0.09102116322335156,
+        "recall@3": 0.12845773652626294,
+        "recall@5": 0.22276594806715064
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 9
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "genophi_median",
+      "train_hosts": 130,
+      "held_out_hosts": 24,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 10.0,
+      "all_hosts": {
+        "hit@1": 0.5416666666666666,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.875,
+        "mrr": 0.6864583333333333
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.5416666666666666,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.875,
+        "mrr": 0.6864583333333333,
+        "recall@1": 0.0366489686973672,
+        "recall@2": 0.07889329473508618,
+        "recall@3": 0.17404684952324634,
+        "recall@5": 0.2601236894806709
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 11
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "phage_prevalence",
+      "train_hosts": 130,
+      "held_out_hosts": 24,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 10.0,
+      "all_hosts": {
+        "hit@1": 0.5694444444444445,
+        "hit@2": 0.75,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.875,
+        "mrr": 0.7142030423280423
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.5694444444444445,
+        "hit@2": 0.75,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.875,
+        "mrr": 0.7142030423280423,
+        "recall@1": 0.05843472767620392,
+        "recall@2": 0.11686945535240784,
+        "recall@3": 0.1753041830286118,
+        "recall@5": 0.2798686039299825
+      },
+      "fractional_hosts": {
+        "hit@1": 13,
+        "hit@2": 6,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 17
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "host_4mer_logistic",
+      "train_hosts": 130,
+      "held_out_hosts": 24,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 10.0,
+      "all_hosts": {
+        "hit@1": 0.5833333333333334,
+        "hit@2": 0.75,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.9166666666666666,
+        "mrr": 0.7229347041847042
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.5833333333333334,
+        "hit@2": 0.75,
+        "hit@3": 0.8333333333333334,
+        "hit@5": 0.9166666666666666,
+        "mrr": 0.7229347041847042,
+        "recall@1": 0.044291832871340815,
+        "recall@2": 0.0956348745601948,
+        "recall@3": 0.1574311496548684,
+        "recall@5": 0.25580854542647496
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 10
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "hybrid_4mer_logistic",
+      "train_hosts": 130,
+      "held_out_hosts": 24,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "candidate_phages": 94,
+      "positive_candidates_median": 10.0,
+      "all_hosts": {
+        "hit@1": 0.4166666666666667,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.7083333333333334,
+        "hit@5": 0.8333333333333334,
+        "mrr": 0.6087962962962963
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.4166666666666667,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.7083333333333334,
+        "hit@5": 0.8333333333333334,
+        "mrr": 0.6087962962962963,
+        "recall@1": 0.026336566682378975,
+        "recall@2": 0.068447131747452,
+        "recall@3": 0.11918018845132099,
+        "recall@5": 0.22616381675157385
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 14
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "genophi_median",
+      "train_hosts": 130,
+      "held_out_hosts": 23,
+      "complete_panel_hosts": 22,
+      "eligible_hosts": 21,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 12.5,
+      "all_hosts": {
+        "hit@1": 0.6818181818181818,
+        "hit@2": 0.7727272727272727,
+        "hit@3": 0.8181818181818182,
+        "hit@5": 0.8181818181818182,
+        "mrr": 0.7534313725490196
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.7142857142857143,
+        "hit@2": 0.8095238095238095,
+        "hit@3": 0.8571428571428571,
+        "hit@5": 0.8571428571428571,
+        "mrr": 0.7893090569561158,
+        "recall@1": 0.0734614774493884,
+        "recall@2": 0.12139213651081555,
+        "recall@3": 0.19800760282847854,
+        "recall@5": 0.25709097745070025
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 6
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "phage_prevalence",
+      "train_hosts": 130,
+      "held_out_hosts": 23,
+      "complete_panel_hosts": 22,
+      "eligible_hosts": 21,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 12.5,
+      "all_hosts": {
+        "hit@1": 0.4696969696969697,
+        "hit@2": 0.6515151515151515,
+        "hit@3": 0.7272727272727273,
+        "hit@5": 0.7727272727272727,
+        "mrr": 0.6142963728191001
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.4920634920634921,
+        "hit@2": 0.6825396825396826,
+        "hit@3": 0.7619047619047619,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.643548581048581,
+        "recall@1": 0.05360184832394768,
+        "recall@2": 0.10720369664789536,
+        "recall@3": 0.16080554497184307,
+        "recall@5": 0.22442254591008828
+      },
+      "fractional_hosts": {
+        "hit@1": 12,
+        "hit@2": 5,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 17
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "host_4mer_logistic",
+      "train_hosts": 130,
+      "held_out_hosts": 23,
+      "complete_panel_hosts": 22,
+      "eligible_hosts": 21,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 12.5,
+      "all_hosts": {
+        "hit@1": 0.5909090909090909,
+        "hit@2": 0.7272727272727273,
+        "hit@3": 0.7272727272727273,
+        "hit@5": 0.7727272727272727,
+        "mrr": 0.6765468577875772
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.6190476190476191,
+        "hit@2": 0.7619047619047619,
+        "hit@3": 0.7619047619047619,
+        "hit@5": 0.8095238095238095,
+        "mrr": 0.7087633748250808,
+        "recall@1": 0.04307598992104372,
+        "recall@2": 0.08901622318252127,
+        "recall@3": 0.11111118911502221,
+        "recall@5": 0.22988658869537534
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 8
+      }
+    },
+    {
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "hybrid_4mer_logistic",
+      "train_hosts": 130,
+      "held_out_hosts": 23,
+      "complete_panel_hosts": 22,
+      "eligible_hosts": 21,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "candidate_phages": 94,
+      "positive_candidates_median": 12.5,
+      "all_hosts": {
+        "hit@1": 0.6363636363636364,
+        "hit@2": 0.6363636363636364,
+        "hit@3": 0.7272727272727273,
+        "hit@5": 0.7272727272727273,
+        "mrr": 0.67956049632186
+      },
+      "eligible_hosts_only": {
+        "hit@1": 0.6666666666666666,
+        "hit@2": 0.6666666666666666,
+        "hit@3": 0.7619047619047619,
+        "hit@5": 0.7619047619047619,
+        "mrr": 0.7119205199562343,
+        "recall@1": 0.04352950466027275,
+        "recall@2": 0.08048304560172463,
+        "recall@3": 0.11586201732154852,
+        "recall@5": 0.17208330434778907
+      },
+      "fractional_hosts": {
+        "hit@1": 0,
+        "hit@2": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "mrr": 7
+      }
+    }
+  ],
+  "primary_decision": {
+    "status": "not_established",
+    "primary_contrasts": {
+      "43": {
+        "status": "verified",
+        "delta": 0.07407407407407407,
+        "p_value": 0.6875,
+        "interval": [
+          -0.1,
+          0.24159482758620573
+        ],
+        "holm_p_value": 0.6875
+      },
+      "44": {
+        "status": "verified",
+        "delta": 0.12121212121212119,
+        "p_value": 0.1875,
+        "interval": [
+          -0.014492753623188422,
+          0.28571428571428564
+        ],
+        "holm_p_value": 0.375
+      }
+    },
+    "multiplicity": "Holm across the two new test contrasts"
+  },
+  "prevalence_swing_decision": {
+    "status": "mixed_or_different",
+    "sensitivity_swings": {
+      "43": -0.16203703703703698,
+      "44": -0.09848484848484851
+    },
+    "reference_seed42": -0.11085972850678727,
+    "large_drop_threshold": -0.1,
+    "stable_absolute_threshold": 0.05
+  },
+  "seed_splits": {
+    "43": {
+      "partitions": {
+        "test": {
+          "hosts": 27,
+          "groups": 22,
+          "observed_pairs": 2538
+        },
+        "train": {
+          "hosts": 125,
+          "groups": 103,
+          "observed_pairs": 11748
+        },
+        "validation": {
+          "hosts": 25,
+          "groups": 22,
+          "observed_pairs": 2311
+        }
+      },
+      "groups_changed_partition_vs42": 80,
+      "changed_groups": [
+        "370D",
+        "381A",
+        "536",
+        "916A",
+        "B6A1",
+        "DEC1A",
+        "DEC2A",
+        "ECOR10",
+        "ECOR11",
+        "ECOR12",
+        "ECOR13",
+        "ECOR14",
+        "ECOR15",
+        "ECOR16",
+        "ECOR17",
+        "ECOR19",
+        "ECOR20",
+        "ECOR24",
+        "ECOR25",
+        "ECOR26",
+        "ECOR37",
+        "ECOR42",
+        "ECOR44",
+        "ECOR45",
+        "ECOR46",
+        "ECOR47",
+        "ECOR51",
+        "ECOR55",
+        "ECOR56",
+        "ECOR57",
+        "EDL933",
+        "H48",
+        "LF82",
+        "M863",
+        "MT1B1",
+        "NILS04",
+        "NILS06",
+        "NILS07",
+        "NILS20",
+        "NILS21",
+        "NILS23",
+        "NILS24",
+        "NILS25",
+        "NILS26",
+        "NILS28",
+        "NILS29",
+        "NILS30",
+        "NILS31",
+        "NILS32",
+        "NILS33",
+        "NILS34",
+        "NILS35",
+        "NILS36",
+        "NILS37",
+        "NILS41",
+        "NILS42",
+        "NILS43",
+        "NILS44",
+        "NILS45",
+        "NILS46",
+        "NILS47",
+        "NILS48",
+        "NILS49",
+        "NILS50",
+        "NILS51",
+        "NILS52",
+        "NILS54",
+        "NILS56",
+        "NILS58",
+        "NILS59",
+        "NILS60",
+        "NILS61",
+        "NILS68",
+        "NILS69",
+        "ROAR029",
+        "ROAR036",
+        "ROAR059",
+        "ROAR131",
+        "ROAR274",
+        "ROAR387"
+      ]
+    },
+    "44": {
+      "partitions": {
+        "test": {
+          "hosts": 23,
+          "groups": 22,
+          "observed_pairs": 2123
+        },
+        "train": {
+          "hosts": 130,
+          "groups": 103,
+          "observed_pairs": 12218
+        },
+        "validation": {
+          "hosts": 24,
+          "groups": 22,
+          "observed_pairs": 2256
+        }
+      },
+      "groups_changed_partition_vs42": 87,
+      "changed_groups": [
+        "370D",
+        "AL505",
+        "DEC1A",
+        "ECOR10",
+        "ECOR14",
+        "ECOR15",
+        "ECOR16",
+        "ECOR17",
+        "ECOR20",
+        "ECOR22",
+        "ECOR23",
+        "ECOR24",
+        "ECOR25",
+        "ECOR26",
+        "ECOR64",
+        "ECOR65",
+        "ECOR66",
+        "ECOR67",
+        "ECOR70",
+        "ECOR71",
+        "ECOR72",
+        "IAI39",
+        "LM33",
+        "LMR3158",
+        "M863",
+        "NILS01",
+        "NILS02",
+        "NILS03",
+        "NILS04",
+        "NILS05",
+        "NILS06",
+        "NILS07",
+        "NILS08",
+        "NILS09",
+        "NILS10",
+        "NILS11",
+        "NILS12",
+        "NILS13",
+        "NILS14",
+        "NILS15",
+        "NILS16",
+        "NILS17",
+        "NILS18",
+        "NILS19",
+        "NILS20",
+        "NILS21",
+        "NILS23",
+        "NILS24",
+        "NILS25",
+        "NILS26",
+        "NILS28",
+        "NILS29",
+        "NILS30",
+        "NILS31",
+        "NILS32",
+        "NILS33",
+        "NILS34",
+        "NILS35",
+        "NILS36",
+        "NILS37",
+        "NILS41",
+        "NILS42",
+        "NILS43",
+        "NILS44",
+        "NILS45",
+        "NILS46",
+        "NILS47",
+        "NILS48",
+        "NILS49",
+        "NILS50",
+        "NILS51",
+        "NILS52",
+        "NILS54",
+        "NILS56",
+        "NILS58",
+        "NILS59",
+        "NILS60",
+        "NILS61",
+        "NILS68",
+        "NILS69",
+        "ROAR012",
+        "ROAR029",
+        "ROAR036",
+        "ROAR131",
+        "ROAR274",
+        "ROAR387",
+        "TW10509"
+      ]
+    }
+  },
+  "B2_seed42_descriptive_no_refit": [
+    {
+      "seed": 42,
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "left": "genophi_median",
+      "right": "phage_prevalence",
+      "metric": "hit@2",
+      "eligible_only": false,
+      "hosts": 61,
+      "groups": 42,
+      "binary_hosts": 61,
+      "non_binary_hosts": 0,
+      "left_only": 0,
+      "right_only": 7,
+      "both_positive": 48,
+      "both_negative": 6,
+      "discordance_scope": "Both-binary host pairs only; all selected hosts enter sign-flip and bootstrap",
+      "delta": -0.11475409836065574,
+      "alternative": "two-sided",
+      "unit": "frozen host group",
+      "arithmetic": "exact common-denominator integer arithmetic on stored binary64 values",
+      "status": "exact_conditional_group_signflip",
+      "p_value": 0.015625,
+      "tail_assignments": 2,
+      "sign_assignments": 128,
+      "nonzero_group_totals": 7,
+      "zero_total_groups": 35,
+      "discordant_host_groups": 7,
+      "bootstrap_interval": [
+        -0.2,
+        -0.048367895545315
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 20261024,
+      "bootstrap_valid_resamples": 2000,
+      "p_value_scope": "Descriptive unadjusted, except the registered two new-seed primary contrasts"
+    },
+    {
+      "seed": 42,
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "left": "genophi_median",
+      "right": "host_4mer_logistic",
+      "metric": "hit@2",
+      "eligible_only": false,
+      "hosts": 61,
+      "groups": 42,
+      "binary_hosts": 61,
+      "non_binary_hosts": 0,
+      "left_only": 8,
+      "right_only": 6,
+      "both_positive": 40,
+      "both_negative": 7,
+      "discordance_scope": "Both-binary host pairs only; all selected hosts enter sign-flip and bootstrap",
+      "delta": 0.03278688524590164,
+      "alternative": "two-sided",
+      "unit": "frozen host group",
+      "arithmetic": "exact common-denominator integer arithmetic on stored binary64 values",
+      "status": "exact_conditional_group_signflip",
+      "p_value": 0.806640625,
+      "tail_assignments": 6608,
+      "sign_assignments": 8192,
+      "nonzero_group_totals": 13,
+      "zero_total_groups": 29,
+      "discordant_host_groups": 13,
+      "bootstrap_interval": [
+        -0.09724264705882349,
+        0.1568697478991596
+      ],
+      "bootstrap_resamples": 2000,
+      "bootstrap_seed": 20261024,
+      "bootstrap_valid_resamples": 2000,
+      "p_value_scope": "Descriptive unadjusted, except the registered two new-seed primary contrasts"
+    }
+  ],
+  "limits": [
+    "The protein-family vocabulary remains transductive in genome sequences while the 4-mer baseline is inductive; this sweep cannot isolate protein families versus 4-mers.",
+    "Changing split seeds reuses this inspected development cohort and creates no independent release holdout.",
+    "No claim that positives-per-host is a complete explanation of a ranking swing, or that the sweep identifies its biological cause."
+  ],
+  "execution_wall_seconds": 7617.378181757,
+  "execution_clock_scope": "Completed initial baseline stages plus monotonic continued execution; excludes launcher interruption",
+  "output_sha256": {
+    "execution.json": "7174537dd26852f55ca9d43251de825899ff671b33998eaf0b4b592053b9dffc",
+    "interruption.before_comparator_start.json": "ed333908c695eb3c511ead0074736615cded08b369b81f6256f744f4e4631ac3",
+    "metrics.csv": "cb7b2f3fa179103421a238d5fd9e58abd8d09a998e8e70f94c031f867b707324",
+    "paired_contrasts.csv": "da43037330897ef8ed73b03660a19e8419abad98278b77353cc123606ee2f0f7",
+    "per_host_metrics.csv": "dfe1c717e6e0ace6faefae98a8b839d98566cbdc4bb952b7a2439915ab1bf013"
+  }
+}

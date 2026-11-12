@@ -1,11 +1,17 @@
 # GenoPHI on the frozen 177-host x 94-phage cohort
 
-GenoPHI now runs as an aligned external protein-family comparator on this
-project's frozen split. Primary test Hit@2 is **31/34 = 91.1765%**, beside the
+On the original three evaluated panels, **train-only phage prevalence is the
+stronger method on two**: validation (22/26 versus GenoPHI's 20/26) and B2
+(55/61 versus 48/61). GenoPHI runs as an aligned external protein-family
+comparator on the frozen split. Its primary test Hit@2 is **31/34 = 91.1765%**, beside the
 existing host 4-mer model's **30/34 = 88.2353%** and prevalence's **25/34 =
 73.5294%**. On B2 holdout it falls to **48/61 = 78.6885%**, below prevalence's
 **55/61 = 90.1639%**. The external comparator therefore retains the important
-cross-phylogroup failure rather than resolving it.
+cross-phylogroup failure rather than resolving it. These panel differences are
+part of the result, rather than support for quoting the primary test alone.
+The [preregistered seed-43/44 follow-up](genophi-seed-sensitivity.md) retains a
+positive test point difference against prevalence on both seeds, but **does not
+meet its registered statistical robustness criterion**.
 
 Protocol and implementation were committed at
 `40ffe55a1bbefc5ddbca749e9585c99493479d84` before comparator fitting. This is a
@@ -253,15 +259,35 @@ All-complete-host Hit@2 contrasts use the existing paired host-group bootstrap
 (2,000 resamples, seed 20261024). These intervals condition on fitted models,
 this development split and the fixed phage library.
 
-| Test panel | Contrast | Difference, percentage points | Paired 95% interval |
-| --- | --- | ---: | ---: |
-| Primary | GenoPHI - prevalence | +17.65 | [+6.00, +35.49] |
-| Primary | GenoPHI - host 4-mer | +2.94 | [0.00, +11.54] |
-| B2 | GenoPHI - prevalence | -11.48 | [-20.00, -4.84] |
-| B2 | GenoPHI - host 4-mer | +3.28 | [-9.72, +15.69] |
+| Test panel | Contrast | Difference, percentage points | Paired 95% interval | Left-only / right-only hosts | Non-binary hosts | Exact group sign-flip p |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Primary | GenoPHI - prevalence | +17.65 | [+6.00, +35.49] | 6 / 0 | 0 | 0.03125 |
+| Primary | GenoPHI - host 4-mer | +2.94 | [0.00, +11.54] | 1 / 0 | 0 | 1.00000 |
+| B2 | GenoPHI - prevalence | -11.48 | [-20.00, -4.84] | 0 / 7 | 0 | 0.015625 |
+| B2 | GenoPHI - host 4-mer | +3.28 | [-9.72, +15.69] | 8 / 6 | 0 | 0.806640625 |
+
+These discordance descriptions cover all hosts because the four Hit@2
+contrasts above have zero fractional hosts. The primary GenoPHI/prevalence
+discordances are **six hosts in six distinct frozen groups**; B2's are **seven
+hosts in seven distinct groups**. Thus group-level sign flips reproduce the
+exact host-level McNemar p-values 0.03125 and 0.015625 for those two comparisons;
+within-group dependence does not inflate their discordance count. GenoPHI's
+one primary discordance against 4-mer gives p=1.0. For B2 versus 4-mer, 14
+discordant hosts occupy 13 groups, so the table uses the actual group-level
+test rather than assuming a host-level McNemar equivalence. The
+[seed-42 audit](../data/studies/genophi_seed_sensitivity.audit.v1.json) records
+the individual discordant hosts and group identities, and the
+[sensitivity report](../data/studies/results/genophi_seed_sensitivity.v1/report.json)
+retains the group-level calculations. These p-values are descriptive analyses
+of the already observed seed-42 results.
 
 The primary comparison with 4-mer is one additional successful host, and its
-interval touches zero. The B2 comparison with 4-mer is also inconclusive. The
+interval touches zero. **No primary host exists where 4-mer succeeds and
+GenoPHI fails**, so every observed paired difference is nonnegative. Every
+group-bootstrap resample is therefore nonnegative too: the interval
+`[0.00, +11.54]` cannot take a negative value because of that discordance
+structure. Its zero lower bound is a consequence of the observed support,
+not evidence of a population performance floor. The B2 comparison with 4-mer is also inconclusive. The
 external comparator supplies a useful reference point, but neither the small
 primary difference nor the B2 failure supports model promotion.
 

@@ -1,0 +1,373 @@
+{
+  "status": "verified",
+  "base_revision": "448cb2f691ef7751c1a7f9f2ed8d14452cefad71",
+  "panels": [
+    {
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "genophi_median",
+      "hosts": 26,
+      "hit@2_sum": 20.0,
+      "hit@2": 0.7692307692307693,
+      "positive_candidates_median": 17.5,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "phage_prevalence",
+      "hosts": 26,
+      "hit@2_sum": 22.0,
+      "hit@2": 0.8461538461538461,
+      "positive_candidates_median": 17.5,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "model": "host_4mer_logistic",
+      "hosts": 26,
+      "hit@2_sum": 18.0,
+      "hit@2": 0.6923076923076923,
+      "positive_candidates_median": 17.5,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "genophi_median",
+      "hosts": 34,
+      "hit@2_sum": 31.0,
+      "hit@2": 0.9117647058823529,
+      "positive_candidates_median": 25.0,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "phage_prevalence",
+      "hosts": 34,
+      "hit@2_sum": 25.0,
+      "hit@2": 0.7352941176470589,
+      "positive_candidates_median": 25.0,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "test",
+      "model": "host_4mer_logistic",
+      "hosts": 34,
+      "hit@2_sum": 30.0,
+      "hit@2": 0.8823529411764706,
+      "positive_candidates_median": 25.0,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "model": "genophi_median",
+      "hosts": 61,
+      "hit@2_sum": 48.0,
+      "hit@2": 0.7868852459016393,
+      "positive_candidates_median": 27.0,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "model": "phage_prevalence",
+      "hosts": 61,
+      "hit@2_sum": 55.0,
+      "hit@2": 0.9016393442622951,
+      "positive_candidates_median": 27.0,
+      "fractional_hit@2_hosts": 0
+    },
+    {
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "model": "host_4mer_logistic",
+      "hosts": 61,
+      "hit@2_sum": 46.0,
+      "hit@2": 0.7540983606557377,
+      "positive_candidates_median": 27.0,
+      "fractional_hit@2_hosts": 0
+    }
+  ],
+  "contrasts": [
+    {
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "left": "genophi_median",
+      "right": "phage_prevalence",
+      "left_only": 2,
+      "right_only": 4,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "NILS23",
+        "NILS28",
+        "NILS32",
+        "NILS33",
+        "NILS40",
+        "NILS49"
+      ],
+      "discordant_groups": [
+        "NILS23",
+        "NILS28",
+        "NILS32",
+        "NILS33",
+        "NILS34",
+        "NILS49"
+      ],
+      "exact_host_mcnemar_p": 0.6875
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "left": "genophi_median",
+      "right": "host_4mer_logistic",
+      "left_only": 3,
+      "right_only": 1,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "NILS28",
+        "NILS35",
+        "NILS49",
+        "NILS58"
+      ],
+      "discordant_groups": [
+        "NILS28",
+        "NILS35",
+        "NILS49",
+        "NILS58"
+      ],
+      "exact_host_mcnemar_p": 0.625
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "validation",
+      "left": "phage_prevalence",
+      "right": "host_4mer_logistic",
+      "left_only": 5,
+      "right_only": 1,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "NILS23",
+        "NILS32",
+        "NILS33",
+        "NILS35",
+        "NILS40",
+        "NILS58"
+      ],
+      "discordant_groups": [
+        "NILS23",
+        "NILS32",
+        "NILS33",
+        "NILS34",
+        "NILS35",
+        "NILS58"
+      ],
+      "exact_host_mcnemar_p": 0.21875
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "test",
+      "left": "genophi_median",
+      "right": "phage_prevalence",
+      "left_only": 6,
+      "right_only": 0,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "NILS20",
+        "NILS36",
+        "NILS41",
+        "NILS44",
+        "NILS46",
+        "NILS56"
+      ],
+      "discordant_groups": [
+        "NILS20",
+        "NILS36",
+        "NILS41",
+        "NILS44",
+        "NILS46",
+        "NILS56"
+      ],
+      "exact_host_mcnemar_p": 0.03125
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "test",
+      "left": "genophi_median",
+      "right": "host_4mer_logistic",
+      "left_only": 1,
+      "right_only": 0,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "NILS41"
+      ],
+      "discordant_groups": [
+        "NILS41"
+      ],
+      "exact_host_mcnemar_p": 1.0
+    },
+    {
+      "scenario": "grouped_host",
+      "partition": "test",
+      "left": "phage_prevalence",
+      "right": "host_4mer_logistic",
+      "left_only": 0,
+      "right_only": 5,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "NILS20",
+        "NILS36",
+        "NILS44",
+        "NILS46",
+        "NILS56"
+      ],
+      "discordant_groups": [
+        "NILS20",
+        "NILS36",
+        "NILS44",
+        "NILS46",
+        "NILS56"
+      ],
+      "exact_host_mcnemar_p": 0.0625
+    },
+    {
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "left": "genophi_median",
+      "right": "phage_prevalence",
+      "left_only": 0,
+      "right_only": 7,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "381A",
+        "NILS63",
+        "NILS70",
+        "NILS73",
+        "NILS76",
+        "NILS77",
+        "T145"
+      ],
+      "discordant_groups": [
+        "381A",
+        "NILS25",
+        "NILS44",
+        "NILS54",
+        "NILS63",
+        "NILS70",
+        "NILS77"
+      ],
+      "exact_host_mcnemar_p": 0.015625
+    },
+    {
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "left": "genophi_median",
+      "right": "host_4mer_logistic",
+      "left_only": 8,
+      "right_only": 6,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "381A",
+        "AL505",
+        "DEC1A",
+        "ED1A",
+        "LM33",
+        "NILS19",
+        "NILS44",
+        "NILS55",
+        "NILS61",
+        "NILS63",
+        "NILS64",
+        "NILS65",
+        "NILS77",
+        "T145"
+      ],
+      "discordant_groups": [
+        "381A",
+        "AL505",
+        "DEC1A",
+        "ED1A",
+        "LM33",
+        "NILS19",
+        "NILS25",
+        "NILS29",
+        "NILS44",
+        "NILS54",
+        "NILS61",
+        "NILS63",
+        "NILS77"
+      ],
+      "exact_host_mcnemar_p": 0.79052734375
+    },
+    {
+      "scenario": "phylogroup:B2",
+      "partition": "test",
+      "left": "phage_prevalence",
+      "right": "host_4mer_logistic",
+      "left_only": 11,
+      "right_only": 2,
+      "non_binary_hosts": 0,
+      "discordant_hosts": [
+        "AL505",
+        "DEC1A",
+        "ED1A",
+        "LM33",
+        "NILS19",
+        "NILS44",
+        "NILS55",
+        "NILS61",
+        "NILS64",
+        "NILS65",
+        "NILS70",
+        "NILS73",
+        "NILS76"
+      ],
+      "discordant_groups": [
+        "AL505",
+        "DEC1A",
+        "ED1A",
+        "LM33",
+        "NILS19",
+        "NILS25",
+        "NILS29",
+        "NILS44",
+        "NILS61",
+        "NILS70"
+      ],
+      "exact_host_mcnemar_p": 0.0224609375
+    }
+  ],
+  "fractional_prevalence_hosts": {
+    "comparator": {
+      "hit@1": 19,
+      "hit@2": 0
+    },
+    "genome_bundle": {
+      "hit@1": 22,
+      "hit@2": 2
+    }
+  },
+  "validation_to_test_swing_pp": {
+    "genophi_median": 14.253393665158365,
+    "phage_prevalence": -11.085972850678727,
+    "genophi_minus_prevalence_change_pp": 25.339366515837092
+  },
+  "B2_seed_invariance": {
+    "42": true,
+    "43": true,
+    "44": true
+  },
+  "errors": [],
+  "inputs_sha256": {
+    "data/studies/results/genophi_comparator.v1/per_host_metrics.csv": "eff92c59deabb4409241db8ded66827e38af4977fc3a960bb7f7afecdfb0fdd6",
+    "data/studies/results/genome_host_retrieval.v1/per_host_metrics.csv": "ffaa3817d0f49f7d88f04fa02f5be9f6b0dfe10cf85d5c218a1e05a8a538ee9d",
+    "data/studies/results/genophi_comparator.v1/host_manifest.csv": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+    "data/studies/results/genophi_comparator.v1/scenario_splits.csv": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+    "src/phage_cocktail/retrieval_study.py": "442bcd11591b1ceac4fd2a1edfc0c8f8948c707349c9e64bdb1a151ea6f62bd5",
+    "data/studies/paired_benchmark.v2.json": "88744e59e3659f16381cb373a4e28703d11c9d6dd1c7cef48187106b5478671f"
+  }
+}

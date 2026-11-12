@@ -1,0 +1,87 @@
+{
+  "study_id": "genophi-grouped-host-seed-sensitivity:v1",
+  "status": "Decision rules registered before seed-43/44 fitting or sensitivity metric inspection",
+  "base_revision": "448cb2f691ef7751c1a7f9f2ed8d14452cefad71",
+  "primary_seed": 42,
+  "sensitivity_seeds": [43, 44],
+  "seed_source": {
+    "path": "data/studies/paired_benchmark.v2.json",
+    "sha256": "88744e59e3659f16381cb373a4e28703d11c9d6dd1c7cef48187106b5478671f",
+    "field": "splitting.sensitivity_seeds",
+    "scope": "Borrow its prespecified sensitivity seeds. The comparator's direct host-baseline parent specifies seed 42 only; this is a new registered sensitivity study, not a claim that its parent already specified this experiment."
+  },
+  "frozen_comparator": {
+    "path": "data/studies/genophi_comparator.v1.json",
+    "sha256": "2541cb7a6321728d16d257ef126501a7db70b6448a273c268aabc715264ff047",
+    "report": "data/studies/results/genophi_comparator.v1/report.json",
+    "report_sha256": "2372f45e22fc7c5789dd668d1fddb11d28eb7c40cd0717ff70e73423ddf9e471"
+  },
+  "frozen_baseline": {
+    "path": "data/studies/genome_host_retrieval.v1.json",
+    "sha256": "f7d2e4114cf994d16282db59fbb72f9140fdbd21283b92a0a9922e8af1ff991d",
+    "numerical_environment": "data/studies/host_retrieval_environment.v1.txt",
+    "python": "3.12.14",
+    "rule": "Refit the original representations, training-only preprocessing, C=0.1, lbfgs and max_iter=2000 under the original numerical package lock. Record the actual interpreter; block on an unavailable declared environment rather than silently replacing it."
+  },
+  "scenarios": ["grouped_host"],
+  "B2_policy": "Seed-invariant, verified from retrieval_splits and by comparing B2 partitions after reassigning host groups with 42/43/44. Do not refit B2 in either study.",
+  "cohort": "Same locked 177 hosts, 94 phages, 16597 observed MLC labels and 41 unknown exclusions",
+  "grouping": {"core_distance_threshold": 0.0001, "fractions": [0.7, 0.15, 0.15]},
+  "manifest_guard": "For each seed recompute group_hosts and split_by_host_group and require exact equality with that seed's committed manifest. Preserve _freeze_cohort's equality check and ComparatorBlocked exception.",
+  "representation_reuse": "Import hash-verified, split-independent clustering and full protein-family feature artifacts from v1 through a separate checkpoint; do not rerun clustering, search or feature assignment.",
+  "comparator_decisions": "All numeric/modeling decisions are inherited bit-identically from genophi_comparator.v1: fixed cutoff 3, 20 <= n < 501, 200 features per RFE run, five FS runs, ten retained models, three complete repeats, all-30-model median confidence, unchanged CatBoost grid, no dynamic weights or SHAP, outer-training rows only.",
+  "reported_methods": ["genophi_median", "phage_prevalence", "host_4mer_logistic", "hybrid_4mer_logistic"],
+  "baseline_refits": "Both sensitivity seeds refit the entire original baseline study's grouped-host scenario, including annotations, genome and hybrid. Cite only matching-seed refits. Every compared learned baseline model must name exactly that seed's training hosts and have no target-host overlap.",
+  "prevalence_check": "Independently recompute Beta(1,1)-smoothed per-phage positive rates from each seed's training observed rows and verify its complete candidate scores and metrics against both study outputs.",
+  "primary_estimand": "Grouped-host test all-complete-host macro Hit@2: genophi_median minus phage_prevalence, separately for seeds 43 and 44",
+  "decision_rule": {
+    "family": "The two new-seed primary test contrasts only; seed 42 is an already observed descriptive reference",
+    "alpha": 0.05,
+    "multiplicity": "Holm adjustment across the two exact group sign-flip p-values; valid under dependence between the overlapping seed panels",
+    "holds_on_prespecified_seeds": "Both new seeds complete and pass QA; each has strictly positive primary delta, a strictly positive lower endpoint of the existing paired 95% group-bootstrap interval, and Holm-adjusted two-sided group sign-flip p <= 0.05.",
+    "does_not_hold_directionally": "Both seeds are reported and at least one completed new seed has primary delta <= 0; identify the tie or reversal explicitly. This is a counterexample to an all-seed directional advantage.",
+    "not_established": "All new primary deltas are positive, but at least one confidence or Holm criterion fails. The robustness criterion is not met; this is not proof of equality or no effect.",
+    "blocked": "Any planned seed or required baseline cannot complete or pass QA. Report all completed results and the blocked seed/reason; do not classify the sweep as holding or replace the seed.",
+    "inference_scope": "Agreement on these two prespecified sensitivities supports robustness only to these splits, not a property of every split or independent release validation. No pooling hosts, repeats or overlapping seeds as independent replicates."
+  },
+  "prevalence_swing_rule": {
+    "estimand": "For each seed, all-complete-host prevalence test Hit@2 minus validation Hit@2",
+    "reference_seed42": -0.11085972850678727,
+    "large_drop_threshold": -0.10,
+    "stable_absolute_threshold": 0.05,
+    "reproduced": "Both new seeds have a test-minus-validation swing <= -0.10 (at least a 10-percentage-point drop, approximately the seed-42 magnitude).",
+    "seed42_drop_not_reproduced_with_stable_sensitivities": "Both new seeds have absolute swing <= 0.05. Describe seed 42's >10-point drop as not reproduced among these sensitivities; do not claim a formal population outlier test from three seeds.",
+    "mixed_or_different": "Every other complete pattern; report each signed swing and distance from seed 42 without selecting a favorable summary.",
+    "rationale": "Ten points identifies a drop comparable to the observed 11.09-point reference; five points defines a materially smaller validation/test difference. The intermediate region remains explicitly mixed. These fixed thresholds are descriptive effect-size categories, not significance tests."
+  },
+  "statistics": {
+    "metrics": ["hit@1", "hit@2", "hit@3", "hit@5", "mrr"],
+    "denominators": ["all_complete_hosts", "eligible_complete_hosts"],
+    "partitions": ["validation", "test"],
+    "pairwise_contrasts": "Every unordered pair of the four reported methods, for every metric, partition and denominator; all except the two declared primary contrasts are descriptive unadjusted comparisons.",
+    "bootstrap": {"resamples": 2000, "seed": 20261024, "confidence": 0.95},
+    "sign_flip": {
+      "unit": "Frozen host group",
+      "statistic": "Absolute sum of per-host metric differences; group contributions are sums, preserving the host-macro estimand rather than equally weighting group means",
+      "alternative": "two-sided",
+      "calculation": "Exact enumeration of all signs on nonzero group-total contributions, counted using meet-in-the-middle tail search. Zero-total groups remain in support reporting but have no effect on the permutation distribution.",
+      "arithmetic": "Convert stored binary64 metric values to common-denominator integers, then group and compare exactly; no rounding, thresholding or dropping fractional hosts.",
+      "max_exact_nonzero_groups": 30,
+      "bound": "Each grouped validation/test partition has 22 frozen groups; an unexpected limit violation is blocked, not silently approximated.",
+      "null_assumption": "Group-wise sign exchangeability/symmetry of paired differences, conditional on the fitted models and fixed panel",
+      "mcnemar_relation": "Equals exact McNemar for binary pairs with one discordant host per contributing group. Binary outcomes alone do not guarantee equality under group-level flips."
+    },
+    "discordance": "Report left-only/right-only counts on the explicitly counted both-binary subset and report the non-binary host count, including zero. Every host, fractional or binary, enters sign-flip and bootstrap according to the declared denominator."
+  },
+  "run_accounting": {
+    "mandatory_seeds": [43, 44],
+    "policy": "Start and report both seeds regardless of either outcome. No outcome-dependent seed omission, replacement, additional repeat, refit, cutoff change or exclusion. A blocked run stays blocked.",
+    "resume": "An interruption before a completed result may resume only identical hash-bound checkpoints and the originally prespecified unfinished stages. After any outer result is available, inference-only QA and artifact validation are allowed; additional fitting of that seed is forbidden.",
+    "records": "Record planned/started/completed/blocked status for every seed and both studies, tool versions, code/protocol/input/output hashes and monotonic wall time."
+  },
+  "limits": [
+    "The protein-family vocabulary remains transductive in genome sequences while the 4-mer baseline is inductive; this sweep cannot isolate protein families versus 4-mers.",
+    "Changing split seeds reuses this inspected development cohort and creates no independent release holdout.",
+    "No claim that positives-per-host is a complete explanation of a ranking swing, or that the sweep identifies its biological cause."
+  ]
+}

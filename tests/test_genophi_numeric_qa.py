@@ -97,7 +97,7 @@ def test_committed_result_bundle_matches_qa_hashes_and_keeps_full_candidate_supp
     assert receipt["status"] == "verified" and receipt["models_reloaded"] == 60
     for relative, digest in receipt["published_output_sha256"].items():
         assert sha256((root / relative).read_bytes()).hexdigest() == digest, relative
-    assert sha256((repo / "scripts/verify_genophi_comparator.py").read_bytes()).hexdigest() == receipt["verification_script_sha256"]
+    assert sha256((repo / "data/studies/code_snapshots/verify_genophi_comparator.v1.py").read_bytes()).hexdigest() == receipt["verification_script_sha256"]
     per_host = pd.read_csv(root / "per_host_metrics.csv")
     for summary in report["metrics"]:
         part = per_host[per_host.scenario.eq(summary["scenario"]) & per_host.partition.eq(summary["partition"])

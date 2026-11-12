@@ -1,0 +1,13 @@
+scenario,partition,comparison,metric,eligible_only,groups,hosts,requested_resamples,seed,confidence_level,delta,status,interval,valid_resamples,undefined_resamples
+grouped_host,validation,genophi_median - phage_prevalence,hit@2,False,22,24,2000,20261024,0.95,-0.08333333333333333,conditional_development_interval,"[-0.2778333333333333, 0.11594202898550722]",2000,0
+grouped_host,validation,genophi_median - phage_prevalence,hit@2,True,22,24,2000,20261024,0.95,-0.08333333333333333,conditional_development_interval,"[-0.2778333333333333, 0.11594202898550722]",2000,0
+grouped_host,test,genophi_median - phage_prevalence,hit@2,False,21,22,2000,20261024,0.95,0.12121212121212119,conditional_development_interval,"[-0.014492753623188422, 0.28571428571428564]",2000,0
+grouped_host,test,genophi_median - phage_prevalence,hit@2,True,21,21,2000,20261024,0.95,0.12698412698412695,conditional_development_interval,"[-0.01587301587301589, 0.2857142857142857]",2000,0
+grouped_host,validation,genophi_median - frozen_host_4mer_logistic,hit@2,False,22,24,2000,20261024,0.95,-0.08333333333333333,conditional_development_interval,"[-0.28, 0.125]",2000,0
+grouped_host,validation,genophi_median - frozen_host_4mer_logistic,hit@2,True,22,24,2000,20261024,0.95,-0.08333333333333333,conditional_development_interval,"[-0.28, 0.125]",2000,0
+grouped_host,validation,genophi_median - frozen_hybrid_4mer_logistic,hit@2,False,22,24,2000,20261024,0.95,0.0,conditional_development_interval,"[-0.21739130434782608, 0.25]",2000,0
+grouped_host,validation,genophi_median - frozen_hybrid_4mer_logistic,hit@2,True,22,24,2000,20261024,0.95,0.0,conditional_development_interval,"[-0.21739130434782608, 0.25]",2000,0
+grouped_host,test,genophi_median - frozen_host_4mer_logistic,hit@2,False,21,22,2000,20261024,0.95,0.045454545454545456,conditional_development_interval,"[0.0, 0.14285714285714285]",2000,0
+grouped_host,test,genophi_median - frozen_host_4mer_logistic,hit@2,True,21,21,2000,20261024,0.95,0.047619047619047616,conditional_development_interval,"[0.0, 0.14285714285714285]",2000,0
+grouped_host,test,genophi_median - frozen_hybrid_4mer_logistic,hit@2,False,21,22,2000,20261024,0.95,0.13636363636363635,conditional_development_interval,"[0.0, 0.3046936758893262]",2000,0
+grouped_host,test,genophi_median - frozen_hybrid_4mer_logistic,hit@2,True,21,21,2000,20261024,0.95,0.14285714285714285,conditional_development_interval,"[0.0, 0.3333333333333333]",2000,0

@@ -1,0 +1,20 @@
+{
+  "stage": "cohort",
+  "status": "complete",
+  "started_utc": "2026-11-12T09:17:43.728376+00:00",
+  "wall_seconds": 17.36532859900035,
+  "result": {
+    "hosts": 177,
+    "phages": 94,
+    "observed_pairs": 16597,
+    "excluded_pairs": 41,
+    "host_groups": 147
+  },
+  "output_sha256": {
+    "cohort/excluded_pairs.csv": "cf45ec993e669860dabcbef0665f47c9e33e94e8b3b67f89baf9e8ae287cd3c5",
+    "cohort/host_manifest.csv": "246b94bd335930a505dbcd4a0a0a5111d7777654d950e08627227260fa023614",
+    "cohort/observed_pairs.csv": "c1d7701f5f6a1f894655aa01e069548173a478239652444eb4d970f2b9650aa0",
+    "cohort/phenotype.csv": "f6973572a498215eb7e4f18cdbfa5f8ef53f3387a9f6780233139d8d7e49dc03",
+    "cohort/scenario_splits.csv": "94c41f1cd86dbc113392a279b64e1b7bb7582583cb6aefbd7476375b4678cc34"
+  }
+}

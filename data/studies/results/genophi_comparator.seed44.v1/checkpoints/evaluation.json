@@ -1,0 +1,18 @@
+{
+  "stage": "evaluation",
+  "status": "complete",
+  "started_utc": "2026-11-12T10:18:28.044984+00:00",
+  "wall_seconds": 1.8071356170003128,
+  "result": {
+    "metrics": 10,
+    "individual_models": 60
+  },
+  "output_sha256": {
+    "evaluation/contrasts.csv": "94ca57eddea4ab6df3fdb734c450ac2e5349c5164d6a3aa3c384b6c666dd06c8",
+    "evaluation/grouped_host_candidate_scores.csv": "a1bbce524c313be4aebeb3fde6706c6d08f10cba44969aafc69897e8b413b593",
+    "evaluation/grouped_host_prevalence_scores.csv": "f792126133f50cfd4d1681d658139f08d266aac1f6cce65bd404fdd886589869",
+    "evaluation/individual_model_metrics.csv": "7f28e65312be76fc1b1606303ff8e15c0e4aba9dc20cda274d63d7b8200b50af",
+    "evaluation/per_host_metrics.csv": "e1239ca5fcd97ae61d1d8de07851a77d6ce26b4d8b9117a29f66befdf23a83aa",
+    "evaluation/report.json": "9a7e484eef5c19cd34f0bfd29e04860963b7155286bb7a4b9f17ee77a5952f43"
+  }
+}

@@ -5,3 +5,6 @@
 models/*.json linguist-generated=true
 data/receipts/*.json linguist-generated=true
 data/studies/results/genophi_comparator.v1/** linguist-generated=true
+data/studies/results/genophi_comparator.seed*.v1/** linguist-generated=true
+data/studies/results/genome_host_retrieval.seed*.v1/** linguist-generated=true
+data/studies/results/genophi_seed_sensitivity.v1/** linguist-generated=true
