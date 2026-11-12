@@ -80,8 +80,8 @@ def score_known_panel(train, candidates, features, numeric, categorical, estimat
 
 
 def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=False,
-                        similarity=False, embedding_cache=None, hosted_embedding=None,
-                        sampling=False):
+                         similarity=False, embedding_cache=None, hosted_embedding=None,
+                         sampling=False, protocol=None, scenario=None):
     """Verify pinned tables/manifests, freeze splits, refit and publish atomically."""
     repo, output = Path(repo).resolve(), Path(output_dir).resolve()
     if output.exists():
@@ -103,6 +103,21 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
                             "data/studies/genome_host_retrieval.v1.json" if genome else
                             "data/studies/host_retrieval.v1.json")
     plan = read_json_object(protocol_path)
+    if protocol is not None:
+        from .genophi_seed_protocols import load_study_protocol
+        if not genome or sampling or similarity:
+            raise ValueError("protocol variants are supported only for the fixed genome-host study")
+        protocol_path, plan = load_study_protocol(repo, protocol, "genome")
+    if "split_seed" in plan:
+        if scenario != "grouped_host":
+            raise ValueError("registered seed sensitivities must execute only grouped_host")
+        if platform.python_version() != plan["numerical_environment"]["python"]:
+            raise ValueError("baseline sensitivity requires the original declared Python version")
+        for line in (repo / plan["numerical_environment"]["path"]).read_text().splitlines():
+            if line.strip() and not line.startswith("#"):
+                name, expected = line.split("==")
+                if importlib.metadata.version(name) != expected:
+                    raise ValueError(f"baseline sensitivity numerical dependency differs: {name}")
     if sampling:
         amendment = plan
         parent = repo / amendment["parent_protocol"]
@@ -127,6 +142,10 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
     metadata = pd.read_csv(resources[("table", "metadata")], sep=";", index_col=0)
     defenses = pd.read_csv(resources[("table", "defenses")], sep=";", index_col=0)
     scenarios = retrieval_splits(manifest, metadata, **plan["random_split"])
+    if scenario is not None:
+        if scenario != "grouped_host":
+            raise ValueError("only the declared grouped_host execution subset is supported")
+        scenarios = {scenario: scenarios[scenario]}
     panel = sorted(observed.phage.unique())
     if len(panel) != plan["expected_candidate_phages"]:
         raise ValueError("candidate library differs from the fixed panel")
@@ -208,6 +227,9 @@ def run_retrieval_study(repo, data_root, output_dir, *, fetch=False, genome=Fals
         "versions": {"python": platform.python_version(), "numpy": np.__version__,
                      "pandas": pd.__version__, "scikit_learn": sklearn.__version__},
     }
+    if "split_seed" in plan:
+        provenance.update(protocol_path=protocol_path.relative_to(repo).as_posix(),
+                          executed_scenarios=list(scenarios), split_seed=plan["split_seed"])
     if embedding_cache is not None:
         provenance["embedding_cache_sha256"] = cache_sha
     if hosted_embedding is not None:

@@ -481,6 +481,9 @@ def evaluate_score_runs(observed, splits, score_runs, plan):
 
 
 def _evaluate(repo, root, plan):
+    if "split_seed" in plan:
+        from .genophi_seed_protocols import verify_seed_baseline_reference
+        verify_seed_baseline_reference(repo, plan)
     observed = pd.read_csv(root / "cohort/observed_pairs.csv", dtype={"bacterium": str, "phage": str})
     splits = pd.read_csv(root / "cohort/scenario_splits.csv", dtype=str)
     scores = {}
@@ -548,17 +551,32 @@ def _evaluate(repo, root, plan):
         pd.DataFrame(contrasts).to_csv(stage / "contrasts.csv", index=False)
         for scenario in plan["scenarios"]:
             combined = pd.concat([s.assign(repeat=r, run=i) for (sc, r, i), s in scores.items() if sc == scenario])
-            combined.groupby(["bacterium", "phage"], as_index=False).score.median().to_csv(
-                stage / f"{scenario.replace(':', '_')}_candidate_scores.csv", index=False)
+            median = combined.groupby(["bacterium", "phage"], as_index=False).score.median()
+            median.to_csv(stage / f"{scenario.replace(':', '_')}_candidate_scores.csv", index=False)
+            if "split_seed" in plan:
+                split = splits[splits.scenario.eq(scenario)]
+                train = observed[observed.bacterium.isin(split.loc[split.split.eq("train"), "bacterium"])]
+                counts = train.groupby("phage").infection.agg(["sum", "count"])
+                rates = (counts["sum"] + 1) / (counts["count"] + 2)
+                median[["bacterium", "phage"]].assign(score=lambda f: f.phage.map(rates)).to_csv(
+                    stage / f"{scenario.replace(':', '_')}_prevalence_scores.csv", index=False)
         report["output_sha256"] = {p.name: sha256_file(p) for p in sorted(stage.iterdir())}
         atomic_write_json(report, stage / "report.json")
     return list((root / "evaluation").iterdir()), {"metrics": len(summaries), "individual_models": len(run_metrics)}
 
 
-def run_comparator(repo, data_root, proteomes, proteome_receipt, output_dir, *, stage="all", scenario=None, repeat=None):
+def run_comparator(repo, data_root, proteomes, proteome_receipt, output_dir, *, stage="all", scenario=None, repeat=None,
+                   protocol=None, feature_cache=None):
     """Execute or resume immutable stages; completed stages are always reverified."""
     repo, root, proteomes = Path(repo).resolve(), Path(output_dir).resolve(), Path(proteomes).resolve()
-    plan = read_json_object(repo / PROTOCOL)
+    from .genophi_seed_protocols import load_study_protocol, import_feature_cache, verify_seed_baseline_reference, CACHE_LOCK
+
+    protocol_path, plan = load_study_protocol(repo, protocol or PROTOCOL, "comparator")
+    sensitivity = "split_seed" in plan
+    if sensitivity and feature_cache is None:
+        raise ValueError("registered sensitivity runs require the verified v1 feature cache")
+    if feature_cache is not None and not sensitivity:
+        raise ValueError("feature import requires a registered sensitivity protocol")
     for relative, digest in plan["repo_files_sha256"].items():
         if sha256_file(repo / relative) != digest:
             raise ValueError(f"changed frozen input (preserve LF bytes): {relative}")
@@ -570,11 +588,21 @@ def run_comparator(repo, data_root, proteomes, proteome_receipt, output_dir, *, 
     runtime = runtime_identity()
     if any(runtime["versions"][k] != v for k, v in plan["versions"].items()):
         raise ValueError("external tool version differs from the frozen comparator protocol")
+    reference_binding = None
+    if sensitivity:
+        cache_lock = read_json_object(repo / CACHE_LOCK)
+        if runtime["versions"] != cache_lock["versions"]:
+            raise ValueError("sensitivity runtime differs from the frozen GenoPHI numerical environment")
+        reference_binding = verify_seed_baseline_reference(repo, plan)
     provenance = {
         **runtime, **code_provenance(repo, repo / "scripts/run_genophi_comparator.py"),
-        "protocol_sha256": sha256_file(repo / PROTOCOL), "proteome_receipt_sha256": sha256_file(proteome_receipt),
+        "protocol_sha256": sha256_file(protocol_path), "proteome_receipt_sha256": sha256_file(proteome_receipt),
         "reference_report_sha256": sha256_file(repo / plan["reference_report"]),
     }
+    if sensitivity:
+        provenance.update(protocol_path=protocol_path.relative_to(repo).as_posix(),
+                          matching_seed_baseline=reference_binding,
+                          feature_artifact_lock_sha256=sha256_file(repo / CACHE_LOCK))
     if root.exists():
         if not (root / "provenance.json").is_file() or read_json_object(root / "provenance.json") != provenance:
             raise ValueError("output exists with a different or missing run binding")
@@ -586,10 +614,14 @@ def run_comparator(repo, data_root, proteomes, proteome_receipt, output_dir, *, 
     checkpoint(root, "cohort", lambda: _freeze_cohort(repo, data_root, root, plan, lock))
     if stage == "prepare":
         return root
-    for genome_type in ("strain", "phage"):
-        checkpoint(root, f"cluster_{genome_type}", lambda g=genome_type: _cluster_set(root, proteomes, g, plan))
-        checkpoint(root, f"features_{genome_type}", lambda g=genome_type: _assign_set(root, g, plan))
-    checkpoint(root, "merge_features", lambda: _merge_features(root))
+    if sensitivity:
+        checkpoint(root, "reuse_features", lambda: import_feature_cache(
+            repo, feature_cache, root, sha256_file(proteome_receipt)))
+    else:
+        for genome_type in ("strain", "phage"):
+            checkpoint(root, f"cluster_{genome_type}", lambda g=genome_type: _cluster_set(root, proteomes, g, plan))
+            checkpoint(root, f"features_{genome_type}", lambda g=genome_type: _assign_set(root, g, plan))
+        checkpoint(root, "merge_features", lambda: _merge_features(root))
     if stage == "cluster":
         return root
     chosen_scenarios = [scenario] if scenario is not None else plan["scenarios"]

@@ -249,3 +249,45 @@ def import_feature_cache(repo, source, destination, proteome_receipt_sha256):
     return outputs, {"status": "reused_v1_feature_stages", "source_checkpoint_stages": list(CACHE_STAGES),
                      "feature_artifact_lock_sha256": sha256_file(lock_path), "artifacts": len(outputs),
                      "new_clustering_search_assignment_calls": 0}
+
+
+def assert_baseline_model_split(model, manifest):
+    """Reject weights trained under another seed, even if score IDs look valid."""
+    intended = set(manifest.loc[manifest.split.eq("train"), "bacterium"])
+    targets = set(manifest.loc[manifest.split.isin(["validation", "test"]), "bacterium"])
+    actual = model.get("training_hosts", [])
+    if len(actual) != len(set(actual)) or set(actual) != intended or set(actual) & targets:
+        raise ValueError("baseline training hosts do not match this seed's frozen training partition")
+
+
+def verify_seed_baseline_reference(repo, plan):
+    """Bind every cited baseline to the same protocol, manifest and fit hosts."""
+    repo = Path(repo)
+    _, baseline = load_study_protocol(repo, plan["reference_protocol"], "genome")
+    report_path, per_host = repo / plan["reference_report"], repo / plan["reference_per_host"]
+    report = read_json_object(report_path)
+    if (report["study_id"] != baseline["study_id"]
+            or report["provenance"]["protocol_sha256"] != sha256_file(repo / plan["reference_protocol"])):
+        raise ValueError("baseline reference was fit under a different seed/protocol")
+    if {m["scenario"] for m in report["metrics"]} != {"grouped_host"}:
+        raise ValueError("sensitivity baseline must refit only grouped_host")
+    manifest = pd.read_csv(repo / plan["host_manifest"], dtype=str).sort_values("bacterium").reset_index(drop=True)
+    source_split_path = report_path.parent / "host_splits.csv"
+    if (sha256_file(source_split_path) != report["output_sha256"]["host_splits.csv"]
+            or sha256_file(per_host) != report["output_sha256"]["per_host_metrics.csv"]):
+        raise ValueError("changed matching-seed baseline artifacts")
+    source = pd.read_csv(source_split_path, dtype=str)
+    source = source[source.scenario.eq("grouped_host")].sort_values("bacterium").reset_index(drop=True)
+    if not source[manifest.columns].equals(manifest):
+        raise ValueError("baseline and comparator use different frozen host manifests")
+    checked = {}
+    for name in ("model_00.json", "model_00_host_4mer_logistic.json", "model_00_hybrid_4mer_logistic.json"):
+        path = report_path.parent / name
+        if sha256_file(path) != report["output_sha256"][name]:
+            raise ValueError("changed baseline model weights")
+        assert_baseline_model_split(read_json_object(path), manifest)
+        checked[name] = sha256_file(path)
+    return {"status": "same_seed_baseline_verified", "split_seed": plan["split_seed"],
+            "baseline_protocol_sha256": sha256_file(repo / plan["reference_protocol"]),
+            "host_manifest_sha256": sha256_file(repo / plan["host_manifest"]),
+            "baseline_report_sha256": sha256_file(report_path), "baseline_models_sha256": checked}

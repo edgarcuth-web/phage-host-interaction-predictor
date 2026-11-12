@@ -12,6 +12,7 @@ from phage_cocktail import genophi_comparator as comparator
 from phage_cocktail.genophi_seed_protocols import (
     BASE_COMPARATOR, BASE_GENOME, BASE_HOST, CACHE_LOCK, INPUT_FREEZE, REGISTRATION,
     expected_variant, import_feature_cache, load_study_protocol, seed_paths,
+    assert_baseline_model_split,
 )
 from phage_cocktail.retrieval_study import retrieval_splits
 
@@ -116,3 +117,86 @@ def test_original_freeze_cohort_still_blocks_a_mismatched_manifest(tmp_path, mon
     with pytest.raises(comparator.ComparatorBlocked, match="recomputed host split differs from the frozen study"):
         comparator._freeze_cohort(tmp_path, tmp_path, tmp_path / "run",
                                  {"parent_protocol": "parent.json", "host_manifest": "wrong.csv"}, {})
+
+
+def test_baseline_fitted_under_one_seed_cannot_be_scored_as_another_seed_refit():
+    from phage_cocktail.host_baseline import fit_host_model
+    from phage_cocktail.retrieval_study import score_known_panel
+
+    features = pd.DataFrame({"f": [0., 1., 2., 3.]}, index=list("ABCD"))
+    old_training = pd.DataFrame({"bacterium": ["A", "B"], "phage": "P", "infection": [0, 1]})
+    old_model = fit_host_model(old_training, features, ["f"], [], C=.1, max_iter=2000)
+    new_manifest = pd.DataFrame({"bacterium": list("ABCD"), "split": ["train", "test", "train", "validation"]})
+    with pytest.raises(ValueError, match="this seed's frozen training partition"):
+        assert_baseline_model_split(old_model, new_manifest)
+    candidates = pd.DataFrame({"bacterium": ["B", "D"], "phage": "P"})
+    with pytest.raises(ValueError, match="disjoint"):
+        score_known_panel(old_training, candidates, features, ["f"], [], {"C": .1, "max_iter": 2000})
+
+
+def test_failed_seed_is_reported_and_does_not_cancel_the_other_seed(tmp_path):
+    import importlib.util
+    from types import SimpleNamespace
+
+    spec = importlib.util.spec_from_file_location("seed_driver", REPO / "scripts/run_genophi_seed_sensitivity.py")
+    driver = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(driver)
+    assert driver.interpreter_path(tmp_path, Path(".venv/bin/python")) == tmp_path / ".venv/bin/python"
+    calls = []
+
+    def run(command, **kwargs):
+        calls.append(command[0])
+        return SimpleNamespace(returncode=1 if command[0] == "fail43" else 0)
+
+    jobs = {43: [("baseline", ["fail43"]), ("comparator", ["never43"])],
+            44: [("baseline", ["baseline44"]), ("comparator", ["comparator44"])]}
+    root = tmp_path / "run"
+    value = driver.execute_studies(root, jobs, repo=tmp_path, run=run)
+    assert calls == ["fail43", "baseline44", "comparator44"]
+    assert value["seeds"]["43"]["status"] == "blocked"
+    assert value["seeds"]["44"]["status"] == "verified"
+    with pytest.raises(ValueError, match="do not rerun"):
+        driver.execute_studies(root, jobs, repo=tmp_path, run=run)
+
+
+def test_sensitivity_stage_imports_cache_and_never_calls_native_feature_workflows(tmp_path, monkeypatch):
+    from phage_cocktail import genophi_seed_protocols as protocols
+
+    protocol = tmp_path / "protocol.json"
+    plan = {"split_seed": 43, "repo_files_sha256": {}, "resource_lock": "lock.json",
+            "versions": {"genophi": "1.0.3"}, "reference_report": "reference.json"}
+    protocol.write_text(json.dumps(plan))
+    original_reader = comparator.read_json_object
+
+    def read(path):
+        if Path(path).name == "proteomes.json":
+            return {"resource_lock_sha256": "digest"}
+        if Path(path).name == "lock.json":
+            return {}
+        if Path(path) == tmp_path / CACHE_LOCK:
+            return {"versions": plan["versions"]}
+        return original_reader(path)
+
+    monkeypatch.setattr(protocols, "load_study_protocol", lambda *a: (protocol, plan))
+    monkeypatch.setattr(protocols, "verify_seed_baseline_reference", lambda *a: {"status": "verified"})
+    monkeypatch.setattr(comparator, "read_json_object", read)
+    monkeypatch.setattr(comparator, "sha256_file", lambda *a: "digest")
+    monkeypatch.setattr(comparator, "verify_proteomes", lambda *a: None)
+    monkeypatch.setattr(comparator, "runtime_identity", lambda: {"versions": plan["versions"]})
+    monkeypatch.setattr(comparator, "code_provenance", lambda *a: {})
+    monkeypatch.setattr(comparator, "_freeze_cohort", lambda *a: ([], {"status": "frozen"}))
+    for name in ("_cluster_set", "_assign_set", "_merge_features"):
+        monkeypatch.setattr(comparator, name, lambda *a: pytest.fail("sensitivity rebuilt feature stages"))
+    imported = []
+
+    def import_cache(repo, source, destination, receipt):
+        imported.append(source)
+        path = destination / "full_feature_table.csv"
+        path.write_text("strain,phage,interaction,sc_0\nA,P,1,1\n")
+        return [path], {"new_clustering_search_assignment_calls": 0}
+
+    monkeypatch.setattr(protocols, "import_feature_cache", import_cache)
+    comparator.run_comparator(tmp_path, tmp_path, tmp_path, tmp_path / "proteomes.json", tmp_path / "run",
+                              stage="cluster", protocol=protocol, feature_cache=tmp_path / "source")
+    assert imported == [tmp_path / "source"]
+    assert (tmp_path / "run/checkpoints/reuse_features.json").is_file()
