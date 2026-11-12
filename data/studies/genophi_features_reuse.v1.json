@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "source_study_id": "genophi-frozen-host-comparator:v1",
+  "source_protocol_sha256": "2541cb7a6321728d16d257ef126501a7db70b6448a273c268aabc715264ff047",
+  "source_provenance_sha256": "45d28093b5c8d4ce13580e5ce7f2724dd6da75b0fb4a64ab0906669dd8c8c9d7",
+  "proteome_receipt_sha256": "a4f4fb7443bb630ce35991e9d34350a5d99da2e14749b4c08327aa6789746516",
+  "versions": {
+    "python": "3.12.3",
+    "genophi": "1.0.3",
+    "pyrodigal": "3.7.1",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "catboost": "1.2.10",
+    "biopython": "1.88",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.8.0",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2",
+    "plotnine": "0.15.9",
+    "shap": "0.54.1",
+    "hdbscan": "0.8.44",
+    "mmseqs2": "15-6f452+ds-2"
+  },
+  "source_checkpoint_sha256": {
+    "cluster_strain": "2b15b2e9046342495d0b03bbfbeb8d876528160746a11b702c7c418a0ecce968",
+    "features_strain": "41dd71f0eac1e5df6f722659ba9301bdb663ec2d18e8542b191a49ee6474321f",
+    "cluster_phage": "b4a8e32d7abf9580875e4572024605add56ca640c13131e5d5f37844f0e431c6",
+    "features_phage": "5d66b957aa7de100b43c7204401f84223850b4908138f60921232de95fbeada1",
+    "merge_features": "2461e543db8e834af1aa76fa802d1561355ef330bb8855d394d91580c68ef226"
+  },
+  "artifacts": {
+    "clustering/strain/presence_absence_matrix.csv": {
+      "sha256": "c8e958e5af4af73be228c294e3789e1c4e943dd4ea5333cdbbc23c722bf57403",
+      "size_bytes": 16651086
+    },
+    "clustering/strain/best_hits.tsv": {
+      "sha256": "75ad66e64da7ebbc89b56adba1b6db7d2db8d4a4f3019459885c9fca0fbcb4d2",
+      "size_bytes": 20003999
+    },
+    "clustering/strain/clusters.tsv": {
+      "sha256": "fd7e47f162d5f78b47fe727876853c52bceced3a08fcf6c6862a2bbf21b47f4c",
+      "size_bytes": 20003986
+    },
+    "clustering/strain/reducer_sample.tsv": {
+      "sha256": "c320b56ba5d34487fc4f1b2d455b05ebab728f8a27dea5ffcccd0b1834e5b392",
+      "size_bytes": 3170476
+    },
+    "clustering/strain/reducer_streaming.tsv": {
+      "sha256": "e5398b5814a25a98b65147944a6a6d54076d7806f02a186330b4ce4faf792775",
+      "size_bytes": 7109
+    },
+    "clustering/strain/reducer_upstream.tsv": {
+      "sha256": "e5398b5814a25a98b65147944a6a6d54076d7806f02a186330b4ce4faf792775",
+      "size_bytes": 7109
+    },
+    "clustering/strain/features/feature_assignments.csv": {
+      "sha256": "2ac4396bd86faa299ac687cda2433bfb020f33cfe219fd69c001b98449d5f971",
+      "size_bytes": 4432350
+    },
+    "clustering/strain/features/feature_table.csv": {
+      "sha256": "b113336f7a209d6edc01109564d45952f3c192a57db2dc121f8e718fb3b82728",
+      "size_bytes": 4148268
+    },
+    "clustering/strain/features/selected_features.csv": {
+      "sha256": "c50f973d7e90b286b721f1cc816c3c9735a8d4f93badb90f371b65eefeab823c",
+      "size_bytes": 891288
+    },
+    "clustering/phage/presence_absence_matrix.csv": {
+      "sha256": "faf7d6c7cb970050466a11838981b649291d04a737234a08645ce7ac1cb51859",
+      "size_bytes": 435100
+    },
+    "clustering/phage/best_hits.tsv": {
+      "sha256": "a0a39101a4c2db01a566dd78e89d6563cad05295071c9d6b88723105ea3e0b1f",
+      "size_bytes": 227053
+    },
+    "clustering/phage/clusters.tsv": {
+      "sha256": "70918288e3315a3a7ce4be5b2f4f96f29e965045a7e50c9192857d4a08abc5b4",
+      "size_bytes": 227053
+    },
+    "clustering/phage/reducer_sample.tsv": {
+      "sha256": "86fd8997e47e15708b1d97bb8fab6b9cd3fcc2932d94b3e81700a5de80ca57b5",
+      "size_bytes": 3091840
+    },
+    "clustering/phage/reducer_streaming.tsv": {
+      "sha256": "45fb693ec2ec53ca9fe97ac95be73f13a9eeafb6ea106750cd0d5c254b71bcb0",
+      "size_bytes": 134766
+    },
+    "clustering/phage/reducer_upstream.tsv": {
+      "sha256": "45fb693ec2ec53ca9fe97ac95be73f13a9eeafb6ea106750cd0d5c254b71bcb0",
+      "size_bytes": 134766
+    },
+    "clustering/phage/features/feature_assignments.csv": {
+      "sha256": "a334bbfd58a8420ab8967770d46cb9f27e1474cac0142957396ad850b78c640b",
+      "size_bytes": 27862
+    },
+    "clustering/phage/features/feature_table.csv": {
+      "sha256": "5473ea3e45631821ba1062635a9948d28a3fccd47dda18e1d003eeab9119e55b",
+      "size_bytes": 68138
+    },
+    "clustering/phage/features/selected_features.csv": {
+      "sha256": "fdc2f16bd43cf3053119cb1934d45ead3f377f4b2b44120787c96faf04bc7290",
+      "size_bytes": 39401
+    },
+    "full_feature_table.csv": {
+      "sha256": "cb7d16ae8484119c80467cfd30d4fde9bf1846d877d1e8e192937fc8bc4c48d1",
+      "size_bytes": 392099366
+    }
+  },
+  "scope": "The same all-genome vocabulary and full observed-row feature table; no seed-specific supervised artifact is admitted"
+}
