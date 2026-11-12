@@ -1,0 +1,19 @@
+{
+  "stage": "cluster_strain",
+  "status": "complete",
+  "started_utc": "2026-11-11T17:02:21.800812+00:00",
+  "wall_seconds": 8504.800760740001,
+  "result": {
+    "genomes": 177,
+    "protein_families": 45538,
+    "best_hit_reducer": "streaming; deterministic prefix byte-matches upstream"
+  },
+  "output_sha256": {
+    "clustering/strain/presence_absence_matrix.csv": "c8e958e5af4af73be228c294e3789e1c4e943dd4ea5333cdbbc23c722bf57403",
+    "clustering/strain/best_hits.tsv": "75ad66e64da7ebbc89b56adba1b6db7d2db8d4a4f3019459885c9fca0fbcb4d2",
+    "clustering/strain/clusters.tsv": "fd7e47f162d5f78b47fe727876853c52bceced3a08fcf6c6862a2bbf21b47f4c",
+    "clustering/strain/reducer_sample.tsv": "c320b56ba5d34487fc4f1b2d455b05ebab728f8a27dea5ffcccd0b1834e5b392",
+    "clustering/strain/reducer_streaming.tsv": "e5398b5814a25a98b65147944a6a6d54076d7806f02a186330b4ce4faf792775",
+    "clustering/strain/reducer_upstream.tsv": "e5398b5814a25a98b65147944a6a6d54076d7806f02a186330b4ce4faf792775"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "stage": "phylogroup_B2_repeat_1_model_4",
+  "status": "complete",
+  "started_utc": "2026-11-12T03:14:34.966650+00:00",
+  "wall_seconds": 23.631109343999924,
+  "result": {
+    "outer_train_hosts": 115,
+    "outer_train_pairs": 10771,
+    "prediction_hosts": 62,
+    "predictions": 5828,
+    "features": 133
+  },
+  "output_sha256": {
+    "fits/phylogroup_B2_repeat_1/models/run_4/best_model.pkl": "1a97d76825564dd01469ae9ae7303b2903f733d12c3e849e0bfa08b17abb35ea",
+    "fits/phylogroup_B2_repeat_1/models/run_4/candidate_scores.csv": "991349268eaf901724820e1356dec1405ba522fa532f185856d83a652a3c5413",
+    "fits/phylogroup_B2_repeat_1/selected/select_feature_table_cutoff_3.csv": "3ca70f77bacc48e9962bf3bd9dbaa6994e11ea65d763e36e8264077f15bcbd6e",
+    "fits/phylogroup_B2_repeat_1/train_full_feature_table.csv": "42a7220adaefe83e832a0403988e36b09935b9f754200e632f051464f6cc6ec5",
+    "fits/phylogroup_B2_repeat_1/models/run_4/best_model_predictions.csv": "2b2755223fca0bdf39f77fc75d22f4a27b2a09990668f9524c523939842e9369",
+    "fits/phylogroup_B2_repeat_1/models/run_4/feature_importances.csv": "6a61219cbfacb6883ef428e088eaf3fef1da077838bd06e3d7639f9347f64034",
+    "fits/phylogroup_B2_repeat_1/models/run_4/model_performance.csv": "bfcbd84c79661a18d641dd5b794085f369e08756bfa6742e0464684037caa4e5",
+    "fits/phylogroup_B2_repeat_1/models/run_4/strain_clusters.csv": "d078bfccce440172d97e28b5fe60b26c5c7bbd32e9dc013094c1ec50b93d0ba1"
+  }
+}

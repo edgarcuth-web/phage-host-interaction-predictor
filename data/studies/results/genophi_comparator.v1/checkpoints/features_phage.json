@@ -1,0 +1,15 @@
+{
+  "stage": "features_phage",
+  "status": "complete",
+  "started_utc": "2026-11-12T01:55:56.621542+00:00",
+  "wall_seconds": 0.14240033500027494,
+  "result": {
+    "genomes": 94,
+    "features": 346
+  },
+  "output_sha256": {
+    "clustering/phage/features/feature_assignments.csv": "a334bbfd58a8420ab8967770d46cb9f27e1474cac0142957396ad850b78c640b",
+    "clustering/phage/features/feature_table.csv": "5473ea3e45631821ba1062635a9948d28a3fccd47dda18e1d003eeab9119e55b",
+    "clustering/phage/features/selected_features.csv": "fdc2f16bd43cf3053119cb1934d45ead3f377f4b2b44120787c96faf04bc7290"
+  }
+}

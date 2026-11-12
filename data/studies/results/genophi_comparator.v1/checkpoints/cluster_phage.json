@@ -1,0 +1,19 @@
+{
+  "stage": "cluster_phage",
+  "status": "complete",
+  "started_utc": "2026-11-12T01:55:32.257755+00:00",
+  "wall_seconds": 26.806281492999915,
+  "result": {
+    "genomes": 94,
+    "protein_families": 2177,
+    "best_hit_reducer": "streaming; deterministic prefix byte-matches upstream"
+  },
+  "output_sha256": {
+    "clustering/phage/presence_absence_matrix.csv": "faf7d6c7cb970050466a11838981b649291d04a737234a08645ce7ac1cb51859",
+    "clustering/phage/best_hits.tsv": "a0a39101a4c2db01a566dd78e89d6563cad05295071c9d6b88723105ea3e0b1f",
+    "clustering/phage/clusters.tsv": "70918288e3315a3a7ce4be5b2f4f96f29e965045a7e50c9192857d4a08abc5b4",
+    "clustering/phage/reducer_sample.tsv": "86fd8997e47e15708b1d97bb8fab6b9cd3fcc2932d94b3e81700a5de80ca57b5",
+    "clustering/phage/reducer_streaming.tsv": "45fb693ec2ec53ca9fe97ac95be73f13a9eeafb6ea106750cd0d5c254b71bcb0",
+    "clustering/phage/reducer_upstream.tsv": "45fb693ec2ec53ca9fe97ac95be73f13a9eeafb6ea106750cd0d5c254b71bcb0"
+  }
+}

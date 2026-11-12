@@ -4,3 +4,4 @@
 # Keep generated numerical weights collapsed in source reviews.
 models/*.json linguist-generated=true
 data/receipts/*.json linguist-generated=true
+data/studies/results/genophi_comparator.v1/** linguist-generated=true

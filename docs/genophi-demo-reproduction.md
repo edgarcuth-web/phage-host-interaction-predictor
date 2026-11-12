@@ -158,3 +158,10 @@ becomes derived data needing its own hashes and a pinned caller version.
 and performs its own splitting, so forcing it onto the frozen grouped-host split
 means clustering once over all genomes, subsetting the feature table rows to the
 training hosts, training, then predicting the held-out hosts.
+
+This handoff has subsequently been completed in the
+[frozen-split GenoPHI comparator](genophi-frozen-comparator.md): the 271
+proteomes are receipted, supervised fitting uses outer-training hosts only,
+cutoff 3 is fixed a priori, and primary/B2 predictions are evaluated through
+the project's exact-tie retrieval code. The demo and shipped upstream reference
+remain separate historical reproduction records.

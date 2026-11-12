@@ -1,0 +1,15 @@
+{
+  "stage": "features_strain",
+  "status": "complete",
+  "started_utc": "2026-11-12T01:55:27.461174+00:00",
+  "wall_seconds": 4.7097770830005175,
+  "result": {
+    "genomes": 177,
+    "features": 11455
+  },
+  "output_sha256": {
+    "clustering/strain/features/feature_assignments.csv": "2ac4396bd86faa299ac687cda2433bfb020f33cfe219fd69c001b98449d5f971",
+    "clustering/strain/features/feature_table.csv": "b113336f7a209d6edc01109564d45952f3c192a57db2dc121f8e718fb3b82728",
+    "clustering/strain/features/selected_features.csv": "c50f973d7e90b286b721f1cc816c3c9735a8d4f93badb90f371b65eefeab823c"
+  }
+}

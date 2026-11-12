@@ -1,0 +1,14 @@
+{
+  "stage": "phylogroup_B2_repeat_1_selection",
+  "status": "complete",
+  "started_utc": "2026-11-12T03:12:41.530511+00:00",
+  "wall_seconds": 13.55061116899924,
+  "result": {
+    "features": 133,
+    "cutoff": 3
+  },
+  "output_sha256": {
+    "fits/phylogroup_B2_repeat_1/selected/select_feature_table_cutoff_3.csv": "3ca70f77bacc48e9962bf3bd9dbaa6994e11ea65d763e36e8264077f15bcbd6e",
+    "fits/phylogroup_B2_repeat_1/feature_occurrences.csv": "d38177576cc24f94e01e995cd88df7ab8f365aacd31d06e2790f89d470c68c5e"
+  }
+}

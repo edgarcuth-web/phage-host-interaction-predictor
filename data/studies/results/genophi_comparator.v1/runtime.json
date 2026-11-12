@@ -1,0 +1,8 @@
+{
+  "status": "completed",
+  "elapsed_wall_seconds": 14883.319405077,
+  "clock": "Linux CLOCK_BOOTTIME minus /proc process start ticks; polling resolution 1 second",
+  "monitor_started_at_elapsed_seconds": 4147.4943735940005,
+  "peak_observed_process_tree_rss_bytes": 10211352576,
+  "memory_scope": "Samples after monitor start, not a full-run peak-memory measurement"
+}
