@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "report_sha256": "420b9d19f7cc51d3a2fb36d717631f8651f8f124396d9f8fce0ad3d737a24088",
+  "verification_script_sha256": "79d8e105a68b69152d71e5c1530cb3d415f5c1821fc69283a6ceb209977c3b2d",
+  "pairwise_contrasts": 360,
+  "primary_Hit2_p_values_independently_enumerated": 6,
+  "fractional_hosts_preserved": true,
+  "registered_decisions_reproduced": true,
+  "verified_sensitivity_seeds": [
+    43,
+    44
+  ],
+  "additional_model_fits": 0
+}

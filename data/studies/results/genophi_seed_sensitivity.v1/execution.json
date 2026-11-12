@@ -1,0 +1,185 @@
+{
+  "status": "verified",
+  "started_utc": "2026-11-12T08:07:12.053407+00:00",
+  "seeds": {
+    "43": {
+      "status": "verified",
+      "components": {
+        "baseline_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genome_host_retrieval.py",
+            "--protocol",
+            "data/studies/genome_host_retrieval.seed43.v1.json",
+            "--scenario",
+            "grouped_host",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/baseline",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 69.648353332
+        },
+        "baseline_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--baseline-protocol",
+            "data/studies/genome_host_retrieval.seed43.v1.json",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/baseline",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/BASELINE_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genome_host_retrieval.seed43.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 66.460878671
+        },
+        "comparator_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genophi_comparator.py",
+            "--protocol",
+            "data/studies/genophi_comparator.seed43.v1.json",
+            "--feature-cache",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_comparator_v1",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/comparator",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "interrupted_before_run_binding": true,
+          "returncode": 0,
+          "wall_seconds": 3368.823051684
+        },
+        "comparator_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/comparator",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed43/COMPARATOR_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genophi_comparator.seed43.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 147.8602693300004
+        }
+      }
+    },
+    "44": {
+      "status": "verified",
+      "components": {
+        "baseline_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genome_host_retrieval.py",
+            "--protocol",
+            "data/studies/genome_host_retrieval.seed44.v1.json",
+            "--scenario",
+            "grouped_host",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/baseline",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 44.86115023499997
+        },
+        "baseline_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/baseline/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--baseline-protocol",
+            "data/studies/genome_host_retrieval.seed44.v1.json",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/baseline",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/BASELINE_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genome_host_retrieval.seed44.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 39.98889630099984
+        },
+        "comparator_fit": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/run_genophi_comparator.py",
+            "--protocol",
+            "data/studies/genophi_comparator.seed44.v1.json",
+            "--feature-cache",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_comparator_v1",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--outdir",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/comparator",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 3710.3797485360005
+        },
+        "comparator_qa": {
+          "status": "completed",
+          "command": [
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/.venv/bin/python",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/scripts/verify_genophi_comparator.py",
+            "--run",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/comparator",
+            "--proteomes",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/derived/genophi_proteomes",
+            "--proteome-receipt",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/receipts/genophi_proteomes.v1.json",
+            "--out",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/artifacts/genophi_seed_sensitivity_v1/seed44/COMPARATOR_QA.json",
+            "--publish",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/studies/results/genophi_comparator.seed44.v1",
+            "--data-root",
+            "/mnt/c/Users/edgar/Desktop/phage-host-interaction-predictor/data/raw/genophi_host_study"
+          ],
+          "returncode": 0,
+          "wall_seconds": 169.11836230900008
+        }
+      }
+    }
+  },
+  "resumption": {
+    "reason": "PowerShell launcher exceeded tool time limit; WSL process tree ended before comparator run binding or fitting",
+    "prior_execution_sha256": "ed333908c695eb3c511ead0074736615cded08b369b81f6256f744f4e4631ac3",
+    "script_sha256": "f7e99aad7a49acd4ffd3c03dbc46a2b2c0fc838e48e1191e0cbfb376dcd5913d",
+    "reuse": [
+      "seed43 baseline_fit",
+      "seed43 baseline_qa"
+    ],
+    "policy": "Only original unfinished commands; no completed fit or result is rerun"
+  },
+  "wall_seconds": 7617.378181757,
+  "wall_time_scope": "Completed initial baseline stages plus monotonic continued execution; excludes launcher interruption"
+}

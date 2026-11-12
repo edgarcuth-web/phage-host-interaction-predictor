@@ -71,6 +71,10 @@ on the primary split, but falls to 75.4% on B2 holdout versus prevalence's 90.2%
 This inspected development result does not justify model promotion.
 The [aligned GenoPHI comparator](docs/genophi-frozen-comparator.md) now reaches
 91.2% primary Hit@2 and 78.7% on B2; its B2 result also trails prevalence's 90.2%.
+Its [preregistered split-seed sensitivity](docs/genophi-seed-sensitivity.md)
+retains positive test point differences against prevalence at seeds 43/44,
+but does not meet its statistical robustness criterion. Prevalence's large
+validation-to-test fall is not confined to seed 42.
 Pairwise matrices and offline union coverage do not establish cocktail efficacy.
 
 | Capability | Current status |
@@ -329,6 +333,15 @@ scores bit-for-bit on independent reload. See the
 [protocol, versions, receipts, full metrics and verification](docs/genophi-frozen-comparator.md)
 for reproducible gene calling and the resumable comparator command.
 
+The [seed-43/44 sensitivity](docs/genophi-seed-sensitivity.md) refits matching
+baselines and reuses the same protein vocabulary. Test GenoPHI/prevalence
+Hit@2 is **70.37%/62.96%** at seed 43 and **77.27%/65.15%** at seed 44. Both
+group-bootstrap gain intervals cross zero; Holm-adjusted group sign-flip
+p-values are 0.6875 and 0.375, so the preregistered robustness claim is
+**not established**. Prevalence falls 16.20 and 9.85 points from validation to
+test, rather than remaining stable outside seed 42. Fractional tie expectations
+are preserved in every test; B2 is seed-invariant and was not refitted.
+
 ## Evo2 retrieval reference
 
 Reproduce the upstream species-level retrieval metrics without a GPU:
@@ -363,6 +376,7 @@ comparison have not been run. See the
 - [ ] Finish row-level assay-context and separate dataset-license review
 - [x] Run the GenoPHI reference workflow end to end and establish that its shipped reference output is not a reproduction target
 - [x] Evaluate GenoPHI on the frozen grouped-host and B2 splits with a priori cutoff selection and aligned retrieval metrics
+- [x] Run preregistered grouped-host seed sensitivities with matching refits, exact group-level fractional-metric tests and an inconclusive robustness result
 - [ ] Define target-specific label mapping before training mechanistic targets
 - [ ] Demonstrate improvement and validate calibration before model promotion
 - [x] Evaluate unseen-phage regimes with frozen sequence groups and report inconclusive additive-baseline gains

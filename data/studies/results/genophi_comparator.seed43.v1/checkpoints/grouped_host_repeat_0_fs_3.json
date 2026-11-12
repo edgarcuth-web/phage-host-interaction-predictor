@@ -1,0 +1,17 @@
+{
+  "stage": "grouped_host_repeat_0_fs_3",
+  "status": "complete",
+  "started_utc": "2026-11-12T08:28:43.645196+00:00",
+  "wall_seconds": 144.58948212899998,
+  "result": {
+    "outer_train_hosts": 125,
+    "outer_train_pairs": 11748
+  },
+  "output_sha256": {
+    "fits/grouped_host_repeat_0/feature_selection/run_3/best_model_predictions.csv": "afaf94340a3e2493cf767f024e0da3dedeba236a201bd87456bc5bc8d81a69e7",
+    "fits/grouped_host_repeat_0/feature_selection/run_3/feature_importances.csv": "0f2bcb4209141c621117db3edf0dc53e632b06ff12d847ef4fadf8f6c9294f18",
+    "fits/grouped_host_repeat_0/feature_selection/run_3/model_performance.csv": "e48621d490c7bf0bce8b52ad4e73cf06847f8e14385dac28c3013ce62dfc0e88",
+    "fits/grouped_host_repeat_0/feature_selection/run_3/strain_clusters.csv": "0fbeb2c7a40dcdbe8ba80ea2d85aabaec8e9545d404cd59a40612d4bc256d7e2",
+    "fits/grouped_host_repeat_0/train_full_feature_table.csv": "dcf5b97290ae5b5fb8e62e7590b3a63913d2c5f8c59d3e9e701438100b760051"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "stage": "grouped_host_repeat_2_selection",
+  "status": "complete",
+  "started_utc": "2026-11-12T10:10:10.865779+00:00",
+  "wall_seconds": 19.453768477000267,
+  "result": {
+    "features": 144,
+    "cutoff": 3
+  },
+  "output_sha256": {
+    "fits/grouped_host_repeat_2/selected/select_feature_table_cutoff_3.csv": "29024b2e491c9fde4b8470c29ef4818ee62ed5a23ebaa92c188321ae4e542816",
+    "fits/grouped_host_repeat_2/feature_occurrences.csv": "dfc923130e150b7ca71d1340e5cf4ba21eadcb04203663e97e433fb778e28a82"
+  }
+}
