@@ -1,0 +1,896 @@
+{
+  "status": "source_fastas_verified",
+  "lock_sha256": "f7d2e4114cf994d16282db59fbb72f9140fdbd21283b92a0a9922e8af1ff991d",
+  "verified_hosts": 177,
+  "total_locked_bytes": 910399604,
+  "downloaded_hosts": 0,
+  "reused_hosts": 177,
+  "new_nvidia_requests": 0,
+  "resources": [
+    {
+      "id": "370D",
+      "path": "host/370D.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "381A",
+      "path": "host/381A.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "536",
+      "path": "host/536.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "55989",
+      "path": "host/55989.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "916A",
+      "path": "host/916A.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "921A",
+      "path": "host/921A.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "AL505",
+      "path": "host/AL505.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "B49",
+      "path": "host/B49.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "B6A1",
+      "path": "host/B6A1.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "BL21",
+      "path": "host/BL21.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "DEC1A",
+      "path": "host/DEC1A.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "DEC2A",
+      "path": "host/DEC2A.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR10",
+      "path": "host/ECOR10.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR11",
+      "path": "host/ECOR11.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR12",
+      "path": "host/ECOR12.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR13",
+      "path": "host/ECOR13.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR14",
+      "path": "host/ECOR14.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR15",
+      "path": "host/ECOR15.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR16",
+      "path": "host/ECOR16.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR17",
+      "path": "host/ECOR17.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR18",
+      "path": "host/ECOR18.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR19",
+      "path": "host/ECOR19.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR20",
+      "path": "host/ECOR20.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR21",
+      "path": "host/ECOR21.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR22",
+      "path": "host/ECOR22.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR23",
+      "path": "host/ECOR23.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR24",
+      "path": "host/ECOR24.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR25",
+      "path": "host/ECOR25.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR26",
+      "path": "host/ECOR26.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR27",
+      "path": "host/ECOR27.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR28",
+      "path": "host/ECOR28.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR29",
+      "path": "host/ECOR29.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR30",
+      "path": "host/ECOR30.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR31",
+      "path": "host/ECOR31.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR32",
+      "path": "host/ECOR32.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR33",
+      "path": "host/ECOR33.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR34",
+      "path": "host/ECOR34.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR35",
+      "path": "host/ECOR35.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR36",
+      "path": "host/ECOR36.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR37",
+      "path": "host/ECOR37.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR38",
+      "path": "host/ECOR38.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR39",
+      "path": "host/ECOR39.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR40",
+      "path": "host/ECOR40.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR41",
+      "path": "host/ECOR41.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR42",
+      "path": "host/ECOR42.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR44",
+      "path": "host/ECOR44.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR45",
+      "path": "host/ECOR45.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR46",
+      "path": "host/ECOR46.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR47",
+      "path": "host/ECOR47.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR48",
+      "path": "host/ECOR48.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR49",
+      "path": "host/ECOR49.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR50",
+      "path": "host/ECOR50.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR51",
+      "path": "host/ECOR51.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR52",
+      "path": "host/ECOR52.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR53",
+      "path": "host/ECOR53.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR54",
+      "path": "host/ECOR54.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR55",
+      "path": "host/ECOR55.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR56",
+      "path": "host/ECOR56.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR57",
+      "path": "host/ECOR57.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR58",
+      "path": "host/ECOR58.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR59",
+      "path": "host/ECOR59.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR60",
+      "path": "host/ECOR60.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR61",
+      "path": "host/ECOR61.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR62",
+      "path": "host/ECOR62.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR63",
+      "path": "host/ECOR63.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR64",
+      "path": "host/ECOR64.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR65",
+      "path": "host/ECOR65.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR66",
+      "path": "host/ECOR66.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR67",
+      "path": "host/ECOR67.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR69",
+      "path": "host/ECOR69.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR70",
+      "path": "host/ECOR70.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR71",
+      "path": "host/ECOR71.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ECOR72",
+      "path": "host/ECOR72.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ED1A",
+      "path": "host/ED1A.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "EDL933",
+      "path": "host/EDL933.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "H14",
+      "path": "host/H14.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "H4",
+      "path": "host/H4.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "H48",
+      "path": "host/H48.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "IAI39",
+      "path": "host/IAI39.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "LF82",
+      "path": "host/LF82.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "LM33",
+      "path": "host/LM33.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "LMR3158",
+      "path": "host/LMR3158.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "M863",
+      "path": "host/M863.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "MT1B1",
+      "path": "host/MT1B1.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS01",
+      "path": "host/NILS01.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS02",
+      "path": "host/NILS02.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS03",
+      "path": "host/NILS03.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS04",
+      "path": "host/NILS04.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS05",
+      "path": "host/NILS05.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS06",
+      "path": "host/NILS06.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS07",
+      "path": "host/NILS07.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS08",
+      "path": "host/NILS08.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS09",
+      "path": "host/NILS09.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS10",
+      "path": "host/NILS10.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS11",
+      "path": "host/NILS11.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS12",
+      "path": "host/NILS12.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS13",
+      "path": "host/NILS13.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS14",
+      "path": "host/NILS14.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS15",
+      "path": "host/NILS15.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS16",
+      "path": "host/NILS16.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS17",
+      "path": "host/NILS17.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS18",
+      "path": "host/NILS18.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS19",
+      "path": "host/NILS19.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS20",
+      "path": "host/NILS20.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS21",
+      "path": "host/NILS21.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS22",
+      "path": "host/NILS22.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS23",
+      "path": "host/NILS23.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS24",
+      "path": "host/NILS24.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS25",
+      "path": "host/NILS25.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS26",
+      "path": "host/NILS26.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS27",
+      "path": "host/NILS27.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS28",
+      "path": "host/NILS28.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS29",
+      "path": "host/NILS29.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS30",
+      "path": "host/NILS30.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS31",
+      "path": "host/NILS31.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS32",
+      "path": "host/NILS32.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS33",
+      "path": "host/NILS33.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS34",
+      "path": "host/NILS34.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS35",
+      "path": "host/NILS35.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS36",
+      "path": "host/NILS36.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS37",
+      "path": "host/NILS37.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS38",
+      "path": "host/NILS38.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS39",
+      "path": "host/NILS39.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS40",
+      "path": "host/NILS40.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS41",
+      "path": "host/NILS41.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS42",
+      "path": "host/NILS42.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS43",
+      "path": "host/NILS43.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS44",
+      "path": "host/NILS44.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS45",
+      "path": "host/NILS45.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS46",
+      "path": "host/NILS46.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS47",
+      "path": "host/NILS47.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS48",
+      "path": "host/NILS48.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS49",
+      "path": "host/NILS49.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS50",
+      "path": "host/NILS50.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS51",
+      "path": "host/NILS51.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS52",
+      "path": "host/NILS52.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS53",
+      "path": "host/NILS53.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS54",
+      "path": "host/NILS54.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS55",
+      "path": "host/NILS55.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS56",
+      "path": "host/NILS56.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS57",
+      "path": "host/NILS57.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS58",
+      "path": "host/NILS58.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS59",
+      "path": "host/NILS59.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS60",
+      "path": "host/NILS60.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS61",
+      "path": "host/NILS61.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS62",
+      "path": "host/NILS62.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS63",
+      "path": "host/NILS63.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS64",
+      "path": "host/NILS64.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS65",
+      "path": "host/NILS65.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS66",
+      "path": "host/NILS66.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS67",
+      "path": "host/NILS67.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS68",
+      "path": "host/NILS68.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS69",
+      "path": "host/NILS69.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS70",
+      "path": "host/NILS70.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS71",
+      "path": "host/NILS71.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS72",
+      "path": "host/NILS72.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS73",
+      "path": "host/NILS73.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS74",
+      "path": "host/NILS74.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS75",
+      "path": "host/NILS75.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS76",
+      "path": "host/NILS76.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS77",
+      "path": "host/NILS77.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS78",
+      "path": "host/NILS78.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS79",
+      "path": "host/NILS79.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS80",
+      "path": "host/NILS80.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS81",
+      "path": "host/NILS81.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "NILS82",
+      "path": "host/NILS82.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR012",
+      "path": "host/ROAR012.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR029",
+      "path": "host/ROAR029.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR036",
+      "path": "host/ROAR036.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR059",
+      "path": "host/ROAR059.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR131",
+      "path": "host/ROAR131.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR274",
+      "path": "host/ROAR274.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR387",
+      "path": "host/ROAR387.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR400",
+      "path": "host/ROAR400.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "ROAR434",
+      "path": "host/ROAR434.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "T145",
+      "path": "host/T145.fasta",
+      "status": "verified_existing"
+    },
+    {
+      "id": "TW10509",
+      "path": "host/TW10509.fasta",
+      "status": "verified_existing"
+    }
+  ]
+}

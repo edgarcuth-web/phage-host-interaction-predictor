@@ -1,0 +1,18 @@
+{
+  "stage": "evaluation",
+  "status": "complete",
+  "started_utc": "2026-11-12T03:33:02.599802+00:00",
+  "wall_seconds": 2.3936405629992805,
+  "result": {
+    "metrics": 15,
+    "individual_models": 90
+  },
+  "output_sha256": {
+    "evaluation/contrasts.csv": "0bc5588774fa754682caf4e8ad23cd9b28b84a69729fc2560daa4ddff16dbc8d",
+    "evaluation/grouped_host_candidate_scores.csv": "93e922d235231ad71cd2be4e8ac92e1a7563fd84b63a9e9e9df28b0c845cc65e",
+    "evaluation/individual_model_metrics.csv": "e22a1e7f5a2dda67ff3382ff580bd6c57e32dd8b3e3638d0c2bfd042109e6a4b",
+    "evaluation/per_host_metrics.csv": "eff92c59deabb4409241db8ded66827e38af4977fc3a960bb7f7afecdfb0fdd6",
+    "evaluation/phylogroup_B2_candidate_scores.csv": "8a384a3d2fdf8033fcbe0cef30f50402ef0362c9c17434d7aac7cd5923bbe015",
+    "evaluation/report.json": "2372f45e22fc7c5789dd668d1fddb11d28eb7c40cd0717ff70e73423ddf9e471"
+  }
+}

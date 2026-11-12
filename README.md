@@ -69,6 +69,8 @@ weaker performance on several phylogroup holdouts.
 The [host-genome comparison](docs/genome-host-retrieval.md) reaches 88.2% Hit@2
 on the primary split, but falls to 75.4% on B2 holdout versus prevalence's 90.2%.
 This inspected development result does not justify model promotion.
+The [aligned GenoPHI comparator](docs/genophi-frozen-comparator.md) now reaches
+91.2% primary Hit@2 and 78.7% on B2; its B2 result also trails prevalence's 90.2%.
 Pairwise matrices and offline union coverage do not establish cocktail efficacy.
 
 | Capability | Current status |
@@ -78,6 +80,7 @@ Pairwise matrices and offline union coverage do not establish cocktail efficacy.
 | Baseline serving through PairPrediction | Not implemented; weights and the generic exchange are separate paths |
 | Mechanistic predictions / unseen phages | Not established by the current baseline |
 | Host genome composition | Fixed 4-mer and annotation-hybrid retrieval comparison; cross-phylogroup failures retained |
+| External genome-aware comparator | GenoPHI on the same frozen host split and 94-phage panel; primary and B2 results verified |
 | Pretrained genomic models | Evo2 published species-score reproduction only; no aligned strain-level embeddings |
 
 ## Repository layout
@@ -109,6 +112,8 @@ src/phage_cocktail/
   retrieval.py        # fixed-panel Hit@K/Recall@K/MRR, exact ties and paired intervals
   retrieval_study.py  # locked known-phage retrieval fits and host/phylogroup holdouts
   genophi_reference.py # optional GenoPHI reference workflow helpers
+  genophi_proteomes.py # pinned, receipted single/meta code-11 gene calling
+  genophi_comparator.py # train-only GenoPHI adapter and checkpointed retrieval study
   schemas/            # ModelInputBundle / PairPrediction v1 wire schemas
 tests/              # automated tests
 ```
@@ -302,6 +307,28 @@ the excluded explanations and the consequences for using GenoPHI as a
 comparator are in
 [`docs/genophi-demo-reproduction.md`](docs/genophi-demo-reproduction.md).
 
+## GenoPHI comparator on the frozen host split
+
+GenoPHI 1.0.3 now provides an aligned external comparator on the same reconciled
+16,597 labels, grouped-host split and fixed 94-phage library as the in-house
+models. Protein-family vocabularies are built once over the locked genomes;
+supervised feature selection and modeling use outer-training hosts only.
+Occurrence cutoff 3 is fixed a priori, and scoring uses this project's exact-tie
+Hit@K implementation. The whole comparator took 4.13 hours on eight threads.
+
+| Test panel | GenoPHI Hit@2 | Host 4-mer Hit@2 | Phage prevalence Hit@2 |
+| --- | ---: | ---: | ---: |
+| Primary, all 34 complete hosts | **31/34 = 91.18%** | 30/34 = 88.24% | 25/34 = 73.53% |
+| B2, all 61 complete hosts | **48/61 = 78.69%** | 46/61 = 75.41% | 55/61 = 90.16% |
+
+Eligible-only GenoPHI Hit@2 is 31/33 (93.94%) primary and 48/60 (80.00%) B2.
+The primary gain over the host 4-mer model is one host, with a paired interval
+touching zero. B2 still exposes a substantial failure against prevalence.
+Three complete replays agree, and all 60 retained models reproduce their saved
+scores bit-for-bit on independent reload. See the
+[protocol, versions, receipts, full metrics and verification](docs/genophi-frozen-comparator.md)
+for reproducible gene calling and the resumable comparator command.
+
 ## Evo2 retrieval reference
 
 Reproduce the upstream species-level retrieval metrics without a GPU:
@@ -335,6 +362,7 @@ comparison have not been run. See the
 - [x] Evaluate fixed-panel unseen-host Hit@K/Recall@K/MRR with explicit eligibility and phylogroup sensitivities
 - [ ] Finish row-level assay-context and separate dataset-license review
 - [x] Run the GenoPHI reference workflow end to end and establish that its shipped reference output is not a reproduction target
+- [x] Evaluate GenoPHI on the frozen grouped-host and B2 splits with a priori cutoff selection and aligned retrieval metrics
 - [ ] Define target-specific label mapping before training mechanistic targets
 - [ ] Demonstrate improvement and validate calibration before model promotion
 - [x] Evaluate unseen-phage regimes with frozen sequence groups and report inconclusive additive-baseline gains

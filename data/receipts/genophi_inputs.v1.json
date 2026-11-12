@@ -1,0 +1,1941 @@
+{
+  "status": "all_locked_resources_verified",
+  "resource_lock": "data/studies/genophi_host_baseline.resources.v1.json",
+  "resource_lock_sha256": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+  "verified_files": 276,
+  "total_size_bytes": 919683545,
+  "resources": [
+    {
+      "id": "370D",
+      "kind": "host_genome",
+      "path": "host/370D.fasta",
+      "sha256": "dafe6c2aef08ffb62502889461fc0aec71b265ece004ee25132576a61ae6db95",
+      "size_bytes": 5366840
+    },
+    {
+      "id": "381A",
+      "kind": "host_genome",
+      "path": "host/381A.fasta",
+      "sha256": "05da4fa1e71a05b74f99229c83dfb7a9fea40559875a90f22f3cc6baea9a00c0",
+      "size_bytes": 5234473
+    },
+    {
+      "id": "536",
+      "kind": "host_genome",
+      "path": "host/536.fasta",
+      "sha256": "0eaf29861114dbade6866924de27f3f76a89e4ac21b3dabec9c77e896856686e",
+      "size_bytes": 4953825
+    },
+    {
+      "id": "55989",
+      "kind": "host_genome",
+      "path": "host/55989.fasta",
+      "sha256": "4bf3ef72e32caceaf4aeb0afd80844c595efc026c68bd27a2b5f3d127f0701e1",
+      "size_bytes": 5197767
+    },
+    {
+      "id": "916A",
+      "kind": "host_genome",
+      "path": "host/916A.fasta",
+      "sha256": "30466360374eef69a07b4ad1ca5ee080c6c63c69dc7610b41fcc03298795c723",
+      "size_bytes": 5372307
+    },
+    {
+      "id": "921A",
+      "kind": "host_genome",
+      "path": "host/921A.fasta",
+      "sha256": "0764ba87d2c6420ead0c777cc1259a114297bff8c1e482eafb506d56314f498d",
+      "size_bytes": 5221444
+    },
+    {
+      "id": "AL505",
+      "kind": "host_genome",
+      "path": "host/AL505.fasta",
+      "sha256": "c0d520cce4f6a5ac6b2ea1f10878e222ff0cda79ae68cb95182b89e2897f080a",
+      "size_bytes": 5455540
+    },
+    {
+      "id": "B49",
+      "kind": "host_genome",
+      "path": "host/B49.fasta",
+      "sha256": "848f21ccf3b99275b770e24e332c7f4b7d6e95acf7a20279d6c13fe468633f07",
+      "size_bytes": 4853280
+    },
+    {
+      "id": "B6A1",
+      "kind": "host_genome",
+      "path": "host/B6A1.fasta",
+      "sha256": "26561f9016034c653ddd7a9bec70502f074a13654f953d09089bc0bd514cc1d8",
+      "size_bytes": 5330547
+    },
+    {
+      "id": "BL21",
+      "kind": "host_genome",
+      "path": "host/BL21.fasta",
+      "sha256": "a5daa11e7d962fb3918a1411ef6249d461d993f557fbd8bc1e11bfc26c433415",
+      "size_bytes": 4572339
+    },
+    {
+      "id": "DEC1A",
+      "kind": "host_genome",
+      "path": "host/DEC1A.fasta",
+      "sha256": "7f0e69a1e6150e96311f95511132bae07495c4014404e20048e2b42a426e0872",
+      "size_bytes": 5178522
+    },
+    {
+      "id": "DEC2A",
+      "kind": "host_genome",
+      "path": "host/DEC2A.fasta",
+      "sha256": "d8b8fc18e960266280490f53f24a5750581e1f1e02c40dedf95bc9d5f8102ac0",
+      "size_bytes": 5161365
+    },
+    {
+      "id": "ECOR10",
+      "kind": "host_genome",
+      "path": "host/ECOR10.fasta",
+      "sha256": "9700ca26147983b448f5a798c1d92cef7a13ea003fb50a28c085ba4baf3a5e3c",
+      "size_bytes": 4767206
+    },
+    {
+      "id": "ECOR11",
+      "kind": "host_genome",
+      "path": "host/ECOR11.fasta",
+      "sha256": "145e0c8c303e4db7200118fdf5d1ec94a3ca1ac5427bc216ad66d142f948538e",
+      "size_bytes": 5206282
+    },
+    {
+      "id": "ECOR12",
+      "kind": "host_genome",
+      "path": "host/ECOR12.fasta",
+      "sha256": "021044966321138cb0e9427ff108f3dacc78f4c77dbb63902084240f6b25c890",
+      "size_bytes": 5111316
+    },
+    {
+      "id": "ECOR13",
+      "kind": "host_genome",
+      "path": "host/ECOR13.fasta",
+      "sha256": "c60c7c9e98f2044240862845b3329e04fa8bf3de242aae5fdd223fadfc040206",
+      "size_bytes": 4623540
+    },
+    {
+      "id": "ECOR14",
+      "kind": "host_genome",
+      "path": "host/ECOR14.fasta",
+      "sha256": "dbf7e069bd3af2d4ea7e9c1a01a5c91559c4593a5b7c06e57c630a0158f5e0fd",
+      "size_bytes": 4950935
+    },
+    {
+      "id": "ECOR15",
+      "kind": "host_genome",
+      "path": "host/ECOR15.fasta",
+      "sha256": "b2e7264a29be055cab759a6e524c3a0091b5091c49e87f34f0f7d7115deec8c6",
+      "size_bytes": 4921291
+    },
+    {
+      "id": "ECOR16",
+      "kind": "host_genome",
+      "path": "host/ECOR16.fasta",
+      "sha256": "7dfa627035afcfdc412e6515e5d4b632090c65df7ba11cfdd8ad7a64c461ed2e",
+      "size_bytes": 4649665
+    },
+    {
+      "id": "ECOR17",
+      "kind": "host_genome",
+      "path": "host/ECOR17.fasta",
+      "sha256": "27785f6c7a52ffa264f3dddb8a5627deebb202fa7a41b0d2eca1404c3297668b",
+      "size_bytes": 4531388
+    },
+    {
+      "id": "ECOR18",
+      "kind": "host_genome",
+      "path": "host/ECOR18.fasta",
+      "sha256": "ebe0b677a82bacddb3a375434bb137800556ed6ccb3be3596f645a87d8f6fe8e",
+      "size_bytes": 4673593
+    },
+    {
+      "id": "ECOR19",
+      "kind": "host_genome",
+      "path": "host/ECOR19.fasta",
+      "sha256": "e7117a6077fa9afd26f9d81153e1eef0026c615bb4721548213a765270e5c66f",
+      "size_bytes": 4554217
+    },
+    {
+      "id": "ECOR20",
+      "kind": "host_genome",
+      "path": "host/ECOR20.fasta",
+      "sha256": "a59c575207ceef1156f35775f98faef0f020630763ad5e8be16d5a89ca04354c",
+      "size_bytes": 4619973
+    },
+    {
+      "id": "ECOR21",
+      "kind": "host_genome",
+      "path": "host/ECOR21.fasta",
+      "sha256": "e9763588f5b5e6fac88f25664243158ff1de5a6f3ceea483942241e27a8b91a4",
+      "size_bytes": 4585840
+    },
+    {
+      "id": "ECOR22",
+      "kind": "host_genome",
+      "path": "host/ECOR22.fasta",
+      "sha256": "b833d9a7a3ed1e5324b1f87d0f8fd12643464faf198fbed0da44192ef4368f56",
+      "size_bytes": 4526665
+    },
+    {
+      "id": "ECOR23",
+      "kind": "host_genome",
+      "path": "host/ECOR23.fasta",
+      "sha256": "11a569aaa1a931d8cb9013dfb2f60db43c78b3237952643a956dd92407d444b8",
+      "size_bytes": 4993243
+    },
+    {
+      "id": "ECOR24",
+      "kind": "host_genome",
+      "path": "host/ECOR24.fasta",
+      "sha256": "c9f5a3eb2bf2e73d164b1e6862ba6ffb518b60fc717b5280a1767e43eeaefb95",
+      "size_bytes": 5294485
+    },
+    {
+      "id": "ECOR25",
+      "kind": "host_genome",
+      "path": "host/ECOR25.fasta",
+      "sha256": "1b666bc84798ddfffd84624c82a5411cbc4371947d239411834632e60cc653be",
+      "size_bytes": 4777465
+    },
+    {
+      "id": "ECOR26",
+      "kind": "host_genome",
+      "path": "host/ECOR26.fasta",
+      "sha256": "1aeb6c7e3cb429772c33ccb7c061aeb1ca44486f2e8c317587be01af95869602",
+      "size_bytes": 4689657
+    },
+    {
+      "id": "ECOR27",
+      "kind": "host_genome",
+      "path": "host/ECOR27.fasta",
+      "sha256": "ff5153fb47bfa8fdd3421611b71c30547c458b12a7a513118cd0dbd42deaf0e6",
+      "size_bytes": 4879591
+    },
+    {
+      "id": "ECOR28",
+      "kind": "host_genome",
+      "path": "host/ECOR28.fasta",
+      "sha256": "d32fa0829445d9f7332c07d5a65e1ab6814ca15825f6537fd58d90a4ebe90b41",
+      "size_bytes": 4940302
+    },
+    {
+      "id": "ECOR29",
+      "kind": "host_genome",
+      "path": "host/ECOR29.fasta",
+      "sha256": "2777208b85072b2085a3dbdfa1b7fbfac24b805779049bf35d3a7807da72779c",
+      "size_bytes": 4943198
+    },
+    {
+      "id": "ECOR30",
+      "kind": "host_genome",
+      "path": "host/ECOR30.fasta",
+      "sha256": "d5b4f972cf4d2fe3d9d9df6bd41414f4ba809b2278836657d948021d29a1af40",
+      "size_bytes": 4834777
+    },
+    {
+      "id": "ECOR31",
+      "kind": "host_genome",
+      "path": "host/ECOR31.fasta",
+      "sha256": "690298703a35800104cba616f28392c7f4dcd4374ea8e6b81c20d4aede6e91c8",
+      "size_bytes": 5294309
+    },
+    {
+      "id": "ECOR32",
+      "kind": "host_genome",
+      "path": "host/ECOR32.fasta",
+      "sha256": "82a6873cd6bf5429dac2996fb5964dd4ed7f264177ed79f62b45ce6ec4b62fa0",
+      "size_bytes": 4818726
+    },
+    {
+      "id": "ECOR33",
+      "kind": "host_genome",
+      "path": "host/ECOR33.fasta",
+      "sha256": "83f4550ea6e7d3ae7e4143aa9861aef7869dd3d8b8931caa0b2acd916f545cd9",
+      "size_bytes": 4812521
+    },
+    {
+      "id": "ECOR34",
+      "kind": "host_genome",
+      "path": "host/ECOR34.fasta",
+      "sha256": "6b8147c75c6f1d5788a405157ff5f81e427981fce578071daeda13522300105a",
+      "size_bytes": 4829055
+    },
+    {
+      "id": "ECOR35",
+      "kind": "host_genome",
+      "path": "host/ECOR35.fasta",
+      "sha256": "091be1e61aa1d165626f2c6f8b080b33878b0684a90f49cb0cda83a6ddb59407",
+      "size_bytes": 5110093
+    },
+    {
+      "id": "ECOR36",
+      "kind": "host_genome",
+      "path": "host/ECOR36.fasta",
+      "sha256": "65d0b5647cd90208deaf5869d70d378828790e3c6b2d8b371db3ef788fcb70be",
+      "size_bytes": 5180304
+    },
+    {
+      "id": "ECOR37",
+      "kind": "host_genome",
+      "path": "host/ECOR37.fasta",
+      "sha256": "b5801d01c6560ecbf6bca1a8b9a9ce6e2ca17936adce7fb090800a32e96afbc0",
+      "size_bytes": 5454273
+    },
+    {
+      "id": "ECOR38",
+      "kind": "host_genome",
+      "path": "host/ECOR38.fasta",
+      "sha256": "3f33a445b2cc0a3018085134358e806c334fcfd9df1dfca1dfade59159c99d1f",
+      "size_bytes": 5259201
+    },
+    {
+      "id": "ECOR39",
+      "kind": "host_genome",
+      "path": "host/ECOR39.fasta",
+      "sha256": "7f3282a6967d5bf7ef71f3be1af970e6b6ae149de8577a1169d38a0a9ad0cc0c",
+      "size_bytes": 5255220
+    },
+    {
+      "id": "ECOR40",
+      "kind": "host_genome",
+      "path": "host/ECOR40.fasta",
+      "sha256": "cd010fbaed4c264dd5a2a6290c0b49174899ec26001a182d0387395810311b59",
+      "size_bytes": 5210387
+    },
+    {
+      "id": "ECOR41",
+      "kind": "host_genome",
+      "path": "host/ECOR41.fasta",
+      "sha256": "07feb12b6986674cca5ef4fe1b57ed1d0a45974b7ae3439d5757dc581426072e",
+      "size_bytes": 5249335
+    },
+    {
+      "id": "ECOR42",
+      "kind": "host_genome",
+      "path": "host/ECOR42.fasta",
+      "sha256": "2678e8393266a7d82ee93a386318adb62a2d6dffe658146fca9c092592c932bc",
+      "size_bytes": 5199175
+    },
+    {
+      "id": "ECOR44",
+      "kind": "host_genome",
+      "path": "host/ECOR44.fasta",
+      "sha256": "066a8ac5fd3c8b1e8d73901e422f03e0d90083853e46e8a4b68ea00920d62508",
+      "size_bytes": 5245182
+    },
+    {
+      "id": "ECOR45",
+      "kind": "host_genome",
+      "path": "host/ECOR45.fasta",
+      "sha256": "419c9ce062ed87f5fdf92a5029f9df9ea329e735a2a9a3e6729888d52e78dcfb",
+      "size_bytes": 4711758
+    },
+    {
+      "id": "ECOR46",
+      "kind": "host_genome",
+      "path": "host/ECOR46.fasta",
+      "sha256": "7e4d334ee1c8a9036956ee441dcca440a4b2cea433ae1dcc43549ec226e7b6d3",
+      "size_bytes": 5249678
+    },
+    {
+      "id": "ECOR47",
+      "kind": "host_genome",
+      "path": "host/ECOR47.fasta",
+      "sha256": "68aa3b04303eb2d3ce4deb47f889aa3a050a692c907b811d2adccd7105139346",
+      "size_bytes": 4928652
+    },
+    {
+      "id": "ECOR48",
+      "kind": "host_genome",
+      "path": "host/ECOR48.fasta",
+      "sha256": "fb0d262e540aea0212d9d2682efb60eb2af9299e9692dd53c07dcb6bfbce2670",
+      "size_bytes": 5341256
+    },
+    {
+      "id": "ECOR49",
+      "kind": "host_genome",
+      "path": "host/ECOR49.fasta",
+      "sha256": "384641f0cf9388ade31c05d6c5021222886cadb27b418565b539f28aeb249fb2",
+      "size_bytes": 5195787
+    },
+    {
+      "id": "ECOR50",
+      "kind": "host_genome",
+      "path": "host/ECOR50.fasta",
+      "sha256": "b84f92ec3316c405c25798db7762a51371058cf1ea781186a02620ecbc440ad0",
+      "size_bytes": 5563339
+    },
+    {
+      "id": "ECOR51",
+      "kind": "host_genome",
+      "path": "host/ECOR51.fasta",
+      "sha256": "57ea65d43081014525e42fcb5411f46dde10a8440e91c8a4501d2cda3e646e20",
+      "size_bytes": 5174595
+    },
+    {
+      "id": "ECOR52",
+      "kind": "host_genome",
+      "path": "host/ECOR52.fasta",
+      "sha256": "5cefa1093c31a089f2188e0a08300d64402529deee0912b9e22bbf7887d17be7",
+      "size_bytes": 5113021
+    },
+    {
+      "id": "ECOR53",
+      "kind": "host_genome",
+      "path": "host/ECOR53.fasta",
+      "sha256": "1c6fe2bebb97b0e0c184b4821d5214fb0f0cd29b4e63d2bcb82a65d58150e4d4",
+      "size_bytes": 5139239
+    },
+    {
+      "id": "ECOR54",
+      "kind": "host_genome",
+      "path": "host/ECOR54.fasta",
+      "sha256": "414f030d9fd95d14e45fda306931cae3be8a08e37b22b29de22ed420450d56ff",
+      "size_bytes": 5051877
+    },
+    {
+      "id": "ECOR55",
+      "kind": "host_genome",
+      "path": "host/ECOR55.fasta",
+      "sha256": "3722e726ae8c5bc45958a5988f695b76f97a9f22109fbe699fb8a9468306bd81",
+      "size_bytes": 5047241
+    },
+    {
+      "id": "ECOR56",
+      "kind": "host_genome",
+      "path": "host/ECOR56.fasta",
+      "sha256": "0725ecf035008321059f15c386ddd0eefe4700cb3271ae970fa172e58a62b72b",
+      "size_bytes": 4964112
+    },
+    {
+      "id": "ECOR57",
+      "kind": "host_genome",
+      "path": "host/ECOR57.fasta",
+      "sha256": "91466606698f2cb4528e442730058607f3e1f2aaf6a66b1e00fc29793b1cde9d",
+      "size_bytes": 5272348
+    },
+    {
+      "id": "ECOR58",
+      "kind": "host_genome",
+      "path": "host/ECOR58.fasta",
+      "sha256": "f47294b27bc8ee9e5d0776d9e8bf3c3b669112466ad33909174c11c32b6be40f",
+      "size_bytes": 4897970
+    },
+    {
+      "id": "ECOR59",
+      "kind": "host_genome",
+      "path": "host/ECOR59.fasta",
+      "sha256": "40169aa5c5bdb7019079d0902b3a6aadfbe603de837c0ee9f81ed5808e5e5f27",
+      "size_bytes": 4759428
+    },
+    {
+      "id": "ECOR60",
+      "kind": "host_genome",
+      "path": "host/ECOR60.fasta",
+      "sha256": "8d99537f4a5711fc004265019208824b537d9c482c8a09595a64e5f96357328f",
+      "size_bytes": 5059689
+    },
+    {
+      "id": "ECOR61",
+      "kind": "host_genome",
+      "path": "host/ECOR61.fasta",
+      "sha256": "7de6f249ce92d141d3a61c9d0abc39c7292556f199b0dded1e5550268298303a",
+      "size_bytes": 4878522
+    },
+    {
+      "id": "ECOR62",
+      "kind": "host_genome",
+      "path": "host/ECOR62.fasta",
+      "sha256": "4098e0238c4a6addf0d1af698b37ed9b568f84e754f784709ba0c02285e34431",
+      "size_bytes": 5041719
+    },
+    {
+      "id": "ECOR63",
+      "kind": "host_genome",
+      "path": "host/ECOR63.fasta",
+      "sha256": "8c8c21ceb921c28730d262bed70379672c09b9cb97a2c659b7bcc6326a1217c1",
+      "size_bytes": 5038866
+    },
+    {
+      "id": "ECOR64",
+      "kind": "host_genome",
+      "path": "host/ECOR64.fasta",
+      "sha256": "2d1ad929e51152617e20c367e32f3d3b9858782554e4b4d188f4972523e52d4b",
+      "size_bytes": 5120687
+    },
+    {
+      "id": "ECOR65",
+      "kind": "host_genome",
+      "path": "host/ECOR65.fasta",
+      "sha256": "374f2ba97a54a21c3ecd28e146683eae72ef3bbab334d9a4ee2bb1fac585696e",
+      "size_bytes": 4953351
+    },
+    {
+      "id": "ECOR66",
+      "kind": "host_genome",
+      "path": "host/ECOR66.fasta",
+      "sha256": "fd505a0b08826447e235fca4e738c0a6c4e246ab0c902193357cbc3b1275b3f1",
+      "size_bytes": 4742617
+    },
+    {
+      "id": "ECOR67",
+      "kind": "host_genome",
+      "path": "host/ECOR67.fasta",
+      "sha256": "2566e73f6df393ab5486fbd823d817b6b79026db57e06a08ec276250cf4df403",
+      "size_bytes": 4728825
+    },
+    {
+      "id": "ECOR69",
+      "kind": "host_genome",
+      "path": "host/ECOR69.fasta",
+      "sha256": "ab6fad0383883955d5360dbc0cf31053278416420a2eb7d9aebc312aaf1ac74d",
+      "size_bytes": 4707371
+    },
+    {
+      "id": "ECOR70",
+      "kind": "host_genome",
+      "path": "host/ECOR70.fasta",
+      "sha256": "6f4195d36b7c200e9068645b2add48f5ec38f308a8ba776c3c2e54200c97da51",
+      "size_bytes": 5143718
+    },
+    {
+      "id": "ECOR71",
+      "kind": "host_genome",
+      "path": "host/ECOR71.fasta",
+      "sha256": "e21422b9ee35a512565121107ad933ec7e4bab84c95450144e2826a0a35c8f28",
+      "size_bytes": 4850488
+    },
+    {
+      "id": "ECOR72",
+      "kind": "host_genome",
+      "path": "host/ECOR72.fasta",
+      "sha256": "ab74592bebf3c490ac57cbdd9a8d8f7e59d57c6732faaa71eb80552e6ac07d2d",
+      "size_bytes": 5128500
+    },
+    {
+      "id": "ED1A",
+      "kind": "host_genome",
+      "path": "host/ED1A.fasta",
+      "sha256": "9bb9b87316a84e67a73f9cf7ecf813bb1df720ba9eddd0c1c04865e9b4885ff7",
+      "size_bytes": 5383241
+    },
+    {
+      "id": "EDL933",
+      "kind": "host_genome",
+      "path": "host/EDL933.fasta",
+      "sha256": "7e7e387ba85da46420ca5e11708c9f8529f84f30b9de90d04416cb58db4c4b09",
+      "size_bytes": 5620671
+    },
+    {
+      "id": "H14",
+      "kind": "host_genome",
+      "path": "host/H14.fasta",
+      "sha256": "4685e565211585d81125b84e539141126a3a5a7917e701316282836c41f614c4",
+      "size_bytes": 5179095
+    },
+    {
+      "id": "H4",
+      "kind": "host_genome",
+      "path": "host/H4.fasta",
+      "sha256": "c136d038ddbbb0be2c734abcf9bc7fc7473e62b51b152311b10c242ed7592dd4",
+      "size_bytes": 4736662
+    },
+    {
+      "id": "H48",
+      "kind": "host_genome",
+      "path": "host/H48.fasta",
+      "sha256": "45ce34a3583d50caec7967e260be0156751a6320bd46b55a5adaefe26862e87f",
+      "size_bytes": 4730175
+    },
+    {
+      "id": "IAI39",
+      "kind": "host_genome",
+      "path": "host/IAI39.fasta",
+      "sha256": "f6d3f7022824727a6e7182ec1c16119e8b727090affcc4d106150a1b2b075dc0",
+      "size_bytes": 5217668
+    },
+    {
+      "id": "LF82",
+      "kind": "host_genome",
+      "path": "host/LF82.fasta",
+      "sha256": "dec085844a2ae394720ecae96ecbda41a3d4524b9537a80f9ac9a724567167d8",
+      "size_bytes": 4930302
+    },
+    {
+      "id": "LM33",
+      "kind": "host_genome",
+      "path": "host/LM33.fasta",
+      "sha256": "678cfab81114829b85547cf9a478f88d8d198d422c6bd1129578cf922fce7918",
+      "size_bytes": 5437367
+    },
+    {
+      "id": "LMR3158",
+      "kind": "host_genome",
+      "path": "host/LMR3158.fasta",
+      "sha256": "820bbac09386d2779f01be13ff578bfeb6edaa98d4e85f929138e7a4b2e2e41b",
+      "size_bytes": 5486450
+    },
+    {
+      "id": "M863",
+      "kind": "host_genome",
+      "path": "host/M863.fasta",
+      "sha256": "1392b9f2854cb73a9f7b3cdc54eb7454a5f40f7056c1d8a5e8b6be9ee6d6b90e",
+      "size_bytes": 5412809
+    },
+    {
+      "id": "MT1B1",
+      "kind": "host_genome",
+      "path": "host/MT1B1.fasta",
+      "sha256": "62b06980d480541d5770e2858768797bc1ca611f0e0dc44b69df3745b26633cf",
+      "size_bytes": 5202179
+    },
+    {
+      "id": "NILS01",
+      "kind": "host_genome",
+      "path": "host/NILS01.fasta",
+      "sha256": "d8ed7eb0df4421f1be6e0b9c653820ea3d3992bcac045560605c6307a0cf00da",
+      "size_bytes": 5588130
+    },
+    {
+      "id": "NILS02",
+      "kind": "host_genome",
+      "path": "host/NILS02.fasta",
+      "sha256": "6c8ac14341437c00a235bacbdb60e4bd266455bf6a8824596779bba4c2d9b9cc",
+      "size_bytes": 4835883
+    },
+    {
+      "id": "NILS03",
+      "kind": "host_genome",
+      "path": "host/NILS03.fasta",
+      "sha256": "84af14c331a1ea1526f4753f81168c13964af023274181354d63ee914f95f54d",
+      "size_bytes": 5148501
+    },
+    {
+      "id": "NILS04",
+      "kind": "host_genome",
+      "path": "host/NILS04.fasta",
+      "sha256": "659323bd1b580df8f9eb9dd9e8776b618641125dcb442017acc58d8e2f5fb1ed",
+      "size_bytes": 4896002
+    },
+    {
+      "id": "NILS05",
+      "kind": "host_genome",
+      "path": "host/NILS05.fasta",
+      "sha256": "35bf368d3c64519a0653269a9bd5cb222a27d7d599b940e2c40392270545bcd0",
+      "size_bytes": 5420623
+    },
+    {
+      "id": "NILS06",
+      "kind": "host_genome",
+      "path": "host/NILS06.fasta",
+      "sha256": "a4be2d98cb541fb69153997c7203b1ccd50aa80a29a7ffe76a74647cee1fc9f9",
+      "size_bytes": 4712005
+    },
+    {
+      "id": "NILS07",
+      "kind": "host_genome",
+      "path": "host/NILS07.fasta",
+      "sha256": "ee3363efae6f5ac9e3550935180935c3052b1acc80ef66958adb4d09347939b4",
+      "size_bytes": 5252763
+    },
+    {
+      "id": "NILS08",
+      "kind": "host_genome",
+      "path": "host/NILS08.fasta",
+      "sha256": "0c64630b1941934e16a38ef84e7ebb49e66c24dd4327a65877c91716e84b48b3",
+      "size_bytes": 5038104
+    },
+    {
+      "id": "NILS09",
+      "kind": "host_genome",
+      "path": "host/NILS09.fasta",
+      "sha256": "70b73f5be7a01718ffd34033dab90f28624927ab95c932d33bb91b3173404c75",
+      "size_bytes": 5088449
+    },
+    {
+      "id": "NILS10",
+      "kind": "host_genome",
+      "path": "host/NILS10.fasta",
+      "sha256": "28c44ee3ce9ff500bda23bfe85bf26bcc87f9b385d85419f1206e2c307833dc7",
+      "size_bytes": 4642506
+    },
+    {
+      "id": "NILS11",
+      "kind": "host_genome",
+      "path": "host/NILS11.fasta",
+      "sha256": "5461da75c716bb63f87db5cb4519ebf9bb887f50264ae095eb6a6036462083bf",
+      "size_bytes": 5193311
+    },
+    {
+      "id": "NILS12",
+      "kind": "host_genome",
+      "path": "host/NILS12.fasta",
+      "sha256": "5bd7d58c6dbdb397017c15032ec6146173f70a3ece2a17f3e314e823bd647886",
+      "size_bytes": 5358572
+    },
+    {
+      "id": "NILS13",
+      "kind": "host_genome",
+      "path": "host/NILS13.fasta",
+      "sha256": "02b8d75cbdb32c34e4678dfbc79b536635975aab67d3425e316ff9644b4a70e8",
+      "size_bytes": 5117628
+    },
+    {
+      "id": "NILS14",
+      "kind": "host_genome",
+      "path": "host/NILS14.fasta",
+      "sha256": "fc0d0feec626fa7f532d2c633674e4f0ecf26d234d82c2a96d0390e1947593f1",
+      "size_bytes": 4930873
+    },
+    {
+      "id": "NILS15",
+      "kind": "host_genome",
+      "path": "host/NILS15.fasta",
+      "sha256": "89757e0c8998c5719c8087fbb30d477e37fe46bd79da627902af0a7b5acecaa3",
+      "size_bytes": 5184305
+    },
+    {
+      "id": "NILS16",
+      "kind": "host_genome",
+      "path": "host/NILS16.fasta",
+      "sha256": "4598db6c3463e3cb3147d4ed8220327cf976cb399e265ac7e9bc5f2175f4d890",
+      "size_bytes": 5084715
+    },
+    {
+      "id": "NILS17",
+      "kind": "host_genome",
+      "path": "host/NILS17.fasta",
+      "sha256": "88a78a0449039f27b0d95e804ff3bc9b4f31822268d881e8db271382f464c300",
+      "size_bytes": 4895438
+    },
+    {
+      "id": "NILS18",
+      "kind": "host_genome",
+      "path": "host/NILS18.fasta",
+      "sha256": "41e831e4eadda2ef084b041b49d14c7321309311c28034653c9d99b3f9a65e70",
+      "size_bytes": 5451123
+    },
+    {
+      "id": "NILS19",
+      "kind": "host_genome",
+      "path": "host/NILS19.fasta",
+      "sha256": "1675d536aff62eb1bb37b4cd940e837b4d99634947ec3790b21715e0ac369a76",
+      "size_bytes": 5363135
+    },
+    {
+      "id": "NILS20",
+      "kind": "host_genome",
+      "path": "host/NILS20.fasta",
+      "sha256": "1dcb020a7774d47330d954a7467871f68bdeeb8e94dd9d1d93de2d20d036f095",
+      "size_bytes": 5539024
+    },
+    {
+      "id": "NILS21",
+      "kind": "host_genome",
+      "path": "host/NILS21.fasta",
+      "sha256": "25db87344916a3da0583cccd65b79d2ffb598e3bba197097444b9a079d9431f9",
+      "size_bytes": 5639927
+    },
+    {
+      "id": "NILS22",
+      "kind": "host_genome",
+      "path": "host/NILS22.fasta",
+      "sha256": "10b0fddb8b4d2febd60f964a9ae14e865fc01cf38a300a53f491071768845643",
+      "size_bytes": 5009973
+    },
+    {
+      "id": "NILS23",
+      "kind": "host_genome",
+      "path": "host/NILS23.fasta",
+      "sha256": "926022788aaecc54950be27e6b577b1ed8e8d1c97b7ff45857c91f997a294f45",
+      "size_bytes": 5183799
+    },
+    {
+      "id": "NILS24",
+      "kind": "host_genome",
+      "path": "host/NILS24.fasta",
+      "sha256": "100c8f8802f707498a450f215f1f717d213ede755162491aaff0e210dc779916",
+      "size_bytes": 4972579
+    },
+    {
+      "id": "NILS25",
+      "kind": "host_genome",
+      "path": "host/NILS25.fasta",
+      "sha256": "5c522573661c0a62f27afdb732b3d37a3e24541b1d4fef926145578bc73962c4",
+      "size_bytes": 5423858
+    },
+    {
+      "id": "NILS26",
+      "kind": "host_genome",
+      "path": "host/NILS26.fasta",
+      "sha256": "aba6d60f0c5947e8a59becbe2cc1220115199ac69ab367fb8716085a040cfe1e",
+      "size_bytes": 5170903
+    },
+    {
+      "id": "NILS27",
+      "kind": "host_genome",
+      "path": "host/NILS27.fasta",
+      "sha256": "11b8823f8d3f47d1f48b941cc08a8d61f08c23bc87e966271cf60ba525717168",
+      "size_bytes": 5153324
+    },
+    {
+      "id": "NILS28",
+      "kind": "host_genome",
+      "path": "host/NILS28.fasta",
+      "sha256": "5edc56e14dbc101fe57729b5c28e536b178b017bee1a63c8d7903020814ebb0f",
+      "size_bytes": 5144476
+    },
+    {
+      "id": "NILS29",
+      "kind": "host_genome",
+      "path": "host/NILS29.fasta",
+      "sha256": "fc3c0d5e57798f41e6e694740fe35d0e46056519dd85d7bea5976eae410c252e",
+      "size_bytes": 5174797
+    },
+    {
+      "id": "NILS30",
+      "kind": "host_genome",
+      "path": "host/NILS30.fasta",
+      "sha256": "0b27dd3c18af92e151c8e34e66e55037a95473432724921d6f9440ea9f421cdf",
+      "size_bytes": 5135563
+    },
+    {
+      "id": "NILS31",
+      "kind": "host_genome",
+      "path": "host/NILS31.fasta",
+      "sha256": "745204f54386e01a838480c60793cb277b21edeca749fe195a9e03b70c2de053",
+      "size_bytes": 5308584
+    },
+    {
+      "id": "NILS32",
+      "kind": "host_genome",
+      "path": "host/NILS32.fasta",
+      "sha256": "2453f7e8b477da76efe4f85b5a3872459fb94074a393d4d1cf38febda2d6174a",
+      "size_bytes": 5201927
+    },
+    {
+      "id": "NILS33",
+      "kind": "host_genome",
+      "path": "host/NILS33.fasta",
+      "sha256": "ab5298df2d470cac247f7db1235478675f923e04f5651286936d0f69cf7a5f01",
+      "size_bytes": 5217820
+    },
+    {
+      "id": "NILS34",
+      "kind": "host_genome",
+      "path": "host/NILS34.fasta",
+      "sha256": "c2d8e8b485c15d437a55ade2c17332f4fa3e01619495446f33ee486d0762e78b",
+      "size_bytes": 5137187
+    },
+    {
+      "id": "NILS35",
+      "kind": "host_genome",
+      "path": "host/NILS35.fasta",
+      "sha256": "64212d5276a6414bc0e6943f679575f1c1736597f01b693d416f9a021f490785",
+      "size_bytes": 5030856
+    },
+    {
+      "id": "NILS36",
+      "kind": "host_genome",
+      "path": "host/NILS36.fasta",
+      "sha256": "be4870b58d7a83d3a60fc37b8d22c700f60090f1fc991f16bfa9e5b3690a7873",
+      "size_bytes": 5295276
+    },
+    {
+      "id": "NILS37",
+      "kind": "host_genome",
+      "path": "host/NILS37.fasta",
+      "sha256": "97594d1c1edc2c881aa5b6db35ff9de0b0cae94d113f7a1e35a33d6b5ffcaa72",
+      "size_bytes": 5324053
+    },
+    {
+      "id": "NILS38",
+      "kind": "host_genome",
+      "path": "host/NILS38.fasta",
+      "sha256": "ceb88e45c41fc1f493711b9b75bca21e7462e0867b5fd265f96e7ec655e166bc",
+      "size_bytes": 5140767
+    },
+    {
+      "id": "NILS39",
+      "kind": "host_genome",
+      "path": "host/NILS39.fasta",
+      "sha256": "9f5eca441912155025845499a2d515296bfff20e29461053f218bfa48ae1fdd4",
+      "size_bytes": 5470291
+    },
+    {
+      "id": "NILS40",
+      "kind": "host_genome",
+      "path": "host/NILS40.fasta",
+      "sha256": "e3f123579aadf03805db24549389954cdbf0728be4f32f0c0b443129f8d8250e",
+      "size_bytes": 5162405
+    },
+    {
+      "id": "NILS41",
+      "kind": "host_genome",
+      "path": "host/NILS41.fasta",
+      "sha256": "ddbcd9f26cc1e9c7aa068ecf2faed90881f6d7f4b954071453d6ab4130d542ed",
+      "size_bytes": 4989368
+    },
+    {
+      "id": "NILS42",
+      "kind": "host_genome",
+      "path": "host/NILS42.fasta",
+      "sha256": "881187f7bffc855a9f211e6963932eccac6c8baabb7db207753a66f30f2a9c95",
+      "size_bytes": 5450652
+    },
+    {
+      "id": "NILS43",
+      "kind": "host_genome",
+      "path": "host/NILS43.fasta",
+      "sha256": "90c08a2bbd6d1a1a26099c4ab5892ee31a7aa1fd521aeee923655898cbeaa5c9",
+      "size_bytes": 4648327
+    },
+    {
+      "id": "NILS44",
+      "kind": "host_genome",
+      "path": "host/NILS44.fasta",
+      "sha256": "6a18180ba74d236bedd01fb974de11ca98178ed1751210b32487052e56ed7e69",
+      "size_bytes": 5123234
+    },
+    {
+      "id": "NILS45",
+      "kind": "host_genome",
+      "path": "host/NILS45.fasta",
+      "sha256": "dd11ececc0c9b86dbc9340019fa61ee732369e0aa3b321ba15d7875e2bc9d21e",
+      "size_bytes": 4972667
+    },
+    {
+      "id": "NILS46",
+      "kind": "host_genome",
+      "path": "host/NILS46.fasta",
+      "sha256": "8ee3ef5764fe80b152ae9c61b6f8302ef4a16cbb5e201577f6fbfa2e25c814fc",
+      "size_bytes": 5417424
+    },
+    {
+      "id": "NILS47",
+      "kind": "host_genome",
+      "path": "host/NILS47.fasta",
+      "sha256": "8701e7f0d0d0de1f24bb87d0d91a2ad5f05fe654ce989ba0ef5344011767b324",
+      "size_bytes": 5174322
+    },
+    {
+      "id": "NILS48",
+      "kind": "host_genome",
+      "path": "host/NILS48.fasta",
+      "sha256": "f1636fa9ac37a576447a57721ed32f8f06c58dd8da1a09563b39bd25c1723e13",
+      "size_bytes": 5084436
+    },
+    {
+      "id": "NILS49",
+      "kind": "host_genome",
+      "path": "host/NILS49.fasta",
+      "sha256": "caaf1225eb2d0477508c7514ffb25007e8990966031072d4b362a489ffc36ec4",
+      "size_bytes": 5366139
+    },
+    {
+      "id": "NILS50",
+      "kind": "host_genome",
+      "path": "host/NILS50.fasta",
+      "sha256": "0036a3e479274ffc6e5353d681418f29f02efd1e15688f464544d0d88f3cb6cd",
+      "size_bytes": 5420707
+    },
+    {
+      "id": "NILS51",
+      "kind": "host_genome",
+      "path": "host/NILS51.fasta",
+      "sha256": "98a5a9190deb627f6835daf1bb7d175ac4c4a567472a19f158d4ea549d7567d7",
+      "size_bytes": 5038943
+    },
+    {
+      "id": "NILS52",
+      "kind": "host_genome",
+      "path": "host/NILS52.fasta",
+      "sha256": "810639b0b4172a9161808d47af5bb77014594c319c8f3a0da646cc032cad73b5",
+      "size_bytes": 5215560
+    },
+    {
+      "id": "NILS53",
+      "kind": "host_genome",
+      "path": "host/NILS53.fasta",
+      "sha256": "ed5da48d6a4454526afad44c7e9ef733a0d4c644f2e9aa7d51cb227858536330",
+      "size_bytes": 5038715
+    },
+    {
+      "id": "NILS54",
+      "kind": "host_genome",
+      "path": "host/NILS54.fasta",
+      "sha256": "dafe21affab9ba10ad11014ba976f41a5d69202068481da2306fe98c012380e3",
+      "size_bytes": 5298152
+    },
+    {
+      "id": "NILS55",
+      "kind": "host_genome",
+      "path": "host/NILS55.fasta",
+      "sha256": "6411b7232e1b2a873b11dbcbe8c364d93eceb4a3d788475396000f840050dba2",
+      "size_bytes": 5308261
+    },
+    {
+      "id": "NILS56",
+      "kind": "host_genome",
+      "path": "host/NILS56.fasta",
+      "sha256": "5648ea3c04e99e6b674583d1369b9f2192f5eba27f37fa791ec3c79e48c63c05",
+      "size_bytes": 5242163
+    },
+    {
+      "id": "NILS57",
+      "kind": "host_genome",
+      "path": "host/NILS57.fasta",
+      "sha256": "396f4705b1416826057f182fe710618c3e3a8a7f08f5a88d343705ef4bfeaf29",
+      "size_bytes": 5403075
+    },
+    {
+      "id": "NILS58",
+      "kind": "host_genome",
+      "path": "host/NILS58.fasta",
+      "sha256": "adc6afd5b5adccbe819f8e3083ea26d38107fa9f674acda41a9a8e96e222d511",
+      "size_bytes": 5368943
+    },
+    {
+      "id": "NILS59",
+      "kind": "host_genome",
+      "path": "host/NILS59.fasta",
+      "sha256": "6bac3fff4ec34c7c6d3994969d8afb5d2cbd1837492c34883689cc454c01258a",
+      "size_bytes": 5347186
+    },
+    {
+      "id": "NILS60",
+      "kind": "host_genome",
+      "path": "host/NILS60.fasta",
+      "sha256": "90d595e8285fb1342e74fcb3689073c1d68f76507d3481b9e7e86d06b390a609",
+      "size_bytes": 5173597
+    },
+    {
+      "id": "NILS61",
+      "kind": "host_genome",
+      "path": "host/NILS61.fasta",
+      "sha256": "2690b5f77e891aa3c301983a2cd13aa2c7738ce7ad1146960ad6c951a61fb518",
+      "size_bytes": 5147495
+    },
+    {
+      "id": "NILS62",
+      "kind": "host_genome",
+      "path": "host/NILS62.fasta",
+      "sha256": "58faa4972afc50d2018bfd2aebd9ec4f4c4657dc1a1b265898c25a1a2fbbf04c",
+      "size_bytes": 5131770
+    },
+    {
+      "id": "NILS63",
+      "kind": "host_genome",
+      "path": "host/NILS63.fasta",
+      "sha256": "4de4e69d7acf4106e1fdf552b6fb1bb3250aa8053429ce27b4d2ac8578d78603",
+      "size_bytes": 5051658
+    },
+    {
+      "id": "NILS64",
+      "kind": "host_genome",
+      "path": "host/NILS64.fasta",
+      "sha256": "38e9970906ca19f8b2633074638dc6716dabc0f1a49c2ef72a895325a9b960e7",
+      "size_bytes": 5485478
+    },
+    {
+      "id": "NILS65",
+      "kind": "host_genome",
+      "path": "host/NILS65.fasta",
+      "sha256": "8055f0c3bc14ce9fb459704a680307715aff625ad41e4446378d641336588371",
+      "size_bytes": 5325699
+    },
+    {
+      "id": "NILS66",
+      "kind": "host_genome",
+      "path": "host/NILS66.fasta",
+      "sha256": "5d5a7ca02a690e36d2c9b556c681482370f19463013a8756ca3271efdc969faf",
+      "size_bytes": 5387659
+    },
+    {
+      "id": "NILS67",
+      "kind": "host_genome",
+      "path": "host/NILS67.fasta",
+      "sha256": "079c2e9538174fc34de50f0e4c9e4ed31bf9669ffd8f0ed75ab2f5849e81877e",
+      "size_bytes": 5192694
+    },
+    {
+      "id": "NILS68",
+      "kind": "host_genome",
+      "path": "host/NILS68.fasta",
+      "sha256": "4e32943cd594a9b88471862716d8f77c1cbb03b6ddf5d2d391e71edcb05a0ed3",
+      "size_bytes": 5487105
+    },
+    {
+      "id": "NILS69",
+      "kind": "host_genome",
+      "path": "host/NILS69.fasta",
+      "sha256": "d9b13ba948e62d45a7adddc247dec61ca788517177d535a50f71d86ec244f603",
+      "size_bytes": 5076128
+    },
+    {
+      "id": "NILS70",
+      "kind": "host_genome",
+      "path": "host/NILS70.fasta",
+      "sha256": "83d901fac2a58354d08c0d97a4ac77efaf91f2eaf191b1ea2f30938c4e0c6b48",
+      "size_bytes": 5526407
+    },
+    {
+      "id": "NILS71",
+      "kind": "host_genome",
+      "path": "host/NILS71.fasta",
+      "sha256": "8109b79f2a7fef8cd31535ac0596a4b1be6eaf5803134487b0822733b2e7511a",
+      "size_bytes": 5284337
+    },
+    {
+      "id": "NILS72",
+      "kind": "host_genome",
+      "path": "host/NILS72.fasta",
+      "sha256": "087c61db4366275051d52614398bde9d5dfde6e77e23aa8fd31c6b37a995e419",
+      "size_bytes": 5583274
+    },
+    {
+      "id": "NILS73",
+      "kind": "host_genome",
+      "path": "host/NILS73.fasta",
+      "sha256": "6cb7b30e929e6336462607ae47278ff2dacd16e8bd261821c6cd793d542fbd88",
+      "size_bytes": 5484751
+    },
+    {
+      "id": "NILS74",
+      "kind": "host_genome",
+      "path": "host/NILS74.fasta",
+      "sha256": "1ae389843c4ef09db6abfbc47b446c73f1a3f630985c0d2cf87aa11fb197fe4e",
+      "size_bytes": 5254416
+    },
+    {
+      "id": "NILS75",
+      "kind": "host_genome",
+      "path": "host/NILS75.fasta",
+      "sha256": "96434075095354924306f94b8710387a0000fa9a5f1e0539cd133fd459be018d",
+      "size_bytes": 5508685
+    },
+    {
+      "id": "NILS76",
+      "kind": "host_genome",
+      "path": "host/NILS76.fasta",
+      "sha256": "870d12062db20b0e6cc58b77a91e7492fbf12c0b9f9d8a7b3b0f5cab86a54690",
+      "size_bytes": 5145840
+    },
+    {
+      "id": "NILS77",
+      "kind": "host_genome",
+      "path": "host/NILS77.fasta",
+      "sha256": "2faf94c2eac6ac5ec48da855acf4a85c70338868f185796b8eff6f47f14565e0",
+      "size_bytes": 5190557
+    },
+    {
+      "id": "NILS78",
+      "kind": "host_genome",
+      "path": "host/NILS78.fasta",
+      "sha256": "38cf7d26e97f6028a4533e35ecc8ecd7716256a03eb2726e0926788aac818f72",
+      "size_bytes": 5322007
+    },
+    {
+      "id": "NILS79",
+      "kind": "host_genome",
+      "path": "host/NILS79.fasta",
+      "sha256": "57a4a30aa84b9b4afc2520a08e7fc6f8ceb57c8743f9f2d3ccac30191bd9b122",
+      "size_bytes": 5157725
+    },
+    {
+      "id": "NILS80",
+      "kind": "host_genome",
+      "path": "host/NILS80.fasta",
+      "sha256": "7ee15c9c54d4eef7ba623143c0b54241c2d534b5549b643640db31f8f433dd46",
+      "size_bytes": 5118957
+    },
+    {
+      "id": "NILS81",
+      "kind": "host_genome",
+      "path": "host/NILS81.fasta",
+      "sha256": "53a3632554d55057f65f2c81c338ec92e2308cb6a62da24fb6008d544a34ba27",
+      "size_bytes": 5585132
+    },
+    {
+      "id": "NILS82",
+      "kind": "host_genome",
+      "path": "host/NILS82.fasta",
+      "sha256": "40c9e3fbe3f518f738c1d2bd80624bd970dc47627a7bebd4a5b994a44169fa88",
+      "size_bytes": 5193674
+    },
+    {
+      "id": "ROAR012",
+      "kind": "host_genome",
+      "path": "host/ROAR012.fasta",
+      "sha256": "d5bbd77bd6f043e17f7b1795f0fe3845abbeb230a4a40ac9cdfbd1bed247d131",
+      "size_bytes": 5300606
+    },
+    {
+      "id": "ROAR029",
+      "kind": "host_genome",
+      "path": "host/ROAR029.fasta",
+      "sha256": "1758a32452237c2f6a38032e49ab1eee8257ff8408858db111a815fabdd2f10a",
+      "size_bytes": 5393536
+    },
+    {
+      "id": "ROAR036",
+      "kind": "host_genome",
+      "path": "host/ROAR036.fasta",
+      "sha256": "7c1074bda376b9d2078e55515da115ca481e0cac9ddeb71f291eae9db4144ad6",
+      "size_bytes": 5573053
+    },
+    {
+      "id": "ROAR059",
+      "kind": "host_genome",
+      "path": "host/ROAR059.fasta",
+      "sha256": "b8133cbc20ef19cb10056c6705733152ecaa518c4e22b36298e64ee0f142ab6e",
+      "size_bytes": 5694916
+    },
+    {
+      "id": "ROAR131",
+      "kind": "host_genome",
+      "path": "host/ROAR131.fasta",
+      "sha256": "cfee4ff768e1776bb11c58bbc70463d6e1dcaac478bc19cb71d6a20be8a5ac50",
+      "size_bytes": 5635704
+    },
+    {
+      "id": "ROAR274",
+      "kind": "host_genome",
+      "path": "host/ROAR274.fasta",
+      "sha256": "683a3fbf41e68e289c13c158816d6de2cc9ba79f5c478c53e46688151d936bfc",
+      "size_bytes": 5352384
+    },
+    {
+      "id": "ROAR387",
+      "kind": "host_genome",
+      "path": "host/ROAR387.fasta",
+      "sha256": "4a74fa28c1164b148c8a20870139edeade57372cc8e41d43750bb69841ecdcc3",
+      "size_bytes": 5397704
+    },
+    {
+      "id": "ROAR400",
+      "kind": "host_genome",
+      "path": "host/ROAR400.fasta",
+      "sha256": "ee5ccae896929e1448592877ba64f7485859b732f7b153673b02577cce3c5fd1",
+      "size_bytes": 5120977
+    },
+    {
+      "id": "ROAR434",
+      "kind": "host_genome",
+      "path": "host/ROAR434.fasta",
+      "sha256": "c5f5e2d455e2a88d224a0269f69dcce57f2e374c57cbf9d58caa44cc012c2894",
+      "size_bytes": 5248728
+    },
+    {
+      "id": "T145",
+      "kind": "host_genome",
+      "path": "host/T145.fasta",
+      "sha256": "d1f550aac77ff04380969183f51ecea2d339693caadb4dafce69c34647dab10a",
+      "size_bytes": 5394973
+    },
+    {
+      "id": "TW10509",
+      "kind": "host_genome",
+      "path": "host/TW10509.fasta",
+      "sha256": "d35a051ed970ac5e2c0a81102bc5f329de22510c9cc0663a4b392d508c80faa0",
+      "size_bytes": 5492317
+    },
+    {
+      "id": "409_P1",
+      "kind": "phage_genome",
+      "path": "phage/409_P1.fna",
+      "sha256": "f740dd382d30657b5daa373297d2ae4bb023eb8929556a25f40a2f2b15e7c5b5",
+      "size_bytes": 40816
+    },
+    {
+      "id": "409_P3",
+      "kind": "phage_genome",
+      "path": "phage/409_P3.fna",
+      "sha256": "69ec48c74ab61e367221aba8d33da7091f13f0e6166c8ce8fe12cee9335a5553",
+      "size_bytes": 46417
+    },
+    {
+      "id": "409_P5",
+      "kind": "phage_genome",
+      "path": "phage/409_P5.fna",
+      "sha256": "c332579df1b32ab3bb8e84b84211888737ce34690277fab067a0b8e8a4d17fe4",
+      "size_bytes": 46417
+    },
+    {
+      "id": "409_P6",
+      "kind": "phage_genome",
+      "path": "phage/409_P6.fna",
+      "sha256": "7d683d5bb6729da34a7d203387e17f2a372cc2358be727e27db5f0ba4f66a285",
+      "size_bytes": 45605
+    },
+    {
+      "id": "409_P8",
+      "kind": "phage_genome",
+      "path": "phage/409_P8.fna",
+      "sha256": "5e9dbe90a43fd870094476e072e3af80975b30d16daf9d8df399dc67aab22e2d",
+      "size_bytes": 44390
+    },
+    {
+      "id": "411_P1",
+      "kind": "phage_genome",
+      "path": "phage/411_P1.fna",
+      "sha256": "fb7bbbed3be65c6a8402da07d7ceb8d44c8aa043305b8db1cafdb6a9a831521d",
+      "size_bytes": 49368
+    },
+    {
+      "id": "411_P2",
+      "kind": "phage_genome",
+      "path": "phage/411_P2.fna",
+      "sha256": "92b583e9c46e3c63678c1149200ae0d9babc50c032f32eb498eb6b7005277e2d",
+      "size_bytes": 44939
+    },
+    {
+      "id": "412_P1",
+      "kind": "phage_genome",
+      "path": "phage/412_P1.fna",
+      "sha256": "648a2c25aa67fc0a93f707b1585d85448ef4d8cc18cc940155bb5bbe1d51979d",
+      "size_bytes": 45632
+    },
+    {
+      "id": "412_P2",
+      "kind": "phage_genome",
+      "path": "phage/412_P2.fna",
+      "sha256": "acdffb33b1083f98abcc06c609c5d5933039e8098f259d402d2a8fd22f89c732",
+      "size_bytes": 45871
+    },
+    {
+      "id": "412_P3",
+      "kind": "phage_genome",
+      "path": "phage/412_P3.fna",
+      "sha256": "c40b9bb23379e6de84600ba302b50f8728f40b162ca0c3377303be26b5000701",
+      "size_bytes": 46337
+    },
+    {
+      "id": "412_P4",
+      "kind": "phage_genome",
+      "path": "phage/412_P4.fna",
+      "sha256": "7613ac2bc2e0e1aee663244b0defadd66f2ff8b016eb4129a2cf80b9dc51413a",
+      "size_bytes": 45883
+    },
+    {
+      "id": "412_P5",
+      "kind": "phage_genome",
+      "path": "phage/412_P5.fna",
+      "sha256": "524e24ff157d851bd1735a8a90f89a3355f0617eae6d1719bc59f27f8ba9149c",
+      "size_bytes": 46137
+    },
+    {
+      "id": "416_P4",
+      "kind": "phage_genome",
+      "path": "phage/416_P4.fna",
+      "sha256": "2c34fa2dccd5734e667d3698a6ec615b8c0e80755a4bfa996942c4a67b49437f",
+      "size_bytes": 44808
+    },
+    {
+      "id": "416_P5",
+      "kind": "phage_genome",
+      "path": "phage/416_P5.fna",
+      "sha256": "48453a46c73ddf59c44e5cc4c5dd84eabc3161746d977346cfdd87dc7767fc08",
+      "size_bytes": 44460
+    },
+    {
+      "id": "423_P1",
+      "kind": "phage_genome",
+      "path": "phage/423_P1.fna",
+      "sha256": "1091767f1f3d0a6a10984f124dc77f19a09465ea260962a9158cdec13ab3dcba",
+      "size_bytes": 44503
+    },
+    {
+      "id": "423_P10",
+      "kind": "phage_genome",
+      "path": "phage/423_P10.fna",
+      "sha256": "1c6a806e44339a564fa33278bb4488a18cf84678197ab348b8c87d694fd5b6ef",
+      "size_bytes": 45464
+    },
+    {
+      "id": "423_P5",
+      "kind": "phage_genome",
+      "path": "phage/423_P5.fna",
+      "sha256": "37b630991d21b697873cadb304b6e1d3417c383116a4036c3dfb8ed0fbffb6f0",
+      "size_bytes": 40949
+    },
+    {
+      "id": "423_P7",
+      "kind": "phage_genome",
+      "path": "phage/423_P7.fna",
+      "sha256": "86c5ca7105df4793dbf0d6d6952b97a78299bd0878fb24012b5b648af1f4af82",
+      "size_bytes": 44507
+    },
+    {
+      "id": "423_P9",
+      "kind": "phage_genome",
+      "path": "phage/423_P9.fna",
+      "sha256": "2207e56e936ee31d6ae47a9ab98761e45bb71a0500ed2d6c830362bce3c0fa46",
+      "size_bytes": 45463
+    },
+    {
+      "id": "427_P2",
+      "kind": "phage_genome",
+      "path": "phage/427_P2.fna",
+      "sha256": "126a02c663fde5ec780969fac785dca97f4df226c46f2cd9d36774579ee621b2",
+      "size_bytes": 41069
+    },
+    {
+      "id": "427_P3",
+      "kind": "phage_genome",
+      "path": "phage/427_P3.fna",
+      "sha256": "eafe6b0fc45bb52dba1e0deddf53f63d0499af60e623d5596c4d661ca425cda2",
+      "size_bytes": 39770
+    },
+    {
+      "id": "427_P4",
+      "kind": "phage_genome",
+      "path": "phage/427_P4.fna",
+      "sha256": "3036177bc60fa87943e7e14d73987ebf2bcd480077e494382fbce8cb84d660bb",
+      "size_bytes": 39885
+    },
+    {
+      "id": "536_P1",
+      "kind": "phage_genome",
+      "path": "phage/536_P1.fna",
+      "sha256": "a12f89494723bfdfe5d83a0d79afd8c5f3d8402b0d239021e8dc6fef956b520c",
+      "size_bytes": 152032
+    },
+    {
+      "id": "536_P11",
+      "kind": "phage_genome",
+      "path": "phage/536_P11.fna",
+      "sha256": "0c5d977b4258243b54c32323863b24caede9ed94ca6c8159a1e6146171dde27d",
+      "size_bytes": 45233
+    },
+    {
+      "id": "536_P12",
+      "kind": "phage_genome",
+      "path": "phage/536_P12.fna",
+      "sha256": "5882a230eb36efc184f9ae83fb2321bc474660d0759d7bbd5b64b8bc820e43d0",
+      "size_bytes": 56930
+    },
+    {
+      "id": "536_P6",
+      "kind": "phage_genome",
+      "path": "phage/536_P6.fna",
+      "sha256": "ab2cb00559aec0cfb229f471bfe8aeb2cb1953defee367f666c0c81093c62ad0",
+      "size_bytes": 150986
+    },
+    {
+      "id": "536_P7",
+      "kind": "phage_genome",
+      "path": "phage/536_P7.fna",
+      "sha256": "f0a38d22c38520e6cfc5907258dce6e5d37d207e76c0f5af57f9784ecd94ac9b",
+      "size_bytes": 150986
+    },
+    {
+      "id": "536_P9",
+      "kind": "phage_genome",
+      "path": "phage/536_P9.fna",
+      "sha256": "6684608854515fee2ec111c9c0e5c78da2234eed7051c2cd56131ef9957043b2",
+      "size_bytes": 151436
+    },
+    {
+      "id": "55989_P1",
+      "kind": "phage_genome",
+      "path": "phage/55989_P1.fna",
+      "sha256": "b8b87690b4b96b77c6ade7279e706218f657eea781220701b03403de324117a0",
+      "size_bytes": 40958
+    },
+    {
+      "id": "55989_P2",
+      "kind": "phage_genome",
+      "path": "phage/55989_P2.fna",
+      "sha256": "3ed46ff6a5f017c70a2fe03a39c285aef26c7c80f932a0f95b1edd3f08bc1e77",
+      "size_bytes": 174722
+    },
+    {
+      "id": "AL505_Ev3",
+      "kind": "phage_genome",
+      "path": "phage/AL505_Ev3.fna",
+      "sha256": "267a50a819c83463c9bc11b9770e1658dca270dde54e5725e4101d6f9b129206",
+      "size_bytes": 164879
+    },
+    {
+      "id": "AL505_Sd2",
+      "kind": "phage_genome",
+      "path": "phage/AL505_Sd2.fna",
+      "sha256": "73ce7af9bf5ba1a11234e8a747e4168cfde700b96f086d5cc484f34a22a64267",
+      "size_bytes": 45479
+    },
+    {
+      "id": "AN17_P1",
+      "kind": "phage_genome",
+      "path": "phage/AN17_P1.fna",
+      "sha256": "90fe4a04e1219603a2307973ae314c2e3b42189a242517498367b96512019f65",
+      "size_bytes": 40387
+    },
+    {
+      "id": "AN17_P8",
+      "kind": "phage_genome",
+      "path": "phage/AN17_P8.fna",
+      "sha256": "591e76571e2a33aea16a0dfe4850f95d50d1dee6f29c35e848a88c780942569b",
+      "size_bytes": 87072
+    },
+    {
+      "id": "AN24_P2",
+      "kind": "phage_genome",
+      "path": "phage/AN24_P2.fna",
+      "sha256": "639752aefed614b7a6e8256a95c7a0f61d12f164a6dce191c976d6d1f51c9940",
+      "size_bytes": 72483
+    },
+    {
+      "id": "AN24_P3",
+      "kind": "phage_genome",
+      "path": "phage/AN24_P3.fna",
+      "sha256": "9e2e37808e74eb00aa9ad2f49d5026d8c026e828dba86bc21d9d78e48bba18ba",
+      "size_bytes": 72483
+    },
+    {
+      "id": "AN24_P4",
+      "kind": "phage_genome",
+      "path": "phage/AN24_P4.fna",
+      "sha256": "c5a3c161e8474764aba273bd9f731f1daba46cb7b402094f5de886754e71cbda",
+      "size_bytes": 40570
+    },
+    {
+      "id": "BCH953_P1",
+      "kind": "phage_genome",
+      "path": "phage/BCH953_P1.fna",
+      "sha256": "88484b4ab03b89b583172b4e45be25d18011dac7f9e87c907f6314308b21575b",
+      "size_bytes": 44909
+    },
+    {
+      "id": "BCH953_P2",
+      "kind": "phage_genome",
+      "path": "phage/BCH953_P2.fna",
+      "sha256": "8e344a72819fa28e900706d46d93284737ddb3966121f0c515d35a0e2684af64",
+      "size_bytes": 170907
+    },
+    {
+      "id": "BCH953_P3",
+      "kind": "phage_genome",
+      "path": "phage/BCH953_P3.fna",
+      "sha256": "4b0397cb9d475f3b6cc1236e1a0f6992e98628cc96391a867c74003fc9b617ba",
+      "size_bytes": 45438
+    },
+    {
+      "id": "BCH953_P4",
+      "kind": "phage_genome",
+      "path": "phage/BCH953_P4.fna",
+      "sha256": "1170183e530252b79b0932e011f742a1bca6c8ddedf98c8333e149075031da31",
+      "size_bytes": 172140
+    },
+    {
+      "id": "BCH953_P5",
+      "kind": "phage_genome",
+      "path": "phage/BCH953_P5.fna",
+      "sha256": "aef769800298916e610bb68b60ad096dde7da5037bb14a17fd308f4d2f3374c5",
+      "size_bytes": 172140
+    },
+    {
+      "id": "BDX03_P1",
+      "kind": "phage_genome",
+      "path": "phage/BDX03_P1.fna",
+      "sha256": "e0a964f3b47f5db831adde033fd8553667204cd303d7dcc9f64da3f9e9b9c63e",
+      "size_bytes": 40488
+    },
+    {
+      "id": "BDX03_P2",
+      "kind": "phage_genome",
+      "path": "phage/BDX03_P2.fna",
+      "sha256": "3ce294df73f343a305f85005722c9ef36ae96f118e682c33c4732e83eb9ae66f",
+      "size_bytes": 40488
+    },
+    {
+      "id": "BDX09_P1",
+      "kind": "phage_genome",
+      "path": "phage/BDX09_P1.fna",
+      "sha256": "bafcedcb1f6410a10b3965bd5c0d9d2aa65505ce4ef7ed82a8a1f68f806f87ba",
+      "size_bytes": 59415
+    },
+    {
+      "id": "DIJ06_P1",
+      "kind": "phage_genome",
+      "path": "phage/DIJ06_P1.fna",
+      "sha256": "c81553a2624e9c335ca5d5eea15b6cc190f994918ca825534df911b58e4f7943",
+      "size_bytes": 45584
+    },
+    {
+      "id": "DIJ07_P1",
+      "kind": "phage_genome",
+      "path": "phage/DIJ07_P1.fna",
+      "sha256": "ea42cce7e6a2a42f8714996f6d2dc059d3f17d865cd223cbe6eadbb4e0c7cafd",
+      "size_bytes": 145334
+    },
+    {
+      "id": "DIJ07_P2",
+      "kind": "phage_genome",
+      "path": "phage/DIJ07_P2.fna",
+      "sha256": "e10dbcc92555c3410e3421a80a15b589511b2f220e9896ce50763ddb33a31976",
+      "size_bytes": 147296
+    },
+    {
+      "id": "LF110_P1",
+      "kind": "phage_genome",
+      "path": "phage/LF110_P1.fna",
+      "sha256": "4ccae02e7a9dbcd181a21f713f922b1f7c013b3edcafe427aa73ea8ae7ae274b",
+      "size_bytes": 87698
+    },
+    {
+      "id": "LF110_P2",
+      "kind": "phage_genome",
+      "path": "phage/LF110_P2.fna",
+      "sha256": "dfb860a20343748946666e3226f1630af0be9aeebd3a3349861cd8248cf5f43e",
+      "size_bytes": 88014
+    },
+    {
+      "id": "LF110_P3",
+      "kind": "phage_genome",
+      "path": "phage/LF110_P3.fna",
+      "sha256": "b5947d205aa5380867d2e8cb756569e1870add3289fb5f6d23ff931448b70cb4",
+      "size_bytes": 88668
+    },
+    {
+      "id": "LF110_P4",
+      "kind": "phage_genome",
+      "path": "phage/LF110_P4.fna",
+      "sha256": "1de7494c883c02b437472599ccd1bd826f3abb3f5d9af7cbdf14b8d5b83c5aa4",
+      "size_bytes": 87578
+    },
+    {
+      "id": "LF31_P1",
+      "kind": "phage_genome",
+      "path": "phage/LF31_P1.fna",
+      "sha256": "aac36d584b4d75f6b21e79c97d2868770340ea0dae891c27c0cbf0b4cce44ddc",
+      "size_bytes": 69528
+    },
+    {
+      "id": "LF31_P3",
+      "kind": "phage_genome",
+      "path": "phage/LF31_P3.fna",
+      "sha256": "194a6822a245bfbeb893ec8f1f9ce5c7538877c19500c32ebf3498555475cf0b",
+      "size_bytes": 45164
+    },
+    {
+      "id": "LF50_P3",
+      "kind": "phage_genome",
+      "path": "phage/LF50_P3.fna",
+      "sha256": "b3b97324a201396dcb6c6377e341b1191fa99b6da745f8b75c044ec45363a9be",
+      "size_bytes": 45921
+    },
+    {
+      "id": "LF7074_P1",
+      "kind": "phage_genome",
+      "path": "phage/LF7074_P1.fna",
+      "sha256": "0d726baa918100fed76520932e36504e4e89456a0da94774dc309be92909c175",
+      "size_bytes": 41829
+    },
+    {
+      "id": "LF7074_P2",
+      "kind": "phage_genome",
+      "path": "phage/LF7074_P2.fna",
+      "sha256": "99a3940c199ea3732140955ce5b1bcd50e1d79af41635d5d1a90a9b6c197bcf0",
+      "size_bytes": 41828
+    },
+    {
+      "id": "LF7074_P3",
+      "kind": "phage_genome",
+      "path": "phage/LF7074_P3.fna",
+      "sha256": "b72447cb58c8ffd09fa0138c9cb99c7c2e1a7d314556cb947826d6bdc87cd687",
+      "size_bytes": 41518
+    },
+    {
+      "id": "LF73_P1",
+      "kind": "phage_genome",
+      "path": "phage/LF73_P1.fna",
+      "sha256": "13e1da7427f65b16903ea81acb8701a3386200d33fa72fe8453a14ac1786764d",
+      "size_bytes": 171883
+    },
+    {
+      "id": "LF73_P3",
+      "kind": "phage_genome",
+      "path": "phage/LF73_P3.fna",
+      "sha256": "a47208579983ad46eacf45348febe955a3fbe833be76ed6267185e7c53a73359",
+      "size_bytes": 169498
+    },
+    {
+      "id": "LF73_P4",
+      "kind": "phage_genome",
+      "path": "phage/LF73_P4.fna",
+      "sha256": "de9526e8403d2ddc6d2bbab57a2487930c2a82ef6e97752eb543a992845c8c95",
+      "size_bytes": 165877
+    },
+    {
+      "id": "LF82_P1",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P1.fna",
+      "sha256": "3facc68c14d821265ff7a6b07c7aca3bbe40c835ea85e9c806f57625df260657",
+      "size_bytes": 90379
+    },
+    {
+      "id": "LF82_P2",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P2.fna",
+      "sha256": "25d48712aeaa44cd10971e051f70c4d3c4a8b43391efb9d5a9a189519f6aac33",
+      "size_bytes": 87069
+    },
+    {
+      "id": "LF82_P3",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P3.fna",
+      "sha256": "545cc183f3079494eb8d2d1712cfe7bac2c999e40a48854740560924c4996f42",
+      "size_bytes": 86638
+    },
+    {
+      "id": "LF82_P4",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P4.fna",
+      "sha256": "f5f5815466e23cd8033fe97b259c3771ee3105232aabd551d342fd85e3e3629c",
+      "size_bytes": 84659
+    },
+    {
+      "id": "LF82_P5",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P5.fna",
+      "sha256": "b7a14162a018779fc995227ba77d1bf9bc0358ca43247af3f13b9aaeef62179f",
+      "size_bytes": 87400
+    },
+    {
+      "id": "LF82_P6",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P6.fna",
+      "sha256": "5c411107d7aa1aedb13aa900cc5689870278a32d94bc851d85080c476d725184",
+      "size_bytes": 85978
+    },
+    {
+      "id": "LF82_P8",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P8.fna",
+      "sha256": "1c2d5e7b1b942e657a7ca8ddbfcec1c476c8601f291f53f2aa6d3fec8982c1e0",
+      "size_bytes": 171849
+    },
+    {
+      "id": "LF82_P9",
+      "kind": "phage_genome",
+      "path": "phage/LF82_P9.fna",
+      "sha256": "bc5773b70157ee02b2ba7efc5c5e123ee57510b5a80fd013f28fc4dcab05f17d",
+      "size_bytes": 87959
+    },
+    {
+      "id": "LI10_P1",
+      "kind": "phage_genome",
+      "path": "phage/LI10_P1.fna",
+      "sha256": "829f854dd80a17844e0c8c0f7920fc1e62de248888a32006c2e204f520bfeef9",
+      "size_bytes": 40589
+    },
+    {
+      "id": "LI10_P2",
+      "kind": "phage_genome",
+      "path": "phage/LI10_P2.fna",
+      "sha256": "c141349a23953413591f7358803f98470bec3dafe607ff9d169ad87cd7ab56d4",
+      "size_bytes": 40589
+    },
+    {
+      "id": "LI10_P3",
+      "kind": "phage_genome",
+      "path": "phage/LI10_P3.fna",
+      "sha256": "9c2a81215eb10c4efa599e241e59d7941b347ceee14be81c6d70ca6945645755",
+      "size_bytes": 45737
+    },
+    {
+      "id": "LI10_P4",
+      "kind": "phage_genome",
+      "path": "phage/LI10_P4.fna",
+      "sha256": "5827284af3781176e75840b43b1ab0488d4e3bc25d97e4ea6ab6dd2c79c9752b",
+      "size_bytes": 45347
+    },
+    {
+      "id": "LI10_P5",
+      "kind": "phage_genome",
+      "path": "phage/LI10_P5.fna",
+      "sha256": "bcb9e454b5b78ea11e9b0f4c8dfa619a68effd89f94f74e8546e2212526517a7",
+      "size_bytes": 45119
+    },
+    {
+      "id": "LI10_P6",
+      "kind": "phage_genome",
+      "path": "phage/LI10_P6.fna",
+      "sha256": "271cd5f3d839acfd1c4f4464e33a12778c85fb3caef8dbf7802b199c436c067d",
+      "size_bytes": 45568
+    },
+    {
+      "id": "LM02_P1",
+      "kind": "phage_genome",
+      "path": "phage/LM02_P1.fna",
+      "sha256": "ca1713cd9719d7649d81d667ae7d45e1993ffbcf93a5efc2fe9101b0ed242339",
+      "size_bytes": 44214
+    },
+    {
+      "id": "LM07_P1",
+      "kind": "phage_genome",
+      "path": "phage/LM07_P1.fna",
+      "sha256": "9a349084cd24460bf088dc578e89ad22a6cad9f66d403d0db938bca903b8cc2a",
+      "size_bytes": 40908
+    },
+    {
+      "id": "LM08_P1",
+      "kind": "phage_genome",
+      "path": "phage/LM08_P1.fna",
+      "sha256": "5879286da44681aac105e68b300830aae608c65271436aac877adc0b162a9c97",
+      "size_bytes": 43760
+    },
+    {
+      "id": "LM08_P2",
+      "kind": "phage_genome",
+      "path": "phage/LM08_P2.fna",
+      "sha256": "5ae8d9738b38c709f69e1746045c915a0a027e326bc078b8e5c2793f74da7142",
+      "size_bytes": 43786
+    },
+    {
+      "id": "LM33_P1",
+      "kind": "phage_genome",
+      "path": "phage/LM33_P1.fna",
+      "sha256": "1f8ef7a5bc8c00362bdeaf17063f89edf6d151f3e89c177411263cc63c0cb3be",
+      "size_bytes": 39699
+    },
+    {
+      "id": "LM40_P1",
+      "kind": "phage_genome",
+      "path": "phage/LM40_P1.fna",
+      "sha256": "b0bf054e10ad462a2174843d867df641f621a1fd388c8af6d3aef6de2972d7a6",
+      "size_bytes": 45834
+    },
+    {
+      "id": "LM40_P2",
+      "kind": "phage_genome",
+      "path": "phage/LM40_P2.fna",
+      "sha256": "73f9276d98f9a3a2a09b457f6f83bd7a80757452ee8d60bd2eee57841bc357ca",
+      "size_bytes": 45941
+    },
+    {
+      "id": "LM40_P3",
+      "kind": "phage_genome",
+      "path": "phage/LM40_P3.fna",
+      "sha256": "27eb0b2422f873b0d10a924e5bb0347533603f0ed3048fc4257b451c398b5933",
+      "size_bytes": 45862
+    },
+    {
+      "id": "MT1B1_3A1",
+      "kind": "phage_genome",
+      "path": "phage/MT1B1_3A1.fna",
+      "sha256": "06d5c6006b8186a74754eb7d5011ad8faf4510f1d5315bc6a8237a6f9bf96203",
+      "size_bytes": 40901
+    },
+    {
+      "id": "NAN33_P1",
+      "kind": "phage_genome",
+      "path": "phage/NAN33_P1.fna",
+      "sha256": "f9e8a64bac02b300545661ac923f2238e686231b30e34afec6b6965ae6722fc8",
+      "size_bytes": 41405
+    },
+    {
+      "id": "NAN33_P2",
+      "kind": "phage_genome",
+      "path": "phage/NAN33_P2.fna",
+      "sha256": "df3d2568015fac77d3aee8f31b42fa4660a390ef706cb9ebd4dc155fa36f8942",
+      "size_bytes": 41458
+    },
+    {
+      "id": "NAN33_P4",
+      "kind": "phage_genome",
+      "path": "phage/NAN33_P4.fna",
+      "sha256": "6af2bb841d641f20c53aa54b4a863c92e74aa377b291d1ab0348ad942d4e6774",
+      "size_bytes": 41458
+    },
+    {
+      "id": "NAN33_P5",
+      "kind": "phage_genome",
+      "path": "phage/NAN33_P5.fna",
+      "sha256": "f8a12177712a2d313bfe655eac0235418e8532e630dedef2db75b28e1daabc9b",
+      "size_bytes": 75750
+    },
+    {
+      "id": "NAN33_P6",
+      "kind": "phage_genome",
+      "path": "phage/NAN33_P6.fna",
+      "sha256": "cc3e3094307b798fbe17b9d4b59a1a551300610efc7c8810774407dde1f0683e",
+      "size_bytes": 41272
+    },
+    {
+      "id": "NIC06_P2",
+      "kind": "phage_genome",
+      "path": "phage/NIC06_P2.fna",
+      "sha256": "c30ac7f95b9756e22c50537dbc99d3fce5266081766794dba62ae12a222f52a8",
+      "size_bytes": 169169
+    },
+    {
+      "id": "NIC06_P3",
+      "kind": "phage_genome",
+      "path": "phage/NIC06_P3.fna",
+      "sha256": "894002c062f10f26245035389f9ff731c1656b95ccfb18189f33a6eb64f1ff6d",
+      "size_bytes": 46784
+    },
+    {
+      "id": "NRG_11A2",
+      "kind": "phage_genome",
+      "path": "phage/NRG_11A2.fna",
+      "sha256": "deed511091d225edeb0084e6398320092e48759b76fc8d935084dce7edf9a20d",
+      "size_bytes": 85900
+    },
+    {
+      "id": "NRG_11B1",
+      "kind": "phage_genome",
+      "path": "phage/NRG_11B1.fna",
+      "sha256": "01f738573f453e887fa529d34c2118db4af858715704a10494947a85b91991a6",
+      "size_bytes": 88607
+    },
+    {
+      "id": "NRG_12A1B",
+      "kind": "phage_genome",
+      "path": "phage/NRG_12A1B.fna",
+      "sha256": "152e77c0db3860ec304180bb34fb02d83054666f95be51931c678d620c539563",
+      "size_bytes": 45044
+    },
+    {
+      "id": "core_distances",
+      "kind": "table",
+      "path": "core_distances.tsv",
+      "sha256": "1e65a30083d33f8f67b1c009049b473ae38ab3f3d6c7d91fb8639c013af64eb8",
+      "size_bytes": 1917070
+    },
+    {
+      "id": "defenses",
+      "kind": "table",
+      "path": "defenses.csv",
+      "sha256": "5a950619a4a76206817869b30b8faaf9cd17f9ce17e4c8aa9e5f312781ddd5dd",
+      "size_bytes": 115523
+    },
+    {
+      "id": "metadata",
+      "kind": "table",
+      "path": "metadata.csv",
+      "sha256": "e880b60cdc3df6f000b2f0e74985415bd11737d474ab68dd35d0085940cf5b13",
+      "size_bytes": 42739
+    },
+    {
+      "id": "mlc",
+      "kind": "table",
+      "path": "mlc.csv",
+      "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829",
+      "size_bytes": 158199
+    },
+    {
+      "id": "subset",
+      "kind": "table",
+      "path": "subset.csv",
+      "sha256": "9a7caa8c48d475a2d0fa153ae61dab3b3484be8c266b0ef965f171218606a6e6",
+      "size_bytes": 283309
+    }
+  ]
+}

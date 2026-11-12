@@ -28,6 +28,10 @@ dev = [
 ]
 reference = [
     "genophi==1.0.3",
+    "pyrodigal==3.7.1",
+]
+proteomes = [
+    "pyrodigal==3.7.1",
 ]
 cloud = [
     "boto3>=1.36,<2",

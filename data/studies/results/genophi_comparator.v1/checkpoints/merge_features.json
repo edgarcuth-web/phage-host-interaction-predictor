@@ -1,0 +1,13 @@
+{
+  "stage": "merge_features",
+  "status": "complete",
+  "started_utc": "2026-11-12T01:55:56.790100+00:00",
+  "wall_seconds": 47.63511461099915,
+  "result": {
+    "observed_rows": 16597,
+    "features": 11801
+  },
+  "output_sha256": {
+    "full_feature_table.csv": "cb7d16ae8484119c80467cfd30d4fde9bf1846d877d1e8e192937fc8bc4c48d1"
+  }
+}

@@ -93,14 +93,16 @@ in id, URL, SHA-256, size and path, so either lock rebuilds the same host cohort
 
 ### Host genomes
 
-    python scripts/fetch_pinned_host_fastas.py --out data/receipts/host_fastas.v1.json
+    python scripts/fetch_pinned_host_fastas.py --out data/receipts/host_fastas.local.json
 
 Reads the `host_genome` entries of `studies/genome_host_retrieval.v1.json`,
 writes under `--data-root` (default `data/raw/genophi_host_study`), and expects
 910.4 MB across 177 files. It verifies SHA-256 and size per file, replaces
 atomically, retries 429/500/502/503/504 with exponential backoff, and skips any
 file already present and matching, so an interrupted rebuild can simply be rerun.
-`--out` must not already exist; the receipt it writes is immutable.
+`--out` must not already exist; the receipt it writes is immutable. The committed
+`receipts/host_fastas.v1.json` records the comparator input rebuild; use a new
+local receipt name when reproducing it.
 
 ### Phage genomes and tables
 
@@ -137,6 +139,28 @@ work that does not need host sequence. Figshare declares CC BY 4.0 for the host
 assemblies (article 25941691); see the
 [paired-study review](studies/paired_data_reuse_review.v1.json) for the recorded
 primary declarations.
+
+### Derived GenoPHI proteomes
+
+The [frozen-split GenoPHI comparator](../docs/genophi-frozen-comparator.md) calls
+proteins with pinned Pyrodigal 3.7.1: code-11 single mode per bacterial assembly,
+code-11-only meta models for phages. Files live under
+`derived/genophi_proteomes/strain_AAs/<id>.faa` and `phage_AAs/<id>.faa` and are
+not committed. IDs are the exact resource-lock IDs; proteins use `<id>_<n>` with
+one counter across all contigs in a genome.
+
+```bash
+pip install -e '.[proteomes]'
+python scripts/call_genophi_genes.py \
+  --out data/receipts/genophi_proteomes.local.json \
+  --source-receipt data/receipts/genophi_inputs.local.json --workers 8
+```
+
+The committed `receipts/genophi_inputs.v1.json` records every source digest;
+`receipts/genophi_proteomes.v1.json` records modes, versions and every derived
+digest. Per-genome checkpoints allow verified reuse after interruption. Changed
+source or protein bytes are rejected; existing immutable receipts are not
+overwritten.
 
 ### What fetching does not do
 

@@ -1,0 +1,61 @@
+{
+  "study_id": "genophi-frozen-host-comparator:v1",
+  "status": "Prespecified before comparator fitting; development cohort already inspected by earlier studies",
+  "parent_protocol": "data/studies/genophi_host_baseline.v1.json",
+  "resource_lock": "data/studies/genophi_host_baseline.resources.v1.json",
+  "host_manifest": "data/studies/results/genophi_host_split.v1.csv",
+  "reference_report": "data/studies/results/genome_host_retrieval.v1/report.json",
+  "reference_per_host": "data/studies/results/genome_host_retrieval.v1/per_host_metrics.csv",
+  "repo_files_sha256": {
+    "data/studies/genophi_host_baseline.resources.v1.json": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+    "data/studies/results/genophi_host_split.v1.csv": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+    "data/registry/genophi_ecoli_subset.v1.json": "0fdd836ca207121ac382814302efeedbdb9939b219a76e3130eb554f1b60bc97",
+    "data/studies/genophi_host_baseline.v1.json": "b717e0c5a5c788f19be84d441548fa0a89b111065827df9b39783ea6fecb12bf"
+  },
+  "expected": {"hosts": 177, "phages": 94, "observed_pairs": 16597, "excluded_pairs": 41, "host_groups": 147},
+  "versions": {"genophi": "1.0.3", "pyrodigal": "3.7.1", "mmseqs2": "15-6f452+ds-2"},
+  "gene_calling": {"host_mode": "single", "phage_mode": "meta", "translation_table": 11, "meta_bins": "Built-in code-11 bins only"},
+  "clustering": {
+    "min_seq_id": 0.4, "coverage": 0.8, "sensitivity": 7.5, "suffix": "faa",
+    "scope": "One label-free vocabulary over all 177 host proteomes and one over all 94 phage proteomes, shared by both scenarios and all repeats",
+    "preprocessing": "Upstream removal of singleton families and collapse of perfectly co-occurring families; no sample-cluster presence filter",
+    "assignment": "Unmodified upstream MMseqs all-versus-all search; chunked best-hit reduction preserves float32 identity/e-value ordering and first-file-order ties"
+  },
+  "scenarios": ["grouped_host", "phylogroup:B2"],
+  "outer_split": "Recompute parent group_hosts and split_by_host_group, then require exact agreement with the committed host manifest; B2 follows retrieval_splits with near-clonal group purge",
+  "supervised_boundary": "Feature selection, early stopping and hyperparameter selection receive only outer-training observed rows; neither outer validation nor test labels enter any fitting API",
+  "feature_selection": {
+    "method": "rfe", "num_features": 200, "num_runs_fs": 5,
+    "filter_type": "strain", "use_clustering": true, "cluster_method": "hierarchical", "n_clusters": 20,
+    "use_dynamic_weights": false, "check_feature_presence": false, "filter_by_cluster_presence": false,
+    "cutoff": 3, "cutoff_choice": "Fixed a priori; never select a row from GenoPHI's MCC-sorted performance table",
+    "min_features": 20, "max_features": 501,
+    "window_rule": "min_features <= feature count < max_features; stop as blocked if the fixed cutoff is outside the window; no fallback cutoff",
+    "rationale": "Bounded comparator configuration; at most 5*200/3 features can pass cutoff 3, so max 501 is explicit and nonbinding"
+  },
+  "modeling": {
+    "num_runs_modeling": 10, "set_filter": "strain", "use_clustering": true, "cluster_method": "hierarchical", "n_clusters": 20,
+    "use_dynamic_weights": false, "task_type": "classification", "use_shap": false,
+    "grid": {"iterations": [500, 1000], "learning_rate": [0.05, 0.1], "depth": [4, 6], "loss_function": ["Logloss"]},
+    "selection": "Upstream MCC grid search and early stopping on internal folds of outer-training rows only; retain all 10 resulting models, without selecting runs on outer outcomes",
+    "refit": "Preserve GenoPHI's internally split models; no all-outer-training refit or test-set early stopping"
+  },
+  "repeats": 3,
+  "prediction": "Rank all 94 phages by median positive-class confidence over all 30 models (3 complete feature-selection/modeling repeats x 10 internal modeling runs); also report each repeat's median and individual-model metric spread",
+  "variance_scope": "Three complete same-machine replays use upstream's fixed internal run seeds; report their observed spread, including zero. This is repeatability, not independent sampling uncertainty or a user-controlled feature-selection seed sweep.",
+  "compute": {"threads": 8, "max_ram_gb": 8},
+  "evaluation": {
+    "k": [1, 2, 3, 5], "primary": "Grouped-host test all-complete-host Hit@2",
+    "partitions": ["validation", "test"],
+    "metric_function": "phage_cocktail.retrieval.evaluate_retrieval",
+    "tie_policy": "Exact expectation over uniform within-score-tie permutations",
+    "denominators": "Report all complete-panel hosts and positive-eligible complete-panel hosts separately; exclude whole hosts with any unknown panel label",
+    "bootstrap": {"resamples": 2000, "seed": 20261024, "confidence": 0.95}
+  },
+  "limitations": [
+    "The shared protein-family vocabulary is transductive in genome sequences, as requested; supervised fitting is strictly outer-train-only. The earlier 4-mer representation is inductive.",
+    "This bounded GenoPHI configuration is an aligned comparator, not a reproduction of the authors' paper benchmark or an optimized GenoPHI result.",
+    "Scores target source-defined MLC positivity, not productive infection or clinical efficacy.",
+    "This is an already inspected development cohort and a fixed known-phage library, not an independent release holdout or an unseen-phage test."
+  ]
+}

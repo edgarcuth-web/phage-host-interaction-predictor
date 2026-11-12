@@ -140,3 +140,8 @@ protocol fixing checkpoint, layer, windows, contig/ambiguity handling and poolin
 any model or layer selection must stay outside test outcomes. An independent
 release holdout and calibration remain separate requirements. No SDL prediction,
 automatic retraining, engineering proposal or clinical inference is emitted.
+
+An [aligned GenoPHI follow-up](genophi-frozen-comparator.md) now supplies the
+external protein-family comparator on the same primary and B2 panels. Its
+test Hit@2 is 31/34 (91.18%) primary and 48/61 (78.69%) B2, compared with this
+study's 30/34 and 46/61. The B2 prevalence failure remains visible.

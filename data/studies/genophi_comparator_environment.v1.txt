@@ -1,0 +1,16 @@
+# Measured WSL Ubuntu 24.04 / Python 3.12.3 environment; MMseqs2 15-6f452+ds-2.
+genophi==1.0.3
+pyrodigal==3.7.1
+numpy==2.5.4
+pandas==2.3.3
+scikit-learn==1.9.1
+scipy==1.18.1
+catboost==1.2.10
+biopython==1.88
+joblib==1.6.0
+threadpoolctl==3.8.0
+matplotlib==3.11.2
+seaborn==0.13.2
+plotnine==0.15.9
+shap==0.54.1
+hdbscan==0.8.44

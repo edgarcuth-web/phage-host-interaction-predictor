@@ -1,0 +1,12 @@
+{
+  "study_id": "genophi-frozen-host-comparator:v1",
+  "protocol_sha256": "2541cb7a6321728d16d257ef126501a7db70b6448a273c268aabc715264ff047",
+  "code_freeze_revision": "40ffe55a1bbefc5ddbca749e9585c99493479d84",
+  "pre_fit_public_record": "https://github.com/edgarcuth-web/phage-host-interaction-predictor/pull/35#issuecomment-6810516311",
+  "recorded_stage": "Before any feature-selection or modeling run; the 872342-protein strain all-versus-all prefilter was still running and only cohort.json was complete",
+  "field": "clustering.preprocessing",
+  "incorrect_phrase": "Upstream removal of singleton families",
+  "correct_description": "No singleton-family filtering is requested. run_feature_assignment is called with its default select='none'; GenoPHI 1.0.3 executes filter_presence_absence, including singleton removal, only when a selection list is supplied. Perfectly co-occurring families are collapsed by the upstream helper.",
+  "evidence": "genophi/mmseqs2_clustering.py:807-836 in the distribution whose source SHA-256 is recorded in the run provenance",
+  "scope": "Descriptive metadata correction to an unused text field. The frozen executable code invokes the unfiltered upstream default; all numerical parameters and the fixed-cutoff rule are those in the original protocol."
+}
