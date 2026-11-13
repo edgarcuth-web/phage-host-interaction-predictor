@@ -4,9 +4,8 @@ Status: **implemented offline scoring-audit utility, not a trained retriever,
 not an approved/frozen scientific benchmark and not a validated mechanism
 screen**. No provider API, Evo2 inference, GPU, experiment, or clinical claim
 is involved. The proposed scientific comparison is in
-[retrieval-rescue benchmark v0](retrieval-rescue-benchmark-v0.md) (PR #29
-until merged). This utility remains valid independently of whether the
-proposed protocol is approved.
+[retrieval-rescue benchmark v0](retrieval-rescue-benchmark-v0.md). The utility
+implements score-file auditing; the scientific comparison remains proposed.
 
 > **Related, different estimand.** `docs/annotation-recall-audit.md` measures the
 > evidence route's own recall loss on different data, with a global rather than

@@ -134,33 +134,19 @@ genes. "Unexplained by current annotations" is an evidence state. Distinguish
 missing annotation, low-confidence annotation, explicit supported negative
 mechanism evidence, and independent wet-lab confirmation.
 
-## Stage 1 implementation contract (next PR, not implemented here)
+## Offline adapter implemented; scientific study pending
 
-Build an **offline, provider-free evaluation adapter** which accepts:
+The [offline retrieval-rescue evaluator](offline-retrieval-rescue-evaluator.md)
+implements the score-audit stage. It accepts hash-bound manifests, observed
+labels, complete-panel scores and producer/training-host declarations. It writes
+rankings, equal-K union membership, rescue counts, missingness, grouped contrasts
+and a hash-bound report. Its tests cover ties, unknowns, all-negative hosts,
+duplicate candidates and the candidate budget.
 
-- frozen host/library manifests with source hashes, endpoint, time and split;
-- one observed-label table, with unknowns preserved;
-- complete-panel per-pair score files from A, G, AG and P (or explicit absence);
-- model+preprocessing hashes, applicability context and candidate provenance.
-
-Outputs must include a validated per-host pairwise ranking table, aggregate
-metrics, candidate membership and rescue audit, unresolved/unknown exclusion
-ledger, group-bootstrap contrasts, hash-bound report and explicit scientific
-limits. Fail on duplicate pair IDs, inconsistent library/split, nonfinite score,
-mixed endpoints, changed manifests, test-derived training features and invalid
-tie policy. A model output is an **endpoint score**, not a mechanistic
-`InteractionPrediction`.
-
-Suggested acceptance tests: zero rescue for identical deterministic orderings;
-positive rescue when two orderings find disjoint observed positives; no rescue
-credit for unknown labels; an all-negative host affects Hit but not eligible
-Recall; collision-safe tied rankings; U never exceeds the specified K; no
-model endpoint is recast as productive infection.
-
-Only after the offline adapter and retrieval benchmark are accepted should a
-subsequent PR define a versioned SDL learned-retrieval result, union policy and
-scientific reviewer. No new repository, external-model calls or hardware
-execution are necessary for Stage 1.
+It does not train a sequence model or independently prove leakage-free score
+production. The v0 scientific design above remains unfrozen: complete its review
+and bind a new protocol before fitting. A versioned SDL retrieval-result and
+receiver policy are also pending.
 
 ## Review checklist
 
@@ -170,4 +156,4 @@ execution are necessary for Stage 1.
 - [ ] Approve equal-K union policy, tie conventions and rescue denominator
 - [ ] Approve grouped-host and separate cold-phage/double-cold claim scopes
 - [ ] Approve held-out-data policy and prefit hashes
-- [ ] Only then version the experiment as a **frozen study** and implement
+- [ ] Version the scientific experiment as a **frozen study** before fitting

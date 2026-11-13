@@ -1,12 +1,41 @@
 # GenoPHI demo reproduction: outcome and why the shipped reference is not a target
 
-The GenoPHI protein-family workflow now runs end to end in this project on the
-authors' 25-strain demo. The shipped reference output in the upstream repository
-is **not** a valid comparison target for the pinned commit, so the original
-milestone wording ("reproduce GenoPHI demo metrics locally") cannot be satisfied
-as written.
+The pinned GenoPHI protein-family workflow runs end to end on the authors'
+25-strain x 25-phage demo. This verifies the pipeline, but does not reproduce the
+shipped reference metrics: their generating parameters are unrecorded and some
+rows are unreachable under the documented settings. The evidence is below.
 
-This document records what ran, what came out, and the evidence for that claim.
+## Run the pinned demo
+
+Use Linux/macOS or WSL2 on Windows. GenoPHI is pinned to distribution `1.0.3`
+and its demo inputs to commit `f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f`.
+MMseqs2 is an external dependency. From the repository root:
+
+```bash
+conda env create -f environment.yml
+conda activate phage-cocktail
+python scripts/bootstrap_genophi_demo.py
+python scripts/run_genophi_reference.py
+python scripts/summarize_genophi_reference.py
+```
+
+Alternatively, install `pip install -e ".[reference]"` in an activated environment
+and install MMseqs2 separately. Verify versions with:
+
+```bash
+python -c "from importlib.metadata import version; print(version('genophi'))"
+mmseqs version
+```
+
+`genophi --version` reports `1.0.2` for the `1.0.3` distribution; use the package
+metadata above. The runner resolves `genophi` through `PATH`, so its environment
+must be activated. Bootstrap sparsely checks out `data/test_data` under
+`external/GenoPHI`; results go to `artifacts/genophi_demo`. Both directories are
+ignored by Git.
+
+For the larger 177 x 94 comparison, use the
+[frozen-split comparator runbook](genophi-frozen-comparator.md), which includes
+locked input rebuilding, pinned gene calling and outer-training-only fitting.
 
 ## What ran
 
@@ -134,34 +163,15 @@ in any of our runs. The cause is not established here.
   cutoff must be fixed in advance. The workflow sorts its performance table by
   MCC descending and feeds the top row's cutoff downstream, so the reported
   stratum is selected on the same data it is evaluated on.
-- `genophi --version` reports `1.0.2` while the distribution metadata reports
-  `1.0.3`; verify the pinned version with `importlib.metadata.version("genophi")`
-  instead.
-- `scripts/run_genophi_reference.py` resolves the executable with
-  `shutil.which("genophi")`, so it requires the environment to be activated
-  rather than merely invoking its interpreter by path.
 - Reproducibility is better than the absent `--seed` flag suggests: the
   implementation uses fixed incrementing split seeds (0, 1000, … ) and logs
   them, so same-machine reruns are expected to agree. Feature-selection
   stochasticity is still not exposed as a parameter.
 
-## Remaining gap for a comparator on the 177 x 94 cohort
+## Aligned comparator completed
 
-GenoPHI consumes per-genome amino-acid FASTAs. This project's locked resources
-are nucleotide assemblies: 177 host `.fasta` files from figshare article
-25941691 (CC BY 4.0, MD5-pinned) and the phage `.fna` set from the Gaborieau
-revision. Neither GenoPHI nor the Gaborieau repository ships proteomes for
-anything but the 25-strain demo, so gene calling is required, and its output
-becomes derived data needing its own hashes and a pinned caller version.
-
-`genophi train` exposes only `--set_filter {none,strain,phage}` and `--num_runs`
-and performs its own splitting, so forcing it onto the frozen grouped-host split
-means clustering once over all genomes, subsetting the feature table rows to the
-training hosts, training, then predicting the held-out hosts.
-
-This handoff has subsequently been completed in the
-[frozen-split GenoPHI comparator](genophi-frozen-comparator.md): the 271
-proteomes are receipted, supervised fitting uses outer-training hosts only,
-cutoff 3 is fixed a priori, and primary/B2 predictions are evaluated through
-the project's exact-tie retrieval code. The demo and shipped upstream reference
-remain separate historical reproduction records.
+The [frozen-split comparator](genophi-frozen-comparator.md) completes the larger
+cohort handoff: 271 receipted proteomes, supervised fitting on outer-training
+hosts only, cutoff 3 fixed a priori and exact-tie retrieval evaluation. Its
+[seed sensitivity](genophi-seed-sensitivity.md) is also complete. The demo and
+shipped upstream reference remain separate historical reproduction records.
