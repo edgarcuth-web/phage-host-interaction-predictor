@@ -1,0 +1,35 @@
+{
+  "status": "verified",
+  "pooled_models": 21,
+  "maximum_independent_pooled_gradient": 9.79717446867017e-07,
+  "independently_checked_scores": 131506,
+  "complete_host_metric_rows": 968,
+  "paired_contrasts": 486,
+  "checks": [
+    "frozen protocol/input/code/output identities",
+    "fit-only scalers and every pooled objective/gradient",
+    "independent matrix/JSON model predictions and validation selection",
+    "complete fixed-panel support and unknown-host exclusions",
+    "fraction-based exact-tie retrieval and capped costs",
+    "expanded-host paired group bootstrap and primary decisions"
+  ],
+  "verifier_sha256": "31d2e160640224db392797227420167a725d28df453f983904dfedd9de1eabff",
+  "published_output_sha256": {
+    "b2_annotation.json": "973a275377edfceaa4817fc170efc731abbfa8fa44b1e9088830d75c28b2f92e",
+    "b2_host_4mer.json": "5c6b5fce915a7fad3d4f51a50d095c9e25699ce8fdc72b15c46738232093f30e",
+    "contrasts.csv": "7d2ddcdbfd3f569fab778d10276736ece0da6d4dbc33f8acdf657c8d685ec889",
+    "macro_metrics.csv": "922b67457cd64c513be62d447a61ddaed79ce982e788a58b1c66ef3c8c151374",
+    "models.json": "2f8cc1b903d8c9c48b3d5d13a7eca3c410d3f97c4d17ba7a48317c34e3e1d5d5",
+    "per_host_metrics.csv": "451017664392029c5d32f636afcaff0f9d7bfb332235a19570e015cea5c934af",
+    "per_phage_diagnostics.csv": "e6957b3662208d64e98d787df484ead7b1c9daf4e190fbef016e287a28dbc23d",
+    "primary_host_4mer.json": "d8fd564e1e5e5597dcffbd910f57ea8b666bd030ee59c090343bac7c87790852",
+    "scores.csv.gz": "989c9a1a6b43ae5cc64fc4981ed84f17c786d6b66372beebee5f94a7af664b7d",
+    "selection_scores.csv.gz": "e251092b75f24b0531a8b23983c735fd69ad99bfae8bc41b5b6fc67b156a9d5d",
+    "subgroups.csv": "5194681ce9d9adad05d0644e53a430f297001b4cf3616e99dc36cb2585aaa659",
+    "support.json": "a243c8866aff630e1cc6ddb41176be99e337cce5b12a51418c5168f8cc409316",
+    "top_candidates.csv.gz": "cebbeb0d45280bb2a9d0cfbd73c403b1139750b84509222eb213a987966ea9fe",
+    "validation_trials.csv": "6b7c91228de29f23cd9b6a37ce5443b5ecb4ef2af9352203a007889513a723f6",
+    "weights.npz": "252877c1c5f9f47e64621e04c8fb154bc0e896b98933949664364820016a5ab1",
+    "report.json": "42472983a442120d87f12ca40965944fc80516e47259a5357a619be0baff7635"
+  }
+}

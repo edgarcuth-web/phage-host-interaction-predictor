@@ -56,3 +56,21 @@ The bilinear coefficients include explicit cross terms; existing additive and
 annotation weights above remain distinct studies. This model fails the primary
 cold-phage development AP criterion despite improved BASEL ranking. It remains
 uncalibrated research output with no PairPrediction serving adapter or SDL admission.
+
+## Matched new-host ranking weights
+
+The [matched study](../docs/new-host-retrieval-results.md) keeps all 94 named
+phages available to training under host-only splits. Its
+[models.json](../data/studies/results/new_host_retrieval.v1/models.json) records
+three fit-only encoders, all 21 pooled fits, selected model keys and three new
+per-phage JSON models. Load [weights.npz](../data/studies/results/new_host_retrieval.v1/weights.npz)
+with `allow_pickle=False`. Apply the named encoder before
+`paired_interaction.predict_logits`; the JSON host models use
+`host_baseline.predict_host_model` with their required features. Primary annotation
+weights remain the original separately bound artifact.
+
+The bilinear model's Hit@2 is 64.71% primary and 63.93% B2, below prevalence's
+73.53% and 90.16%. Neither frozen primary hit/cost gate passes. These are
+uncalibrated development weights, with no serving adapter, default recommender
+selection or SDL admission. Preserve the distinct earlier crossed-fit models.
+

@@ -19,7 +19,7 @@ limits for each case.
 | Published BASEL/ECOR reference | [Sequence audit](basel-ecor-sequence-audit.md), [fixed controls](basel-ecor-controls.md) and [bilinear comparison](paired-interaction-results.md) complete. Bilinear primary Hit@2 bounds 48%–60%; not a release holdout |
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Learned host–phage interaction ranking | [Bilinear sequence model trained and compared](paired-interaction-results.md); primary development AP improvement not established. No validated serving/retriever release |
-| New-host fixed-library comparison | [Compatibility audit and protocol freeze complete](new-host-retrieval-protocol.md); matched training/scoring is pending |
+| New-host fixed-library comparison | [Matched comparison complete](new-host-retrieval-results.md); bilinear hit/cost improvement not established |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
 
@@ -66,11 +66,10 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-Plan updated 2026-11-13. [Step 1 is complete](new-host-retrieval-protocol.md):
-the compatibility ledger and new study protocol are frozen before new fitting
-or scoring. **Next: implement and run step 2 under that protocol.** Public-data
-intake can proceed alongside it. Model changes depend on the comparison and its
-failure analysis.
+Plan updated 2026-11-13. [Steps 1–2 are complete](new-host-retrieval-results.md):
+the matched comparison retains its negative bilinear result. **Next: deliver
+the step-3 research FASTA-to-ranking command.** Public-data intake can proceed
+alongside it. Any model change needs a separate protocol for the stated hypothesis.
 
 ### 1. Align the new-host, fixed-library comparison
 
@@ -97,14 +96,14 @@ remain unchanged; the inspected cohort remains development data.
 
 ### 2. Run the matched ranking comparison and diagnose failures
 
-- [ ] Score every candidate using the existing retrieval and budget evaluators.
+- [x] Score every candidate using the existing retrieval and budget evaluators.
   Keep all-negative complete hosts. Preserve the frozen incomplete-label-host
   exclusions and all 94 candidates; no test-label-based candidate filtering.
-- [ ] Report host-macro Hit@2 as primary; K=1,3,5, Recall/MRR, capped tests consumed,
+- [x] Report host-macro Hit@2 as primary; K=1,3,5, Recall/MRR, capped tests consumed,
   coverage/abstention and subgroup failures as secondary. Freeze contrasts,
   acceptance/tradeoff rules and paired host-group intervals in step 1. Pair AP
   remains a diagnostic, not a replacement for within-host ranking.
-- [ ] Retain validation, primary and B2 outcomes, including failures against
+- [x] Retain validation, primary and B2 outcomes, including failures against
   prevalence and GenoPHI. Inspect existing score/feature errors to choose one
   concrete data or representation hypothesis, without another test-seed search.
 
