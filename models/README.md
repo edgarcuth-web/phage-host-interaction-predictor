@@ -41,3 +41,18 @@ promoted, served through PairPrediction, or admitted to SDL decisions. See the
 
 `paired_development.v1.json.gz` is retained only for the documented batch-score
 tie diagnostic. Its associated results are not the validated comparison; use v2.
+
+## Explicit sequence interaction weights
+
+The [bilinear study](../docs/paired-interaction-results.md) saves twelve selected
+development/full-refit models in [weights.npz](../data/studies/results/paired_interaction.v1/weights.npz),
+with array keys, source-label semantics and unique-fit-assembly scalers in
+[models.json](../data/studies/results/paired_interaction.v1/models.json).
+Use `numpy.load(..., allow_pickle=False)` and the declared ordered 136-dimensional
+host/phage frequency vectors. `paired_interaction.predict_logits` consumes each
+model's `kind` and loaded `theta` after its saved host/phage scaling.
+
+The bilinear coefficients include explicit cross terms; existing additive and
+annotation weights above remain distinct studies. This model fails the primary
+cold-phage development AP criterion despite improved BASEL ranking. It remains
+uncalibrated research output with no PairPrediction serving adapter or SDL admission.

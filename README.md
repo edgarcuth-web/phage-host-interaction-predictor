@@ -52,8 +52,10 @@ share training components at 90%. All 25 host IDs are known, while their cited
 assemblies differ from the training FASTAs. The subsequent
 [v2 assembly policy and fixed controls](docs/basel-ecor-controls.md) use explicitly
 bound sequence features: cosine Hit@2 is 4.00% versus random identification bounds
-of 37.32%–44.06%. This negative composition control is not a validated recommender;
-learned interaction models remain to be compared.
+of 37.32%–44.06%. The [learned bilinear comparison](docs/paired-interaction-results.md)
+now reaches BASEL Hit@2 bounds of 48%–60%, but fails the primary cold-phage
+development AP criterion (0.5063 versus additive 0.5516). Both results are retained;
+the model is not a promoted recommender.
 
 ## Quick start
 
