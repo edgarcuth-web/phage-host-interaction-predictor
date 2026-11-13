@@ -1,0 +1,15 @@
+{
+  "study_id": "new-host-fixed-library-ranking:v1",
+  "status": "implementation_frozen_before_first_real_data_fit_or_score",
+  "source_protocol_commit": "f4ec41a7114d6bb1aa241cb34ceb46cf81871cd7",
+  "protocol_sha256": "d75017e4831bad99dbb4fabd5e8f0a1c0c99b7b1eeb20ff3162d558c983ed289",
+  "files_sha256": {
+    "scripts/run_new_host_retrieval.py": "ed453a95b4b7631631918fdf2178d33a59428d2e3b6e7db65736fc4cb0dc8494",
+    "scripts/verify_new_host_retrieval.py": "31d2e160640224db392797227420167a725d28df453f983904dfedd9de1eabff",
+    "tests/test_new_host_retrieval.py": "cdc6dd52a2880a92356f49dd08ae508b879a335cb7cc6879f715ea74e97cb7f7",
+    "scripts/run_screening_budget_audit.py": "e05c7dde3255fa3e248a1a1280b6f5a1fbb9b93263d7778d20a5f88abc307b85",
+    "src/phage_cocktail/retrieval_protocol.py": "93c4522a764734d68cc76dbbec0334df644f2ef2785ddd9d20bc1a57f5079c63"
+  },
+  "numerical_qa": "Independent matrix/JSON predictions, objectives/gradients, exact-fraction tie metrics, expanded-host bootstrap and frozen decisions.",
+  "execution": "Runner requires the public implementation commit in --code-ref; local input/code bytes are checked before fitting. Scientific settings remain in the unchanged protocol."
+}
