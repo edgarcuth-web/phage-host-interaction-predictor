@@ -1,0 +1,632 @@
+{
+  "schema_version": 1,
+  "status": "blocked_phage_sequence_identity_unresolved",
+  "recorded_at": "2026-11-13",
+  "assessment": "source_identifier_and_training_resource_manifest_overlap_only; not biological sequence identity",
+  "source": {
+    "pinned_github_repo": "Noonanav/GenoPHI",
+    "commit": "f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f",
+    "csv_git_blob_sha1": "dcbbca4b4e4b1dd0bc543c5e2348189813e55bb0",
+    "rows": 1240,
+    "hosts": 25,
+    "phages": 52,
+    "observed_positive": 302,
+    "observed_negative": 938,
+    "unreported_pairs": 60
+  },
+  "development_resource_lock": {
+    "path": "data/studies/genophi_host_baseline.resources.v1.json",
+    "git_blob_sha1": "58ba0786f7cf836ed6146316f865d5c4fc322a9e",
+    "training_host_count": 177,
+    "training_phage_count": 94
+  },
+  "checked": {
+    "host_id_overlap_with_development": 25,
+    "host_id_unmatched": 0,
+    "phage_id_overlap_with_development": 0,
+    "phage_genbank_accessions_verified": 0,
+    "phage_sequence_hashes_verified": 0,
+    "normalized_host_sequence_hashes_verified": 0,
+    "near_duplicate_comparisons_completed": 0
+  },
+  "host_id_records": [
+    {
+      "id": "ECOR12",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "021044966321138cb0e9427ff108f3dacc78f4c77dbb63902084240f6b25c890",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741648",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR13",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "c60c7c9e98f2044240862845b3329e04fa8bf3de242aae5fdd223fadfc040206",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741651",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR14",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "dbf7e069bd3af2d4ea7e9c1a01a5c91559c4593a5b7c06e57c630a0158f5e0fd",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741654",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR15",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "b2e7264a29be055cab759a6e524c3a0091b5091c49e87f34f0f7d7115deec8c6",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741657",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR16",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "7dfa627035afcfdc412e6515e5d4b632090c65df7ba11cfdd8ad7a64c461ed2e",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741660",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR17",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "27785f6c7a52ffa264f3dddb8a5627deebb202fa7a41b0d2eca1404c3297668b",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741663",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR18",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "ebe0b677a82bacddb3a375434bb137800556ed6ccb3be3596f645a87d8f6fe8e",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741666",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR19",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "e7117a6077fa9afd26f9d81153e1eef0026c615bb4721548213a765270e5c66f",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741669",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR20",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "a59c575207ceef1156f35775f98faef0f020630763ad5e8be16d5a89ca04354c",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741672",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR21",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "e9763588f5b5e6fac88f25664243158ff1de5a6f3ceea483942241e27a8b91a4",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741675",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR22",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "b833d9a7a3ed1e5324b1f87d0f8fd12643464faf198fbed0da44192ef4368f56",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741678",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR23",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "11a569aaa1a931d8cb9013dfb2f60db43c78b3237952643a956dd92407d444b8",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741681",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR24",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "c9f5a3eb2bf2e73d164b1e6862ba6ffb518b60fc717b5280a1767e43eeaefb95",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741684",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR25",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "1b666bc84798ddfffd84624c82a5411cbc4371947d239411834632e60cc653be",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741687",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR26",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "1aeb6c7e3cb429772c33ccb7c061aeb1ca44486f2e8c317587be01af95869602",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741690",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR27",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "ff5153fb47bfa8fdd3421611b71c30547c458b12a7a513118cd0dbd42deaf0e6",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741693",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR28",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "d32fa0829445d9f7332c07d5a65e1ab6814ca15825f6537fd58d90a4ebe90b41",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741696",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR29",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "2777208b85072b2085a3dbdfa1b7fbfac24b805779049bf35d3a7807da72779c",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741699",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR30",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "d5b4f972cf4d2fe3d9d9df6bd41414f4ba809b2278836657d948021d29a1af40",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741702",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR31",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "690298703a35800104cba616f28392c7f4dcd4374ea8e6b81c20d4aede6e91c8",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741705",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR32",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "82a6873cd6bf5429dac2996fb5964dd4ed7f264177ed79f62b45ce6ec4b62fa0",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741708",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR33",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "83f4550ea6e7d3ae7e4143aa9861aef7869dd3d8b8931caa0b2acd916f545cd9",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741711",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR34",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "6b8147c75c6f1d5788a405157ff5f81e427981fce578071daeda13522300105a",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741714",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR35",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "091be1e61aa1d165626f2c6f8b080b33878b0684a90f49cb0cda83a6ddb59407",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741717",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    },
+    {
+      "id": "ECOR38",
+      "in_training_lock_by_id": true,
+      "training_locked_fasta_source_sha256": "3f33a445b2cc0a3018085134358e806c334fcfd9df1dfca1dfade59159c99d1f",
+      "training_source_file_url": "https://ndownloader.figshare.com/files/46741726",
+      "genbank_assembly_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_identity_verified": false
+    }
+  ],
+  "phage_id_records": [
+    {
+      "id": "Bas01",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas02",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas03",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas04",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas05",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas06",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas07",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas08",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas09",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas10",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas12",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas13",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas14",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas15",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas16",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas17",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas19",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas20",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas21",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas22",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas25",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas27",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas28",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas29",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas31",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas33",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas34",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas35",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas36",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas37",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas39",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas41",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas42",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas43",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas45",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas47",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas49",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas51",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas52",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas54",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas56",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas57",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas58",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas59",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas60",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas61",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas63",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas64",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas65",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas67",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas68",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    },
+    {
+      "id": "Bas69",
+      "in_training_lock_by_id": false,
+      "genbank_accession": null,
+      "normalized_sequence_sha256": null,
+      "sequence_novelty_verified": false
+    }
+  ],
+  "caveats": [
+    "All 25 host identifiers match development-lock entries: this is not a cold-host benchmark.",
+    "Host raw FASTA byte hashes came from an existing verified resource lock, but normalized sequence equivalence against the publication BioProject has not been checked.",
+    "No BASEL per-phage accession mapping or sequence hashes were verified in this intake. Different phage IDs cannot establish cold-phage novelty.",
+    "Publication source is already inspected, not an independently untouched release holdout.",
+    "Published spot-clearing labels and 60 unreported pairs must not be converted into productive infection or negative observations."
+  ]
+}
