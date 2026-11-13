@@ -5,7 +5,7 @@
 数据来自 `github.com/mdmparis/coli_phage_interactions_2023` 的公开表格
 （Gaborieau et al., *Nature Microbiology* 9:2847-2861, 2024）。
 对照的 ablation 结果来自 `github.com/viti1igo/coli_phage_interactions_2023_replica`。
-分析脚本在 `src/`，全部 CPU，无 GPU 需求。
+分析脚本在 [`studies/annotation_recall_audit/`](../studies/annotation_recall_audit/)，全部 CPU，无 GPU 需求。
 
 本文件是干实验结果，不建立临床有效性，也不替代实验验证。
 
