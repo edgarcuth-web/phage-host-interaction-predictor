@@ -1,5 +1,9 @@
 # Host similarity diagnostics and the Evo2 host comparison
 
+**Evo2 extension paused, 2026-11-13.** The completed similarity controls below
+remain research results. The full Evo2 representation protocol is an unexecuted
+optional branch; see the [decision](host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch).
+
 The immediate question is whether a representation improves recommendation for
 unseen bacterial hosts, including distant phylogroups. This is development on an
 already inspected cohort, with no release promotion or clinical interpretation.

@@ -12,9 +12,10 @@ It does not yet provide a validated genome-to-candidate service or cocktail mode
 - **Evaluation:** completed annotation, host 4-mer, additive host–phage and
   GenoPHI comparisons, with grouped splits, exact-tie retrieval metrics and
   uncertainty estimates. No model has established the evidence needed for promotion.
-- **Evo2:** reproduced published species-level score evaluations and verified
-  bounded hosted extraction pilots. Checkpointing and a comparison adapter exist;
-  full-cohort 40B embeddings and their aligned strain-level comparison are pending.
+- **Evo2 (paused):** published-score reproduction and bounded hosted pilots are
+  retained as optional research records. Full-cohort extraction and further Evo2
+  infrastructure are outside the current work plan; retrieval work can proceed
+  independently. See the [decision](docs/host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch).
 - **Integration:** ModelInputBundle / PairPrediction validation and abstention
   work. Trained baseline serving through that interface is pending. The offline
   two-route evaluator audits supplied score files; it does not train a retriever.

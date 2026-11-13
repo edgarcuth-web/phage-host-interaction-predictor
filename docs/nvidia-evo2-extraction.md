@@ -1,5 +1,9 @@
 # Resumable hosted Evo2 extraction
 
+**Paused optional branch, 2026-11-13.** This runbook records the existing executor
+and recovery behavior. New development and full-cohort inference are outside the
+current work plan; see the [decision](host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch).
+
 The executor receives NVIDIA forward responses, pools each orientation, and
 publishes small immutable checkpoints to a local directory or an S3 bucket.
 It runs on CPU; the model remains on NVIDIA's service. A storage bucket needs a
