@@ -26,6 +26,12 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | Data and development weights | [Inputs and rebuilds](../data/README.md), [model cards](../models/README.md) |
 | Supplied-score comparison | [Implemented offline retrieval-rescue evaluator](offline-retrieval-rescue-evaluator.md) |
 
+## Design references
+
+[Reference cases and project decisions](reference-cases.md) records seven source
+cases, their evidence status and applicability, and the budget-audit-first
+priority. Detailed results remain in the study reports above.
+
 ## Proposed work
 
 [Host-conditioned retrieval roadmap](host-conditioned-phage-retrieval-roadmap.md)
