@@ -13,8 +13,8 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | Known-library retrieval | [Annotation baseline](host-retrieval-benchmark.md), [host 4-mer comparison](genome-host-retrieval.md) |
 | GenoPHI | [Demo and runbook](genophi-demo-reproduction.md), [aligned comparator](genophi-frozen-comparator.md), [seed sensitivity](genophi-seed-sensitivity.md) |
 | Host controls | [Similarity](host-similarity-evo2.md), [window sampling](host-window-sampling.md) |
-| Evo2 published score reproduction | [Reference results](evo2-retrieval-reference.md) |
-| Hosted Evo2 | [API probe](nvidia-evo2-api.md), [bounded host pilot](nvidia-evo2-host-pilot.md), [extraction runbook](nvidia-evo2-extraction.md) |
+| Evo2 published score reproduction (paused branch) | [Reference results](evo2-retrieval-reference.md) |
+| Hosted Evo2 (paused branch) | [API probe](nvidia-evo2-api.md), [bounded host pilot](nvidia-evo2-host-pilot.md), [extraction runbook](nvidia-evo2-extraction.md) |
 | Evidence coverage audit | [Findings](annotation-recall-audit.md), [reproduction scripts](../studies/annotation_recall_audit/README.md), [estimand reconciliation](estimand-reconciliation.md) |
 
 ## Interfaces and data
@@ -32,5 +32,6 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 records the objective and remaining engineering work.
 [Retrieval-rescue benchmark v0](retrieval-rescue-benchmark-v0.md) is an unfrozen
 scientific design; the implemented evaluator does not make it a completed study.
-The full Evo2 host-representation comparison is also pending; its protocol and
-hardware handoff are in [host similarity and Evo2](host-similarity-evo2.md).
+The Evo2 host-representation extension is [paused](host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch)
+and is no prerequisite for retrieval development. Its unexecuted protocol and
+hardware handoff remain in [host similarity and Evo2](host-similarity-evo2.md).

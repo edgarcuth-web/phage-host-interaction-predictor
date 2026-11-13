@@ -1,5 +1,9 @@
 # Evo2 retrieval: precomputed-score reproduction
 
+**Evo2 branch paused, 2026-11-13.** Retain the completed reproduction as a
+reference. The embedding-generation proposal at the end is outside the current
+work plan; see the [decision](host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch).
+
 The six prespecified evaluations match the rounded upstream reference metrics.
 This establishes agreement between the released scores and upstream evaluation,
 not an end-to-end Evo2 reproduction or validation of our deployed 40B model.

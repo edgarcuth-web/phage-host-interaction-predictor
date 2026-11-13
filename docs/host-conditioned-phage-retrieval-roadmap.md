@@ -11,7 +11,7 @@ mechanism evidence is not evidence of non-infection.
 | --- | --- |
 | Annotation, host 4-mer, additive pair and GenoPHI comparisons | Completed development studies; see the [results index](README.md#results-and-reproduction) |
 | Two-route score/rescue audit | [Offline evaluator implemented](offline-retrieval-rescue-evaluator.md); consumes supplied scores |
-| Evo2 host representation | Bounded hosted pilots and extraction/comparison software exist; full-cohort extraction and comparison pending |
+| Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Sequence-conditioned learned retrieval | Not trained or validated |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
@@ -41,22 +41,35 @@ two-tower encoder, approximate-neighbour index or reranker must justify its adde
 complexity through comparison with that scorer. Untrained Evo2 cosine similarity
 is not a validated infection score.
 
+## Paused Evo2 branch
+
+Decision, 2026-11-13: pause new Evo2 development and full-cohort extraction.
+The completed engineering pilots establish access and cache integrity, with no
+strain-level ranking result. The current hosted plan projects about 1.425 TB of
+intermediate responses for roughly 5.8 MB of final host-vector payload; see the
+[source-verified preflight](https://github.com/edgarcuth-web/phage-host-interaction-predictor/issues/24#issuecomment-6488966629).
+Issue #24 is closed as `not_planned`.
+
+Retain protocols, pilots, scores and extraction code for reproducibility. Shared
+input validation and evaluation remain available to the main retrieval work.
+This is a resource-priority decision, with Evo2 predictive value still untested
+on this cohort. Any revival needs a separately frozen, bounded experiment and
+prespecified acceptance against inexpensive baselines. It cannot block the work
+below or reuse a zero-budget plan as authorization for inference.
+
 ## Next work
 
-1. Resolve the separately frozen Evo2 host-representation study with a complete
-   comparison or a documented feasibility limit. Preserve its input, split and
-   extraction rules; hosted work remains subject to its explicit budgets.
-2. Freeze a new retrieval study before fitting: library/sequence hashes, labels,
+1. Freeze a new retrieval study before fitting: library/sequence hashes, labels,
    missingness, feature availability, grouped splits, model versions, K/ties and
    candidate budgets. Reserve independent release data. The current cohort
    remains a development comparison.
-3. Compare prevalence, annotation proxy, genome-only pair scoring, fusion and
+2. Compare prevalence, annotation proxy, genome-only pair scoring, fusion and
    two-route union at equal final K. Report Hit/Recall/MRR, rescued positives,
    coverage, costs, grouped uncertainty and subgroup failures. Cold-phage and
    double-cold claims require phage-sequence groups and separate held-out labels.
-4. Test alternative architectures only if the baseline evidence supports them.
+3. Test alternative architectures only if the baseline evidence supports them.
    Keep unsupported or unavailable predictions explicit.
-5. Define a versioned retrieval result and matching SDL receiver policy before
+4. Define a versioned retrieval result and matching SDL receiver policy before
    serving or passing scores to candidate decisions.
 
 A retrieval result must bind the host/genome/context, library snapshot,
