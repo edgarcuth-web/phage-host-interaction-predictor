@@ -1,0 +1,25 @@
+{
+  "status": "verified",
+  "feature_vectors": 102,
+  "independently_checked_cosine_scores": 2600,
+  "independently_checked_host_K_rows": 300,
+  "retained_unknown_pairs": 60,
+  "checks": [
+    "published input and execution code hashes",
+    "102 serialized feature vectors and audited sequence identities",
+    "2600 scalar-fsum cosine recomputations",
+    "complete panels and all 25 host denominators",
+    "independent hypergeometric hit/cost bounds and slot exposures",
+    "deterministic ranking and assembly sensitivity"
+  ],
+  "published_output_sha256": {
+    "cosine_published_wgs_primary_scores.csv": "42d6e0c41dc211ba27455f942f16b1bdb1a376f62c4d8616ef4f0beb7e03984a",
+    "cosine_training_assembly_sensitivity_scores.csv": "910289089b8c0b1e2edba28c54a8716f7e03ec8ebbf008381e2b9b189250b0cf",
+    "deterministic_top2.csv": "839685113c56db894fc569a24700ef181fc78b10644f4f5ac925cf9d25328e42",
+    "feature_manifest.csv": "0b6808474d128d27256222437b1d20d911578d0733d6da9ae177f84462557a54",
+    "per_host_bounds.csv": "56641ad7908f76415e67cab2ee172e004e5532c7c04cfefc6f25a2c7f9a1f2fc",
+    "report.json": "87f2ada384c6483dca2cd3d26e364073b1b18bedad2d69357a62c22c2a89a540",
+    "sequence_features.csv": "737a521ba41fa28687d344d8e83f88d78255897c794f38da6eb4af6e97438461",
+    "uniform_random_scores.csv": "334897d53c0a3b994256975dcfd5363bab0cef28fe13d52458319b27a6c7d53c"
+  }
+}

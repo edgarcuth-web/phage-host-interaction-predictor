@@ -1,6 +1,10 @@
 # BASEL–ECOR identity audit and frozen retrospective scoring protocol
 
-**Status (2026-11-13): protocol frozen; sequence-identity gate NOT cleared; no model scored under it.**
+**v1 freeze status (2026-11-13): sequence-identity gate NOT cleared; no model scored under v1.**
+
+**Follow-up:** the [subsequent accession and sequence audit](basel-ecor-sequence-audit.md) resolves all 52 phage accessions and completes the joint phage comparison. It also finds different host assemblies and supplementary-source discrepancies, so v1 execution remained blocked. The ledger and protocol below preserve that freeze state.
+
+The later [v2 policy and fixed-control results](basel-ecor-controls.md) resolve those execution questions for two fixed controls only. Protocol v1 below is not edited or retroactively treated as an executed learned-model study.
 
 This is a **published, already-inspected reference** from Noonan et al., [GenoPHI](https://doi.org/10.1038/s41564-026-02482-5), **not** an untouched release-validation set. The [source intake](basel-ecor-published-reference.md) pins 25 host IDs, 52 BASEL phage IDs, 1,240 observed binary spot-clearance rows (302 positives/938 negatives) and 60 unreported/ambiguous pairs. We do not turn unknown pairs into negatives or source clearance into productive infection.
 
