@@ -102,11 +102,12 @@ see [endpoint semantics](docs/endpoint-semantics.md).
 Known-library retrieval does not establish unseen-phage performance, and pairwise
 scores do not establish cocktail efficacy.
 
-The next sequence-conditioned retrieval study needs a separately frozen library,
-labels and evaluation protocol. Compare the evidence and learned routes at equal
-candidate budgets, retain missing annotations as unknown, and reserve independent
-data for release validation. The [roadmap](docs/host-conditioned-phage-retrieval-roadmap.md)
-sets out the predictor/SDL boundary and the pending work.
+Next: align the existing models on an unseen-host, fixed-library ranking task,
+freeze the new protocol, then compare candidate hits and test costs. The
+[staged checklist](docs/host-conditioned-phage-retrieval-roadmap.md#next-work)
+starts with score compatibility, followed by matched evaluation and a research
+FASTA-to-ranking command. Public-data intake can proceed alongside this work;
+independent release validation remains pending.
 
 ## Where to look
 

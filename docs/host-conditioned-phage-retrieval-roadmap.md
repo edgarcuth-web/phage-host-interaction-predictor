@@ -65,22 +65,87 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-1. Use the [completed budget audit](screening-budget-audit.md) to specify a
-   concrete generalization/data hypothesis worth a new study. Cost savings on
-   inspected grouped-host tests coexist with B2 failure and mixed validation
-   results; an explicit residual model remains optional.
-2. Before fitting a new retrieval model,
-   freeze library/sequence hashes, labels, missingness, feature availability,
-   grouped splits, model versions, K/ties and candidate budgets. Reserve
-   independent release data; the inspected cohort remains development data.
-3. Compare prevalence, annotation proxy, genome-only pair scoring, fusion and
-   two-route union at equal final K. Report Hit/Recall/MRR, rescued positives,
-   coverage, costs, grouped uncertainty and subgroup failures. Cold-phage and
-   double-cold claims require phage-sequence groups and separate held-out labels.
-   Test alternative architectures when the evidence justifies them, and keep
-   unsupported or unavailable predictions explicit.
-4. Define a versioned retrieval result and matching SDL receiver policy before
-   serving or passing scores to candidate decisions.
+Plan updated 2026-11-13. All tasks below are pending. This checklist does not
+freeze a scientific experiment. **Start with the score-compatibility inventory
+in step 1.** Execute steps 1–3 in order; public-data intake can start alongside
+step 1. Model changes depend on the comparison and its failure analysis.
+
+### 1. Align the new-host, fixed-library comparison
+
+- [ ] Reuse the completed budget audit and availability ledger; record only the
+  remaining gaps for prevalence, annotation, host 4-mer, GenoPHI and bilinear
+  scoring. Check full candidate support, endpoint, sequence/feature identity,
+  training hosts/phages, preprocessing and validation selection. Separate
+  reusable scores, score-only regeneration, required refits and unavailable
+  methods. Sparse paired-test exports cannot stand in for a full library.
+- [ ] Freeze a new study protocol for unseen E. coli host groups and the existing
+  94-phage library, with all library phages available to training. Reuse the
+  existing primary grouped-host split and retain B2 as a prespecified stress
+  test. Bind inputs, source-MLC labels/unknowns, exact sequences, feature
+  availability, training/validation scopes, method versions and selection rules
+  before any new fit or scoring.
+- [ ] Reuse a fitted artifact only when those scopes match. The current crossed
+  bilinear fit uses a restricted training phage set; comparing it directly with
+  models trained on all 94 is not this matched experiment. Freeze necessary
+  refits and resource limits, or report the method unavailable.
+
+**Done when:** a compact compatibility ledger and a hash-bound executable study
+protocol specify the comparison. Historical protocols and acceptance decisions
+remain unchanged; the inspected cohort remains development data.
+
+### 2. Run the matched ranking comparison and diagnose failures
+
+- [ ] Score every candidate using the existing retrieval and budget evaluators.
+  Keep all-negative complete hosts. Preserve the frozen incomplete-label-host
+  exclusions and all 94 candidates; no test-label-based candidate filtering.
+- [ ] Report host-macro Hit@2 as primary; K=1,3,5, Recall/MRR, capped tests consumed,
+  coverage/abstention and subgroup failures as secondary. Freeze contrasts,
+  acceptance/tradeoff rules and paired host-group intervals in step 1. Pair AP
+  remains a diagnostic, not a replacement for within-host ranking.
+- [ ] Retain validation, primary and B2 outcomes, including failures against
+  prevalence and GenoPHI. Inspect existing score/feature errors to choose one
+  concrete data or representation hypothesis, without another test-seed search.
+
+**Done when:** one reproducible report contains matched methods, per-host scores,
+costs, exclusions and a recorded next decision. Reanalysis of inspected data
+cannot promote a model, even if a new development contrast is favorable.
+
+### 3. Deliver a research FASTA-to-ranking command
+
+- [ ] Load declared frozen preprocessing and weights, verify host FASTA and the
+  library snapshot, then emit scores/ranks, endpoint, model/sequence hashes,
+  applicability, missingness and explicit unavailable results.
+- [ ] Reproduce the step-2 scorer on admitted inputs; check wrong inputs, unknown
+  candidates and incomplete score support. A software demo can use a declared
+  baseline even if the learned comparison fails; it must report that limitation.
+
+**Done when:** one documented command produces a reproducible research candidate
+list. Source scores remain uncalibrated. This does not implement SDL decision
+admission; serving into decisions needs the retrieval contract and receiver
+policy below.
+
+### Public-data intake alongside steps 1–3
+
+- [ ] Identify public new-host datasets with linked genome identities, measured
+  positive/negative outcomes, source assay definitions and explicit unknowns.
+  Audit source lineage, host/phage overlap and reuse terms before admission.
+- [ ] Reserve suitable evaluation data before model selection. Distinguish
+  additional same-study hosts from independent laboratory/assay validation.
+  BASEL has known host IDs and stays an inspected cold-phage reference.
+
+**Done when:** each proposed source has an intake decision and a frozen role,
+or a concrete rejection reason. If no suitable release cohort is available,
+research work continues and release validation remains pending.
+
+### Conditional follow-up
+
+- [ ] If failure analysis supports a change, freeze one bounded feature/model
+  experiment and compare it with the same controls. Select using validation
+  only; retain all held-out failures. Revise later tasks from that evidence.
+
+Evo2 full-cohort extraction remains paused. New retrieval infrastructure,
+two-route fusion/union, engineered variants and cocktail efficacy are later
+studies, not prerequisites for the matched baseline or research command.
 
 A retrieval result must bind the host/genome/context, library snapshot,
 per-candidate identity and route, missingness, endpoint score or `not_estimated`,
