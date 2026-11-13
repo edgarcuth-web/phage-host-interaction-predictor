@@ -40,6 +40,11 @@ The [external-evaluation intake gate](docs/external-evaluation-intake.md) can au
 source-lineage and exact assembly overlap for proposed new data. This is a
 conservative software check, **not** an independently validated holdout.
 
+A [published BASEL/ECOR source intake](docs/basel-ecor-published-reference.md)
+pins a 25-host / 52-phage spotting assay matrix. Only 3 hosts have complete
+52-phage labels, so this is a development reference rather than a directly
+usable independent full-panel Hit@K benchmark or a promoted model.
+
 ## Quick start
 
 Use Python 3.11+ in an activated virtual environment, from the repository root:
