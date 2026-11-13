@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "study_id": "new-host-fixed-library-ranking:v1",
+  "status": "frozen_specification_before_new_fit_or_scoring",
+  "source_revision": "6ec641bcdf6e2204c0cbc0bd39bef4c9dd4ce1a1",
+  "task": "Unseen E. coli host groups -> rank the same 94 named existing phages for observed source MLC > 0.",
+  "evidence_status": "Already-inspected development cohort; no independent confirmation, model promotion, productive-infection probability or cocktail efficacy claim.",
+  "inputs": {
+    "registry": {
+      "path": "data/registry/genophi_ecoli_subset.v1.json",
+      "sha256": "0fdd836ca207121ac382814302efeedbdb9939b219a76e3130eb554f1b60bc97",
+      "size_bytes": 1989
+    },
+    "resource_lock": {
+      "path": "data/studies/genophi_host_baseline.resources.v1.json",
+      "sha256": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+      "size_bytes": 119967
+    },
+    "reuse_review": {
+      "path": "data/studies/paired_data_reuse_review.v1.json",
+      "sha256": "6c9ddee4d994211614464c5414ade82df5d1429e5196bca152f196790a60807b",
+      "size_bytes": 2166
+    },
+    "host_manifest": {
+      "path": "data/studies/results/genophi_host_split.v1.csv",
+      "sha256": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+      "size_bytes": 16402
+    },
+    "scenario_splits": {
+      "path": "data/studies/results/genophi_comparator.v1/scenario_splits.csv",
+      "sha256": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+      "size_bytes": 38323
+    },
+    "library": {
+      "path": "data/studies/results/paired_split_freeze.v1/phage_groups_i95.csv",
+      "sha256": "71267049e38cdd6c686e9e9d0bbfaa1278cb8fdb7c9744d003126a9514d93670",
+      "size_bytes": 7685
+    },
+    "sequence_vectors": {
+      "path": "data/studies/results/paired_interaction.v1/training_features.csv.gz",
+      "sha256": "b7d09d916aea6886b843dcccabb5ac1d8803668cc23fe50ba9a77c0a3b88b9d7",
+      "size_bytes": 322064
+    },
+    "sequence_manifest": {
+      "path": "data/studies/results/paired_interaction.v1/training_feature_manifest.csv",
+      "sha256": "bcce8419b21b49902b759c1f8a8202e9f3ad9317e7cf4f058fbbaa9b5af0d4f1",
+      "size_bytes": 101111
+    },
+    "observations": {
+      "path": "data/studies/results/paired_interaction.v1/observed_pairs.csv.gz",
+      "sha256": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0",
+      "size_bytes": 60630
+    },
+    "unknown_exclusions": {
+      "path": "data/studies/results/paired_interaction.v1/excluded_unknown_pairs.csv",
+      "sha256": "cf45ec993e669860dabcbef0665f47c9e33e94e8b3b67f89baf9e8ae287cd3c5",
+      "size_bytes": 1678
+    },
+    "annotation_weights": {
+      "path": "models/host_logistic_development.v1.json",
+      "sha256": "cea65ae8c119701e72c3ce3fbef0f94bc7aaa797e3c8122b31df37a411b7f06c",
+      "size_bytes": 656674
+    },
+    "genophi_primary_scores": {
+      "path": "data/studies/results/genophi_comparator.v1/grouped_host_candidate_scores.csv",
+      "sha256": "93e922d235231ad71cd2be4e8ac92e1a7563fd84b63a9e9e9df28b0c845cc65e",
+      "size_bytes": 196028
+    },
+    "genophi_b2_scores": {
+      "path": "data/studies/results/genophi_comparator.v1/phylogroup_B2_candidate_scores.csv",
+      "sha256": "8a384a3d2fdf8033fcbe0cef30f50402ef0362c9c17434d7aac7cd5923bbe015",
+      "size_bytes": 200612
+    },
+    "genophi_provenance": {
+      "path": "data/studies/results/genophi_comparator.v1/provenance.json",
+      "sha256": "45d28093b5c8d4ce13580e5ce7f2724dd6da75b0fb4a64ab0906669dd8c8c9d7",
+      "size_bytes": 7102
+    },
+    "genophi_protocol": {
+      "path": "data/studies/genophi_comparator.v1.json",
+      "sha256": "2541cb7a6321728d16d257ef126501a7db70b6448a273c268aabc715264ff047",
+      "size_bytes": 5490
+    },
+    "genophi_errata": {
+      "path": "data/studies/genophi_comparator.v1.errata.json",
+      "sha256": "ea8273ec52a65996e313d43bbfcd6476fc551075ba037aefac4a48e787cefb31",
+      "size_bytes": 1296
+    },
+    "paired_models": {
+      "path": "data/studies/results/paired_interaction.v1/models.json",
+      "sha256": "8e2b1c3713dc6a271c306f6ff851f3e192908a40a771d4fb87d6a6835a6502f1",
+      "size_bytes": 52693
+    },
+    "paired_split": {
+      "path": "data/studies/results/paired_split_freeze.v1/paired_split_i95_s42.csv.gz",
+      "sha256": "4da5357d2e530c1b6b4725a0b461c6ca66fbdb64b380f3b6a5b55d1cdfdda0b3",
+      "size_bytes": 83919
+    },
+    "budget_availability": {
+      "path": "data/studies/results/screening_budget.v1/availability.csv",
+      "sha256": "be6e0030c998f5ad3bc0dfa89cef79f9cf3e1e8828da043ccdc5891891a60ed4",
+      "size_bytes": 15357
+    },
+    "budget_support": {
+      "path": "data/studies/results/screening_budget.v1/support.json",
+      "sha256": "05d01b502ae8805170e09a4060eea9cd8c77ef01bdbc4822b260fbf0913e6039",
+      "size_bytes": 2154
+    },
+    "host_protocol": {
+      "path": "data/studies/genophi_host_baseline.v1.json",
+      "sha256": "b717e0c5a5c788f19be84d441548fa0a89b111065827df9b39783ea6fecb12bf",
+      "size_bytes": 3100
+    },
+    "retrieval_protocol": {
+      "path": "data/studies/host_retrieval.v1.json",
+      "sha256": "32d75d4b54717d01f47a792e208685e3789671741071a2e5fa97734e92fe25b0",
+      "size_bytes": 5564
+    },
+    "genome_protocol": {
+      "path": "data/studies/genome_host_retrieval.v1.json",
+      "sha256": "f7d2e4114cf994d16282db59fbb72f9140fdbd21283b92a0a9922e8af1ff991d",
+      "size_bytes": 77461
+    },
+    "b2_selection": {
+      "path": "data/studies/new_host_retrieval.b2_selection.v1.csv",
+      "sha256": "3e156e5b12a48738d9657cc90db598340ff17debf9525c962db5cee166b581dc",
+      "size_bytes": 2222
+    },
+    "compatibility": {
+      "path": "data/studies/new_host_retrieval.compatibility.v1.csv",
+      "sha256": "f161efd66731684e1cf4b63e3ac270423b373f8f111941dfc8ed2b28534f8be1",
+      "size_bytes": 2915
+    }
+  },
+  "frozen_code_sha256": {
+    "src/phage_cocktail/artifacts.py": "a96f901d3b653bf22dbbc80d59adcf0f2f855d117db93f19580a131bcb0cc659",
+    "src/phage_cocktail/benchmark.py": "be6be1e3abaa2347e7eff42f507cc6eb0f4ed93823d13e6293bfc7eca199b992",
+    "src/phage_cocktail/cohort.py": "f54e1f19a82a3165b0bec523d80ed3f356990a903e7af7ea13b4d6f553a9c688",
+    "src/phage_cocktail/host_baseline.py": "38757f454aa6e9c7f8873f7fa00ebecd481c0998c264420b415e6b163b5fb0a3",
+    "src/phage_cocktail/host_genome.py": "146331d3331d45a4a8eb8d4920aca6e034148040cacba2f930e45104247e955d",
+    "src/phage_cocktail/host_study.py": "d3eaf3b5738ef45a65905e3c4b05e32b4fa8c89127c8a09784fd00ae8a68b496",
+    "src/phage_cocktail/paired_baseline.py": "22df6d5a3b3ef295ea9acf322deba477b29e3bb46926d85655649ab89b97864f",
+    "src/phage_cocktail/paired_interaction.py": "cd061a5a064b8868992c2a9ff798fb2aeabef37762126c00c89aff17fcedf9fa",
+    "src/phage_cocktail/retrieval.py": "378705d8655647450aac214e67501f0495077e5f69fe559e00640c85e0189034",
+    "src/phage_cocktail/retrieval_study.py": "8403e735bdcc959d88f44daff6419838fa7f04d1df3c57f7c45f4962ca8b7c6e",
+    "src/phage_cocktail/basel_controls.py": "c34366ceab6d7b8ff27abd3e86984c43339924fd3f063deb3b7106bfc215d1d1"
+  },
+  "dataset": {
+    "hosts": 177,
+    "host_groups": 147,
+    "phages": 94,
+    "unique_phage_assemblies": 89,
+    "observed_pairs": 16597,
+    "positives": 3813,
+    "unknown_pairs": 41,
+    "feature_dimensions": 136,
+    "representation_sha256": "1ddbfa63ee003e5f22a0f21c0fef12d7a9cba26908b380b08ef8c2d2c0dbc4ba",
+    "label_rule": "Use reconciled observed source MLC > 0 only; keep all 41 unknown exclusions. Retain duplicate-genome source observations and all 94 named candidates; no phenotype-based deduplication."
+  },
+  "panels": {
+    "grouped_host": {
+      "hosts": {
+        "train": 117,
+        "test": 34,
+        "validation": 26
+      },
+      "groups": {
+        "test": 22,
+        "train": 103,
+        "validation": 22
+      }
+    },
+    "phylogroup:B2": {
+      "hosts": {
+        "train": 115,
+        "test": 62
+      },
+      "groups": {
+        "test": 43,
+        "train": 104
+      }
+    }
+  },
+  "panel_support": {
+    "grouped_host": {
+      "train_rows": 10957,
+      "validation": {
+        "scored_hosts": 26,
+        "complete_hosts": 26,
+        "eligible_hosts": 26,
+        "unknown_pairs": 0
+      },
+      "test": {
+        "scored_hosts": 34,
+        "complete_hosts": 34,
+        "eligible_hosts": 33,
+        "unknown_pairs": 0
+      }
+    },
+    "phylogroup:B2": {
+      "train_rows": 10771,
+      "test": {
+        "scored_hosts": 62,
+        "complete_hosts": 61,
+        "eligible_hosts": 60,
+        "unknown_pairs": 2,
+        "excluded_hosts": [
+          "ECOR53"
+        ]
+      }
+    }
+  },
+  "b2_inner_selection": {
+    "seed": 20261113,
+    "rule": "Sort the 104 B2 outer-training host groups by SHA-256 of UTF-8 20261113:<host_group>, then group ID. First floor(104/5)=20 groups form inner validation; all other groups form inner fit. The committed manifest is authoritative.",
+    "hosts": {
+      "fit": 94,
+      "validation": 21
+    },
+    "groups": {
+      "fit": 84,
+      "validation": 20
+    },
+    "support": {
+      "fit": {
+        "hosts": 94,
+        "rows": 8797,
+        "complete_hosts": 93,
+        "eligible_hosts": 92,
+        "unknown_pairs": 39,
+        "excluded_hosts": [
+          "370D"
+        ]
+      },
+      "validation": {
+        "hosts": 21,
+        "rows": 1974,
+        "complete_hosts": 21,
+        "eligible_hosts": 20,
+        "unknown_pairs": 0,
+        "excluded_hosts": []
+      }
+    },
+    "refit": "Select each pooled model L2 using only inner validation, then refit once on all 115 B2 outer-training hosts. Primary-scenario selected L2 and B2 test labels never select B2 parameters."
+  },
+  "methods": {
+    "random": {
+      "operation": "analytic equal-score expectation"
+    },
+    "phage_prevalence": {
+      "operation": "reconstruct from panel train observations",
+      "formula": "(positive_count + 1) / (observed_count + 2)"
+    },
+    "annotation": {
+      "primary": "Regenerate scores from the bound 117-host JSON weights; do not refit or select on outer validation.",
+      "B2": "Refit one logistic model per phage on all 115 training hosts.",
+      "features": "Published 137 defense counts and four surface categories under the pinned source tables and host_features transform; this is an annotation proxy, not a mechanistic oracle.",
+      "C": 0.1,
+      "max_iter": 2000,
+      "solver": "lbfgs",
+      "class_weight": null,
+      "single_class_fallback": "Beta(1,1) training prevalence"
+    },
+    "host_4mer": {
+      "operation": "Refit one fixed logistic model per phage in each panel from bound raw host 4-mer vectors.",
+      "preprocessing": "HostFeatureEncoder: means/scales over unique training host IDs only; prefix columns host_4mer:; no categorical features.",
+      "C": 0.1,
+      "max_iter": 2000,
+      "solver": "lbfgs",
+      "class_weight": null,
+      "single_class_fallback": "Beta(1,1) training prevalence"
+    },
+    "genophi": {
+      "operation": "Reuse the two complete frozen score matrices only; no feature selection, training or inference.",
+      "inherited_scope": "Vocabulary includes all 177 host genomes and 94 phage genomes without labels; supervised selection/fitting uses outer-training labels only. This comparator is transductive in genome vocabulary, not an inductive-genome claim.",
+      "method_reference": "genophi_protocol plus genophi_errata and genophi_provenance input roles"
+    },
+    "pooled_sequence": {
+      "kinds": [
+        "phage_only",
+        "additive",
+        "bilinear"
+      ],
+      "operation": "New fits under matching host-only split and all 94 library phages, using paired_interaction functions.",
+      "features": "Bound 136-dimensional within-contig strand-canonical DNA 4-mer frequencies for both entities; no new extraction.",
+      "scaling": "Separate host/phage scalers fitted on unique fit assembly digests only; validation/test vectors never contribute statistics. B2 full refit recomputes scalers on its 115 outer-training hosts.",
+      "weighting": "Each observed named host-phage source observation has equal weight. Exact assembly duplicates remain separate source observations.",
+      "score": "Fixed feature-order raw logits; never round scores or convert them to calibrated probabilities.",
+      "l2_grid_in_tie_preference_order": [
+        0.1,
+        0.01,
+        0.001
+      ],
+      "selection": "For each kind: maximize complete-host macro Hit@2, then minimize capped tests at K=2, then prefer stronger L2; metric tie tolerance 1e-12. Grouped primary selection uses its 26 outer-validation hosts. B2 uses its frozen inner validation, then full outer-train refit.",
+      "optimizer": {
+        "method": "L-BFGS-B",
+        "maxiter": 2000,
+        "maxls": 40,
+        "maxcor": 20,
+        "ftol": 1e-12,
+        "gtol": 1e-06,
+        "maximum_admitted_gradient_infinity_norm": 0.0001,
+        "threads": 1
+      },
+      "initialization": "Zero slopes; intercept logit of (weighted positives + 0.5)/(total weight + 1). Intercept is unpenalized.",
+      "failure": "Stop on nonconvergence or gradient failure; do not expand the grid, replace features or change seeds."
+    }
+  },
+  "annotation_resources": [
+    {
+      "id": "defenses",
+      "kind": "table",
+      "path": "defenses.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/defense_finder/370+host_defense_systems_subtypes.csv",
+      "size_bytes": 115523,
+      "sha256": "5a950619a4a76206817869b30b8faaf9cd17f9ce17e4c8aa9e5f312781ddd5dd"
+    },
+    {
+      "id": "metadata",
+      "kind": "table",
+      "path": "metadata.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/picard_collection.csv",
+      "size_bytes": 42739,
+      "sha256": "e880b60cdc3df6f000b2f0e74985415bd11737d474ab68dd35d0085940cf5b13"
+    }
+  ],
+  "evaluation": {
+    "primary": {
+      "panel": "grouped_host",
+      "partition": "test",
+      "metric": "all-complete-host macro Hit@2",
+      "contrast": [
+        "bilinear",
+        "phage_prevalence"
+      ]
+    },
+    "secondary_k": [
+      1,
+      3,
+      5
+    ],
+    "internal_hit_k": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "secondary_contrasts": [
+      [
+        "bilinear",
+        "host_4mer"
+      ],
+      [
+        "bilinear",
+        "genophi"
+      ],
+      [
+        "bilinear",
+        "annotation"
+      ],
+      [
+        "bilinear",
+        "additive"
+      ],
+      [
+        "bilinear",
+        "phage_only"
+      ]
+    ],
+    "metrics": [
+      "Hit@K on all complete hosts",
+      "Recall@K on positive-eligible complete hosts",
+      "MRR including zero for all-negative hosts",
+      "capped tests consumed",
+      "score coverage/abstention and missingness",
+      "per-host, per-phage and subgroup failures"
+    ],
+    "cost_formula": "E[min(T,K)] = K - sum(Hit@j, j=1..K-1); compute all intermediate j through 4 for K=5. One candidate test is one equal-cost unit; batching, assay noise and clinical costs are excluded.",
+    "ties": "Exact expectation over uniform within-exact-score-tie permutations. Lexicographic display membership is separate and never substitutes for expected metrics.",
+    "missingness": "Score every host x all 94 candidates, including unknown-label pairs. Exclude an entire incomplete-label host from primary complete-panel metrics and report the exclusion; all-negative complete hosts remain. Never fill missing labels with zero or discard unscorable candidates.",
+    "scoring_failure": "Fail the required method on incomplete/nonfinite score support; report unavailable explicitly instead of silently changing the pool or comparison denominator.",
+    "partitions": "Retain primary validation and test plus B2 test; B2 has no outer validation. Keep inner B2 tuning metrics separately labeled. Never pool overlapping panels or treat them as independent.",
+    "pair_classification": "Pair AP/AUROC are optional diagnostics only; no selection or success gate may replace within-host ranking with pooled pair AP."
+  },
+  "uncertainty": {
+    "resamples": 2000,
+    "seed": 20261113,
+    "confidence": 0.95,
+    "unit": "Whole host genomic groups from the complete-host universe within each panel; paired draws shared across methods. Apply positive-eligible masks after drawing groups.",
+    "interval": "Pointwise percentile intervals, unadjusted across secondary comparisons; conditional on this inspected cohort, fixed library and fitted models."
+  },
+  "decisions": {
+    "hit_gain": "Record supported development Hit@2 gain only if the primary paired bilinear-minus-prevalence lower 95% bound exceeds zero; otherwise not established.",
+    "cost_gain": "Record supported development cost savings only if the paired bilinear-minus-prevalence upper 95% cost-difference bound at K=2 is below zero.",
+    "tradeoff": "Claim joint hit-and-cost benefit only when both criteria hold. Otherwise retain the hit/cost tradeoff or failure; never pick a different K after inspecting test outcomes.",
+    "release": "No result here promotes a model. Independent reserved new-host data, applicable endpoint validation and a receiver policy are separate requirements."
+  },
+  "numerical_environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0",
+    "joblib": "1.5.3"
+  },
+  "environment_scope": "Lock applies to newly generated scores and fits; inherited GenoPHI matrices and annotation weights retain their original recorded environments. Baseline refits here are new-task artifacts, not bitwise reproductions of earlier studies.",
+  "compute": {
+    "cpu_threads": 1,
+    "max_ram_gb": 4,
+    "max_pooled_fits": 21,
+    "max_per_phage_logistic_fits": 282,
+    "gpu_requests": 0,
+    "paid_provider_requests": 0,
+    "genome_downloads_required": 0,
+    "genophi_training_runs": 0
+  },
+  "outputs": [
+    "protocol and input/code hashes",
+    "all validation trials and selection decisions",
+    "scalers and safe JSON/NumPy weights",
+    "complete per-method host x phage score matrices",
+    "per-host ranking/cost metrics and support/exclusion ledger",
+    "paired host-group contrasts and all unfavorable subgroup outcomes",
+    "research-only report with no release claim"
+  ],
+  "execution_boundary": "Step 1 validates existing artifacts and freezes this specification; the training/scoring runner is step 2 and is not implemented or executed by this preflight."
+}

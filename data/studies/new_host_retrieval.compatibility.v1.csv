@@ -1,0 +1,17 @@
+panel,method,action,artifact,reason
+grouped_host,random,analytic,,Uniform within-panel ranking; no fitting.
+grouped_host,phage_prevalence,reconstruct_train_labels,data/studies/results/paired_interaction.v1/observed_pairs.csv.gz,"Beta(1,1) prevalence from this panel training hosts only."
+grouped_host,annotation,regenerate_scores,models/host_logistic_development.v1.json,Primary weights match 117 training hosts and all 94 phages; regenerate with pinned annotation tables.
+grouped_host,host_4mer,refit,data/studies/genome_host_retrieval.v1.json,Seed-42/B2 full scores and matching weights are not committed; refit fixed C=0.1 from reusable sequence vectors.
+grouped_host,genophi,reuse_scores,data/studies/results/genophi_comparator.v1/grouped_host_candidate_scores.csv,Complete 94-candidate held-host scores; retain inherited transductive genome vocabulary and training-only supervised selection.
+grouped_host,phage_only,refit,data/studies/results/paired_interaction.v1/models.json,Crossed development fit uses 65 named phages / 61 assemblies; full-cohort refit includes evaluation hosts.
+grouped_host,additive,refit,data/studies/results/paired_interaction.v1/models.json,Refit under matching host-only split; additive terms cannot personalize within-host candidate order.
+grouped_host,bilinear,refit,data/studies/results/paired_interaction.v1/models.json,Refit on all 94 library phages and outer-training hosts; prior L2 selected on cold-phage AP is not reused as new-task selection.
+phylogroup:B2,random,analytic,,Uniform within-panel ranking; no fitting.
+phylogroup:B2,phage_prevalence,reconstruct_train_labels,data/studies/results/paired_interaction.v1/observed_pairs.csv.gz,"Beta(1,1) prevalence from this panel training hosts only."
+phylogroup:B2,annotation,refit,data/studies/host_retrieval.v1.json,No B2 weights or full scores committed; refit fixed C=0.1 on the 115 outer-training hosts.
+phylogroup:B2,host_4mer,refit,data/studies/genome_host_retrieval.v1.json,Seed-42/B2 full scores and matching weights are not committed; refit fixed C=0.1 from reusable sequence vectors.
+phylogroup:B2,genophi,reuse_scores,data/studies/results/genophi_comparator.v1/phylogroup_B2_candidate_scores.csv,Complete 94-candidate held-host scores; retain inherited transductive genome vocabulary and training-only supervised selection.
+phylogroup:B2,phage_only,refit,data/studies/results/paired_interaction.v1/models.json,Crossed development fit uses 65 named phages / 61 assemblies; full-cohort refit includes evaluation hosts.
+phylogroup:B2,additive,refit,data/studies/results/paired_interaction.v1/models.json,Refit under matching host-only split; additive terms cannot personalize within-host candidate order.
+phylogroup:B2,bilinear,refit,data/studies/results/paired_interaction.v1/models.json,Refit on all 94 library phages and outer-training hosts; prior L2 selected on cold-phage AP is not reused as new-task selection.

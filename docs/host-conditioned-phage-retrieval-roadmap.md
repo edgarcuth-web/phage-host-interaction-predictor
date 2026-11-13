@@ -19,6 +19,7 @@ limits for each case.
 | Published BASEL/ECOR reference | [Sequence audit](basel-ecor-sequence-audit.md), [fixed controls](basel-ecor-controls.md) and [bilinear comparison](paired-interaction-results.md) complete. Bilinear primary Hit@2 bounds 48%–60%; not a release holdout |
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Learned host–phage interaction ranking | [Bilinear sequence model trained and compared](paired-interaction-results.md); primary development AP improvement not established. No validated serving/retriever release |
+| New-host fixed-library comparison | [Compatibility audit and protocol freeze complete](new-host-retrieval-protocol.md); matched training/scoring is pending |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
 
@@ -65,26 +66,27 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-Plan updated 2026-11-13. All tasks below are pending. This checklist does not
-freeze a scientific experiment. **Start with the score-compatibility inventory
-in step 1.** Execute steps 1–3 in order; public-data intake can start alongside
-step 1. Model changes depend on the comparison and its failure analysis.
+Plan updated 2026-11-13. [Step 1 is complete](new-host-retrieval-protocol.md):
+the compatibility ledger and new study protocol are frozen before new fitting
+or scoring. **Next: implement and run step 2 under that protocol.** Public-data
+intake can proceed alongside it. Model changes depend on the comparison and its
+failure analysis.
 
 ### 1. Align the new-host, fixed-library comparison
 
-- [ ] Reuse the completed budget audit and availability ledger; record only the
+- [x] Reuse the completed budget audit and availability ledger; record only the
   remaining gaps for prevalence, annotation, host 4-mer, GenoPHI and bilinear
   scoring. Check full candidate support, endpoint, sequence/feature identity,
   training hosts/phages, preprocessing and validation selection. Separate
   reusable scores, score-only regeneration, required refits and unavailable
   methods. Sparse paired-test exports cannot stand in for a full library.
-- [ ] Freeze a new study protocol for unseen E. coli host groups and the existing
+- [x] Freeze a new study protocol for unseen E. coli host groups and the existing
   94-phage library, with all library phages available to training. Reuse the
   existing primary grouped-host split and retain B2 as a prespecified stress
   test. Bind inputs, source-MLC labels/unknowns, exact sequences, feature
   availability, training/validation scopes, method versions and selection rules
   before any new fit or scoring.
-- [ ] Reuse a fitted artifact only when those scopes match. The current crossed
+- [x] Reuse a fitted artifact only when those scopes match. The current crossed
   bilinear fit uses a restricted training phage set; comparing it directly with
   models trained on all 94 is not this matched experiment. Freeze necessary
   refits and resource limits, or report the method unavailable.

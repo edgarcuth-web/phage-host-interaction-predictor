@@ -102,12 +102,12 @@ see [endpoint semantics](docs/endpoint-semantics.md).
 Known-library retrieval does not establish unseen-phage performance, and pairwise
 scores do not establish cocktail efficacy.
 
-Next: align the existing models on an unseen-host, fixed-library ranking task,
-freeze the new protocol, then compare candidate hits and test costs. The
+The [compatibility audit and protocol freeze](docs/new-host-retrieval-protocol.md)
+define the next unseen-host, fixed-library comparison. Next: implement and run
+matched scoring to compare candidate hits and test costs. The
 [staged checklist](docs/host-conditioned-phage-retrieval-roadmap.md#next-work)
-starts with score compatibility, followed by matched evaluation and a research
-FASTA-to-ranking command. Public-data intake can proceed alongside this work;
-independent release validation remains pending.
+tracks evaluation and a research FASTA-to-ranking command. Public-data intake
+can proceed alongside this work; independent release validation remains pending.
 
 ## Where to look
 
@@ -116,3 +116,4 @@ independent release validation remains pending.
 - [Research weights](models/README.md): frozen development artifacts and limitations.
 - `src/phage_cocktail/`, `scripts/`, `tests/`: implementation, commands and checks.
 - `studies/annotation_recall_audit/`: separate evidence-coverage audit and outputs.
+
