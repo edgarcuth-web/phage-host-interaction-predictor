@@ -16,9 +16,9 @@ limits for each case.
 | Annotation, host 4-mer, additive pair and GenoPHI comparisons | Completed development studies; see the [results index](README.md#results-and-reproduction) |
 | Two-route score/rescue audit | [Offline evaluator implemented](offline-retrieval-rescue-evaluator.md); consumes supplied scores |
 | Fixed-library screening budgets | [Existing-score audit complete](screening-budget-audit.md); grouped-host test cost savings coexist with B2 failure |
-| Published BASEL/ECOR reference | [Sequence audit complete](basel-ecor-sequence-audit.md); [v2 assembly policy and fixed controls evaluated](basel-ecor-controls.md). Cosine Hit@2 4.00% versus random bounds 37.32%–44.06%; learned interaction comparison pending. Not a release holdout |
+| Published BASEL/ECOR reference | [Sequence audit](basel-ecor-sequence-audit.md), [fixed controls](basel-ecor-controls.md) and [bilinear comparison](paired-interaction-results.md) complete. Bilinear primary Hit@2 bounds 48%–60%; not a release holdout |
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
-| Sequence-conditioned learned retrieval | Not trained or validated |
+| Learned host–phage interaction ranking | [Bilinear sequence model trained and compared](paired-interaction-results.md); primary development AP improvement not established. No validated serving/retriever release |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
 

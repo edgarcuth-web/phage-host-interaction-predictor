@@ -1,0 +1,33 @@
+{
+  "status": "verified",
+  "serialized_models": 12,
+  "training_features": 271,
+  "independently_checked_development_scores": 53334,
+  "independently_checked_BASEL_scores": 15600,
+  "independently_checked_BASEL_host_K_rows": 1200,
+  "checks": [
+    "frozen input/code/output identities",
+    "primary MLC reconciliation and 41 unknown exclusions",
+    "fit-only unique-assembly scalers",
+    "18 validation-only trials and deterministic selection",
+    "12 serialized models: independent observation-level gradients and objectives",
+    "independent matrix predictions and weighted sklearn AP/AUROC",
+    "replayed primary phage-group bootstrap and acceptance decision",
+    "separate hypergeometric BASEL Hit/cost/exposure bounds"
+  ],
+  "verifier_sha256": "e08cb9f21236310904a77660d4369722db4bcc91500624dc7672e4234eb13e9c",
+  "published_output_sha256": {
+    "basel_per_host_bounds.csv": "bad2888d1208c9beebdcdc6f28209e8c137635a2bf3e300d42642a2b6960f05b",
+    "basel_scores.csv.gz": "b634932b52c884b39fbaf0beee1cbc79c42d0fb9d0ccbb732387c792898d706b",
+    "development_metrics.csv": "7b25b6cfe67df9550017c2ea9fcbdb811e34661e157d7541288fd17c91c6f463",
+    "development_predictions.csv.gz": "ff4e596469fcd77694b2519040668902a43a411f29bf8321ef6120ed00ae80b2",
+    "excluded_unknown_pairs.csv": "cf45ec993e669860dabcbef0665f47c9e33e94e8b3b67f89baf9e8ae287cd3c5",
+    "models.json": "8e2b1c3713dc6a271c306f6ff851f3e192908a40a771d4fb87d6a6835a6502f1",
+    "observed_pairs.csv.gz": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0",
+    "report.json": "68f113ce71218cb70fb496bfc2adc978714640244e59d4dc13d0d67647d44443",
+    "training_feature_manifest.csv": "bcce8419b21b49902b759c1f8a8202e9f3ad9317e7cf4f058fbbaa9b5af0d4f1",
+    "training_features.csv.gz": "b7d09d916aea6886b843dcccabb5ac1d8803668cc23fe50ba9a77c0a3b88b9d7",
+    "validation_trials.csv": "bf398adb051b10e870fb3dd35a1d257eccce78ca2e85fbd500a70d07c0102f03",
+    "weights.npz": "001755fb70e99e8143f6d22ae7700e6846c133125d5026213da2e95c1b4737e6"
+  }
+}
