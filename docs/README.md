@@ -12,6 +12,7 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | Additive host–phage baseline | [Protocol](paired-benchmark-protocol.md), [split freeze](paired-split-freeze.md), [results](paired-baseline-results.md) |
 | Known-library retrieval | [Annotation baseline](host-retrieval-benchmark.md), [host 4-mer comparison](genome-host-retrieval.md) |
 | GenoPHI | [Demo and runbook](genophi-demo-reproduction.md), [aligned comparator](genophi-frozen-comparator.md), [seed sensitivity](genophi-seed-sensitivity.md) |
+| Screening budgets from existing scores | [Hit/cost curves, grouped intervals and availability](screening-budget-audit.md) |
 | Host controls | [Similarity](host-similarity-evo2.md), [window sampling](host-window-sampling.md) |
 | Evo2 published score reproduction (paused branch) | [Reference results](evo2-retrieval-reference.md) |
 | Hosted Evo2 (paused branch) | [API probe](nvidia-evo2-api.md), [bounded host pilot](nvidia-evo2-host-pilot.md), [extraction runbook](nvidia-evo2-extraction.md) |

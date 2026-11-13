@@ -1,0 +1,87 @@
+{
+  "panels": [
+    {
+      "panel": "grouped_host.seed42",
+      "partition": "validation",
+      "held_out_hosts": 26,
+      "complete_panel_hosts": 26,
+      "eligible_hosts": 26,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed42",
+      "partition": "test",
+      "held_out_hosts": 34,
+      "complete_panel_hosts": 34,
+      "eligible_hosts": 33,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "phylogroup.B2",
+      "partition": "test",
+      "held_out_hosts": 62,
+      "complete_panel_hosts": 61,
+      "eligible_hosts": 60,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "ECOR53"
+      ],
+      "unknown_pairs": 2,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed43",
+      "partition": "validation",
+      "held_out_hosts": 25,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "unknown_pairs": 39,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed43",
+      "partition": "test",
+      "held_out_hosts": 27,
+      "complete_panel_hosts": 27,
+      "eligible_hosts": 25,
+      "all_negative_hosts": 2,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed44",
+      "partition": "validation",
+      "held_out_hosts": 24,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed44",
+      "partition": "test",
+      "held_out_hosts": 23,
+      "complete_panel_hosts": 22,
+      "eligible_hosts": 21,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "unknown_pairs": 39,
+      "candidate_phages": 94
+    }
+  ]
+}

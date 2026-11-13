@@ -19,13 +19,11 @@ labels, candidate libraries and denominators.
 
 ## Decisions for this repository
 
-1. **First: audit screening budgets using existing outputs (B).** Freeze a
-   separate offline analysis plan, source-score hashes, available method/panel
-   coverage, K values and comparisons before calculating additional curves.
-   Reuse full score panels where available; published metric points support only
-   the quantities recoverable from those points. Unsupported curves remain
-   unavailable. This is planned analysis, with no new fit or completed audit
-   claimed by this note.
+1. **Screening budgets using existing outputs (B): completed.** The
+   [separately frozen audit](screening-budget-audit.md) reuses full scores and
+   published points under explicit availability rules, without a new fit.
+   Grouped-host test cost savings coexist with B2 failure and mixed validation
+   results. Unsupported curves remain unavailable.
 2. **Then: diagnose the remaining modeling gap (A, if needed).** Per-phage host
    models already condition on host features. An explicit residual model is an
    optional hypothesis, not a prerequisite for host-conditioned prediction.
