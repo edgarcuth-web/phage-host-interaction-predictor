@@ -16,7 +16,7 @@ limits for each case.
 | Annotation, host 4-mer, additive pair and GenoPHI comparisons | Completed development studies; see the [results index](README.md#results-and-reproduction) |
 | Two-route score/rescue audit | [Offline evaluator implemented](offline-retrieval-rescue-evaluator.md); consumes supplied scores |
 | Fixed-library screening budgets | [Existing-score audit complete](screening-budget-audit.md); grouped-host test cost savings coexist with B2 failure |
-| Published BASEL/ECOR reference | [25-host identity overlap verified; 52 phage accession/sequence audit pending](basel-ecor-identity-protocol-freeze.md). Published-reference Hit@2 bounds protocol frozen, execution blocked; not a release holdout |
+| Published BASEL/ECOR reference | [52 phage accessions and joint sequence audit complete](basel-ecor-sequence-audit.md); 25 host names overlap but assemblies differ. Frozen Hit@2 bounds execution awaits host-build/source review; not a release holdout |
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Sequence-conditioned learned retrieval | Not trained or validated |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |

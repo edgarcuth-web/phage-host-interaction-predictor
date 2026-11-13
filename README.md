@@ -44,11 +44,13 @@ A [published BASEL/ECOR source intake](docs/basel-ecor-published-reference.md)
 pins a 25-host / 52-phage spotting assay matrix. Only 3 hosts have complete
 52-phage labels, so this is a development reference rather than a directly
 usable independent full-panel Hit@K benchmark or a promoted model.
-Its [identity audit and frozen evaluation protocol](docs/basel-ecor-identity-protocol-freeze.md)
-confirm all 25 host IDs occur in training resources, while 52 phage accessions
-and sequence-overlap tests remain unresolved. Hit@2 missing-label bounds are
-specified before any source-compatible model scoring; claims of cold-phage
-performance remain blocked.
+Its [frozen evaluation protocol](docs/basel-ecor-identity-protocol-freeze.md)
+specifies Hit@2 missing-label bounds before model scoring. The subsequent
+[sequence audit](docs/basel-ecor-sequence-audit.md) resolves all 52 accessions:
+no training overlap at the declared 95% identity boundary, but eight candidates
+share training components at 90%. All 25 host IDs are known, while their cited
+assemblies differ from the training FASTAs. Host-build and source-discrepancy
+review still block model scoring.
 
 ## Quick start
 

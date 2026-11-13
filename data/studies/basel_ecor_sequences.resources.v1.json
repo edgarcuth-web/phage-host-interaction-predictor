@@ -1,0 +1,761 @@
+{
+  "schema_version": 1,
+  "study_id": "basel-ecor-sequence-identity-audit:v1",
+  "recorded_at": "2026-11-13",
+  "purpose": "source reconciliation and sequence overlap only; no model scoring",
+  "training_resource_lock_sha256": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+  "grouping_lock_sha256": "cc31b0fb92bebda64afa44012f5d0d990da8fe7d201654303309ad5aa4c0d23b",
+  "host_ids": [
+    "ECOR12",
+    "ECOR13",
+    "ECOR14",
+    "ECOR15",
+    "ECOR16",
+    "ECOR17",
+    "ECOR18",
+    "ECOR19",
+    "ECOR20",
+    "ECOR21",
+    "ECOR22",
+    "ECOR23",
+    "ECOR24",
+    "ECOR25",
+    "ECOR26",
+    "ECOR27",
+    "ECOR28",
+    "ECOR29",
+    "ECOR30",
+    "ECOR31",
+    "ECOR32",
+    "ECOR33",
+    "ECOR34",
+    "ECOR35",
+    "ECOR38"
+  ],
+  "expected_source_discrepancies": {
+    "table8_listed_basel_ids_absent_from_csv": [
+      "Bas18",
+      "Bas38",
+      "Bas44",
+      "Bas46",
+      "Bas48"
+    ],
+    "genome_length_conflicts": [
+      {
+        "phage": "Bas64",
+        "s5_and_sequence_bp": 39842,
+        "genophi_table8_bp": 39451
+      }
+    ]
+  },
+  "manual_table8_column_review": {
+    "interaction_matrix_marked_ids_absent_from_csv": [
+      "Bas38",
+      "Bas44",
+      "Bas46",
+      "Bas48"
+    ],
+    "RB_TnSeq_only_id_absent_from_csv": "Bas18",
+    "decision": "preserve pinned 52-phage CSV panel; do not infer labels for supplementary-only phages"
+  },
+  "source_attribution": {
+    "maffei_s5": "Maffei et al. 2021, PLoS Biology 19:e3001424, original S5 Table; CC BY 4.0",
+    "genophi_supplement": "Noonan et al. 2026, Nature Microbiology, doi:10.1038/s41564-026-02482-5, Supplementary Tables 8 and 9, printed pages 21-23",
+    "genomes": "ENA/INSDC records at individually verified accession versions; host WGS sets under the exact Table 9 master accessions",
+    "redistribution": "this lock and derived identity receipts contain source identifiers and checksums; raw phenotype tables, supplements and genomes are not committed"
+  },
+  "resources": [
+    {
+      "id": "maffei_s5",
+      "kind": "supplement",
+      "path": "maffei_s5.xlsx",
+      "url": "https://journals.plos.org/plosbiology/article/file?type=supplementary&id=10.1371/journal.pbio.3001424.s005",
+      "size_bytes": 33706,
+      "sha256": "759ff1de87b60007f3447b4461575625dc18ca73b266c9ec8d6d731933955742"
+    },
+    {
+      "id": "genophi_supplement",
+      "kind": "supplement",
+      "path": "genophi_supplement.pdf",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41564-026-02482-5/MediaObjects/41564_2026_2482_MOESM1_ESM.pdf",
+      "size_bytes": 16296024,
+      "sha256": "7b52c52a7decbc14d58545803ac5a2e5657cf4f2c86f577cf608442fd804272a"
+    },
+    {
+      "id": "BASEL_ECOR",
+      "kind": "phenotype_source",
+      "path": "source.csv",
+      "url": "https://raw.githubusercontent.com/Noonanav/GenoPHI/f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f/data/experimental_validation/BASEL_ECOR_interaction_matrix.csv",
+      "size_bytes": 18625,
+      "sha256": "bc0426a80b392281815ab24066e97cdc445399a62d67bb4f8e56511088947ba5"
+    },
+    {
+      "id": "Bas01",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas01.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501051.1?download=false",
+      "size_bytes": 51038,
+      "sha256": "0a43546be3152ef7de791a9e37d58077260382397f217b6747066a724333c256",
+      "accession_version": "MZ501051.1"
+    },
+    {
+      "id": "Bas02",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas02.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501080.1?download=false",
+      "size_bytes": 48024,
+      "sha256": "e28eb4e046b2fefa0c12c2e0f1cb3df4f9be9465613c63d0d0ed2aa2d0d2a243",
+      "accession_version": "MZ501080.1"
+    },
+    {
+      "id": "Bas03",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas03.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501087.1?download=false",
+      "size_bytes": 48601,
+      "sha256": "cc11455ff4a5983cd80ec6e818533efa52983cdc8b8020eddba84248cece7cf1",
+      "accession_version": "MZ501087.1"
+    },
+    {
+      "id": "Bas04",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas04.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501069.1?download=false",
+      "size_bytes": 52714,
+      "sha256": "6298f629d4ba42d9101f961d51bd09130b366ffc0298fed822bd959e9f16a0cf",
+      "accession_version": "MZ501069.1"
+    },
+    {
+      "id": "Bas05",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas05.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501101.1?download=false",
+      "size_bytes": 48645,
+      "sha256": "5a1985f770a4a7d13812b41aae8be18ac50a53ffa1c2bb5c5630b2e2ada1869f",
+      "accession_version": "MZ501101.1"
+    },
+    {
+      "id": "Bas06",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas06.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501090.1?download=false",
+      "size_bytes": 52405,
+      "sha256": "dbb4068e9a2ccc167a9cb2f83ed5e912e196af0ca9cfe0d23574c35393539a29",
+      "accession_version": "MZ501090.1"
+    },
+    {
+      "id": "Bas07",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas07.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501079.1?download=false",
+      "size_bytes": 52058,
+      "sha256": "5b56021661111445fb09c11547efdb93946e12b92cd4acccf86e40e9241eff89",
+      "accession_version": "MZ501079.1"
+    },
+    {
+      "id": "Bas08",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas08.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501059.1?download=false",
+      "size_bytes": 51654,
+      "sha256": "96be534a862327817284636cc68ae03a47a5104cbaf733d14602020a2ae252c0",
+      "accession_version": "MZ501059.1"
+    },
+    {
+      "id": "Bas09",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas09.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501099.1?download=false",
+      "size_bytes": 52223,
+      "sha256": "d71fc765a6978a308369ee3b8d3c760ea7b7480cdc399bdd885203dff350fa88",
+      "accession_version": "MZ501099.1"
+    },
+    {
+      "id": "Bas10",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas10.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501077.1?download=false",
+      "size_bytes": 50816,
+      "sha256": "d09655d2fe93ef1d99f8e225021029ff5b5e9f2accae2d69aa8ea4d1a186d97b",
+      "accession_version": "MZ501077.1"
+    },
+    {
+      "id": "Bas12",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas12.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501053.1?download=false",
+      "size_bytes": 50193,
+      "sha256": "6e5a842055093b5f3e857fd105b2b1b66d62be12190ffc03a6e4889f1bffd7b1",
+      "accession_version": "MZ501053.1"
+    },
+    {
+      "id": "Bas13",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas13.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501092.1?download=false",
+      "size_bytes": 51104,
+      "sha256": "4a033dd8608ce6e16d4886e6f15f6460db1986df8c843973c9cf2f6496f038c4",
+      "accession_version": "MZ501092.1"
+    },
+    {
+      "id": "Bas14",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas14.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501107.1?download=false",
+      "size_bytes": 44429,
+      "sha256": "a645172af10894c35e3bcb109f1ef6b6326c0c586e7e4b24c90d01e496134af8",
+      "accession_version": "MZ501107.1"
+    },
+    {
+      "id": "Bas15",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas15.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501097.1?download=false",
+      "size_bytes": 45369,
+      "sha256": "59dbf5bf71941dc41655717e145655fe2315a79302d74eb76b9ce03b6a64bce4",
+      "accession_version": "MZ501097.1"
+    },
+    {
+      "id": "Bas16",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas16.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501070.1?download=false",
+      "size_bytes": 45109,
+      "sha256": "de6af2031c11b19741f6e6e33de0b7f96c2cd6592d1eb8e26c156fea6dace092",
+      "accession_version": "MZ501070.1"
+    },
+    {
+      "id": "Bas17",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas17.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501088.1?download=false",
+      "size_bytes": 43894,
+      "sha256": "f1a51fc6aa707b1bc78061ecdc6561efffe2bc018c63a2ea9f09c985cafecbaa",
+      "accession_version": "MZ501088.1"
+    },
+    {
+      "id": "Bas19",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas19.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501057.1?download=false",
+      "size_bytes": 59118,
+      "sha256": "94ddb9f57e00b5390c42122fa5d038aa222e1bf82537aabc19ab67b8cf66e367",
+      "accession_version": "MZ501057.1"
+    },
+    {
+      "id": "Bas20",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas20.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501068.1?download=false",
+      "size_bytes": 60907,
+      "sha256": "b73d7ab63f8ebb4d65b655f6608bfcb02cd671a2d2833605df9568ab482e15b7",
+      "accession_version": "MZ501068.1"
+    },
+    {
+      "id": "Bas21",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas21.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501071.1?download=false",
+      "size_bytes": 57610,
+      "sha256": "9db3e6a8c0500302c0747a9eaf0341d98cd07233922db66c492a6ce4d9945269",
+      "accession_version": "MZ501071.1"
+    },
+    {
+      "id": "Bas22",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas22.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501091.1?download=false",
+      "size_bytes": 59618,
+      "sha256": "a6e83950430c1bdb2170839cd1d6e590014e6fe3f8e6df3fb7cad4f93cb24340",
+      "accession_version": "MZ501091.1"
+    },
+    {
+      "id": "Bas25",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas25.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501110.1?download=false",
+      "size_bytes": 59387,
+      "sha256": "0bbf1932d174ff0138276085ab33a587cdc3088102394ea41508cb949afe5651",
+      "accession_version": "MZ501110.1"
+    },
+    {
+      "id": "Bas27",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas27.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501108.1?download=false",
+      "size_bytes": 116156,
+      "sha256": "935fce3f74aa12240b7eab9da0dcf9e8649313110c4ff8c0cd39bfec442ce4b8",
+      "accession_version": "MZ501108.1"
+    },
+    {
+      "id": "Bas28",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas28.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501076.1?download=false",
+      "size_bytes": 117444,
+      "sha256": "1036ef6d85a2e8acf29a45dd2c5be8747b0df587b20c4c5a7d081cd34ef95a17",
+      "accession_version": "MZ501076.1"
+    },
+    {
+      "id": "Bas29",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas29.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501105.1?download=false",
+      "size_bytes": 112740,
+      "sha256": "ced4079dd16631e413b22cd6348130c44b463e73d8784a5b6325fb917b655387",
+      "accession_version": "MZ501105.1"
+    },
+    {
+      "id": "Bas31",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas31.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501058.1?download=false",
+      "size_bytes": 115499,
+      "sha256": "d3d44a6bd5050e03a52fb6893982e4d5578e1c60a99f7cb418a016e25a613f59",
+      "accession_version": "MZ501058.1"
+    },
+    {
+      "id": "Bas33",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas33.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501074.1?download=false",
+      "size_bytes": 113542,
+      "sha256": "063edb4fd3ece4f15746cd8435060f05fa66430ad0e4a1d10bee2daf722fd6f3",
+      "accession_version": "MZ501074.1"
+    },
+    {
+      "id": "Bas34",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas34.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501103.1?download=false",
+      "size_bytes": 108937,
+      "sha256": "8421e4c883364e0ebbf430e2e474075a374c60b11152c2b044e866b9324c2351",
+      "accession_version": "MZ501103.1"
+    },
+    {
+      "id": "Bas35",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas35.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501113.1?download=false",
+      "size_bytes": 169715,
+      "sha256": "60f4351f371e3858838a07f5c6c0c465ed12c5c601de52d7d215202bf5828adc",
+      "accession_version": "MZ501113.1"
+    },
+    {
+      "id": "Bas36",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas36.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501096.1?download=false",
+      "size_bytes": 170600,
+      "sha256": "408a6d9da2a7adaba1e6be8f86f5d1cb089bd1b86a3fd0405e2c164bb43469a1",
+      "accession_version": "MZ501096.1"
+    },
+    {
+      "id": "Bas37",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas37.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501089.1?download=false",
+      "size_bytes": 170701,
+      "sha256": "eeeeb858d2c44494c064a64e7b27d0ae8c8771dbbc87e9f0d57203e71c606d62",
+      "accession_version": "MZ501089.1"
+    },
+    {
+      "id": "Bas39",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas39.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501066.1?download=false",
+      "size_bytes": 172414,
+      "sha256": "5962fc827a8720ff6feec1110c091e1827ec8a20b95af4b06984e97688544f81",
+      "accession_version": "MZ501066.1"
+    },
+    {
+      "id": "Bas41",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas41.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501067.1?download=false",
+      "size_bytes": 168413,
+      "sha256": "fa1d56feefac1b274977620e6a10e10e1b0771137c61d3b60c0f4156a655bcbe",
+      "accession_version": "MZ501067.1"
+    },
+    {
+      "id": "Bas42",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas42.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501050.1?download=false",
+      "size_bytes": 171137,
+      "sha256": "1b18eec213df6db9b055c9be7b88f17a321669c28475447ffaf83912ca69ff8c",
+      "accession_version": "MZ501050.1"
+    },
+    {
+      "id": "Bas43",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas43.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501106.1?download=false",
+      "size_bytes": 168963,
+      "sha256": "e77c33cd22cf5785e6b76508df8363d6724ebfea1b27e05d34157595cff79f46",
+      "accession_version": "MZ501106.1"
+    },
+    {
+      "id": "Bas45",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas45.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501098.1?download=false",
+      "size_bytes": 172962,
+      "sha256": "7dfc3b635d957a85227019d677105399d425f4be4d4069509ac216295b0d9555",
+      "accession_version": "MZ501098.1"
+    },
+    {
+      "id": "Bas47",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas47.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501047.1?download=false",
+      "size_bytes": 171860,
+      "sha256": "bb3e6bc783d2c1f46687e190b6947735d245a37767f058f449b2c0159fcb0591",
+      "accession_version": "MZ501047.1"
+    },
+    {
+      "id": "Bas49",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas49.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501062.1?download=false",
+      "size_bytes": 142384,
+      "sha256": "3f20c752fb8d446a246296ba2a85778f9a68e454f8afb35d387fa6c61f82b3fc",
+      "accession_version": "MZ501062.1"
+    },
+    {
+      "id": "Bas51",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas51.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501111.1?download=false",
+      "size_bytes": 143079,
+      "sha256": "9cdcbbe847b461b67dd82aa51d387468bfe5ee16dd3de395abe89e86179e345b",
+      "accession_version": "MZ501111.1"
+    },
+    {
+      "id": "Bas52",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas52.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501102.1?download=false",
+      "size_bytes": 139743,
+      "sha256": "a19e268aa2da4a13200ebf8cf04b3a3a4c86ce2d811f2b303306c35f89fba869",
+      "accession_version": "MZ501102.1"
+    },
+    {
+      "id": "Bas54",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas54.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501093.1?download=false",
+      "size_bytes": 138690,
+      "sha256": "392927b535067beb0d2b14bb9917e43272666c07f536ac1034b2177af5c4c8d9",
+      "accession_version": "MZ501093.1"
+    },
+    {
+      "id": "Bas56",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas56.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501048.1?download=false",
+      "size_bytes": 137672,
+      "sha256": "6e70019db88e424c1eacc757ec914659a53d3b8da38fd9bd52dabf9adec63c46",
+      "accession_version": "MZ501048.1"
+    },
+    {
+      "id": "Bas57",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas57.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501094.1?download=false",
+      "size_bytes": 137384,
+      "sha256": "af1197d86eac92186c2bb911d450da317d79b1ede84e6f40b01c83cbe9939135",
+      "accession_version": "MZ501094.1"
+    },
+    {
+      "id": "Bas58",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas58.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501073.1?download=false",
+      "size_bytes": 139266,
+      "sha256": "938702448ec2d2cf69ce5925c0dd9b311c88f7affc7d71a66486b635540da16f",
+      "accession_version": "MZ501073.1"
+    },
+    {
+      "id": "Bas59",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas59.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501061.1?download=false",
+      "size_bytes": 133799,
+      "sha256": "49495aba961791139c40148e863ba880868dd67ca17f03921aef065234d6d22c",
+      "accession_version": "MZ501061.1"
+    },
+    {
+      "id": "Bas60",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas60.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501100.1?download=false",
+      "size_bytes": 153007,
+      "sha256": "89710002834f456977d97d20b508e80e955b90d2762f30fc5cff499a8c5df1ce",
+      "accession_version": "MZ501100.1"
+    },
+    {
+      "id": "Bas61",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas61.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501063.1?download=false",
+      "size_bytes": 149183,
+      "sha256": "cc4308ece45a52d717f4d3c2cb8eb35b9b4c0c33aaead47f318ecb8e12ea83af",
+      "accession_version": "MZ501063.1"
+    },
+    {
+      "id": "Bas63",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas63.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501086.1?download=false",
+      "size_bytes": 88630,
+      "sha256": "1d6ccd723bad000733d6e8806f4bbc518950a34fb215dd19dd5e81a6239346ae",
+      "accession_version": "MZ501086.1"
+    },
+    {
+      "id": "Bas64",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas64.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501081.1?download=false",
+      "size_bytes": 40581,
+      "sha256": "e71044a072422f5ac752a43c5f79bb28deb638bd5d6a0c44673a428601b48555",
+      "accession_version": "MZ501081.1"
+    },
+    {
+      "id": "Bas65",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas65.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501078.1?download=false",
+      "size_bytes": 40186,
+      "sha256": "7cff84552009c29691f838f03d8ac97db9a2ca13fee4bca5be2353878a5bb963",
+      "accession_version": "MZ501078.1"
+    },
+    {
+      "id": "Bas67",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas67.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501064.1?download=false",
+      "size_bytes": 40045,
+      "sha256": "43910aec9bdee107b1d79009252255e6df77eb087018e39176458a0b8ec241c1",
+      "accession_version": "MZ501064.1"
+    },
+    {
+      "id": "Bas68",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas68.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501055.1?download=false",
+      "size_bytes": 40199,
+      "sha256": "70de54c1821f8bdf8319d158628587ca425edf23836bb5f1c12f427fca03fc32",
+      "accession_version": "MZ501055.1"
+    },
+    {
+      "id": "Bas69",
+      "kind": "basel_phage_genome",
+      "path": "basel/Bas69.fasta",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/MZ501049.1?download=false",
+      "size_bytes": 72104,
+      "sha256": "aed8086cef2e3515f40802f165bd3f6a60434ceb2bf5805531cf7152415ccec4",
+      "accession_version": "MZ501049.1"
+    },
+    {
+      "id": "ECOR12",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR12.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOWX00000000?download=false",
+      "size_bytes": 1591471,
+      "sha256": "6b55a85a8d8f35f2bef78cd7ef358e36d3ed09ce6de0f14ea16166b207e6db6f"
+    },
+    {
+      "id": "ECOR13",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR13.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOWY00000000?download=false",
+      "size_bytes": 1450212,
+      "sha256": "2e19b68cfe1e511c373a4718668d2cfe747e4236361f1f96d6bacf9038dc560d"
+    },
+    {
+      "id": "ECOR14",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR14.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOWZ00000000?download=false",
+      "size_bytes": 1549188,
+      "sha256": "0a2270fc1ce8f9859f572fb5224a649e9b0d921cbe265718a3cebd0afc60d3f7"
+    },
+    {
+      "id": "ECOR15",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR15.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXA00000000?download=false",
+      "size_bytes": 1538730,
+      "sha256": "04780d1324e21189acb69d597e9f1a5ce82335a6537afeebd30cd8f9f3690f98"
+    },
+    {
+      "id": "ECOR16",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR16.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXB00000000?download=false",
+      "size_bytes": 1454973,
+      "sha256": "41fae0ea4b59950fdf70aebd19fc0b408e808be3b313fb78a7f16ce2cd6c2799"
+    },
+    {
+      "id": "ECOR17",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR17.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXC00000000?download=false",
+      "size_bytes": 1413852,
+      "sha256": "1b4b6dccdabdf98760dfb052ca26b538fb4818d12a998b8ec33fb3105a772b36"
+    },
+    {
+      "id": "ECOR18",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR18.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXD00000000?download=false",
+      "size_bytes": 1453208,
+      "sha256": "5b782d48e4c80811de438b7653399451b97301cd29d1467ec292bb1e52645975"
+    },
+    {
+      "id": "ECOR19",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR19.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXE00000000?download=false",
+      "size_bytes": 1424016,
+      "sha256": "4573d59b88b0b1cb35c88624251a5113ccff17a3b4821f783e29c4d625926c97"
+    },
+    {
+      "id": "ECOR20",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR20.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXF00000000?download=false",
+      "size_bytes": 1442256,
+      "sha256": "3a822babbe567141b8c001c5470ad48b3959e0f33cbfad1c4389c259f299ccb0"
+    },
+    {
+      "id": "ECOR21",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR21.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXG00000000?download=false",
+      "size_bytes": 1433706,
+      "sha256": "75139f740330b0e0f0274b3f0ee89cffe100c253bc887767da0bdf2d6f53faaf"
+    },
+    {
+      "id": "ECOR22",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR22.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXH00000000?download=false",
+      "size_bytes": 1412747,
+      "sha256": "f3db6307d386fe86262b10ea1e97b3ed074590776657c09489cd1302d5c5cb19"
+    },
+    {
+      "id": "ECOR23",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR23.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXI00000000?download=false",
+      "size_bytes": 1594179,
+      "sha256": "36aa9c379a8f91114724ca7e906ce46766481a01ba9942daf5b5afc2ac718b58"
+    },
+    {
+      "id": "ECOR24",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR24.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXJ00000000?download=false",
+      "size_bytes": 1637139,
+      "sha256": "8dd7c2e190b7cf1dc822bfebdd6a3d5fde9222cea2dd31a1a33f5c1479382cd4"
+    },
+    {
+      "id": "ECOR25",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR25.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXK00000000?download=false",
+      "size_bytes": 1488368,
+      "sha256": "3cba9160046cd6cb853c6949eff61ec6ae9d2ced292542c07b26eff42db5679b"
+    },
+    {
+      "id": "ECOR26",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR26.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXL00000000?download=false",
+      "size_bytes": 1462817,
+      "sha256": "3abb3b8c0a04a9d0795db05019775d5d4fe5c9dab4e50d7b3f435d6df3313833"
+    },
+    {
+      "id": "ECOR27",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR27.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXM00000000?download=false",
+      "size_bytes": 1522526,
+      "sha256": "6a3c7eaa25f4570aac054cf7e971bb2910fedf2c3f70f37196f768d2c39a5307"
+    },
+    {
+      "id": "ECOR28",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR28.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXN00000000?download=false",
+      "size_bytes": 1541516,
+      "sha256": "5d35d545a727b55dd8ba9e2d5c92ff1c3aeb4313f5f2d64f03c5f5f0350866f6"
+    },
+    {
+      "id": "ECOR29",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR29.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXO00000000?download=false",
+      "size_bytes": 1542222,
+      "sha256": "f9a915347e3ef0c22fdeeb379365545c676bdd0a533e1fd09568efb72358739e"
+    },
+    {
+      "id": "ECOR30",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR30.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXP00000000?download=false",
+      "size_bytes": 1509417,
+      "sha256": "84cd1d940d7b7e49bc0b6d585a94020b89dd9e57b09c89dcbcd204efa383647f"
+    },
+    {
+      "id": "ECOR31",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR31.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXQ00000000?download=false",
+      "size_bytes": 1660913,
+      "sha256": "77d6898b3e7727ed5cc09fb09e6659e9e1ab7dacb063c806fdd2f9b40ec2645f"
+    },
+    {
+      "id": "ECOR32",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR32.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXR00000000?download=false",
+      "size_bytes": 1501461,
+      "sha256": "f6ac85ee2816ea83f5180e492ac0f15265c0c7fc2bf022106f301863d25dcccf"
+    },
+    {
+      "id": "ECOR33",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR33.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXS00000000?download=false",
+      "size_bytes": 1501441,
+      "sha256": "233929ec74ec592f9e90ade72f34816117721e87d9817670b7163602267b71f5"
+    },
+    {
+      "id": "ECOR34",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR34.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXT00000000?download=false",
+      "size_bytes": 1537213,
+      "sha256": "d8ab5afb4b669976c36f72ad918dd9290346f70724925523a75fc5622b938551"
+    },
+    {
+      "id": "ECOR35",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR35.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXU00000000?download=false",
+      "size_bytes": 1603480,
+      "sha256": "95d68e00f0cd4b4e65b0607d9d24c8a65e98ec06ea57efcbed0504407488f7af"
+    },
+    {
+      "id": "ECOR38",
+      "kind": "published_host_genome",
+      "path": "published_hosts/ECOR38.fasta.gz",
+      "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/QOXX00000000?download=false",
+      "size_bytes": 1644558,
+      "sha256": "87457bf2707ca63501651ddd7e4313ca6951cebbf769f95a614af6056105d557"
+    }
+  ]
+}

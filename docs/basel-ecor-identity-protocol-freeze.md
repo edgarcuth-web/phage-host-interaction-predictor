@@ -2,6 +2,8 @@
 
 **Status (2026-11-13): protocol frozen; sequence-identity gate NOT cleared; no model scored under it.**
 
+**Follow-up:** the [subsequent accession and sequence audit](basel-ecor-sequence-audit.md) resolves all 52 phage accessions and completes the joint phage comparison. It also finds different host assemblies and supplementary-source discrepancies; execution remains blocked. The ledger and protocol below preserve the earlier freeze state.
+
 This is a **published, already-inspected reference** from Noonan et al., [GenoPHI](https://doi.org/10.1038/s41564-026-02482-5), **not** an untouched release-validation set. The [source intake](basel-ecor-published-reference.md) pins 25 host IDs, 52 BASEL phage IDs, 1,240 observed binary spot-clearance rows (302 positives/938 negatives) and 60 unreported/ambiguous pairs. We do not turn unknown pairs into negatives or source clearance into productive infection.
 
 ## Identity check already completed

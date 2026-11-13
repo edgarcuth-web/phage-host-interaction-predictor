@@ -27,8 +27,9 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | Data and development weights | [Inputs and rebuilds](../data/README.md), [model cards](../models/README.md) |
 | Supplied-score comparison | [Implemented offline retrieval-rescue evaluator](offline-retrieval-rescue-evaluator.md) |
 | External evaluation intake | [Exact overlap and source-lineage gate](external-evaluation-intake.md) (does not certify independence) |
-| Published BASEL/ECOR E. coli stress-test reference | [Pinned source-only intake and missing-label caveats](basel-ecor-published-reference.md) | 
+| Published BASEL/ECOR E. coli stress-test reference | [Pinned source-only intake and missing-label caveats](basel-ecor-published-reference.md) |
 | BASEL identity and preregistered evaluation | [Host overlap audit, blocked phage sequence checks and frozen Hit@2 bounds](basel-ecor-identity-protocol-freeze.md) |
+| BASEL accession and sequence results | [52 accessions, joint phage overlap, differing host assemblies and source discrepancies](basel-ecor-sequence-audit.md) |
 
 ## Design references
 
