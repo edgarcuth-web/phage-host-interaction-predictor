@@ -36,6 +36,10 @@ results do not establish superiority on new data. See the
 The [existing-score budget audit](docs/screening-budget-audit.md) finds test-cost
 savings on the grouped-host splits, with B2 failure and mixed validation results.
 
+The [external-evaluation intake gate](docs/external-evaluation-intake.md) can audit
+source-lineage and exact assembly overlap for proposed new data. This is a
+conservative software check, **not** an independently validated holdout.
+
 ## Quick start
 
 Use Python 3.11+ in an activated virtual environment, from the repository root:
