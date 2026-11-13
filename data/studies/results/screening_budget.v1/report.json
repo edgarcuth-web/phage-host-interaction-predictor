@@ -1,0 +1,184 @@
+{
+  "study_id": "screening-budget-audit:v1",
+  "status": "descriptive_existing_score_audit_complete",
+  "protocol_sha256": "c0bf508f41717b14b5a2741320c070d34178afaa488ddbeee8ccba0ae5df3795",
+  "implementation_sha256": "54330f44ce9f48df0548be6eddcb6f9f817580638f78c9c9f1104daea9509c2d",
+  "new_learned_model_fits": 0,
+  "new_provider_requests": 0,
+  "cohort_panels": 4,
+  "partition_panels": 7,
+  "per_host_rows": 1429,
+  "curve_rows": 450,
+  "contrast_rows": 764,
+  "incomplete_support": [
+    {
+      "panel": "grouped_host.seed42",
+      "partition": "validation",
+      "held_out_hosts": 26,
+      "complete_panel_hosts": 26,
+      "eligible_hosts": 26,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed42",
+      "partition": "test",
+      "held_out_hosts": 34,
+      "complete_panel_hosts": 34,
+      "eligible_hosts": 33,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "phylogroup.B2",
+      "partition": "test",
+      "held_out_hosts": 62,
+      "complete_panel_hosts": 61,
+      "eligible_hosts": 60,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "ECOR53"
+      ],
+      "unknown_pairs": 2,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed43",
+      "partition": "validation",
+      "held_out_hosts": 25,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "unknown_pairs": 39,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed43",
+      "partition": "test",
+      "held_out_hosts": 27,
+      "complete_panel_hosts": 27,
+      "eligible_hosts": 25,
+      "all_negative_hosts": 2,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed44",
+      "partition": "validation",
+      "held_out_hosts": 24,
+      "complete_panel_hosts": 24,
+      "eligible_hosts": 24,
+      "all_negative_hosts": 0,
+      "incomplete_hosts_excluded": [],
+      "unknown_pairs": 0,
+      "candidate_phages": 94
+    },
+    {
+      "panel": "grouped_host.seed44",
+      "partition": "test",
+      "held_out_hosts": 23,
+      "complete_panel_hosts": 22,
+      "eligible_hosts": 21,
+      "all_negative_hosts": 1,
+      "incomplete_hosts_excluded": [
+        "370D"
+      ],
+      "unknown_pairs": 39,
+      "candidate_phages": 94
+    }
+  ],
+  "interval_scope": "Pointwise, unadjusted descriptive percentile intervals conditional on fitted models, library and split. No significance gate, p-value selection or independent-confirmation claim.",
+  "limitations": [
+    "All listed cohorts and source results have already been inspected; seeds and B2 are development panels, not fresh release validation.",
+    "B2 is included once, without refitting; overlapping seed panels are neither pooled nor treated as independent.",
+    "Score-only audits inherit the original fitting/pretraining and representation limitations; source artifact integrity is not a new model validation.",
+    "The first-hit median can already equal one; there is no one-test-median-reduction acceptance gate.",
+    "No uncertain-score fallback, new union policy, residual fit or cocktail optimizer is selected in this audit.",
+    "Lack of a positive interval does not establish absence of useful host information or justify a general claim beyond this source endpoint and library."
+  ],
+  "source_files_sha256": {
+    "data/registry/genophi_ecoli_subset.v1.json": "0fdd836ca207121ac382814302efeedbdb9939b219a76e3130eb554f1b60bc97",
+    "data/studies/genophi_host_baseline.resources.v1.json": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+    "data/studies/results/genome_host_retrieval.seed43.v1/NUMERIC_QA.json": "2f2aa432aba9f718e938fde528e65aa5bb4add37310de2a7e73b9698c735f479",
+    "data/studies/results/genome_host_retrieval.seed43.v1/per_host_metrics.csv": "e5b83406acdd5ae5725c841398b84ea15f9c35d62e4b0a85407ed16dd3f3ec4d",
+    "data/studies/results/genome_host_retrieval.seed43.v1/predictions.csv.gz": "f1255c39beee86f3a700b9ffe88d6b37b0f2396fb476b4dc47523c32b4d395b7",
+    "data/studies/results/genome_host_retrieval.seed44.v1/NUMERIC_QA.json": "4bbee6180f47aac2ee68313887b174013bc7c58d961a3232ae287c5fe7a4c5b9",
+    "data/studies/results/genome_host_retrieval.seed44.v1/per_host_metrics.csv": "938ac9b7c0458f7a08367a593558dbb7ceef7c30e97567a00c5eadf7ea478a2d",
+    "data/studies/results/genome_host_retrieval.seed44.v1/predictions.csv.gz": "92a7f74899043793930bf8ce688e361b46f6ac8c9dc52ad61374bb07c16ae189",
+    "data/studies/results/genome_host_retrieval.v1/per_host_metrics.csv": "ffaa3817d0f49f7d88f04fa02f5be9f6b0dfe10cf85d5c218a1e05a8a538ee9d",
+    "data/studies/results/genophi_comparator.seed43.v1/NUMERIC_QA.json": "b6cd5b91a2bdfdefd46df94645cfb4fb7180bfe4191107ab1b1f5d18d0d9bbf2",
+    "data/studies/results/genophi_comparator.seed43.v1/grouped_host_candidate_scores.csv": "e95ec5ef297fb25aa7c8e1d6a50c5ec0b0f67067f7e6ccb2622c0443af81457f",
+    "data/studies/results/genophi_comparator.seed43.v1/grouped_host_prevalence_scores.csv": "71ba76b1398049a7f8995009681641989bb13f2e721ff42f1e3cfe0021b2a2f4",
+    "data/studies/results/genophi_comparator.seed43.v1/per_host_metrics.csv": "668c8f96ce2b71bd4107ce2d208456ca3caa6ca31f9bdacccf6b52f1411bc878",
+    "data/studies/results/genophi_comparator.seed43.v1/scenario_splits.csv": "c68ec8366c4f25b4bc10ae817a54844a9883817c41ff08e8a6e3bf898e0de5ab",
+    "data/studies/results/genophi_comparator.seed44.v1/NUMERIC_QA.json": "3bb57c3f5f9e17b63a0941f3a06ff103eb88f3bc8a1e2478f2b420ae3c904695",
+    "data/studies/results/genophi_comparator.seed44.v1/grouped_host_candidate_scores.csv": "a1bbce524c313be4aebeb3fde6706c6d08f10cba44969aafc69897e8b413b593",
+    "data/studies/results/genophi_comparator.seed44.v1/grouped_host_prevalence_scores.csv": "f792126133f50cfd4d1681d658139f08d266aac1f6cce65bd404fdd886589869",
+    "data/studies/results/genophi_comparator.seed44.v1/per_host_metrics.csv": "e1239ca5fcd97ae61d1d8de07851a77d6ce26b4d8b9117a29f66befdf23a83aa",
+    "data/studies/results/genophi_comparator.seed44.v1/scenario_splits.csv": "94c41f1cd86dbc113392a279b64e1b7bb7582583cb6aefbd7476375b4678cc34",
+    "data/studies/results/genophi_comparator.v1/NUMERIC_QA.json": "5aec4b0d6c0f5dda00e78e7397703a4eb6fe3d5ec260b5255f7e54e5c1ae5e70",
+    "data/studies/results/genophi_comparator.v1/grouped_host_candidate_scores.csv": "93e922d235231ad71cd2be4e8ac92e1a7563fd84b63a9e9e9df28b0c845cc65e",
+    "data/studies/results/genophi_comparator.v1/per_host_metrics.csv": "eff92c59deabb4409241db8ded66827e38af4977fc3a960bb7f7afecdfb0fdd6",
+    "data/studies/results/genophi_comparator.v1/phylogroup_B2_candidate_scores.csv": "8a384a3d2fdf8033fcbe0cef30f50402ef0362c9c17434d7aac7cd5923bbe015",
+    "data/studies/results/genophi_comparator.v1/scenario_splits.csv": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+    "data/studies/results/host_similarity.v1/per_host_metrics.csv": "825ad956d8cfa5453c9ff226b577ab005937b52f8bdffeba435cb14c90548415"
+  },
+  "output_sha256": {
+    "availability.csv": "be6e0030c998f5ad3bc0dfa89cef79f9cf3e1e8828da043ccdc5891891a60ed4",
+    "contrasts.csv": "091a81adf0201e9cf91429a113f5b5436996e64a259ce2c4480287082612f6ae",
+    "curves.csv": "64a53237fef47a72e88bcc7db30929bb001d9a80cffd15db5d474250ca6a9c07",
+    "per_host_metrics.csv": "cdb0326ffbf3edcbfdc4e284c727c30a3dec2d1c418f962ce906c305295d8400",
+    "support.json": "05d01b502ae8805170e09a4060eea9cd8c77ef01bdbc4822b260fbf0913e6039"
+  },
+  "provenance": {
+    "code_base_revision": "ef0729017428f65a3529908a9f8b231358d60458",
+    "code_sha256": {
+      "scripts/run_screening_budget_audit.py": "e05c7dde3255fa3e248a1a1280b6f5a1fbb9b93263d7778d20a5f88abc307b85",
+      "src/phage_cocktail/__init__.py": "280d2957c45f8f0c4fc7d8746cd9ffd38c6f804663d17eb3802a80edec62ab2f",
+      "src/phage_cocktail/analysis.py": "a5a5bd05886499bb7fc7cac43e876678e09f9b070d765469518042c93a0ecf7e",
+      "src/phage_cocktail/artifacts.py": "a96f901d3b653bf22dbbc80d59adcf0f2f855d117db93f19580a131bcb0cc659",
+      "src/phage_cocktail/benchmark.py": "be6be1e3abaa2347e7eff42f507cc6eb0f4ed93823d13e6293bfc7eca199b992",
+      "src/phage_cocktail/cohort.py": "f54e1f19a82a3165b0bec523d80ed3f356990a903e7af7ea13b4d6f553a9c688",
+      "src/phage_cocktail/data.py": "7ed230c370d99cd451929171ce2a8db76a245d1e1455c37cdeef1f1db366e916",
+      "src/phage_cocktail/evo2_host.py": "348d228010a2633ce0d6006dcfc342dc20aac9af1d1af1788ec0cb9f23c74936",
+      "src/phage_cocktail/evo2_reference.py": "9c16500836e98ccc513e94f24d6d742dd128d54ef384f1a26b13c0096b24daef",
+      "src/phage_cocktail/extraction_store.py": "de58ab985db36c726c3188cf12f48442a1b47c01f22e932e16a8e70a5eebe117",
+      "src/phage_cocktail/genophi_comparator.py": "aba2d358b9926a30aaf79ce0cbf6f02e1ded028d7636b60b6f581c664f6e5f12",
+      "src/phage_cocktail/genophi_proteomes.py": "9c4189cba4caece1f1b78fb048a22aa091f16635cf823391787f83cc37258566",
+      "src/phage_cocktail/genophi_reference.py": "29b113336119e963c8e0b9eef821346501e96d5967506104d475142d63bd9f62",
+      "src/phage_cocktail/genophi_seed_protocols.py": "ed4c517c9750f643b46592ec9c811a0c573dd58a5ee4003245f739905ea56a9c",
+      "src/phage_cocktail/host_baseline.py": "38757f454aa6e9c7f8873f7fa00ebecd481c0998c264420b415e6b163b5fb0a3",
+      "src/phage_cocktail/host_genome.py": "146331d3331d45a4a8eb8d4920aca6e034148040cacba2f930e45104247e955d",
+      "src/phage_cocktail/host_sampling.py": "793e17b7b9157087c4dd851856d6a88e76e1ce9f64113758b7b09b0f692ee620",
+      "src/phage_cocktail/host_similarity.py": "43012d980cb0b5f7168a8971669a5b7dfa09d7fea21be9fff2a8f7b1b1068029",
+      "src/phage_cocktail/host_study.py": "d3eaf3b5738ef45a65905e3c4b05e32b4fa8c89127c8a09784fd00ae8a68b496",
+      "src/phage_cocktail/hosted_evo2.py": "875611cd44ac15a56f1bee2fcc2c78011049afa22dd54b5242013ae80ae55066",
+      "src/phage_cocktail/input_bundle.py": "d6ef3fe2ae342a166da0b6bed52ef99cd53394557a55d30fd7c18abc43f1f96a",
+      "src/phage_cocktail/model_interface.py": "2426b6573ca8128f45d2e1e0e0e39869ae80c7336c6c3a0cffd6b1a2a41b4e5a",
+      "src/phage_cocktail/nvidia_evo2.py": "7d26484c46b0cbf6e9bbeb9d2725c7502cbab54337c9c611abe1c7c8fcfba33f",
+      "src/phage_cocktail/nvidia_host_extraction.py": "4b95d22fb957eaf7f979c043da7dc20e31bc78a37481b931cbceaf2befd7ef26",
+      "src/phage_cocktail/nvidia_host_pilot.py": "6a161fec6ce43f26e914d0cc6667720ffe3776661421645a5544b609bdf6ec4f",
+      "src/phage_cocktail/pair_cohort.py": "4b0ec4dc6d23b12e767ff102c75f197bb049b04870cacffd970a73183a3e7560",
+      "src/phage_cocktail/paired_baseline.py": "22df6d5a3b3ef295ea9acf322deba477b29e3bb46926d85655649ab89b97864f",
+      "src/phage_cocktail/paired_splits.py": "4ea669786f653aca0d2ce5eacae14c96bf3df46bb81d267ebf9f9310abe5ae55",
+      "src/phage_cocktail/registry.py": "a33cb7484bcdbb3d26c699f02a45c9e00354f21fdd52818c5abb52f807cef194",
+      "src/phage_cocktail/retrieval.py": "378705d8655647450aac214e67501f0495077e5f69fe559e00640c85e0189034",
+      "src/phage_cocktail/retrieval_rescue.py": "ba598e1a5d0de8c94492489ab9d506540348633c512f507c8be2dc7ff6118189",
+      "src/phage_cocktail/retrieval_signflip.py": "1f8638713ff624c1c5691166fdf1f40bb240b3651e8d58f03edeae00a2effd2a",
+      "src/phage_cocktail/retrieval_study.py": "8403e735bdcc959d88f44daff6419838fa7f04d1df3c57f7c45f4962ca8b7c6e",
+      "src/phage_cocktail/split.py": "aed316aa5cd265ac65df7dd8e906b148fd891ad2e3da86dffcac9fa6fbabe5dd"
+    }
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}

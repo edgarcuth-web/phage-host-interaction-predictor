@@ -15,6 +15,7 @@ limits for each case.
 | --- | --- |
 | Annotation, host 4-mer, additive pair and GenoPHI comparisons | Completed development studies; see the [results index](README.md#results-and-reproduction) |
 | Two-route score/rescue audit | [Offline evaluator implemented](offline-retrieval-rescue-evaluator.md); consumes supplied scores |
+| Fixed-library screening budgets | [Existing-score audit complete](screening-budget-audit.md); grouped-host test cost savings coexist with B2 failure |
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Sequence-conditioned learned retrieval | Not trained or validated |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
@@ -63,12 +64,11 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-1. Freeze an offline screening-budget audit of existing score panels and
-   published metrics before calculating additional curves. Report hit probability,
-   capped test consumption, method/panel availability and paired host-group
-   uncertainty under the existing library, endpoint, eligibility and tie rules.
-   This is the next planned analysis; it requires no new model fit.
-2. Use that audit to identify gaps worth a new retrieval study. Before fitting,
+1. Use the [completed budget audit](screening-budget-audit.md) to specify a
+   concrete generalization/data hypothesis worth a new study. Cost savings on
+   inspected grouped-host tests coexist with B2 failure and mixed validation
+   results; an explicit residual model remains optional.
+2. Before fitting a new retrieval model,
    freeze library/sequence hashes, labels, missingness, feature availability,
    grouped splits, model versions, K/ties and candidate budgets. Reserve
    independent release data; the inspected cohort remains development data.

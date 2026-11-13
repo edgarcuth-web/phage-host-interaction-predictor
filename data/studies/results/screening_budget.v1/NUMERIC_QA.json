@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "report_sha256": "b8843f4258fe74e017134b7952573c782a4e32c363a3899aed27ba5acfaf7c1a",
+  "protocol_sha256": "c0bf508f41717b14b5a2741320c070d34178afaa488ddbeee8ccba0ae5df3795",
+  "verification_script_sha256": "79e9b8df445adbf6e94fae0f8da0fde9b1625567e3b69bef7a89076808288fdc",
+  "per_host_rows_independently_checked": 1429,
+  "contrasts_independently_checked": 764,
+  "arithmetic": "Exact Fraction first-positive PMF; independently expanded paired group bootstrap",
+  "new_learned_model_fits": 0,
+  "new_provider_requests": 0
+}
