@@ -1,0 +1,186 @@
+{
+  "study_id": "screening-budget-audit:v1",
+  "schema_version": 1,
+  "base_revision": "34819c6c0e291a44c8c6cf0798b7276925687b51",
+  "status": "prefit_definition_for_descriptive_reanalysis",
+  "scope": "Existing fixed-library source-MLC scores; no new learned-model fit, representation extraction, provider request or candidate-policy tuning.",
+  "endpoint": "Audited observed source MLC > 0; not productive infection or mixture efficacy.",
+  "candidate_phages": 94,
+  "expected_observed_rows": 16597,
+  "expected_unknown_rows": 41,
+  "budgets": [
+    1,
+    2,
+    3,
+    5,
+    10
+  ],
+  "historical_hit_budgets": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "baseline": "phage_prevalence",
+  "full_baseline_methods": [
+    "host_logistic",
+    "host_4mer_logistic",
+    "hybrid_4mer_logistic"
+  ],
+  "panels": [
+    {
+      "id": "grouped_host.seed42",
+      "seed": 42,
+      "scenario": "grouped_host",
+      "partitions": [
+        "validation",
+        "test"
+      ],
+      "splits": "data/studies/results/genophi_comparator.v1/scenario_splits.csv",
+      "genophi_scores": "data/studies/results/genophi_comparator.v1/grouped_host_candidate_scores.csv",
+      "genophi_metrics": "data/studies/results/genophi_comparator.v1/per_host_metrics.csv",
+      "baseline_metrics": "data/studies/results/genome_host_retrieval.v1/per_host_metrics.csv",
+      "baseline_scores": null,
+      "saved_prevalence_scores": null,
+      "neighbour_metrics": "data/studies/results/host_similarity.v1/per_host_metrics.csv"
+    },
+    {
+      "id": "phylogroup.B2",
+      "seed": 42,
+      "scenario": "phylogroup:B2",
+      "partitions": [
+        "test"
+      ],
+      "splits": "data/studies/results/genophi_comparator.v1/scenario_splits.csv",
+      "genophi_scores": "data/studies/results/genophi_comparator.v1/phylogroup_B2_candidate_scores.csv",
+      "genophi_metrics": "data/studies/results/genophi_comparator.v1/per_host_metrics.csv",
+      "baseline_metrics": "data/studies/results/genome_host_retrieval.v1/per_host_metrics.csv",
+      "baseline_scores": null,
+      "saved_prevalence_scores": null,
+      "neighbour_metrics": "data/studies/results/host_similarity.v1/per_host_metrics.csv"
+    },
+    {
+      "id": "grouped_host.seed43",
+      "seed": 43,
+      "scenario": "grouped_host",
+      "partitions": [
+        "validation",
+        "test"
+      ],
+      "splits": "data/studies/results/genophi_comparator.seed43.v1/scenario_splits.csv",
+      "genophi_scores": "data/studies/results/genophi_comparator.seed43.v1/grouped_host_candidate_scores.csv",
+      "genophi_metrics": "data/studies/results/genophi_comparator.seed43.v1/per_host_metrics.csv",
+      "baseline_metrics": "data/studies/results/genome_host_retrieval.seed43.v1/per_host_metrics.csv",
+      "baseline_scores": "data/studies/results/genome_host_retrieval.seed43.v1/predictions.csv.gz",
+      "saved_prevalence_scores": "data/studies/results/genophi_comparator.seed43.v1/grouped_host_prevalence_scores.csv",
+      "neighbour_metrics": null
+    },
+    {
+      "id": "grouped_host.seed44",
+      "seed": 44,
+      "scenario": "grouped_host",
+      "partitions": [
+        "validation",
+        "test"
+      ],
+      "splits": "data/studies/results/genophi_comparator.seed44.v1/scenario_splits.csv",
+      "genophi_scores": "data/studies/results/genophi_comparator.seed44.v1/grouped_host_candidate_scores.csv",
+      "genophi_metrics": "data/studies/results/genophi_comparator.seed44.v1/per_host_metrics.csv",
+      "baseline_metrics": "data/studies/results/genome_host_retrieval.seed44.v1/per_host_metrics.csv",
+      "baseline_scores": "data/studies/results/genome_host_retrieval.seed44.v1/predictions.csv.gz",
+      "saved_prevalence_scores": "data/studies/results/genophi_comparator.seed44.v1/grouped_host_prevalence_scores.csv",
+      "neighbour_metrics": null
+    }
+  ],
+  "verified_bundles": [
+    "data/studies/results/genophi_comparator.v1",
+    "data/studies/results/genophi_comparator.seed43.v1",
+    "data/studies/results/genophi_comparator.seed44.v1",
+    "data/studies/results/genome_host_retrieval.seed43.v1",
+    "data/studies/results/genome_host_retrieval.seed44.v1"
+  ],
+  "resources": [
+    {
+      "id": "mlc",
+      "kind": "table",
+      "path": "mlc.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv",
+      "size_bytes": 158199,
+      "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829"
+    },
+    {
+      "id": "subset",
+      "kind": "table",
+      "path": "subset.csv",
+      "url": "https://raw.githubusercontent.com/Noonanav/GenoPHI/f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f/data/interaction_matrices/ecoli_interaction_matrix_subset.csv",
+      "size_bytes": 283309,
+      "sha256": "9a7caa8c48d475a2d0fa153ae61dab3b3484be8c266b0ef965f171218606a6e6"
+    }
+  ],
+  "files_sha256": {
+    "data/registry/genophi_ecoli_subset.v1.json": "0fdd836ca207121ac382814302efeedbdb9939b219a76e3130eb554f1b60bc97",
+    "data/studies/genophi_host_baseline.resources.v1.json": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+    "data/studies/results/genome_host_retrieval.seed43.v1/NUMERIC_QA.json": "2f2aa432aba9f718e938fde528e65aa5bb4add37310de2a7e73b9698c735f479",
+    "data/studies/results/genome_host_retrieval.seed43.v1/per_host_metrics.csv": "e5b83406acdd5ae5725c841398b84ea15f9c35d62e4b0a85407ed16dd3f3ec4d",
+    "data/studies/results/genome_host_retrieval.seed43.v1/predictions.csv.gz": "f1255c39beee86f3a700b9ffe88d6b37b0f2396fb476b4dc47523c32b4d395b7",
+    "data/studies/results/genome_host_retrieval.seed44.v1/NUMERIC_QA.json": "4bbee6180f47aac2ee68313887b174013bc7c58d961a3232ae287c5fe7a4c5b9",
+    "data/studies/results/genome_host_retrieval.seed44.v1/per_host_metrics.csv": "938ac9b7c0458f7a08367a593558dbb7ceef7c30e97567a00c5eadf7ea478a2d",
+    "data/studies/results/genome_host_retrieval.seed44.v1/predictions.csv.gz": "92a7f74899043793930bf8ce688e361b46f6ac8c9dc52ad61374bb07c16ae189",
+    "data/studies/results/genome_host_retrieval.v1/per_host_metrics.csv": "ffaa3817d0f49f7d88f04fa02f5be9f6b0dfe10cf85d5c218a1e05a8a538ee9d",
+    "data/studies/results/genophi_comparator.seed43.v1/NUMERIC_QA.json": "b6cd5b91a2bdfdefd46df94645cfb4fb7180bfe4191107ab1b1f5d18d0d9bbf2",
+    "data/studies/results/genophi_comparator.seed43.v1/grouped_host_candidate_scores.csv": "e95ec5ef297fb25aa7c8e1d6a50c5ec0b0f67067f7e6ccb2622c0443af81457f",
+    "data/studies/results/genophi_comparator.seed43.v1/grouped_host_prevalence_scores.csv": "71ba76b1398049a7f8995009681641989bb13f2e721ff42f1e3cfe0021b2a2f4",
+    "data/studies/results/genophi_comparator.seed43.v1/per_host_metrics.csv": "668c8f96ce2b71bd4107ce2d208456ca3caa6ca31f9bdacccf6b52f1411bc878",
+    "data/studies/results/genophi_comparator.seed43.v1/scenario_splits.csv": "c68ec8366c4f25b4bc10ae817a54844a9883817c41ff08e8a6e3bf898e0de5ab",
+    "data/studies/results/genophi_comparator.seed44.v1/NUMERIC_QA.json": "3bb57c3f5f9e17b63a0941f3a06ff103eb88f3bc8a1e2478f2b420ae3c904695",
+    "data/studies/results/genophi_comparator.seed44.v1/grouped_host_candidate_scores.csv": "a1bbce524c313be4aebeb3fde6706c6d08f10cba44969aafc69897e8b413b593",
+    "data/studies/results/genophi_comparator.seed44.v1/grouped_host_prevalence_scores.csv": "f792126133f50cfd4d1681d658139f08d266aac1f6cce65bd404fdd886589869",
+    "data/studies/results/genophi_comparator.seed44.v1/per_host_metrics.csv": "e1239ca5fcd97ae61d1d8de07851a77d6ce26b4d8b9117a29f66befdf23a83aa",
+    "data/studies/results/genophi_comparator.seed44.v1/scenario_splits.csv": "94c41f1cd86dbc113392a279b64e1b7bb7582583cb6aefbd7476375b4678cc34",
+    "data/studies/results/genophi_comparator.v1/NUMERIC_QA.json": "5aec4b0d6c0f5dda00e78e7397703a4eb6fe3d5ec260b5255f7e54e5c1ae5e70",
+    "data/studies/results/genophi_comparator.v1/grouped_host_candidate_scores.csv": "93e922d235231ad71cd2be4e8ac92e1a7563fd84b63a9e9e9df28b0c845cc65e",
+    "data/studies/results/genophi_comparator.v1/per_host_metrics.csv": "eff92c59deabb4409241db8ded66827e38af4977fc3a960bb7f7afecdfb0fdd6",
+    "data/studies/results/genophi_comparator.v1/phylogroup_B2_candidate_scores.csv": "8a384a3d2fdf8033fcbe0cef30f50402ef0362c9c17434d7aac7cd5923bbe015",
+    "data/studies/results/genophi_comparator.v1/scenario_splits.csv": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+    "data/studies/results/host_similarity.v1/per_host_metrics.csv": "825ad956d8cfa5453c9ff226b577ab005937b52f8bdffeba435cb14c90548415"
+  },
+  "metrics": {
+    "hit": "Exact within-tie expected probability of at least one source-positive candidate in the first K.",
+    "tests": "E[min(T,K)] = K - sum(Hit@j for j=1..K-1), stop at first positive; T=infinity for all-negative hosts, which spend K.",
+    "mrr": "Existing exact-tie reciprocal first-positive rank; zero for all-negative hosts. Distinct from mean first-positive rank.",
+    "cost_model": "One equal-cost test per candidate, perfect source-label observation, sequential stopping; excludes real assay noise, batch overhead and clinical costs.",
+    "availability": "Full scores support every frozen budget. Published metric points support only stored Hit@K/MRR and capped costs whose preceding Hit@j values all exist. Missing values are never interpolated.",
+    "denominators": [
+      "all_complete_hosts",
+      "eligible_complete_hosts"
+    ],
+    "unknowns": "Keep all 94 candidates in inference. Exclude an entire host with any unknown library label from metrics; retain exclusion ledger. Keep complete all-negative hosts in the primary denominator.",
+    "random": "All-zero scores induce the exact uniform-random-order expectation."
+  },
+  "statistics": {
+    "contrast": "Each available method minus train-only phage prevalence on identical hosts, budgets and denominators. Cost differences below zero mean fewer tests.",
+    "bootstrap": {
+      "resamples": 2000,
+      "seed": 20261024,
+      "confidence": 0.95
+    },
+    "unit": "Frozen host group; each draw retains all its hosts and the paired method scores; recompute host-macro means.",
+    "interval_scope": "Pointwise, unadjusted descriptive percentile intervals conditional on fitted models, library and split. No significance gate, p-value selection or independent-confirmation claim."
+  },
+  "limitations": [
+    "All listed cohorts and source results have already been inspected; seeds and B2 are development panels, not fresh release validation.",
+    "B2 is included once, without refitting; overlapping seed panels are neither pooled nor treated as independent.",
+    "Score-only audits inherit the original fitting/pretraining and representation limitations; source artifact integrity is not a new model validation.",
+    "The first-hit median can already equal one; there is no one-test-median-reduction acceptance gate.",
+    "No uncertain-score fallback, new union policy, residual fit or cocktail optimizer is selected in this audit.",
+    "Lack of a positive interval does not establish absence of useful host information or justify a general claim beyond this source endpoint and library."
+  ],
+  "outputs": [
+    "per_host_metrics.csv",
+    "curves.csv",
+    "contrasts.csv",
+    "availability.csv",
+    "support.json",
+    "report.json"
+  ]
+}
