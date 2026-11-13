@@ -8,7 +8,6 @@ import gzip
 import json
 from pathlib import Path
 import platform
-import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import numpy as np
 import pandas as pd
+import sklearn
 
 from phage_cocktail.artifacts import canonical_json, code_provenance, read_json_object, sha256_file, staged_directory
 from phage_cocktail.basel_controls import cosine_panel, evaluate_control, sequence_feature, validate_feature
@@ -25,6 +25,7 @@ from phage_cocktail.host_study import verify_resources
 
 PROTOCOL = "data/studies/basel_ecor_evaluation_protocol.v2.json"
 FREEZE = "c0c01dae8d558643ec279e8cc45387b0d8780ecf"
+PROTOCOL_SHA256 = "6e2f370fd24f7f3997285a8ca59ecf123424202e748dfae819bae7b6aac4a182"
 AUDIT = "data/studies/results/basel_ecor_sequence_audit.v1"
 
 
@@ -32,8 +33,8 @@ def run(data_root, out, *, fetch=False):
     out = Path(out).resolve()
     if out.exists():
         raise ValueError("output directory must be new")
-    frozen = subprocess.check_output(["git", "show", f"{FREEZE}:{PROTOCOL}"], cwd=ROOT)
-    if frozen != (ROOT / PROTOCOL).read_bytes():
+    # A digest check also works after a squash merge or shallow checkout.
+    if sha256_file(ROOT / PROTOCOL) != PROTOCOL_SHA256:
         raise ValueError("protocol differs from its pre-scoring freeze commit")
     protocol = read_json_object(ROOT / PROTOCOL)
     for relative, digest in protocol["files_sha256"].items():
@@ -139,7 +140,8 @@ def run(data_root, out, *, fetch=False):
                          "This inspected published reference cannot alone validate deployment."],
             provenance=dict(**code_provenance(ROOT, Path(__file__)), protocol_freeze_commit=FREEZE,
                             protocol_sha256=sha256_file(ROOT / PROTOCOL),
-                            python=platform.python_version(), numpy=np.__version__, pandas=pd.__version__),
+                            python=platform.python_version(), numpy=np.__version__, pandas=pd.__version__,
+                            sklearn=sklearn.__version__),
             artifacts_sha256={p.name: sha256_file(p) for p in sorted(stage.iterdir())},
         )
         (stage / "report.json").write_text(json.dumps(report, indent=2) + "\n")
