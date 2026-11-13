@@ -66,7 +66,7 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
-pytest -q
+python -m pytest -q
 ```
 
 Optional extras: `.[cloud]` for S3, `.[proteomes]` for pinned gene calling,

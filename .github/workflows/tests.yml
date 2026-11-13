@@ -27,4 +27,4 @@ jobs:
           pip install -e ".[dev,cloud,proteomes]"
 
       - name: Run tests
-        run: pytest -q
+        run: python -m pytest -q
