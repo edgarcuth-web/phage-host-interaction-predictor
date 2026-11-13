@@ -1,0 +1,110 @@
+{
+  "protocol_sha256": "d75017e4831bad99dbb4fabd5e8f0a1c0c99b7b1eeb20ff3162d558c983ed289",
+  "checker_sha256": "93c4522a764734d68cc76dbbec0334df644f2ef2785ddd9d20bc1a57f5079c63",
+  "status": "verified_inputs_and_compatibility_only",
+  "source_revision": "6ec641bcdf6e2204c0cbc0bd39bef4c9dd4ce1a1",
+  "bound_inputs": 25,
+  "frozen_code_files": 11,
+  "cohort": {
+    "hosts": 177,
+    "host_groups": 147,
+    "phages": 94,
+    "unique_phage_assemblies": 89,
+    "observed_pairs": 16597,
+    "positives": 3813,
+    "unknown_pairs": 41
+  },
+  "verified_sequence_vectors": 271,
+  "feature_dimensions": 136,
+  "panels": {
+    "grouped_host": {
+      "train_hosts": 117,
+      "train_rows": 10957,
+      "held": {
+        "validation": {
+          "scored_hosts": 26,
+          "complete_hosts": 26,
+          "eligible_hosts": 26,
+          "unknown_pairs": 0,
+          "excluded_hosts": []
+        },
+        "test": {
+          "scored_hosts": 34,
+          "complete_hosts": 34,
+          "eligible_hosts": 33,
+          "unknown_pairs": 0,
+          "excluded_hosts": []
+        }
+      }
+    },
+    "phylogroup:B2": {
+      "train_hosts": 115,
+      "train_rows": 10771,
+      "held": {
+        "test": {
+          "scored_hosts": 62,
+          "complete_hosts": 61,
+          "eligible_hosts": 60,
+          "unknown_pairs": 2,
+          "excluded_hosts": [
+            "ECOR53"
+          ]
+        }
+      }
+    }
+  },
+  "b2_inner_hosts": {
+    "fit": 94,
+    "validation": 21
+  },
+  "b2_inner_support": {
+    "fit": {
+      "hosts": 94,
+      "rows": 8797,
+      "complete_hosts": 93,
+      "eligible_hosts": 92,
+      "unknown_pairs": 39,
+      "excluded_hosts": [
+        "370D"
+      ]
+    },
+    "validation": {
+      "hosts": 21,
+      "rows": 1974,
+      "complete_hosts": 21,
+      "eligible_hosts": 20,
+      "unknown_pairs": 0,
+      "excluded_hosts": []
+    }
+  },
+  "reusable_annotation_weights": {
+    "hosts": 117,
+    "phages": 94,
+    "training_rows": 10957
+  },
+  "existing_genophi_scores": {
+    "grouped_host": {
+      "hosts": 60,
+      "phages": 94,
+      "scores": 5640
+    },
+    "phylogroup:B2": {
+      "hosts": 62,
+      "phages": 94,
+      "scores": 5828
+    }
+  },
+  "prior_crossed_fit": {
+    "rows": 6834,
+    "named_phages": 65,
+    "unique_phage_assemblies": 61,
+    "reusable_for_matched_fit": false
+  },
+  "compatibility_rows": 16,
+  "annotation_source_files_checked": 2,
+  "new_model_fits": 0,
+  "new_candidate_scores": 0,
+  "new_genome_downloads": 0,
+  "independent_release_validation": false,
+  "training_scoring_runner": "pending_step_2"
+}
