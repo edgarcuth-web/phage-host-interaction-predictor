@@ -30,6 +30,7 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | Published BASEL/ECOR E. coli stress-test reference | [Pinned source-only intake and missing-label caveats](basel-ecor-published-reference.md) |
 | BASEL identity and preregistered evaluation | [Host overlap audit, blocked phage sequence checks and frozen Hit@2 bounds](basel-ecor-identity-protocol-freeze.md) |
 | BASEL accession and sequence results | [52 accessions, joint phage overlap, differing host assemblies and source discrepancies](basel-ecor-sequence-audit.md) |
+| BASEL frozen fixed controls | [v2 assembly policy, sequence-bound features, negative cosine result and random comparison](basel-ecor-controls.md) |
 
 ## Design references
 

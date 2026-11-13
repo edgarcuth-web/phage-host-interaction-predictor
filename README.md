@@ -49,8 +49,11 @@ specifies Hit@2 missing-label bounds before model scoring. The subsequent
 [sequence audit](docs/basel-ecor-sequence-audit.md) resolves all 52 accessions:
 no training overlap at the declared 95% identity boundary, but eight candidates
 share training components at 90%. All 25 host IDs are known, while their cited
-assemblies differ from the training FASTAs. Host-build and source-discrepancy
-review still block model scoring.
+assemblies differ from the training FASTAs. The subsequent
+[v2 assembly policy and fixed controls](docs/basel-ecor-controls.md) use explicitly
+bound sequence features: cosine Hit@2 is 4.00% versus random identification bounds
+of 37.32%–44.06%. This negative composition control is not a validated recommender;
+learned interaction models remain to be compared.
 
 ## Quick start
 

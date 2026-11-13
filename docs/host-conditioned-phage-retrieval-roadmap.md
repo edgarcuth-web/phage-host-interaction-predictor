@@ -16,7 +16,7 @@ limits for each case.
 | Annotation, host 4-mer, additive pair and GenoPHI comparisons | Completed development studies; see the [results index](README.md#results-and-reproduction) |
 | Two-route score/rescue audit | [Offline evaluator implemented](offline-retrieval-rescue-evaluator.md); consumes supplied scores |
 | Fixed-library screening budgets | [Existing-score audit complete](screening-budget-audit.md); grouped-host test cost savings coexist with B2 failure |
-| Published BASEL/ECOR reference | [52 phage accessions and joint sequence audit complete](basel-ecor-sequence-audit.md); 25 host names overlap but assemblies differ. Frozen Hit@2 bounds execution awaits host-build/source review; not a release holdout |
+| Published BASEL/ECOR reference | [Sequence audit complete](basel-ecor-sequence-audit.md); [v2 assembly policy and fixed controls evaluated](basel-ecor-controls.md). Cosine Hit@2 4.00% versus random bounds 37.32%–44.06%; learned interaction comparison pending. Not a release holdout |
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Sequence-conditioned learned retrieval | Not trained or validated |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |

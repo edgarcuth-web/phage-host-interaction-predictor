@@ -1,6 +1,6 @@
 # BASEL–ECOR accession and sequence audit
 
-The 52 phage accession joins and joint sequence audit are complete. **Model scoring remains blocked pending host-build and source-discrepancy adjudication.** This is the published, inspected reference from the [frozen v1 protocol](basel-ecor-identity-protocol-freeze.md), not an untouched release set.
+The 52 phage accession joins and joint sequence audit are complete. The [separately frozen v2 assembly policy](basel-ecor-controls.md) resolves the host-build/source choices for two fixed controls and records their negative composition result. Learned model fitting needs its own training protocol. This is the published, inspected reference from the [frozen v1 protocol](basel-ecor-identity-protocol-freeze.md), not an untouched release set.
 
 ## Verified inputs
 
@@ -52,4 +52,4 @@ python scripts/audit_basel_sequences.py \
 
 Omit `--fetch` to use verified local inputs. Output must be a new directory. Exit **2** means the audit completed but model scoring is still blocked. The report binds input locks, code hashes, binary identity, tool versions and output hashes. FASTA and sorted PAF outputs stay local; the committed report and CSV receipts are sufficient to inspect the joins and resulting groups. Source supplements and genomes require no new Python spreadsheet/PDF package.
 
-The next decision is an explicit **known-host assembly policy**, followed by adjudication of the 52-phage CSV scope and Bas64 length discrepancy. Any changed evaluation question requires a new protocol version. Neither this audit nor published-source model results alone can promote a model to release validation.
+The **known-host assembly policy**, 52-phage CSV scope and Bas64 sequence choice are now specified for the two controls in [protocol v2](basel-ecor-controls.md). The reason for the supplementary matrix discrepancy remains unknown. Neither this audit nor published-source model results alone can promote a model to release validation.
