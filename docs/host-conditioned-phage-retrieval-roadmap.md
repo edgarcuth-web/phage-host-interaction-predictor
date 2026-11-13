@@ -5,6 +5,10 @@ existing phages, rank candidates with activity under a named source endpoint.
 Candidates with missing receptor/defense annotations remain eligible: unknown
 mechanism evidence is not evidence of non-infection.
 
+[Reference cases and project decisions](reference-cases.md) connects the
+literature to the priorities below, with separate evidence and applicability
+limits for each case.
+
 ## Implemented and pending
 
 | Component | Status |
@@ -59,16 +63,21 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-1. Freeze a new retrieval study before fitting: library/sequence hashes, labels,
-   missingness, feature availability, grouped splits, model versions, K/ties and
-   candidate budgets. Reserve independent release data. The current cohort
-   remains a development comparison.
-2. Compare prevalence, annotation proxy, genome-only pair scoring, fusion and
+1. Freeze an offline screening-budget audit of existing score panels and
+   published metrics before calculating additional curves. Report hit probability,
+   capped test consumption, method/panel availability and paired host-group
+   uncertainty under the existing library, endpoint, eligibility and tie rules.
+   This is the next planned analysis; it requires no new model fit.
+2. Use that audit to identify gaps worth a new retrieval study. Before fitting,
+   freeze library/sequence hashes, labels, missingness, feature availability,
+   grouped splits, model versions, K/ties and candidate budgets. Reserve
+   independent release data; the inspected cohort remains development data.
+3. Compare prevalence, annotation proxy, genome-only pair scoring, fusion and
    two-route union at equal final K. Report Hit/Recall/MRR, rescued positives,
    coverage, costs, grouped uncertainty and subgroup failures. Cold-phage and
    double-cold claims require phage-sequence groups and separate held-out labels.
-3. Test alternative architectures only if the baseline evidence supports them.
-   Keep unsupported or unavailable predictions explicit.
+   Test alternative architectures when the evidence justifies them, and keep
+   unsupported or unavailable predictions explicit.
 4. Define a versioned retrieval result and matching SDL receiver policy before
    serving or passing scores to candidate decisions.
 
