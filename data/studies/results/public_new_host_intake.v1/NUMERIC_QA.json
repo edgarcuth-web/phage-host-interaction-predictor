@@ -1,0 +1,157 @@
+{
+  "decisions": {
+    "berryhill_enteric_fmt_2026": "defer_to_separate_library_and_assay_intake",
+    "gaborieau_picard_full": "same_study_development_extension_only",
+    "gaborieau_prospective_100": "quarantined_same_study_selected_pair_follow_up",
+    "genophi_basel_ecor": "retain_inspected_known_host_cold_phage_reference",
+    "phagehostlearn_zenodo_11061100": "defer_to_separate_klebsiella_task"
+  },
+  "independent_release_validation_established": false,
+  "intake_id": "public-new-host-fixed-library-intake:v1",
+  "limits": [
+    "No near-duplicate or new-host genome audit was performed.",
+    "Candidate host hashes stay blank; zero exact-host matches does not establish disjointness.",
+    "A software receipt is not validation of model performance."
+  ],
+  "manifest_sha256": "98f1b45854e02b8726103defa38b5246afc823bb2c4f83829bb774a196efb3fd",
+  "model_fits": 0,
+  "model_score_runs": 0,
+  "numeric_checks": {
+    "gaborieau_full": {
+      "cells": 38592,
+      "fixed_library_candidates": 94,
+      "fixed_library_value_counts": {
+        "": 156,
+        "0.0": 29819,
+        "1.0": 2945,
+        "2.0": 2250,
+        "3.0": 1345,
+        "4.0": 1273
+      },
+      "frozen_crosswalk_hosts": 177,
+      "identical_source_binary_cells": 16597,
+      "identical_source_mlc_cells": 16597,
+      "inherited_observed_cells": 16597,
+      "literal_development_name_overlap": 112,
+      "matrix_hosts": 402,
+      "matrix_phages": 96,
+      "metadata_hosts": 403,
+      "metadata_only_hosts": [
+        "LF110"
+      ],
+      "metadata_phages": 96,
+      "source_only_phages": [
+        "T4LD",
+        "T7_Portugal"
+      ],
+      "value_counts": {
+        "": 157,
+        "0.0": 30459,
+        "1.0": 3014,
+        "2.0": 2306,
+        "3.0": 1368,
+        "4.0": 1288
+      }
+    },
+    "gaborieau_prospective": {
+      "absent_from_selected_single_table": 9100,
+      "literal_development_name_overlap": 0,
+      "literal_picard_name_overlap": [
+        "AN03"
+      ],
+      "metadata_hosts": 100,
+      "metadata_hosts_with_same_readout_name": 99,
+      "metadata_only_host_names": [
+        "BCH857-72"
+      ],
+      "missing_selected_single_readouts": 0,
+      "picard_gembase_overlap": 0,
+      "readout_only_host_names": [
+        "BCH857"
+      ],
+      "selected_pairs_with_exact_step_support": 297,
+      "selected_single_slots": 300,
+      "selected_single_value_counts": {
+        "0": 130,
+        "1": 22,
+        "2": 22,
+        "3": 29,
+        "4": 17,
+        "5": 31,
+        "6": 49
+      },
+      "unique_gembase_ids": 100,
+      "unique_host_ids": 100,
+      "unique_selected_pairs": 300,
+      "unique_selected_phages": 25
+    },
+    "phagehostlearn_raw_export": {
+      "cells": 28380,
+      "hosts": 215,
+      "literal_fixed_library_phage_id_overlap": 0,
+      "phages": 132,
+      "value_counts": {
+        "": 15410,
+        "0.0": 12505,
+        "1.0": 465
+      }
+    }
+  },
+  "release_cohorts_admitted": 0,
+  "same_source_cold_host_gate": {
+    "blocking_reasons": [
+      "shared_primary_source_lineage",
+      "incomplete_assembly_identity_evidence"
+    ],
+    "exact_overlap_counts": {
+      "shared_exact_host_assemblies": 0,
+      "shared_exact_host_phage_pairs": 0,
+      "shared_exact_phage_assemblies": 89,
+      "shared_source_observations": 0,
+      "shared_source_studies": 1
+    },
+    "independent_release_validation_established": false,
+    "interpretation": "Known overlap/incomplete identity evidence blocks a release-independence claim.",
+    "manual_review_still_required": [
+      "source_study_aliases_and_upstream_dataset_derivations",
+      "near_duplicate_genomes_and_homology_groups",
+      "assay_endpoint_and_label_semantics",
+      "training_feature_pretraining_and_model_selection_leakage",
+      "license_and_provenance_of_original_files",
+      "prospectively_locked_release_cohort_and_protocol"
+    ],
+    "missingness": {
+      "candidate": {
+        "missing_host_assembly_sha256": 37788,
+        "missing_phage_assembly_sha256": 0,
+        "missing_source_observation_id": 37788,
+        "unknown_observation_status": 156
+      },
+      "development": {
+        "missing_host_assembly_sha256": 0,
+        "missing_phage_assembly_sha256": 0,
+        "missing_source_observation_id": 16597,
+        "unknown_observation_status": 0
+      }
+    },
+    "regime": "cold_host",
+    "row_counts": {
+      "candidate": 37788,
+      "development": 16597
+    },
+    "schema_version": 1,
+    "source_endpoint_ids": {
+      "candidate": [
+        "gaborieau-picard:exported-mlc-positive:v1"
+      ],
+      "development": [
+        "genophi-ecoli:source-mlc-positive:v1"
+      ]
+    },
+    "status": "blocked"
+  },
+  "schema_version": 1,
+  "source_files_verified": 10,
+  "status": "verified",
+  "verifier_sha256": "0ed8d65d0d1fe89f5f5fae112164582f2d0c41dffbd6ca5c6f5968811b02bea2"
+}
