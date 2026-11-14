@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "study_id": "kaneko-42-host-baselines:v1",
+  "status": "independent_numeric_checks_passed",
+  "fit_commit": "f6c796b725a98618e2f8a4bb003bbc317ecc4213",
+  "implementation_commit": "374c6abba3172488817772169ee9962f2a0cfe53",
+  "source_host_feature_vectors_verified": 143,
+  "feature_values_verified": 19448,
+  "source_models_verified": 42,
+  "candidate_score_values_verified": 1680,
+  "maximum_score_absolute_error": 4.440892098500626e-16,
+  "per_host_metric_values_verified": 1040,
+  "bootstrap_intervals_verified": 44,
+  "per_phage_rows_verified": 336,
+  "refits_performed_by_verifier": 0,
+  "decisions": {
+    "hit_gain_supported": false,
+    "cost_reduction_supported": false,
+    "joint_benefit_supported": false
+  },
+  "verifier_sha256": "1a5ed4ecc4a0418519d43d7464c048107ba9652a100bc772773b228f9308c434",
+  "independent_release_validation_established": false
+}

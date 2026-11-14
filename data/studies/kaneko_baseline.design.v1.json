@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "study_id": "kaneko-42-host-baselines:v1",
+  "status": "design_frozen_before_genomic_similarity_or_susceptibility_fitting",
+  "created_at_utc": "2026-11-14T16:39:54.141246+00:00",
+  "source_revision": "78de819b28882edd16afb189f27b8528fb02acc3",
+  "scope": "Within-source research comparison on new genomic host groups and the same 42 Kaneko study phages. This does not test the existing 94-output weights or establish independent release validation.",
+  "inputs": {
+    "workbook_intake": {
+      "path": "data/studies/kaneko_workbook_intake.v1.json",
+      "size_bytes": 9373,
+      "sha256": "e3254ad636902e43d3fe3ebae7e1ec742ef8392acafe7def827673a404d49195"
+    },
+    "sequence_intake": {
+      "path": "data/studies/kaneko_sequence_intake.v1.json",
+      "size_bytes": 174002,
+      "sha256": "cdd64f49e11d901f75c08e8f552285f82eb0ec7c3bf879ba874f021b436981bd"
+    },
+    "sequence_qa": {
+      "path": "data/studies/results/kaneko_sequence_intake.v1/NUMERIC_QA.json",
+      "size_bytes": 87609,
+      "sha256": "dab3b090f8c8ce000c1933dd524bf277a48807af65ac91b0457dafa8b79cf52f"
+    }
+  },
+  "source_grades": {
+    "filename": "source_spot_grades.csv",
+    "sha256": "a6aeef8c3ae9f8a6c882b89f31805f4216ca0ec64c209d4ac5ae837040514760",
+    "rows": 6480,
+    "source_doi": "10.1089/phage.2024.0023",
+    "sheet": "SF2",
+    "source_rectangle": "B3:EO47",
+    "source_workbook_sha256": "846ea60cc55f9a1d2e9dd5a1cf71ea64495f2c0b9641029ad6e3b9aaaffba511"
+  },
+  "dataset": {
+    "hosts": 143,
+    "host_rule": "All 143 source-run-linked assemblies from sequence intake v1. No label-, ST- or quality-metric-dependent filtering.",
+    "missing_host": {
+      "host_id": "127",
+      "reason": "No assembled genome in the inspected original-BioSample routes; excluded from this available-genome cohort in every partition. Existing phenotype observations remain preserved."
+    },
+    "library": [
+      "ΦWec189",
+      "ΦWec191",
+      "ΦWec193",
+      "ΦWec196",
+      "ΦWec202",
+      "ΦWec203",
+      "ΦWec204",
+      "ΦWec205",
+      "ΦWec206",
+      "ΦWec207",
+      "ΦWec208",
+      "ΦWec209",
+      "ΦWec210",
+      "ΦWec247",
+      "ΦWec248",
+      "ΦWec257",
+      "ΦWec258",
+      "ΦWec259",
+      "ΦWec260",
+      "ΦWec261",
+      "ΦWec262",
+      "ΦWec263",
+      "ΦWec264",
+      "ΦWec265",
+      "ΦWec266",
+      "ΦWec267",
+      "ΦWec268",
+      "ΦWec269",
+      "ΦWec270",
+      "ΦWec271",
+      "ΦWec272",
+      "ΦWec273",
+      "ΦWec274",
+      "ΦWec275",
+      "ΦWec276",
+      "ΦWec277",
+      "ΦWec278",
+      "ΦWec279",
+      "ΦWec280",
+      "ΦWec281",
+      "ΦWec282",
+      "ΦWec283"
+    ],
+    "phages": 42,
+    "source_pairs": 6006,
+    "controls_excluded": [
+      "T2",
+      "T4",
+      "T7"
+    ],
+    "T6": "Inventory/ANI only, not measured in SF2. No labels are generated.",
+    "later_genomes": "Adding host 127 or changing genomes requires a new cohort/protocol version, not an append to this test set."
+  },
+  "endpoint": {
+    "id": "kaneko-2025:complete-spot-clearing-grade3:v1",
+    "primary_target": "Source grade == 3 versus observed grades 0,1,2; complete spot clearing versus not complete clearing under this assay.",
+    "primary_labels": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 1
+    },
+    "semantic_limit": "Target 0 is not complete clearing, not proof of no infection. Grade 3 is not proof of productive infection or clinical efficacy.",
+    "retain_raw_grade": true,
+    "unknown_rule": "Reject empty/invalid required source cells; never fill an unknown with zero.",
+    "secondary_threshold": {
+      "id": "kaneko-2025:visible-spot-clearing-grade-ge2:v1",
+      "positive_grades": [
+        2,
+        3
+      ],
+      "operation": "Evaluate the same frozen primary-target scores at this readout as a descriptive sensitivity only. No refit, selection or replacement of the primary target."
+    },
+    "abstract_discrepancy": "The abstract Wec277 percentage remains unreconciled. The explicit workbook grade definitions and this declared endpoint govern this research comparison."
+  },
+  "grouping": {
+    "tool": "skani",
+    "version": "0.4.0",
+    "binary_url": "https://github.com/bluenote-1577/skani/releases/download/latest/skani",
+    "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+    "primary_ani_percent": 99.5,
+    "minimum_both_aligned_fraction_percent": 90.0,
+    "algorithm": "Union all qualifying pairs and exact canonical assembly matches transitively. Group ID is the smallest host ID in the component. Thresholds are operational leakage guards, not a universal strain definition.",
+    "pair_scope": "All 10,153 unordered host pairs must be present with finite ANI and both aligned fractions. Missing/skipped pairs block the freeze; they are not treated as distant.",
+    "command_options": [
+      "triangle",
+      "-E",
+      "-t",
+      "4",
+      "-c",
+      "125",
+      "-m",
+      "1000",
+      "-s",
+      "80",
+      "--min-af",
+      "0"
+    ],
+    "sensitivity_ani_percent": [
+      99.0,
+      99.9
+    ],
+    "sensitivity_use": "Report group counts only at fixed AF=90. Do not change the primary grouping/split or fit alternative models from these findings."
+  },
+  "split": {
+    "seed": 20261114,
+    "minimum_total_groups": 10,
+    "rule": "Sort primary group IDs by SHA-256 of UTF-8 20261114:<group_id>, then group ID. First floor(G/5) groups are test, next floor(G/5) validation, remainder train. Never split components or retry seeds for label balance.",
+    "roles": {
+      "train": "Fit preprocessing and the two fixed methods.",
+      "validation": "Report the already-fixed methods; no hyperparameter or endpoint selection.",
+      "test": "Evaluate once after implementation and training artifacts are frozen."
+    },
+    "refit": "No train-plus-validation refit; one train fit per phage with the fixed C. Keep the resulting model for validation and test.",
+    "failure": "If fewer than 10 genomic groups or a required partition is empty, report the frozen design blocked without changing thresholds or seeds."
+  },
+  "methods": {
+    "prevalence": {
+      "formula": "(train_complete_clearing_count + 1)/(train_observed_count + 2)",
+      "candidate_scope": "All 42 named study phages, even those with no train grade-3 outcome."
+    },
+    "host_4mer": {
+      "features": "Existing host_fourmers: within-contig, strand-canonical frequencies of 136 DNA 4-mer bins; skip ambiguous windows, never concatenate contigs.",
+      "scaling": "Existing HostFeatureEncoder, fit means/scales on unique training hosts only; no categorical features.",
+      "model": "One fixed logistic classifier per named phage, lbfgs, C=0.1, max_iter=2000, no class weighting, equal observed-pair weights.",
+      "single_class_fallback": "Beta(1,1) training prevalence; do not remove the candidate.",
+      "artifact_endpoint": "New runner must bind weights/scores to complete-spot-clearing-grade3, the 42-phage library and frozen training hosts. The historical fitter hardcodes MLC semantics; an endpoint-aware wrapper must not propagate that descriptor or load 94-output weights.",
+      "score": "Uncalibrated source-target ranking score. No infection-probability or treatment interpretation.",
+      "failure": "Stop on nonconvergence, nonfinite scores or incomplete 42-candidate support. Do not expand C, change seeds or drop candidates."
+    }
+  },
+  "evaluation": {
+    "primary": "All-complete-host macro Hit@2 for host_4mer minus prevalence on the frozen test set.",
+    "secondary_k": [
+      1,
+      3,
+      5
+    ],
+    "other_metrics": [
+      "Recall@K on hosts with at least one primary-positive candidate",
+      "MRR, with zero for all-primary-negative hosts",
+      "Capped tests consumed at K=2 and K=5",
+      "Per-host/per-phage outcomes and score support"
+    ],
+    "ties": "Exact expectation over uniform permutations within exact-score ties; display-order tie breaking must not affect metrics.",
+    "all_negative_hosts": "Retain in primary Hit@K, MRR and cost denominators.",
+    "cost": "E[min(T,K)] = K - sum(Hit@j for j=1..K-1), equal-cost sequential candidate tests. Include all intermediate j through 4 for K=5.",
+    "scope": "Every held-out host is scored against the same 42 candidates. No outcome-driven library filtering. Pooled pair AP/AUROC are diagnostics only."
+  },
+  "uncertainty": {
+    "resamples": 2000,
+    "seed": 20261114,
+    "confidence": 0.95,
+    "unit": "Whole primary genomic groups within the complete held-out host universe, paired resampling across methods. Keep within-group hosts together; apply positive-eligible masks after group sampling.",
+    "interval": "Pointwise percentile interval conditional on the fixed inspected cohort, library, split and fitted models."
+  },
+  "decision": {
+    "hit_gain": "Supported research Hit@2 gain only if the primary paired lower 95% bound exceeds zero.",
+    "cost_gain": "Supported research cost reduction at K=2 only if the paired host_4mer-minus-prevalence upper 95% bound is below zero.",
+    "joint_benefit": "Require both hit and cost criteria; preserve all failures. No K/seed/target/threshold search after test inspection.",
+    "release": "No release promotion or stable superiority claim follows from this inspected, single-source research panel."
+  },
+  "source_review": {
+    "phenotype_license": "No open phenotype-data license verified; original workbooks and bulk grades are not redistributed.",
+    "pending": [
+      "Experimental-stock identity beyond source number/name/run joins",
+      "Host contamination/completeness assessment",
+      "Cross-source near-duplicate comparison with the prior 177 hosts"
+    ],
+    "permitted_claim_scope": "Within-source grouped-host research comparison only; not independent validation of the old model."
+  },
+  "compute": {
+    "similarity_cpu_threads": 4,
+    "fit_cpu_threads": 1,
+    "max_ram_gb": 4,
+    "maximum_per_phage_fits": 42,
+    "genome_downloads": 0,
+    "gpu_requests": 0,
+    "paid_provider_requests": 0
+  },
+  "execution_boundary": "This phase computes genomic similarity and freezes a protocol only. No susceptibility-model fit or candidate scoring."
+}

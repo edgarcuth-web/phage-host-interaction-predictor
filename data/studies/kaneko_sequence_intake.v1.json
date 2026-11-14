@@ -1,0 +1,3643 @@
+{
+  "schema_version": 1,
+  "review_id": "kaneko-sequence-intake:v1",
+  "reviewed_date": "2026-11-14",
+  "retrieved_at_utc": "2026-11-14T15:35:41.670086+00:00",
+  "project_base_commit": "8d444e2efd6eeda81f3a6083c4922e5e360e5f61",
+  "status": "sequence_source_and_basic_qc_audit_only",
+  "workbook_intake_reference": {
+    "path": "data/studies/kaneko_workbook_intake.v1.json",
+    "sha256": "e3254ad636902e43d3fe3ebae7e1ec742ef8392acafe7def827673a404d49195"
+  },
+  "development_reference": {
+    "path": "data/studies/results/paired_interaction.v1/training_feature_manifest.csv",
+    "sha256": "bcce8419b21b49902b759c1f8a8202e9f3ad9317e7cf4f058fbbaa9b5af0d4f1",
+    "host_assemblies": 177,
+    "phage_assemblies": 94
+  },
+  "metadata_replay": "Require the same column set and canonical rows across every returned field. Row/column ordering may change; report byte equality separately. Empty results require the expected headers. Any content/schema change requires review.",
+  "metadata": [
+    {
+      "filename": "host_runs.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJDB18063&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cinstrument_model%2Clibrary_layout%2Clibrary_strategy%2Cread_count%2Cbase_count%2Cfastq_ftp%2Cfastq_bytes%2Cfastq_md5&format=tsv",
+      "size_bytes": 49550,
+      "sha256": "72a560bbc6c7b641b91d077a96c87a49efce36888bf6c242a5c2bf06fc61344c",
+      "rows": 144,
+      "columns": [
+        "run_accession",
+        "study_accession",
+        "sample_accession",
+        "experiment_accession",
+        "sample_title",
+        "scientific_name",
+        "instrument_model",
+        "library_layout",
+        "library_strategy",
+        "read_count",
+        "base_count",
+        "fastq_ftp",
+        "fastq_bytes",
+        "fastq_md5"
+      ],
+      "canonical_rows_sha256": "33c20d1f47b39a0bb14ec1e280574a0e669827100ebc9ff45ee00b753a916fbb"
+    },
+    {
+      "filename": "host_assembly_project.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=study_accession%3D%22PRJDB18063%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 85,
+      "sha256": "8afcb569d7fc0a461f547e227a87992bb34d6677a3d62a034efccae058394241",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_analysis_project.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=study_accession%3D%22PRJDB18063%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 110,
+      "sha256": "6dff715e6352b84bb3732426ab2de0fc39bcf47c72470bc00b93561dbc0a4ce2",
+      "rows": 0,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_sequence_project.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=study_accession%3D%22PRJDB18063%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_runs.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJDB18044&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cinstrument_model%2Clibrary_layout%2Clibrary_strategy%2Cread_count%2Cbase_count%2Cfastq_ftp%2Cfastq_bytes%2Cfastq_md5&format=tsv",
+      "size_bytes": 13444,
+      "sha256": "b44893c873eb86fc85f6d58a292ae56cc928a609546bcdd5cc5242f188fb98c8",
+      "rows": 38,
+      "columns": [
+        "run_accession",
+        "study_accession",
+        "sample_accession",
+        "experiment_accession",
+        "sample_title",
+        "scientific_name",
+        "instrument_model",
+        "library_layout",
+        "library_strategy",
+        "read_count",
+        "base_count",
+        "fastq_ftp",
+        "fastq_bytes",
+        "fastq_md5"
+      ],
+      "canonical_rows_sha256": "1c85ecd04265f9019a6b790fa0b54f3446439ce69197af365d42066c0b518d97"
+    },
+    {
+      "filename": "phage_assembly_project.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=study_accession%3D%22PRJDB18044%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 85,
+      "sha256": "8afcb569d7fc0a461f547e227a87992bb34d6677a3d62a034efccae058394241",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_analysis_project.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=study_accession%3D%22PRJDB18044%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 110,
+      "sha256": "6dff715e6352b84bb3732426ab2de0fc39bcf47c72470bc00b93561dbc0a4ce2",
+      "rows": 0,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_sequence_project.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=study_accession%3D%22PRJDB18044%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "legacy_sequences.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=tax_eq%282992785%29+OR+tax_eq%282992787%29+OR+tax_eq%282992788%29+OR+tax_eq%282992789%29&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 724,
+      "sha256": "bdfc6f3eebd9e5fa014f47c529b00ef5d9807892c8dbf09555f38d58e9027246",
+      "rows": 4,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "f965c53fcf37b6f9cdfbbd84c6889af84a4e754dc3d1e62393ea2776716aee3d"
+    },
+    {
+      "filename": "host_assembly_samples_00.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774397%22+OR+sample_accession%3D%22SAMD00774398%22+OR+sample_accession%3D%22SAMD00774399%22+OR+sample_accession%3D%22SAMD00774400%22+OR+sample_accession%3D%22SAMD00774401%22+OR+sample_accession%3D%22SAMD00774402%22+OR+sample_accession%3D%22SAMD00774403%22+OR+sample_accession%3D%22SAMD00774404%22+OR+sample_accession%3D%22SAMD00774405%22+OR+sample_accession%3D%22SAMD00774406%22+OR+sample_accession%3D%22SAMD00774407%22+OR+sample_accession%3D%22SAMD00774408%22+OR+sample_accession%3D%22SAMD00774409%22+OR+sample_accession%3D%22SAMD00774410%22+OR+sample_accession%3D%22SAMD00774411%22+OR+sample_accession%3D%22SAMD00774412%22+OR+sample_accession%3D%22SAMD00774413%22+OR+sample_accession%3D%22SAMD00774414%22+OR+sample_accession%3D%22SAMD00774415%22+OR+sample_accession%3D%22SAMD00774416%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 2005,
+      "sha256": "b5061964e8e5d448ee4f013292e44ca9841f2484c91528a6186e25361046a971",
+      "rows": 20,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "e9ca78e014951045c55c9e61ebc76dea0dc9e024b4f8f678754cd364f22cc97d"
+    },
+    {
+      "filename": "host_analysis_samples_00.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774397%22+OR+sample_accession%3D%22SAMD00774398%22+OR+sample_accession%3D%22SAMD00774399%22+OR+sample_accession%3D%22SAMD00774400%22+OR+sample_accession%3D%22SAMD00774401%22+OR+sample_accession%3D%22SAMD00774402%22+OR+sample_accession%3D%22SAMD00774403%22+OR+sample_accession%3D%22SAMD00774404%22+OR+sample_accession%3D%22SAMD00774405%22+OR+sample_accession%3D%22SAMD00774406%22+OR+sample_accession%3D%22SAMD00774407%22+OR+sample_accession%3D%22SAMD00774408%22+OR+sample_accession%3D%22SAMD00774409%22+OR+sample_accession%3D%22SAMD00774410%22+OR+sample_accession%3D%22SAMD00774411%22+OR+sample_accession%3D%22SAMD00774412%22+OR+sample_accession%3D%22SAMD00774413%22+OR+sample_accession%3D%22SAMD00774414%22+OR+sample_accession%3D%22SAMD00774415%22+OR+sample_accession%3D%22SAMD00774416%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3430,
+      "sha256": "217e5a7d5e220e05e80463ba9ca785b7bc0da512790187fb44173c718a0db819",
+      "rows": 20,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "a3741296efaf00f520b53e14444c73d8fb313629d6c0199889736bbafe2f67cd"
+    },
+    {
+      "filename": "host_sequence_samples_00.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774397%22+OR+sample_accession%3D%22SAMD00774398%22+OR+sample_accession%3D%22SAMD00774399%22+OR+sample_accession%3D%22SAMD00774400%22+OR+sample_accession%3D%22SAMD00774401%22+OR+sample_accession%3D%22SAMD00774402%22+OR+sample_accession%3D%22SAMD00774403%22+OR+sample_accession%3D%22SAMD00774404%22+OR+sample_accession%3D%22SAMD00774405%22+OR+sample_accession%3D%22SAMD00774406%22+OR+sample_accession%3D%22SAMD00774407%22+OR+sample_accession%3D%22SAMD00774408%22+OR+sample_accession%3D%22SAMD00774409%22+OR+sample_accession%3D%22SAMD00774410%22+OR+sample_accession%3D%22SAMD00774411%22+OR+sample_accession%3D%22SAMD00774412%22+OR+sample_accession%3D%22SAMD00774413%22+OR+sample_accession%3D%22SAMD00774414%22+OR+sample_accession%3D%22SAMD00774415%22+OR+sample_accession%3D%22SAMD00774416%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_01.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774417%22+OR+sample_accession%3D%22SAMD00774418%22+OR+sample_accession%3D%22SAMD00774419%22+OR+sample_accession%3D%22SAMD00774420%22+OR+sample_accession%3D%22SAMD00774421%22+OR+sample_accession%3D%22SAMD00774422%22+OR+sample_accession%3D%22SAMD00774423%22+OR+sample_accession%3D%22SAMD00774424%22+OR+sample_accession%3D%22SAMD00774425%22+OR+sample_accession%3D%22SAMD00774426%22+OR+sample_accession%3D%22SAMD00774427%22+OR+sample_accession%3D%22SAMD00774428%22+OR+sample_accession%3D%22SAMD00774429%22+OR+sample_accession%3D%22SAMD00774430%22+OR+sample_accession%3D%22SAMD00774431%22+OR+sample_accession%3D%22SAMD00774432%22+OR+sample_accession%3D%22SAMD00774433%22+OR+sample_accession%3D%22SAMD00774434%22+OR+sample_accession%3D%22SAMD00774435%22+OR+sample_accession%3D%22SAMD00774436%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 2005,
+      "sha256": "1c2a453558cdbd5fc07e1688cdb2a84decae89963ea732ce7c3666632c7ce303",
+      "rows": 20,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "0a3beaf177a6b7a8d635707d6e1e4a435ba0fc0841f729babb1d66c8aefa724e"
+    },
+    {
+      "filename": "host_analysis_samples_01.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774417%22+OR+sample_accession%3D%22SAMD00774418%22+OR+sample_accession%3D%22SAMD00774419%22+OR+sample_accession%3D%22SAMD00774420%22+OR+sample_accession%3D%22SAMD00774421%22+OR+sample_accession%3D%22SAMD00774422%22+OR+sample_accession%3D%22SAMD00774423%22+OR+sample_accession%3D%22SAMD00774424%22+OR+sample_accession%3D%22SAMD00774425%22+OR+sample_accession%3D%22SAMD00774426%22+OR+sample_accession%3D%22SAMD00774427%22+OR+sample_accession%3D%22SAMD00774428%22+OR+sample_accession%3D%22SAMD00774429%22+OR+sample_accession%3D%22SAMD00774430%22+OR+sample_accession%3D%22SAMD00774431%22+OR+sample_accession%3D%22SAMD00774432%22+OR+sample_accession%3D%22SAMD00774433%22+OR+sample_accession%3D%22SAMD00774434%22+OR+sample_accession%3D%22SAMD00774435%22+OR+sample_accession%3D%22SAMD00774436%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3430,
+      "sha256": "d0ced6040743c77390d5d5a469fb96dc3482f83716aa77fe6d144fbc02ce7960",
+      "rows": 20,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "2fbdd02c42f5c7a454716e5a5a3d8f06790ff30f8a3749a5000256480e0d904d"
+    },
+    {
+      "filename": "host_sequence_samples_01.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774417%22+OR+sample_accession%3D%22SAMD00774418%22+OR+sample_accession%3D%22SAMD00774419%22+OR+sample_accession%3D%22SAMD00774420%22+OR+sample_accession%3D%22SAMD00774421%22+OR+sample_accession%3D%22SAMD00774422%22+OR+sample_accession%3D%22SAMD00774423%22+OR+sample_accession%3D%22SAMD00774424%22+OR+sample_accession%3D%22SAMD00774425%22+OR+sample_accession%3D%22SAMD00774426%22+OR+sample_accession%3D%22SAMD00774427%22+OR+sample_accession%3D%22SAMD00774428%22+OR+sample_accession%3D%22SAMD00774429%22+OR+sample_accession%3D%22SAMD00774430%22+OR+sample_accession%3D%22SAMD00774431%22+OR+sample_accession%3D%22SAMD00774432%22+OR+sample_accession%3D%22SAMD00774433%22+OR+sample_accession%3D%22SAMD00774434%22+OR+sample_accession%3D%22SAMD00774435%22+OR+sample_accession%3D%22SAMD00774436%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_02.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774437%22+OR+sample_accession%3D%22SAMD00774438%22+OR+sample_accession%3D%22SAMD00774439%22+OR+sample_accession%3D%22SAMD00774440%22+OR+sample_accession%3D%22SAMD00774441%22+OR+sample_accession%3D%22SAMD00774442%22+OR+sample_accession%3D%22SAMD00774443%22+OR+sample_accession%3D%22SAMD00774444%22+OR+sample_accession%3D%22SAMD00774445%22+OR+sample_accession%3D%22SAMD00774446%22+OR+sample_accession%3D%22SAMD00774447%22+OR+sample_accession%3D%22SAMD00774448%22+OR+sample_accession%3D%22SAMD00774449%22+OR+sample_accession%3D%22SAMD00774450%22+OR+sample_accession%3D%22SAMD00774451%22+OR+sample_accession%3D%22SAMD00774452%22+OR+sample_accession%3D%22SAMD00774453%22+OR+sample_accession%3D%22SAMD00774454%22+OR+sample_accession%3D%22SAMD00774455%22+OR+sample_accession%3D%22SAMD00774456%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 2005,
+      "sha256": "d8e109fe4660ab2e83693c2f55b431a506a24982b187fcd4b0bf904cf25153a8",
+      "rows": 20,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "710138b16bb4d590d0f14db19841fe137a0b5fcd58177f315f0585181666d5da"
+    },
+    {
+      "filename": "host_analysis_samples_02.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774437%22+OR+sample_accession%3D%22SAMD00774438%22+OR+sample_accession%3D%22SAMD00774439%22+OR+sample_accession%3D%22SAMD00774440%22+OR+sample_accession%3D%22SAMD00774441%22+OR+sample_accession%3D%22SAMD00774442%22+OR+sample_accession%3D%22SAMD00774443%22+OR+sample_accession%3D%22SAMD00774444%22+OR+sample_accession%3D%22SAMD00774445%22+OR+sample_accession%3D%22SAMD00774446%22+OR+sample_accession%3D%22SAMD00774447%22+OR+sample_accession%3D%22SAMD00774448%22+OR+sample_accession%3D%22SAMD00774449%22+OR+sample_accession%3D%22SAMD00774450%22+OR+sample_accession%3D%22SAMD00774451%22+OR+sample_accession%3D%22SAMD00774452%22+OR+sample_accession%3D%22SAMD00774453%22+OR+sample_accession%3D%22SAMD00774454%22+OR+sample_accession%3D%22SAMD00774455%22+OR+sample_accession%3D%22SAMD00774456%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3430,
+      "sha256": "9526fe79b08ca33d22ac5538bdf98f28bfad03788134a845bd21b5172fd3e578",
+      "rows": 20,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "539d5396da1f9b4e29bec7f100e78c90afa46d0877bbcdec84fc9408f14c852c"
+    },
+    {
+      "filename": "host_sequence_samples_02.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774437%22+OR+sample_accession%3D%22SAMD00774438%22+OR+sample_accession%3D%22SAMD00774439%22+OR+sample_accession%3D%22SAMD00774440%22+OR+sample_accession%3D%22SAMD00774441%22+OR+sample_accession%3D%22SAMD00774442%22+OR+sample_accession%3D%22SAMD00774443%22+OR+sample_accession%3D%22SAMD00774444%22+OR+sample_accession%3D%22SAMD00774445%22+OR+sample_accession%3D%22SAMD00774446%22+OR+sample_accession%3D%22SAMD00774447%22+OR+sample_accession%3D%22SAMD00774448%22+OR+sample_accession%3D%22SAMD00774449%22+OR+sample_accession%3D%22SAMD00774450%22+OR+sample_accession%3D%22SAMD00774451%22+OR+sample_accession%3D%22SAMD00774452%22+OR+sample_accession%3D%22SAMD00774453%22+OR+sample_accession%3D%22SAMD00774454%22+OR+sample_accession%3D%22SAMD00774455%22+OR+sample_accession%3D%22SAMD00774456%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_03.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774457%22+OR+sample_accession%3D%22SAMD00774458%22+OR+sample_accession%3D%22SAMD00774459%22+OR+sample_accession%3D%22SAMD00774460%22+OR+sample_accession%3D%22SAMD00774461%22+OR+sample_accession%3D%22SAMD00774462%22+OR+sample_accession%3D%22SAMD00774463%22+OR+sample_accession%3D%22SAMD00774464%22+OR+sample_accession%3D%22SAMD00774465%22+OR+sample_accession%3D%22SAMD00774466%22+OR+sample_accession%3D%22SAMD00774467%22+OR+sample_accession%3D%22SAMD00774468%22+OR+sample_accession%3D%22SAMD00774469%22+OR+sample_accession%3D%22SAMD00774470%22+OR+sample_accession%3D%22SAMD00774471%22+OR+sample_accession%3D%22SAMD00774472%22+OR+sample_accession%3D%22SAMD00774473%22+OR+sample_accession%3D%22SAMD00774474%22+OR+sample_accession%3D%22SAMD00774475%22+OR+sample_accession%3D%22SAMD00774476%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 2005,
+      "sha256": "71d43c5a0b77e676c371bd4806a6fa06cb9366b06170632983a7a135436ee7a7",
+      "rows": 20,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "a3238399a8e1064a026696ba2f7faf92e459cd952b2fd8d0c88d2d9972a57b81"
+    },
+    {
+      "filename": "host_analysis_samples_03.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774457%22+OR+sample_accession%3D%22SAMD00774458%22+OR+sample_accession%3D%22SAMD00774459%22+OR+sample_accession%3D%22SAMD00774460%22+OR+sample_accession%3D%22SAMD00774461%22+OR+sample_accession%3D%22SAMD00774462%22+OR+sample_accession%3D%22SAMD00774463%22+OR+sample_accession%3D%22SAMD00774464%22+OR+sample_accession%3D%22SAMD00774465%22+OR+sample_accession%3D%22SAMD00774466%22+OR+sample_accession%3D%22SAMD00774467%22+OR+sample_accession%3D%22SAMD00774468%22+OR+sample_accession%3D%22SAMD00774469%22+OR+sample_accession%3D%22SAMD00774470%22+OR+sample_accession%3D%22SAMD00774471%22+OR+sample_accession%3D%22SAMD00774472%22+OR+sample_accession%3D%22SAMD00774473%22+OR+sample_accession%3D%22SAMD00774474%22+OR+sample_accession%3D%22SAMD00774475%22+OR+sample_accession%3D%22SAMD00774476%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3430,
+      "sha256": "d4a1b28212c49e186801ffd8ca94a8a294dc07ddaf0e6efa80e15108d29cbe0f",
+      "rows": 20,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "67a516d0bb58fe731dca38cbfb864d9a3c11270d9b6a2f1d0019c721f2ed0fbb"
+    },
+    {
+      "filename": "host_sequence_samples_03.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774457%22+OR+sample_accession%3D%22SAMD00774458%22+OR+sample_accession%3D%22SAMD00774459%22+OR+sample_accession%3D%22SAMD00774460%22+OR+sample_accession%3D%22SAMD00774461%22+OR+sample_accession%3D%22SAMD00774462%22+OR+sample_accession%3D%22SAMD00774463%22+OR+sample_accession%3D%22SAMD00774464%22+OR+sample_accession%3D%22SAMD00774465%22+OR+sample_accession%3D%22SAMD00774466%22+OR+sample_accession%3D%22SAMD00774467%22+OR+sample_accession%3D%22SAMD00774468%22+OR+sample_accession%3D%22SAMD00774469%22+OR+sample_accession%3D%22SAMD00774470%22+OR+sample_accession%3D%22SAMD00774471%22+OR+sample_accession%3D%22SAMD00774472%22+OR+sample_accession%3D%22SAMD00774473%22+OR+sample_accession%3D%22SAMD00774474%22+OR+sample_accession%3D%22SAMD00774475%22+OR+sample_accession%3D%22SAMD00774476%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_04.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774477%22+OR+sample_accession%3D%22SAMD00774478%22+OR+sample_accession%3D%22SAMD00774479%22+OR+sample_accession%3D%22SAMD00774480%22+OR+sample_accession%3D%22SAMD00774481%22+OR+sample_accession%3D%22SAMD00774482%22+OR+sample_accession%3D%22SAMD00774483%22+OR+sample_accession%3D%22SAMD00774484%22+OR+sample_accession%3D%22SAMD00774485%22+OR+sample_accession%3D%22SAMD00774486%22+OR+sample_accession%3D%22SAMD00774487%22+OR+sample_accession%3D%22SAMD00774488%22+OR+sample_accession%3D%22SAMD00774489%22+OR+sample_accession%3D%22SAMD00774490%22+OR+sample_accession%3D%22SAMD00774491%22+OR+sample_accession%3D%22SAMD00774492%22+OR+sample_accession%3D%22SAMD00774493%22+OR+sample_accession%3D%22SAMD00774494%22+OR+sample_accession%3D%22SAMD00774495%22+OR+sample_accession%3D%22SAMD00774496%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 2005,
+      "sha256": "ba203eddd6e4862ae97966f8d7cbb13d8e7313e1687e4f62b14c6bebbc12603b",
+      "rows": 20,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "dbd0ad5a1197d77c8aeb160f400be9b997030985d50944639c3b6c15ab5d9a92"
+    },
+    {
+      "filename": "host_analysis_samples_04.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774477%22+OR+sample_accession%3D%22SAMD00774478%22+OR+sample_accession%3D%22SAMD00774479%22+OR+sample_accession%3D%22SAMD00774480%22+OR+sample_accession%3D%22SAMD00774481%22+OR+sample_accession%3D%22SAMD00774482%22+OR+sample_accession%3D%22SAMD00774483%22+OR+sample_accession%3D%22SAMD00774484%22+OR+sample_accession%3D%22SAMD00774485%22+OR+sample_accession%3D%22SAMD00774486%22+OR+sample_accession%3D%22SAMD00774487%22+OR+sample_accession%3D%22SAMD00774488%22+OR+sample_accession%3D%22SAMD00774489%22+OR+sample_accession%3D%22SAMD00774490%22+OR+sample_accession%3D%22SAMD00774491%22+OR+sample_accession%3D%22SAMD00774492%22+OR+sample_accession%3D%22SAMD00774493%22+OR+sample_accession%3D%22SAMD00774494%22+OR+sample_accession%3D%22SAMD00774495%22+OR+sample_accession%3D%22SAMD00774496%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3430,
+      "sha256": "fb8cd55da9929e72977b064f2aab7a11a67b22e2b0f1a8510287f6c6719038ba",
+      "rows": 20,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "fa81574ff6669078feea201a9531e62e1198e943bf4c67b8311f6081c28c7206"
+    },
+    {
+      "filename": "host_sequence_samples_04.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774477%22+OR+sample_accession%3D%22SAMD00774478%22+OR+sample_accession%3D%22SAMD00774479%22+OR+sample_accession%3D%22SAMD00774480%22+OR+sample_accession%3D%22SAMD00774481%22+OR+sample_accession%3D%22SAMD00774482%22+OR+sample_accession%3D%22SAMD00774483%22+OR+sample_accession%3D%22SAMD00774484%22+OR+sample_accession%3D%22SAMD00774485%22+OR+sample_accession%3D%22SAMD00774486%22+OR+sample_accession%3D%22SAMD00774487%22+OR+sample_accession%3D%22SAMD00774488%22+OR+sample_accession%3D%22SAMD00774489%22+OR+sample_accession%3D%22SAMD00774490%22+OR+sample_accession%3D%22SAMD00774491%22+OR+sample_accession%3D%22SAMD00774492%22+OR+sample_accession%3D%22SAMD00774493%22+OR+sample_accession%3D%22SAMD00774494%22+OR+sample_accession%3D%22SAMD00774495%22+OR+sample_accession%3D%22SAMD00774496%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_05.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774497%22+OR+sample_accession%3D%22SAMD00774498%22+OR+sample_accession%3D%22SAMD00774499%22+OR+sample_accession%3D%22SAMD00774500%22+OR+sample_accession%3D%22SAMD00774501%22+OR+sample_accession%3D%22SAMD00774502%22+OR+sample_accession%3D%22SAMD00774503%22+OR+sample_accession%3D%22SAMD00774504%22+OR+sample_accession%3D%22SAMD00774505%22+OR+sample_accession%3D%22SAMD00774506%22+OR+sample_accession%3D%22SAMD00774507%22+OR+sample_accession%3D%22SAMD00774508%22+OR+sample_accession%3D%22SAMD00774509%22+OR+sample_accession%3D%22SAMD00774510%22+OR+sample_accession%3D%22SAMD00774511%22+OR+sample_accession%3D%22SAMD00774512%22+OR+sample_accession%3D%22SAMD00774513%22+OR+sample_accession%3D%22SAMD00774514%22+OR+sample_accession%3D%22SAMD00774515%22+OR+sample_accession%3D%22SAMD00774516%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 2005,
+      "sha256": "8d3ef3fecb516a1bf2e74c96db14daec320c1c14159ad57d57a1cd27b31db258",
+      "rows": 20,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "3d99c37dee6eea7e41665621184d87c45c872cb761e0ac39ffe757eb43b0865d"
+    },
+    {
+      "filename": "host_analysis_samples_05.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774497%22+OR+sample_accession%3D%22SAMD00774498%22+OR+sample_accession%3D%22SAMD00774499%22+OR+sample_accession%3D%22SAMD00774500%22+OR+sample_accession%3D%22SAMD00774501%22+OR+sample_accession%3D%22SAMD00774502%22+OR+sample_accession%3D%22SAMD00774503%22+OR+sample_accession%3D%22SAMD00774504%22+OR+sample_accession%3D%22SAMD00774505%22+OR+sample_accession%3D%22SAMD00774506%22+OR+sample_accession%3D%22SAMD00774507%22+OR+sample_accession%3D%22SAMD00774508%22+OR+sample_accession%3D%22SAMD00774509%22+OR+sample_accession%3D%22SAMD00774510%22+OR+sample_accession%3D%22SAMD00774511%22+OR+sample_accession%3D%22SAMD00774512%22+OR+sample_accession%3D%22SAMD00774513%22+OR+sample_accession%3D%22SAMD00774514%22+OR+sample_accession%3D%22SAMD00774515%22+OR+sample_accession%3D%22SAMD00774516%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3430,
+      "sha256": "feab2feb9b0c2077bf18ea9bd80d413bb437d2da1f870283c5c5a6c5e4140070",
+      "rows": 20,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "c5be1ad372a98b815b7d293f15e0e0273729124d825d97920f93396a3e8a6690"
+    },
+    {
+      "filename": "host_sequence_samples_05.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774497%22+OR+sample_accession%3D%22SAMD00774498%22+OR+sample_accession%3D%22SAMD00774499%22+OR+sample_accession%3D%22SAMD00774500%22+OR+sample_accession%3D%22SAMD00774501%22+OR+sample_accession%3D%22SAMD00774502%22+OR+sample_accession%3D%22SAMD00774503%22+OR+sample_accession%3D%22SAMD00774504%22+OR+sample_accession%3D%22SAMD00774505%22+OR+sample_accession%3D%22SAMD00774506%22+OR+sample_accession%3D%22SAMD00774507%22+OR+sample_accession%3D%22SAMD00774508%22+OR+sample_accession%3D%22SAMD00774509%22+OR+sample_accession%3D%22SAMD00774510%22+OR+sample_accession%3D%22SAMD00774511%22+OR+sample_accession%3D%22SAMD00774512%22+OR+sample_accession%3D%22SAMD00774513%22+OR+sample_accession%3D%22SAMD00774514%22+OR+sample_accession%3D%22SAMD00774515%22+OR+sample_accession%3D%22SAMD00774516%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_06.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774517%22+OR+sample_accession%3D%22SAMD00774518%22+OR+sample_accession%3D%22SAMD00774519%22+OR+sample_accession%3D%22SAMD00774520%22+OR+sample_accession%3D%22SAMD00774521%22+OR+sample_accession%3D%22SAMD00774522%22+OR+sample_accession%3D%22SAMD00774523%22+OR+sample_accession%3D%22SAMD00774524%22+OR+sample_accession%3D%22SAMD00774525%22+OR+sample_accession%3D%22SAMD00774526%22+OR+sample_accession%3D%22SAMD00774527%22+OR+sample_accession%3D%22SAMD00774528%22+OR+sample_accession%3D%22SAMD00774529%22+OR+sample_accession%3D%22SAMD00774530%22+OR+sample_accession%3D%22SAMD00774531%22+OR+sample_accession%3D%22SAMD00774532%22+OR+sample_accession%3D%22SAMD00774533%22+OR+sample_accession%3D%22SAMD00774534%22+OR+sample_accession%3D%22SAMD00774535%22+OR+sample_accession%3D%22SAMD00774536%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 1909,
+      "sha256": "f036fc96770e06b5b01ef8213a8f4bda06c737dd54f2064a54988c09c6f7dfee",
+      "rows": 19,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "7bbfa7a4eb2ed77386e04e550f0dc7647732299c9a2cef2906326a22ae6fed3a"
+    },
+    {
+      "filename": "host_analysis_samples_06.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774517%22+OR+sample_accession%3D%22SAMD00774518%22+OR+sample_accession%3D%22SAMD00774519%22+OR+sample_accession%3D%22SAMD00774520%22+OR+sample_accession%3D%22SAMD00774521%22+OR+sample_accession%3D%22SAMD00774522%22+OR+sample_accession%3D%22SAMD00774523%22+OR+sample_accession%3D%22SAMD00774524%22+OR+sample_accession%3D%22SAMD00774525%22+OR+sample_accession%3D%22SAMD00774526%22+OR+sample_accession%3D%22SAMD00774527%22+OR+sample_accession%3D%22SAMD00774528%22+OR+sample_accession%3D%22SAMD00774529%22+OR+sample_accession%3D%22SAMD00774530%22+OR+sample_accession%3D%22SAMD00774531%22+OR+sample_accession%3D%22SAMD00774532%22+OR+sample_accession%3D%22SAMD00774533%22+OR+sample_accession%3D%22SAMD00774534%22+OR+sample_accession%3D%22SAMD00774535%22+OR+sample_accession%3D%22SAMD00774536%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 3264,
+      "sha256": "b4d5a505aa038d9f5f72424a95543e5b4571b35de5a4a873bddf1727ddb6993c",
+      "rows": 19,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "63b3ab456fcbd0681c9539e540867b8a771672c43060d1979399a11c1ed39f40"
+    },
+    {
+      "filename": "host_sequence_samples_06.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774517%22+OR+sample_accession%3D%22SAMD00774518%22+OR+sample_accession%3D%22SAMD00774519%22+OR+sample_accession%3D%22SAMD00774520%22+OR+sample_accession%3D%22SAMD00774521%22+OR+sample_accession%3D%22SAMD00774522%22+OR+sample_accession%3D%22SAMD00774523%22+OR+sample_accession%3D%22SAMD00774524%22+OR+sample_accession%3D%22SAMD00774525%22+OR+sample_accession%3D%22SAMD00774526%22+OR+sample_accession%3D%22SAMD00774527%22+OR+sample_accession%3D%22SAMD00774528%22+OR+sample_accession%3D%22SAMD00774529%22+OR+sample_accession%3D%22SAMD00774530%22+OR+sample_accession%3D%22SAMD00774531%22+OR+sample_accession%3D%22SAMD00774532%22+OR+sample_accession%3D%22SAMD00774533%22+OR+sample_accession%3D%22SAMD00774534%22+OR+sample_accession%3D%22SAMD00774535%22+OR+sample_accession%3D%22SAMD00774536%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "host_assembly_samples_07.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00774537%22+OR+sample_accession%3D%22SAMD00774538%22+OR+sample_accession%3D%22SAMD00774539%22+OR+sample_accession%3D%22SAMD00774540%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 469,
+      "sha256": "a3e0a1e4067e19bd4d5b1035bd294be8f7f5558745ed5bd9a94fd0b08bc7baa7",
+      "rows": 4,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "84d14b0deead882d16f062bf8f7628ad391e42010bd32b4b5b22718043146cc6"
+    },
+    {
+      "filename": "host_analysis_samples_07.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00774537%22+OR+sample_accession%3D%22SAMD00774538%22+OR+sample_accession%3D%22SAMD00774539%22+OR+sample_accession%3D%22SAMD00774540%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 774,
+      "sha256": "40c683c6c41db25601d7abf39acf75ff37e2a444a8f08c2650a3d719cd6ebba4",
+      "rows": 4,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "194922f5d92ffaaf4fc4c948e9134c12e317488781a1465c4c8fd18d80ef4ba4"
+    },
+    {
+      "filename": "host_sequence_samples_07.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00774537%22+OR+sample_accession%3D%22SAMD00774538%22+OR+sample_accession%3D%22SAMD00774539%22+OR+sample_accession%3D%22SAMD00774540%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_assembly_samples_00.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00772919%22+OR+sample_accession%3D%22SAMD00772920%22+OR+sample_accession%3D%22SAMD00772921%22+OR+sample_accession%3D%22SAMD00772922%22+OR+sample_accession%3D%22SAMD00772923%22+OR+sample_accession%3D%22SAMD00772924%22+OR+sample_accession%3D%22SAMD00772925%22+OR+sample_accession%3D%22SAMD00772926%22+OR+sample_accession%3D%22SAMD00772927%22+OR+sample_accession%3D%22SAMD00772928%22+OR+sample_accession%3D%22SAMD00772929%22+OR+sample_accession%3D%22SAMD00772930%22+OR+sample_accession%3D%22SAMD00772931%22+OR+sample_accession%3D%22SAMD00772932%22+OR+sample_accession%3D%22SAMD00772933%22+OR+sample_accession%3D%22SAMD00772934%22+OR+sample_accession%3D%22SAMD00772935%22+OR+sample_accession%3D%22SAMD00772936%22+OR+sample_accession%3D%22SAMD00772937%22+OR+sample_accession%3D%22SAMD00772938%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 85,
+      "sha256": "8afcb569d7fc0a461f547e227a87992bb34d6677a3d62a034efccae058394241",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_analysis_samples_00.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00772919%22+OR+sample_accession%3D%22SAMD00772920%22+OR+sample_accession%3D%22SAMD00772921%22+OR+sample_accession%3D%22SAMD00772922%22+OR+sample_accession%3D%22SAMD00772923%22+OR+sample_accession%3D%22SAMD00772924%22+OR+sample_accession%3D%22SAMD00772925%22+OR+sample_accession%3D%22SAMD00772926%22+OR+sample_accession%3D%22SAMD00772927%22+OR+sample_accession%3D%22SAMD00772928%22+OR+sample_accession%3D%22SAMD00772929%22+OR+sample_accession%3D%22SAMD00772930%22+OR+sample_accession%3D%22SAMD00772931%22+OR+sample_accession%3D%22SAMD00772932%22+OR+sample_accession%3D%22SAMD00772933%22+OR+sample_accession%3D%22SAMD00772934%22+OR+sample_accession%3D%22SAMD00772935%22+OR+sample_accession%3D%22SAMD00772936%22+OR+sample_accession%3D%22SAMD00772937%22+OR+sample_accession%3D%22SAMD00772938%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 110,
+      "sha256": "6dff715e6352b84bb3732426ab2de0fc39bcf47c72470bc00b93561dbc0a4ce2",
+      "rows": 0,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_sequence_samples_00.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00772919%22+OR+sample_accession%3D%22SAMD00772920%22+OR+sample_accession%3D%22SAMD00772921%22+OR+sample_accession%3D%22SAMD00772922%22+OR+sample_accession%3D%22SAMD00772923%22+OR+sample_accession%3D%22SAMD00772924%22+OR+sample_accession%3D%22SAMD00772925%22+OR+sample_accession%3D%22SAMD00772926%22+OR+sample_accession%3D%22SAMD00772927%22+OR+sample_accession%3D%22SAMD00772928%22+OR+sample_accession%3D%22SAMD00772929%22+OR+sample_accession%3D%22SAMD00772930%22+OR+sample_accession%3D%22SAMD00772931%22+OR+sample_accession%3D%22SAMD00772932%22+OR+sample_accession%3D%22SAMD00772933%22+OR+sample_accession%3D%22SAMD00772934%22+OR+sample_accession%3D%22SAMD00772935%22+OR+sample_accession%3D%22SAMD00772936%22+OR+sample_accession%3D%22SAMD00772937%22+OR+sample_accession%3D%22SAMD00772938%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_assembly_samples_01.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=assembly&query=sample_accession%3D%22SAMD00772939%22+OR+sample_accession%3D%22SAMD00772940%22+OR+sample_accession%3D%22SAMD00772941%22+OR+sample_accession%3D%22SAMD00772942%22+OR+sample_accession%3D%22SAMD00772943%22+OR+sample_accession%3D%22SAMD00772944%22+OR+sample_accession%3D%22SAMD00772945%22+OR+sample_accession%3D%22SAMD00772946%22+OR+sample_accession%3D%22SAMD00772947%22+OR+sample_accession%3D%22SAMD00772948%22+OR+sample_accession%3D%22SAMD00772949%22+OR+sample_accession%3D%22SAMD00772950%22+OR+sample_accession%3D%22SAMD00772951%22+OR+sample_accession%3D%22SAMD00772952%22+OR+sample_accession%3D%22SAMD00772953%22+OR+sample_accession%3D%22SAMD00772954%22+OR+sample_accession%3D%22SAMD00772955%22+OR+sample_accession%3D%22SAMD00772956%22&fields=accession%2Cdescription%2Cstudy_accession%2Csample_accession%2Cbase_count%2Csequence_accession&limit=0&format=tsv",
+      "size_bytes": 85,
+      "sha256": "8afcb569d7fc0a461f547e227a87992bb34d6677a3d62a034efccae058394241",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "description",
+        "study_accession",
+        "sample_accession",
+        "base_count",
+        "sequence_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_analysis_samples_01.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=analysis&query=sample_accession%3D%22SAMD00772939%22+OR+sample_accession%3D%22SAMD00772940%22+OR+sample_accession%3D%22SAMD00772941%22+OR+sample_accession%3D%22SAMD00772942%22+OR+sample_accession%3D%22SAMD00772943%22+OR+sample_accession%3D%22SAMD00772944%22+OR+sample_accession%3D%22SAMD00772945%22+OR+sample_accession%3D%22SAMD00772946%22+OR+sample_accession%3D%22SAMD00772947%22+OR+sample_accession%3D%22SAMD00772948%22+OR+sample_accession%3D%22SAMD00772949%22+OR+sample_accession%3D%22SAMD00772950%22+OR+sample_accession%3D%22SAMD00772951%22+OR+sample_accession%3D%22SAMD00772952%22+OR+sample_accession%3D%22SAMD00772953%22+OR+sample_accession%3D%22SAMD00772954%22+OR+sample_accession%3D%22SAMD00772955%22+OR+sample_accession%3D%22SAMD00772956%22&fields=analysis_accession%2Canalysis_type%2Cstudy_accession%2Csample_accession%2Csubmitted_ftp%2Csubmitted_md5%2Csubmitted_bytes&limit=0&format=tsv",
+      "size_bytes": 110,
+      "sha256": "6dff715e6352b84bb3732426ab2de0fc39bcf47c72470bc00b93561dbc0a4ce2",
+      "rows": 0,
+      "columns": [
+        "analysis_accession",
+        "analysis_type",
+        "study_accession",
+        "sample_accession",
+        "submitted_ftp",
+        "submitted_md5",
+        "submitted_bytes"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "filename": "phage_sequence_samples_01.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=sample_accession%3D%22SAMD00772939%22+OR+sample_accession%3D%22SAMD00772940%22+OR+sample_accession%3D%22SAMD00772941%22+OR+sample_accession%3D%22SAMD00772942%22+OR+sample_accession%3D%22SAMD00772943%22+OR+sample_accession%3D%22SAMD00772944%22+OR+sample_accession%3D%22SAMD00772945%22+OR+sample_accession%3D%22SAMD00772946%22+OR+sample_accession%3D%22SAMD00772947%22+OR+sample_accession%3D%22SAMD00772948%22+OR+sample_accession%3D%22SAMD00772949%22+OR+sample_accession%3D%22SAMD00772950%22+OR+sample_accession%3D%22SAMD00772951%22+OR+sample_accession%3D%22SAMD00772952%22+OR+sample_accession%3D%22SAMD00772953%22+OR+sample_accession%3D%22SAMD00772954%22+OR+sample_accession%3D%22SAMD00772955%22+OR+sample_accession%3D%22SAMD00772956%22&fields=accession%2Csequence_version%2Cdescription%2Cscientific_name%2Cbase_count%2Csequence_md5%2Csample_accession%2Cstudy_accession&limit=0&format=tsv",
+      "size_bytes": 112,
+      "sha256": "982d9a26e50cfdcecefa6b7848f95a0d573c6652e3f84911e9e585b431857093",
+      "rows": 0,
+      "columns": [
+        "accession",
+        "sequence_version",
+        "description",
+        "scientific_name",
+        "base_count",
+        "sequence_md5",
+        "sample_accession",
+        "study_accession"
+      ],
+      "canonical_rows_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  ],
+  "host_assemblies": [
+    {
+      "source_label": "001",
+      "sample_accession": "SAMD00774397",
+      "run_accession": "DRR550284",
+      "analysis_accession": "ERZ29990576",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "712517186470145079a9063efc5e1aaa",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774397.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990576/SAMD00774397.fa.gz",
+        "size_bytes": 1530892,
+        "sha256": "0ae69b01e0265cf5887f29f6c153933663651a49702919926cff5c5c5cfa02dd"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990576.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990576",
+        "size_bytes": 1987,
+        "sha256": "d90f3913ca5a81bb2b253638b6ba9a667cffccdda103722c258aa0998bd21bd3"
+      }
+    },
+    {
+      "source_label": "002",
+      "sample_accession": "SAMD00774398",
+      "run_accession": "DRR550285",
+      "analysis_accession": "ERZ29990579",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "e84795028e68f19f7f2a82494d47dd60",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774398.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990579/SAMD00774398.fa.gz",
+        "size_bytes": 1451209,
+        "sha256": "264f83eeb25bb346c5487c4fc99840cbc344a4d9402a3001096449aff0b43bea"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990579.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990579",
+        "size_bytes": 1986,
+        "sha256": "20cf10b3be89f30f96bf5c13cdcfa04f550493eef061f68432591ffc179019ce"
+      }
+    },
+    {
+      "source_label": "003",
+      "sample_accession": "SAMD00774399",
+      "run_accession": "DRR550286",
+      "analysis_accession": "ERZ29990581",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "4a7ebbca38419deec24791c57a0f5b91",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774399.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990581/SAMD00774399.fa.gz",
+        "size_bytes": 1434991,
+        "sha256": "4274424c292643337f1c33035f5b50ec7292010a48c1952aaa452f89456e56dc"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990581.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990581",
+        "size_bytes": 1987,
+        "sha256": "fcf5bc15ee33b7536bea40bc680309e31cc5b89db34ec5671c031e4fac1ae5f2"
+      }
+    },
+    {
+      "source_label": "004",
+      "sample_accession": "SAMD00774400",
+      "run_accession": "DRR550287",
+      "analysis_accession": "ERZ29990583",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "afa77e9648e488e0b0fa99a861192996",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774400.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990583/SAMD00774400.fa.gz",
+        "size_bytes": 1389674,
+        "sha256": "ed17ec1a0a3b47d0b49cc04532970b251b2a2241f99eb727c9d2695af848a204"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990583.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990583",
+        "size_bytes": 1987,
+        "sha256": "3000ecc739aee791cd8d673c10efb28db9cd3b2cf6bcb94bffdbc1d86a11829e"
+      }
+    },
+    {
+      "source_label": "005",
+      "sample_accession": "SAMD00774401",
+      "run_accession": "DRR550288",
+      "analysis_accession": "ERZ29990585",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "bdbe727f8dd0c114f47e4514da41a6be",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774401.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990585/SAMD00774401.fa.gz",
+        "size_bytes": 1460573,
+        "sha256": "512fe6379ec089d9fd0e9282e5fcf0f0d16d17fca78e2d9117e2e564afeeb079"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990585.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990585",
+        "size_bytes": 1987,
+        "sha256": "827409c70253abfd8b88438bc344697685f2f6606980c68c907f20bd548bebda"
+      }
+    },
+    {
+      "source_label": "006",
+      "sample_accession": "SAMD00774402",
+      "run_accession": "DRR550289",
+      "analysis_accession": "ERZ29990587",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "e79f03aa8ac76d271798b2cbfd2a23cf",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774402.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990587/SAMD00774402.fa.gz",
+        "size_bytes": 1459874,
+        "sha256": "92f5a89bf20b5e651222120d8d5155b4f6096274b2439371c8578a9c7d4a8a7f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990587.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990587",
+        "size_bytes": 1987,
+        "sha256": "060deaa6c2ee6d4c348ba961fc76be73644bfe08d4c03b2eebc8df414492da5c"
+      }
+    },
+    {
+      "source_label": "007",
+      "sample_accession": "SAMD00774403",
+      "run_accession": "DRR550290",
+      "analysis_accession": "ERZ29990589",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "46d8d61ed635c9005f149aa09d8af9c5",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774403.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990589/SAMD00774403.fa.gz",
+        "size_bytes": 1390964,
+        "sha256": "407a49dc0f6d4276d486b5434c659c9904b62ed60c91eea58c3f0ad31d0cf9a9"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990589.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990589",
+        "size_bytes": 1987,
+        "sha256": "9f4a18bc28a3940b83846853d63084a42820b85e06c349f8e0e380e58d143445"
+      }
+    },
+    {
+      "source_label": "008",
+      "sample_accession": "SAMD00774404",
+      "run_accession": "DRR550291",
+      "analysis_accession": "ERZ29990591",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "31064fb1653b76de8828c476d190853c",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774404.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990591/SAMD00774404.fa.gz",
+        "size_bytes": 1475731,
+        "sha256": "eeb723f5fabde90432aa3199a1076bd1ff40fe8923feabe2f69d6488b8164634"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990591.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990591",
+        "size_bytes": 1987,
+        "sha256": "f4df35b245b03dee04e6a6043848ee95070cead41656c6c9013f29e32a50bf6f"
+      }
+    },
+    {
+      "source_label": "009",
+      "sample_accession": "SAMD00774405",
+      "run_accession": "DRR550292",
+      "analysis_accession": "ERZ29990593",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "5ded087ba92e4d9cb90532f9a6f07b06",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774405.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990593/SAMD00774405.fa.gz",
+        "size_bytes": 1473595,
+        "sha256": "5a79b2afaeaecac0da2af2e48479d2913bd38f2e705edbe665cb38d45cb224fb"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990593.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990593",
+        "size_bytes": 1987,
+        "sha256": "3fbe9a694f5a84cc4598efea232d7d05d6860c7a7798f1b2f87a22666f5404f3"
+      }
+    },
+    {
+      "source_label": "010",
+      "sample_accession": "SAMD00774406",
+      "run_accession": "DRR550293",
+      "analysis_accession": "ERZ29990595",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "b48fb7b4cd28d305f23f8079e4b5a450",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774406.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990595/SAMD00774406.fa.gz",
+        "size_bytes": 1378203,
+        "sha256": "1addc3e098fbbb86aa5deaf8c361b00d8c84b61e1b17b0427368cdecc6dc7bf0"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990595.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990595",
+        "size_bytes": 1987,
+        "sha256": "82f474d6165904cd8f6adf373fcc8bdd91d92706037f358f13c1fd7cb5e502a6"
+      }
+    },
+    {
+      "source_label": "011",
+      "sample_accession": "SAMD00774407",
+      "run_accession": "DRR550294",
+      "analysis_accession": "ERZ29990597",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "150cd8cd791229f888a496fa2845c0c7",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774407.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990597/SAMD00774407.fa.gz",
+        "size_bytes": 1510690,
+        "sha256": "d31b80a8315f056ce7ab662001e1439cea55c468e799def7a0ccc24bcf472e65"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990597.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990597",
+        "size_bytes": 1987,
+        "sha256": "ca58682706ef942c84d6eeda30b700e450554437e807949467ec81177c5c4682"
+      }
+    },
+    {
+      "source_label": "012",
+      "sample_accession": "SAMD00774408",
+      "run_accession": "DRR550295",
+      "analysis_accession": "ERZ29990600",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "513f9d684ca12bdfbfec08603408c04d",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774408.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990600/SAMD00774408.fa.gz",
+        "size_bytes": 1479501,
+        "sha256": "50fa31ebf20f31782e6053aa51879541e491d9a65281f3222d6c8199073eab8d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990600.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990600",
+        "size_bytes": 1987,
+        "sha256": "2eb1ead87ceae2be1b41d1cc4af3da307b5f146d6d666cfeb56100007a0b8b76"
+      }
+    },
+    {
+      "source_label": "013",
+      "sample_accession": "SAMD00774409",
+      "run_accession": "DRR550296",
+      "analysis_accession": "ERZ29990603",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7667e2fc7fa1155d049268cc5eb807e5",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774409.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990603/SAMD00774409.fa.gz",
+        "size_bytes": 1429481,
+        "sha256": "cbc85077050bea7e37d2510235d50226d624693d657dba94ea54f83aa0cffbcc"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990603.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990603",
+        "size_bytes": 1987,
+        "sha256": "12108938e2f08ef204a1dec6e7b0d25d229961ebdd2f67537541ca4fb001c14c"
+      }
+    },
+    {
+      "source_label": "014",
+      "sample_accession": "SAMD00774410",
+      "run_accession": "DRR550297",
+      "analysis_accession": "ERZ29990604",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "f5b8e8df867c321cb6fb6fbbb7cc47b8",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774410.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990604/SAMD00774410.fa.gz",
+        "size_bytes": 1402541,
+        "sha256": "202654242c904366aa2496e93143e15cbdef191bd74c7e170a438fd96b490c34"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990604.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990604",
+        "size_bytes": 1987,
+        "sha256": "a691083220da2bc01e9c5c1b8c3f446aafe4274c64cabf769b9b859256e5ff7c"
+      }
+    },
+    {
+      "source_label": "015",
+      "sample_accession": "SAMD00774411",
+      "run_accession": "DRR550298",
+      "analysis_accession": "ERZ29990607",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "43878a5edb77eff1b9352458a3b11a6c",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774411.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990607/SAMD00774411.fa.gz",
+        "size_bytes": 1493779,
+        "sha256": "6d7a0a21b2c6f6b1f3c83eec1f664d6e2f4dec897c6ebccebf008f80632bedb6"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990607.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990607",
+        "size_bytes": 1987,
+        "sha256": "b4877d5d4b78a44bde55d9495d70968467a283da1226c345ca42233f937757e9"
+      }
+    },
+    {
+      "source_label": "016",
+      "sample_accession": "SAMD00774412",
+      "run_accession": "DRR550299",
+      "analysis_accession": "ERZ29990610",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "472f23248b17de87388793925c85b82f",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774412.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990610/SAMD00774412.fa.gz",
+        "size_bytes": 1427483,
+        "sha256": "caea2fbdb1cd53db861440a6d7ef4b9db623fc5d4e11d5c48b43f533b4297f40"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990610.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990610",
+        "size_bytes": 1987,
+        "sha256": "f1a203316b1109c17dfa92ecf555cc9abe147879a343e4292c7de49771aead2b"
+      }
+    },
+    {
+      "source_label": "017",
+      "sample_accession": "SAMD00774413",
+      "run_accession": "DRR550300",
+      "analysis_accession": "ERZ29990612",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "19c8b751e463e25e3ea8f727477a2a61",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774413.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990612/SAMD00774413.fa.gz",
+        "size_bytes": 1472174,
+        "sha256": "b6bbbdcc9f93593141e13c861a723c7bcfbf72418b324d17b0f3ee5f2785e471"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990612.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990612",
+        "size_bytes": 1987,
+        "sha256": "8e59d1b1604aa086bfc0fed78fc6af08769d4fdf4e310774bfc2dd0ec91c5eee"
+      }
+    },
+    {
+      "source_label": "018",
+      "sample_accession": "SAMD00774414",
+      "run_accession": "DRR550301",
+      "analysis_accession": "ERZ29990615",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "a90aa9083f8c94d858935893d6162be7",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774414.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990615/SAMD00774414.fa.gz",
+        "size_bytes": 1451638,
+        "sha256": "1cb3f6be87ad229b98328ae2242bceefd6da1a1990d2854efe29d52f2700ba18"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990615.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990615",
+        "size_bytes": 1986,
+        "sha256": "0dc4db2d7faa86abfd327727892654a71e0ac1a8f315c136f48b3a106cfcaf40"
+      }
+    },
+    {
+      "source_label": "019",
+      "sample_accession": "SAMD00774415",
+      "run_accession": "DRR550302",
+      "analysis_accession": "ERZ29990618",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "85f6346515235fa2d075bdb821581ce5",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774415.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990618/SAMD00774415.fa.gz",
+        "size_bytes": 1530629,
+        "sha256": "97adc7d75bd05c450bdf82339f3416d6080db1193be239a676d458b1c31ce462"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990618.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990618",
+        "size_bytes": 1987,
+        "sha256": "5495eebe84c7c5b768349e4e27ccb54c3fd804d30d870e30399a93035a40bbdb"
+      }
+    },
+    {
+      "source_label": "020",
+      "sample_accession": "SAMD00774416",
+      "run_accession": "DRR550303",
+      "analysis_accession": "ERZ29990621",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "856c493668b652d7b5f7d95836c3a859",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774416.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990621/SAMD00774416.fa.gz",
+        "size_bytes": 1417461,
+        "sha256": "0c116011431aeeff2481c1c9e27c75b9fe37b4e62a96670a2166ee62627a27f4"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990621.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990621",
+        "size_bytes": 1987,
+        "sha256": "8d06c681fdab355434a3d533d564a3abfac1cde1adcc42ffd99590412f30ab75"
+      }
+    },
+    {
+      "source_label": "021",
+      "sample_accession": "SAMD00774417",
+      "run_accession": "DRR550304",
+      "analysis_accession": "ERZ29990622",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "cc73c345d889292250c92c130b8f0928",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774417.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990622/SAMD00774417.fa.gz",
+        "size_bytes": 1438602,
+        "sha256": "42c3e13e3d7e2d2ca1423c5e83c6b2501c2cb0f6fb0122329691b36e46e63e23"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990622.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990622",
+        "size_bytes": 1988,
+        "sha256": "3293beee02ff170ce81f874e8628d4fc87700bc6fff805abf95464a4f0607638"
+      }
+    },
+    {
+      "source_label": "022",
+      "sample_accession": "SAMD00774418",
+      "run_accession": "DRR550305",
+      "analysis_accession": "ERZ29990625",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2eeeb206674d3c10faca0a4bf6538fc2",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774418.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990625/SAMD00774418.fa.gz",
+        "size_bytes": 1466518,
+        "sha256": "998b7e1af5b41b867c01274190c385e25558c3481c8b2c38920452febdf2a4dd"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990625.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990625",
+        "size_bytes": 1987,
+        "sha256": "eb9806d48346c6ebc54183d7f34f7fdcc64f5ef51cafe3324ca9cf0c4e161312"
+      }
+    },
+    {
+      "source_label": "023",
+      "sample_accession": "SAMD00774419",
+      "run_accession": "DRR550306",
+      "analysis_accession": "ERZ29990627",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "780127174511b95a853f214919695f5d",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774419.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990627/SAMD00774419.fa.gz",
+        "size_bytes": 1502126,
+        "sha256": "6a862e0c4f72222e43241c4a9979a8c64ec403e5aa8eb418940cca9154a32f40"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990627.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990627",
+        "size_bytes": 1986,
+        "sha256": "a889fec720f9518e4806f0a6f1b282d2ba7c8e2ce9c85ca28b3b08ce74818773"
+      }
+    },
+    {
+      "source_label": "024",
+      "sample_accession": "SAMD00774420",
+      "run_accession": "DRR550307",
+      "analysis_accession": "ERZ29990630",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "db5158ad21a3eec8fda702204a078583",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774420.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990630/SAMD00774420.fa.gz",
+        "size_bytes": 1494800,
+        "sha256": "1096dc29f90b01dc553310c862cb59602a55363d9197f3122c416658cf71ca6b"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990630.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990630",
+        "size_bytes": 1987,
+        "sha256": "41bdeb9f58e194fbf7e4627c93a90c618a436809107346b2dded611e881c143c"
+      }
+    },
+    {
+      "source_label": "025",
+      "sample_accession": "SAMD00774421",
+      "run_accession": "DRR550308",
+      "analysis_accession": "ERZ29990633",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "609d815fa9a1acb8076b204124ebf9f3",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774421.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990633/SAMD00774421.fa.gz",
+        "size_bytes": 1461503,
+        "sha256": "9103f7ec6220d44bf3634a51c09cce7592a733b6c1dc68d076efff5fc26120d1"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990633.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990633",
+        "size_bytes": 1988,
+        "sha256": "05b6dc1392ea0563674266bb4a666ffa033de11501d2d9a4939a2d1224f19de0"
+      }
+    },
+    {
+      "source_label": "026",
+      "sample_accession": "SAMD00774422",
+      "run_accession": "DRR550309",
+      "analysis_accession": "ERZ29990636",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "dbe9e2f1026fc70faa0b694bd91f9322",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774422.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990636/SAMD00774422.fa.gz",
+        "size_bytes": 1464742,
+        "sha256": "d0cec75fea5cd42d8f5c2fd3a8983ec1ba7fffa6f4a4df19c47923ffe808009d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990636.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990636",
+        "size_bytes": 1987,
+        "sha256": "69d68b99b5fddbb67798ed1ccc10af5b17e31e9b1c5752bf15496670b7ff74ba"
+      }
+    },
+    {
+      "source_label": "027",
+      "sample_accession": "SAMD00774423",
+      "run_accession": "DRR550310",
+      "analysis_accession": "ERZ29990638",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "bde624f01f156ee9edd24c686e708b89",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774423.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990638/SAMD00774423.fa.gz",
+        "size_bytes": 1481393,
+        "sha256": "2e185be1ed58fb3ce3766f3bb0e68935280a858f88ce1eb342b6006129286458"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990638.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990638",
+        "size_bytes": 1987,
+        "sha256": "7531715445fcf6cdd365d2846d58e7c8a4ac5ff74745d7cae5de7c9cfe37d497"
+      }
+    },
+    {
+      "source_label": "028",
+      "sample_accession": "SAMD00774424",
+      "run_accession": "DRR550311",
+      "analysis_accession": "ERZ29990641",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "402ecb528cff9d134986c25f85482850",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774424.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990641/SAMD00774424.fa.gz",
+        "size_bytes": 1394045,
+        "sha256": "93bb2b7153f53ae6045f65942f02672812574d51eed9563fcb23c9dfac356700"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990641.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990641",
+        "size_bytes": 1986,
+        "sha256": "f6121671dbc89cc2259ff1b77a0676526f2628ccd3bec33e822ebba15b2f73d0"
+      }
+    },
+    {
+      "source_label": "029",
+      "sample_accession": "SAMD00774425",
+      "run_accession": "DRR550312",
+      "analysis_accession": "ERZ29990643",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7605a7e5fc1e788075531a1357fad02f",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774425.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990643/SAMD00774425.fa.gz",
+        "size_bytes": 1457767,
+        "sha256": "ad7f3b2552fe9f890911b88f1bb44f1927c2bdf365c5fee355ae8754e5472dfa"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990643.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990643",
+        "size_bytes": 1986,
+        "sha256": "23b730bf5c2916407846543ca6056981aae5dd6042acf746b5bb07e96415cf2c"
+      }
+    },
+    {
+      "source_label": "030",
+      "sample_accession": "SAMD00774426",
+      "run_accession": "DRR550313",
+      "analysis_accession": "ERZ29990646",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7437f22777748cb4fc2258ae797560f0",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774426.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990646/SAMD00774426.fa.gz",
+        "size_bytes": 1473192,
+        "sha256": "3d10eb8f678b8270f820c693f45554c1a4dd1e57a6060c0246944b1a6db8dd7d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990646.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990646",
+        "size_bytes": 1987,
+        "sha256": "0642a11a53a40b55d91c6dab0fc2e4ada3913c7eabb27b0c883832aa98f23441"
+      }
+    },
+    {
+      "source_label": "031",
+      "sample_accession": "SAMD00774427",
+      "run_accession": "DRR550314",
+      "analysis_accession": "ERZ29990649",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "18e3fd7afa98301c4934c40442877742",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774427.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990649/SAMD00774427.fa.gz",
+        "size_bytes": 1574711,
+        "sha256": "5eed2ccb84318374b1528241380c891bae06948eb4a2374ce0ba971b32125742"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990649.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990649",
+        "size_bytes": 1986,
+        "sha256": "7b679187ab2170a2ddc96808b7d9d14046cfc29622145a56ed39847b63da8d04"
+      }
+    },
+    {
+      "source_label": "032",
+      "sample_accession": "SAMD00774428",
+      "run_accession": "DRR550315",
+      "analysis_accession": "ERZ29990651",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "4e5c74bcdbd27e168882cb16da55ab5a",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774428.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990651/SAMD00774428.fa.gz",
+        "size_bytes": 1575467,
+        "sha256": "21a3176e319d811a983862d5754ac11843e267709f1be8e80ed66959c0fa194c"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990651.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990651",
+        "size_bytes": 1987,
+        "sha256": "1a0b476b9c157a404f6f0d277888ca78dcd47f09f316e426ae65891552206b9b"
+      }
+    },
+    {
+      "source_label": "033",
+      "sample_accession": "SAMD00774429",
+      "run_accession": "DRR550316",
+      "analysis_accession": "ERZ29990654",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c57ba81981fa49a2336c580f19125f33",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774429.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990654/SAMD00774429.fa.gz",
+        "size_bytes": 1455106,
+        "sha256": "69b6016e2363e73186181cf5f33526c0e50ca0d6898a8a07ace24df581d2e548"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990654.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990654",
+        "size_bytes": 1987,
+        "sha256": "6d56c049460138c79e67b771c44620f50d8bebe94855787d2781596a282a49af"
+      }
+    },
+    {
+      "source_label": "034",
+      "sample_accession": "SAMD00774430",
+      "run_accession": "DRR550317",
+      "analysis_accession": "ERZ29990657",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "ab0eab73845c5ae30f9952967026929b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774430.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990657/SAMD00774430.fa.gz",
+        "size_bytes": 1474537,
+        "sha256": "deb7cd59cf66daeaf5fbbeec3aa2802e2e3161a0afdbb6a5bf08628e39a563fa"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990657.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990657",
+        "size_bytes": 1987,
+        "sha256": "7aea295cec716dc97e0eb5b3bd3575a88a60af0372957a28b7ae34d66c435921"
+      }
+    },
+    {
+      "source_label": "035",
+      "sample_accession": "SAMD00774431",
+      "run_accession": "DRR550318",
+      "analysis_accession": "ERZ29990659",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c38a47c60713e1d0bdc93051671fad49",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774431.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990659/SAMD00774431.fa.gz",
+        "size_bytes": 1476343,
+        "sha256": "272f04d022d4ff726dfea5d78113fb026e9d24d1eefc920069fea875eff78ee7"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990659.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990659",
+        "size_bytes": 1987,
+        "sha256": "472a8aadf39fb005e5588f79d8a122aa0e94f0020d2c238c16a3fa6c773997f5"
+      }
+    },
+    {
+      "source_label": "036",
+      "sample_accession": "SAMD00774432",
+      "run_accession": "DRR550319",
+      "analysis_accession": "ERZ29990662",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7c8057388ca3266bc7225fe2f5682a5e",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774432.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990662/SAMD00774432.fa.gz",
+        "size_bytes": 1441669,
+        "sha256": "02b53f10f9b17ec3cc1bb4f4563e2dbf5e88adf38e82729e769a3fb647804a9c"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990662.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990662",
+        "size_bytes": 1987,
+        "sha256": "d3cca387aaca58e4a9bba3a410f5b97f66fa542f1c8cc818b5e58d7f2974b4d3"
+      }
+    },
+    {
+      "source_label": "037",
+      "sample_accession": "SAMD00774433",
+      "run_accession": "DRR550320",
+      "analysis_accession": "ERZ29990665",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "4feb17e86544c96295190ba6da9e6115",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774433.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990665/SAMD00774433.fa.gz",
+        "size_bytes": 1438742,
+        "sha256": "b81e271e7adf3f1fd2b1178be1f8aaa72f87ca7a1b101e0ee2556e06e2b70884"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990665.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990665",
+        "size_bytes": 1987,
+        "sha256": "4657b1034934a470ed2b08842b76d1e469fb90d955d7645fcda0246fc603c0db"
+      }
+    },
+    {
+      "source_label": "038",
+      "sample_accession": "SAMD00774434",
+      "run_accession": "DRR550321",
+      "analysis_accession": "ERZ29990668",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "5c75ca516250a2a05377afa151710656",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774434.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990668/SAMD00774434.fa.gz",
+        "size_bytes": 1451828,
+        "sha256": "9711b968c0bfe1c329c533ef599de3eaf8704c1975333d0219ebcdda1ef666e2"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990668.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990668",
+        "size_bytes": 1987,
+        "sha256": "591877eeccf642018812e339b252f352fcb43a541f555092dada58723e0cff6d"
+      }
+    },
+    {
+      "source_label": "039",
+      "sample_accession": "SAMD00774435",
+      "run_accession": "DRR550322",
+      "analysis_accession": "ERZ29990671",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2511a88eb775c92cd4f4aa5026d3a809",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774435.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990671/SAMD00774435.fa.gz",
+        "size_bytes": 1443348,
+        "sha256": "3abc0d1d105387730933b26cf1a62c54e4396fb4a138f11b4d020803b306417f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990671.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990671",
+        "size_bytes": 1987,
+        "sha256": "3789f522619370116c624eefa6a32bca7b8cde875d24127ea94ca57c83b7b2de"
+      }
+    },
+    {
+      "source_label": "040",
+      "sample_accession": "SAMD00774436",
+      "run_accession": "DRR550323",
+      "analysis_accession": "ERZ29990674",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "da7a7002d00a66d04400c80f2dcc3d46",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774436.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990674/SAMD00774436.fa.gz",
+        "size_bytes": 1434491,
+        "sha256": "754a7fef8f2f2a929a26929c46939cf4fdbac757f427d790076ca9c9e0497f4c"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990674.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990674",
+        "size_bytes": 1987,
+        "sha256": "a3c650d7f072713161d0aec8dafd8197e0b19b134220a356f0d262c9b7bbef76"
+      }
+    },
+    {
+      "source_label": "041",
+      "sample_accession": "SAMD00774437",
+      "run_accession": "DRR550324",
+      "analysis_accession": "ERZ29990677",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "1d98f1f255098f9963efda5aefa6c00c",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774437.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990677/SAMD00774437.fa.gz",
+        "size_bytes": 1540332,
+        "sha256": "fcafd28382cd876dd15727afe492cb70ec5e6c574782e32bef10a31bf3879c5d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990677.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990677",
+        "size_bytes": 1987,
+        "sha256": "a9fc0187482338c2cd8a7667c3fc0e7851bae2def41bbddcf7802558b1343e82"
+      }
+    },
+    {
+      "source_label": "042",
+      "sample_accession": "SAMD00774438",
+      "run_accession": "DRR550325",
+      "analysis_accession": "ERZ29990680",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2d1326762558281d12a25990452c9aed",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774438.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990680/SAMD00774438.fa.gz",
+        "size_bytes": 1476737,
+        "sha256": "128348a7e58c4b31fbd2de2786ff6c6b54bf5c89e6ff7037254a52b84d863345"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990680.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990680",
+        "size_bytes": 1987,
+        "sha256": "64599c0d43d81aaddcceb5494c70aaba9f00a7a63bd34db020ec77d9bb9403fb"
+      }
+    },
+    {
+      "source_label": "043",
+      "sample_accession": "SAMD00774439",
+      "run_accession": "DRR550326",
+      "analysis_accession": "ERZ29990683",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0e467e9e40e12559a3276ba1c363a657",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774439.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990683/SAMD00774439.fa.gz",
+        "size_bytes": 1462990,
+        "sha256": "e93b96085727907108c8a95c11de84d172478fc97d55f565a9098e40a79383c0"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990683.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990683",
+        "size_bytes": 1987,
+        "sha256": "995f4fe5ecfa9e828614d66a532d0076a1b07f3530ab0a31c4817b4855324861"
+      }
+    },
+    {
+      "source_label": "044",
+      "sample_accession": "SAMD00774440",
+      "run_accession": "DRR550327",
+      "analysis_accession": "ERZ29990686",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2c120793849c7d36e7f5307ed284e818",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774440.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990686/SAMD00774440.fa.gz",
+        "size_bytes": 1492342,
+        "sha256": "acfb46887ab4e22c4e647e8dc9d3c1b14d4f842fc98f3c9d88635d050b27104f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990686.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990686",
+        "size_bytes": 1987,
+        "sha256": "0c7ba2a3b93efb65c870b119e48d70194fa14ac8f448495dc1d772643761df37"
+      }
+    },
+    {
+      "source_label": "045",
+      "sample_accession": "SAMD00774441",
+      "run_accession": "DRR550328",
+      "analysis_accession": "ERZ29990689",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "3d0aaa33e1991e84925ebfba76f129bf",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774441.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990689/SAMD00774441.fa.gz",
+        "size_bytes": 1447614,
+        "sha256": "32063d63c7d1825b6ee009facc3bd635227772581b812c21b2b6b0d9d6be009d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990689.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990689",
+        "size_bytes": 1987,
+        "sha256": "a0e7fbf23a33b7243191bc7164438d7e1be5cfb0f9c0e95399112257258c3022"
+      }
+    },
+    {
+      "source_label": "046",
+      "sample_accession": "SAMD00774442",
+      "run_accession": "DRR550329",
+      "analysis_accession": "ERZ29990693",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "dd2f847b6336b13e1b44a80353849a9b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774442.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990693/SAMD00774442.fa.gz",
+        "size_bytes": 1400612,
+        "sha256": "1cfc1f3b5287452ab236ddf9d0a22a8602b738655664007d5ba9299cfc77a963"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990693.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990693",
+        "size_bytes": 1987,
+        "sha256": "79cae7b38fd7ab567d044b79a419d5a03686b1427faffc24ff6f7e4002bf5f56"
+      }
+    },
+    {
+      "source_label": "047",
+      "sample_accession": "SAMD00774443",
+      "run_accession": "DRR550330",
+      "analysis_accession": "ERZ29990696",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "1cac2be4bc0d11d05a1e4049bd368ad2",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774443.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990696/SAMD00774443.fa.gz",
+        "size_bytes": 1454845,
+        "sha256": "0feec7f9b1773f9042b68c11a2283186520ac661de310e525ac541fc5be24cae"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990696.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990696",
+        "size_bytes": 1987,
+        "sha256": "2978dd45113677b3daea1a4bb778f7215798e88d19bf6b01ce702398aee3faac"
+      }
+    },
+    {
+      "source_label": "048",
+      "sample_accession": "SAMD00774444",
+      "run_accession": "DRR550331",
+      "analysis_accession": "ERZ29990700",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "a1574cf602f8bfadf89f52c42c55d64a",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774444.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990700/SAMD00774444.fa.gz",
+        "size_bytes": 1450698,
+        "sha256": "e5dbe2bf47383186b0db6f1c96ca7485eec4a8bb527d1281aab4138b38b61ce9"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990700.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990700",
+        "size_bytes": 1987,
+        "sha256": "d15e245dc44adebf87d32421e9f63beab8a13f1f18ab4694a52ce7e7c1b759a7"
+      }
+    },
+    {
+      "source_label": "049",
+      "sample_accession": "SAMD00774445",
+      "run_accession": "DRR550332",
+      "analysis_accession": "ERZ29990703",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "e5f3ff9de800b2064000b26d4e470322",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774445.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990703/SAMD00774445.fa.gz",
+        "size_bytes": 1447677,
+        "sha256": "293e2286779b72f4d3e766969a9871b6acdbc9622505561d940b2e664f4afb22"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990703.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990703",
+        "size_bytes": 1987,
+        "sha256": "6834b170d227eae819488de28a5de82e599196af31631449785f4c8fdaf57a43"
+      }
+    },
+    {
+      "source_label": "050",
+      "sample_accession": "SAMD00774446",
+      "run_accession": "DRR550333",
+      "analysis_accession": "ERZ29990705",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "f0735d961e4e7c443c1bbb99ba567e73",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774446.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990705/SAMD00774446.fa.gz",
+        "size_bytes": 1539722,
+        "sha256": "a1e7fad8123f5ff75441a98edec7f079df8ec73ad166ebecdcecde1bc40dba98"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990705.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990705",
+        "size_bytes": 1987,
+        "sha256": "913af706b5d09a3b21ecfa1ac3c525786d6d3d0d8e08fa3f6f42ffbb811d3d41"
+      }
+    },
+    {
+      "source_label": "051",
+      "sample_accession": "SAMD00774447",
+      "run_accession": "DRR550334",
+      "analysis_accession": "ERZ29990707",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "290d0d930aefa03eb842091765f05161",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774447.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990707/SAMD00774447.fa.gz",
+        "size_bytes": 1377247,
+        "sha256": "ec04e9fe3d0e36c85b9f10692bce518e42ee567375765d9d1f22c728c20404fb"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990707.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990707",
+        "size_bytes": 1987,
+        "sha256": "b22d10edc65dded0779d3fa25f28ed4224379a87604ea9aad370b1843c6fc916"
+      }
+    },
+    {
+      "source_label": "052",
+      "sample_accession": "SAMD00774448",
+      "run_accession": "DRR550335",
+      "analysis_accession": "ERZ29990710",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0e6c5cde34cdf6b7f49515f363aaedbf",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774448.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990710/SAMD00774448.fa.gz",
+        "size_bytes": 1414656,
+        "sha256": "27ae6006ac44fe3df77b248fbb84acc3a31dd35adfd0eee556065e6710955882"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990710.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990710",
+        "size_bytes": 1987,
+        "sha256": "15e3faebdc57847c8977ff8933c85c6a67266b63114926396c2b7113282356c6"
+      }
+    },
+    {
+      "source_label": "053",
+      "sample_accession": "SAMD00774449",
+      "run_accession": "DRR550336",
+      "analysis_accession": "ERZ29990713",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "4f7e7be13aff054cf02f3b6ef97e88ea",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774449.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990713/SAMD00774449.fa.gz",
+        "size_bytes": 1462007,
+        "sha256": "909175de95438d2febe8354ef52900e10be69d7c2ccb9eaac7f8b7cc8e71a767"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990713.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990713",
+        "size_bytes": 1987,
+        "sha256": "66bdeeac7a742b8bea349c099d38ea9570e444335944f0f5122bb593adb20478"
+      }
+    },
+    {
+      "source_label": "054",
+      "sample_accession": "SAMD00774450",
+      "run_accession": "DRR550337",
+      "analysis_accession": "ERZ29990716",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "b945b26398f814e62959a31fc5854206",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774450.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990716/SAMD00774450.fa.gz",
+        "size_bytes": 1499039,
+        "sha256": "70c98dbea2d240bc1712455d8c32aa24cc6f5652a4263ba6cc6469c54317418e"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990716.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990716",
+        "size_bytes": 1987,
+        "sha256": "d55b6b0754fd16deda8d64df1d970044504f401b5a999de325caf3fb02c55eee"
+      }
+    },
+    {
+      "source_label": "055",
+      "sample_accession": "SAMD00774451",
+      "run_accession": "DRR550338",
+      "analysis_accession": "ERZ29990719",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0f30d350f73ff992c8ee83663da8745e",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774451.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990719/SAMD00774451.fa.gz",
+        "size_bytes": 1432812,
+        "sha256": "b504535cf6815235dfb8725a15078809509bcba5cc5e6fbce23b4b113556f889"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990719.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990719",
+        "size_bytes": 1987,
+        "sha256": "0fc94a6a2b219f1186c1b314369e930f4362dec90f9f805c376830d89022699d"
+      }
+    },
+    {
+      "source_label": "056",
+      "sample_accession": "SAMD00774452",
+      "run_accession": "DRR550339",
+      "analysis_accession": "ERZ29990720",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c2dcf8797e390f1e8bab4a04a12f24c0",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774452.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990720/SAMD00774452.fa.gz",
+        "size_bytes": 1457551,
+        "sha256": "28161c7733346929f73a29e69e55b9809ad73873f4983be8ed7b48ad67714cc8"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990720.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990720",
+        "size_bytes": 1987,
+        "sha256": "be0889febd004b5dbca6fb80ffce5b5db83e6bf76ce5296f6333a4bf4e55ab52"
+      }
+    },
+    {
+      "source_label": "057",
+      "sample_accession": "SAMD00774453",
+      "run_accession": "DRR550340",
+      "analysis_accession": "ERZ29990723",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "dca03a8b854ab03a152602d102139871",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774453.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990723/SAMD00774453.fa.gz",
+        "size_bytes": 1456317,
+        "sha256": "ce4f55ecaa2074e625ae505883949653a4e60b3bec57183e8ba82e677861fb89"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990723.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990723",
+        "size_bytes": 1986,
+        "sha256": "488a5cb5119c9c43c1ccd2cf0601761004f7618b982764c43e260aa2171ffe5a"
+      }
+    },
+    {
+      "source_label": "058",
+      "sample_accession": "SAMD00774454",
+      "run_accession": "DRR550341",
+      "analysis_accession": "ERZ29990726",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "b7601f4ede66d36968a32faaf566be37",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774454.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990726/SAMD00774454.fa.gz",
+        "size_bytes": 1555486,
+        "sha256": "3d2f855d349ccefb4fbf3bd19e415e8f61a0d738240c5a9863c8651e7f901ac9"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990726.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990726",
+        "size_bytes": 1987,
+        "sha256": "8c5dfa85fe8718e417aa2b3ddaac5fa1dcd1359f8e52f3a6629143f7756143ca"
+      }
+    },
+    {
+      "source_label": "059",
+      "sample_accession": "SAMD00774455",
+      "run_accession": "DRR550342",
+      "analysis_accession": "ERZ29990729",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "e162f3cd6c5d0c9dfe6d587afa10ab48",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774455.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990729/SAMD00774455.fa.gz",
+        "size_bytes": 1441434,
+        "sha256": "fe805e4c67b39a9c1f7ff2af65886dd91d5f9a294425868fdb0a304f568f52b6"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990729.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990729",
+        "size_bytes": 1987,
+        "sha256": "60e4e20c61f0a0eb3a14c24a2840cf7d701d7893a408aa02a6472c956506f6c3"
+      }
+    },
+    {
+      "source_label": "060",
+      "sample_accession": "SAMD00774456",
+      "run_accession": "DRR550343",
+      "analysis_accession": "ERZ29990731",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "8c4d902163b4202467cdf408a6f939b9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774456.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990731/SAMD00774456.fa.gz",
+        "size_bytes": 1446686,
+        "sha256": "61d4b93a42dcc95119b0b26f2e8c0ffece84f57f29a2eed80fb365706b0232b4"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990731.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990731",
+        "size_bytes": 1987,
+        "sha256": "5829ecb47a4372042beae813a8726fe707eb7f563ba2f29692cb8b45e8bdf86f"
+      }
+    },
+    {
+      "source_label": "061",
+      "sample_accession": "SAMD00774457",
+      "run_accession": "DRR550344",
+      "analysis_accession": "ERZ29990733",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "300fb2b14f56f442cc00a43654f41919",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774457.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990733/SAMD00774457.fa.gz",
+        "size_bytes": 1418903,
+        "sha256": "c919d0c29304216fe4d3d3abb6093bf89e4e78313f910ae99a49bdf40f0ee1f7"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990733.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990733",
+        "size_bytes": 1987,
+        "sha256": "93f447fffc1239a6d56ba5f2d19f30817e3180a789786ba825f8d9b375cf68b5"
+      }
+    },
+    {
+      "source_label": "062",
+      "sample_accession": "SAMD00774458",
+      "run_accession": "DRR550345",
+      "analysis_accession": "ERZ29990736",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "17f0ee07edc26c4c32724fea3bea4fac",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774458.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990736/SAMD00774458.fa.gz",
+        "size_bytes": 1445365,
+        "sha256": "b1333a467c3ad16119c80dafe4e9f56bef611a534ca8140a5545fd494d55363f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990736.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990736",
+        "size_bytes": 1987,
+        "sha256": "1dcb369418d83c897bf9723cc7f143219b00ca90557813801bff78a343166d15"
+      }
+    },
+    {
+      "source_label": "063",
+      "sample_accession": "SAMD00774459",
+      "run_accession": "DRR550346",
+      "analysis_accession": "ERZ29990739",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "e738598de4c3b51a88d94a24051a07f0",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774459.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990739/SAMD00774459.fa.gz",
+        "size_bytes": 1396290,
+        "sha256": "b66dc6cf2cbd04f21bd590ba216fe0943736a4ce3a090dc80fd0bd7b0249a6a2"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990739.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990739",
+        "size_bytes": 1986,
+        "sha256": "089298f8172acac4602eb8f1ad41e1b4719c76be8b3d24102bf17fd3bd2f8fe3"
+      }
+    },
+    {
+      "source_label": "064",
+      "sample_accession": "SAMD00774460",
+      "run_accession": "DRR550347",
+      "analysis_accession": "ERZ29990741",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "aa34d8b9ee0c4cf7686fc18bda3281b6",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774460.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990741/SAMD00774460.fa.gz",
+        "size_bytes": 1440995,
+        "sha256": "79da4f7496e8c8ff68d0487e0ed47ded60bb7949440141d7043e17caa5a016fc"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990741.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990741",
+        "size_bytes": 1987,
+        "sha256": "bc636f9ad15eec491ec80559a6c98f44911cb4ba45da8b71aaac2b27e6d9eabd"
+      }
+    },
+    {
+      "source_label": "065",
+      "sample_accession": "SAMD00774461",
+      "run_accession": "DRR550348",
+      "analysis_accession": "ERZ29990743",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "30150a449cd47b185a386cbca445c5f3",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774461.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990743/SAMD00774461.fa.gz",
+        "size_bytes": 1446430,
+        "sha256": "2809b9b51478bc695731efff6f1a924993eb44c25539d1f06402043b7ba9b2fc"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990743.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990743",
+        "size_bytes": 1987,
+        "sha256": "185da396b90a4c25f2bba80c1c1917aa51184f229b096adc1157019240fb881e"
+      }
+    },
+    {
+      "source_label": "066",
+      "sample_accession": "SAMD00774462",
+      "run_accession": "DRR550349",
+      "analysis_accession": "ERZ29990746",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "006107fd5960ae192f517955009e7c4c",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774462.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990746/SAMD00774462.fa.gz",
+        "size_bytes": 1495815,
+        "sha256": "d491ca9732787f146cdfc09355a7c2131cdb887ffe36d16cc502499407f92d41"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990746.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990746",
+        "size_bytes": 1987,
+        "sha256": "faacf44d666001fb533c3c64b830e1501fc5a2a0d4dbd9faedb108c74ea44d92"
+      }
+    },
+    {
+      "source_label": "067",
+      "sample_accession": "SAMD00774463",
+      "run_accession": "DRR550350",
+      "analysis_accession": "ERZ29990751",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "b23475cb08395d14aae177db98025af8",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774463.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990751/SAMD00774463.fa.gz",
+        "size_bytes": 1536504,
+        "sha256": "df06b0fbbc3164b4c63371930a5a9ffb588d57acbfd94af257b800cfaa4e3821"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990751.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990751",
+        "size_bytes": 1987,
+        "sha256": "928a4a2b80fabee0c148f8d70c1b13004bb6fb96875dca079ec06b5981affa36"
+      }
+    },
+    {
+      "source_label": "068",
+      "sample_accession": "SAMD00774464",
+      "run_accession": "DRR550351",
+      "analysis_accession": "ERZ29990753",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0107ce311ab2f909faf55bd824c7e075",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774464.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990753/SAMD00774464.fa.gz",
+        "size_bytes": 1468097,
+        "sha256": "02042f7855f99a3d2aea63df3d7f68482f7e6d7cea3bc4ccb22405720da9663e"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990753.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990753",
+        "size_bytes": 1987,
+        "sha256": "9d16021dc3efe4f21663e88bfc42072273c3e7774c61937c5a8ab4072292814c"
+      }
+    },
+    {
+      "source_label": "069",
+      "sample_accession": "SAMD00774465",
+      "run_accession": "DRR550352",
+      "analysis_accession": "ERZ29990755",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "623d24ca77fd4263a626cf36e408dc74",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774465.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990755/SAMD00774465.fa.gz",
+        "size_bytes": 1400835,
+        "sha256": "3511008dec1a787be79795261a1777f820735a1ab8f26c4c28652a2d3716c940"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990755.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990755",
+        "size_bytes": 1987,
+        "sha256": "b13a68007f0aec395a541bff61b13f8d4c1f1349599bf1f0e17853206772e3ae"
+      }
+    },
+    {
+      "source_label": "070",
+      "sample_accession": "SAMD00774466",
+      "run_accession": "DRR550353",
+      "analysis_accession": "ERZ29990758",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "1edd21fd2e42683e7398e284c4e65ebf",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774466.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990758/SAMD00774466.fa.gz",
+        "size_bytes": 1440920,
+        "sha256": "3ef5f2e5ab25fcc08e4cf4954059fd1cbfb7655fbcf156207335f9907b596460"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990758.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990758",
+        "size_bytes": 1987,
+        "sha256": "319bf3ec8282a2ef8885ae6e9add9a358323a8d7fd1391b040c58820e20f8b72"
+      }
+    },
+    {
+      "source_label": "071",
+      "sample_accession": "SAMD00774467",
+      "run_accession": "DRR550354",
+      "analysis_accession": "ERZ29990761",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0c47823832b7a2dfbce001224fba46dc",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774467.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990761/SAMD00774467.fa.gz",
+        "size_bytes": 1486476,
+        "sha256": "9da20d3298359fdd05cabbf5a5b2cef1d3cacd7bd21347a6ee7b039b43f58c89"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990761.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990761",
+        "size_bytes": 1987,
+        "sha256": "b3fa35ed70002a819d96c84556409b2bfb22cda13318e87e026e175cde4e2571"
+      }
+    },
+    {
+      "source_label": "072",
+      "sample_accession": "SAMD00774468",
+      "run_accession": "DRR550355",
+      "analysis_accession": "ERZ29990764",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2ec64e3e4ac52340adcc0932fb97350e",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774468.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990764/SAMD00774468.fa.gz",
+        "size_bytes": 1513488,
+        "sha256": "3476fa215f0779cd02fb6b099d78176b534f491022f6eb5f77d6116c5bc1d3da"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990764.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990764",
+        "size_bytes": 1987,
+        "sha256": "eb7931254796b3d8f96795322bdd3b484fde2856ffcb3b493b2975e6834e40bb"
+      }
+    },
+    {
+      "source_label": "073",
+      "sample_accession": "SAMD00774469",
+      "run_accession": "DRR550356",
+      "analysis_accession": "ERZ29990766",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "96192bb7931df040d62b93e63ab163c1",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774469.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990766/SAMD00774469.fa.gz",
+        "size_bytes": 1428197,
+        "sha256": "f390453b135318f704eca6607ebdec19c515b7998c7b3b451343b98904967121"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990766.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990766",
+        "size_bytes": 1987,
+        "sha256": "99fd21498ed02b854d7fce26a903dcdf1b501a82dc4ff87daa1cf18ebbd1285c"
+      }
+    },
+    {
+      "source_label": "074",
+      "sample_accession": "SAMD00774470",
+      "run_accession": "DRR550357",
+      "analysis_accession": "ERZ29990769",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "635906a467ae2009d2a65f7d02e989b0",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774470.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990769/SAMD00774470.fa.gz",
+        "size_bytes": 1443810,
+        "sha256": "2dbda8cbe43f90ccece38dad40dc53c5efa4a8c0f3d4f5837d4ce7f937494998"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990769.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990769",
+        "size_bytes": 1988,
+        "sha256": "0142bf47147999868d8944eb9359bf9e098ea6c4d81e350371d6f76782e5e868"
+      }
+    },
+    {
+      "source_label": "075",
+      "sample_accession": "SAMD00774471",
+      "run_accession": "DRR550358",
+      "analysis_accession": "ERZ29990771",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "f0a4ba3e19b1d90777a84409f5886e34",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774471.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990771/SAMD00774471.fa.gz",
+        "size_bytes": 1418300,
+        "sha256": "4625ed535b4d4cd8096eba0d6916ec2029caf653798a54884f3d5c0151cb363f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990771.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990771",
+        "size_bytes": 1987,
+        "sha256": "bc2d258a4ead771d82191a739697b330a40ca83832120e21e864a442c8e2858d"
+      }
+    },
+    {
+      "source_label": "076",
+      "sample_accession": "SAMD00774472",
+      "run_accession": "DRR550359",
+      "analysis_accession": "ERZ29990774",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "1e4e5a9ed227b4b8ced102e3ae1a7d50",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774472.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990774/SAMD00774472.fa.gz",
+        "size_bytes": 1518441,
+        "sha256": "77dc1f16d9c9d0fce9fe2f3e76b49d8631136c17b9ab93edba426dac70835140"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990774.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990774",
+        "size_bytes": 1987,
+        "sha256": "e5bee34ffc32fc2286286a95060c7b59893b87123136491c410529e70d4d3dc0"
+      }
+    },
+    {
+      "source_label": "077",
+      "sample_accession": "SAMD00774473",
+      "run_accession": "DRR550360",
+      "analysis_accession": "ERZ29990777",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "3805c6e00a847d60427c36660eea78e4",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774473.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990777/SAMD00774473.fa.gz",
+        "size_bytes": 1495141,
+        "sha256": "c245ccccde0683bac0d1734ae96adcbffac453241df5bd4892aae424a305529f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990777.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990777",
+        "size_bytes": 1987,
+        "sha256": "08f2ffc46aaacde4878a87442aa784c589dd258953ccc9280a74db53135ae590"
+      }
+    },
+    {
+      "source_label": "078",
+      "sample_accession": "SAMD00774474",
+      "run_accession": "DRR550361",
+      "analysis_accession": "ERZ29990780",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "f408e60be968fa8b0cc77c276e65a419",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774474.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990780/SAMD00774474.fa.gz",
+        "size_bytes": 1585893,
+        "sha256": "e3e105df34951a872911c0382bf99757c78725b91b0af21d1fa447eaa6624fd1"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990780.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990780",
+        "size_bytes": 1986,
+        "sha256": "8b2429a15c23d877ed9cd428211e40e04c5ab1a7e02e1a872d1b64d43ce54c7c"
+      }
+    },
+    {
+      "source_label": "079",
+      "sample_accession": "SAMD00774475",
+      "run_accession": "DRR550362",
+      "analysis_accession": "ERZ29990782",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "31debb8a866f8ba6ac64d1885bf399ef",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774475.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990782/SAMD00774475.fa.gz",
+        "size_bytes": 1513629,
+        "sha256": "51ccb9c1a17797a6fdf7729d0458fe140e1ed84f727c59a4c5188346692984ac"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990782.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990782",
+        "size_bytes": 1987,
+        "sha256": "f0e0c47968398b0cba60b6c810576fd0543f4bd302d311aa039e9ae41d8c788a"
+      }
+    },
+    {
+      "source_label": "080",
+      "sample_accession": "SAMD00774476",
+      "run_accession": "DRR550363",
+      "analysis_accession": "ERZ29990785",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "9d5a58fdb3aa4439237d2286b315db2b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774476.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990785/SAMD00774476.fa.gz",
+        "size_bytes": 1437806,
+        "sha256": "1a93c42476425c54b00d09a273021c638fe48665b6ba7c27aace0f18100d8abb"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990785.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990785",
+        "size_bytes": 1987,
+        "sha256": "2f6bbeb42bbf1b63c42b767c6216b7a75bb0a62f34e12196dd7a4f0601d32026"
+      }
+    },
+    {
+      "source_label": "081",
+      "sample_accession": "SAMD00774477",
+      "run_accession": "DRR550364",
+      "analysis_accession": "ERZ29990787",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "704550a4aa0f7afb8aae236b566eb16d",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774477.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990787/SAMD00774477.fa.gz",
+        "size_bytes": 1501794,
+        "sha256": "b5b350557bb4107908d36020466fc15c1b7cb84826057d79814b0557a103be77"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990787.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990787",
+        "size_bytes": 1987,
+        "sha256": "764c811c50bbba12d8410a039204179d2b686d6356ef7577e23ec5dc56538b36"
+      }
+    },
+    {
+      "source_label": "082",
+      "sample_accession": "SAMD00774478",
+      "run_accession": "DRR550365",
+      "analysis_accession": "ERZ29990790",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "1a75568a1d78584026954617e4944f3f",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774478.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990790/SAMD00774478.fa.gz",
+        "size_bytes": 1452855,
+        "sha256": "ba2cf931a6a04aabb0f4d307dbe833dd13c19e52599664b34a260f87cb5c03ba"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990790.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990790",
+        "size_bytes": 1987,
+        "sha256": "cbd73b09b52db4894a9354a94c476f2c21c6268020b739618ee4d374fea03588"
+      }
+    },
+    {
+      "source_label": "083",
+      "sample_accession": "SAMD00774479",
+      "run_accession": "DRR550366",
+      "analysis_accession": "ERZ29990793",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7fe70f7622b784f86049667e393bf334",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774479.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990793/SAMD00774479.fa.gz",
+        "size_bytes": 1423011,
+        "sha256": "a1c085fb3f1365e13525bde1b7927ff9e870c2797eac62685973a6711a0ed370"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990793.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990793",
+        "size_bytes": 1987,
+        "sha256": "f32016338a7d44bce4c3f62377360304e3cfc84c3cda94bc389e08984427c9cf"
+      }
+    },
+    {
+      "source_label": "084",
+      "sample_accession": "SAMD00774480",
+      "run_accession": "DRR550367",
+      "analysis_accession": "ERZ29990795",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "5fc6ef2ef7001fa2ee6924f600251bfc",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774480.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990795/SAMD00774480.fa.gz",
+        "size_bytes": 1515337,
+        "sha256": "1de672b968e2f53d1052156bbc7e7d9910adb2963d262f4c1355b9dcd287ff38"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990795.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990795",
+        "size_bytes": 1986,
+        "sha256": "25772ff3c6876c4aae029152e66587367069480c9af8bb031fa65670ef0f8b73"
+      }
+    },
+    {
+      "source_label": "085",
+      "sample_accession": "SAMD00774481",
+      "run_accession": "DRR550368",
+      "analysis_accession": "ERZ29990798",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "90920b522abfd8001a9b85be42d03148",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774481.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990798/SAMD00774481.fa.gz",
+        "size_bytes": 1357863,
+        "sha256": "f2ac42f31bdc421161e995256c3f9892041bceb353ae0d637f1abe91f8aecb2e"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990798.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990798",
+        "size_bytes": 1987,
+        "sha256": "dfdd0e1fc1a9f74db4279a9654a5b1e308570fea7fa8d4c9dcf37068146d0aa1"
+      }
+    },
+    {
+      "source_label": "086",
+      "sample_accession": "SAMD00774482",
+      "run_accession": "DRR550369",
+      "analysis_accession": "ERZ29990801",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c1f4780558641137d0af96281cbf9d10",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774482.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990801/SAMD00774482.fa.gz",
+        "size_bytes": 1476387,
+        "sha256": "f778caf07689f2a30c31f37e1dbf80c022eff69fad43a645c2611d85e9c5eb4e"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990801.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990801",
+        "size_bytes": 1987,
+        "sha256": "b6bb4d051fe91b0f018f35a12528c79d9ae27c5808f4eec35d2c337a78c80c6d"
+      }
+    },
+    {
+      "source_label": "087",
+      "sample_accession": "SAMD00774483",
+      "run_accession": "DRR550370",
+      "analysis_accession": "ERZ29990803",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "af9b34c2509eb771ba192aa10d8181be",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774483.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990803/SAMD00774483.fa.gz",
+        "size_bytes": 1505888,
+        "sha256": "f3124f6fa4146b6c69481bad0e030c94cb5e653239ff73b27ceef3878dad4b5a"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990803.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990803",
+        "size_bytes": 1986,
+        "sha256": "6a42dbe69579508fae7d451bfdac2251983a9049fe3b623972acab33065e7d89"
+      }
+    },
+    {
+      "source_label": "088",
+      "sample_accession": "SAMD00774484",
+      "run_accession": "DRR550371",
+      "analysis_accession": "ERZ29990806",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "01c997658f82ed5d0d17627a00694fd7",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774484.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990806/SAMD00774484.fa.gz",
+        "size_bytes": 1495435,
+        "sha256": "f49393c0b5538e5e02d8c28ba4f8bc284e9918b162f27deb886acaabe9985faa"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990806.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990806",
+        "size_bytes": 1986,
+        "sha256": "f14b724f994996d85f9c3af2829279d8f04bad3bfa62b9fc4d0bc03d26395405"
+      }
+    },
+    {
+      "source_label": "089",
+      "sample_accession": "SAMD00774485",
+      "run_accession": "DRR550372",
+      "analysis_accession": "ERZ29990809",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2e7b50088d07315f32d0966b022c2c1b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774485.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990809/SAMD00774485.fa.gz",
+        "size_bytes": 1504543,
+        "sha256": "69d2baffa9adb554c6e35540bd6787a884a1221fbf3f5180e8da00c058a5a736"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990809.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990809",
+        "size_bytes": 1986,
+        "sha256": "196798f8a89faeaac15fc344d450dcc18c02f240a833afebcd2e73c730a6bfff"
+      }
+    },
+    {
+      "source_label": "090",
+      "sample_accession": "SAMD00774486",
+      "run_accession": "DRR550373",
+      "analysis_accession": "ERZ29990812",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "25a679d49dcb44add4a8139723f675e2",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774486.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990812/SAMD00774486.fa.gz",
+        "size_bytes": 1446977,
+        "sha256": "d247a56cfb849be47fc5c496a593d9c71b8f2a207b4676a8aacb19f2c59d542b"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990812.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990812",
+        "size_bytes": 1986,
+        "sha256": "844184876ec57aa6833c6ebaed34e5df0a280b2321da8cc6c2122bca85308f45"
+      }
+    },
+    {
+      "source_label": "091",
+      "sample_accession": "SAMD00774487",
+      "run_accession": "DRR550374",
+      "analysis_accession": "ERZ29990815",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "b1469cd2f2389346613c41b9aaf62b41",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774487.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990815/SAMD00774487.fa.gz",
+        "size_bytes": 1445522,
+        "sha256": "0ded6b015674a2e42ae3f5189b6eb6b33ec9fb982868e4920bd935c4242b5651"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990815.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990815",
+        "size_bytes": 1987,
+        "sha256": "b24deeab639e1bd10c6ad2be0ce71d3c5ebb9d604043e8e64f78ab68d94220b4"
+      }
+    },
+    {
+      "source_label": "092",
+      "sample_accession": "SAMD00774488",
+      "run_accession": "DRR550375",
+      "analysis_accession": "ERZ29990817",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c05ec3c32dd929fe56dee5dd5cc3caf2",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774488.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990817/SAMD00774488.fa.gz",
+        "size_bytes": 1419536,
+        "sha256": "5bd0e16c8118be8c636ad01fec871a620f2cf3a962a4006f2b4b2c40a68417b1"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990817.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990817",
+        "size_bytes": 1987,
+        "sha256": "7dfa380cd51c06b14d3dac90df5ada3de8605e3225dd7ee4614535cd8d8548a6"
+      }
+    },
+    {
+      "source_label": "093",
+      "sample_accession": "SAMD00774489",
+      "run_accession": "DRR550376",
+      "analysis_accession": "ERZ29990820",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "24dae30efe59d083b8338d7f8d2bd0e1",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774489.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990820/SAMD00774489.fa.gz",
+        "size_bytes": 1473846,
+        "sha256": "df85ba073384a625a8510b84e814535395d85dcfc941d6f9d752a63ed4c3eabc"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990820.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990820",
+        "size_bytes": 1987,
+        "sha256": "6d12f6747362b6ea734801618d85d0f71aaefe020996cfd045028489ff29e0f3"
+      }
+    },
+    {
+      "source_label": "094",
+      "sample_accession": "SAMD00774490",
+      "run_accession": "DRR550377",
+      "analysis_accession": "ERZ29990823",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "9b543ba0a5acdeafc99e2cf6acce4216",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774490.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990823/SAMD00774490.fa.gz",
+        "size_bytes": 1380038,
+        "sha256": "10619dc5a642873ca930ed0b308bd5c00a765f38b3d9406c605599b5e1c40c8a"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990823.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990823",
+        "size_bytes": 1986,
+        "sha256": "192869a622f69c5df0c0a3e68df7d4d64ed60d7f5d4feb867e5fa09331f60879"
+      }
+    },
+    {
+      "source_label": "095",
+      "sample_accession": "SAMD00774491",
+      "run_accession": "DRR550378",
+      "analysis_accession": "ERZ29990826",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "6823e3dd068aeb6bd10f9a5ce02abb50",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774491.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990826/SAMD00774491.fa.gz",
+        "size_bytes": 1455720,
+        "sha256": "ee40ecb65d2121e6e9605b8d9466aff29243d4d422a914e3cd8208f7ef1bc20a"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990826.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990826",
+        "size_bytes": 1986,
+        "sha256": "8d7568990b1e27aa8e45491c6ba861e2ca8e067d1e6f89fcf23141ff7504f8a8"
+      }
+    },
+    {
+      "source_label": "096",
+      "sample_accession": "SAMD00774492",
+      "run_accession": "DRR550379",
+      "analysis_accession": "ERZ29990829",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "acdf8edea226d38562e605633a67fdc1",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774492.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990829/SAMD00774492.fa.gz",
+        "size_bytes": 1503400,
+        "sha256": "2266cf0b2144c8b1569ae13bd5300bdbce0e7524d12fe4025f985114ea25d6ba"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990829.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990829",
+        "size_bytes": 1986,
+        "sha256": "ce4a6a708af057ed79fef41ea7000640f721aa857c906f2d3c5a34948c73356e"
+      }
+    },
+    {
+      "source_label": "097",
+      "sample_accession": "SAMD00774493",
+      "run_accession": "DRR550380",
+      "analysis_accession": "ERZ29990831",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "ea53790deda3c0b3f6758f09da763d73",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774493.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990831/SAMD00774493.fa.gz",
+        "size_bytes": 1435057,
+        "sha256": "6e0b32b6c81a0d09a01ba272b851e11c2c25ea95b62bae876d352c49dd000fa9"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990831.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990831",
+        "size_bytes": 1986,
+        "sha256": "3fa3597ca7d349dfc703581fe8d3c0d489065400f77c48c7074cd05d40e70f4f"
+      }
+    },
+    {
+      "source_label": "098",
+      "sample_accession": "SAMD00774494",
+      "run_accession": "DRR550381",
+      "analysis_accession": "ERZ29990834",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "602d1b87a07077270b77215f869ec203",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774494.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990834/SAMD00774494.fa.gz",
+        "size_bytes": 1507352,
+        "sha256": "bbc4f265c1b2a8e0ba35b9b45bda48c61c85059ff086c00d80d0210261d8525a"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990834.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990834",
+        "size_bytes": 1986,
+        "sha256": "18d0bea85af3a5a62acd1a86abbd447e58d1bb6583dee4845f70505e57b2ca7a"
+      }
+    },
+    {
+      "source_label": "099",
+      "sample_accession": "SAMD00774495",
+      "run_accession": "DRR550382",
+      "analysis_accession": "ERZ29990837",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "90382bea068ac29d699b4b5c9e304e5a",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774495.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990837/SAMD00774495.fa.gz",
+        "size_bytes": 1451987,
+        "sha256": "35113126c5064822c721a26eb7d2cb4ffbafb02b0113be86295c1464604aef4d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990837.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990837",
+        "size_bytes": 1986,
+        "sha256": "133858c59d6c4c26e9e92a3d9e77b155f94d19a45a9b6b9d9db6d765c37a987e"
+      }
+    },
+    {
+      "source_label": "100",
+      "sample_accession": "SAMD00774496",
+      "run_accession": "DRR550383",
+      "analysis_accession": "ERZ29990840",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0945213c3917d12ea7dc250a4cd84a06",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774496.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990840/SAMD00774496.fa.gz",
+        "size_bytes": 1407247,
+        "sha256": "5dc2cdac18605c2b3e281ccad5c743121a43b79ad0dddc86e0f4a8e9923c2824"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990840.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990840",
+        "size_bytes": 1987,
+        "sha256": "967ab6e7acae3b2a59438284c7f451e2d15ca85c9ff0e0d492ba6fbadd6b1d03"
+      }
+    },
+    {
+      "source_label": "101",
+      "sample_accession": "SAMD00774497",
+      "run_accession": "DRR550384",
+      "analysis_accession": "ERZ29990841",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2131cc7f9bfd30b3551a57eca7462db9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774497.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990841/SAMD00774497.fa.gz",
+        "size_bytes": 1426689,
+        "sha256": "89d40106dd2da82382853f6f8cb3ac769795aa297d227fe067cec2d9fe151126"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990841.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990841",
+        "size_bytes": 1987,
+        "sha256": "5f14fb31d2ee80958602e3fc2d0a4e1a30713d9add65639eb539ab0a1c78806c"
+      }
+    },
+    {
+      "source_label": "102",
+      "sample_accession": "SAMD00774498",
+      "run_accession": "DRR550385",
+      "analysis_accession": "ERZ29990844",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "88a6d50399d8e0b92e5d15e26016d13b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774498.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990844/SAMD00774498.fa.gz",
+        "size_bytes": 1426379,
+        "sha256": "d974f13e02cda02f3d7ac34b1eaa910cf62d40119308ead201ce8bf916dde106"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990844.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990844",
+        "size_bytes": 1986,
+        "sha256": "4c56c34bf9d206e7da9ed3a122866580457a691357adf835c5174e7723af4028"
+      }
+    },
+    {
+      "source_label": "103",
+      "sample_accession": "SAMD00774499",
+      "run_accession": "DRR550386",
+      "analysis_accession": "ERZ29990847",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2ed5488819bab39d9e116c8e0b035d05",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774499.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990847/SAMD00774499.fa.gz",
+        "size_bytes": 1407159,
+        "sha256": "1baaad86c91443144473845b2bee9cd33d8fa46abcb2865a621b82c481e85cc8"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990847.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990847",
+        "size_bytes": 1987,
+        "sha256": "a5eb8f7238410ac8e18aef58cb5306631ee0906e068c47c9dbbfe945ecfe658b"
+      }
+    },
+    {
+      "source_label": "104",
+      "sample_accession": "SAMD00774500",
+      "run_accession": "DRR550387",
+      "analysis_accession": "ERZ29990850",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0acadefe465fb394764670fdf4fea7fd",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774500.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990850/SAMD00774500.fa.gz",
+        "size_bytes": 1404066,
+        "sha256": "ad5af8b43d37df1d79cdf00cbfa7a2c4314fbe6ac9bc44e4668b3fa821504862"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990850.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990850",
+        "size_bytes": 1987,
+        "sha256": "d9787ad4c0a00bbf593ec82a8ebbc93e34b109e3ab07c4e5ac2e76bb7c2eb22d"
+      }
+    },
+    {
+      "source_label": "105",
+      "sample_accession": "SAMD00774501",
+      "run_accession": "DRR550388",
+      "analysis_accession": "ERZ29990853",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "22613516dad34d230fc303fdac52d9c9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774501.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990853/SAMD00774501.fa.gz",
+        "size_bytes": 1427682,
+        "sha256": "746b77c32929ffb70edfdf12af80c81dc90d3422a424a18f6c5e421c6ac94d01"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990853.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990853",
+        "size_bytes": 1987,
+        "sha256": "d1a5fe43732e8f8432e019bb859d639fc9b22578f13b93c1ec32412894b9c1c6"
+      }
+    },
+    {
+      "source_label": "106",
+      "sample_accession": "SAMD00774502",
+      "run_accession": "DRR550389",
+      "analysis_accession": "ERZ29990855",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "8a34e4d7c18c53074ea8eda2c27227c0",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774502.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990855/SAMD00774502.fa.gz",
+        "size_bytes": 1525546,
+        "sha256": "8b77107a4fefa124d71303d22698a3da24ccff012128a744daebcb3d7024cf19"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990855.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990855",
+        "size_bytes": 1987,
+        "sha256": "759ba10b000b0d405ba84198fdaa7054f7714bc3c5befe82c7ab7fac6d20c213"
+      }
+    },
+    {
+      "source_label": "107",
+      "sample_accession": "SAMD00774503",
+      "run_accession": "DRR550390",
+      "analysis_accession": "ERZ29990858",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c7fdbf10402a31e762242227130d4f08",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774503.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990858/SAMD00774503.fa.gz",
+        "size_bytes": 1427895,
+        "sha256": "a651f2f8e56267443faec4f3c0cabd58eed161adda54c9f75f7d5620ee6a3b1c"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990858.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990858",
+        "size_bytes": 1987,
+        "sha256": "52963cd1888d93da5d262858e7555b764a54b70d32126c51576df6b54e307d23"
+      }
+    },
+    {
+      "source_label": "108",
+      "sample_accession": "SAMD00774504",
+      "run_accession": "DRR550391",
+      "analysis_accession": "ERZ29990860",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "2c8e8701b660a433082bdb2671cc2890",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774504.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990860/SAMD00774504.fa.gz",
+        "size_bytes": 1442871,
+        "sha256": "917270924b6de98d9112b6898edd57ab07b0a153904a2189e05998f76d08c0a4"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990860.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990860",
+        "size_bytes": 1987,
+        "sha256": "a9a7333c117036910cd1643bff1d619d287863d92b923eba0af1c09843baec0a"
+      }
+    },
+    {
+      "source_label": "109",
+      "sample_accession": "SAMD00774505",
+      "run_accession": "DRR550392",
+      "analysis_accession": "ERZ29990863",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7e6b34ce1cd84d09f771d6eccc681e5a",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774505.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990863/SAMD00774505.fa.gz",
+        "size_bytes": 1459626,
+        "sha256": "d6a3698827cea56cd9ee7e3093f18aa73eccd5edfde66801d04833d1a64ea630"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990863.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990863",
+        "size_bytes": 1987,
+        "sha256": "c7c83c2cf79f997dfb63700022f5e3f0d55ea2bef57dd15b87fd03fb6a5743ff"
+      }
+    },
+    {
+      "source_label": "110",
+      "sample_accession": "SAMD00774506",
+      "run_accession": "DRR550393",
+      "analysis_accession": "ERZ29990866",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "050763a93e71757a008fef26771e055b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774506.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990866/SAMD00774506.fa.gz",
+        "size_bytes": 1441619,
+        "sha256": "ab1e4cbc1faa5ef556950c89909920e1472b1b7c5e4f47a8d55dee98f9bdf439"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990866.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990866",
+        "size_bytes": 1987,
+        "sha256": "c8ba3fcb6ae358a08d6157f58adfc7e18a880a6e6d6a10f74e49dee40c142730"
+      }
+    },
+    {
+      "source_label": "111",
+      "sample_accession": "SAMD00774507",
+      "run_accession": "DRR550394",
+      "analysis_accession": "ERZ29990869",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "968f660237e2422af2c308783d9150c5",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774507.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990869/SAMD00774507.fa.gz",
+        "size_bytes": 1464143,
+        "sha256": "aea2949ec851d862da47065b0194f45ce085ee57f591910fc42d16c3662ba382"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990869.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990869",
+        "size_bytes": 1987,
+        "sha256": "252aa13227221e73b80be6c9b9b8ba3cc3fd9e30d75b6e785daf7810c712e44f"
+      }
+    },
+    {
+      "source_label": "112",
+      "sample_accession": "SAMD00774508",
+      "run_accession": "DRR550395",
+      "analysis_accession": "ERZ29902615",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "52bfeaa2f4cd0755332cd8b293eb7b0d",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774508.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902615/SAMD00774508.fa.gz",
+        "size_bytes": 1453330,
+        "sha256": "8dcf40f95cddfb49a2101c8c087bd719beef1e4228d56793d5b44c327d1d0bcd"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902615.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902615",
+        "size_bytes": 1987,
+        "sha256": "10e40c3f68a8bd76c8f063445a34a1893254c4f093f30375b6e9db60e5c9c037"
+      }
+    },
+    {
+      "source_label": "113",
+      "sample_accession": "SAMD00774509",
+      "run_accession": "DRR550396",
+      "analysis_accession": "ERZ29902621",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "d890df5043541e88acfc2072aa300b4a",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774509.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902621/SAMD00774509.fa.gz",
+        "size_bytes": 1438131,
+        "sha256": "23a64b375bce09419c8884a8536ab4ff39524314da4d6bc76b81ce3677cc4b0c"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902621.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902621",
+        "size_bytes": 1987,
+        "sha256": "467dd70e4052fd14689e953a4a861fd8e134bd5be69a94d4ce6b878c407a8562"
+      }
+    },
+    {
+      "source_label": "114",
+      "sample_accession": "SAMD00774510",
+      "run_accession": "DRR550397",
+      "analysis_accession": "ERZ29902635",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "3fc6bf7e6f41b1b9bc5d4f11c6a22461",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774510.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902635/SAMD00774510.fa.gz",
+        "size_bytes": 1425881,
+        "sha256": "4f54b8b8cfebfe4fe88130d6ae596551355f8ca1c155b64ea40bcd52951604f9"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902635.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902635",
+        "size_bytes": 1987,
+        "sha256": "bce994da6e7d218aa9a37c7b907f93bad7ffc014448cd03884922b6e4601c0d2"
+      }
+    },
+    {
+      "source_label": "115",
+      "sample_accession": "SAMD00774511",
+      "run_accession": "DRR550398",
+      "analysis_accession": "ERZ29902640",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "6e69886ef5150ef9a29286fc89435451",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774511.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902640/SAMD00774511.fa.gz",
+        "size_bytes": 1448678,
+        "sha256": "4dd2bbb7c8de576d24a02ffee22b238c618e07d0ae54906e5fc719e4faecbd04"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902640.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902640",
+        "size_bytes": 1987,
+        "sha256": "3ac7665ea4c40a1c4c9a3365632d0d78f34b1c9da7e07fbba1a46d05dab4f62e"
+      }
+    },
+    {
+      "source_label": "116",
+      "sample_accession": "SAMD00774512",
+      "run_accession": "DRR550399",
+      "analysis_accession": "ERZ29990871",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "29209716100e89d13d1421a21257b541",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774512.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990871/SAMD00774512.fa.gz",
+        "size_bytes": 1404837,
+        "sha256": "d28c5aecd48ffc591434d3c0ca3bfdf1e28752d31f547433e7e1be34705fa049"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990871.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990871",
+        "size_bytes": 1987,
+        "sha256": "a715eaccba8ac5acde0a00280691ff36b70ac01c0e4b9984e3cd4c0a75018516"
+      }
+    },
+    {
+      "source_label": "117",
+      "sample_accession": "SAMD00774513",
+      "run_accession": "DRR550400",
+      "analysis_accession": "ERZ29902668",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "5fa55f5bf876cb5e494f14cadc1203f4",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774513.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902668/SAMD00774513.fa.gz",
+        "size_bytes": 1453606,
+        "sha256": "273bb8c5861834a5d3c7adadd82c9bc9b793d132004f6ed2a300d23c80bf8110"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902668.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902668",
+        "size_bytes": 1987,
+        "sha256": "0e44b33fd58ef2f50582d552c4f8d7d9f37d88e996060089f19fc2a86231d377"
+      }
+    },
+    {
+      "source_label": "118",
+      "sample_accession": "SAMD00774514",
+      "run_accession": "DRR550401",
+      "analysis_accession": "ERZ29902677",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "5d5c2f64f36a04f31adaff0ec1760534",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774514.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902677/SAMD00774514.fa.gz",
+        "size_bytes": 1488444,
+        "sha256": "012f79e0af6698902013d8be8a2136f1bc06b6ba13946cee1962b890d20a4c48"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902677.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902677",
+        "size_bytes": 1987,
+        "sha256": "7f20413cab50b87d9987144d7bfaf5c838476f8a71e11fdd74c4247b0223bd82"
+      }
+    },
+    {
+      "source_label": "119",
+      "sample_accession": "SAMD00774515",
+      "run_accession": "DRR550402",
+      "analysis_accession": "ERZ29902683",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "16a880bbbfd5eb9bd58361362db0d0d4",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774515.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902683/SAMD00774515.fa.gz",
+        "size_bytes": 1468115,
+        "sha256": "e0b4d4e431ae410bbb01afcd5ac83e260949127f7ac1526e69f7433703eaccdc"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902683.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902683",
+        "size_bytes": 1987,
+        "sha256": "0f193fd1f11c2385d688498108ea22b731f74f63fb61218b3315edbfe36a503d"
+      }
+    },
+    {
+      "source_label": "120",
+      "sample_accession": "SAMD00774516",
+      "run_accession": "DRR550403",
+      "analysis_accession": "ERZ29902689",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "67c7c7059b9feea2cd92c327b23a6ee0",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774516.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902689/SAMD00774516.fa.gz",
+        "size_bytes": 1391726,
+        "sha256": "c45d6ef0a4328e9a3de3a51de2c058fc9ceb5f2b04f9b51fbc17b00a5bd3e3d9"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902689.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902689",
+        "size_bytes": 1987,
+        "sha256": "3fa7c3903ac97026447dbcf99b08eb36b710af59b4dec65a2991d4d0e6fcc651"
+      }
+    },
+    {
+      "source_label": "121",
+      "sample_accession": "SAMD00774517",
+      "run_accession": "DRR550404",
+      "analysis_accession": "ERZ29902697",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "56a4265e513f5e6e35d70a6fcec2c70d",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774517.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902697/SAMD00774517.fa.gz",
+        "size_bytes": 1480391,
+        "sha256": "6dff585d574c916b483e4f7b8d19da405a7e8e51e7c07967f19fd3c6cf5b398b"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902697.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902697",
+        "size_bytes": 1987,
+        "sha256": "b2aa5ad035457646f9a83c392152bcd6772d91e575841523e9dbb6e788fa2e48"
+      }
+    },
+    {
+      "source_label": "122",
+      "sample_accession": "SAMD00774518",
+      "run_accession": "DRR550405",
+      "analysis_accession": "ERZ29902709",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "05d170857ad6ebba64cf8d47244ba12e",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774518.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902709/SAMD00774518.fa.gz",
+        "size_bytes": 1422364,
+        "sha256": "585ad8827f3109d37696de06105edbc95d2c3498388eb047c07121faa88db43d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902709.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902709",
+        "size_bytes": 1987,
+        "sha256": "d65d5e606818b2158c6f68454d1f033ea033075d70ff67d9ea9713b08e8cf34b"
+      }
+    },
+    {
+      "source_label": "123",
+      "sample_accession": "SAMD00774519",
+      "run_accession": "DRR550406",
+      "analysis_accession": "ERZ29902713",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "9f009c3dfd3a115bc95084293db67457",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774519.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902713/SAMD00774519.fa.gz",
+        "size_bytes": 1438868,
+        "sha256": "691689f8574eb478d1ead48c3c8a19f803fe0770ede5622430271fb186ba5361"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902713.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902713",
+        "size_bytes": 1987,
+        "sha256": "9d0c41f76da0eb06a5498e1a4c9342d279593dc46dbcdcfe7a9db17a8ab45d35"
+      }
+    },
+    {
+      "source_label": "124",
+      "sample_accession": "SAMD00774520",
+      "run_accession": "DRR550407",
+      "analysis_accession": "ERZ29902721",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "8f15c49a4d60681e067442edfb50f7c4",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774520.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902721/SAMD00774520.fa.gz",
+        "size_bytes": 1472394,
+        "sha256": "a63113a43638647b684ba6c94f42b30b1c5590211badf255583b7337db364ea8"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902721.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902721",
+        "size_bytes": 1987,
+        "sha256": "81ecdb8483f0c04fec6d24fc849738b192bea873bc26d9f980712b00fd18ccb2"
+      }
+    },
+    {
+      "source_label": "125",
+      "sample_accession": "SAMD00774521",
+      "run_accession": "DRR550408",
+      "analysis_accession": "ERZ29902728",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "d48d00994ca256e152234391343f6842",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774521.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902728/SAMD00774521.fa.gz",
+        "size_bytes": 1353585,
+        "sha256": "9ab4d7b8b5a4faabcbc278f1a895a6d86618c717b1f9cb69bb858cad20461353"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902728.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902728",
+        "size_bytes": 1987,
+        "sha256": "bcdfe535627ed5f252ddb20befd45ee5d13f81f7dedd8eadb0e16b3165cbc7a0"
+      }
+    },
+    {
+      "source_label": "126",
+      "sample_accession": "SAMD00774522",
+      "run_accession": "DRR550409",
+      "analysis_accession": "ERZ29902733",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "5536b2e59a2d2ff0cacec1337b5848d2",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774522.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902733/SAMD00774522.fa.gz",
+        "size_bytes": 1471113,
+        "sha256": "cf3ceef9adc815a9b275da1a5c952e1e2fbb2d2031de85f65d1f2eb57e043e25"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902733.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902733",
+        "size_bytes": 1987,
+        "sha256": "4754f65941ce80f430189c86f453bc9c36ad43de6de05150d113d3e31a33a81c"
+      }
+    },
+    {
+      "source_label": "128",
+      "sample_accession": "SAMD00774524",
+      "run_accession": "DRR550411",
+      "analysis_accession": "ERZ29902740",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "c8921922b9213945fbee7792694f8f52",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774524.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902740/SAMD00774524.fa.gz",
+        "size_bytes": 1425378,
+        "sha256": "6d9085edaf2e7db69acdd88d3afe7ab99c5d2c5bd6845b0e6c7dbfcc18b298c6"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902740.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902740",
+        "size_bytes": 1986,
+        "sha256": "cc80174f7ba25c42b8e3315e03875d32d0012abb9113f25493a5b89b323f8149"
+      }
+    },
+    {
+      "source_label": "129",
+      "sample_accession": "SAMD00774525",
+      "run_accession": "DRR550412",
+      "analysis_accession": "ERZ29902756",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "770eb64e389ff18b9af5f8b6fb33341b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774525.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902756/SAMD00774525.fa.gz",
+        "size_bytes": 1465253,
+        "sha256": "233cc7106c9616d8474a3dbcdee9e682584adb09dbe15ff579e992681236ffd3"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902756.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902756",
+        "size_bytes": 1987,
+        "sha256": "1a16f611f196cb9ac9c20a2c8c75061ea8d78dbad273f37ed76aafa2247f4b75"
+      }
+    },
+    {
+      "source_label": "130",
+      "sample_accession": "SAMD00774526",
+      "run_accession": "DRR550413",
+      "analysis_accession": "ERZ29902768",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "49cb1bdb1cd1f27ecc978764984298e9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774526.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902768/SAMD00774526.fa.gz",
+        "size_bytes": 1550336,
+        "sha256": "3336adc45bc3ca73981a46d0454d2880aec624015d6b9aa3559404c9fac785b4"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902768.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902768",
+        "size_bytes": 1987,
+        "sha256": "8079589815945f46785f1d057d5c397404dfd05bfece1987e77d3f66df33582c"
+      }
+    },
+    {
+      "source_label": "131",
+      "sample_accession": "SAMD00774527",
+      "run_accession": "DRR550414",
+      "analysis_accession": "ERZ29990874",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "0288d0d93ce7e35cf037bfb28b5a0bec",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774527.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990874/SAMD00774527.fa.gz",
+        "size_bytes": 1507353,
+        "sha256": "4f30d97f522d7eccdd131a9c2a781dc36199dfe9a804b49f9a8bb8ce63797696"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990874.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990874",
+        "size_bytes": 1987,
+        "sha256": "e4d7ea762914b4cce4c0be30a83e7e9985319f60cfe507d3df543e7e3008eace"
+      }
+    },
+    {
+      "source_label": "132",
+      "sample_accession": "SAMD00774528",
+      "run_accession": "DRR550415",
+      "analysis_accession": "ERZ29902798",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "8e48a7ac5a0c09b124bfa5f977e91e1b",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774528.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902798/SAMD00774528.fa.gz",
+        "size_bytes": 1425092,
+        "sha256": "fbf83c53b76f1b67c62d434060661f5b4f21aa3cb5a217ae17f47327d8429129"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902798.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902798",
+        "size_bytes": 1987,
+        "sha256": "72d7d8a83d50551b475e71f39d36363e4510d3d11cba90bad546b79853b88c5a"
+      }
+    },
+    {
+      "source_label": "133",
+      "sample_accession": "SAMD00774529",
+      "run_accession": "DRR550416",
+      "analysis_accession": "ERZ29902811",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "dd4be9a4e0732b9226fef2b75c381c92",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774529.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902811/SAMD00774529.fa.gz",
+        "size_bytes": 1472495,
+        "sha256": "efe5bdf7263c3e6ef0e8168ee11cee3d78066ebb93d5305e169b2484303bdb0b"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902811.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902811",
+        "size_bytes": 1986,
+        "sha256": "569168ba637ac06982b9c5e918f9804154725c80f7a82711ddffb48f06babc77"
+      }
+    },
+    {
+      "source_label": "134",
+      "sample_accession": "SAMD00774530",
+      "run_accession": "DRR550417",
+      "analysis_accession": "ERZ29902816",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "829e6fafd1666041a20f94fd3f30dd48",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774530.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902816/SAMD00774530.fa.gz",
+        "size_bytes": 1451875,
+        "sha256": "1581fd8ac7479bc925f2500e8b2ef0a5049c1a7485b52fccd03c8f7af6ba90de"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902816.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902816",
+        "size_bytes": 1986,
+        "sha256": "87b70e1df7d63faeda50da84b925cc52514e870183c1c130680064af28623c46"
+      }
+    },
+    {
+      "source_label": "135",
+      "sample_accession": "SAMD00774531",
+      "run_accession": "DRR550418",
+      "analysis_accession": "ERZ29902825",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "579832ed9db01d20777d66ce74dfa5f7",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774531.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902825/SAMD00774531.fa.gz",
+        "size_bytes": 1426674,
+        "sha256": "c84ba0423ba8e74b445f2d59d8d7c955fc0b5b5dbb644be50fab3e06c72d8f61"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902825.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902825",
+        "size_bytes": 1987,
+        "sha256": "1ef45cc9d104b96ba9b20fcce07487096adeaf83b89e58371d458ac71722757b"
+      }
+    },
+    {
+      "source_label": "136",
+      "sample_accession": "SAMD00774532",
+      "run_accession": "DRR550419",
+      "analysis_accession": "ERZ29990877",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "36c774099d2745afdb087bf5fae57702",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774532.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990877/SAMD00774532.fa.gz",
+        "size_bytes": 1440021,
+        "sha256": "a01b57fdd50d12e93ee7d064490f07a0fb41cc586663bbb8a80118c159ff6ec7"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990877.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990877",
+        "size_bytes": 1986,
+        "sha256": "c44531999c8f8261ba71b8c9b419cd2317ddfd7372b68cafa74359089b519e9e"
+      }
+    },
+    {
+      "source_label": "137",
+      "sample_accession": "SAMD00774533",
+      "run_accession": "DRR550420",
+      "analysis_accession": "ERZ29902845",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "33be00097b4ac1d8fe42866d3b826efe",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774533.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902845/SAMD00774533.fa.gz",
+        "size_bytes": 1514739,
+        "sha256": "fc4816801a56caca60bed4945a1b58986f1379adb971d18cf2cb25faff55474d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902845.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902845",
+        "size_bytes": 1986,
+        "sha256": "3e0ae4f7cadc23a93c36ac4a9b1eb1f25a255364ff28d64d1dbe8b0d3f8ccc49"
+      }
+    },
+    {
+      "source_label": "138",
+      "sample_accession": "SAMD00774534",
+      "run_accession": "DRR550421",
+      "analysis_accession": "ERZ29902855",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "6827c3552734514b04ce10c7e39f151d",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774534.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902855/SAMD00774534.fa.gz",
+        "size_bytes": 1537688,
+        "sha256": "5b139f1aeb579b176a1f3e58c0181968976ab4dfe11204881b731f79714e1541"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902855.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902855",
+        "size_bytes": 1986,
+        "sha256": "782b1874ec360143acbb40341fc21ab9adf4222893f2e8b00b0d2b75439b9af7"
+      }
+    },
+    {
+      "source_label": "139",
+      "sample_accession": "SAMD00774535",
+      "run_accession": "DRR550422",
+      "analysis_accession": "ERZ29902860",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "74081bd4f47d32da8b5ecc1e6907fcd9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774535.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902860/SAMD00774535.fa.gz",
+        "size_bytes": 1541746,
+        "sha256": "2dbb51eafb74fdf008421abd61b0ed1fcb0d2f0741cea7e93c2625688b2d7e2f"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902860.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902860",
+        "size_bytes": 1987,
+        "sha256": "809c68a7994f35b4366f9d4e993031e872c7fb68d3f773d8761a30283c07aa59"
+      }
+    },
+    {
+      "source_label": "140",
+      "sample_accession": "SAMD00774536",
+      "run_accession": "DRR550423",
+      "analysis_accession": "ERZ29902864",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "96d4db30e600364e16f1575031b574c9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774536.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902864/SAMD00774536.fa.gz",
+        "size_bytes": 1466440,
+        "sha256": "20cae7d05c2bb8c3984338107798f1a8e51bba28bfba9b28fc5d50c24d9464b4"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902864.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902864",
+        "size_bytes": 1987,
+        "sha256": "fde53f8398716f99ade937d6faa88c1fa8788ad0d5871b11c6e9ce64fbdee23e"
+      }
+    },
+    {
+      "source_label": "141",
+      "sample_accession": "SAMD00774537",
+      "run_accession": "DRR550424",
+      "analysis_accession": "ERZ29902868",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "d8c94c4983452f5fd112d438abd67212",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774537.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902868/SAMD00774537.fa.gz",
+        "size_bytes": 1487596,
+        "sha256": "f1003cbc3a294f97a0a6ecc9e516746d87fd6ba721588564b3da74d8b936cd8b"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902868.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902868",
+        "size_bytes": 1987,
+        "sha256": "3d183de7faf0c92ee91ac07d5d269bea77139a42789e3ce54a8b17a03b43a3dd"
+      }
+    },
+    {
+      "source_label": "142",
+      "sample_accession": "SAMD00774538",
+      "run_accession": "DRR550425",
+      "analysis_accession": "ERZ29902873",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "b493a3ccf5a7bc705afebf4f936e9608",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774538.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902873/SAMD00774538.fa.gz",
+        "size_bytes": 1538360,
+        "sha256": "b6f8ba3d60157d1338dabad2e1c2d6aa780d63ccde73e6a94bd530fa2a372e2d"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902873.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902873",
+        "size_bytes": 1987,
+        "sha256": "8a6b3c4c5dff6ef19f88fa09d729b94e57a35344bcd5d392e98aa883e62db43c"
+      }
+    },
+    {
+      "source_label": "143",
+      "sample_accession": "SAMD00774539",
+      "run_accession": "DRR550426",
+      "analysis_accession": "ERZ29990879",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "7dab5fa22af23bfb62b3759b770f78e8",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774539.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29990879/SAMD00774539.fa.gz",
+        "size_bytes": 1462430,
+        "sha256": "59c3957332a455633abb93c8ee1effd5f19833e38a14ca378a9cde8539f03169"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29990879.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29990879",
+        "size_bytes": 1987,
+        "sha256": "fb0e1ae3dfa7028632383d6c7d857172bf98a35af814a564c00fa284947074b5"
+      }
+    },
+    {
+      "source_label": "144",
+      "sample_accession": "SAMD00774540",
+      "run_accession": "DRR550427",
+      "analysis_accession": "ERZ29902896",
+      "assembly_project": "PRJEB126751",
+      "compressed_md5": "f6ccf19da1221113509e12c551aebce9",
+      "fasta": {
+        "filename": "host_assemblies/SAMD00774540.fa.gz",
+        "url": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ299/ERZ29902896/SAMD00774540.fa.gz",
+        "size_bytes": 1623236,
+        "sha256": "5b8fa7e711470acd0c0b9e18273626fbf02d95fbe5afcdc3a468372b211528c3"
+      },
+      "xml": {
+        "filename": "host_assemblies/ERZ29902896.xml",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/xml/ERZ29902896",
+        "size_bytes": 1987,
+        "sha256": "ac02938616de7390926d8521364a4e21992ddcd3c2e5b2236a59713b9ce9824c"
+      }
+    }
+  ],
+  "legacy_phages": [
+    {
+      "source_label": "ΦWec189",
+      "accession": "LC739538",
+      "accession_version": "LC739538.1",
+      "sequence_md5": "23e3c7b11c016e9a7f093badaac1c89c",
+      "base_count": 135501,
+      "fasta": {
+        "filename": "legacy_fasta/LC739538.1.fasta",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/LC739538.1",
+        "size_bytes": 137835,
+        "sha256": "914a1ce885036b1409b3cb0765fe597f53b043c196229343bfb0e3c6547d449f"
+      }
+    },
+    {
+      "source_label": "ΦWec191",
+      "accession": "LC739540",
+      "accession_version": "LC739540.1",
+      "sequence_md5": "4d1c019aba2d4f96bd6aa527886da33b",
+      "base_count": 137785,
+      "fasta": {
+        "filename": "legacy_fasta/LC739540.1.fasta",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/LC739540.1",
+        "size_bytes": 140157,
+        "sha256": "b7825366a3d53877efec5ae4c45dac2bfdac1c31b119e55696f2d29d17fa8cb8"
+      }
+    },
+    {
+      "source_label": "ΦWec193",
+      "accession": "LC739541",
+      "accession_version": "LC739541.1",
+      "sequence_md5": "cf3c5d017ca74b07f0b92856bee173cb",
+      "base_count": 138673,
+      "fasta": {
+        "filename": "legacy_fasta/LC739541.1.fasta",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/LC739541.1",
+        "size_bytes": 141060,
+        "sha256": "dc1d1bdef4e7fb04cf71d4b32e776fa24e9d1f32b2c47bd4fa7093dd4e9eb9c9"
+      }
+    },
+    {
+      "source_label": "ΦWec196",
+      "accession": "LC739542",
+      "accession_version": "LC739542.1",
+      "sequence_md5": "30f9a363201803aa4ac625ff3f57551a",
+      "base_count": 138673,
+      "fasta": {
+        "filename": "legacy_fasta/LC739542.1.fasta",
+        "url": "https://www.ebi.ac.uk/ena/browser/api/fasta/LC739542.1",
+        "size_bytes": 141060,
+        "sha256": "67455d7545378c159b339b1e865a305a90be0e4c2c78d464f5c047f5e5b7b2ee"
+      }
+    }
+  ],
+  "discovery": {
+    "project_queries": 6,
+    "sample_queries": 30,
+    "sample_query_scope": "144 original host BioSamples and 38 original phage BioSamples, batches of at most 20, searched in assembly/analysis/sequence indexes without requiring the original project.",
+    "finding": "Original-project queries returned no assemblies. Cross-project BioSample queries found 143 host assemblies/analyses; selected EMBL-EBI analysis FASTAs in PRJEB126751 explicitly reference the original DRR runs. No assembled records were found for the 38 phage samples in these indexed searches.",
+    "limit": "This is not a proof of global absence of additional assemblies. Third-party assemblies are not the original paper assemblies."
+  },
+  "missing_host": {
+    "source_label": "127",
+    "sample_accession": "SAMD00774523",
+    "run_accession": "DRR550410",
+    "experiment_accession": "DRX534144",
+    "instrument_model": "DNBSEQ-G400",
+    "compressed_fastq_bytes": 824051416,
+    "status": "No assembled record found in these project/BioSample searches; original paired reads are available."
+  },
+  "quality_scope": "Verify file bytes/MD5, gzip decoding, source BioSample and original-run references, nonempty IUPAC DNA, contig count, length, N50, ambiguity and GC. Preserve all source contigs and ambiguous bases. No quality-based cohort exclusion or training admission.",
+  "exact_overlap_scope": "Reuse cohort.canonical_assembly_digest against the frozen 177-host/94-phage sequence identities and within the acquired panel. This normalizes headers, case, contig order and strand; it does not normalize circular rotation, different contig boundaries or reassemblies. No near-duplicate, contamination or completeness assessment is claimed.",
+  "raw_reads_downloaded": 0,
+  "training_pairs_admitted": 0,
+  "model_fits": 0,
+  "model_score_runs": 0,
+  "independent_release_validation_established": false,
+  "remaining_work": [
+    "Resolve phenotype reuse terms and source endpoint/publication discrepancies.",
+    "Obtain or assemble host 127 and the 38 read-only phage routes; complete phenotype/sequence/stock joins.",
+    "Assess contamination/completeness and exact/near-duplicate strain relationships before freezing host groups and a separate panel protocol."
+  ]
+}

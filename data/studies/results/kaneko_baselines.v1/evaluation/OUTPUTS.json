@@ -1,0 +1,22 @@
+{
+  "contrasts.json": {
+    "sha256": "232c8502ecaa4cfe9cf5fb8d9a8f2f9df624ce200aa11432820fca2e10644c71",
+    "size_bytes": 23632
+  },
+  "per_host_metrics.csv": {
+    "sha256": "a765219406bbb3f5b9415a448445e55cd5cffef3400fe6075bf8dc666a8130e0",
+    "size_bytes": 16853
+  },
+  "per_phage_diagnostics.csv": {
+    "sha256": "8540031553d9dad7bf711c0442f3301b2e790530d0401432056aa11658edaab7",
+    "size_bytes": 29048
+  },
+  "report.json": {
+    "sha256": "6f4a609186cabc2f64ce530706927244d268fa53358d927c99d69e04b2bf8ddf",
+    "size_bytes": 16400
+  },
+  "scores.csv": {
+    "sha256": "0e806b9efa5d3c3affc693ccf3ccdeeb27bf1c6396d7e1bd92c4da10295d7faf",
+    "size_bytes": 152076
+  }
+}
