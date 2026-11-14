@@ -19,6 +19,7 @@ dependencies = [
 
 [project.scripts]
 phage-model-interface = "phage_cocktail.model_interface:main"
+phage-research-rank = "phage_cocktail.research_ranker:main"
 
 [project.optional-dependencies]
 dev = [

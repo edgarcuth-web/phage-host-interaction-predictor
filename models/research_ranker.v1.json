@@ -1,0 +1,2415 @@
+{
+  "schema_version": 1,
+  "registry_id": "ecoli-known-library-research-ranker:v1",
+  "status": "research_only_not_promoted",
+  "source_model_commit": "57f613fa6702b8ea5a21792640068004dfd17bea",
+  "target": {
+    "label": "observed source MLC > 0",
+    "curation": "16597 observed source labels; 41 missing primary readings excluded",
+    "score_semantics": "uncalibrated_source_mlc_positive"
+  },
+  "library": {
+    "library_id": "genophi-ecoli-fixed-94:v1",
+    "candidates": [
+      {
+        "phage_id": "409_P1",
+        "assembly_sha256": "6d38d44b6890d246ce3c94efb6d4f0dc865ae1b018ee1e786b8a226f195b537f",
+        "sequence_sha256": "f740dd382d30657b5daa373297d2ae4bb023eb8929556a25f40a2f2b15e7c5b5",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/409_P1.fna"
+      },
+      {
+        "phage_id": "409_P3",
+        "assembly_sha256": "d31a2a43ca423434f3272eb9a7e9f3697c37387f87b8e90483ddb27306635aa3",
+        "sequence_sha256": "69ec48c74ab61e367221aba8d33da7091f13f0e6166c8ce8fe12cee9335a5553",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/409_P3.fna"
+      },
+      {
+        "phage_id": "409_P5",
+        "assembly_sha256": "46b4c1110ae264eeb020577a5ecb7a8c08939e615094a55e7d99c58624c6ed52",
+        "sequence_sha256": "c332579df1b32ab3bb8e84b84211888737ce34690277fab067a0b8e8a4d17fe4",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/409_P5.fna"
+      },
+      {
+        "phage_id": "409_P6",
+        "assembly_sha256": "3d3b24b69a444bee5ca012ef7cb6d29c32db448819be0e104c4c78912fb4abdb",
+        "sequence_sha256": "7d683d5bb6729da34a7d203387e17f2a372cc2358be727e27db5f0ba4f66a285",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/409_P6.fna"
+      },
+      {
+        "phage_id": "409_P8",
+        "assembly_sha256": "5bb34d180f2f7d1d57b2418db0ee390fc9f302cad0598b2b96f90c182d90aac5",
+        "sequence_sha256": "5e9dbe90a43fd870094476e072e3af80975b30d16daf9d8df399dc67aab22e2d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/409_P8.fna"
+      },
+      {
+        "phage_id": "411_P1",
+        "assembly_sha256": "752f14acf116cde54c8723b1f70b5d08871584a9d2f6a08ffc8520454a35faec",
+        "sequence_sha256": "fb7bbbed3be65c6a8402da07d7ceb8d44c8aa043305b8db1cafdb6a9a831521d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/411_P1.fna"
+      },
+      {
+        "phage_id": "411_P2",
+        "assembly_sha256": "1286f897933989755c555087ca9929aea8d82868562b6b1646a24e48a11e81f4",
+        "sequence_sha256": "92b583e9c46e3c63678c1149200ae0d9babc50c032f32eb498eb6b7005277e2d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/411_P2.fna"
+      },
+      {
+        "phage_id": "412_P1",
+        "assembly_sha256": "e17e0f6c5ab25851b8acde7cd8d0e840ec8ad525e371e8e172f5c637eaaab8ba",
+        "sequence_sha256": "648a2c25aa67fc0a93f707b1585d85448ef4d8cc18cc940155bb5bbe1d51979d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/412_P1.fna"
+      },
+      {
+        "phage_id": "412_P2",
+        "assembly_sha256": "718d11effcb728d13e0f1e89055b1c5702ecfd5fa24fee345a999eef638882c0",
+        "sequence_sha256": "acdffb33b1083f98abcc06c609c5d5933039e8098f259d402d2a8fd22f89c732",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/412_P2.fna"
+      },
+      {
+        "phage_id": "412_P3",
+        "assembly_sha256": "63606c4423ff5b62b41b68386e1d197c49308ec2f9ea3de69b6597552678b36e",
+        "sequence_sha256": "c40b9bb23379e6de84600ba302b50f8728f40b162ca0c3377303be26b5000701",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/412_P3.fna"
+      },
+      {
+        "phage_id": "412_P4",
+        "assembly_sha256": "29d6263e628e6f1e4883c48fe0e6dacc2ad102aa06b0fdd78630fd55f8a6b977",
+        "sequence_sha256": "7613ac2bc2e0e1aee663244b0defadd66f2ff8b016eb4129a2cf80b9dc51413a",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/412_P4.fna"
+      },
+      {
+        "phage_id": "412_P5",
+        "assembly_sha256": "7ddb6aacaed658bf3dce56ffc857ab5b90f5e2ed28a814dd2650bf8cf10c7d02",
+        "sequence_sha256": "524e24ff157d851bd1735a8a90f89a3355f0617eae6d1719bc59f27f8ba9149c",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/412_P5.fna"
+      },
+      {
+        "phage_id": "416_P4",
+        "assembly_sha256": "412a5c48b0299e0bb6bf10c660fce0553834baaa55bce4d06134708eeaf2ba41",
+        "sequence_sha256": "2c34fa2dccd5734e667d3698a6ec615b8c0e80755a4bfa996942c4a67b49437f",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/416_P4.fna"
+      },
+      {
+        "phage_id": "416_P5",
+        "assembly_sha256": "078975afe4aa5f36100ffd637f358a6614567e7b15acd822aaa795a2aaa9c703",
+        "sequence_sha256": "48453a46c73ddf59c44e5cc4c5dd84eabc3161746d977346cfdd87dc7767fc08",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/416_P5.fna"
+      },
+      {
+        "phage_id": "423_P1",
+        "assembly_sha256": "41deb88e0eabe65c00e44757a90316ab8ccc35f05685aa7f468e6b1cb97bd82b",
+        "sequence_sha256": "1091767f1f3d0a6a10984f124dc77f19a09465ea260962a9158cdec13ab3dcba",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/423_P1.fna"
+      },
+      {
+        "phage_id": "423_P10",
+        "assembly_sha256": "99c562f0fe887fdd7db3a522a2f5909551a450c911370b880f63b4906f9a7af9",
+        "sequence_sha256": "1c6a806e44339a564fa33278bb4488a18cf84678197ab348b8c87d694fd5b6ef",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/423_P10.fna"
+      },
+      {
+        "phage_id": "423_P5",
+        "assembly_sha256": "430699b3a778648cb3598f91aea788db3089e16e5a6f1d6d0845cacc537ed638",
+        "sequence_sha256": "37b630991d21b697873cadb304b6e1d3417c383116a4036c3dfb8ed0fbffb6f0",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/423_P5.fna"
+      },
+      {
+        "phage_id": "423_P7",
+        "assembly_sha256": "5a9b28cf4e8a75e0432e81087695e745292c8e5266c2766b3749a1b7f6bad7e5",
+        "sequence_sha256": "86c5ca7105df4793dbf0d6d6952b97a78299bd0878fb24012b5b648af1f4af82",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/423_P7.fna"
+      },
+      {
+        "phage_id": "423_P9",
+        "assembly_sha256": "99c562f0fe887fdd7db3a522a2f5909551a450c911370b880f63b4906f9a7af9",
+        "sequence_sha256": "2207e56e936ee31d6ae47a9ab98761e45bb71a0500ed2d6c830362bce3c0fa46",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/423_P9.fna"
+      },
+      {
+        "phage_id": "427_P2",
+        "assembly_sha256": "946dc1bce042a5718882f9212752aa821b980812ca5a749c580da8b949df5107",
+        "sequence_sha256": "126a02c663fde5ec780969fac785dca97f4df226c46f2cd9d36774579ee621b2",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/427_P2.fna"
+      },
+      {
+        "phage_id": "427_P3",
+        "assembly_sha256": "eee088b9848a4843a40f1af2a0cf094d07c27182e0fc10d95159493f7f3253d7",
+        "sequence_sha256": "eafe6b0fc45bb52dba1e0deddf53f63d0499af60e623d5596c4d661ca425cda2",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/427_P3.fna"
+      },
+      {
+        "phage_id": "427_P4",
+        "assembly_sha256": "e6a6d5c19afa7b1f3ba36eee5bb05739daee2ad31654069a793f51d409fe7967",
+        "sequence_sha256": "3036177bc60fa87943e7e14d73987ebf2bcd480077e494382fbce8cb84d660bb",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/427_P4.fna"
+      },
+      {
+        "phage_id": "536_P1",
+        "assembly_sha256": "4c43dd262add5d4c2b029df669f819100b827cac3ab6864da5b7527308a61ef6",
+        "sequence_sha256": "a12f89494723bfdfe5d83a0d79afd8c5f3d8402b0d239021e8dc6fef956b520c",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/536_P1.fna"
+      },
+      {
+        "phage_id": "536_P11",
+        "assembly_sha256": "afdcbdba8dc9d96c1e1c04ed1b9b90ae5f68629eb2786690436132205c0e647a",
+        "sequence_sha256": "0c5d977b4258243b54c32323863b24caede9ed94ca6c8159a1e6146171dde27d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/536_P11.fna"
+      },
+      {
+        "phage_id": "536_P12",
+        "assembly_sha256": "d79ab965b014c1f698fcf73561566b3ec7db15a7043e60c42e61afd9c4b1239f",
+        "sequence_sha256": "5882a230eb36efc184f9ae83fb2321bc474660d0759d7bbd5b64b8bc820e43d0",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/536_P12.fna"
+      },
+      {
+        "phage_id": "536_P6",
+        "assembly_sha256": "c91e54a11fc571d19d40be6b245cdd389779b840be1f044bb5a5627751cd9d28",
+        "sequence_sha256": "ab2cb00559aec0cfb229f471bfe8aeb2cb1953defee367f666c0c81093c62ad0",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/536_P6.fna"
+      },
+      {
+        "phage_id": "536_P7",
+        "assembly_sha256": "e10b966da040abdd732cfb0a4d4e7b61a906b6c05520c1ac07935d60c82c97d9",
+        "sequence_sha256": "f0a38d22c38520e6cfc5907258dce6e5d37d207e76c0f5af57f9784ecd94ac9b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/536_P7.fna"
+      },
+      {
+        "phage_id": "536_P9",
+        "assembly_sha256": "f2773f7cd9ad2c35ed50781ba7f39ee7e64a5168a83119bcd350bcc79eab2266",
+        "sequence_sha256": "6684608854515fee2ec111c9c0e5c78da2234eed7051c2cd56131ef9957043b2",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/536_P9.fna"
+      },
+      {
+        "phage_id": "55989_P1",
+        "assembly_sha256": "19b850e6581721fa1088e103fecff2c4892aab2ac8ae7ca5852a692796704def",
+        "sequence_sha256": "b8b87690b4b96b77c6ade7279e706218f657eea781220701b03403de324117a0",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/55989_P1.fna"
+      },
+      {
+        "phage_id": "55989_P2",
+        "assembly_sha256": "273d4af69be069494fce057ab70b04971e10d170ba6a81b494484630c58f71b4",
+        "sequence_sha256": "3ed46ff6a5f017c70a2fe03a39c285aef26c7c80f932a0f95b1edd3f08bc1e77",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/55989_P2.fna"
+      },
+      {
+        "phage_id": "AL505_Ev3",
+        "assembly_sha256": "59f4f484225300666f4b30ecf265f551d6094f1238939f110ad72df4f5253bf6",
+        "sequence_sha256": "267a50a819c83463c9bc11b9770e1658dca270dde54e5725e4101d6f9b129206",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AL505_Ev3.fna"
+      },
+      {
+        "phage_id": "AL505_Sd2",
+        "assembly_sha256": "60c8bb199771fedbc51bfc8921f9de3e63be0992cb56ff5f154a125b072aab7b",
+        "sequence_sha256": "73ce7af9bf5ba1a11234e8a747e4168cfde700b96f086d5cc484f34a22a64267",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AL505_Sd2.fna"
+      },
+      {
+        "phage_id": "AN17_P1",
+        "assembly_sha256": "f14d5ba2c98cf6a6b5e5fa5dc6653d7ca3d369c2f4029a5281c9b5b1663edc47",
+        "sequence_sha256": "90fe4a04e1219603a2307973ae314c2e3b42189a242517498367b96512019f65",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AN17_P1.fna"
+      },
+      {
+        "phage_id": "AN17_P8",
+        "assembly_sha256": "d56948887844fa4e163de98c8ef448ec613c606d11f27a10dda79a1443fe1e0f",
+        "sequence_sha256": "591e76571e2a33aea16a0dfe4850f95d50d1dee6f29c35e848a88c780942569b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AN17_P8.fna"
+      },
+      {
+        "phage_id": "AN24_P2",
+        "assembly_sha256": "fd64d9afdd2d9564444e35efeb6e18482ab283fd7d42ef0d5e1d9f30d0486e8d",
+        "sequence_sha256": "639752aefed614b7a6e8256a95c7a0f61d12f164a6dce191c976d6d1f51c9940",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AN24_P2.fna"
+      },
+      {
+        "phage_id": "AN24_P3",
+        "assembly_sha256": "48256b99226ccf98c1a8dadcd317813b7c9dff4cbcd2816b3637ec0fa4931b46",
+        "sequence_sha256": "9e2e37808e74eb00aa9ad2f49d5026d8c026e828dba86bc21d9d78e48bba18ba",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AN24_P3.fna"
+      },
+      {
+        "phage_id": "AN24_P4",
+        "assembly_sha256": "cb8162ab07497f32c1bb7e5aa03c49df254c683018310b807933962a6d268203",
+        "sequence_sha256": "c5a3c161e8474764aba273bd9f731f1daba46cb7b402094f5de886754e71cbda",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/AN24_P4.fna"
+      },
+      {
+        "phage_id": "BCH953_P1",
+        "assembly_sha256": "e4474f5f0c18782977c14b3ac4a1d0c45e67186615ccf79563b6b5989992c36f",
+        "sequence_sha256": "88484b4ab03b89b583172b4e45be25d18011dac7f9e87c907f6314308b21575b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BCH953_P1.fna"
+      },
+      {
+        "phage_id": "BCH953_P2",
+        "assembly_sha256": "69f79d3dafa69cecb87189aa347cc589bc24691b633d08d0862c732fa6e44a92",
+        "sequence_sha256": "8e344a72819fa28e900706d46d93284737ddb3966121f0c515d35a0e2684af64",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BCH953_P2.fna"
+      },
+      {
+        "phage_id": "BCH953_P3",
+        "assembly_sha256": "8b9f50148acf43a4bfb490c9c00bafc9edb1ed969993a42c9e50d37ec9447716",
+        "sequence_sha256": "4b0397cb9d475f3b6cc1236e1a0f6992e98628cc96391a867c74003fc9b617ba",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BCH953_P3.fna"
+      },
+      {
+        "phage_id": "BCH953_P4",
+        "assembly_sha256": "cd854f9ce55c32366e6fab439718a426a3bde7b73936c5842f0dc30b0ed74666",
+        "sequence_sha256": "1170183e530252b79b0932e011f742a1bca6c8ddedf98c8333e149075031da31",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BCH953_P4.fna"
+      },
+      {
+        "phage_id": "BCH953_P5",
+        "assembly_sha256": "cd854f9ce55c32366e6fab439718a426a3bde7b73936c5842f0dc30b0ed74666",
+        "sequence_sha256": "aef769800298916e610bb68b60ad096dde7da5037bb14a17fd308f4d2f3374c5",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BCH953_P5.fna"
+      },
+      {
+        "phage_id": "BDX03_P1",
+        "assembly_sha256": "0bf8ed50325d8be28f9a914e796ee78a3fe062200db44260b36c1aa735b73928",
+        "sequence_sha256": "e0a964f3b47f5db831adde033fd8553667204cd303d7dcc9f64da3f9e9b9c63e",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BDX03_P1.fna"
+      },
+      {
+        "phage_id": "BDX03_P2",
+        "assembly_sha256": "0bf8ed50325d8be28f9a914e796ee78a3fe062200db44260b36c1aa735b73928",
+        "sequence_sha256": "3ce294df73f343a305f85005722c9ef36ae96f118e682c33c4732e83eb9ae66f",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BDX03_P2.fna"
+      },
+      {
+        "phage_id": "BDX09_P1",
+        "assembly_sha256": "d19e5423bd44d22ec9ec9b271a26ddfabf878cc070ab8b8409e0e4b88ddd3d20",
+        "sequence_sha256": "bafcedcb1f6410a10b3965bd5c0d9d2aa65505ce4ef7ed82a8a1f68f806f87ba",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/BDX09_P1.fna"
+      },
+      {
+        "phage_id": "DIJ06_P1",
+        "assembly_sha256": "ec429914cc3714766a524510f1f7b1d570f9c7cf7a9a025f303bd1d7269b144b",
+        "sequence_sha256": "c81553a2624e9c335ca5d5eea15b6cc190f994918ca825534df911b58e4f7943",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/DIJ06_P1.fna"
+      },
+      {
+        "phage_id": "DIJ07_P1",
+        "assembly_sha256": "c51da12a472b65a0bacbdf0fe5d015b1dd09cbe762fd91256f37d58dd82516b5",
+        "sequence_sha256": "ea42cce7e6a2a42f8714996f6d2dc059d3f17d865cd223cbe6eadbb4e0c7cafd",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/DIJ07_P1.fna"
+      },
+      {
+        "phage_id": "DIJ07_P2",
+        "assembly_sha256": "063a2280e8d108e8f58aa54941375121d6b250e7c502d5bea2c9980ff6a17815",
+        "sequence_sha256": "e10dbcc92555c3410e3421a80a15b589511b2f220e9896ce50763ddb33a31976",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/DIJ07_P2.fna"
+      },
+      {
+        "phage_id": "LF110_P1",
+        "assembly_sha256": "18b403ed6177d972eb1ea5a264de89ac4c18b299bf3f46385b92e44157a492d9",
+        "sequence_sha256": "4ccae02e7a9dbcd181a21f713f922b1f7c013b3edcafe427aa73ea8ae7ae274b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF110_P1.fna"
+      },
+      {
+        "phage_id": "LF110_P2",
+        "assembly_sha256": "5f12eb4955f2e2772d5f80077cc0c92f2d7ad1644b21c971a44655b833a111fb",
+        "sequence_sha256": "dfb860a20343748946666e3226f1630af0be9aeebd3a3349861cd8248cf5f43e",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF110_P2.fna"
+      },
+      {
+        "phage_id": "LF110_P3",
+        "assembly_sha256": "fb61868b1c9ec816badfd96c78f411af9367c2aea8356c8b866e569f4bea0ff8",
+        "sequence_sha256": "b5947d205aa5380867d2e8cb756569e1870add3289fb5f6d23ff931448b70cb4",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF110_P3.fna"
+      },
+      {
+        "phage_id": "LF110_P4",
+        "assembly_sha256": "0b7768dbd84fc9c9eaea6e494dee07345b42d29522f946756fd02ec2c096cc27",
+        "sequence_sha256": "1de7494c883c02b437472599ccd1bd826f3abb3f5d9af7cbdf14b8d5b83c5aa4",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF110_P4.fna"
+      },
+      {
+        "phage_id": "LF31_P1",
+        "assembly_sha256": "d64a952be0e5243e6920190c871f1ed39816b6d2075b347ce20754c38fe5f289",
+        "sequence_sha256": "aac36d584b4d75f6b21e79c97d2868770340ea0dae891c27c0cbf0b4cce44ddc",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF31_P1.fna"
+      },
+      {
+        "phage_id": "LF31_P3",
+        "assembly_sha256": "4f2fe642e1f9300cec7179ab09358ec41c332c405691e74acbfef9900429c99d",
+        "sequence_sha256": "194a6822a245bfbeb893ec8f1f9ce5c7538877c19500c32ebf3498555475cf0b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF31_P3.fna"
+      },
+      {
+        "phage_id": "LF50_P3",
+        "assembly_sha256": "a0bc15ea6ddf76592e1fca757623b98ad79f3ed71f6ac34ee5c93aac9cdc68a0",
+        "sequence_sha256": "b3b97324a201396dcb6c6377e341b1191fa99b6da745f8b75c044ec45363a9be",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF50_P3.fna"
+      },
+      {
+        "phage_id": "LF7074_P1",
+        "assembly_sha256": "04ce5042cf70c818ee92740e01529646bba7bf0e2055ad203ff10e5d73efd469",
+        "sequence_sha256": "0d726baa918100fed76520932e36504e4e89456a0da94774dc309be92909c175",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF7074_P1.fna"
+      },
+      {
+        "phage_id": "LF7074_P2",
+        "assembly_sha256": "56ccf86a34fa0d2d895f160349be0009065050a5b196885122c78c44ee8f0999",
+        "sequence_sha256": "99a3940c199ea3732140955ce5b1bcd50e1d79af41635d5d1a90a9b6c197bcf0",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF7074_P2.fna"
+      },
+      {
+        "phage_id": "LF7074_P3",
+        "assembly_sha256": "1598d4b72797d8d1b9803fce93f06011213cf343678248f87b4814ed84c50e40",
+        "sequence_sha256": "b72447cb58c8ffd09fa0138c9cb99c7c2e1a7d314556cb947826d6bdc87cd687",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF7074_P3.fna"
+      },
+      {
+        "phage_id": "LF73_P1",
+        "assembly_sha256": "a461236aa346e5fa5d16bc1aeda48fd59c0e0ea9c03e39e3d37d5ef71d3b8a48",
+        "sequence_sha256": "13e1da7427f65b16903ea81acb8701a3386200d33fa72fe8453a14ac1786764d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF73_P1.fna"
+      },
+      {
+        "phage_id": "LF73_P3",
+        "assembly_sha256": "138a6c11e17f6bd00a0ac15e89264a4332dcd7cb7e3a6fbaf41abe308d3002b9",
+        "sequence_sha256": "a47208579983ad46eacf45348febe955a3fbe833be76ed6267185e7c53a73359",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF73_P3.fna"
+      },
+      {
+        "phage_id": "LF73_P4",
+        "assembly_sha256": "08c059e5f89ab69bb8dc82689bd312d45a2a93bb396c93350c8d9da2a3075324",
+        "sequence_sha256": "de9526e8403d2ddc6d2bbab57a2487930c2a82ef6e97752eb543a992845c8c95",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF73_P4.fna"
+      },
+      {
+        "phage_id": "LF82_P1",
+        "assembly_sha256": "95cf4cffec4d0ef4eece2933ec46829da9b4d2d6cfc42394214207b5456ef6ba",
+        "sequence_sha256": "3facc68c14d821265ff7a6b07c7aca3bbe40c835ea85e9c806f57625df260657",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P1.fna"
+      },
+      {
+        "phage_id": "LF82_P2",
+        "assembly_sha256": "fdf244124f771203a05b6de1a6b58d73c936dcfa02f443dac01a6829f8ab736e",
+        "sequence_sha256": "25d48712aeaa44cd10971e051f70c4d3c4a8b43391efb9d5a9a189519f6aac33",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P2.fna"
+      },
+      {
+        "phage_id": "LF82_P3",
+        "assembly_sha256": "43d853a3e05c690d7f40725b5f28212b0a7aa7c452a0c557b20f45ca8ead03e2",
+        "sequence_sha256": "545cc183f3079494eb8d2d1712cfe7bac2c999e40a48854740560924c4996f42",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P3.fna"
+      },
+      {
+        "phage_id": "LF82_P4",
+        "assembly_sha256": "63da75d816544e55e7a905f1d5e5dabf05fc0e1fb25c1230fa27ff21f98947dd",
+        "sequence_sha256": "f5f5815466e23cd8033fe97b259c3771ee3105232aabd551d342fd85e3e3629c",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P4.fna"
+      },
+      {
+        "phage_id": "LF82_P5",
+        "assembly_sha256": "2a3752b9baa2eba8af28e6b2ddb278a9968137aa6db1066b7c00d6d9c3dc7c57",
+        "sequence_sha256": "b7a14162a018779fc995227ba77d1bf9bc0358ca43247af3f13b9aaeef62179f",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P5.fna"
+      },
+      {
+        "phage_id": "LF82_P6",
+        "assembly_sha256": "d0f663a3d8818a28acb59b26d98e3aac88812b144b5ea0f3a4d810cbbda36511",
+        "sequence_sha256": "5c411107d7aa1aedb13aa900cc5689870278a32d94bc851d85080c476d725184",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P6.fna"
+      },
+      {
+        "phage_id": "LF82_P8",
+        "assembly_sha256": "33cb627ae59e8ce436c1ce74b0306242e20ee4d35403f418d9015d7af46cda72",
+        "sequence_sha256": "1c2d5e7b1b942e657a7ca8ddbfcec1c476c8601f291f53f2aa6d3fec8982c1e0",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P8.fna"
+      },
+      {
+        "phage_id": "LF82_P9",
+        "assembly_sha256": "f579924686ee0aab03eb7c8e1333b25c89aec8207b892ec51bee6271709e1d71",
+        "sequence_sha256": "bc5773b70157ee02b2ba7efc5c5e123ee57510b5a80fd013f28fc4dcab05f17d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LF82_P9.fna"
+      },
+      {
+        "phage_id": "LI10_P1",
+        "assembly_sha256": "fadb97c80bcfc78b7e6549d0b9ce3ce7c76ee7032db983e0e4c2312db6b441f8",
+        "sequence_sha256": "829f854dd80a17844e0c8c0f7920fc1e62de248888a32006c2e204f520bfeef9",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LI10_P1.fna"
+      },
+      {
+        "phage_id": "LI10_P2",
+        "assembly_sha256": "fadb97c80bcfc78b7e6549d0b9ce3ce7c76ee7032db983e0e4c2312db6b441f8",
+        "sequence_sha256": "c141349a23953413591f7358803f98470bec3dafe607ff9d169ad87cd7ab56d4",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LI10_P2.fna"
+      },
+      {
+        "phage_id": "LI10_P3",
+        "assembly_sha256": "a11cb6143e6be7e86e2906867dcd8747a69bb882caf19612ead5a7cd2b2f9d6a",
+        "sequence_sha256": "9c2a81215eb10c4efa599e241e59d7941b347ceee14be81c6d70ca6945645755",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LI10_P3.fna"
+      },
+      {
+        "phage_id": "LI10_P4",
+        "assembly_sha256": "8b760875d905e6654c886da81c2838bc28c9fa770429232e08e85471093b6f4c",
+        "sequence_sha256": "5827284af3781176e75840b43b1ab0488d4e3bc25d97e4ea6ab6dd2c79c9752b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LI10_P4.fna"
+      },
+      {
+        "phage_id": "LI10_P5",
+        "assembly_sha256": "f85eca69e1419e8949244cc29b062f610294503de14f9a54137cb832c08215bc",
+        "sequence_sha256": "bcb9e454b5b78ea11e9b0f4c8dfa619a68effd89f94f74e8546e2212526517a7",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LI10_P5.fna"
+      },
+      {
+        "phage_id": "LI10_P6",
+        "assembly_sha256": "21c34d60fbe4816771d6d8a1f07dbd3628c66cabc5bb110d6697df9684aab0e1",
+        "sequence_sha256": "271cd5f3d839acfd1c4f4464e33a12778c85fb3caef8dbf7802b199c436c067d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LI10_P6.fna"
+      },
+      {
+        "phage_id": "LM02_P1",
+        "assembly_sha256": "75d8f9e5d6c4e9135ed1c0bf6add523abb002d68d2e7f14cb8adb6b165094264",
+        "sequence_sha256": "ca1713cd9719d7649d81d667ae7d45e1993ffbcf93a5efc2fe9101b0ed242339",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM02_P1.fna"
+      },
+      {
+        "phage_id": "LM07_P1",
+        "assembly_sha256": "8bb92b7266f4a80ef27f401fb11c4cbe9856a3a4384a70afca5bcb250a6e682f",
+        "sequence_sha256": "9a349084cd24460bf088dc578e89ad22a6cad9f66d403d0db938bca903b8cc2a",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM07_P1.fna"
+      },
+      {
+        "phage_id": "LM08_P1",
+        "assembly_sha256": "6f5f7a6de819766dd5158677e597f88fa1482dc14c9701651f4140b5d687016d",
+        "sequence_sha256": "5879286da44681aac105e68b300830aae608c65271436aac877adc0b162a9c97",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM08_P1.fna"
+      },
+      {
+        "phage_id": "LM08_P2",
+        "assembly_sha256": "aa7ddd3d31159cab18beda1537f1d3b32d738116bb50d6db4c4e473ad586d60e",
+        "sequence_sha256": "5ae8d9738b38c709f69e1746045c915a0a027e326bc078b8e5c2793f74da7142",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM08_P2.fna"
+      },
+      {
+        "phage_id": "LM33_P1",
+        "assembly_sha256": "8df73bc515c4c8709267f379cb4dbe593239e6e1d658dcea86751b07585381ba",
+        "sequence_sha256": "1f8ef7a5bc8c00362bdeaf17063f89edf6d151f3e89c177411263cc63c0cb3be",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM33_P1.fna"
+      },
+      {
+        "phage_id": "LM40_P1",
+        "assembly_sha256": "4eb07098f5b4d0c21be44aef2f80543fa8298f181a49edd6dab960292a4a1060",
+        "sequence_sha256": "b0bf054e10ad462a2174843d867df641f621a1fd388c8af6d3aef6de2972d7a6",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM40_P1.fna"
+      },
+      {
+        "phage_id": "LM40_P2",
+        "assembly_sha256": "f6123eade977901acb8a2123edf54083ac1791730e30b8d86f0e10df9787e34e",
+        "sequence_sha256": "73f9276d98f9a3a2a09b457f6f83bd7a80757452ee8d60bd2eee57841bc357ca",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM40_P2.fna"
+      },
+      {
+        "phage_id": "LM40_P3",
+        "assembly_sha256": "c422df207fbe41c8e9a61af98a296d3bab713e6fa1b359bbcead6c3ba76a372f",
+        "sequence_sha256": "27eb0b2422f873b0d10a924e5bb0347533603f0ed3048fc4257b451c398b5933",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/LM40_P3.fna"
+      },
+      {
+        "phage_id": "MT1B1_3A1",
+        "assembly_sha256": "6186633483de9a3ba6f7b890a8fb899c6a09030a263461733dbbb93072ddec5f",
+        "sequence_sha256": "06d5c6006b8186a74754eb7d5011ad8faf4510f1d5315bc6a8237a6f9bf96203",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/MT1B1_3A1.fna"
+      },
+      {
+        "phage_id": "NAN33_P1",
+        "assembly_sha256": "ed28dde5be4e373caedab8b04e87859cc787a88bd32a89eed11c66dc04f2aa8c",
+        "sequence_sha256": "f9e8a64bac02b300545661ac923f2238e686231b30e34afec6b6965ae6722fc8",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NAN33_P1.fna"
+      },
+      {
+        "phage_id": "NAN33_P2",
+        "assembly_sha256": "313d6150679d9e9386f0019dc8867853f7cd007c92e86bd4597442e8f2a66b96",
+        "sequence_sha256": "df3d2568015fac77d3aee8f31b42fa4660a390ef706cb9ebd4dc155fa36f8942",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NAN33_P2.fna"
+      },
+      {
+        "phage_id": "NAN33_P4",
+        "assembly_sha256": "313d6150679d9e9386f0019dc8867853f7cd007c92e86bd4597442e8f2a66b96",
+        "sequence_sha256": "6af2bb841d641f20c53aa54b4a863c92e74aa377b291d1ab0348ad942d4e6774",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NAN33_P4.fna"
+      },
+      {
+        "phage_id": "NAN33_P5",
+        "assembly_sha256": "38d8858cd17fd85a46cc3788baac43eb05da520e84269a7ae360b7688148e39c",
+        "sequence_sha256": "f8a12177712a2d313bfe655eac0235418e8532e630dedef2db75b28e1daabc9b",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NAN33_P5.fna"
+      },
+      {
+        "phage_id": "NAN33_P6",
+        "assembly_sha256": "df84c6413a9b5a23cd34dbc0a15e353f5bd29b5ee8e3ec2d3abf417e4c9d4c61",
+        "sequence_sha256": "cc3e3094307b798fbe17b9d4b59a1a551300610efc7c8810774407dde1f0683e",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NAN33_P6.fna"
+      },
+      {
+        "phage_id": "NIC06_P2",
+        "assembly_sha256": "0ecebea7ad3ec34577f981d1c4b58f65eb952e42cfe16bc2e45ca3fb35e076d6",
+        "sequence_sha256": "c30ac7f95b9756e22c50537dbc99d3fce5266081766794dba62ae12a222f52a8",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NIC06_P2.fna"
+      },
+      {
+        "phage_id": "NIC06_P3",
+        "assembly_sha256": "649d5f6320dc901720a2b218242b7dd928623f2800ed9dbc26ba8b59dcb653f0",
+        "sequence_sha256": "894002c062f10f26245035389f9ff731c1656b95ccfb18189f33a6eb64f1ff6d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NIC06_P3.fna"
+      },
+      {
+        "phage_id": "NRG_11A2",
+        "assembly_sha256": "1082b7d82b206a4961cbb2a87c1dad334a5b2da4c0b4e6d6972ce72c12a636b5",
+        "sequence_sha256": "deed511091d225edeb0084e6398320092e48759b76fc8d935084dce7edf9a20d",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NRG_11A2.fna"
+      },
+      {
+        "phage_id": "NRG_11B1",
+        "assembly_sha256": "e1217b63b70868afa37c6f493c57b2b8793a451d55edbc1a3db81ae0836be8d7",
+        "sequence_sha256": "01f738573f453e887fa529d34c2118db4af858715704a10494947a85b91991a6",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NRG_11B1.fna"
+      },
+      {
+        "phage_id": "NRG_12A1B",
+        "assembly_sha256": "0594e1d188653ab2dbf64479b28d310283ff13499be5ba6656efdb650b0af5e9",
+        "sequence_sha256": "152e77c0db3860ec304180bb34fb02d83054666f95be51931c678d620c539563",
+        "source_url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/FNA/NRG_12A1B.fna"
+      }
+    ],
+    "snapshot_sha256": "010f28fc794e4aa89d2ab3e8e2a8d46fc1d2fe2e8f5ffa2a072c5388c6f124e5",
+    "candidate_count": 94,
+    "unique_assemblies": 89
+  },
+  "methods": {
+    "host-4mer": {
+      "model_id": "primary-host-4mer-logistic:research:v1",
+      "genome_conditioned": true,
+      "weights": {
+        "path": "data/studies/results/new_host_retrieval.v1/primary_host_4mer.json",
+        "sha256": "d8fd564e1e5e5597dcffbd910f57ea8b666bd030ee59c090343bac7c87790852",
+        "size_bytes": 405542
+      }
+    },
+    "prevalence": {
+      "model_id": "primary-train-phage-prevalence:research:v1",
+      "genome_conditioned": false,
+      "training_counts": {
+        "409_P1": {
+          "positive": 6,
+          "observed": 117
+        },
+        "409_P3": {
+          "positive": 6,
+          "observed": 117
+        },
+        "409_P5": {
+          "positive": 7,
+          "observed": 117
+        },
+        "409_P6": {
+          "positive": 9,
+          "observed": 117
+        },
+        "409_P8": {
+          "positive": 6,
+          "observed": 117
+        },
+        "411_P1": {
+          "positive": 1,
+          "observed": 117
+        },
+        "411_P2": {
+          "positive": 3,
+          "observed": 117
+        },
+        "412_P1": {
+          "positive": 8,
+          "observed": 117
+        },
+        "412_P2": {
+          "positive": 18,
+          "observed": 117
+        },
+        "412_P3": {
+          "positive": 7,
+          "observed": 117
+        },
+        "412_P4": {
+          "positive": 5,
+          "observed": 117
+        },
+        "412_P5": {
+          "positive": 11,
+          "observed": 117
+        },
+        "416_P4": {
+          "positive": 8,
+          "observed": 117
+        },
+        "416_P5": {
+          "positive": 7,
+          "observed": 117
+        },
+        "423_P1": {
+          "positive": 9,
+          "observed": 117
+        },
+        "423_P10": {
+          "positive": 13,
+          "observed": 117
+        },
+        "423_P5": {
+          "positive": 11,
+          "observed": 117
+        },
+        "423_P7": {
+          "positive": 6,
+          "observed": 117
+        },
+        "423_P9": {
+          "positive": 12,
+          "observed": 117
+        },
+        "427_P2": {
+          "positive": 13,
+          "observed": 117
+        },
+        "427_P3": {
+          "positive": 15,
+          "observed": 117
+        },
+        "427_P4": {
+          "positive": 9,
+          "observed": 117
+        },
+        "536_P1": {
+          "positive": 59,
+          "observed": 117
+        },
+        "536_P11": {
+          "positive": 13,
+          "observed": 117
+        },
+        "536_P12": {
+          "positive": 2,
+          "observed": 117
+        },
+        "536_P6": {
+          "positive": 39,
+          "observed": 117
+        },
+        "536_P7": {
+          "positive": 72,
+          "observed": 117
+        },
+        "536_P9": {
+          "positive": 70,
+          "observed": 117
+        },
+        "55989_P1": {
+          "positive": 11,
+          "observed": 117
+        },
+        "55989_P2": {
+          "positive": 62,
+          "observed": 117
+        },
+        "AL505_Ev3": {
+          "positive": 48,
+          "observed": 116
+        },
+        "AL505_Sd2": {
+          "positive": 26,
+          "observed": 116
+        },
+        "AN17_P1": {
+          "positive": 34,
+          "observed": 116
+        },
+        "AN17_P8": {
+          "positive": 25,
+          "observed": 116
+        },
+        "AN24_P2": {
+          "positive": 2,
+          "observed": 116
+        },
+        "AN24_P3": {
+          "positive": 4,
+          "observed": 117
+        },
+        "AN24_P4": {
+          "positive": 11,
+          "observed": 117
+        },
+        "BCH953_P1": {
+          "positive": 2,
+          "observed": 117
+        },
+        "BCH953_P2": {
+          "positive": 46,
+          "observed": 117
+        },
+        "BCH953_P3": {
+          "positive": 0,
+          "observed": 117
+        },
+        "BCH953_P4": {
+          "positive": 24,
+          "observed": 117
+        },
+        "BCH953_P5": {
+          "positive": 24,
+          "observed": 117
+        },
+        "BDX03_P1": {
+          "positive": 17,
+          "observed": 117
+        },
+        "BDX03_P2": {
+          "positive": 7,
+          "observed": 117
+        },
+        "BDX09_P1": {
+          "positive": 1,
+          "observed": 117
+        },
+        "DIJ06_P1": {
+          "positive": 11,
+          "observed": 117
+        },
+        "DIJ07_P1": {
+          "positive": 70,
+          "observed": 117
+        },
+        "DIJ07_P2": {
+          "positive": 79,
+          "observed": 117
+        },
+        "LF110_P1": {
+          "positive": 55,
+          "observed": 116
+        },
+        "LF110_P2": {
+          "positive": 59,
+          "observed": 116
+        },
+        "LF110_P3": {
+          "positive": 50,
+          "observed": 116
+        },
+        "LF110_P4": {
+          "positive": 50,
+          "observed": 116
+        },
+        "LF31_P1": {
+          "positive": 31,
+          "observed": 116
+        },
+        "LF31_P3": {
+          "positive": 12,
+          "observed": 116
+        },
+        "LF50_P3": {
+          "positive": 46,
+          "observed": 117
+        },
+        "LF7074_P1": {
+          "positive": 29,
+          "observed": 117
+        },
+        "LF7074_P2": {
+          "positive": 4,
+          "observed": 117
+        },
+        "LF7074_P3": {
+          "positive": 7,
+          "observed": 116
+        },
+        "LF73_P1": {
+          "positive": 70,
+          "observed": 116
+        },
+        "LF73_P3": {
+          "positive": 46,
+          "observed": 116
+        },
+        "LF73_P4": {
+          "positive": 62,
+          "observed": 116
+        },
+        "LF82_P1": {
+          "positive": 54,
+          "observed": 116
+        },
+        "LF82_P2": {
+          "positive": 56,
+          "observed": 116
+        },
+        "LF82_P3": {
+          "positive": 32,
+          "observed": 116
+        },
+        "LF82_P4": {
+          "positive": 48,
+          "observed": 116
+        },
+        "LF82_P5": {
+          "positive": 52,
+          "observed": 116
+        },
+        "LF82_P6": {
+          "positive": 58,
+          "observed": 116
+        },
+        "LF82_P8": {
+          "positive": 65,
+          "observed": 116
+        },
+        "LF82_P9": {
+          "positive": 61,
+          "observed": 116
+        },
+        "LI10_P1": {
+          "positive": 32,
+          "observed": 116
+        },
+        "LI10_P2": {
+          "positive": 23,
+          "observed": 116
+        },
+        "LI10_P3": {
+          "positive": 26,
+          "observed": 116
+        },
+        "LI10_P4": {
+          "positive": 24,
+          "observed": 116
+        },
+        "LI10_P5": {
+          "positive": 20,
+          "observed": 116
+        },
+        "LI10_P6": {
+          "positive": 21,
+          "observed": 116
+        },
+        "LM02_P1": {
+          "positive": 9,
+          "observed": 116
+        },
+        "LM07_P1": {
+          "positive": 7,
+          "observed": 116
+        },
+        "LM08_P1": {
+          "positive": 15,
+          "observed": 116
+        },
+        "LM08_P2": {
+          "positive": 20,
+          "observed": 116
+        },
+        "LM33_P1": {
+          "positive": 16,
+          "observed": 116
+        },
+        "LM40_P1": {
+          "positive": 24,
+          "observed": 115
+        },
+        "LM40_P2": {
+          "positive": 17,
+          "observed": 117
+        },
+        "LM40_P3": {
+          "positive": 14,
+          "observed": 117
+        },
+        "MT1B1_3A1": {
+          "positive": 22,
+          "observed": 117
+        },
+        "NAN33_P1": {
+          "positive": 31,
+          "observed": 117
+        },
+        "NAN33_P2": {
+          "positive": 24,
+          "observed": 117
+        },
+        "NAN33_P4": {
+          "positive": 17,
+          "observed": 117
+        },
+        "NAN33_P5": {
+          "positive": 21,
+          "observed": 115
+        },
+        "NAN33_P6": {
+          "positive": 18,
+          "observed": 116
+        },
+        "NIC06_P2": {
+          "positive": 52,
+          "observed": 116
+        },
+        "NIC06_P3": {
+          "positive": 25,
+          "observed": 116
+        },
+        "NRG_11A2": {
+          "positive": 43,
+          "observed": 117
+        },
+        "NRG_11B1": {
+          "positive": 39,
+          "observed": 117
+        },
+        "NRG_12A1B": {
+          "positive": 17,
+          "observed": 117
+        }
+      },
+      "training_counts_sha256": "f8e5a1cda97aa24b5434f665444781cb1e24d7e0669aac669137c83ab027d1fa",
+      "smoothing": "Beta(1,1)"
+    }
+  },
+  "representation": {
+    "id": "within-contig-strand-canonical-DNA-4mer:v1",
+    "sha256": "1ddbfa63ee003e5f22a0f21c0fef12d7a9cba26908b380b08ef8c2d2c0dbc4ba",
+    "dimensions": 136,
+    "feature_order": [
+      "host_4mer:AAAA",
+      "host_4mer:AAAC",
+      "host_4mer:AAAG",
+      "host_4mer:AAAT",
+      "host_4mer:AACA",
+      "host_4mer:AACC",
+      "host_4mer:AACG",
+      "host_4mer:AACT",
+      "host_4mer:AAGA",
+      "host_4mer:AAGC",
+      "host_4mer:AAGG",
+      "host_4mer:AAGT",
+      "host_4mer:AATA",
+      "host_4mer:AATC",
+      "host_4mer:AATG",
+      "host_4mer:AATT",
+      "host_4mer:ACAA",
+      "host_4mer:ACAC",
+      "host_4mer:ACAG",
+      "host_4mer:ACAT",
+      "host_4mer:ACCA",
+      "host_4mer:ACCC",
+      "host_4mer:ACCG",
+      "host_4mer:ACCT",
+      "host_4mer:ACGA",
+      "host_4mer:ACGC",
+      "host_4mer:ACGG",
+      "host_4mer:ACGT",
+      "host_4mer:ACTA",
+      "host_4mer:ACTC",
+      "host_4mer:ACTG",
+      "host_4mer:AGAA",
+      "host_4mer:AGAC",
+      "host_4mer:AGAG",
+      "host_4mer:AGAT",
+      "host_4mer:AGCA",
+      "host_4mer:AGCC",
+      "host_4mer:AGCG",
+      "host_4mer:AGCT",
+      "host_4mer:AGGA",
+      "host_4mer:AGGC",
+      "host_4mer:AGGG",
+      "host_4mer:AGTA",
+      "host_4mer:AGTC",
+      "host_4mer:AGTG",
+      "host_4mer:ATAA",
+      "host_4mer:ATAC",
+      "host_4mer:ATAG",
+      "host_4mer:ATAT",
+      "host_4mer:ATCA",
+      "host_4mer:ATCC",
+      "host_4mer:ATCG",
+      "host_4mer:ATGA",
+      "host_4mer:ATGC",
+      "host_4mer:ATGG",
+      "host_4mer:ATTA",
+      "host_4mer:ATTC",
+      "host_4mer:ATTG",
+      "host_4mer:CAAA",
+      "host_4mer:CAAC",
+      "host_4mer:CAAG",
+      "host_4mer:CACA",
+      "host_4mer:CACC",
+      "host_4mer:CACG",
+      "host_4mer:CAGA",
+      "host_4mer:CAGC",
+      "host_4mer:CAGG",
+      "host_4mer:CATA",
+      "host_4mer:CATC",
+      "host_4mer:CATG",
+      "host_4mer:CCAA",
+      "host_4mer:CCAC",
+      "host_4mer:CCAG",
+      "host_4mer:CCCA",
+      "host_4mer:CCCC",
+      "host_4mer:CCCG",
+      "host_4mer:CCGA",
+      "host_4mer:CCGC",
+      "host_4mer:CCGG",
+      "host_4mer:CCTA",
+      "host_4mer:CCTC",
+      "host_4mer:CGAA",
+      "host_4mer:CGAC",
+      "host_4mer:CGAG",
+      "host_4mer:CGCA",
+      "host_4mer:CGCC",
+      "host_4mer:CGCG",
+      "host_4mer:CGGA",
+      "host_4mer:CGGC",
+      "host_4mer:CGTA",
+      "host_4mer:CGTC",
+      "host_4mer:CTAA",
+      "host_4mer:CTAC",
+      "host_4mer:CTAG",
+      "host_4mer:CTCA",
+      "host_4mer:CTCC",
+      "host_4mer:CTGA",
+      "host_4mer:CTGC",
+      "host_4mer:CTTA",
+      "host_4mer:CTTC",
+      "host_4mer:GAAA",
+      "host_4mer:GAAC",
+      "host_4mer:GACA",
+      "host_4mer:GACC",
+      "host_4mer:GAGA",
+      "host_4mer:GAGC",
+      "host_4mer:GATA",
+      "host_4mer:GATC",
+      "host_4mer:GCAA",
+      "host_4mer:GCAC",
+      "host_4mer:GCCA",
+      "host_4mer:GCCC",
+      "host_4mer:GCGA",
+      "host_4mer:GCGC",
+      "host_4mer:GCTA",
+      "host_4mer:GGAA",
+      "host_4mer:GGAC",
+      "host_4mer:GGCA",
+      "host_4mer:GGCC",
+      "host_4mer:GGGA",
+      "host_4mer:GGTA",
+      "host_4mer:GTAA",
+      "host_4mer:GTAC",
+      "host_4mer:GTCA",
+      "host_4mer:GTGA",
+      "host_4mer:GTTA",
+      "host_4mer:TAAA",
+      "host_4mer:TACA",
+      "host_4mer:TAGA",
+      "host_4mer:TATA",
+      "host_4mer:TCAA",
+      "host_4mer:TCCA",
+      "host_4mer:TCGA",
+      "host_4mer:TGAA",
+      "host_4mer:TGCA",
+      "host_4mer:TTAA"
+    ]
+  },
+  "training": {
+    "hosts": 117,
+    "observed_pairs": 10957,
+    "candidate_phages": 94,
+    "host_split": "grouped_host.train",
+    "known_cohort_members": [
+      {
+        "host_id": "370D",
+        "assembly_sha256": "ef529eed6ecf246dd1b35b2ab19e450c6404b7af88d66a290daa87d71a0ab9ed",
+        "sequence_sha256": "dafe6c2aef08ffb62502889461fc0aec71b265ece004ee25132576a61ae6db95",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "381A",
+        "assembly_sha256": "19f897c1b954775f088a3e3a8c83550e1e5fda5664a309787756f314ce84e7e3",
+        "sequence_sha256": "05da4fa1e71a05b74f99229c83dfb7a9fea40559875a90f22f3cc6baea9a00c0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "536",
+        "assembly_sha256": "6afe99e1c95aa8bcc881f8b07f3e2fda8f74c62938648078636b69179c77b7cf",
+        "sequence_sha256": "0eaf29861114dbade6866924de27f3f76a89e4ac21b3dabec9c77e896856686e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "55989",
+        "assembly_sha256": "ca2b560c02fee83a3a743d3b4c65b9c91e99db1ebba4f27698f051a381661cfa",
+        "sequence_sha256": "4bf3ef72e32caceaf4aeb0afd80844c595efc026c68bd27a2b5f3d127f0701e1",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "916A",
+        "assembly_sha256": "ae06a214dc01089c3b5f0ea3a5e0eb5e5ff93cc7b1b6062ab6eaf07ae9afa55e",
+        "sequence_sha256": "30466360374eef69a07b4ad1ca5ee080c6c63c69dc7610b41fcc03298795c723",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "921A",
+        "assembly_sha256": "b0c9072981da51533387faec58f593a1918228ceec0c584779ec307adb55db36",
+        "sequence_sha256": "0764ba87d2c6420ead0c777cc1259a114297bff8c1e482eafb506d56314f498d",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "AL505",
+        "assembly_sha256": "10190361ecc7b946ee6b0309804333d8bf0b43e4e9f8d484a9ea5a627ef0caa8",
+        "sequence_sha256": "c0d520cce4f6a5ac6b2ea1f10878e222ff0cda79ae68cb95182b89e2897f080a",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "B49",
+        "assembly_sha256": "10ad1a590bf85890473669c27f4a45e1111543fab057c72488038680686c6bfb",
+        "sequence_sha256": "848f21ccf3b99275b770e24e332c7f4b7d6e95acf7a20279d6c13fe468633f07",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "B6A1",
+        "assembly_sha256": "ee83b4215cb198dea0aecb3b1004ed7f357b4484c67d5c56aff87a4ee3c2e110",
+        "sequence_sha256": "26561f9016034c653ddd7a9bec70502f074a13654f953d09089bc0bd514cc1d8",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "BL21",
+        "assembly_sha256": "e999a1aab4d9173ccf36925d267c8e651bec6855f002e9abd701e3da26842c8e",
+        "sequence_sha256": "a5daa11e7d962fb3918a1411ef6249d461d993f557fbd8bc1e11bfc26c433415",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "DEC1A",
+        "assembly_sha256": "1c27bd90fbce329c7378db6830395ab6ffd63bc7eef99c50b33dbd7fe8bee410",
+        "sequence_sha256": "7f0e69a1e6150e96311f95511132bae07495c4014404e20048e2b42a426e0872",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "DEC2A",
+        "assembly_sha256": "69d8f0285cfdc17e01b42531bc9ae4377dd70d628e7b485793caafd8cec0db3d",
+        "sequence_sha256": "d8b8fc18e960266280490f53f24a5750581e1f1e02c40dedf95bc9d5f8102ac0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR10",
+        "assembly_sha256": "41debc868755e2542178d1cb26d59ccfacb2ac613d3214b9f9f0b4b6f570875f",
+        "sequence_sha256": "9700ca26147983b448f5a798c1d92cef7a13ea003fb50a28c085ba4baf3a5e3c",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR11",
+        "assembly_sha256": "c45788d5069ab8ec06f28304e91f57c3443454cab5844e99c908aff92edf0639",
+        "sequence_sha256": "145e0c8c303e4db7200118fdf5d1ec94a3ca1ac5427bc216ad66d142f948538e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR12",
+        "assembly_sha256": "d5012e21939478c68dcea7b09506cfc8fb6553a25f70984e390189653dc196ec",
+        "sequence_sha256": "021044966321138cb0e9427ff108f3dacc78f4c77dbb63902084240f6b25c890",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR13",
+        "assembly_sha256": "ccc06edef11908d48a740d51c39d91b81b1912b4366f82c2c3ff7fcb8029a494",
+        "sequence_sha256": "c60c7c9e98f2044240862845b3329e04fa8bf3de242aae5fdd223fadfc040206",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR14",
+        "assembly_sha256": "5d09c0d0e9703d59f8834b6819288c160c5b29d75658463f76ff929406b7ccc2",
+        "sequence_sha256": "dbf7e069bd3af2d4ea7e9c1a01a5c91559c4593a5b7c06e57c630a0158f5e0fd",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR15",
+        "assembly_sha256": "66e45ab3f48c5fe93d59b7b9162afa0220ae9ff91426c260c25df7e4b0e8d6bf",
+        "sequence_sha256": "b2e7264a29be055cab759a6e524c3a0091b5091c49e87f34f0f7d7115deec8c6",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR16",
+        "assembly_sha256": "fd2a80c2f09f3291ce7952fd4a0fdbd9892ea8d638d07234d6faebe660d9e400",
+        "sequence_sha256": "7dfa627035afcfdc412e6515e5d4b632090c65df7ba11cfdd8ad7a64c461ed2e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR17",
+        "assembly_sha256": "1f11a6167403cf61f8d8023cb2105897c4619e7006f64e7582d97a582be32daa",
+        "sequence_sha256": "27785f6c7a52ffa264f3dddb8a5627deebb202fa7a41b0d2eca1404c3297668b",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR18",
+        "assembly_sha256": "36dc77dfdb4e220288a6901b843d36514d52d68e20c3e2bbec67ddcfecab5c55",
+        "sequence_sha256": "ebe0b677a82bacddb3a375434bb137800556ed6ccb3be3596f645a87d8f6fe8e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR19",
+        "assembly_sha256": "b262be5c57fee3fcf832be594cce7eb80675a33aeb35e7cd51a0286705ba0061",
+        "sequence_sha256": "e7117a6077fa9afd26f9d81153e1eef0026c615bb4721548213a765270e5c66f",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR20",
+        "assembly_sha256": "e8de67adbbda5573c0feac76b28befe4b45755295baeff5e766a82084e39dcdd",
+        "sequence_sha256": "a59c575207ceef1156f35775f98faef0f020630763ad5e8be16d5a89ca04354c",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR21",
+        "assembly_sha256": "4adacba1e47e711ce43b2ade20dd8d343a4ad0b12646bdd6a915edf10cc7a5b7",
+        "sequence_sha256": "e9763588f5b5e6fac88f25664243158ff1de5a6f3ceea483942241e27a8b91a4",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR22",
+        "assembly_sha256": "7bf5fa59aa4acdb2831fa4d090e56224eba31ef3dc52fa8e1987aee96ec7cc11",
+        "sequence_sha256": "b833d9a7a3ed1e5324b1f87d0f8fd12643464faf198fbed0da44192ef4368f56",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR23",
+        "assembly_sha256": "df3124815b613c2bce42849f1599e74ffa40b63d09468ec5c951d68fd2998266",
+        "sequence_sha256": "11a569aaa1a931d8cb9013dfb2f60db43c78b3237952643a956dd92407d444b8",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR24",
+        "assembly_sha256": "524d835b771b421e2636aacc416834294d6f04327362536ce8e5132dd019ba02",
+        "sequence_sha256": "c9f5a3eb2bf2e73d164b1e6862ba6ffb518b60fc717b5280a1767e43eeaefb95",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR25",
+        "assembly_sha256": "f15eddd9149c9a703c0c2afbcd3996f4d007489b5e862957e582ba981061bb73",
+        "sequence_sha256": "1b666bc84798ddfffd84624c82a5411cbc4371947d239411834632e60cc653be",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR26",
+        "assembly_sha256": "1b37af827f3d02a04548a8c0677abb3ea9d4a8cecae03766df9c8763f3058902",
+        "sequence_sha256": "1aeb6c7e3cb429772c33ccb7c061aeb1ca44486f2e8c317587be01af95869602",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR27",
+        "assembly_sha256": "b240dc83512049c5cc16ef69d5641ebf8c14e520a9964f416ca4ea051ed7c4b7",
+        "sequence_sha256": "ff5153fb47bfa8fdd3421611b71c30547c458b12a7a513118cd0dbd42deaf0e6",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR28",
+        "assembly_sha256": "882e9a2445c9d6df9c79750fe494feecc38bd13160a207864183f3397f2903dd",
+        "sequence_sha256": "d32fa0829445d9f7332c07d5a65e1ab6814ca15825f6537fd58d90a4ebe90b41",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR29",
+        "assembly_sha256": "94db7dd67fcf953c9b99c0bf545fcad0ca811a75915ae79d7dd3a986f30c662e",
+        "sequence_sha256": "2777208b85072b2085a3dbdfa1b7fbfac24b805779049bf35d3a7807da72779c",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR30",
+        "assembly_sha256": "a19498253f8246af3c11e0c0d63f77e2acddb258d2271153d3f9971a17ff77b0",
+        "sequence_sha256": "d5b4f972cf4d2fe3d9d9df6bd41414f4ba809b2278836657d948021d29a1af40",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR31",
+        "assembly_sha256": "4f84998162edc61f20e62273cb80aeae01d58f6ffb8802b997b2d57219eca226",
+        "sequence_sha256": "690298703a35800104cba616f28392c7f4dcd4374ea8e6b81c20d4aede6e91c8",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR32",
+        "assembly_sha256": "6ae89e5960a67a6e817c8dcc5ec884167ae4bebf842cd94b345ca32af4c0f237",
+        "sequence_sha256": "82a6873cd6bf5429dac2996fb5964dd4ed7f264177ed79f62b45ce6ec4b62fa0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR33",
+        "assembly_sha256": "dd9ea8642d4d0714a58ec3d1a3b51c0aa8f92ef4b6743ec3a8c545e1fb37ab51",
+        "sequence_sha256": "83f4550ea6e7d3ae7e4143aa9861aef7869dd3d8b8931caa0b2acd916f545cd9",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR34",
+        "assembly_sha256": "ce71413d1013bd93179a99071a849fc1da2a76e67c195f9942163469e0c12ac4",
+        "sequence_sha256": "6b8147c75c6f1d5788a405157ff5f81e427981fce578071daeda13522300105a",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR35",
+        "assembly_sha256": "67b812f67eaa1cc88c999da2a342c571a0b98736cecdd1008e191262c17030df",
+        "sequence_sha256": "091be1e61aa1d165626f2c6f8b080b33878b0684a90f49cb0cda83a6ddb59407",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR36",
+        "assembly_sha256": "d8be23eaeca3c72f830f89acf70a494071128ffa098e0271ea6cb4dd19a21c81",
+        "sequence_sha256": "65d0b5647cd90208deaf5869d70d378828790e3c6b2d8b371db3ef788fcb70be",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR37",
+        "assembly_sha256": "ebfab21a8301935ee8a9e996cd19c99ea76d4b07b9a9ce4fe75124830975ec6e",
+        "sequence_sha256": "b5801d01c6560ecbf6bca1a8b9a9ce6e2ca17936adce7fb090800a32e96afbc0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR38",
+        "assembly_sha256": "bc97150705282d590991fdb29b094fdb160dc2004fa733c888ece7031f6661e4",
+        "sequence_sha256": "3f33a445b2cc0a3018085134358e806c334fcfd9df1dfca1dfade59159c99d1f",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR39",
+        "assembly_sha256": "3c469add0c7e2fc3d51fe62cb2a98ba83d6cefcff598db4733653ba29dd3074a",
+        "sequence_sha256": "7f3282a6967d5bf7ef71f3be1af970e6b6ae149de8577a1169d38a0a9ad0cc0c",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR40",
+        "assembly_sha256": "80ba1c89f6789fa6689732975d4d0d9699b222842b5fa24eadb99412f66833bc",
+        "sequence_sha256": "cd010fbaed4c264dd5a2a6290c0b49174899ec26001a182d0387395810311b59",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR41",
+        "assembly_sha256": "ba3b8b366f6f9e88b7a1ae13aa666174a2d26e3616e976685b1f3e2d7e30decd",
+        "sequence_sha256": "07feb12b6986674cca5ef4fe1b57ed1d0a45974b7ae3439d5757dc581426072e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR42",
+        "assembly_sha256": "11cc3d03cbe5528367b10fa2f51e75468fe3476901bd6db6ab6758f15d6e07db",
+        "sequence_sha256": "2678e8393266a7d82ee93a386318adb62a2d6dffe658146fca9c092592c932bc",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR44",
+        "assembly_sha256": "754b78e6ce1ef0c42bbf056d6a8680b9031e97fcb4a410b42baa089896d697d1",
+        "sequence_sha256": "066a8ac5fd3c8b1e8d73901e422f03e0d90083853e46e8a4b68ea00920d62508",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR45",
+        "assembly_sha256": "ad36c6ab0a427a61b35ab50698084fa80072574757058c85c0ea4c1ecbc0e26b",
+        "sequence_sha256": "419c9ce062ed87f5fdf92a5029f9df9ea329e735a2a9a3e6729888d52e78dcfb",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR46",
+        "assembly_sha256": "514c43011fd6b477142ace5fbc0db419cf0db9d28ff94670556f8185b834c868",
+        "sequence_sha256": "7e4d334ee1c8a9036956ee441dcca440a4b2cea433ae1dcc43549ec226e7b6d3",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR47",
+        "assembly_sha256": "6ec67010ddb96d5e757128a1f611fa5e9ee3924ce4eee477e8e38d2a371d8025",
+        "sequence_sha256": "68aa3b04303eb2d3ce4deb47f889aa3a050a692c907b811d2adccd7105139346",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR48",
+        "assembly_sha256": "039acc9d020b7d68175b6a470421c1a19470c6740550ec1eac52d0da8f3a5b6c",
+        "sequence_sha256": "fb0d262e540aea0212d9d2682efb60eb2af9299e9692dd53c07dcb6bfbce2670",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR49",
+        "assembly_sha256": "007dade78f571b10a1124cfca1b8a75755dbf972e49a988547ecf33069cea1ad",
+        "sequence_sha256": "384641f0cf9388ade31c05d6c5021222886cadb27b418565b539f28aeb249fb2",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR50",
+        "assembly_sha256": "e7c4ca89729f1ddac92978b16f735013812c8a030081b6d34a4c57d945057a98",
+        "sequence_sha256": "b84f92ec3316c405c25798db7762a51371058cf1ea781186a02620ecbc440ad0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR51",
+        "assembly_sha256": "35d9fc40a3a026ad9d315bdd2d20b201d2be6aff8c62677e2dc9e58da9617e45",
+        "sequence_sha256": "57ea65d43081014525e42fcb5411f46dde10a8440e91c8a4501d2cda3e646e20",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR52",
+        "assembly_sha256": "dda9eb9ba806608abee1969fa9d85b7fe0a7abd1439b652b0046da6d075abcaa",
+        "sequence_sha256": "5cefa1093c31a089f2188e0a08300d64402529deee0912b9e22bbf7887d17be7",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR53",
+        "assembly_sha256": "1ea10d5948455527ff8d11a7f950cb2dd7c8ac340242f53bdeedc3029872c6fb",
+        "sequence_sha256": "1c6fe2bebb97b0e0c184b4821d5214fb0f0cd29b4e63d2bcb82a65d58150e4d4",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR54",
+        "assembly_sha256": "93ac7e453fd8f4357004c53fb1b767ccd9899a19d5808f0fb7861c83c9f9aa96",
+        "sequence_sha256": "414f030d9fd95d14e45fda306931cae3be8a08e37b22b29de22ed420450d56ff",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR55",
+        "assembly_sha256": "29482d89393fb2cbc7173935f74058cb5f73eb1c306656439680484385123df6",
+        "sequence_sha256": "3722e726ae8c5bc45958a5988f695b76f97a9f22109fbe699fb8a9468306bd81",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR56",
+        "assembly_sha256": "098f851b4f773c8dee8d57bcc412224f2af0ccdbec62d4c73052ae677cd0f061",
+        "sequence_sha256": "0725ecf035008321059f15c386ddd0eefe4700cb3271ae970fa172e58a62b72b",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR57",
+        "assembly_sha256": "119855dc24fc5a3fb5a3c696043bef55057ffd528f16ec44110324ac8575368e",
+        "sequence_sha256": "91466606698f2cb4528e442730058607f3e1f2aaf6a66b1e00fc29793b1cde9d",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR58",
+        "assembly_sha256": "66a4396a37fb6a840938a9f5fb19ff926e5ba223256ab0998676c0d7f481d2a4",
+        "sequence_sha256": "f47294b27bc8ee9e5d0776d9e8bf3c3b669112466ad33909174c11c32b6be40f",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR59",
+        "assembly_sha256": "bae2e415b02f44cd44aa5f42ded1739147bf9890eea9fec96e0836c636665d39",
+        "sequence_sha256": "40169aa5c5bdb7019079d0902b3a6aadfbe603de837c0ee9f81ed5808e5e5f27",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR60",
+        "assembly_sha256": "fc0d3d13ff1fab9805d8819014d5880325fde93d9e99258450394fef9b6a69b2",
+        "sequence_sha256": "8d99537f4a5711fc004265019208824b537d9c482c8a09595a64e5f96357328f",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR61",
+        "assembly_sha256": "c20415e2d4a698064835ee8f6cebcddd0e4a7b98274f2c2c985f0d1ecbcf26e0",
+        "sequence_sha256": "7de6f249ce92d141d3a61c9d0abc39c7292556f199b0dded1e5550268298303a",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR62",
+        "assembly_sha256": "81561a71f95120b9f36df348407edb919e6edd76cacdd5c4f9c2acf1f027cc09",
+        "sequence_sha256": "4098e0238c4a6addf0d1af698b37ed9b568f84e754f784709ba0c02285e34431",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR63",
+        "assembly_sha256": "8d68adc84a04720858c07c6e59bfd07881abaffb8ff2d661c41dfc437b45d327",
+        "sequence_sha256": "8c8c21ceb921c28730d262bed70379672c09b9cb97a2c659b7bcc6326a1217c1",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR64",
+        "assembly_sha256": "e64a6f511c833f8a8f8397b1fbac9012d973f73a565103c52b7691184fac9f02",
+        "sequence_sha256": "2d1ad929e51152617e20c367e32f3d3b9858782554e4b4d188f4972523e52d4b",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR65",
+        "assembly_sha256": "4190fc43a4150d83fc46c3cfcb5ffb4654295974f7b5a9a94657b9e357cc34f8",
+        "sequence_sha256": "374f2ba97a54a21c3ecd28e146683eae72ef3bbab334d9a4ee2bb1fac585696e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR66",
+        "assembly_sha256": "32f48b3739139e0400e983e7ff855c48660e6586e94812ead5ebc1a9ee1b3bdc",
+        "sequence_sha256": "fd505a0b08826447e235fca4e738c0a6c4e246ab0c902193357cbc3b1275b3f1",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR67",
+        "assembly_sha256": "00603348c31395b475e550729b2a8deb723b623e5723276d9b23bcce1d9dd563",
+        "sequence_sha256": "2566e73f6df393ab5486fbd823d817b6b79026db57e06a08ec276250cf4df403",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR69",
+        "assembly_sha256": "9925d134023168cad28fccca31538c9514cd2f754a2d0224a40a620569679705",
+        "sequence_sha256": "ab6fad0383883955d5360dbc0cf31053278416420a2eb7d9aebc312aaf1ac74d",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR70",
+        "assembly_sha256": "2e57509f7c401c131316a0416e0ba42591ac9a7dd64cf28eed47bfab6bd0ad36",
+        "sequence_sha256": "6f4195d36b7c200e9068645b2add48f5ec38f308a8ba776c3c2e54200c97da51",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR71",
+        "assembly_sha256": "f909667f32d6ccc731e5ada73d235a2bec8a810fa1ad47a994ae94ea36e7f35a",
+        "sequence_sha256": "e21422b9ee35a512565121107ad933ec7e4bab84c95450144e2826a0a35c8f28",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ECOR72",
+        "assembly_sha256": "e60bce83a51220a85b728699bc799962fd8f32592d1f6e48491892c9421ed24f",
+        "sequence_sha256": "ab74592bebf3c490ac57cbdd9a8d8f7e59d57c6732faaa71eb80552e6ac07d2d",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ED1A",
+        "assembly_sha256": "e74671ce16bca951c36c5d860c016d7247dbc2803420b7a3eed1d712d6f4b6bb",
+        "sequence_sha256": "9bb9b87316a84e67a73f9cf7ecf813bb1df720ba9eddd0c1c04865e9b4885ff7",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "EDL933",
+        "assembly_sha256": "6ac47b68455c645580374d586f4177229ee3b3787d8ca00f56463b8dbb4867da",
+        "sequence_sha256": "7e7e387ba85da46420ca5e11708c9f8529f84f30b9de90d04416cb58db4c4b09",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "H14",
+        "assembly_sha256": "d082fd7991a4170abd03e8c421db543d0cd18909b681129852212370292207ec",
+        "sequence_sha256": "4685e565211585d81125b84e539141126a3a5a7917e701316282836c41f614c4",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "H4",
+        "assembly_sha256": "d2b971f4f64f73a97df2c5aeef31a6d94faf6bea8bf5e7e278dda1b829ef2cae",
+        "sequence_sha256": "c136d038ddbbb0be2c734abcf9bc7fc7473e62b51b152311b10c242ed7592dd4",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "H48",
+        "assembly_sha256": "19d7c9d3115469e76693bd4a85dcfc7576fedeae11e3ae4121f1319e110cff27",
+        "sequence_sha256": "45ce34a3583d50caec7967e260be0156751a6320bd46b55a5adaefe26862e87f",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "IAI39",
+        "assembly_sha256": "d737c6cb15e14f253b2b437a01150cc5c4728e4cfbc6336ccc9bcb74e970a85c",
+        "sequence_sha256": "f6d3f7022824727a6e7182ec1c16119e8b727090affcc4d106150a1b2b075dc0",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "LF82",
+        "assembly_sha256": "8811f14a5e830d47d49aec8631887b98ef387eb8c124dcd18c41ee93d26eabf9",
+        "sequence_sha256": "dec085844a2ae394720ecae96ecbda41a3d4524b9537a80f9ac9a724567167d8",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "LM33",
+        "assembly_sha256": "052cb22ae0a62f22911429c47236042e2194ba692b28a996ab638d85b8c85f3e",
+        "sequence_sha256": "678cfab81114829b85547cf9a478f88d8d198d422c6bd1129578cf922fce7918",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "LMR3158",
+        "assembly_sha256": "d64105900808215e9fbcf7c381415063d88b594b08ef5a884d225e71a28f1b3b",
+        "sequence_sha256": "820bbac09386d2779f01be13ff578bfeb6edaa98d4e85f929138e7a4b2e2e41b",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "M863",
+        "assembly_sha256": "e8bc423f59e74e23772d161f2985c6fcb53589ef45640d20036df701be74148b",
+        "sequence_sha256": "1392b9f2854cb73a9f7b3cdc54eb7454a5f40f7056c1d8a5e8b6be9ee6d6b90e",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "MT1B1",
+        "assembly_sha256": "12e8de40c678232210399bd9518f14fe6164a78d1f3b99dacce1337fd3bb2b73",
+        "sequence_sha256": "62b06980d480541d5770e2858768797bc1ca611f0e0dc44b69df3745b26633cf",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS01",
+        "assembly_sha256": "806ec2a39ac34dfd0e47ef1fd4d83f8d6ae2358fb018353486e999a0f12e94b2",
+        "sequence_sha256": "d8ed7eb0df4421f1be6e0b9c653820ea3d3992bcac045560605c6307a0cf00da",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS02",
+        "assembly_sha256": "07228a18aabe96f9d030adc7c7a8c66e1282bdfa499509f11bee9cd38fb1c189",
+        "sequence_sha256": "6c8ac14341437c00a235bacbdb60e4bd266455bf6a8824596779bba4c2d9b9cc",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS03",
+        "assembly_sha256": "3334912e58854ff81fce110522bdfa2fe86880842531f3a494b977101501e044",
+        "sequence_sha256": "84af14c331a1ea1526f4753f81168c13964af023274181354d63ee914f95f54d",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS04",
+        "assembly_sha256": "86fe0bd6fbf3857047991ecebcf2f040b36e520066a18437cc52e412969e5812",
+        "sequence_sha256": "659323bd1b580df8f9eb9dd9e8776b618641125dcb442017acc58d8e2f5fb1ed",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS05",
+        "assembly_sha256": "9a31ea7108935c696a3ff7b6018209bd54c55b07e215b944b67b850019af3b23",
+        "sequence_sha256": "35bf368d3c64519a0653269a9bd5cb222a27d7d599b940e2c40392270545bcd0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS06",
+        "assembly_sha256": "613f7974854dc71a013b0d70d519998afafd81744da44ed989e114795975610a",
+        "sequence_sha256": "a4be2d98cb541fb69153997c7203b1ccd50aa80a29a7ffe76a74647cee1fc9f9",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS07",
+        "assembly_sha256": "98d17e8faf92ab7f2884e14d3c35cdacf60f2e3768856ca441993d999b65a0c3",
+        "sequence_sha256": "ee3363efae6f5ac9e3550935180935c3052b1acc80ef66958adb4d09347939b4",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS08",
+        "assembly_sha256": "8552567cf958f6f7874f3ecdd62e6a75c3c96a2e67857321312f8495bd8ed0d8",
+        "sequence_sha256": "0c64630b1941934e16a38ef84e7ebb49e66c24dd4327a65877c91716e84b48b3",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS09",
+        "assembly_sha256": "aea99ac196b0e1ba15a5a592d343fa2b269290f98f5a6f8ea51e8410bf1aefc7",
+        "sequence_sha256": "70b73f5be7a01718ffd34033dab90f28624927ab95c932d33bb91b3173404c75",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS10",
+        "assembly_sha256": "88c7f3f7c57ccb500b9b594bb4725b147bdc4c97a715ada8a366bb8c1bd87685",
+        "sequence_sha256": "28c44ee3ce9ff500bda23bfe85bf26bcc87f9b385d85419f1206e2c307833dc7",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS11",
+        "assembly_sha256": "1f53f4e58d8ff8eae48a01c16897b88967f3086c0c97b9abd45b39509d9f0970",
+        "sequence_sha256": "5461da75c716bb63f87db5cb4519ebf9bb887f50264ae095eb6a6036462083bf",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS12",
+        "assembly_sha256": "f59681617a46a752c1d4600b7c33e62563e44a4966906f79ce3628f9775bc8a4",
+        "sequence_sha256": "5bd7d58c6dbdb397017c15032ec6146173f70a3ece2a17f3e314e823bd647886",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS13",
+        "assembly_sha256": "bb3249d1bd45fd19904caa964fab250d3c69705ada0d690f0d0302d431f6af1f",
+        "sequence_sha256": "02b8d75cbdb32c34e4678dfbc79b536635975aab67d3425e316ff9644b4a70e8",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS14",
+        "assembly_sha256": "0cb0a1840b309e258c94ac50ef03b351798c2e589734443b9fa7f0d3ed783ad8",
+        "sequence_sha256": "fc0d0feec626fa7f532d2c633674e4f0ecf26d234d82c2a96d0390e1947593f1",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS15",
+        "assembly_sha256": "293e4a5cc85ef2fa041e5696137b2d775580bbf6c8c98a8124e14f345d70d49f",
+        "sequence_sha256": "89757e0c8998c5719c8087fbb30d477e37fe46bd79da627902af0a7b5acecaa3",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS16",
+        "assembly_sha256": "66e0776b445ffc00e882df470df435978bd8a6bb36f14ff553a1076a0d5c0864",
+        "sequence_sha256": "4598db6c3463e3cb3147d4ed8220327cf976cb399e265ac7e9bc5f2175f4d890",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS17",
+        "assembly_sha256": "675af28539b44081d4b6dd7f08320e1eb9e04fc09450fa45506ea456812ef072",
+        "sequence_sha256": "88a78a0449039f27b0d95e804ff3bc9b4f31822268d881e8db271382f464c300",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS18",
+        "assembly_sha256": "13d590aade75560b10697752d88bebf282a5af6df19786f86978ee20552a6d43",
+        "sequence_sha256": "41e831e4eadda2ef084b041b49d14c7321309311c28034653c9d99b3f9a65e70",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS19",
+        "assembly_sha256": "6a4a5c05b957c5f7c9cdb56dc3a8a1911270b5a0a91bb180bbe63e77bb5209b2",
+        "sequence_sha256": "1675d536aff62eb1bb37b4cd940e837b4d99634947ec3790b21715e0ac369a76",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS20",
+        "assembly_sha256": "a06803d4e14dedc16d18839e20f69e7235091983003feedf1dc62db134d0976f",
+        "sequence_sha256": "1dcb020a7774d47330d954a7467871f68bdeeb8e94dd9d1d93de2d20d036f095",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS21",
+        "assembly_sha256": "a23fd9c01cafcd9633037fb48a8508400f3fb6f072491413513ac35f66944194",
+        "sequence_sha256": "25db87344916a3da0583cccd65b79d2ffb598e3bba197097444b9a079d9431f9",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS22",
+        "assembly_sha256": "7dce1ff9f8fcd9a03c8ecea548e188bc28b05f16530b18c06061985d4e187da0",
+        "sequence_sha256": "10b0fddb8b4d2febd60f964a9ae14e865fc01cf38a300a53f491071768845643",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS23",
+        "assembly_sha256": "ecf4373526ad70ee3030a69d06971b7a296c37330f5827c5c73d2372f96d0ac6",
+        "sequence_sha256": "926022788aaecc54950be27e6b577b1ed8e8d1c97b7ff45857c91f997a294f45",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS24",
+        "assembly_sha256": "aad1c0bbff97d7749ad7203b860358d2be0096377d37c222da24963d455a0bf3",
+        "sequence_sha256": "100c8f8802f707498a450f215f1f717d213ede755162491aaff0e210dc779916",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS25",
+        "assembly_sha256": "c58874c5ce8c0122db7633212f4480364bb35412dac5f4c07a45171fbf6642f2",
+        "sequence_sha256": "5c522573661c0a62f27afdb732b3d37a3e24541b1d4fef926145578bc73962c4",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS26",
+        "assembly_sha256": "1c75606f3a0469daf9375ec798dac9ab02e7e6db6c951032197f3c053cb2ab2f",
+        "sequence_sha256": "aba6d60f0c5947e8a59becbe2cc1220115199ac69ab367fb8716085a040cfe1e",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS27",
+        "assembly_sha256": "fab47876828191b4e2402cadf72c8cf9c697d4789d800f4dd337ec89d38dea11",
+        "sequence_sha256": "11b8823f8d3f47d1f48b941cc08a8d61f08c23bc87e966271cf60ba525717168",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS28",
+        "assembly_sha256": "f00eaabb8bb7181efd3987a1e48161808db788e5f175735a5bd0721702831486",
+        "sequence_sha256": "5edc56e14dbc101fe57729b5c28e536b178b017bee1a63c8d7903020814ebb0f",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS29",
+        "assembly_sha256": "237c0af8dca63fdf7da41f980c1ba9c527d6a16224ab0af4f847f768b286e44f",
+        "sequence_sha256": "fc3c0d5e57798f41e6e694740fe35d0e46056519dd85d7bea5976eae410c252e",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS30",
+        "assembly_sha256": "d2248d7b2c9c7e30d4f523ab8abecfa24d439a206556bce2df7a233a64d1f967",
+        "sequence_sha256": "0b27dd3c18af92e151c8e34e66e55037a95473432724921d6f9440ea9f421cdf",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS31",
+        "assembly_sha256": "23af41a2ee3ec24799b703b073c4218322792092e0dd9efc76422937ceebfc5d",
+        "sequence_sha256": "745204f54386e01a838480c60793cb277b21edeca749fe195a9e03b70c2de053",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS32",
+        "assembly_sha256": "a59661a68a7aef51570fef68a33615a9e60b0f331ad92f8da3f8a2929dff8b7e",
+        "sequence_sha256": "2453f7e8b477da76efe4f85b5a3872459fb94074a393d4d1cf38febda2d6174a",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS33",
+        "assembly_sha256": "f2fb36f7b56aebe9c7dce3a30f269331bd9853e49663c7e97b88b871f496cf1e",
+        "sequence_sha256": "ab5298df2d470cac247f7db1235478675f923e04f5651286936d0f69cf7a5f01",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS34",
+        "assembly_sha256": "93c1ff0871eeb64af40f35afb7ec1bd6941cee36ba74ae4c87670d0a1919204d",
+        "sequence_sha256": "c2d8e8b485c15d437a55ade2c17332f4fa3e01619495446f33ee486d0762e78b",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS35",
+        "assembly_sha256": "097e88e32672782c1fad07214f97b2b9f95a02a71b6eae2578c7e08a5c7b55a6",
+        "sequence_sha256": "64212d5276a6414bc0e6943f679575f1c1736597f01b693d416f9a021f490785",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS36",
+        "assembly_sha256": "c050111183a7a5765df10b1a3fe4c6593790c8df7a6a18850b803f5f1ad0b1df",
+        "sequence_sha256": "be4870b58d7a83d3a60fc37b8d22c700f60090f1fc991f16bfa9e5b3690a7873",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS37",
+        "assembly_sha256": "e7400b8ff7b9800ca4efc2a5cf11a68bf5e8b645eeae2bb6444198c8f80ee381",
+        "sequence_sha256": "97594d1c1edc2c881aa5b6db35ff9de0b0cae94d113f7a1e35a33d6b5ffcaa72",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS38",
+        "assembly_sha256": "b20909d8c0b4741ecf69fcfb5ca10d718c8a884abcef48ac0e6be5ee4ddd66fd",
+        "sequence_sha256": "ceb88e45c41fc1f493711b9b75bca21e7462e0867b5fd265f96e7ec655e166bc",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS39",
+        "assembly_sha256": "0019b32c11b74e61662d713c1e90f0ee912f3ad68639081e4e2911059c3df348",
+        "sequence_sha256": "9f5eca441912155025845499a2d515296bfff20e29461053f218bfa48ae1fdd4",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS40",
+        "assembly_sha256": "9c56b1724d494bd02e5fab9088f4dd97f43a3fc68c2d51eb15affa79590e6ad1",
+        "sequence_sha256": "e3f123579aadf03805db24549389954cdbf0728be4f32f0c0b443129f8d8250e",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS41",
+        "assembly_sha256": "5e547a7b5639a513c243eeb7a1c00a18216dba4081d4fdec717bdd372f90a20b",
+        "sequence_sha256": "ddbcd9f26cc1e9c7aa068ecf2faed90881f6d7f4b954071453d6ab4130d542ed",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS42",
+        "assembly_sha256": "7ea4f65ef08bce645b07c174d6c79c2fc1e78b2b21f9aa20376e38524cdcc6e9",
+        "sequence_sha256": "881187f7bffc855a9f211e6963932eccac6c8baabb7db207753a66f30f2a9c95",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS43",
+        "assembly_sha256": "8eb3e9787455a166586f736396e53b8db8deed94b550bc316e858131f01aeb64",
+        "sequence_sha256": "90c08a2bbd6d1a1a26099c4ab5892ee31a7aa1fd521aeee923655898cbeaa5c9",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS44",
+        "assembly_sha256": "422784f0e9b831f905c5156cf0499841329bd968d8a39f0745416f838f87804c",
+        "sequence_sha256": "6a18180ba74d236bedd01fb974de11ca98178ed1751210b32487052e56ed7e69",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS45",
+        "assembly_sha256": "28d030eed6cb0aab49c13de3b31551e3b63ce1488d1d92d4da2c6b94e81b8d16",
+        "sequence_sha256": "dd11ececc0c9b86dbc9340019fa61ee732369e0aa3b321ba15d7875e2bc9d21e",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS46",
+        "assembly_sha256": "9a17f95be2f5c7a19939736c7fbacd482769b9fd3e422fdca3db9f6f7e0e56e9",
+        "sequence_sha256": "8ee3ef5764fe80b152ae9c61b6f8302ef4a16cbb5e201577f6fbfa2e25c814fc",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS47",
+        "assembly_sha256": "d8eaf39d95b0e29cfe944076566f1780e9a993ed12f7bdcd57133c5d4966c900",
+        "sequence_sha256": "8701e7f0d0d0de1f24bb87d0d91a2ad5f05fe654ce989ba0ef5344011767b324",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS48",
+        "assembly_sha256": "eb90b2b53c07613b62fd891069b9d6c85abe8d893b42c308d99919f8dccbc3ca",
+        "sequence_sha256": "f1636fa9ac37a576447a57721ed32f8f06c58dd8da1a09563b39bd25c1723e13",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS49",
+        "assembly_sha256": "5cc82f21e42a4fab32bd9b6a6a3b89562efa9a3eba182c1777126868d408ed4c",
+        "sequence_sha256": "caaf1225eb2d0477508c7514ffb25007e8990966031072d4b362a489ffc36ec4",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS50",
+        "assembly_sha256": "a0aedd335a063a78271ae9b056b98441a5b893058581979f9543f9389b6a0878",
+        "sequence_sha256": "0036a3e479274ffc6e5353d681418f29f02efd1e15688f464544d0d88f3cb6cd",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS51",
+        "assembly_sha256": "8318e74794d1badfde361577b3bf82e5d3664f8f0bee3527bb3092178b79d624",
+        "sequence_sha256": "98a5a9190deb627f6835daf1bb7d175ac4c4a567472a19f158d4ea549d7567d7",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS52",
+        "assembly_sha256": "e185678fc7b7155ac9a3456cc888e5c2af836e2ead12dd420afcfc613339ee8f",
+        "sequence_sha256": "810639b0b4172a9161808d47af5bb77014594c319c8f3a0da646cc032cad73b5",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS53",
+        "assembly_sha256": "61001d3294d00b0dfc0fba9d058fdd6724b0f5c1c9885ee13e803bd3bffc5380",
+        "sequence_sha256": "ed5da48d6a4454526afad44c7e9ef733a0d4c644f2e9aa7d51cb227858536330",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS54",
+        "assembly_sha256": "08cb02a90f07da0ac93b82233ac93701da574d1f5c44531300f9939a5eaec7bc",
+        "sequence_sha256": "dafe21affab9ba10ad11014ba976f41a5d69202068481da2306fe98c012380e3",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS55",
+        "assembly_sha256": "8fb640f93bc7a2e03600ea2aa1dffa76764c9fef9aa45715401cf84c4c3b7ff8",
+        "sequence_sha256": "6411b7232e1b2a873b11dbcbe8c364d93eceb4a3d788475396000f840050dba2",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS56",
+        "assembly_sha256": "99b07fed7c96e8f1f6a64b230229eec71e51626a135ebc8750b7a88c6c73ed90",
+        "sequence_sha256": "5648ea3c04e99e6b674583d1369b9f2192f5eba27f37fa791ec3c79e48c63c05",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS57",
+        "assembly_sha256": "5c35412c6d197834d2b49c252d8a555ee416e3bac8efad8c501e764510f8e957",
+        "sequence_sha256": "396f4705b1416826057f182fe710618c3e3a8a7f08f5a88d343705ef4bfeaf29",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS58",
+        "assembly_sha256": "b133d092df95371e45d699d7fd8f3e19c5a34a035f28be783fba9c8fb526333d",
+        "sequence_sha256": "adc6afd5b5adccbe819f8e3083ea26d38107fa9f674acda41a9a8e96e222d511",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS59",
+        "assembly_sha256": "9b781940ce44e54067f26e80378c0ef09572ccac4f4f7c390742a8f23c8bf571",
+        "sequence_sha256": "6bac3fff4ec34c7c6d3994969d8afb5d2cbd1837492c34883689cc454c01258a",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS60",
+        "assembly_sha256": "410d329512dcd6668400f84798474d2b18b592b301999a2376b5272ab07fdcd0",
+        "sequence_sha256": "90d595e8285fb1342e74fcb3689073c1d68f76507d3481b9e7e86d06b390a609",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS61",
+        "assembly_sha256": "fe3896011937bb92da122888617ffca4e439c9fa78cf437a0a4096de5be1b311",
+        "sequence_sha256": "2690b5f77e891aa3c301983a2cd13aa2c7738ce7ad1146960ad6c951a61fb518",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS62",
+        "assembly_sha256": "6e2b4b8b72c4d4132d67a9e50806e6ebcd3242d1c2fd691c28277596544db585",
+        "sequence_sha256": "58faa4972afc50d2018bfd2aebd9ec4f4c4657dc1a1b265898c25a1a2fbbf04c",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS63",
+        "assembly_sha256": "2860c368250f2e58f28c8b21e1e8b14f4975684547d9a2f642080a405d9863b7",
+        "sequence_sha256": "4de4e69d7acf4106e1fdf552b6fb1bb3250aa8053429ce27b4d2ac8578d78603",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS64",
+        "assembly_sha256": "57acd6ae9e085d8edc2e616c0ff8d60c4089811d760ed75cfc11fef6846c723e",
+        "sequence_sha256": "38e9970906ca19f8b2633074638dc6716dabc0f1a49c2ef72a895325a9b960e7",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS65",
+        "assembly_sha256": "93944464a1a3cb9989e8857928411100a58ec469a45caf1914e9dccd07114ff3",
+        "sequence_sha256": "8055f0c3bc14ce9fb459704a680307715aff625ad41e4446378d641336588371",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS66",
+        "assembly_sha256": "6201341b46d24e48262623c167fb2f4fedcd8ff8a3a5e0436738f574020a2764",
+        "sequence_sha256": "5d5a7ca02a690e36d2c9b556c681482370f19463013a8756ca3271efdc969faf",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS67",
+        "assembly_sha256": "aaed7075c69ef4dc8d333f467914124bf160d62cb16479491aced2c4d4c88235",
+        "sequence_sha256": "079c2e9538174fc34de50f0e4c9e4ed31bf9669ffd8f0ed75ab2f5849e81877e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS68",
+        "assembly_sha256": "a936d870b70113e0a1c59a9d84eaeed5d11de8c777491d04669b6dfb23421beb",
+        "sequence_sha256": "4e32943cd594a9b88471862716d8f77c1cbb03b6ddf5d2d391e71edcb05a0ed3",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS69",
+        "assembly_sha256": "237798d1cd8ac514ff9b703c72fba91f3cf5486493836cdbad21997e8589476b",
+        "sequence_sha256": "d9b13ba948e62d45a7adddc247dec61ca788517177d535a50f71d86ec244f603",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS70",
+        "assembly_sha256": "63200a44ebb2a8343e4a94a79a8a57737464fa94370ec11fc4768c05e3d23e09",
+        "sequence_sha256": "83d901fac2a58354d08c0d97a4ac77efaf91f2eaf191b1ea2f30938c4e0c6b48",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS71",
+        "assembly_sha256": "dd58ec308ce1b3fed0c0dc4aed4aefb599a2148e958f58bd34ec0bc7832b4412",
+        "sequence_sha256": "8109b79f2a7fef8cd31535ac0596a4b1be6eaf5803134487b0822733b2e7511a",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS72",
+        "assembly_sha256": "21d5e9b93da7b36acf442c69576b248ead6b0f117d6288aff7d00f58d273e120",
+        "sequence_sha256": "087c61db4366275051d52614398bde9d5dfde6e77e23aa8fd31c6b37a995e419",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS73",
+        "assembly_sha256": "c1c7500d20d6de1f0608936dac9e8c5cb21b7bf5544b593cc2339e108928ec05",
+        "sequence_sha256": "6cb7b30e929e6336462607ae47278ff2dacd16e8bd261821c6cd793d542fbd88",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS74",
+        "assembly_sha256": "0024e5c40477234dfaba28f9378c049b38bbb7417c248283ef125144baefa2f0",
+        "sequence_sha256": "1ae389843c4ef09db6abfbc47b446c73f1a3f630985c0d2cf87aa11fb197fe4e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS75",
+        "assembly_sha256": "c02ba0d1706657266aeff6d666a6718b3bdc8fbec5ab2516589a2ea65b0ce85f",
+        "sequence_sha256": "96434075095354924306f94b8710387a0000fa9a5f1e0539cd133fd459be018d",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS76",
+        "assembly_sha256": "1ebaf9120c4008fd7355463ead54595333865f316866db05c8d027b74c8a6fb2",
+        "sequence_sha256": "870d12062db20b0e6cc58b77a91e7492fbf12c0b9f9d8a7b3b0f5cab86a54690",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS77",
+        "assembly_sha256": "8ccc824f53431f3b571ec59176bf9470ced25221f41f0f8c6ee5c87e898eff71",
+        "sequence_sha256": "2faf94c2eac6ac5ec48da855acf4a85c70338868f185796b8eff6f47f14565e0",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS78",
+        "assembly_sha256": "45b8810c8feddf9bfbf1cf9e79a11ca2b27cfba1a32281ace8461a101fa20e85",
+        "sequence_sha256": "38cf7d26e97f6028a4533e35ecc8ecd7716256a03eb2726e0926788aac818f72",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS79",
+        "assembly_sha256": "7e33881832df8441ee340c767201b78f20a1fe43b8b2312d01f0407bc0c994a7",
+        "sequence_sha256": "57a4a30aa84b9b4afc2520a08e7fc6f8ceb57c8743f9f2d3ccac30191bd9b122",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS80",
+        "assembly_sha256": "13392618fbf4076ff186fb9fb579593322658637de3c0b0a89addfeecf414576",
+        "sequence_sha256": "7ee15c9c54d4eef7ba623143c0b54241c2d534b5549b643640db31f8f433dd46",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "NILS81",
+        "assembly_sha256": "2426b35f9b49c9c8c2b6f2c0445edabc6d0194d585b9e9e1543c96f02694bce0",
+        "sequence_sha256": "53a3632554d55057f65f2c81c338ec92e2308cb6a62da24fb6008d544a34ba27",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "NILS82",
+        "assembly_sha256": "77dc9a9f792f6d3fe7339043656ba6c592cd577422001c7deedab2016af41909",
+        "sequence_sha256": "40c9e3fbe3f518f738c1d2bd80624bd970dc47627a7bebd4a5b994a44169fa88",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "ROAR012",
+        "assembly_sha256": "1b962fd8cea8e98f8650a6c5dddd31b682e20c9c76ae1ba90b328284ea668330",
+        "sequence_sha256": "d5bbd77bd6f043e17f7b1795f0fe3845abbeb230a4a40ac9cdfbd1bed247d131",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ROAR029",
+        "assembly_sha256": "d277ee328b9d6168ca28209327cb8fce5edce4087294835f965cfccd0ef7fc13",
+        "sequence_sha256": "1758a32452237c2f6a38032e49ab1eee8257ff8408858db111a815fabdd2f10a",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "ROAR036",
+        "assembly_sha256": "904b417a404bbe64bfd05b7e07d7e73c277b608efd9b8fe7268df38d22b4faa6",
+        "sequence_sha256": "7c1074bda376b9d2078e55515da115ca481e0cac9ddeb71f291eae9db4144ad6",
+        "split": "validation",
+        "training_member": false
+      },
+      {
+        "host_id": "ROAR059",
+        "assembly_sha256": "56cd5bdc5250f22233995f3a487062fbb10f84b29ebff56a35357a28d8887b95",
+        "sequence_sha256": "b8133cbc20ef19cb10056c6705733152ecaa518c4e22b36298e64ee0f142ab6e",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ROAR131",
+        "assembly_sha256": "0c40466ceba8f7caf273462ae2a1215e31519084e5130f437fcd43111ca7d4a7",
+        "sequence_sha256": "cfee4ff768e1776bb11c58bbc70463d6e1dcaac478bc19cb71d6a20be8a5ac50",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "ROAR274",
+        "assembly_sha256": "29a4dfa9cd10ed33b1b997a1adc860575281ea9fade2c59f3f9e7eaf37109731",
+        "sequence_sha256": "683a3fbf41e68e289c13c158816d6de2cc9ba79f5c478c53e46688151d936bfc",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "ROAR387",
+        "assembly_sha256": "6dcc7cf11aacff4fd255224cebf89c19d543debe4873ad56cc66ba9ba7042e6d",
+        "sequence_sha256": "4a74fa28c1164b148c8a20870139edeade57372cc8e41d43750bb69841ecdcc3",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ROAR400",
+        "assembly_sha256": "63aca252ddb40d8aefdf9030d7491c3a0a2821e7a29d80f7b516651278fe4cb1",
+        "sequence_sha256": "ee5ccae896929e1448592877ba64f7485859b732f7b153673b02577cce3c5fd1",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "ROAR434",
+        "assembly_sha256": "e5aae8b546dc060970043e2d8efe2135f9ec07a3a71d72b2805a15a438a76f02",
+        "sequence_sha256": "c5f5e2d455e2a88d224a0269f69dcce57f2e374c57cbf9d58caa44cc012c2894",
+        "split": "train",
+        "training_member": true
+      },
+      {
+        "host_id": "T145",
+        "assembly_sha256": "ead1165126bda6a14a87d03fa0ddb94d6404fcbb2e6bcf570413f3d007e67632",
+        "sequence_sha256": "d1f550aac77ff04380969183f51ecea2d339693caadb4dafce69c34647dab10a",
+        "split": "test",
+        "training_member": false
+      },
+      {
+        "host_id": "TW10509",
+        "assembly_sha256": "5176fbd8d0fd3ba95184a6a949688b77abfd7a15548da02df20a24618899fd80",
+        "sequence_sha256": "d35a051ed970ac5e2c0a81102bc5f329de22510c9cc0663a4b392d508c80faa0",
+        "split": "train",
+        "training_member": true
+      }
+    ]
+  },
+  "applicability": {
+    "host_dataset_label": "Escherichia coli",
+    "assembly": "assembled DNA FASTA; completeness and taxonomic identity are not inferred",
+    "observed_training_bases": {
+      "min": 4490691,
+      "max": 5581558
+    },
+    "observed_training_max_ambiguity_fraction": 0.009015030913331605,
+    "range_checks": "Descriptive training-envelope flags only; not calibrated out-of-distribution detection or validation for a query.",
+    "unsupported_species": "An explicitly supplied different species yields not_estimated for every candidate."
+  },
+  "provenance": {
+    "resource_lock": {
+      "path": "data/studies/genophi_host_baseline.resources.v1.json",
+      "sha256": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+      "size_bytes": 119967
+    },
+    "observations": {
+      "path": "data/studies/results/paired_interaction.v1/observed_pairs.csv.gz",
+      "sha256": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0",
+      "size_bytes": 60630
+    },
+    "cohort_manifest": {
+      "path": "data/studies/results/genophi_host_split.v1.csv",
+      "sha256": "379419cbe87a63d143cfbe97990d1d644c11d284e23227d128f09e311e399fd4",
+      "size_bytes": 16402
+    },
+    "feature_receipts": {
+      "path": "data/studies/results/paired_interaction.v1/training_feature_manifest.csv",
+      "sha256": "bcce8419b21b49902b759c1f8a8202e9f3ad9317e7cf4f058fbbaa9b5af0d4f1",
+      "size_bytes": 101111
+    },
+    "source_protocol": {
+      "path": "data/studies/new_host_retrieval.v1.json",
+      "sha256": "d75017e4831bad99dbb4fabd5e8f0a1c0c99b7b1eeb20ff3162d558c983ed289",
+      "size_bytes": 18657
+    },
+    "source_report": {
+      "path": "data/studies/results/new_host_retrieval.v1/report.json",
+      "sha256": "42472983a442120d87f12ca40965944fc80516e47259a5357a619be0baff7635",
+      "size_bytes": 38199
+    }
+  },
+  "limitations": [
+    "Scores are research rankings for the source assay, not calibrated infection probabilities or cocktail/treatment effects.",
+    "The source development comparison did not establish robust improvement; no release validation or SDL decision admission."
+  ]
+}
