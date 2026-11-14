@@ -118,6 +118,11 @@ the existing training cohort or overlap gate's binary endpoint ledger.
 
 ## Next decision
 
+The [sequence follow-up](kaneko-sequence-intake.md) has now retrieved and checked
+143 third-party host assemblies linked to the original runs and four versioned
+phage genomes. Host 127 and 38 phages still have only read routes in the inspected
+sources. The workbook receipt remains unchanged.
+
 Resolve reuse terms and the endpoint/publication discrepancy, then obtain or
 assemble quality-checked genomes and verify the phenotype/sequence/stock joins.
 Audit exact and near-duplicate overlap against development sources. A separate
