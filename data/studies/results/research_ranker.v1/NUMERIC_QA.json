@@ -1,0 +1,28 @@
+{
+  "status": "verified_software_conformance",
+  "registry_sha256": "12e6e8adb928f7d9dcdbb156c3a7ea3fcabaa86827103051bbcadedcba7d20bb",
+  "verified_training_observations": 10957,
+  "methods": [
+    "host-4mer",
+    "prevalence"
+  ],
+  "held_out_hosts": 60,
+  "cached_feature_score_checks": 11280,
+  "maximum_cached_score_error": 3.3306690738754696e-16,
+  "full_fasta": {
+    "host_id": "AL505",
+    "source_sequence_sha256": "c0d520cce4f6a5ac6b2ea1f10878e222ff0cda79ae68cb95182b89e2897f080a",
+    "assembly_sha256": "10190361ecc7b946ee6b0309804333d8bf0b43e4e9f8d484a9ea5a627ef0caa8",
+    "scored_candidate_checks": 188,
+    "maximum_absolute_error": 2.220446049250313e-16,
+    "result_content_sha256": {
+      "host-4mer": "d0757c4cd2340b358a4c0bd40feb84004cd097d3007aa01f31c542151664e912",
+      "prevalence": "7e3b2b65ae898b86334f5088f105402cfe7ab7e03219ae52ef951a12ce3269b4"
+    },
+    "scope": "already inspected development holdout; software conformance, not new biological validation"
+  },
+  "verifier_sha256": "343717c73f84b7590b59f84d1fca8061391dd87754789f4d8506c9c4a4458557",
+  "scorer_sha256": "946d73f78a714d793a3aaa52d974678b94b20dc49804c82cecca0af6ccfdb506",
+  "new_model_fits": 0,
+  "independent_release_validation": false
+}

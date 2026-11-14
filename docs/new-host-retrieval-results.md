@@ -61,10 +61,11 @@ All K, eligible-only summaries, intervals and subgroup failures are in the
   primary panel. This motivates a separately frozen experiment; it does not
   prove that a residual will help or identify the physical source of failure.
 
-No additional seed, feature set or test-selected L2 is substituted. The next
-planned deliverable is the research FASTA-to-ranking command with declared
-baselines and applicability, alongside public new-host data intake. The bilinear
-model is not selected as its default recommender.
+No additional seed, feature set or test-selected L2 is substituted. The
+[research FASTA-to-ranking command](research-fasta-ranking.md) now reuses the
+primary host 4-mer and prevalence baselines with explicit applicability.
+Public new-host data intake remains next; the bilinear model is not selected
+as a default recommender.
 
 ## Artifacts and reproduction
 

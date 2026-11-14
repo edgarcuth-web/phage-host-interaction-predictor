@@ -26,6 +26,7 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | --- | --- |
 | Task, labels and acceptance | [First model task](first-model-task.md), [dataset contract](dataset_contract.md), [endpoint semantics](endpoint-semantics.md) |
 | SDL file exchange | [ModelInputBundle / PairPrediction](model-interface.md) |
+| Research FASTA inference | [Explicit baseline command, pinned registry, JSON reports and verification](research-fasta-ranking.md) |
 | Data and development weights | [Inputs and rebuilds](../data/README.md), [model cards](../models/README.md) |
 | Supplied-score comparison | [Implemented offline retrieval-rescue evaluator](offline-retrieval-rescue-evaluator.md) |
 | External evaluation intake | [Exact overlap and source-lineage gate](external-evaluation-intake.md) (does not certify independence) |

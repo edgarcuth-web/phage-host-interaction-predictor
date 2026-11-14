@@ -19,6 +19,10 @@ It does not yet provide a validated genome-to-candidate service or cocktail mode
 - **Integration:** ModelInputBundle / PairPrediction validation and abstention
   work. Trained baseline serving through that interface is pending. The offline
   two-route evaluator audits supplied score files; it does not train a retriever.
+- **Research inference:** [FASTA-to-ranking command](docs/research-fasta-ranking.md)
+  now loads the frozen primary host 4-mer or prevalence baseline, preserves all
+  94 candidates and records input/model/library identity. Its local report is
+  separate from SDL admission and does not promote a model.
 
 Test Hit@2 on the frozen 94-phage panel, including all complete-label hosts:
 
@@ -100,6 +104,16 @@ phage-model-interface validate-bundle tests/fixtures/input_bundle/bundle.json --
 See the [model-interface runbook](docs/model-interface.md) for a complete round trip.
 The fixture verifies software, not prediction quality.
 
+Rank an assembled host FASTA with an explicitly selected research baseline:
+
+```bash
+phage-research-rank --fasta host.fasta --method host-4mer --top-k 5 \
+  --host-species "Escherichia coli" --out artifacts/host_ranking.json
+```
+
+The [runbook](docs/research-fasta-ranking.md) explains the two methods, exact ties,
+applicability flags, unavailable results and real-FASTA conformance checks.
+
 ## Research boundary and next work
 
 The target is the named source assay label. It is not automatically a measure of
@@ -108,9 +122,9 @@ see [endpoint semantics](docs/endpoint-semantics.md).
 Known-library retrieval does not establish unseen-phage performance, and pairwise
 scores do not establish cocktail efficacy.
 
-The [matched ranking comparison](docs/new-host-retrieval-results.md) is complete.
-Next: implement the research FASTA-to-ranking command with declared baselines,
-model identities and applicability. The
+The [matched comparison](docs/new-host-retrieval-results.md) and
+[research ranking command](docs/research-fasta-ranking.md) are complete.
+Next: audit public new-host data and reserve suitable validation inputs. The
 [staged checklist](docs/host-conditioned-phage-retrieval-roadmap.md#next-work)
 tracks evaluation and a research FASTA-to-ranking command. Public-data intake
 can proceed alongside this work; independent release validation remains pending.
