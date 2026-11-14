@@ -21,7 +21,7 @@ limits for each case.
 | Learned host–phage interaction ranking | [Bilinear sequence model trained and compared](paired-interaction-results.md); primary development AP improvement not established. No validated serving/retriever release |
 | New-host fixed-library comparison | [Matched comparison complete](new-host-retrieval-results.md); bilinear hit/cost improvement not established |
 | Research FASTA-to-ranking | [Command delivered](research-fasta-ranking.md) for primary host 4-mer and prevalence; software conformance checked, no model promotion |
-| Public new-host data intake | [Five-panel source review complete](external-evaluation-intake.md#public-source-review-2026-11-13); no eligible independent cohort admitted; reservation remains pending |
+| Public new-host data intake | [Initial five-panel review](external-evaluation-intake.md#public-source-review-2026-11-13) and [Vitt/Kaneko follow-up](external-evaluation-intake.md#public-panel-follow-up-2026-11-14) complete; source-data blockers recorded, no independent cohort admitted |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
 
@@ -68,13 +68,18 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-Plan updated 2026-11-13. Steps 1–3 are complete: the matched comparison retains
+Plan updated 2026-11-14. Steps 1–3 are complete: the matched comparison retains
 its negative bilinear result and the [research command](research-fasta-ranking.md)
 reuses declared baselines. The [first public-data review](external-evaluation-intake.md#public-source-review-2026-11-13)
 is complete, with no eligible independent cohort for the fixed 94 stocks.
 **Next: obtain suitable validation inputs; reservation remains blocked.** The
 prospective same-study files are quarantined, not an admitted release set. Any
 model change needs a separate protocol.
+The [Vitt/Kaneko follow-up](external-evaluation-intake.md#public-panel-follow-up-2026-11-14)
+found an aggregate Vitt supplement rather than a pair table, and a Kaneko
+accession-range discrepancy alongside blocked workbook access. These sources
+remain candidates for separate E. coli studies pending original data and identity
+reconciliation.
 
 ### 1. Align the new-host, fixed-library comparison
 
@@ -137,6 +142,13 @@ policy below.
   Record source lineage, available host/phage identity evidence, reuse terms,
   evidence gaps and a frozen role or rejection reason in the
   [intake](../data/studies/public_new_host_intake.v1.json). No source is admitted.
+- [x] Inspect Vitt's supplementary documents and reconcile Kaneko's published
+  accession intervals with public run metadata. Keep the
+  [follow-up receipt](../data/studies/public_panel_followup.v1.json) separate from
+  the original frozen intake; neither source has admitted pair labels.
+- [ ] Obtain Kaneko's original workbooks and assay definitions, resolve the
+  identities of all 42 paper phages, and locate Vitt's pair-level source table.
+  Neither nominal matrix size nor aggregate host-range counts supply labels.
 - [ ] Reserve suitable evaluation data before model selection. Distinguish
   additional same-study hosts from independent laboratory/assay validation.
   BASEL has known host IDs and stays an inspected cold-phage reference.
@@ -170,3 +182,4 @@ Mechanistic targets, engineered phage generation, cocktail benefit and clinical
 efficacy are outside the evidence supplied by these retrieval studies. See
 [endpoint semantics](endpoint-semantics.md) and the
 [benchmark design](retrieval-rescue-benchmark-v0.md) for the detailed boundaries.
+

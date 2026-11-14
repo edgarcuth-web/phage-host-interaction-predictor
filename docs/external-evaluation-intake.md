@@ -93,6 +93,69 @@ Omit `--fetch` for an offline replay. The output path must be new. Exit 0 means
 the intake findings reproduced, including the **blocked** same-source claim;
 it does not admit a dataset. Source tables, reads and genomes stay outside Git.
 
+## Public-panel follow-up, 2026-11-14
+
+The [follow-up source receipt](../data/studies/public_panel_followup.v1.json)
+records an inspection of Vitt's actual supplementary files and Kaneko's public
+sequence metadata. These are candidates for a separate E. coli panel, not
+admitted training data or a test of the current 94-output weights. The original
+five-panel intake and its numeric receipt remain unchanged.
+
+### Vitt: sequence metadata available, pair table not located
+
+[Vitt et al. (2024)](https://doi.org/10.1016/j.isci.2024.108826) reports a
+198-host/28-phage panel. The public Europe PMC
+[supplement package](https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10844046/supplementaryFiles)
+was retrieved and its two supplementary documents were read:
+
+- `mmc2.xlsx`, Table S1: 198 unique host IDs with 198 unique, nonmissing sample
+  accessions. It links 78 samples to PRJEB22091, 80 to PRJEB14641 and 40 to
+  PRJEB14086. These are sample identities, not verified assembled FASTAs.
+- `mmc1.pdf`, Table S2, PDF page 3: 28 phage-level rows summarizing infected-host
+  counts, phylogroups and sequence types. It is **not** a 198-by-28 pair table.
+  The other tables concern experimental reagents; no full numerical pair matrix
+  was found in these inspected supplements.
+
+Figure 4 presents the host-range heatmap. The source uses a spot screen followed
+by plaque assays for lysis-positive spots; its titre bins and no-plaques category
+must retain that two-stage meaning. The nominal 5,544 pairs are not 5,544 verified
+importable labels. No heatmap cells were digitized, and aggregate counts were
+not converted into pair labels. A pair-level source table and sequence/stock
+crosswalk are still needed.
+
+### Kaneko: workbook access blocked and accession range inconsistent
+
+[Kaneko et al. (2025)](https://doi.org/10.1089/phage.2024.0023) reports
+144 hosts and 42 phages. The publisher lists seven XLSX supplements. Downloading
+the first workbook returned HTTP 403 with a Cloudflare challenge, not workbook
+bytes. None of the seven workbooks' contents has been inspected, so the measured
+pair count, assay definitions and positive/negative/intermediate/unknown coding
+remain unverified. The nominal 6,048 combinations must not be imported as labels.
+
+The paper's experiment-accession ranges were checked against ENA read-run
+metadata. The receipt contains exact request URLs and response hashes:
+
+| Reported range | ENA evidence at review | Decision |
+| --- | --- | --- |
+| DRX534018–DRX534161, hosts | PRJDB18063 has 144 distinct experiments, samples and runs, exactly matching the range; all have FASTQ links | Raw-read metadata confirmed; phenotype joins and assembled genomes are not verified |
+| DRX534162–DRX534203, phages | PRJDB18044 has 38 distinct experiments, samples and runs, DRX534162–DRX534199; all have FASTQ links | Does not resolve the sequence identities of all 42 paper phages |
+| DRX534200 | PRJDB17934; Candidatus Magnetaquiglobus chichijimensis | Other-project record; do not import as a paper phage |
+| DRX534201 and DRX534202 | PRJDB18047; Homo sapiens | Other-project records; do not import as paper phages |
+| DRX534203 | PRJDB18042; Lentinula edodes | Other-project record; do not import as a paper phage |
+
+This discrepancy is not a missing-read result: the last four reported accessions
+resolve to other projects and organisms. It does not identify the correct
+accessions for the four unresolved paper phages. Do not repair the range by
+guessing adjacent IDs or silently reduce the study's 42 candidates to 38.
+Sample titles and read availability do not establish stock identity, label joins
+or new-host independence. No sequencing reads or genomes were downloaded.
+
+**Next:** obtain the Kaneko workbooks and assay definitions, reconcile all 42
+phage identities with original source metadata, and locate Vitt's pair table.
+Endpoint/reuse review and exact/near-duplicate identity checks remain necessary
+before freezing any separate-panel study or exact-current-library subset.
+Neither source supplies an admitted independent release cohort at this stage.
+
 ## Mandatory manual steps even if this gate finds no overlap
 
 1. Resolve study aliases, source-data derivations, shared experiments and source licenses; verify original accessions and dataset checksums.
@@ -102,3 +165,4 @@ it does not admit a dataset. Source tables, reads and genomes stay outside Git.
 5. Freeze a truly independent cohort, allowed claims, subgroup definitions and evaluation protocol **before running predictions**.
 
 A clean report never sets `independent_release_validation_established` to true. This tool blocks some invalid claims; it does not replace independent scientific review or experimental validation.
+

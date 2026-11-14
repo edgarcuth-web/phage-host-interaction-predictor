@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "review_id": "public-panel-followup:v1",
+  "reviewed_date": "2026-11-14",
+  "retrieved_at_utc": "2026-11-14T08:24:52.855954+00:00",
+  "project_base_commit": "d31b145721b56bb2621b0afb08b1d080383f6520",
+  "status": "source_review_only_no_training_or_validation_data_admitted",
+  "scope": "Vitt supplementary-content review and Kaneko public sequence-metadata reconciliation; no pair-label import or model run.",
+  "source_snapshot_note": "Hashes identify the inspected response/member bytes. Live ENA metadata can change ordering or content; a later mismatch requires review rather than silently replacing this snapshot. ZIP container metadata are not pinned; compare extracted member bytes.",
+  "resources": [
+    {
+      "id": "vitt_table_s1",
+      "size_bytes": 16787,
+      "sha256": "ddddf42d5568bc5cc641bf1f4ff61b544942487057b850421bbc1dd3282b4402",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10844046/supplementaryFiles",
+      "archive_member": "mmc2.xlsx"
+    },
+    {
+      "id": "vitt_document_s1",
+      "size_bytes": 1243906,
+      "sha256": "fdb343d88e4478f4d98816e0a88eedd59331f4c04ab30f18a67fe824fd101f1c",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10844046/supplementaryFiles",
+      "archive_member": "mmc1.pdf"
+    },
+    {
+      "id": "kaneko_host_project",
+      "size_bytes": 30976,
+      "sha256": "6b1991f45166f66628dc57989dd594508ffd0488c191923e6c650b1b160b54d1",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJDB18063&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp%2Clibrary_strategy&format=tsv"
+    },
+    {
+      "id": "kaneko_phage_project",
+      "size_bytes": 8636,
+      "sha256": "3cf9af5c90c1608e3fe84c016dbb74715138348427549370b4603e1c4a4319ea",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJDB18044&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp%2Clibrary_strategy&format=tsv"
+    },
+    {
+      "id": "kaneko_DRX534200",
+      "size_bytes": 358,
+      "sha256": "7f318f39699a6dc3de349198e2dc0f4e46c17cd92047af903d2fc814a2ae7317",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=DRX534200&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp&format=tsv"
+    },
+    {
+      "id": "kaneko_DRX534201",
+      "size_bytes": 308,
+      "sha256": "b88cee68e9be397f1a7d5e22029a34e8cc3f210809b9e3c4d8978570280dee13",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=DRX534201&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp&format=tsv"
+    },
+    {
+      "id": "kaneko_DRX534202",
+      "size_bytes": 308,
+      "sha256": "aa521114625660706d95ca85e8bef6ba4d5fca618fafd436972295ae805de6a8",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=DRX534202&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp&format=tsv"
+    },
+    {
+      "id": "kaneko_DRX534203",
+      "size_bytes": 301,
+      "sha256": "09393b8f2cac03b4370d4655a1a35b24c051c43ddf9b311925390cf5230d8c86",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=DRX534203&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp&format=tsv"
+    }
+  ],
+  "vitt": {
+    "doi": "10.1016/j.isci.2024.108826",
+    "role": "separate_ecoli_panel_candidate_awaiting_pair_table",
+    "nominal_hosts": 198,
+    "nominal_phages": 28,
+    "nominal_pairs": 5544,
+    "verified_pair_labels": null,
+    "table_s1": {
+      "sheet": "Ark1",
+      "data_rows": 198,
+      "unique_host_ids": 198,
+      "unique_sample_accessions": 198,
+      "missing_sample_accessions": 0,
+      "columns": [
+        "Strain name",
+        "Study Accession",
+        "Sample Accession",
+        "Secondary Sample Accession"
+      ],
+      "study_counts": {
+        "PRJEB22091": 78,
+        "PRJEB14641": 80,
+        "PRJEB14086": 40
+      },
+      "identity_limit": "Sample accessions, not verified assembled host FASTAs. No phenotype-to-sequence crosswalk or genome overlap audit completed."
+    },
+    "document_s1": {
+      "pages": 9,
+      "table_s2_pdf_page_1_based": 3,
+      "table_s2_phage_rows": 28,
+      "table_s2_content": "Aggregate infected-strain counts, phylogroups and sequence types per phage; not a host-by-phage result matrix.",
+      "interpretation_check": "Manual content review of Table S2; not an automated PDF semantic validator."
+    },
+    "endpoint": "Two-stage host-range screen: lysis-positive spots were followed by plaque assay; Figure 4 gives three titre bins and no-plaques category. This does not establish individually quantified EOPs for every cell.",
+    "pair_data_limit": "No full numerical 198-by-28 pair table found in the inspected public supplements. Figure 4 is the published heatmap; no labels were digitized or inferred from aggregate counts.",
+    "blocking_reasons": [
+      "pair_level_source_table_not_located",
+      "host_assembly_identity_and_overlap_not_audited",
+      "current_94_stock_overlap_not_audited"
+    ]
+  },
+  "kaneko": {
+    "doi": "10.1089/phage.2024.0023",
+    "publisher_url": "https://journals.sagepub.com/doi/10.1089/phage.2024.0023",
+    "role": "separate_ecoli_panel_candidate_pending_workbooks_and_accession_reconciliation",
+    "paper_hosts": 144,
+    "paper_phages": 42,
+    "nominal_pairs": 6048,
+    "verified_pair_labels": null,
+    "workbooks": {
+      "publisher_lists": 7,
+      "inspected_contents": 0,
+      "attempted_downloads": [
+        {
+          "file": "sj-xlsx-1-pta-10.1089_phage.2024.0023.xlsx",
+          "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-1-pta-10.1089_phage.2024.0023.xlsx",
+          "http_status": 403,
+          "response_kind": "Cloudflare challenge HTML; not workbook bytes"
+        }
+      ],
+      "header_values_missingness_and_endpoint": "unverified"
+    },
+    "host_metadata": {
+      "project": "PRJDB18063",
+      "run_rows": 144,
+      "unique_experiments": 144,
+      "unique_samples": 144,
+      "unique_runs": 144,
+      "experiment_range": [
+        "DRX534018",
+        "DRX534161"
+      ],
+      "all_reported_host_experiments_resolved": true,
+      "all_rows_have_fastq_links": true
+    },
+    "phage_metadata": {
+      "project": "PRJDB18044",
+      "run_rows": 38,
+      "unique_experiments": 38,
+      "unique_samples": 38,
+      "unique_runs": 38,
+      "experiment_range": [
+        "DRX534162",
+        "DRX534199"
+      ],
+      "all_rows_have_fastq_links": true,
+      "reported_experiment_range": [
+        "DRX534162",
+        "DRX534203"
+      ],
+      "reported_accessions_resolving_to_other_projects": [
+        {
+          "experiment_accession": "DRX534200",
+          "run_accession": "DRR550466",
+          "study_accession": "PRJDB17934",
+          "scientific_name": "Candidatus Magnetaquiglobus chichijimensis"
+        },
+        {
+          "experiment_accession": "DRX534201",
+          "run_accession": "DRR550467",
+          "study_accession": "PRJDB18047",
+          "scientific_name": "Homo sapiens"
+        },
+        {
+          "experiment_accession": "DRX534202",
+          "run_accession": "DRR550468",
+          "study_accession": "PRJDB18047",
+          "scientific_name": "Homo sapiens"
+        },
+        {
+          "experiment_accession": "DRX534203",
+          "run_accession": "DRR550469",
+          "study_accession": "PRJDB18042",
+          "scientific_name": "Lentinula edodes"
+        }
+      ],
+      "interpretation": "The publisher-stated range is inconsistent with these ENA metadata. The 4 other-project records must not be imported as phage sequences. This review has not resolved the correct sequence identities for all 42 paper phages."
+    },
+    "identity_limit": "Read-run availability and sample titles do not establish phenotype joins, assembled genomes, stock identity or new-host independence. No reads or genomes were downloaded.",
+    "endpoint": "Unverified until original methods and workbook definitions are read; lytic spectra is not silently mapped to productive infection.",
+    "reuse_terms": "Publisher marks restricted article access and gives a non-OA supplementary reuse notice. No phenotype or sequence data are redistributed; training/reuse terms remain unresolved.",
+    "blocking_reasons": [
+      "workbook_contents_not_retrieved",
+      "assay_and_positive_negative_unknown_encoding_unverified",
+      "reported_phage_accession_range_inconsistent_with_ENA",
+      "assembled_sequence_and_phenotype_identity_not_audited",
+      "reuse_terms_not_resolved"
+    ]
+  },
+  "next_actions": [
+    "Obtain Kaneko original XLSX supplements and assay definitions; identify the source matrix and retain original labels/unknowns.",
+    "Reconcile all 42 Kaneko phage identities with original author metadata instead of importing the published accession interval blindly.",
+    "Locate Vitt pair-level source data; do not convert Table S2 counts into pair labels.",
+    "Only after source joins and overlap checks, scope a separate E. coli panel protocol or an exact-current-library subset."
+  ],
+  "training_pairs_admitted": 0,
+  "independent_release_cohorts_admitted": 0,
+  "model_fits": 0,
+  "model_score_runs": 0,
+  "independent_release_validation_established": false
+}

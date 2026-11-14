@@ -29,7 +29,7 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | Research FASTA inference | [Explicit baseline command, pinned registry, JSON reports and verification](research-fasta-ranking.md) |
 | Data and development weights | [Inputs and rebuilds](../data/README.md), [model cards](../models/README.md) |
 | Supplied-score comparison | [Implemented offline retrieval-rescue evaluator](offline-retrieval-rescue-evaluator.md) |
-| External evaluation intake | [Five-panel source review, quarantine, no admitted release cohort and existing overlap gate](external-evaluation-intake.md) |
+| External evaluation intake | [Five-panel review, Vitt/Kaneko source-data follow-up, no admitted release cohort and existing overlap gate](external-evaluation-intake.md) |
 | Published BASEL/ECOR E. coli stress-test reference | [Pinned source-only intake and missing-label caveats](basel-ecor-published-reference.md) |
 | BASEL identity and preregistered evaluation | [Host overlap audit, blocked phage sequence checks and frozen Hit@2 bounds](basel-ecor-identity-protocol-freeze.md) |
 | BASEL accession and sequence results | [52 accessions, joint phage overlap, differing host assemblies and source discrepancies](basel-ecor-sequence-audit.md) |
@@ -50,3 +50,4 @@ scientific design; the implemented evaluator does not make it a completed study.
 The Evo2 host-representation extension is [paused](host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch)
 and is no prerequisite for retrieval development. Its unexecuted protocol and
 hardware handoff remain in [host similarity and Evo2](host-similarity-evo2.md).
+
