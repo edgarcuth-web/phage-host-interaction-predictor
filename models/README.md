@@ -71,6 +71,18 @@ weights remain the original separately bound artifact.
 
 The bilinear model's Hit@2 is 64.71% primary and 63.93% B2, below prevalence's
 73.53% and 90.16%. Neither frozen primary hit/cost gate passes. These are
-uncalibrated development weights, with no serving adapter, default recommender
+uncalibrated development weights, with no PairPrediction adapter, default recommender
 selection or SDL admission. Preserve the distinct earlier crossed-fit models.
+
+## Research ranking registry
+
+[research_ranker.v1.json](research_ranker.v1.json) binds the fixed candidate
+snapshot and two explicit research methods. `phage-research-rank` uses actual
+FASTA-derived frequencies with the primary host 4-mer JSON weights, or the
+non-genomic train-only prevalence control. The command requires a method choice.
+No weights are retrained, and the registry does not promote a model.
+
+See the [runbook](../docs/research-fasta-ranking.md) for output identity,
+applicability, relocation and real-FASTA checks. The local report is separate
+from PairPrediction and SDL decision admission.
 

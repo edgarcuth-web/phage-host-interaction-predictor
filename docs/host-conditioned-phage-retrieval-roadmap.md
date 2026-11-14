@@ -20,6 +20,7 @@ limits for each case.
 | Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
 | Learned host–phage interaction ranking | [Bilinear sequence model trained and compared](paired-interaction-results.md); primary development AP improvement not established. No validated serving/retriever release |
 | New-host fixed-library comparison | [Matched comparison complete](new-host-retrieval-results.md); bilinear hit/cost improvement not established |
+| Research FASTA-to-ranking | [Command delivered](research-fasta-ranking.md) for primary host 4-mer and prevalence; software conformance checked, no model promotion |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
 
@@ -66,10 +67,10 @@ below or reuse a zero-budget plan as authorization for inference.
 
 ## Next work
 
-Plan updated 2026-11-13. [Steps 1–2 are complete](new-host-retrieval-results.md):
-the matched comparison retains its negative bilinear result. **Next: deliver
-the step-3 research FASTA-to-ranking command.** Public-data intake can proceed
-alongside it. Any model change needs a separate protocol for the stated hypothesis.
+Plan updated 2026-11-13. Steps 1–3 are complete: the matched comparison retains
+its negative bilinear result and the [research command](research-fasta-ranking.md)
+reuses declared baselines. **Next: public new-host data intake and reservation
+of suitable validation inputs.** Any model change needs a separate protocol.
 
 ### 1. Align the new-host, fixed-library comparison
 
@@ -113,10 +114,10 @@ cannot promote a model, even if a new development contrast is favorable.
 
 ### 3. Deliver a research FASTA-to-ranking command
 
-- [ ] Load declared frozen preprocessing and weights, verify host FASTA and the
+- [x] Load declared frozen preprocessing and weights, verify host FASTA and the
   library snapshot, then emit scores/ranks, endpoint, model/sequence hashes,
   applicability, missingness and explicit unavailable results.
-- [ ] Reproduce the step-2 scorer on admitted inputs; check wrong inputs, unknown
+- [x] Reproduce the step-2 scorer on admitted inputs; check wrong inputs, unknown
   candidates and incomplete score support. A software demo can use a declared
   baseline even if the learned comparison fails; it must report that limitation.
 
