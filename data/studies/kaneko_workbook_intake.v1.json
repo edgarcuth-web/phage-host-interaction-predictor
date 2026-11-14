@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "review_id": "kaneko-workbook-intake:v1",
+  "reviewed_date": "2026-11-14",
+  "metadata_retrieved_at_utc": "2026-11-14T14:48:26.813554+00:00",
+  "project_base_commit": "56f5fa0b34f59002f1534c168983396575e18357",
+  "doi": "10.1089/phage.2024.0023",
+  "status": "audited_source_ordinal_data_not_admitted_for_training",
+  "workbooks": [
+    {
+      "id": "xlsx_1",
+      "filename": "sj-xlsx-1-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "SF1",
+      "size_bytes": 462928,
+      "sha256": "74691ffad9fca545915c3b0650a76835c2fbd539cfc90e8492b66dc21ab38752",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-1-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    },
+    {
+      "id": "xlsx_2",
+      "filename": "sj-xlsx-2-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "SF2",
+      "size_bytes": 33420,
+      "sha256": "846ea60cc55f9a1d2e9dd5a1cf71ea64495f2c0b9641029ad6e3b9aaaffba511",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-2-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    },
+    {
+      "id": "xlsx_3",
+      "filename": "sj-xlsx-3-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "ST1",
+      "size_bytes": 18489,
+      "sha256": "eaa34c165744c68bd8e50a927d9e2cecbd3219d7bd6f0bbede27ea43d8f9925f",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-3-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    },
+    {
+      "id": "xlsx_4",
+      "filename": "sj-xlsx-4-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "ST2",
+      "size_bytes": 11855,
+      "sha256": "39cfc6e54adaf5f2dc89335544a8d4a0ab0c47f2562652a784f3c4b5a18e64af",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-4-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    },
+    {
+      "id": "xlsx_5",
+      "filename": "sj-xlsx-5-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "ST3",
+      "size_bytes": 19728,
+      "sha256": "e3198190dd3853eb1a4c203797b0d43ef26808f7368e7d604ba37cd53ca9b930",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-5-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    },
+    {
+      "id": "xlsx_6",
+      "filename": "sj-xlsx-6-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "ST4",
+      "size_bytes": 20894,
+      "sha256": "beff8213333e04cd22927586e74eac675ea8c0c0e10b06d859761b7fa117f721",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-6-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    },
+    {
+      "id": "xlsx_7",
+      "filename": "sj-xlsx-7-pta-10.1089_phage.2024.0023.xlsx",
+      "sheet": "ST5",
+      "size_bytes": 10763,
+      "sha256": "32d1b4564c3a5b8f7b5748b8facc471b6c5845c204d3958fda58ae61367fd64e",
+      "url": "https://journals.sagepub.com/doi/suppl/10.1089/phage.2024.0023/suppl_file/sj-xlsx-7-pta-10.1089_phage.2024.0023.xlsx",
+      "retrieval": "user-supplied publisher workbook; filename suffix ignored, bytes pinned"
+    }
+  ],
+  "captions_sha256": {
+    "SF1!A6": "5aaaa5066a96d39f814b2bff46758f13cb792ca466bfec966b3212d899efc8b1",
+    "SF2!A49": "c2534d8aed2dd174c8a93f01c8d1a2d97ae3843390ab7ef5518f67cfc0456420"
+  },
+  "metadata": [
+    {
+      "id": "host",
+      "filename": "host.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJDB18063&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp%2Clibrary_strategy&format=tsv",
+      "rows": 144,
+      "size_bytes": 30976,
+      "sha256": "ffb7b22f5bec05d91596fb2a484c60ba5aa6dda6e32dc49424a763d43e6f740e",
+      "canonical_rows_sha256": "0854ad5e9bde997205aed45c1b99b7a8bc0a3c13baa39ff00d2a7985a4ff9703"
+    },
+    {
+      "id": "phage",
+      "filename": "phage.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=PRJDB18044&result=read_run&fields=study_accession%2Csample_accession%2Cexperiment_accession%2Crun_accession%2Csample_title%2Cscientific_name%2Cfastq_ftp%2Clibrary_strategy&format=tsv",
+      "rows": 38,
+      "size_bytes": 8636,
+      "sha256": "2dd6de9f1103cd8e351afeb4637e4b6844476eb5dad607011d744e2a13a2d360",
+      "canonical_rows_sha256": "7714f3651cd27561b011344fe464d87a3e109adee63bc1c3bf9619f7115d384a"
+    },
+    {
+      "id": "legacy",
+      "filename": "legacy.tsv",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=tax_eq%282992785%29%20OR%20tax_eq%282992787%29%20OR%20tax_eq%282992788%29%20OR%20tax_eq%282992789%29&fields=accession,description,scientific_name&format=tsv&limit=20",
+      "rows": 4,
+      "size_bytes": 386,
+      "sha256": "92be247beb92aa492a3b2025100feff93ed2bf3a51734b4d94b0c3b720ed1c5b",
+      "canonical_rows_sha256": "3211879ec8477a12a004ce4d258c74079c2adb42ed64fa3106758fbd7f1012ae"
+    }
+  ],
+  "metadata_replay_policy": "Require exact canonical rows across all returned fields, independent of row or column order. Report actual byte digest and whether snapshot bytes match. Any content change fails; do not update this snapshot automatically.",
+  "expected_grade_counts_study": {
+    "0": 4160,
+    "1": 547,
+    "2": 367,
+    "3": 974
+  },
+  "endpoint": {
+    "id": "kaneko-2025:overnight-spot-clearing-grade-0-3:v1",
+    "type": "ordinal overnight spot-clearing score, high-titre stock, not an EOP or productive-infection measurement",
+    "definitions": {
+      "0": "No visible difference from the surrounding bacterial lawn",
+      "1": "Discoloration without clearance",
+      "2": "Turbid spot with clearance visible from below",
+      "3": "Complete clearing"
+    },
+    "unknowns": "No empty cells within SF2 B3:EO47. T6 occurs in inventory/ANI only and has no row in SF2; do not generate its labels.",
+    "replicates": "One source score per cell; replicate-level observations and scoring uncertainty are not exposed.",
+    "binary_threshold_selected": false,
+    "full_article_methods": "Publisher full text remains restricted. Definitions here come from SF1 A6 and SF2 A49 captions."
+  },
+  "discrepancies": [
+    {
+      "source": "ST5 B2:D2",
+      "printed_headings": [
+        "score > 1",
+        "score > 2",
+        "score > 3"
+      ],
+      "finding": "All 135 counts, for all 45 phages, reproduce inclusive >=1, >=2 and >=3, respectively. Literal >3 yields zero for every row. Original headings are not edited."
+    },
+    {
+      "source": "Paper abstract versus source workbooks",
+      "finding": "The abstract reports 78.5% for Wec277. SF2/ST5 give 135/144 (>=1), 129/144 (>=2) and 105/144 (score 3). None reproduces 78.5%; full-text definition, analysis subset or author clarification remains needed. No source cell is altered."
+    },
+    {
+      "source": "Paper phage DRX range",
+      "finding": "DRX534200-DRX534203 remain excluded as unrelated-project accessions under the prior audit. Metadata name joins locate 38 study phages in PRJDB18044 and four in separate pre-existing complete-genome records; no published accession interval is repaired by guessing."
+    }
+  ],
+  "legacy_sequence_name_routes": [
+    {
+      "phage_label": "ΦWec189",
+      "accession": "LC739538"
+    },
+    {
+      "phage_label": "ΦWec191",
+      "accession": "LC739540"
+    },
+    {
+      "phage_label": "ΦWec193",
+      "accession": "LC739541"
+    },
+    {
+      "phage_label": "ΦWec196",
+      "accession": "LC739542"
+    }
+  ],
+  "identity_limits": "Number/name-based joins to public metadata are not checks of sequence content, exact experimental stocks, genome assembly quality, or strain independence. No reads, complete genomes, accession versions or assembly hashes are admitted by this audit.",
+  "reuse_terms": "Publisher marks article restricted access and lists a non-OA supplement reuse notice. No open phenotype-data license was verified. Original workbooks, bulk grades and raw metadata stay outside Git; repository contains code, hashes, summary findings and source links only.",
+  "role": "Candidate separate E. coli source-defined ordinal benchmark. It does not validate the current 94-output weights, and its inspected labels are not a blind release set.",
+  "remaining_work": [
+    "Resolve data-use terms and full-text endpoint/abstract discrepancy before a training decision.",
+    "Obtain or assemble and quality-check host genomes and the 38 read-only phage routes, verifying all phenotype/sequence/stock joins.",
+    "Audit exact/near-duplicate host and phage overlap with development sources.",
+    "Freeze a separate panel protocol, source endpoint, controls and held-out host groups before any model fitting or scoring."
+  ],
+  "training_pairs_admitted": 0,
+  "independent_release_cohorts_admitted": 0,
+  "model_fits": 0,
+  "model_score_runs": 0,
+  "independent_release_validation_established": false
+}
