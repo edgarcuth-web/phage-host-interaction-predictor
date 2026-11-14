@@ -83,10 +83,10 @@ Git; the report retains hashes and QC findings.
 
 ## Next
 
-Prioritize host similarity/grouping, phenotype reuse/endpoint review and a frozen
-protocol for the 42-candidate panel. A declared available-genome cohort can
-compare prevalence and host 4-mer methods using host sequences and source labels;
-any treatment of host 127 must be explicit. Phage genomes are inputs to later
-paired-sequence comparisons. Complete stock, contamination/completeness and
-near-duplicate checks for the claimed scope. Host 127 and the 38 phage assemblies
-remain acquisition tasks. No model fitting or scoring occurred here.
+The [42-candidate protocol](kaneko-baseline-protocol.md) now freezes all 143
+available hosts, 27 genomic groups and the grade-3 complete-clearing readout.
+Next is the fixed prevalence/host 4-mer comparison, with the seven-host/five-group
+test limitation retained. Complete broader stock, contamination/completeness,
+reuse and cross-source near-duplicate reviews for any wider claim. Host 127 and
+the 38 phage assemblies remain acquisition tasks for later scopes. No
+susceptibility model fitting or scoring occurred here.

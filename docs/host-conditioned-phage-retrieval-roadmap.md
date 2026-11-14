@@ -24,6 +24,7 @@ limits for each case.
 | Public new-host data intake | [Initial five-panel review](external-evaluation-intake.md#public-source-review-2026-11-13) and [Vitt/Kaneko follow-up](external-evaluation-intake.md#public-panel-follow-up-2026-11-14) complete; source-data blockers recorded, no independent cohort admitted |
 | Kaneko workbook intake | [Seven-workbook audit complete](kaneko-workbook-intake.md): 6,048 study-phage grades plus 432 controls, no missing matrix cells; metadata routes for 144 hosts and 42 study phages. Genome/stock verification and study admission remain pending |
 | Kaneko sequence sources | [143 host assemblies and four phage genomes retrieved](kaneko-sequence-intake.md), with source-run links, byte checks, basic QC and exact-hash comparisons; host 127 and 38 phage assemblies remain pending |
+| Kaneko 42-candidate baseline | [Grouping and comparison protocol frozen](kaneko-baseline-protocol.md): 27 genomic groups, train/validation/test 123/13/7 hosts. No susceptibility fits or scores; the small test set limits conclusions |
 | Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
 | RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
 
@@ -81,10 +82,12 @@ The [Kaneko workbook audit](kaneko-workbook-intake.md) now supplies original
 ordinal pair grades and number/name sequence routes. It supersedes the initial
 workbook-access blocker while retaining the accession-range discrepancy.
 The [sequence follow-up](kaneko-sequence-intake.md) supplies 143 host assemblies
-and four phage genomes. Next for this separate-panel candidate: resolve
-reuse/endpoint questions, inspect host similarity/groups and freeze a scoped
-baseline protocol. Prevalence/host 4-mer comparisons use host sequences and source
-labels; paired-sequence comparisons need the remaining phage assemblies.
+and four phage genomes. The [42-candidate protocol](kaneko-baseline-protocol.md)
+now fixes a source-grade-3 endpoint, 27 genomic groups and a single split.
+Next: implement and run the fixed prevalence/host 4-mer comparison, retaining
+the seven-host/five-group test limitation. Broader reuse/stock/quality questions
+and cross-source near-duplicate checks remain documented. Paired-sequence
+comparisons need the remaining phage assemblies.
 Vitt's pair table remains unlocated.
 
 ### 1. Align the new-host, fixed-library comparison
@@ -161,10 +164,17 @@ policy below.
   original-run provenance and four versioned phage genomes, and record file
   integrity, basic sequence QC and frozen-reference exact-hash comparisons.
   See the [sequence audit](kaneko-sequence-intake.md); no cohort is admitted.
-- [ ] Resolve reuse/endpoint questions, inspect host similarity/groups and freeze
-  the available-genome cohort, source endpoint and first 42-candidate baseline
-  comparison. Record host 127 explicitly; verify stock identity and assess
-  contamination/completeness for the claimed scope.
+- [x] Compute all host similarities and freeze the available-genome cohort,
+  explicit grade-3 complete-clearing endpoint, genomic groups, partitions and
+  first 42-candidate baseline protocol. Host 127 is explicitly excluded; no
+  source grade is changed and no model is fit. See the
+  [protocol and limited test support](kaneko-baseline-protocol.md).
+- [ ] Implement and run the two fixed baselines under that protocol. Keep all
+  42 candidates, endpoint-specific artifact semantics, train-only preprocessing,
+  exact tie metrics, grouped intervals and all held-out failures.
+- [ ] Resolve broader phenotype reuse/stock questions, assess contamination/
+  completeness and compare near-duplicate hosts across sources before making
+  claims beyond this inspected, within-source research comparison.
 - [ ] Obtain or assemble host 127 and the 38 read-only phage routes. Phage genomes
   support later paired-sequence comparisons; prevalence/host 4-mer controls use
   the host sequences and source labels.

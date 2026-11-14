@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "study_id": "kaneko-42-host-baselines:v1",
+  "status": "frozen_research_protocol_no_susceptibility_fit_or_scoring",
+  "design_path": "data/studies/kaneko_baseline.design.v1.json",
+  "design_sha256": "90731654b84a91466672b49fc50948eaef6d8d7679653380a35eb9e45e30fe54",
+  "design_pre_run_commit": "2da042742fca9042f3053d1ae390ac30b6c92028",
+  "frozen_math_code_git_blobs": {
+    "src/phage_cocktail/cohort.py": "781a43883474851a47cfba4dd480924abbe888e7",
+    "src/phage_cocktail/host_genome.py": "744f65f9048891cfa72e6727a5bd03e35a3ecd63",
+    "src/phage_cocktail/host_baseline.py": "593622089294f278a75c55aaf5a99c68c7ebd7f4",
+    "src/phage_cocktail/retrieval.py": "213942caa4b96c342db59204badd3b6c29c66d3a"
+  },
+  "future_fit_environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "test_precision_limit": "Only seven test hosts in five genomic groups; report conditional research uncertainty and do not infer stable superiority.",
+  "frozen_outputs": {
+    "host_pairs.csv": {
+      "sha256": "802000ca1f1005ccce16dc0bfe3ae857de9bc447422ecc923f7bdb4386394695",
+      "size_bytes": 261064
+    },
+    "hosts.csv": {
+      "sha256": "9c49204f7a68f9b5f83ac616beda6cd85b00f2af7596608fc1c66cc6763176b3",
+      "size_bytes": 14717
+    }
+  },
+  "grouping": {
+    "tool": "skani",
+    "version": "0.4.0",
+    "binary_url": "https://github.com/bluenote-1577/skani/releases/download/latest/skani",
+    "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+    "primary_ani_percent": 99.5,
+    "minimum_both_aligned_fraction_percent": 90.0,
+    "algorithm": "Union all qualifying pairs and exact canonical assembly matches transitively. Group ID is the smallest host ID in the component. Thresholds are operational leakage guards, not a universal strain definition.",
+    "pair_scope": "All 10,153 unordered host pairs must be present with finite ANI and both aligned fractions. Missing/skipped pairs block the freeze; they are not treated as distant.",
+    "command_options": [
+      "triangle",
+      "-E",
+      "-t",
+      "4",
+      "-c",
+      "125",
+      "-m",
+      "1000",
+      "-s",
+      "80",
+      "--min-af",
+      "0"
+    ],
+    "sensitivity_ani_percent": [
+      99.0,
+      99.9
+    ],
+    "sensitivity_use": "Report group counts only at fixed AF=90. Do not change the primary grouping/split or fit alternative models from these findings."
+  },
+  "host_groups": 27,
+  "split_support": {
+    "train": {
+      "hosts": 123,
+      "groups": 17,
+      "source_pairs": 5166,
+      "grade3_targets": 809,
+      "raw_grade_counts": {
+        "0": 3604,
+        "1": 445,
+        "2": 308,
+        "3": 809
+      },
+      "all_primary_negative_hosts": 10
+    },
+    "validation": {
+      "hosts": 13,
+      "groups": 5,
+      "source_pairs": 546,
+      "grade3_targets": 111,
+      "raw_grade_counts": {
+        "0": 335,
+        "1": 61,
+        "2": 39,
+        "3": 111
+      },
+      "all_primary_negative_hosts": 0
+    },
+    "test": {
+      "hosts": 7,
+      "groups": 5,
+      "source_pairs": 294,
+      "grade3_targets": 53,
+      "raw_grade_counts": {
+        "0": 181,
+        "1": 40,
+        "2": 20,
+        "3": 53
+      },
+      "all_primary_negative_hosts": 2
+    }
+  },
+  "library": [
+    "ΦWec189",
+    "ΦWec191",
+    "ΦWec193",
+    "ΦWec196",
+    "ΦWec202",
+    "ΦWec203",
+    "ΦWec204",
+    "ΦWec205",
+    "ΦWec206",
+    "ΦWec207",
+    "ΦWec208",
+    "ΦWec209",
+    "ΦWec210",
+    "ΦWec247",
+    "ΦWec248",
+    "ΦWec257",
+    "ΦWec258",
+    "ΦWec259",
+    "ΦWec260",
+    "ΦWec261",
+    "ΦWec262",
+    "ΦWec263",
+    "ΦWec264",
+    "ΦWec265",
+    "ΦWec266",
+    "ΦWec267",
+    "ΦWec268",
+    "ΦWec269",
+    "ΦWec270",
+    "ΦWec271",
+    "ΦWec272",
+    "ΦWec273",
+    "ΦWec274",
+    "ΦWec275",
+    "ΦWec276",
+    "ΦWec277",
+    "ΦWec278",
+    "ΦWec279",
+    "ΦWec280",
+    "ΦWec281",
+    "ΦWec282",
+    "ΦWec283"
+  ],
+  "endpoint_id": "kaneko-2025:complete-spot-clearing-grade3:v1",
+  "host127_excluded": true,
+  "model_fits": 0,
+  "susceptibility_score_runs": 0,
+  "independent_release_validation_established": false
+}

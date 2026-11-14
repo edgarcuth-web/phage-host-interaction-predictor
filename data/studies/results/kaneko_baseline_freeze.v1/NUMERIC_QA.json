@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "study_id": "kaneko-42-host-baselines:v1",
+  "design_sha256": "90731654b84a91466672b49fc50948eaef6d8d7679653380a35eb9e45e30fe54",
+  "design_pre_run_commit": "2da042742fca9042f3053d1ae390ac30b6c92028",
+  "execution": {
+    "version": "skani 0.4.0",
+    "binary_sha256": "1482c7d1cf35210bf73c6d06c1b1fc97659dec18194c5355a31af672b6b03c0b",
+    "options": [
+      "triangle",
+      "-E",
+      "-t",
+      "4",
+      "-c",
+      "125",
+      "-m",
+      "1000",
+      "-s",
+      "80",
+      "--min-af",
+      "0"
+    ],
+    "wall_seconds": 8.895763567000017,
+    "raw_edges_sha256": "f0a03a302005a805dc5b1ff8961c1784e94a68c5c19e3f9978135431cb749923"
+  },
+  "observed_host_pairs": 10153,
+  "required_host_pairs": 10153,
+  "primary_edges": 3779,
+  "primary_groups": 27,
+  "largest_group_hosts": 90,
+  "sensitivity_group_counts_only": {
+    "99.0": 26,
+    "99.9": 49
+  },
+  "split_support": {
+    "train": {
+      "hosts": 123,
+      "groups": 17,
+      "source_pairs": 5166,
+      "grade3_targets": 809,
+      "raw_grade_counts": {
+        "0": 3604,
+        "1": 445,
+        "2": 308,
+        "3": 809
+      },
+      "all_primary_negative_hosts": 10
+    },
+    "validation": {
+      "hosts": 13,
+      "groups": 5,
+      "source_pairs": 546,
+      "grade3_targets": 111,
+      "raw_grade_counts": {
+        "0": 335,
+        "1": 61,
+        "2": 39,
+        "3": 111
+      },
+      "all_primary_negative_hosts": 0
+    },
+    "test": {
+      "hosts": 7,
+      "groups": 5,
+      "source_pairs": 294,
+      "grade3_targets": 53,
+      "raw_grade_counts": {
+        "0": 181,
+        "1": 40,
+        "2": 20,
+        "3": 53
+      },
+      "all_primary_negative_hosts": 2
+    }
+  },
+  "cross_partition_primary_edges": 0,
+  "source_pairs_scoped": 6006,
+  "candidate_count_every_host": 42,
+  "unknowns_filled_as_zero": 0,
+  "model_fits": 0,
+  "susceptibility_score_runs": 0,
+  "independent_release_validation_established": false,
+  "independent_verification": {
+    "method": "SciPy sparse connected_components, independent SHA-256 group allocation, raw-grade target recount and frozen assembly-ID comparison.",
+    "host_pairs_checked": 10153,
+    "components_match": 27,
+    "host_assignments_checked": 143,
+    "source_target_cells_checked": 6006,
+    "cross_partition_primary_edges": 0,
+    "offline_replay_pair_and_host_rows_identical": true,
+    "synthetic_unittest_methods_passed": 7,
+    "published_artifact_byte_binding_test_methods": 1
+  },
+  "auditor_script_sha256": "094d27bc5f80cc5ece86ca233b0c253648853b56c854117ac43eddade27da841"
+}
