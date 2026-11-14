@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "intake_id": "public-new-host-fixed-library-intake:v1",
+  "reviewed_date": "2026-11-13",
+  "project_base_commit": "7b62e015ea31a122c7988b5c8fb3a108abcab3ff",
+  "status": "review_complete_no_release_cohort_admitted",
+  "scope": "Bounded review of five public panels for new E. coli hosts and the existing 94-phage library; not an exhaustive search.",
+  "registry": {
+    "path": "models/research_ranker.v1.json",
+    "size_bytes": 105917,
+    "sha256": "12e6e8adb928f7d9dcdbb156c3a7ea3fcabaa86827103051bbcadedcba7d20bb"
+  },
+  "observations": {
+    "path": "data/studies/results/paired_interaction.v1/observed_pairs.csv.gz",
+    "size_bytes": 60630,
+    "sha256": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0"
+  },
+  "overlap_gate": {
+    "path": "src/phage_cocktail/external_overlap.py",
+    "size_bytes": 6797,
+    "sha256": "5080141f62548f69214e9d720ffaa7e53c6870eae4734c1cdb7cf93ed13d7e16"
+  },
+  "resources": [
+    {
+      "id": "gaborieau_readme",
+      "cache_path": "gaborieau/README.md",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/README.md",
+      "size_bytes": 17719,
+      "sha256": "06ac45c4f2e2633b8954d8e515d385414dc0da92da89d0ef48dc43f941805a2a",
+      "git_blob_sha1": "778aa247d1f56cbc152b35dd4a41903ba21765e1"
+    },
+    {
+      "id": "gaborieau_matrix",
+      "cache_path": "gaborieau/data/interactions/interaction_matrix.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv",
+      "size_bytes": 158199,
+      "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829",
+      "git_blob_sha1": "25a3f894c5a3832e81b42c8de60c12ffb9429569"
+    },
+    {
+      "id": "gaborieau_hosts",
+      "cache_path": "gaborieau/data/genomics/bacteria/picard_collection.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/picard_collection.csv",
+      "size_bytes": 42739,
+      "sha256": "e880b60cdc3df6f000b2f0e74985415bd11737d474ab68dd35d0085940cf5b13",
+      "git_blob_sha1": "b59dd81c1e4f1aecd33ea40b66d8759cbb90e854"
+    },
+    {
+      "id": "gaborieau_phages",
+      "cache_path": "gaborieau/data/genomics/phages/guelin_collection.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/phages/guelin_collection.csv",
+      "size_bytes": 11859,
+      "sha256": "c21c2672452609f749b9a6eba3135d1bb814abd8e69e9293971f759711b4f276",
+      "git_blob_sha1": "d76435a1bfd0cf493607fb9cf4e4e904ea1ad6a8"
+    },
+    {
+      "id": "gaborieau_test_hosts",
+      "cache_path": "gaborieau/dev/cocktails/data/test_collection.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/dev/cocktails/data/test_collection.csv",
+      "size_bytes": 4083,
+      "sha256": "fe2cae9992f6932906cd41ef80164c959153722ac098e01a983abcc78198e3b5",
+      "git_blob_sha1": "e8b62212313d1b04845f166b75e816cda812f775"
+    },
+    {
+      "id": "gaborieau_selected",
+      "cache_path": "gaborieau/dev/cocktails/data/cocktails.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/dev/cocktails/data/cocktails.csv",
+      "size_bytes": 4612,
+      "sha256": "755d52d758e30f33031019dee3358621aed6f48f3a843fbb26a1c99da3c0dbf9",
+      "git_blob_sha1": "b98e1534d2f8db2446874f775bce00dffad9fd75"
+    },
+    {
+      "id": "gaborieau_composition",
+      "cache_path": "gaborieau/dev/cocktails/data/cocktails_composition.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/dev/cocktails/data/cocktails_composition.csv",
+      "size_bytes": 5639,
+      "sha256": "eab44b18fe4caece347795bc205a6882ec8a369f9199dfef13c68e5a36bbbc3d",
+      "git_blob_sha1": "87ab19b52847f29ac606ff9a3ce1bef791382ee9"
+    },
+    {
+      "id": "gaborieau_selection_steps",
+      "cache_path": "gaborieau/dev/cocktails/data/cocktails_step.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/dev/cocktails/data/cocktails_step.csv",
+      "size_bytes": 33379,
+      "sha256": "f955115f11ee770a596c8ef929fffcdc9abda76dfb6ff542adea8855103e7bdf",
+      "git_blob_sha1": "a80f215dfccd04970a1e8c7c6357b60bb67a4f65"
+    },
+    {
+      "id": "gaborieau_cocktail_readouts",
+      "cache_path": "gaborieau/dev/cocktails/data/cml_cocktails.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/dev/cocktails/data/cml_cocktails.csv",
+      "size_bytes": 3534,
+      "sha256": "81f916e0daa84c00aa464e48f80a352973fd8d12de5c6347f8946de3647393f5",
+      "git_blob_sha1": "2f14b5d48422ef0813429c2e5e3c84a7a1f8114a"
+    },
+    {
+      "id": "phl_interactions",
+      "cache_path": "phl/phage_host_interactions.csv",
+      "url": "https://zenodo.org/api/records/11061100/files/phage_host_interactions.csv/content",
+      "size_bytes": 70303,
+      "sha256": "b9d8822ca73de87036bfe46c05db5e8efc1a31804a7ea07915cf1503d9d8c8c1",
+      "publisher_md5": "e4f7f15779f698f3b0f76164c9d44f22"
+    }
+  ],
+  "expected_numeric_checks": {
+    "gaborieau_full": {
+      "matrix_hosts": 402,
+      "matrix_phages": 96,
+      "cells": 38592,
+      "value_counts": {
+        "": 157,
+        "0.0": 30459,
+        "1.0": 3014,
+        "2.0": 2306,
+        "3.0": 1368,
+        "4.0": 1288
+      },
+      "metadata_hosts": 403,
+      "metadata_phages": 96,
+      "metadata_only_hosts": [
+        "LF110"
+      ],
+      "fixed_library_candidates": 94,
+      "fixed_library_value_counts": {
+        "": 156,
+        "0.0": 29819,
+        "1.0": 2945,
+        "2.0": 2250,
+        "3.0": 1345,
+        "4.0": 1273
+      },
+      "source_only_phages": [
+        "T4LD",
+        "T7_Portugal"
+      ],
+      "literal_development_name_overlap": 112,
+      "frozen_crosswalk_hosts": 177,
+      "inherited_observed_cells": 16597,
+      "identical_source_mlc_cells": 16597,
+      "identical_source_binary_cells": 16597
+    },
+    "gaborieau_prospective": {
+      "metadata_hosts": 100,
+      "unique_host_ids": 100,
+      "unique_gembase_ids": 100,
+      "selected_single_slots": 300,
+      "unique_selected_pairs": 300,
+      "unique_selected_phages": 25,
+      "metadata_hosts_with_same_readout_name": 99,
+      "metadata_only_host_names": [
+        "BCH857-72"
+      ],
+      "readout_only_host_names": [
+        "BCH857"
+      ],
+      "selected_pairs_with_exact_step_support": 297,
+      "missing_selected_single_readouts": 0,
+      "selected_single_value_counts": {
+        "0": 130,
+        "1": 22,
+        "2": 22,
+        "3": 29,
+        "4": 17,
+        "5": 31,
+        "6": 49
+      },
+      "absent_from_selected_single_table": 9100,
+      "literal_development_name_overlap": 0,
+      "literal_picard_name_overlap": [
+        "AN03"
+      ],
+      "picard_gembase_overlap": 0
+    },
+    "phagehostlearn_raw_export": {
+      "hosts": 215,
+      "phages": 132,
+      "cells": 28380,
+      "value_counts": {
+        "": 15410,
+        "0.0": 12505,
+        "1.0": 465
+      },
+      "literal_fixed_library_phage_id_overlap": 0
+    }
+  },
+  "panels": [
+    {
+      "panel_id": "gaborieau_picard_full",
+      "source_study_id": "10.1038/s41564-024-01832-5",
+      "source_commit": "99656d8c020fcd1dbbc30a02ee10274a07655562",
+      "role": "same_study_development_extension_only",
+      "evidence_level": "source_bytes_and_existing_observations_reconciled",
+      "source_resources": [
+        "gaborieau_matrix",
+        "gaborieau_hosts",
+        "gaborieau_phages",
+        "gaborieau_readme"
+      ],
+      "endpoint": "Exported source MLC levels 0 through 4; zero is negative, greater than zero is source-positive, blank is unknown. No productive-infection mapping.",
+      "identity": "All 177 development hosts map through the existing source_bacterium field, with all 16,597 MLC/binary cells identical. All 94 library IDs occur in the 96-phage export and use the same pinned source FASTAs. New source-host assemblies and near-duplicate groups are not verified here.",
+      "reuse_terms": "GitHub has no detected repository license. Existing Figshare genome metadata states CC BY 4.0; this does not establish the GitHub phenotype-table license. Zenodo archive byte equivalence remains unverified.",
+      "blocking_reasons": [
+        "shared_primary_source_lineage",
+        "reused_development_observations",
+        "new_host_assembly_identity_not_verified",
+        "phenotype_table_reuse_terms_not_verified"
+      ]
+    },
+    {
+      "panel_id": "gaborieau_prospective_100",
+      "source_study_id": "10.1038/s41564-024-01832-5",
+      "source_commit": "99656d8c020fcd1dbbc30a02ee10274a07655562",
+      "role": "quarantined_same_study_selected_pair_follow_up",
+      "evidence_level": "source_bytes_rosters_and_selected_pair_support_checked",
+      "source_resources": [
+        "gaborieau_test_hosts",
+        "gaborieau_selected",
+        "gaborieau_composition",
+        "gaborieau_selection_steps",
+        "gaborieau_cocktail_readouts"
+      ],
+      "endpoint": "Selected single-phage MLC readouts use levels 0 through 6; mixture readouts stay separate. No pooling with the Picard 0-through-4 labels is authorized.",
+      "identity": "100 COLO Gembase identities have no exact Gembase-ID overlap with the Picard metadata. AN03 reuses a Picard display name with a different Gembase ID (ESCO.0622.00319 versus COLO.0423.00289). Only 99 metadata names match the readout roster: metadata/selection steps use BCH857-72 while readouts/compositions use BCH857. This alias is not repaired or assumed; sequence and strain independence remain unverified.",
+      "support": "The recommended-singles table identifies 300 measured pairs using 25 known phages, not all 9,400 cells. Only 297 selected pair names exactly join the selection-step table; the remaining three involve the unresolved BCH857/BCH857-72 name. The other 9,100 cells are absent from the singles table, not negatives. Additional baseline and mixture columns do not establish full 94-candidate coverage.",
+      "reuse_terms": "Same unresolved GitHub phenotype-table reuse terms as the Picard export.",
+      "blocking_reasons": [
+        "shared_primary_source_lineage",
+        "selected_candidate_measurements_not_full_library",
+        "unverified_host_assemblies_and_name_collision",
+        "endpoint_mapping_and_reuse_terms_not_verified"
+      ]
+    },
+    {
+      "panel_id": "genophi_basel_ecor",
+      "source_study_id": "10.1038/s41564-026-02482-5",
+      "role": "retain_inspected_known_host_cold_phage_reference",
+      "evidence_level": "reuse_existing_pinned_sequence_audit_and_protocol",
+      "evidence_paths": [
+        "data/studies/basel_ecor_intake.v1.json",
+        "data/studies/results/basel_ecor_sequence_audit.v1/report.json",
+        "docs/basel-ecor-sequence-audit.md"
+      ],
+      "endpoint": "Published spot clearance/no-clearance; 25 hosts by 52 phages, 1,240 observed cells and 60 unknowns.",
+      "identity": "All 25 host strain IDs are represented in development. Published assemblies differ, which does not create new biological hosts. No exact phage assembly matches with the 94-phage library; prior 95%/85% grouping audit is retained.",
+      "reuse_terms": "Original supplements and phenotype-table terms were not independently cleared by the existing intake; no source data redistributed.",
+      "blocking_reasons": [
+        "known_host_strain_roster",
+        "different_phage_library",
+        "already_inspected_reference",
+        "source_reuse_terms_not_independently_verified"
+      ]
+    },
+    {
+      "panel_id": "phagehostlearn_zenodo_11061100",
+      "source_study_id": "10.1038/s41467-024-48675-6",
+      "role": "defer_to_separate_klebsiella_task",
+      "evidence_level": "versioned_data_record_source_matrix_and_primary_article_reviewed",
+      "source_resources": [
+        "phl_interactions"
+      ],
+      "primary_sources": [
+        "https://doi.org/10.5281/zenodo.11061100",
+        "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC11111740/fullTextXML",
+        "https://github.com/dimiboeckaerts/PhageHostLearn"
+      ],
+      "endpoint": "Visible spot at 1:10 dilution, not necessarily productive replication. Raw export encodes 1.0 positive, 0.0 negative and blank unknown.",
+      "identity": "Klebsiella genomes and phage genomes are linked in the public record. Exact or near-duplicate genome comparison to this E. coli project was not run; zero shared literal phage IDs is not a sequence-disjointness result.",
+      "scope_discrepancy": "The pinned raw export has 215 hosts, 132 phages and 12,970 observed cells (465 positive). The paper model cohort is 200 hosts, 105 phages and 10,006 measured pairs (333 positive). Do not treat the raw superset as the analyzed cohort without reconstructing feature and cohort selection.",
+      "reuse_terms": "Zenodo record 11061100 API metadata states CC BY 4.0 for the data; GitHub code is MIT. These are distinct licenses. Matrix bytes match the record MD5.",
+      "blocking_reasons": [
+        "unsupported_host_taxon_for_current_models",
+        "unmatched_candidate_library",
+        "raw_export_and_model_cohort_need_reconciliation",
+        "sequence_overlap_not_audited"
+      ]
+    },
+    {
+      "panel_id": "berryhill_enteric_fmt_2026",
+      "source_study_id": "10.1128/msphere.00386-26",
+      "role": "defer_to_separate_library_and_assay_intake",
+      "evidence_level": "primary_publication_screen_only",
+      "primary_sources": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13410980/",
+        "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1028583"
+      ],
+      "endpoint": "Publication reports 756 combinations, 54 E. coli isolates and 14 phages, with no/turbid/clear plaque categories. Turbid and clear results cannot be silently collapsed into current source-MLC positives.",
+      "identity": "Raw host/phage sequencing reads are deposited under PRJNA1028583. This review has not assembled reads, joined per-pair observations, or verified any stock as one of the fixed 94 library candidates. Familiar names such as T4 or T7 are not stock/assembly identities.",
+      "reuse_terms": "Article is CC BY 4.0. Its supplement notice requests author contact for reuse; no supplement redistribution or blanket data-license inference.",
+      "blocking_reasons": [
+        "no_verified_fixed_library_stock_or_genome_join",
+        "assembled_host_identity_and_near_duplicates_not_audited",
+        "per_pair_export_and_endpoint_mapping_not_admitted",
+        "supplement_reuse_terms_unresolved"
+      ]
+    }
+  ],
+  "reservation": {
+    "independent_release_cohort": null,
+    "independent_release_validation_established": false,
+    "quarantined_panel": "gaborieau_prospective_100",
+    "quarantine_scope": "Entire 100-host metadata roster and selected-readout files bound by their exact resource hashes. This is a same-study follow-up candidate, not an admitted test set.",
+    "model_selection_use_allowed": false,
+    "training_or_scoring_authorized_by_this_intake": false,
+    "blind_holdout_claim_allowed": false,
+    "exposure": "Source labels, aggregate counts and published selection records were inspected during intake; no project model was fit or scored on the proposed sources.",
+    "change_control": "Any follow-up needs a separate frozen protocol, verified assemblies and grouping, phenotype reuse terms, and a partial-label estimand. A changed source version requires a new intake version."
+  },
+  "next_decision": "No reviewed source is admitted for independent new-host evaluation over the current 94 stocks. Obtain a genome-linked independent-host measurement cohort for this exact library, or separately scope another library/taxon study. Same-study expansion cannot establish release validation."
+}
