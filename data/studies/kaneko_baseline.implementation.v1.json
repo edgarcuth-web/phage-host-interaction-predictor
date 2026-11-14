@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "kaneko-42-host-baselines:v1",
+  "status": "implementation_frozen_before_first_study_fit_or_held_out_scoring",
+  "source_revision": "57a1b8e526fb6a7b85a0bfbd7c296f712d34bb4e",
+  "protocol_sha256": "33f5b7e22b722fb2507f33d6646a84b58be7f8cc97b6d36902b796b454cd8f9a",
+  "code_sha256": {
+    "src/phage_cocktail/kaneko_baseline.py": "7b8358212d2280fc2e4c325b246768ee6082aa10c213925f1eb28e39233396c0",
+    "scripts/run_kaneko_baselines.py": "127d8bb86a97db8a1359266e01b8690359c8d3b41e974e93ec993e488aceae26"
+  },
+  "new_contract_tests_passed": 8,
+  "real_study_logistic_fits_at_freeze": 0,
+  "held_out_score_runs_at_freeze": 0,
+  "phases": [
+    "Fit on 123 training hosts using fixed C=0.1; emit 42 candidate models or prespecified single-class fallbacks.",
+    "Commit fitted weights, preprocessing and feature cache before held-out scoring.",
+    "Evaluate the same two methods on validation/test at source grade3 and the descriptive grade>=2 endpoint; no refits."
+  ],
+  "scope": {
+    "hosts": 143,
+    "phages": 42,
+    "train_pairs": 5166,
+    "held_out_hosts": 20,
+    "held_out_scores_per_method": 840,
+    "feature_dimensions": 136,
+    "maximum_logistic_fits": 42
+  },
+  "uncalibrated": true,
+  "independent_release_validation_established": false
+}
