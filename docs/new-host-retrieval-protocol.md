@@ -1,8 +1,9 @@
 # New-host fixed-library study: compatibility and freeze
 
 Step 1 is complete. The [protocol](../data/studies/new_host_retrieval.v1.json)
-is frozen before new fitting or scoring; the training/scoring runner is step 2.
-This is another development study on inspected data, with no model promotion.
+was frozen before new fitting or scoring. The [step-2 comparison is complete](new-host-retrieval-results.md)
+and retains its negative result. This is a development study on inspected data,
+with no model promotion.
 
 ## What can be reused
 

@@ -11,7 +11,7 @@ protocols and verified outputs live in [`data/studies/`](../data/studies/).
 | First observed-label annotation baseline | [Protocol](host-baseline-protocol.md), [results](host-baseline-results.md) |
 | Additive host–phage baseline | [Protocol](paired-benchmark-protocol.md), [split freeze](paired-split-freeze.md), [results](paired-baseline-results.md) |
 | Explicit sequence-based host × phage interaction | [Frozen training, mixed development/BASEL results, weights and reproduction](paired-interaction-results.md) |
-| New-host fixed-library comparison | [Compatibility ledger and pre-fit protocol freeze](new-host-retrieval-protocol.md); training/scoring pending |
+| New-host fixed-library comparison | [Frozen protocol](new-host-retrieval-protocol.md), [completed comparison, negative result, weights and reproduction](new-host-retrieval-results.md) |
 | Known-library retrieval | [Annotation baseline](host-retrieval-benchmark.md), [host 4-mer comparison](genome-host-retrieval.md) |
 | GenoPHI | [Demo and runbook](genophi-demo-reproduction.md), [aligned comparator](genophi-frozen-comparator.md), [seed sensitivity](genophi-seed-sensitivity.md) |
 | Screening budgets from existing scores | [Hit/cost curves, grouped intervals and availability](screening-budget-audit.md) |

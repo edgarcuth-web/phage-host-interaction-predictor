@@ -57,6 +57,12 @@ now reaches BASEL Hit@2 bounds of 48%–60%, but fails the primary cold-phage
 development AP criterion (0.5063 versus additive 0.5516). Both results are retained;
 the model is not a promoted recommender.
 
+The [matched new-host comparison](docs/new-host-retrieval-results.md) now uses
+the same 94-candidate library and host-only splits for all methods. Bilinear
+test Hit@2 is 64.71% versus prevalence's 73.53% on the primary panel, and 63.93%
+versus 90.16% on B2. Neither primary hit/cost improvement criterion passes.
+The complete scores, weights, failures and independent numerical checks are retained.
+
 ## Quick start
 
 Use Python 3.11+ in an activated virtual environment, from the repository root:
@@ -66,7 +72,7 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
-pytest -q
+python -m pytest -q
 ```
 
 Optional extras: `.[cloud]` for S3, `.[proteomes]` for pinned gene calling,
@@ -102,9 +108,9 @@ see [endpoint semantics](docs/endpoint-semantics.md).
 Known-library retrieval does not establish unseen-phage performance, and pairwise
 scores do not establish cocktail efficacy.
 
-The [compatibility audit and protocol freeze](docs/new-host-retrieval-protocol.md)
-define the next unseen-host, fixed-library comparison. Next: implement and run
-matched scoring to compare candidate hits and test costs. The
+The [matched ranking comparison](docs/new-host-retrieval-results.md) is complete.
+Next: implement the research FASTA-to-ranking command with declared baselines,
+model identities and applicability. The
 [staged checklist](docs/host-conditioned-phage-retrieval-roadmap.md#next-work)
 tracks evaluation and a research FASTA-to-ranking command. Public-data intake
 can proceed alongside this work; independent release validation remains pending.
