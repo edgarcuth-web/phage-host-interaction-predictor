@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "review_id": "kaneko-workbook-intake:v1",
+  "status": "audited_source_ordinal_data_not_admitted_for_training",
+  "workbook_checks": [
+    {
+      "id": "xlsx_1",
+      "sha256": "74691ffad9fca545915c3b0650a76835c2fbd539cfc90e8492b66dc21ab38752",
+      "bytes_match": true
+    },
+    {
+      "id": "xlsx_2",
+      "sha256": "846ea60cc55f9a1d2e9dd5a1cf71ea64495f2c0b9641029ad6e3b9aaaffba511",
+      "bytes_match": true
+    },
+    {
+      "id": "xlsx_3",
+      "sha256": "eaa34c165744c68bd8e50a927d9e2cecbd3219d7bd6f0bbede27ea43d8f9925f",
+      "bytes_match": true
+    },
+    {
+      "id": "xlsx_4",
+      "sha256": "39cfc6e54adaf5f2dc89335544a8d4a0ab0c47f2562652a784f3c4b5a18e64af",
+      "bytes_match": true
+    },
+    {
+      "id": "xlsx_5",
+      "sha256": "e3198190dd3853eb1a4c203797b0d43ef26808f7368e7d604ba37cd53ca9b930",
+      "bytes_match": true
+    },
+    {
+      "id": "xlsx_6",
+      "sha256": "beff8213333e04cd22927586e74eac675ea8c0c0e10b06d859761b7fa117f721",
+      "bytes_match": true
+    },
+    {
+      "id": "xlsx_7",
+      "sha256": "32d1b4564c3a5b8f7b5748b8facc471b6c5845c204d3958fda58ae61367fd64e",
+      "bytes_match": true
+    }
+  ],
+  "metadata_checks": [
+    {
+      "id": "host",
+      "sha256": "ffb7b22f5bec05d91596fb2a484c60ba5aa6dda6e32dc49424a763d43e6f740e",
+      "snapshot_bytes_match": true,
+      "canonical_rows_match": true
+    },
+    {
+      "id": "phage",
+      "sha256": "2dd6de9f1103cd8e351afeb4637e4b6844476eb5dad607011d744e2a13a2d360",
+      "snapshot_bytes_match": true,
+      "canonical_rows_match": true
+    },
+    {
+      "id": "legacy",
+      "sha256": "92be247beb92aa492a3b2025100feff93ed2bf3a51734b4d94b0c3b720ed1c5b",
+      "snapshot_bytes_match": true,
+      "canonical_rows_match": true
+    }
+  ],
+  "hosts": 144,
+  "study_phages": 42,
+  "measured_control_phages": [
+    "T2",
+    "T4",
+    "T7"
+  ],
+  "inventory_only_control_not_measured_in_SF2": "T6",
+  "observed_source_cells": 6480,
+  "study_source_cells": 6048,
+  "control_source_cells": 432,
+  "missing_matrix_cells": 0,
+  "grade_counts_all": {
+    "0": 4530,
+    "1": 565,
+    "2": 375,
+    "3": 1010
+  },
+  "grade_counts_study": {
+    "0": 4160,
+    "1": 547,
+    "2": 367,
+    "3": 974
+  },
+  "s5_reconciliation": {
+    "matching_phages": 45,
+    "matching_counts": 135,
+    "printed_operator": ">",
+    "operator_reproducing_all_counts": ">=",
+    "binary_threshold_selected": false
+  },
+  "host_number_to_read_record_joins": 144,
+  "phage_name_to_read_record_joins": 38,
+  "phage_name_to_legacy_genome_metadata_joins": 4,
+  "endpoint_id": "kaneko-2025:overnight-spot-clearing-grade-0-3:v1",
+  "binary_threshold_selected": false,
+  "assembly_and_stock_identity_verified": false,
+  "training_pairs_admitted": 0,
+  "independent_release_validation_established": false,
+  "model_fits": 0,
+  "model_score_runs": 0,
+  "output_sha256": {
+    "host_read_crosswalk.csv": "562b63bc4ef8c81e2a35caea58f2fe1d25b2d13d5b45d4408a97ae5366c957ee",
+    "phage_sequence_routes.csv": "25a00eed0bfcb0fdb6c34732f72c704e3f4e67076368a550ed39d6a45888a314",
+    "source_spot_grades.csv": "a6aeef8c3ae9f8a6c882b89f31805f4216ca0ec64c209d4ac5ae837040514760"
+  },
+  "independent_verification": {
+    "reader": "openpyxl 3.1.5",
+    "source_grade_and_row_column_identity_matches": 6480,
+    "compared_cells": 6480,
+    "synthetic_unittest_methods_passed": 6,
+    "invalid_grade_subcases_passed": 6,
+    "python": "3.12.14",
+    "note": "Independent reader checked all exported grades and source row/column names. Source XLSX and CSV exports are excluded from Git."
+  },
+  "auditor_script_sha256": "7d656704326f1d7d7dfa64d37bdde253d747663c8cad756095393c4a16e9f58a",
+  "fresh_metadata_replay": {
+    "canonical_rows_match": true,
+    "export_hashes_match": true,
+    "metadata_checks": [
+      {
+        "id": "host",
+        "sha256": "44f85a2bb26055dcfd0241fb6520e081983b5cabc70715787126a5e5ae9fd8a7",
+        "snapshot_bytes_match": false,
+        "canonical_rows_match": true
+      },
+      {
+        "id": "phage",
+        "sha256": "ae6141c2edc2279867a2e017fdd91d0a52862249d9ab5c593aaaad82966b057f",
+        "snapshot_bytes_match": false,
+        "canonical_rows_match": true
+      },
+      {
+        "id": "legacy",
+        "sha256": "92be247beb92aa492a3b2025100feff93ed2bf3a51734b4d94b0c3b720ed1c5b",
+        "snapshot_bytes_match": true,
+        "canonical_rows_match": true
+      }
+    ]
+  }
+}

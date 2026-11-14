@@ -123,7 +123,15 @@ importable labels. No heatmap cells were digitized, and aggregate counts were
 not converted into pair labels. A pair-level source table and sequence/stock
 crosswalk are still needed.
 
-### Kaneko: workbook access blocked and accession range inconsistent
+### Kaneko: pre-upload access and accession review
+
+This subsection records the pre-upload review. The subsequent
+[seven-workbook audit](kaneko-workbook-intake.md) supersedes the blocked-access,
+unverified-endpoint and unresolved-name-coverage findings below. It confirms
+6,048 study-phage grades plus 432 control grades, source 0–3 spot-clearing
+definitions, and number/name sequence routes for all 144 hosts and 42 study
+phages. The published DRX range error persists. Assembly/stock identity, reuse
+terms, overlap and a separate study protocol remain pending.
 
 [Kaneko et al. (2025)](https://doi.org/10.1089/phage.2024.0023) reports
 144 hosts and 42 phages. The publisher lists seven XLSX supplements. Downloading
@@ -150,8 +158,8 @@ guessing adjacent IDs or silently reduce the study's 42 candidates to 38.
 Sample titles and read availability do not establish stock identity, label joins
 or new-host independence. No sequencing reads or genomes were downloaded.
 
-**Next:** obtain the Kaneko workbooks and assay definitions, reconcile all 42
-phage identities with original source metadata, and locate Vitt's pair table.
+**Next:** use the [Kaneko workbook audit](kaneko-workbook-intake.md) to prepare
+verified genome/stock joins and a separate panel decision; locate Vitt's pair table.
 Endpoint/reuse review and exact/near-duplicate identity checks remain necessary
 before freezing any separate-panel study or exact-current-library subset.
 Neither source supplies an admitted independent release cohort at this stage.
@@ -165,4 +173,5 @@ Neither source supplies an admitted independent release cohort at this stage.
 5. Freeze a truly independent cohort, allowed claims, subgroup definitions and evaluation protocol **before running predictions**.
 
 A clean report never sets `independent_release_validation_established` to true. This tool blocks some invalid claims; it does not replace independent scientific review or experimental validation.
+
 
