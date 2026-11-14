@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "endpoint_id": "kaneko-2025:complete-spot-clearing-grade3:v1",
+  "score_semantics": "uncalibrated_source_grade3_complete_spot_clearing",
+  "protocol_sha256": "33f5b7e22b722fb2507f33d6646a84b58be7f8cc97b6d36902b796b454cd8f9a",
+  "calibrated": false,
+  "library": [
+    "ΦWec189",
+    "ΦWec191",
+    "ΦWec193",
+    "ΦWec196",
+    "ΦWec202",
+    "ΦWec203",
+    "ΦWec204",
+    "ΦWec205",
+    "ΦWec206",
+    "ΦWec207",
+    "ΦWec208",
+    "ΦWec209",
+    "ΦWec210",
+    "ΦWec247",
+    "ΦWec248",
+    "ΦWec257",
+    "ΦWec258",
+    "ΦWec259",
+    "ΦWec260",
+    "ΦWec261",
+    "ΦWec262",
+    "ΦWec263",
+    "ΦWec264",
+    "ΦWec265",
+    "ΦWec266",
+    "ΦWec267",
+    "ΦWec268",
+    "ΦWec269",
+    "ΦWec270",
+    "ΦWec271",
+    "ΦWec272",
+    "ΦWec273",
+    "ΦWec274",
+    "ΦWec275",
+    "ΦWec276",
+    "ΦWec277",
+    "ΦWec278",
+    "ΦWec279",
+    "ΦWec280",
+    "ΦWec281",
+    "ΦWec282",
+    "ΦWec283"
+  ],
+  "training_hosts": [
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "026",
+    "027",
+    "028",
+    "029",
+    "030",
+    "031",
+    "032",
+    "033",
+    "034",
+    "036",
+    "037",
+    "038",
+    "039",
+    "040",
+    "041",
+    "042",
+    "043",
+    "044",
+    "045",
+    "046",
+    "047",
+    "048",
+    "049",
+    "050",
+    "052",
+    "053",
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "068",
+    "069",
+    "070",
+    "072",
+    "073",
+    "074",
+    "075",
+    "076",
+    "077",
+    "078",
+    "079",
+    "080",
+    "081",
+    "083",
+    "085",
+    "086",
+    "087",
+    "088",
+    "089",
+    "090",
+    "091",
+    "095",
+    "096",
+    "097",
+    "100",
+    "101",
+    "102",
+    "103",
+    "104",
+    "105",
+    "106",
+    "107",
+    "108",
+    "109",
+    "110",
+    "111",
+    "112",
+    "113",
+    "114",
+    "115",
+    "117",
+    "118",
+    "119",
+    "120",
+    "121",
+    "122",
+    "124",
+    "128",
+    "129",
+    "131",
+    "132",
+    "133",
+    "134",
+    "136",
+    "137",
+    "138",
+    "139",
+    "140",
+    "141",
+    "142",
+    "143",
+    "144"
+  ],
+  "phages": {
+    "ΦWec189": {
+      "positive_count": 26,
+      "observed_count": 123,
+      "score": 0.216
+    },
+    "ΦWec191": {
+      "positive_count": 14,
+      "observed_count": 123,
+      "score": 0.12
+    },
+    "ΦWec193": {
+      "positive_count": 17,
+      "observed_count": 123,
+      "score": 0.144
+    },
+    "ΦWec196": {
+      "positive_count": 19,
+      "observed_count": 123,
+      "score": 0.16
+    },
+    "ΦWec202": {
+      "positive_count": 1,
+      "observed_count": 123,
+      "score": 0.016
+    },
+    "ΦWec203": {
+      "positive_count": 19,
+      "observed_count": 123,
+      "score": 0.16
+    },
+    "ΦWec204": {
+      "positive_count": 1,
+      "observed_count": 123,
+      "score": 0.016
+    },
+    "ΦWec205": {
+      "positive_count": 16,
+      "observed_count": 123,
+      "score": 0.136
+    },
+    "ΦWec206": {
+      "positive_count": 12,
+      "observed_count": 123,
+      "score": 0.104
+    },
+    "ΦWec207": {
+      "positive_count": 70,
+      "observed_count": 123,
+      "score": 0.568
+    },
+    "ΦWec208": {
+      "positive_count": 13,
+      "observed_count": 123,
+      "score": 0.112
+    },
+    "ΦWec209": {
+      "positive_count": 5,
+      "observed_count": 123,
+      "score": 0.048
+    },
+    "ΦWec210": {
+      "positive_count": 5,
+      "observed_count": 123,
+      "score": 0.048
+    },
+    "ΦWec247": {
+      "positive_count": 13,
+      "observed_count": 123,
+      "score": 0.112
+    },
+    "ΦWec248": {
+      "positive_count": 13,
+      "observed_count": 123,
+      "score": 0.112
+    },
+    "ΦWec257": {
+      "positive_count": 19,
+      "observed_count": 123,
+      "score": 0.16
+    },
+    "ΦWec258": {
+      "positive_count": 14,
+      "observed_count": 123,
+      "score": 0.12
+    },
+    "ΦWec259": {
+      "positive_count": 1,
+      "observed_count": 123,
+      "score": 0.016
+    },
+    "ΦWec260": {
+      "positive_count": 4,
+      "observed_count": 123,
+      "score": 0.04
+    },
+    "ΦWec261": {
+      "positive_count": 11,
+      "observed_count": 123,
+      "score": 0.096
+    },
+    "ΦWec262": {
+      "positive_count": 23,
+      "observed_count": 123,
+      "score": 0.192
+    },
+    "ΦWec263": {
+      "positive_count": 10,
+      "observed_count": 123,
+      "score": 0.088
+    },
+    "ΦWec264": {
+      "positive_count": 9,
+      "observed_count": 123,
+      "score": 0.08
+    },
+    "ΦWec265": {
+      "positive_count": 9,
+      "observed_count": 123,
+      "score": 0.08
+    },
+    "ΦWec266": {
+      "positive_count": 12,
+      "observed_count": 123,
+      "score": 0.104
+    },
+    "ΦWec267": {
+      "positive_count": 18,
+      "observed_count": 123,
+      "score": 0.152
+    },
+    "ΦWec268": {
+      "positive_count": 4,
+      "observed_count": 123,
+      "score": 0.04
+    },
+    "ΦWec269": {
+      "positive_count": 34,
+      "observed_count": 123,
+      "score": 0.28
+    },
+    "ΦWec270": {
+      "positive_count": 20,
+      "observed_count": 123,
+      "score": 0.168
+    },
+    "ΦWec271": {
+      "positive_count": 56,
+      "observed_count": 123,
+      "score": 0.456
+    },
+    "ΦWec272": {
+      "positive_count": 11,
+      "observed_count": 123,
+      "score": 0.096
+    },
+    "ΦWec273": {
+      "positive_count": 69,
+      "observed_count": 123,
+      "score": 0.56
+    },
+    "ΦWec274": {
+      "positive_count": 7,
+      "observed_count": 123,
+      "score": 0.064
+    },
+    "ΦWec275": {
+      "positive_count": 11,
+      "observed_count": 123,
+      "score": 0.096
+    },
+    "ΦWec276": {
+      "positive_count": 50,
+      "observed_count": 123,
+      "score": 0.408
+    },
+    "ΦWec277": {
+      "positive_count": 92,
+      "observed_count": 123,
+      "score": 0.744
+    },
+    "ΦWec278": {
+      "positive_count": 6,
+      "observed_count": 123,
+      "score": 0.056
+    },
+    "ΦWec279": {
+      "positive_count": 3,
+      "observed_count": 123,
+      "score": 0.032
+    },
+    "ΦWec280": {
+      "positive_count": 3,
+      "observed_count": 123,
+      "score": 0.032
+    },
+    "ΦWec281": {
+      "positive_count": 44,
+      "observed_count": 123,
+      "score": 0.36
+    },
+    "ΦWec282": {
+      "positive_count": 12,
+      "observed_count": 123,
+      "score": 0.104
+    },
+    "ΦWec283": {
+      "positive_count": 13,
+      "observed_count": 123,
+      "score": 0.112
+    }
+  }
+}

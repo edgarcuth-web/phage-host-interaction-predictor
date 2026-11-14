@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "study_id": "kaneko-42-host-baselines:v1",
+  "stage": "fitted_no_held_out_scoring",
+  "implementation_commit": "374c6abba3172488817772169ee9962f2a0cfe53",
+  "implementation_receipt": {
+    "sha256": "9b08cb2bab33ded8802575f87bcea345697bfe6882f1c3a2c3e42222ed0be19c",
+    "size_bytes": 1294
+  },
+  "protocol_sha256": "33f5b7e22b722fb2507f33d6646a84b58be7f8cc97b6d36902b796b454cd8f9a",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "training_hosts": 123,
+  "training_groups": 17,
+  "training_pairs": 5166,
+  "feature_hosts": 143,
+  "feature_dimensions": 136,
+  "candidate_count": 42,
+  "fitted_candidate_kinds": {
+    "logistic": 42
+  },
+  "logistic_fits": 42,
+  "single_class_fallbacks": 0,
+  "convergence_warnings": 0,
+  "held_out_score_runs": 0,
+  "files": {
+    "feature_manifest.csv": {
+      "sha256": "79522f629bcec5ae7261aaae75fd27559a0ca1b2432ece4681ea92da5cd7d8ab",
+      "size_bytes": 32860
+    },
+    "host_4mer_model.json": {
+      "sha256": "434ced41ae02b8861fe873a238378bce7b9f42c7c0fb94b8458b160c5fe103fc",
+      "size_bytes": 191235
+    },
+    "host_features.csv": {
+      "sha256": "a23b6fa17f82210c6b9ec6811efc9e7ffae35cccaf49baa040c1447df447e7e4",
+      "size_bytes": 409749
+    },
+    "prevalence_model.json": {
+      "sha256": "e98cdb9ab8ea977d48cdd3c352bce27127306a348c3d60b402e9f331d97ec7cf",
+      "size_bytes": 6666
+    }
+  },
+  "peak_rss_bytes": 182829056,
+  "cpu_threads": 1,
+  "gpu_requests": 0,
+  "paid_provider_requests": 0,
+  "independent_release_validation_established": false
+}
