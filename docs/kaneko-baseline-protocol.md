@@ -1,7 +1,8 @@
 # Kaneko 42-candidate baseline protocol
 
-Status: the host grouping, cohort and comparison protocol are frozen. No
-susceptibility model was fit or scored. This is an inspected, single-source
+Status: the host grouping, cohort and comparison protocol were frozen before
+fitting. The [completed comparison](kaneko-baseline-results.md) did not establish
+a host 4-mer improvement over prevalence. This is an inspected, single-source
 research comparison, not validation of the current 94-output weights.
 
 The [design](../data/studies/kaneko_baseline.design.v1.json) was
@@ -65,10 +66,10 @@ completeness assessment remain outside this completed grouping step.
   Single-class candidates use training prevalence; all 42 remain eligible.
 - Fit once on the 123 training hosts. Validation reports the fixed methods;
   it does not select C, features, thresholds or seeds. No train-plus-validation
-  refit. The future runner must bind new artifacts to the grade-3 endpoint;
-  the historical fitter's hardcoded MLC descriptor is not appropriate here.
+  refit. The runner binds new artifacts to the grade-3 endpoint and rejects
+  the historical fitter's MLC score descriptor.
 
-The resolved protocol pins the existing mathematical helper blobs and the future
+The resolved protocol pins the existing mathematical helper blobs and the
 fit environment. Phage genomes are not inputs to these two known-library baselines.
 All source scores remain uncalibrated; productive infection and treatment benefit
 are different endpoints.
@@ -107,5 +108,5 @@ the binary must match the recorded SHA-256. The official download URL is rolling
 so a different binary fails verification. No source genomes or bulk grades are
 redistributed in Git.
 
-Next: implement and run the two fixed baselines, verify endpoint-aware artifacts
-and full 42-candidate support, then report validation/test results under this protocol.
+The [result report](kaneko-baseline-results.md) provides the fit/evaluation replay
+commands, frozen weights, full candidate scores and independent numerical checks.
