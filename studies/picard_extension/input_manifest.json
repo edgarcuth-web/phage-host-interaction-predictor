@@ -1,0 +1,10 @@
+{
+  "base_commit": "52a55dc9650dfabec64641b0e179e27b2d8e5251",
+  "files_sha256": {
+    "data/studies/genophi_host_baseline.resources.v1.json": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+    "data/studies/results/genophi_comparator.v1/scenario_splits.csv": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+    "data/studies/results/complementary_panel.v1/selected_panels.csv": "bff3592104490ff48d2947487e555df59a6de8a1a0cd4fe7bce7e850a93b4a84",
+    "data/studies/results/paired_interaction.v1/observed_pairs.csv.gz": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0"
+  },
+  "genome_sources_sha256": "c02adb638799048a329ef822c165f393eba90f5456a4d7664686898ade9cd45a"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "frozen_before_full_cohort_admission",
+  "files_sha256": {
+    "studies/picard_extension/protocol.json": "92ad7ee4a3ec05a1c07b7c56364a8bc1e80c4c5b02dbd1e762ea493082933c01",
+    "studies/picard_extension/input_manifest.json": "287ba9f2e8f98564d87434a9be9aebf3ec922431d25466e8ce7c056f3648461d",
+    "studies/picard_extension/fetch_genomes.py": "db7a4add7917177c28439e25ccced00112e1b6cf582f04fc8355bdeec908498c",
+    "studies/picard_extension/audit_cohort.py": "7426efdc48f346ed7ea5081dd906b12e48e50fb9f60ef1e4fb962f6b1c058df6",
+    "tests/test_picard_extension.py": "dd2de0153ba611f87bd65b02408a137e75cb2253b7e1a9a595deecd6c0fdc770"
+  }
+}
