@@ -1,0 +1,3234 @@
+{
+  "doi": "10.6084/m9.figshare.25941691.v1",
+  "article_id": 25941691,
+  "version": 1,
+  "source_metadata_url": "https://api.figshare.com/v2/articles/25941691/versions/1",
+  "retrieved_metadata_sha256": "36075755866c80309437013c6886160c1db250792c2a354f4707541f3c82a892",
+  "license": "CC BY 4.0",
+  "files": [
+    {
+      "id": 46741453,
+      "name": "001-023.fasta",
+      "size": 4766788,
+      "download_url": "https://ndownloader.figshare.com/files/46741453",
+      "computed_md5": "e3d02b69737bc438c4bcbf8733ecde0d",
+      "supplied_md5": "e3d02b69737bc438c4bcbf8733ecde0d"
+    },
+    {
+      "id": 46741456,
+      "name": "001-031-c1.fasta",
+      "size": 5197072,
+      "download_url": "https://ndownloader.figshare.com/files/46741456",
+      "computed_md5": "2f3a61e237ad3f2f7a431bb471490d95",
+      "supplied_md5": "2f3a61e237ad3f2f7a431bb471490d95"
+    },
+    {
+      "id": 46741468,
+      "name": "003-026.fasta",
+      "size": 4953797,
+      "download_url": "https://ndownloader.figshare.com/files/46741468",
+      "computed_md5": "3fadf7d5dafa3be817861b3f9c891399",
+      "supplied_md5": "3fadf7d5dafa3be817861b3f9c891399"
+    },
+    {
+      "id": 46741465,
+      "name": "013-008.fasta",
+      "size": 5256531,
+      "download_url": "https://ndownloader.figshare.com/files/46741465",
+      "computed_md5": "ff8746dabc5985334203de9140315f58",
+      "supplied_md5": "ff8746dabc5985334203de9140315f58"
+    },
+    {
+      "id": 46741459,
+      "name": "025-010.fasta",
+      "size": 5434835,
+      "download_url": "https://ndownloader.figshare.com/files/46741459",
+      "computed_md5": "a37eb6b06cd55413d19857f8bba1d7d5",
+      "supplied_md5": "a37eb6b06cd55413d19857f8bba1d7d5"
+    },
+    {
+      "id": 46741471,
+      "name": "034-008.fasta",
+      "size": 5265065,
+      "download_url": "https://ndownloader.figshare.com/files/46741471",
+      "computed_md5": "171e8adc2006ed2bca57e18b55a3db96",
+      "supplied_md5": "171e8adc2006ed2bca57e18b55a3db96"
+    },
+    {
+      "id": 46741474,
+      "name": "034-026-c1.fasta",
+      "size": 5356304,
+      "download_url": "https://ndownloader.figshare.com/files/46741474",
+      "computed_md5": "d615ed9192c6c2e82a90a202f33534fd",
+      "supplied_md5": "d615ed9192c6c2e82a90a202f33534fd"
+    },
+    {
+      "id": 46741462,
+      "name": "035-004.fasta",
+      "size": 5374466,
+      "download_url": "https://ndownloader.figshare.com/files/46741462",
+      "computed_md5": "3b5fefc46689dea3c00d6fa967197729",
+      "supplied_md5": "3b5fefc46689dea3c00d6fa967197729"
+    },
+    {
+      "id": 46741477,
+      "name": "370D.fasta",
+      "size": 5366840,
+      "download_url": "https://ndownloader.figshare.com/files/46741477",
+      "computed_md5": "ac66db7bea180c41e8895eb481acff03",
+      "supplied_md5": "ac66db7bea180c41e8895eb481acff03"
+    },
+    {
+      "id": 46741480,
+      "name": "381A.fasta",
+      "size": 5234473,
+      "download_url": "https://ndownloader.figshare.com/files/46741480",
+      "computed_md5": "da3bfcc345c452dfc07d2448af7d5c53",
+      "supplied_md5": "da3bfcc345c452dfc07d2448af7d5c53"
+    },
+    {
+      "id": 46741483,
+      "name": "536.fasta",
+      "size": 4953825,
+      "download_url": "https://ndownloader.figshare.com/files/46741483",
+      "computed_md5": "185f1b45d517eeeef2d040c750c0d8c3",
+      "supplied_md5": "185f1b45d517eeeef2d040c750c0d8c3"
+    },
+    {
+      "id": 46741492,
+      "name": "55989.fasta",
+      "size": 5197767,
+      "download_url": "https://ndownloader.figshare.com/files/46741492",
+      "computed_md5": "73a42bc3eb21cb2cd057c83c6137d2df",
+      "supplied_md5": "73a42bc3eb21cb2cd057c83c6137d2df"
+    },
+    {
+      "id": 46741486,
+      "name": "916A.fasta",
+      "size": 5372307,
+      "download_url": "https://ndownloader.figshare.com/files/46741486",
+      "computed_md5": "c5026519d8b30f2ab583204910a5af31",
+      "supplied_md5": "c5026519d8b30f2ab583204910a5af31"
+    },
+    {
+      "id": 46741489,
+      "name": "921A.fasta",
+      "size": 5221444,
+      "download_url": "https://ndownloader.figshare.com/files/46741489",
+      "computed_md5": "394a53f0cc89d5c8bfdfcb1f4b06e6f2",
+      "supplied_md5": "394a53f0cc89d5c8bfdfcb1f4b06e6f2"
+    },
+    {
+      "id": 46741495,
+      "name": "AL505.fasta",
+      "size": 5455540,
+      "download_url": "https://ndownloader.figshare.com/files/46741495",
+      "computed_md5": "35d6fab77823183b4f22cfb8acfba25e",
+      "supplied_md5": "35d6fab77823183b4f22cfb8acfba25e"
+    },
+    {
+      "id": 46741498,
+      "name": "AN03.fasta",
+      "size": 5449827,
+      "download_url": "https://ndownloader.figshare.com/files/46741498",
+      "computed_md5": "20868d534ca2611b0418b26e3a6c32e1",
+      "supplied_md5": "20868d534ca2611b0418b26e3a6c32e1"
+    },
+    {
+      "id": 46741501,
+      "name": "AN17.fasta",
+      "size": 5209870,
+      "download_url": "https://ndownloader.figshare.com/files/46741501",
+      "computed_md5": "748e6b758c553992b5e30aea44fa012d",
+      "supplied_md5": "748e6b758c553992b5e30aea44fa012d"
+    },
+    {
+      "id": 46741504,
+      "name": "AN24.fasta",
+      "size": 5230885,
+      "download_url": "https://ndownloader.figshare.com/files/46741504",
+      "computed_md5": "202275ae816c94e2b0487b225366d428",
+      "supplied_md5": "202275ae816c94e2b0487b225366d428"
+    },
+    {
+      "id": 46741510,
+      "name": "ATCC35469T.fasta",
+      "size": 4702061,
+      "download_url": "https://ndownloader.figshare.com/files/46741510",
+      "computed_md5": "8b619251587a0ab3e5a70f69c2c827fa",
+      "supplied_md5": "8b619251587a0ab3e5a70f69c2c827fa"
+    },
+    {
+      "id": 46741507,
+      "name": "Asp51g.fasta",
+      "size": 5336704,
+      "download_url": "https://ndownloader.figshare.com/files/46741507",
+      "computed_md5": "8556cdf411614405e5ce1ff3af2eb8ca",
+      "supplied_md5": "8556cdf411614405e5ce1ff3af2eb8ca"
+    },
+    {
+      "id": 46741519,
+      "name": "B090.fasta",
+      "size": 4895799,
+      "download_url": "https://ndownloader.figshare.com/files/46741519",
+      "computed_md5": "1b3cedd427996bf0408edb813ddab280",
+      "supplied_md5": "1b3cedd427996bf0408edb813ddab280"
+    },
+    {
+      "id": 46741540,
+      "name": "B1147.fasta",
+      "size": 4569167,
+      "download_url": "https://ndownloader.figshare.com/files/46741540",
+      "computed_md5": "d61a8f36a39049eae07300e9082534af",
+      "supplied_md5": "d61a8f36a39049eae07300e9082534af"
+    },
+    {
+      "id": 46741528,
+      "name": "B12I13.fasta",
+      "size": 6008502,
+      "download_url": "https://ndownloader.figshare.com/files/46741528",
+      "computed_md5": "01f316d2d4dc6dc27b868a32f9f54a81",
+      "supplied_md5": "01f316d2d4dc6dc27b868a32f9f54a81"
+    },
+    {
+      "id": 46741525,
+      "name": "B156.fasta",
+      "size": 5110642,
+      "download_url": "https://ndownloader.figshare.com/files/46741525",
+      "computed_md5": "1a6a2aa7facd9a45dd761f5b408b792c",
+      "supplied_md5": "1a6a2aa7facd9a45dd761f5b408b792c"
+    },
+    {
+      "id": 46741543,
+      "name": "B1747.fasta",
+      "size": 5696632,
+      "download_url": "https://ndownloader.figshare.com/files/46741543",
+      "computed_md5": "24e3a5191934a14c52ee1d3986da79a7",
+      "supplied_md5": "24e3a5191934a14c52ee1d3986da79a7"
+    },
+    {
+      "id": 46741546,
+      "name": "B1932.fasta",
+      "size": 5332516,
+      "download_url": "https://ndownloader.figshare.com/files/46741546",
+      "computed_md5": "7dd7a865dc49fc9642e0691f7eee6e4a",
+      "supplied_md5": "7dd7a865dc49fc9642e0691f7eee6e4a"
+    },
+    {
+      "id": 46741531,
+      "name": "B253.fasta",
+      "size": 4852200,
+      "download_url": "https://ndownloader.figshare.com/files/46741531",
+      "computed_md5": "b2a5e66746333f4d5dcc9e2a42666f52",
+      "supplied_md5": "b2a5e66746333f4d5dcc9e2a42666f52"
+    },
+    {
+      "id": 46741516,
+      "name": "B49.fasta",
+      "size": 4853280,
+      "download_url": "https://ndownloader.figshare.com/files/46741516",
+      "computed_md5": "be4c4aa7daa9cd458d1fb5493101c429",
+      "supplied_md5": "be4c4aa7daa9cd458d1fb5493101c429"
+    },
+    {
+      "id": 46741534,
+      "name": "B691.fasta",
+      "size": 4970810,
+      "download_url": "https://ndownloader.figshare.com/files/46741534",
+      "computed_md5": "e22678eeaadf5bfc6eddd0ed2ec917d7",
+      "supplied_md5": "e22678eeaadf5bfc6eddd0ed2ec917d7"
+    },
+    {
+      "id": 46741513,
+      "name": "B6A1.fasta",
+      "size": 5330547,
+      "download_url": "https://ndownloader.figshare.com/files/46741513",
+      "computed_md5": "abf6182ebdc3a760b967a18f2df6578e",
+      "supplied_md5": "abf6182ebdc3a760b967a18f2df6578e"
+    },
+    {
+      "id": 46741537,
+      "name": "B992.fasta",
+      "size": 4585011,
+      "download_url": "https://ndownloader.figshare.com/files/46741537",
+      "computed_md5": "647703afde603419d7e0f7209464dee2",
+      "supplied_md5": "647703afde603419d7e0f7209464dee2"
+    },
+    {
+      "id": 46741552,
+      "name": "BCH953.fasta",
+      "size": 5201060,
+      "download_url": "https://ndownloader.figshare.com/files/46741552",
+      "computed_md5": "94ac5656dfa2f5d73599bf70ad7f5ce8",
+      "supplied_md5": "94ac5656dfa2f5d73599bf70ad7f5ce8"
+    },
+    {
+      "id": 46741555,
+      "name": "BDX03.fasta",
+      "size": 5232505,
+      "download_url": "https://ndownloader.figshare.com/files/46741555",
+      "computed_md5": "7f5f3b4210bd8993bbf41c1ac76a348d",
+      "supplied_md5": "7f5f3b4210bd8993bbf41c1ac76a348d"
+    },
+    {
+      "id": 46741558,
+      "name": "BDX09.fasta",
+      "size": 5067525,
+      "download_url": "https://ndownloader.figshare.com/files/46741558",
+      "computed_md5": "aabb5a91250dcead67a91d1c9836f7ff",
+      "supplied_md5": "aabb5a91250dcead67a91d1c9836f7ff"
+    },
+    {
+      "id": 46741561,
+      "name": "BE.fasta",
+      "size": 4615109,
+      "download_url": "https://ndownloader.figshare.com/files/46741561",
+      "computed_md5": "871e147bad7136b2aef845ddb16961b7",
+      "supplied_md5": "871e147bad7136b2aef845ddb16961b7"
+    },
+    {
+      "id": 46741567,
+      "name": "BL21.fasta",
+      "size": 4572339,
+      "download_url": "https://ndownloader.figshare.com/files/46741567",
+      "computed_md5": "a2a7327b47e1e52c7aff678bb8d04889",
+      "supplied_md5": "a2a7327b47e1e52c7aff678bb8d04889"
+    },
+    {
+      "id": 46741564,
+      "name": "Ben4d.fasta",
+      "size": 5358203,
+      "download_url": "https://ndownloader.figshare.com/files/46741564",
+      "computed_md5": "90b34fa315781233c74b2f925bb8d535",
+      "supplied_md5": "90b34fa315781233c74b2f925bb8d535"
+    },
+    {
+      "id": 46741570,
+      "name": "C2-119.fasta",
+      "size": 5759261,
+      "download_url": "https://ndownloader.figshare.com/files/46741570",
+      "computed_md5": "1065a5e329f7f421d822674e557f7142",
+      "supplied_md5": "1065a5e329f7f421d822674e557f7142"
+    },
+    {
+      "id": 46741576,
+      "name": "DEC1a.fasta",
+      "size": 5178522,
+      "download_url": "https://ndownloader.figshare.com/files/46741576",
+      "computed_md5": "fd337d851b766d64d972472394c30d03",
+      "supplied_md5": "fd337d851b766d64d972472394c30d03"
+    },
+    {
+      "id": 46741579,
+      "name": "DEC2a.fasta",
+      "size": 5161365,
+      "download_url": "https://ndownloader.figshare.com/files/46741579",
+      "computed_md5": "3069471f14139d4830acc8cf75d2e65b",
+      "supplied_md5": "3069471f14139d4830acc8cf75d2e65b"
+    },
+    {
+      "id": 46741582,
+      "name": "DIJ06.fasta",
+      "size": 5590594,
+      "download_url": "https://ndownloader.figshare.com/files/46741582",
+      "computed_md5": "76659e44a6eff1590299b7d8abfe6ffd",
+      "supplied_md5": "76659e44a6eff1590299b7d8abfe6ffd"
+    },
+    {
+      "id": 46741585,
+      "name": "DIJ07.fasta",
+      "size": 5208001,
+      "download_url": "https://ndownloader.figshare.com/files/46741585",
+      "computed_md5": "4d5cfc0e6a5857b6abab6849d6da2854",
+      "supplied_md5": "4d5cfc0e6a5857b6abab6849d6da2854"
+    },
+    {
+      "id": 46741594,
+      "name": "E1426.fasta",
+      "size": 5255330,
+      "download_url": "https://ndownloader.figshare.com/files/46741594",
+      "computed_md5": "17acffd50eec3e487e4422cc8694d325",
+      "supplied_md5": "17acffd50eec3e487e4422cc8694d325"
+    },
+    {
+      "id": 46741597,
+      "name": "E1492.fasta",
+      "size": 5659879,
+      "download_url": "https://ndownloader.figshare.com/files/46741597",
+      "computed_md5": "14ac7396521b09b849007b6707dddbb7",
+      "supplied_md5": "14ac7396521b09b849007b6707dddbb7"
+    },
+    {
+      "id": 46741600,
+      "name": "E2052.fasta",
+      "size": 5315633,
+      "download_url": "https://ndownloader.figshare.com/files/46741600",
+      "computed_md5": "9fea3cf92dec72d52e1550aec22410ee",
+      "supplied_md5": "9fea3cf92dec72d52e1550aec22410ee"
+    },
+    {
+      "id": 46741603,
+      "name": "E2348_69.fasta",
+      "size": 5133286,
+      "download_url": "https://ndownloader.figshare.com/files/46741603",
+      "computed_md5": "3481a91599a50da7b4beb5843744fed5",
+      "supplied_md5": "3481a91599a50da7b4beb5843744fed5"
+    },
+    {
+      "id": 46741606,
+      "name": "E4962.fasta",
+      "size": 4877004,
+      "download_url": "https://ndownloader.figshare.com/files/46741606",
+      "computed_md5": "339fa9085538748b14541051b445f008",
+      "supplied_md5": "339fa9085538748b14541051b445f008"
+    },
+    {
+      "id": 46741609,
+      "name": "E7519.fasta",
+      "size": 5422011,
+      "download_url": "https://ndownloader.figshare.com/files/46741609",
+      "computed_md5": "ee9025ec8535799fce04a2a36cbd6c1f",
+      "supplied_md5": "ee9025ec8535799fce04a2a36cbd6c1f"
+    },
+    {
+      "id": 46741612,
+      "name": "EC6230.fasta",
+      "size": 5191238,
+      "download_url": "https://ndownloader.figshare.com/files/46741612",
+      "computed_md5": "404ed54faf1dee71f1f7f15b370f200e",
+      "supplied_md5": "404ed54faf1dee71f1f7f15b370f200e"
+    },
+    {
+      "id": 46741615,
+      "name": "ECOR-01.fasta",
+      "size": 4692001,
+      "download_url": "https://ndownloader.figshare.com/files/46741615",
+      "computed_md5": "8fcaacd686e007fa298785e10d23020e",
+      "supplied_md5": "8fcaacd686e007fa298785e10d23020e"
+    },
+    {
+      "id": 46741618,
+      "name": "ECOR-02.fasta",
+      "size": 5265654,
+      "download_url": "https://ndownloader.figshare.com/files/46741618",
+      "computed_md5": "f5a674408c918bf20ec6a87684bfec93",
+      "supplied_md5": "f5a674408c918bf20ec6a87684bfec93"
+    },
+    {
+      "id": 46741621,
+      "name": "ECOR-03.fasta",
+      "size": 4899653,
+      "download_url": "https://ndownloader.figshare.com/files/46741621",
+      "computed_md5": "c41aa4d7b811371924cf4acca87929ce",
+      "supplied_md5": "c41aa4d7b811371924cf4acca87929ce"
+    },
+    {
+      "id": 46741624,
+      "name": "ECOR-04.fasta",
+      "size": 4611152,
+      "download_url": "https://ndownloader.figshare.com/files/46741624",
+      "computed_md5": "e007a8cc22d0f97b69709ce99ba5e9e1",
+      "supplied_md5": "e007a8cc22d0f97b69709ce99ba5e9e1"
+    },
+    {
+      "id": 46741627,
+      "name": "ECOR-05.fasta",
+      "size": 5104339,
+      "download_url": "https://ndownloader.figshare.com/files/46741627",
+      "computed_md5": "7444e077108776eceace2f51035279c3",
+      "supplied_md5": "7444e077108776eceace2f51035279c3"
+    },
+    {
+      "id": 46741630,
+      "name": "ECOR-06.fasta",
+      "size": 4525981,
+      "download_url": "https://ndownloader.figshare.com/files/46741630",
+      "computed_md5": "e2abb3e96a457d31a2b1d8aeb0ce933c",
+      "supplied_md5": "e2abb3e96a457d31a2b1d8aeb0ce933c"
+    },
+    {
+      "id": 46741633,
+      "name": "ECOR-07.fasta",
+      "size": 4730222,
+      "download_url": "https://ndownloader.figshare.com/files/46741633",
+      "computed_md5": "7bec85f99cadbaff8fce9df1402d51f7",
+      "supplied_md5": "7bec85f99cadbaff8fce9df1402d51f7"
+    },
+    {
+      "id": 46741636,
+      "name": "ECOR-08.fasta",
+      "size": 4913430,
+      "download_url": "https://ndownloader.figshare.com/files/46741636",
+      "computed_md5": "dd075249a69299557d38c3b644249562",
+      "supplied_md5": "dd075249a69299557d38c3b644249562"
+    },
+    {
+      "id": 46741639,
+      "name": "ECOR-09.fasta",
+      "size": 5230288,
+      "download_url": "https://ndownloader.figshare.com/files/46741639",
+      "computed_md5": "74cea5272385123f71fce904531228e3",
+      "supplied_md5": "74cea5272385123f71fce904531228e3"
+    },
+    {
+      "id": 46741642,
+      "name": "ECOR-10.fasta",
+      "size": 4767206,
+      "download_url": "https://ndownloader.figshare.com/files/46741642",
+      "computed_md5": "03b7f93ad4aee38875105a2e8facbfe7",
+      "supplied_md5": "03b7f93ad4aee38875105a2e8facbfe7"
+    },
+    {
+      "id": 46741645,
+      "name": "ECOR-11.fasta",
+      "size": 5206282,
+      "download_url": "https://ndownloader.figshare.com/files/46741645",
+      "computed_md5": "f56bc4a03722932f8df94c6a7a292368",
+      "supplied_md5": "f56bc4a03722932f8df94c6a7a292368"
+    },
+    {
+      "id": 46741648,
+      "name": "ECOR-12.fasta",
+      "size": 5111316,
+      "download_url": "https://ndownloader.figshare.com/files/46741648",
+      "computed_md5": "76057d2d2b5f4c7b6d31738f62f3e9d6",
+      "supplied_md5": "76057d2d2b5f4c7b6d31738f62f3e9d6"
+    },
+    {
+      "id": 46741651,
+      "name": "ECOR-13.fasta",
+      "size": 4623540,
+      "download_url": "https://ndownloader.figshare.com/files/46741651",
+      "computed_md5": "fb20f82184385eb4a2992ad9eb58b428",
+      "supplied_md5": "fb20f82184385eb4a2992ad9eb58b428"
+    },
+    {
+      "id": 46741654,
+      "name": "ECOR-14.fasta",
+      "size": 4950935,
+      "download_url": "https://ndownloader.figshare.com/files/46741654",
+      "computed_md5": "4db51522455abc35232c5471a768a5e7",
+      "supplied_md5": "4db51522455abc35232c5471a768a5e7"
+    },
+    {
+      "id": 46741657,
+      "name": "ECOR-15.fasta",
+      "size": 4921291,
+      "download_url": "https://ndownloader.figshare.com/files/46741657",
+      "computed_md5": "3732677f239bce449e931e3e2b3487a4",
+      "supplied_md5": "3732677f239bce449e931e3e2b3487a4"
+    },
+    {
+      "id": 46741660,
+      "name": "ECOR-16.fasta",
+      "size": 4649665,
+      "download_url": "https://ndownloader.figshare.com/files/46741660",
+      "computed_md5": "cd3c19822b5440f24769635c575c0430",
+      "supplied_md5": "cd3c19822b5440f24769635c575c0430"
+    },
+    {
+      "id": 46741663,
+      "name": "ECOR-17.fasta",
+      "size": 4531388,
+      "download_url": "https://ndownloader.figshare.com/files/46741663",
+      "computed_md5": "c4a14ef48d001232834a9069a1a559ca",
+      "supplied_md5": "c4a14ef48d001232834a9069a1a559ca"
+    },
+    {
+      "id": 46741666,
+      "name": "ECOR-18.fasta",
+      "size": 4673593,
+      "download_url": "https://ndownloader.figshare.com/files/46741666",
+      "computed_md5": "81de76237c91fbfb4833fc37a46c7363",
+      "supplied_md5": "81de76237c91fbfb4833fc37a46c7363"
+    },
+    {
+      "id": 46741669,
+      "name": "ECOR-19.fasta",
+      "size": 4554217,
+      "download_url": "https://ndownloader.figshare.com/files/46741669",
+      "computed_md5": "9f35442ba082c6f9113d428c62991f80",
+      "supplied_md5": "9f35442ba082c6f9113d428c62991f80"
+    },
+    {
+      "id": 46741672,
+      "name": "ECOR-20.fasta",
+      "size": 4619973,
+      "download_url": "https://ndownloader.figshare.com/files/46741672",
+      "computed_md5": "d1351c8f432da00e1784746fb0802f12",
+      "supplied_md5": "d1351c8f432da00e1784746fb0802f12"
+    },
+    {
+      "id": 46741675,
+      "name": "ECOR-21.fasta",
+      "size": 4585840,
+      "download_url": "https://ndownloader.figshare.com/files/46741675",
+      "computed_md5": "15678b895b8e9089755b88c6a27ca6d8",
+      "supplied_md5": "15678b895b8e9089755b88c6a27ca6d8"
+    },
+    {
+      "id": 46741678,
+      "name": "ECOR-22.fasta",
+      "size": 4526665,
+      "download_url": "https://ndownloader.figshare.com/files/46741678",
+      "computed_md5": "03aed92a685577926dc05700cd602b91",
+      "supplied_md5": "03aed92a685577926dc05700cd602b91"
+    },
+    {
+      "id": 46741681,
+      "name": "ECOR-23.fasta",
+      "size": 4993243,
+      "download_url": "https://ndownloader.figshare.com/files/46741681",
+      "computed_md5": "17664c9f8dd237fb9ef1c1439cb5d1e9",
+      "supplied_md5": "17664c9f8dd237fb9ef1c1439cb5d1e9"
+    },
+    {
+      "id": 46741684,
+      "name": "ECOR-24.fasta",
+      "size": 5294485,
+      "download_url": "https://ndownloader.figshare.com/files/46741684",
+      "computed_md5": "5d3ea7ee3cdfd01cd95ef7b6dd41ebf9",
+      "supplied_md5": "5d3ea7ee3cdfd01cd95ef7b6dd41ebf9"
+    },
+    {
+      "id": 46741687,
+      "name": "ECOR-25.fasta",
+      "size": 4777465,
+      "download_url": "https://ndownloader.figshare.com/files/46741687",
+      "computed_md5": "1ad09a32a1031b8f11121b4327213d34",
+      "supplied_md5": "1ad09a32a1031b8f11121b4327213d34"
+    },
+    {
+      "id": 46741690,
+      "name": "ECOR-26.fasta",
+      "size": 4689657,
+      "download_url": "https://ndownloader.figshare.com/files/46741690",
+      "computed_md5": "e92698f63632751af03ccae544041d65",
+      "supplied_md5": "e92698f63632751af03ccae544041d65"
+    },
+    {
+      "id": 46741693,
+      "name": "ECOR-27.fasta",
+      "size": 4879591,
+      "download_url": "https://ndownloader.figshare.com/files/46741693",
+      "computed_md5": "4b858ebd5681b1e44a79c0cbb432f398",
+      "supplied_md5": "4b858ebd5681b1e44a79c0cbb432f398"
+    },
+    {
+      "id": 46741696,
+      "name": "ECOR-28.fasta",
+      "size": 4940302,
+      "download_url": "https://ndownloader.figshare.com/files/46741696",
+      "computed_md5": "439639218ccebb90903c9d6ebe985624",
+      "supplied_md5": "439639218ccebb90903c9d6ebe985624"
+    },
+    {
+      "id": 46741699,
+      "name": "ECOR-29.fasta",
+      "size": 4943198,
+      "download_url": "https://ndownloader.figshare.com/files/46741699",
+      "computed_md5": "055371942775ce9d031527ceee378366",
+      "supplied_md5": "055371942775ce9d031527ceee378366"
+    },
+    {
+      "id": 46741702,
+      "name": "ECOR-30.fasta",
+      "size": 4834777,
+      "download_url": "https://ndownloader.figshare.com/files/46741702",
+      "computed_md5": "4156ef25e74fe3fcdfa6fdd9302d84fd",
+      "supplied_md5": "4156ef25e74fe3fcdfa6fdd9302d84fd"
+    },
+    {
+      "id": 46741705,
+      "name": "ECOR-31.fasta",
+      "size": 5294309,
+      "download_url": "https://ndownloader.figshare.com/files/46741705",
+      "computed_md5": "c1183455519eb015b977020f14d5d742",
+      "supplied_md5": "c1183455519eb015b977020f14d5d742"
+    },
+    {
+      "id": 46741708,
+      "name": "ECOR-32.fasta",
+      "size": 4818726,
+      "download_url": "https://ndownloader.figshare.com/files/46741708",
+      "computed_md5": "98991efe0fc9454227bff466c457fcc5",
+      "supplied_md5": "98991efe0fc9454227bff466c457fcc5"
+    },
+    {
+      "id": 46741711,
+      "name": "ECOR-33.fasta",
+      "size": 4812521,
+      "download_url": "https://ndownloader.figshare.com/files/46741711",
+      "computed_md5": "f6edc3fdb773d76e61a488b96cb758c6",
+      "supplied_md5": "f6edc3fdb773d76e61a488b96cb758c6"
+    },
+    {
+      "id": 46741714,
+      "name": "ECOR-34.fasta",
+      "size": 4829055,
+      "download_url": "https://ndownloader.figshare.com/files/46741714",
+      "computed_md5": "cf7f14aee3877473a8c9196346e5c61b",
+      "supplied_md5": "cf7f14aee3877473a8c9196346e5c61b"
+    },
+    {
+      "id": 46741717,
+      "name": "ECOR-35.fasta",
+      "size": 5110093,
+      "download_url": "https://ndownloader.figshare.com/files/46741717",
+      "computed_md5": "165fad6f40ae7e992465f1de82b6e67a",
+      "supplied_md5": "165fad6f40ae7e992465f1de82b6e67a"
+    },
+    {
+      "id": 46741720,
+      "name": "ECOR-36.fasta",
+      "size": 5180304,
+      "download_url": "https://ndownloader.figshare.com/files/46741720",
+      "computed_md5": "3111a152a9e66cba4339513bb3761f26",
+      "supplied_md5": "3111a152a9e66cba4339513bb3761f26"
+    },
+    {
+      "id": 46741723,
+      "name": "ECOR-37.fasta",
+      "size": 5454273,
+      "download_url": "https://ndownloader.figshare.com/files/46741723",
+      "computed_md5": "a1f98f3c3ac1dd49996768303c499ea0",
+      "supplied_md5": "a1f98f3c3ac1dd49996768303c499ea0"
+    },
+    {
+      "id": 46741726,
+      "name": "ECOR-38.fasta",
+      "size": 5259201,
+      "download_url": "https://ndownloader.figshare.com/files/46741726",
+      "computed_md5": "ab579ab5b0229ca105f9f9651d0435b8",
+      "supplied_md5": "ab579ab5b0229ca105f9f9651d0435b8"
+    },
+    {
+      "id": 46741729,
+      "name": "ECOR-39.fasta",
+      "size": 5255220,
+      "download_url": "https://ndownloader.figshare.com/files/46741729",
+      "computed_md5": "32b8c07c52775d1f7ed406d330218f57",
+      "supplied_md5": "32b8c07c52775d1f7ed406d330218f57"
+    },
+    {
+      "id": 46741732,
+      "name": "ECOR-40.fasta",
+      "size": 5210387,
+      "download_url": "https://ndownloader.figshare.com/files/46741732",
+      "computed_md5": "ab0b9b1deeccb023e7ec54728b2252a9",
+      "supplied_md5": "ab0b9b1deeccb023e7ec54728b2252a9"
+    },
+    {
+      "id": 46741735,
+      "name": "ECOR-41.fasta",
+      "size": 5249335,
+      "download_url": "https://ndownloader.figshare.com/files/46741735",
+      "computed_md5": "365495fa2abfbca03b021f2f9730af57",
+      "supplied_md5": "365495fa2abfbca03b021f2f9730af57"
+    },
+    {
+      "id": 46741738,
+      "name": "ECOR-42.fasta",
+      "size": 5199175,
+      "download_url": "https://ndownloader.figshare.com/files/46741738",
+      "computed_md5": "27c916b05d65e7c7d5cfbd264195eeb0",
+      "supplied_md5": "27c916b05d65e7c7d5cfbd264195eeb0"
+    },
+    {
+      "id": 46741741,
+      "name": "ECOR-43_A.fasta",
+      "size": 4837831,
+      "download_url": "https://ndownloader.figshare.com/files/46741741",
+      "computed_md5": "4babd9c2940eb142b844950665adca33",
+      "supplied_md5": "4babd9c2940eb142b844950665adca33"
+    },
+    {
+      "id": 46741744,
+      "name": "ECOR-44.fasta",
+      "size": 5245182,
+      "download_url": "https://ndownloader.figshare.com/files/46741744",
+      "computed_md5": "2a707ab637dfb5722edbce7346c353ec",
+      "supplied_md5": "2a707ab637dfb5722edbce7346c353ec"
+    },
+    {
+      "id": 46741747,
+      "name": "ECOR-45.fasta",
+      "size": 4711758,
+      "download_url": "https://ndownloader.figshare.com/files/46741747",
+      "computed_md5": "061bbbfaad7355783e69ac581cbbc394",
+      "supplied_md5": "061bbbfaad7355783e69ac581cbbc394"
+    },
+    {
+      "id": 46741750,
+      "name": "ECOR-46.fasta",
+      "size": 5249678,
+      "download_url": "https://ndownloader.figshare.com/files/46741750",
+      "computed_md5": "093ed9140599e57fa89c51001becb5b1",
+      "supplied_md5": "093ed9140599e57fa89c51001becb5b1"
+    },
+    {
+      "id": 46741753,
+      "name": "ECOR-47.fasta",
+      "size": 4928652,
+      "download_url": "https://ndownloader.figshare.com/files/46741753",
+      "computed_md5": "1fca64cf5b161e480c849008ee244253",
+      "supplied_md5": "1fca64cf5b161e480c849008ee244253"
+    },
+    {
+      "id": 46741756,
+      "name": "ECOR-48.fasta",
+      "size": 5341256,
+      "download_url": "https://ndownloader.figshare.com/files/46741756",
+      "computed_md5": "22b3eca806e641658af992fa965ddca8",
+      "supplied_md5": "22b3eca806e641658af992fa965ddca8"
+    },
+    {
+      "id": 46741765,
+      "name": "ECOR-49.fasta",
+      "size": 5195787,
+      "download_url": "https://ndownloader.figshare.com/files/46741765",
+      "computed_md5": "a16c01932f01c1f08f411a515f07394b",
+      "supplied_md5": "a16c01932f01c1f08f411a515f07394b"
+    },
+    {
+      "id": 46741768,
+      "name": "ECOR-50.fasta",
+      "size": 5563339,
+      "download_url": "https://ndownloader.figshare.com/files/46741768",
+      "computed_md5": "c1c3c90469402b8dfca423863108741e",
+      "supplied_md5": "c1c3c90469402b8dfca423863108741e"
+    },
+    {
+      "id": 46741771,
+      "name": "ECOR-51.fasta",
+      "size": 5174595,
+      "download_url": "https://ndownloader.figshare.com/files/46741771",
+      "computed_md5": "596a32156fcf20deaba903c9dc69aad3",
+      "supplied_md5": "596a32156fcf20deaba903c9dc69aad3"
+    },
+    {
+      "id": 46741774,
+      "name": "ECOR-52.fasta",
+      "size": 5113021,
+      "download_url": "https://ndownloader.figshare.com/files/46741774",
+      "computed_md5": "d8fac1b27de33a775df218f1180dd710",
+      "supplied_md5": "d8fac1b27de33a775df218f1180dd710"
+    },
+    {
+      "id": 46741777,
+      "name": "ECOR-53.fasta",
+      "size": 5139239,
+      "download_url": "https://ndownloader.figshare.com/files/46741777",
+      "computed_md5": "9e0a4a9f187cd039a20c1766aaf5f546",
+      "supplied_md5": "9e0a4a9f187cd039a20c1766aaf5f546"
+    },
+    {
+      "id": 46741780,
+      "name": "ECOR-54.fasta",
+      "size": 5051877,
+      "download_url": "https://ndownloader.figshare.com/files/46741780",
+      "computed_md5": "d703acc376d727784a7e3bb68c1b4598",
+      "supplied_md5": "d703acc376d727784a7e3bb68c1b4598"
+    },
+    {
+      "id": 46741783,
+      "name": "ECOR-55.fasta",
+      "size": 5047241,
+      "download_url": "https://ndownloader.figshare.com/files/46741783",
+      "computed_md5": "2e127f6fd51cf391cfbd276e67565c60",
+      "supplied_md5": "2e127f6fd51cf391cfbd276e67565c60"
+    },
+    {
+      "id": 46741786,
+      "name": "ECOR-56.fasta",
+      "size": 4964112,
+      "download_url": "https://ndownloader.figshare.com/files/46741786",
+      "computed_md5": "6aff1becad2d99df737508e38bb20730",
+      "supplied_md5": "6aff1becad2d99df737508e38bb20730"
+    },
+    {
+      "id": 46741789,
+      "name": "ECOR-57.fasta",
+      "size": 5272348,
+      "download_url": "https://ndownloader.figshare.com/files/46741789",
+      "computed_md5": "c50f6b643cf2d8537f67cd558c89e53f",
+      "supplied_md5": "c50f6b643cf2d8537f67cd558c89e53f"
+    },
+    {
+      "id": 46741792,
+      "name": "ECOR-58.fasta",
+      "size": 4897970,
+      "download_url": "https://ndownloader.figshare.com/files/46741792",
+      "computed_md5": "df1afe7b8882d4ae90dcb0aae21267b6",
+      "supplied_md5": "df1afe7b8882d4ae90dcb0aae21267b6"
+    },
+    {
+      "id": 46741795,
+      "name": "ECOR-59.fasta",
+      "size": 4759428,
+      "download_url": "https://ndownloader.figshare.com/files/46741795",
+      "computed_md5": "e35ae26c54b5191f65940c0ebe4e945d",
+      "supplied_md5": "e35ae26c54b5191f65940c0ebe4e945d"
+    },
+    {
+      "id": 46741798,
+      "name": "ECOR-60.fasta",
+      "size": 5059689,
+      "download_url": "https://ndownloader.figshare.com/files/46741798",
+      "computed_md5": "d0b58916e85efcc0257d6e68a121f363",
+      "supplied_md5": "d0b58916e85efcc0257d6e68a121f363"
+    },
+    {
+      "id": 46741801,
+      "name": "ECOR-61.fasta",
+      "size": 4878522,
+      "download_url": "https://ndownloader.figshare.com/files/46741801",
+      "computed_md5": "1f2990837bed1ab97cc90ca3dbd87676",
+      "supplied_md5": "1f2990837bed1ab97cc90ca3dbd87676"
+    },
+    {
+      "id": 46741804,
+      "name": "ECOR-62.fasta",
+      "size": 5041719,
+      "download_url": "https://ndownloader.figshare.com/files/46741804",
+      "computed_md5": "fc73181ea22135b26bba147fa5dbaf15",
+      "supplied_md5": "fc73181ea22135b26bba147fa5dbaf15"
+    },
+    {
+      "id": 46741807,
+      "name": "ECOR-63.fasta",
+      "size": 5038866,
+      "download_url": "https://ndownloader.figshare.com/files/46741807",
+      "computed_md5": "315d130c0351bc38b96599370b388520",
+      "supplied_md5": "315d130c0351bc38b96599370b388520"
+    },
+    {
+      "id": 46741810,
+      "name": "ECOR-64.fasta",
+      "size": 5120687,
+      "download_url": "https://ndownloader.figshare.com/files/46741810",
+      "computed_md5": "c07c599784edb38ebb418fc600a823a2",
+      "supplied_md5": "c07c599784edb38ebb418fc600a823a2"
+    },
+    {
+      "id": 46741813,
+      "name": "ECOR-65.fasta",
+      "size": 4953351,
+      "download_url": "https://ndownloader.figshare.com/files/46741813",
+      "computed_md5": "faa192021f177c0db2af201f2b30f208",
+      "supplied_md5": "faa192021f177c0db2af201f2b30f208"
+    },
+    {
+      "id": 46741816,
+      "name": "ECOR-66.fasta",
+      "size": 4742617,
+      "download_url": "https://ndownloader.figshare.com/files/46741816",
+      "computed_md5": "56c34982073d12830b1b184a749c90f6",
+      "supplied_md5": "56c34982073d12830b1b184a749c90f6"
+    },
+    {
+      "id": 46741819,
+      "name": "ECOR-67.fasta",
+      "size": 4728825,
+      "download_url": "https://ndownloader.figshare.com/files/46741819",
+      "computed_md5": "55b7cacc92922146d3563308eecf9604",
+      "supplied_md5": "55b7cacc92922146d3563308eecf9604"
+    },
+    {
+      "id": 46741822,
+      "name": "ECOR-69.fasta",
+      "size": 4707371,
+      "download_url": "https://ndownloader.figshare.com/files/46741822",
+      "computed_md5": "5faa9eed1adaf1b4b5a5ce70cadb388f",
+      "supplied_md5": "5faa9eed1adaf1b4b5a5ce70cadb388f"
+    },
+    {
+      "id": 46741825,
+      "name": "ECOR-70.fasta",
+      "size": 5143718,
+      "download_url": "https://ndownloader.figshare.com/files/46741825",
+      "computed_md5": "ed4d271a50ff967e43daca4253e1574c",
+      "supplied_md5": "ed4d271a50ff967e43daca4253e1574c"
+    },
+    {
+      "id": 46741828,
+      "name": "ECOR-71.fasta",
+      "size": 4850488,
+      "download_url": "https://ndownloader.figshare.com/files/46741828",
+      "computed_md5": "47792c21a4a6a80700abed4206aec29f",
+      "supplied_md5": "47792c21a4a6a80700abed4206aec29f"
+    },
+    {
+      "id": 46741831,
+      "name": "ECOR-72.fasta",
+      "size": 5128500,
+      "download_url": "https://ndownloader.figshare.com/files/46741831",
+      "computed_md5": "55bd6573c964c2d5cbdf86dfc11715a1",
+      "supplied_md5": "55bd6573c964c2d5cbdf86dfc11715a1"
+    },
+    {
+      "id": 46741834,
+      "name": "ED1a.fasta",
+      "size": 5383241,
+      "download_url": "https://ndownloader.figshare.com/files/46741834",
+      "computed_md5": "e61629e5ed90d3f02ffc05647cd229c8",
+      "supplied_md5": "e61629e5ed90d3f02ffc05647cd229c8"
+    },
+    {
+      "id": 46741837,
+      "name": "EDL933.fasta",
+      "size": 5620671,
+      "download_url": "https://ndownloader.figshare.com/files/46741837",
+      "computed_md5": "5e6d9caf8ae0a3b09079a6aa7d36bcdd",
+      "supplied_md5": "5e6d9caf8ae0a3b09079a6aa7d36bcdd"
+    },
+    {
+      "id": 46741588,
+      "name": "E_albertiiCIP107988T.fasta",
+      "size": 4560392,
+      "download_url": "https://ndownloader.figshare.com/files/46741588",
+      "computed_md5": "9da805c96f8a507b5a1e1d20bdeb4061",
+      "supplied_md5": "9da805c96f8a507b5a1e1d20bdeb4061"
+    },
+    {
+      "id": 46741591,
+      "name": "E_fergusonii-IVAN.fasta",
+      "size": 4651204,
+      "download_url": "https://ndownloader.figshare.com/files/46741591",
+      "computed_md5": "db541aab81a2546cc4c0ad16c312c75f",
+      "supplied_md5": "db541aab81a2546cc4c0ad16c312c75f"
+    },
+    {
+      "id": 46741852,
+      "name": "FN-B4.fasta",
+      "size": 5169689,
+      "download_url": "https://ndownloader.figshare.com/files/46741852",
+      "computed_md5": "2a1a00a19408381a45f714d3db9079d6",
+      "supplied_md5": "2a1a00a19408381a45f714d3db9079d6"
+    },
+    {
+      "id": 46741855,
+      "name": "FN-B7.fasta",
+      "size": 4900631,
+      "download_url": "https://ndownloader.figshare.com/files/46741855",
+      "computed_md5": "ce1a0cc71bb34ae8374f19f7fd0b6034",
+      "supplied_md5": "ce1a0cc71bb34ae8374f19f7fd0b6034"
+    },
+    {
+      "id": 46741858,
+      "name": "FN-B9.fasta",
+      "size": 4849049,
+      "download_url": "https://ndownloader.figshare.com/files/46741858",
+      "computed_md5": "13a397f8b213b3442274e2668eb7e5f6",
+      "supplied_md5": "13a397f8b213b3442274e2668eb7e5f6"
+    },
+    {
+      "id": 46741846,
+      "name": "FN116.fasta",
+      "size": 4831271,
+      "download_url": "https://ndownloader.figshare.com/files/46741846",
+      "computed_md5": "f76e2b870c2e87d32092f90c33772a7f",
+      "supplied_md5": "f76e2b870c2e87d32092f90c33772a7f"
+    },
+    {
+      "id": 46741849,
+      "name": "FN126.fasta",
+      "size": 4697946,
+      "download_url": "https://ndownloader.figshare.com/files/46741849",
+      "computed_md5": "98145862f5e47443fe678732840b980c",
+      "supplied_md5": "98145862f5e47443fe678732840b980c"
+    },
+    {
+      "id": 46741843,
+      "name": "FN89.fasta",
+      "size": 4831944,
+      "download_url": "https://ndownloader.figshare.com/files/46741843",
+      "computed_md5": "e455a46166cb07e4852320043fb2f22c",
+      "supplied_md5": "e455a46166cb07e4852320043fb2f22c"
+    },
+    {
+      "id": 46741981,
+      "name": "H009.fasta",
+      "size": 5333102,
+      "download_url": "https://ndownloader.figshare.com/files/46741981",
+      "computed_md5": "4da88d66fe8061c24b2e3c9b09baa7a3",
+      "supplied_md5": "4da88d66fe8061c24b2e3c9b09baa7a3"
+    },
+    {
+      "id": 46741861,
+      "name": "H1-001-0003-S-J.fasta",
+      "size": 4742784,
+      "download_url": "https://ndownloader.figshare.com/files/46741861",
+      "computed_md5": "f486c151eddd841526e69e286eeba6a2",
+      "supplied_md5": "f486c151eddd841526e69e286eeba6a2"
+    },
+    {
+      "id": 46741864,
+      "name": "H1-001-0013-L-J.fasta",
+      "size": 5358422,
+      "download_url": "https://ndownloader.figshare.com/files/46741864",
+      "computed_md5": "899bd82bc3778eae4331ce268e82f864",
+      "supplied_md5": "899bd82bc3778eae4331ce268e82f864"
+    },
+    {
+      "id": 46741867,
+      "name": "H1-001-0020-M-O.fasta",
+      "size": 5221258,
+      "download_url": "https://ndownloader.figshare.com/files/46741867",
+      "computed_md5": "20c88c2658e084af3538d51990e3c9a8",
+      "supplied_md5": "20c88c2658e084af3538d51990e3c9a8"
+    },
+    {
+      "id": 46741870,
+      "name": "H1-001-0027-S-G.fasta",
+      "size": 5361316,
+      "download_url": "https://ndownloader.figshare.com/files/46741870",
+      "computed_md5": "68450864fec9257abce5fd5945ca6363",
+      "supplied_md5": "68450864fec9257abce5fd5945ca6363"
+    },
+    {
+      "id": 46741873,
+      "name": "H1-001-0034-S-M.fasta",
+      "size": 5363011,
+      "download_url": "https://ndownloader.figshare.com/files/46741873",
+      "computed_md5": "f65b399e4c0acbd54b9151d88a2cf86c",
+      "supplied_md5": "f65b399e4c0acbd54b9151d88a2cf86c"
+    },
+    {
+      "id": 46741876,
+      "name": "H1-001-0053-K-C.fasta",
+      "size": 5313343,
+      "download_url": "https://ndownloader.figshare.com/files/46741876",
+      "computed_md5": "608436284b5cc4d9769c1058cfb8493d",
+      "supplied_md5": "608436284b5cc4d9769c1058cfb8493d"
+    },
+    {
+      "id": 46741879,
+      "name": "H1-001-0093-R-A.fasta",
+      "size": 5026222,
+      "download_url": "https://ndownloader.figshare.com/files/46741879",
+      "computed_md5": "5782227badd56d05d03ac747aa85d512",
+      "supplied_md5": "5782227badd56d05d03ac747aa85d512"
+    },
+    {
+      "id": 46741882,
+      "name": "H1-001-0121-Q-J.fasta",
+      "size": 4876063,
+      "download_url": "https://ndownloader.figshare.com/files/46741882",
+      "computed_md5": "77d88a4154567d8afc1df5d5d7d9d23d",
+      "supplied_md5": "77d88a4154567d8afc1df5d5d7d9d23d"
+    },
+    {
+      "id": 46741885,
+      "name": "H1-001-0125-B-M.fasta",
+      "size": 4720118,
+      "download_url": "https://ndownloader.figshare.com/files/46741885",
+      "computed_md5": "78c507c1486ff6743263a79ff5b94960",
+      "supplied_md5": "78c507c1486ff6743263a79ff5b94960"
+    },
+    {
+      "id": 46741888,
+      "name": "H1-001-0131-C-A.fasta",
+      "size": 5231534,
+      "download_url": "https://ndownloader.figshare.com/files/46741888",
+      "computed_md5": "a846d4efa8f070ed74a7d9b71b1d8b65",
+      "supplied_md5": "a846d4efa8f070ed74a7d9b71b1d8b65"
+    },
+    {
+      "id": 46741891,
+      "name": "H1-001-0154-T-K.fasta",
+      "size": 5142308,
+      "download_url": "https://ndownloader.figshare.com/files/46741891",
+      "computed_md5": "66f3bcd33452b3f8e5931eebfee2090f",
+      "supplied_md5": "66f3bcd33452b3f8e5931eebfee2090f"
+    },
+    {
+      "id": 46741894,
+      "name": "H1-001-0155-M-I.fasta",
+      "size": 5304386,
+      "download_url": "https://ndownloader.figshare.com/files/46741894",
+      "computed_md5": "be8ca6e33b581f1a797adc89df37ec8a",
+      "supplied_md5": "be8ca6e33b581f1a797adc89df37ec8a"
+    },
+    {
+      "id": 46741897,
+      "name": "H1-002-0007-M-M.fasta",
+      "size": 4918716,
+      "download_url": "https://ndownloader.figshare.com/files/46741897",
+      "computed_md5": "2dda2cd5b2a26488d49fa125dbea1ee8",
+      "supplied_md5": "2dda2cd5b2a26488d49fa125dbea1ee8"
+    },
+    {
+      "id": 46741900,
+      "name": "H1-002-0011-M-G.fasta",
+      "size": 5167311,
+      "download_url": "https://ndownloader.figshare.com/files/46741900",
+      "computed_md5": "52f2cceed361dd1e619aab452bdfd0c7",
+      "supplied_md5": "52f2cceed361dd1e619aab452bdfd0c7"
+    },
+    {
+      "id": 46741903,
+      "name": "H1-002-0060-C-T.fasta",
+      "size": 5171127,
+      "download_url": "https://ndownloader.figshare.com/files/46741903",
+      "computed_md5": "025a7ee95d7d36471bd5924e80466f25",
+      "supplied_md5": "025a7ee95d7d36471bd5924e80466f25"
+    },
+    {
+      "id": 46741906,
+      "name": "H1-002-0064-E-M.fasta",
+      "size": 5327582,
+      "download_url": "https://ndownloader.figshare.com/files/46741906",
+      "computed_md5": "9f98bfbb6eaaa08a1dc0d6815a5901ba",
+      "supplied_md5": "9f98bfbb6eaaa08a1dc0d6815a5901ba"
+    },
+    {
+      "id": 46741909,
+      "name": "H1-002-0069-V-G.fasta",
+      "size": 4751085,
+      "download_url": "https://ndownloader.figshare.com/files/46741909",
+      "computed_md5": "3a3ca17e10940ab6f197f6951a2016c2",
+      "supplied_md5": "3a3ca17e10940ab6f197f6951a2016c2"
+    },
+    {
+      "id": 46741912,
+      "name": "H1-003-0010-G-J.fasta",
+      "size": 4984047,
+      "download_url": "https://ndownloader.figshare.com/files/46741912",
+      "computed_md5": "4f9d9c5454898f18afd408df6edc67df",
+      "supplied_md5": "4f9d9c5454898f18afd408df6edc67df"
+    },
+    {
+      "id": 46741915,
+      "name": "H1-003-0019-B-M.fasta",
+      "size": 5267461,
+      "download_url": "https://ndownloader.figshare.com/files/46741915",
+      "computed_md5": "baecebac6e3ad93534da81d726d130f8",
+      "supplied_md5": "baecebac6e3ad93534da81d726d130f8"
+    },
+    {
+      "id": 46741918,
+      "name": "H1-003-0035-D-E.fasta",
+      "size": 4874751,
+      "download_url": "https://ndownloader.figshare.com/files/46741918",
+      "computed_md5": "259563366df5c25ed9c7393d147cad1c",
+      "supplied_md5": "259563366df5c25ed9c7393d147cad1c"
+    },
+    {
+      "id": 46741921,
+      "name": "H1-003-0054-P-P.fasta",
+      "size": 5363090,
+      "download_url": "https://ndownloader.figshare.com/files/46741921",
+      "computed_md5": "cdc3e04d98b9745a60e9a2c6de5e22a8",
+      "supplied_md5": "cdc3e04d98b9745a60e9a2c6de5e22a8"
+    },
+    {
+      "id": 46741924,
+      "name": "H1-003-0071-C-J.fasta",
+      "size": 5352057,
+      "download_url": "https://ndownloader.figshare.com/files/46741924",
+      "computed_md5": "481a1d13969b68225413f0b20b3d0c53",
+      "supplied_md5": "481a1d13969b68225413f0b20b3d0c53"
+    },
+    {
+      "id": 46741927,
+      "name": "H1-003-0079-G-R.fasta",
+      "size": 5209028,
+      "download_url": "https://ndownloader.figshare.com/files/46741927",
+      "computed_md5": "2ac81e58c39f21ce3464494ba947b320",
+      "supplied_md5": "2ac81e58c39f21ce3464494ba947b320"
+    },
+    {
+      "id": 46741930,
+      "name": "H1-003-0088-B-J.fasta",
+      "size": 5219535,
+      "download_url": "https://ndownloader.figshare.com/files/46741930",
+      "computed_md5": "4f62c035dfb0833b2fd6d51260974cfc",
+      "supplied_md5": "4f62c035dfb0833b2fd6d51260974cfc"
+    },
+    {
+      "id": 46741933,
+      "name": "H1-003-0090-V-J.fasta",
+      "size": 5412412,
+      "download_url": "https://ndownloader.figshare.com/files/46741933",
+      "computed_md5": "37cf0efbf124deebb7b3b931d96aa47a",
+      "supplied_md5": "37cf0efbf124deebb7b3b931d96aa47a"
+    },
+    {
+      "id": 46741936,
+      "name": "H1-003-0105-C-R.fasta",
+      "size": 5400727,
+      "download_url": "https://ndownloader.figshare.com/files/46741936",
+      "computed_md5": "fe0b37fce7774b3f2f9ebf6c34d50d1b",
+      "supplied_md5": "fe0b37fce7774b3f2f9ebf6c34d50d1b"
+    },
+    {
+      "id": 46741939,
+      "name": "H1-003-0115-L-R.fasta",
+      "size": 5331115,
+      "download_url": "https://ndownloader.figshare.com/files/46741939",
+      "computed_md5": "af433dc1eae8bd237604db8d569d2b53",
+      "supplied_md5": "af433dc1eae8bd237604db8d569d2b53"
+    },
+    {
+      "id": 46741942,
+      "name": "H1-003-0116-V-R.fasta",
+      "size": 5207578,
+      "download_url": "https://ndownloader.figshare.com/files/46741942",
+      "computed_md5": "a6564ad909ef91c5be30b1f19f0bdfe3",
+      "supplied_md5": "a6564ad909ef91c5be30b1f19f0bdfe3"
+    },
+    {
+      "id": 46741945,
+      "name": "H1-003-0120-P-R.fasta",
+      "size": 5321445,
+      "download_url": "https://ndownloader.figshare.com/files/46741945",
+      "computed_md5": "d48707d2ea6aa8449b72ac825debfd2d",
+      "supplied_md5": "d48707d2ea6aa8449b72ac825debfd2d"
+    },
+    {
+      "id": 46741948,
+      "name": "H1-004-0007-O-M.fasta",
+      "size": 5590373,
+      "download_url": "https://ndownloader.figshare.com/files/46741948",
+      "computed_md5": "3af120dd7043d7b98975024a17aa6b3f",
+      "supplied_md5": "3af120dd7043d7b98975024a17aa6b3f"
+    },
+    {
+      "id": 46741951,
+      "name": "H1-004-0017-B-M.fasta",
+      "size": 5014836,
+      "download_url": "https://ndownloader.figshare.com/files/46741951",
+      "computed_md5": "b90a28c8bf43d6fd574889d18de3917b",
+      "supplied_md5": "b90a28c8bf43d6fd574889d18de3917b"
+    },
+    {
+      "id": 46741954,
+      "name": "H1-004-0021-W-I.fasta",
+      "size": 5100178,
+      "download_url": "https://ndownloader.figshare.com/files/46741954",
+      "computed_md5": "639e65a3a9833f7570a03f6ad098900c",
+      "supplied_md5": "639e65a3a9833f7570a03f6ad098900c"
+    },
+    {
+      "id": 46741957,
+      "name": "H1-005-0012-L-M.fasta",
+      "size": 5185190,
+      "download_url": "https://ndownloader.figshare.com/files/46741957",
+      "computed_md5": "1399dbdf71c0ffdcc315bbd64f7f0a85",
+      "supplied_md5": "1399dbdf71c0ffdcc315bbd64f7f0a85"
+    },
+    {
+      "id": 46741960,
+      "name": "H1-005-0058-M-A.fasta",
+      "size": 5400811,
+      "download_url": "https://ndownloader.figshare.com/files/46741960",
+      "computed_md5": "dc03876c613934c2d74e842e43318935",
+      "supplied_md5": "dc03876c613934c2d74e842e43318935"
+    },
+    {
+      "id": 46741966,
+      "name": "H1-006-0003-S-L.fasta",
+      "size": 5511624,
+      "download_url": "https://ndownloader.figshare.com/files/46741966",
+      "computed_md5": "97a23543f73960db2d7fc71b25f1affa",
+      "supplied_md5": "97a23543f73960db2d7fc71b25f1affa"
+    },
+    {
+      "id": 46741969,
+      "name": "H1-006-0022-L-R.fasta",
+      "size": 5265640,
+      "download_url": "https://ndownloader.figshare.com/files/46741969",
+      "computed_md5": "5ee8706c4a432baa018ad97bbf4a8bc2",
+      "supplied_md5": "5ee8706c4a432baa018ad97bbf4a8bc2"
+    },
+    {
+      "id": 46741972,
+      "name": "H1-007-0015-D-G.fasta",
+      "size": 5091317,
+      "download_url": "https://ndownloader.figshare.com/files/46741972",
+      "computed_md5": "3f474d684ae3d1b00d800f117837b289",
+      "supplied_md5": "3f474d684ae3d1b00d800f117837b289"
+    },
+    {
+      "id": 46741975,
+      "name": "H1-007-0037-H-D.fasta",
+      "size": 5189113,
+      "download_url": "https://ndownloader.figshare.com/files/46741975",
+      "computed_md5": "1eed98a4af9a7677ad72d43b08d04b92",
+      "supplied_md5": "1eed98a4af9a7677ad72d43b08d04b92"
+    },
+    {
+      "id": 46741984,
+      "name": "H14.fasta",
+      "size": 5179095,
+      "download_url": "https://ndownloader.figshare.com/files/46741984",
+      "computed_md5": "14e0328bd1130591ad6661f521a99da8",
+      "supplied_md5": "14e0328bd1130591ad6661f521a99da8"
+    },
+    {
+      "id": 46741987,
+      "name": "H27.fasta",
+      "size": 5033211,
+      "download_url": "https://ndownloader.figshare.com/files/46741987",
+      "computed_md5": "c79e34e9559b56a40517b6e24139d3a9",
+      "supplied_md5": "c79e34e9559b56a40517b6e24139d3a9"
+    },
+    {
+      "id": 46742002,
+      "name": "H384.fasta",
+      "size": 5197473,
+      "download_url": "https://ndownloader.figshare.com/files/46742002",
+      "computed_md5": "170cbc3f3004026ebc620b628c246c80",
+      "supplied_md5": "170cbc3f3004026ebc620b628c246c80"
+    },
+    {
+      "id": 46741978,
+      "name": "H4.fasta",
+      "size": 4736662,
+      "download_url": "https://ndownloader.figshare.com/files/46741978",
+      "computed_md5": "28daf5f0b83570bb7596b601befd4fe0",
+      "supplied_md5": "28daf5f0b83570bb7596b601befd4fe0"
+    },
+    {
+      "id": 46742005,
+      "name": "H442.fasta",
+      "size": 5032976,
+      "download_url": "https://ndownloader.figshare.com/files/46742005",
+      "computed_md5": "2594aed064381484281ffd7603e70d18",
+      "supplied_md5": "2594aed064381484281ffd7603e70d18"
+    },
+    {
+      "id": 46741990,
+      "name": "H47.fasta",
+      "size": 5362221,
+      "download_url": "https://ndownloader.figshare.com/files/46741990",
+      "computed_md5": "57afba87131252f81b4e95b05eae2f80",
+      "supplied_md5": "57afba87131252f81b4e95b05eae2f80"
+    },
+    {
+      "id": 46741993,
+      "name": "H48.fasta",
+      "size": 4730175,
+      "download_url": "https://ndownloader.figshare.com/files/46741993",
+      "computed_md5": "ccd81761dba489f65be5b8eb4232d85d",
+      "supplied_md5": "ccd81761dba489f65be5b8eb4232d85d"
+    },
+    {
+      "id": 46741996,
+      "name": "H70.fasta",
+      "size": 4943561,
+      "download_url": "https://ndownloader.figshare.com/files/46741996",
+      "computed_md5": "11adf54b5630d37f8bdc8b834ff971db",
+      "supplied_md5": "11adf54b5630d37f8bdc8b834ff971db"
+    },
+    {
+      "id": 46741999,
+      "name": "H95.fasta",
+      "size": 4860476,
+      "download_url": "https://ndownloader.figshare.com/files/46741999",
+      "computed_md5": "f2c47dc849ad4b84c21e9974fee11053",
+      "supplied_md5": "f2c47dc849ad4b84c21e9974fee11053"
+    },
+    {
+      "id": 46742008,
+      "name": "IAI01.fasta",
+      "size": 4778967,
+      "download_url": "https://ndownloader.figshare.com/files/46742008",
+      "computed_md5": "915c4a1e02bc2f3f8bc9c8894feac6f7",
+      "supplied_md5": "915c4a1e02bc2f3f8bc9c8894feac6f7"
+    },
+    {
+      "id": 46742011,
+      "name": "IAI02.fasta",
+      "size": 4942417,
+      "download_url": "https://ndownloader.figshare.com/files/46742011",
+      "computed_md5": "bab23987045d7ac72b46ee5fc65c919f",
+      "supplied_md5": "bab23987045d7ac72b46ee5fc65c919f"
+    },
+    {
+      "id": 46742014,
+      "name": "IAI03.fasta",
+      "size": 4955225,
+      "download_url": "https://ndownloader.figshare.com/files/46742014",
+      "computed_md5": "412edf88b127097142ff6c1e947866e7",
+      "supplied_md5": "412edf88b127097142ff6c1e947866e7"
+    },
+    {
+      "id": 46742017,
+      "name": "IAI04.fasta",
+      "size": 4556541,
+      "download_url": "https://ndownloader.figshare.com/files/46742017",
+      "computed_md5": "9e8a3d026862c0a8f537e1066401fc6d",
+      "supplied_md5": "9e8a3d026862c0a8f537e1066401fc6d"
+    },
+    {
+      "id": 46742020,
+      "name": "IAI05.fasta",
+      "size": 5258103,
+      "download_url": "https://ndownloader.figshare.com/files/46742020",
+      "computed_md5": "0c86de1f44fa5b4f79cad5a884ea83ac",
+      "supplied_md5": "0c86de1f44fa5b4f79cad5a884ea83ac"
+    },
+    {
+      "id": 46742023,
+      "name": "IAI06.fasta",
+      "size": 4998756,
+      "download_url": "https://ndownloader.figshare.com/files/46742023",
+      "computed_md5": "7adc097010dd09e72429345fca7b80fa",
+      "supplied_md5": "7adc097010dd09e72429345fca7b80fa"
+    },
+    {
+      "id": 46742026,
+      "name": "IAI07.fasta",
+      "size": 5040319,
+      "download_url": "https://ndownloader.figshare.com/files/46742026",
+      "computed_md5": "8d1e6074d79b0509927cd7ad200507a2",
+      "supplied_md5": "8d1e6074d79b0509927cd7ad200507a2"
+    },
+    {
+      "id": 46742029,
+      "name": "IAI08.fasta",
+      "size": 4881516,
+      "download_url": "https://ndownloader.figshare.com/files/46742029",
+      "computed_md5": "201867cb4b9785bd1f6643525368d783",
+      "supplied_md5": "201867cb4b9785bd1f6643525368d783"
+    },
+    {
+      "id": 46742032,
+      "name": "IAI09.fasta",
+      "size": 4942057,
+      "download_url": "https://ndownloader.figshare.com/files/46742032",
+      "computed_md5": "ea9455e2419975861dc95a0c24189a9e",
+      "supplied_md5": "ea9455e2419975861dc95a0c24189a9e"
+    },
+    {
+      "id": 46742035,
+      "name": "IAI10.fasta",
+      "size": 4683536,
+      "download_url": "https://ndownloader.figshare.com/files/46742035",
+      "computed_md5": "7d2e6fa8ce7e7decf9f2e567ae8617aa",
+      "supplied_md5": "7d2e6fa8ce7e7decf9f2e567ae8617aa"
+    },
+    {
+      "id": 46742038,
+      "name": "IAI11.fasta",
+      "size": 5237242,
+      "download_url": "https://ndownloader.figshare.com/files/46742038",
+      "computed_md5": "0e93d15e12edb4d3764778a207744fa1",
+      "supplied_md5": "0e93d15e12edb4d3764778a207744fa1"
+    },
+    {
+      "id": 46742041,
+      "name": "IAI12.fasta",
+      "size": 4785146,
+      "download_url": "https://ndownloader.figshare.com/files/46742041",
+      "computed_md5": "13818e741c831e9ab2483d02742f2e44",
+      "supplied_md5": "13818e741c831e9ab2483d02742f2e44"
+    },
+    {
+      "id": 46742044,
+      "name": "IAI13.fasta",
+      "size": 4766174,
+      "download_url": "https://ndownloader.figshare.com/files/46742044",
+      "computed_md5": "7bc1aa4b017a950aef145a7664264abd",
+      "supplied_md5": "7bc1aa4b017a950aef145a7664264abd"
+    },
+    {
+      "id": 46742047,
+      "name": "IAI14.fasta",
+      "size": 4794999,
+      "download_url": "https://ndownloader.figshare.com/files/46742047",
+      "computed_md5": "fe61ec7d105d4a9c119fbbfe76cf513f",
+      "supplied_md5": "fe61ec7d105d4a9c119fbbfe76cf513f"
+    },
+    {
+      "id": 46742050,
+      "name": "IAI15.fasta",
+      "size": 5030399,
+      "download_url": "https://ndownloader.figshare.com/files/46742050",
+      "computed_md5": "3ad811bc194a2900f2a9e50cbd29df42",
+      "supplied_md5": "3ad811bc194a2900f2a9e50cbd29df42"
+    },
+    {
+      "id": 46742053,
+      "name": "IAI16.fasta",
+      "size": 4796919,
+      "download_url": "https://ndownloader.figshare.com/files/46742053",
+      "computed_md5": "cc8e204be3df7bea5fe64c1543ac4c00",
+      "supplied_md5": "cc8e204be3df7bea5fe64c1543ac4c00"
+    },
+    {
+      "id": 46742056,
+      "name": "IAI17.fasta",
+      "size": 5152025,
+      "download_url": "https://ndownloader.figshare.com/files/46742056",
+      "computed_md5": "e3328b80382bf7c84a7719ca0532e358",
+      "supplied_md5": "e3328b80382bf7c84a7719ca0532e358"
+    },
+    {
+      "id": 46742059,
+      "name": "IAI18.fasta",
+      "size": 5096975,
+      "download_url": "https://ndownloader.figshare.com/files/46742059",
+      "computed_md5": "0ac578fad12a0bb6922aee69522d3030",
+      "supplied_md5": "0ac578fad12a0bb6922aee69522d3030"
+    },
+    {
+      "id": 46742062,
+      "name": "IAI19.fasta",
+      "size": 4740266,
+      "download_url": "https://ndownloader.figshare.com/files/46742062",
+      "computed_md5": "6a479a4be01584e5ffc4ac58943d2b48",
+      "supplied_md5": "6a479a4be01584e5ffc4ac58943d2b48"
+    },
+    {
+      "id": 46742065,
+      "name": "IAI20.fasta",
+      "size": 4795134,
+      "download_url": "https://ndownloader.figshare.com/files/46742065",
+      "computed_md5": "d53d337f5ddf2d9d931b33b6f9d22f1a",
+      "supplied_md5": "d53d337f5ddf2d9d931b33b6f9d22f1a"
+    },
+    {
+      "id": 46742068,
+      "name": "IAI21.fasta",
+      "size": 5050297,
+      "download_url": "https://ndownloader.figshare.com/files/46742068",
+      "computed_md5": "782636171d70313e1f093a50546d5e32",
+      "supplied_md5": "782636171d70313e1f093a50546d5e32"
+    },
+    {
+      "id": 46742071,
+      "name": "IAI22.fasta",
+      "size": 4871714,
+      "download_url": "https://ndownloader.figshare.com/files/46742071",
+      "computed_md5": "18585a502c641fc58b6287d9923418ab",
+      "supplied_md5": "18585a502c641fc58b6287d9923418ab"
+    },
+    {
+      "id": 46742074,
+      "name": "IAI23.fasta",
+      "size": 4848707,
+      "download_url": "https://ndownloader.figshare.com/files/46742074",
+      "computed_md5": "37e30c946526c2d7333aa14a35be1fe7",
+      "supplied_md5": "37e30c946526c2d7333aa14a35be1fe7"
+    },
+    {
+      "id": 46742077,
+      "name": "IAI24.fasta",
+      "size": 5031006,
+      "download_url": "https://ndownloader.figshare.com/files/46742077",
+      "computed_md5": "dcc1772afcca1dfd327cbafb087ac14f",
+      "supplied_md5": "dcc1772afcca1dfd327cbafb087ac14f"
+    },
+    {
+      "id": 46742080,
+      "name": "IAI25.fasta",
+      "size": 5040534,
+      "download_url": "https://ndownloader.figshare.com/files/46742080",
+      "computed_md5": "f5b1d8c4016e1a4cd08bcb305c6ae9b2",
+      "supplied_md5": "f5b1d8c4016e1a4cd08bcb305c6ae9b2"
+    },
+    {
+      "id": 46742083,
+      "name": "IAI26.fasta",
+      "size": 4722961,
+      "download_url": "https://ndownloader.figshare.com/files/46742083",
+      "computed_md5": "c8c12090c9ecf3fff70f38617f1a2909",
+      "supplied_md5": "c8c12090c9ecf3fff70f38617f1a2909"
+    },
+    {
+      "id": 46742086,
+      "name": "IAI27.fasta",
+      "size": 5161912,
+      "download_url": "https://ndownloader.figshare.com/files/46742086",
+      "computed_md5": "1eed67bdcc56ea0faacc2c2279c6b33c",
+      "supplied_md5": "1eed67bdcc56ea0faacc2c2279c6b33c"
+    },
+    {
+      "id": 46742089,
+      "name": "IAI28.fasta",
+      "size": 4806274,
+      "download_url": "https://ndownloader.figshare.com/files/46742089",
+      "computed_md5": "314c8b7edf7a78dda8ea88cfcb7d5fff",
+      "supplied_md5": "314c8b7edf7a78dda8ea88cfcb7d5fff"
+    },
+    {
+      "id": 46742092,
+      "name": "IAI29.fasta",
+      "size": 4865612,
+      "download_url": "https://ndownloader.figshare.com/files/46742092",
+      "computed_md5": "39ef60c82b74a35d34ccdda107f544c0",
+      "supplied_md5": "39ef60c82b74a35d34ccdda107f544c0"
+    },
+    {
+      "id": 46742095,
+      "name": "IAI30.fasta",
+      "size": 5163583,
+      "download_url": "https://ndownloader.figshare.com/files/46742095",
+      "computed_md5": "2a9ddf8812cd3f1508016ee9ccd639af",
+      "supplied_md5": "2a9ddf8812cd3f1508016ee9ccd639af"
+    },
+    {
+      "id": 46742098,
+      "name": "IAI31.fasta",
+      "size": 5230481,
+      "download_url": "https://ndownloader.figshare.com/files/46742098",
+      "computed_md5": "f894bc21098d67fa7ef5f65363c76fd0",
+      "supplied_md5": "f894bc21098d67fa7ef5f65363c76fd0"
+    },
+    {
+      "id": 46742101,
+      "name": "IAI32.fasta",
+      "size": 5180669,
+      "download_url": "https://ndownloader.figshare.com/files/46742101",
+      "computed_md5": "09ac6314e40682924ce5dc96a2768d35",
+      "supplied_md5": "09ac6314e40682924ce5dc96a2768d35"
+    },
+    {
+      "id": 46742104,
+      "name": "IAI33.fasta",
+      "size": 5038609,
+      "download_url": "https://ndownloader.figshare.com/files/46742104",
+      "computed_md5": "e91910f9a3d164c5cb4b7e03cb0eb246",
+      "supplied_md5": "e91910f9a3d164c5cb4b7e03cb0eb246"
+    },
+    {
+      "id": 46742107,
+      "name": "IAI34.fasta",
+      "size": 4985655,
+      "download_url": "https://ndownloader.figshare.com/files/46742107",
+      "computed_md5": "d95bb044edb82bb92dc1a7a98ab62a9a",
+      "supplied_md5": "d95bb044edb82bb92dc1a7a98ab62a9a"
+    },
+    {
+      "id": 46742110,
+      "name": "IAI35.fasta",
+      "size": 5260459,
+      "download_url": "https://ndownloader.figshare.com/files/46742110",
+      "computed_md5": "28164428007ca5b8d7836d371dee1496",
+      "supplied_md5": "28164428007ca5b8d7836d371dee1496"
+    },
+    {
+      "id": 46742113,
+      "name": "IAI36.fasta",
+      "size": 5178197,
+      "download_url": "https://ndownloader.figshare.com/files/46742113",
+      "computed_md5": "35d86ea5dfc538084f27185fd9b2f602",
+      "supplied_md5": "35d86ea5dfc538084f27185fd9b2f602"
+    },
+    {
+      "id": 46742116,
+      "name": "IAI37.fasta",
+      "size": 5073792,
+      "download_url": "https://ndownloader.figshare.com/files/46742116",
+      "computed_md5": "d5e3069b1e94ab457e9d70c6ffd90db1",
+      "supplied_md5": "d5e3069b1e94ab457e9d70c6ffd90db1"
+    },
+    {
+      "id": 46742119,
+      "name": "IAI38.fasta",
+      "size": 5327846,
+      "download_url": "https://ndownloader.figshare.com/files/46742119",
+      "computed_md5": "0b6f087ca9fef49dde4151d3de4987ba",
+      "supplied_md5": "0b6f087ca9fef49dde4151d3de4987ba"
+    },
+    {
+      "id": 46742122,
+      "name": "IAI39.fasta",
+      "size": 5217668,
+      "download_url": "https://ndownloader.figshare.com/files/46742122",
+      "computed_md5": "bceeb0e404575761dfd0402c94827e86",
+      "supplied_md5": "bceeb0e404575761dfd0402c94827e86"
+    },
+    {
+      "id": 46742125,
+      "name": "IAI40.fasta",
+      "size": 5122689,
+      "download_url": "https://ndownloader.figshare.com/files/46742125",
+      "computed_md5": "7c4433fb97ab40c01769d9c035d8c5ac",
+      "supplied_md5": "7c4433fb97ab40c01769d9c035d8c5ac"
+    },
+    {
+      "id": 46742299,
+      "name": "IAI41.fasta",
+      "size": 4669905,
+      "download_url": "https://ndownloader.figshare.com/files/46742299",
+      "computed_md5": "64ed79f59f834e786ed26d0ff114a3f5",
+      "supplied_md5": "64ed79f59f834e786ed26d0ff114a3f5"
+    },
+    {
+      "id": 46742302,
+      "name": "IAI42.fasta",
+      "size": 4866570,
+      "download_url": "https://ndownloader.figshare.com/files/46742302",
+      "computed_md5": "b4e9a8add714ea80586dfd6c64b7c6e7",
+      "supplied_md5": "b4e9a8add714ea80586dfd6c64b7c6e7"
+    },
+    {
+      "id": 46742305,
+      "name": "IAI43.fasta",
+      "size": 5494874,
+      "download_url": "https://ndownloader.figshare.com/files/46742305",
+      "computed_md5": "a58f1f1667d356c2c89a9897aa873892",
+      "supplied_md5": "a58f1f1667d356c2c89a9897aa873892"
+    },
+    {
+      "id": 46742308,
+      "name": "IAI44.fasta",
+      "size": 4837514,
+      "download_url": "https://ndownloader.figshare.com/files/46742308",
+      "computed_md5": "f3006c91d8450acb32babd76d698dd76",
+      "supplied_md5": "f3006c91d8450acb32babd76d698dd76"
+    },
+    {
+      "id": 46742311,
+      "name": "IAI45.fasta",
+      "size": 5256400,
+      "download_url": "https://ndownloader.figshare.com/files/46742311",
+      "computed_md5": "4d067d03ebf83c349d494f303d581f9c",
+      "supplied_md5": "4d067d03ebf83c349d494f303d581f9c"
+    },
+    {
+      "id": 46742314,
+      "name": "IAI46.fasta",
+      "size": 5304395,
+      "download_url": "https://ndownloader.figshare.com/files/46742314",
+      "computed_md5": "c75c9eeffdeb022dde2e8f3ae8084a5d",
+      "supplied_md5": "c75c9eeffdeb022dde2e8f3ae8084a5d"
+    },
+    {
+      "id": 46742317,
+      "name": "IAI47.fasta",
+      "size": 5123516,
+      "download_url": "https://ndownloader.figshare.com/files/46742317",
+      "computed_md5": "3497aca6ef973a03d563acb19d46d4a5",
+      "supplied_md5": "3497aca6ef973a03d563acb19d46d4a5"
+    },
+    {
+      "id": 46742323,
+      "name": "IAI48.fasta",
+      "size": 5199822,
+      "download_url": "https://ndownloader.figshare.com/files/46742323",
+      "computed_md5": "a13862c82d26c3a23e9f613ed090b75f",
+      "supplied_md5": "a13862c82d26c3a23e9f613ed090b75f"
+    },
+    {
+      "id": 46742320,
+      "name": "IAI49.fasta",
+      "size": 4992682,
+      "download_url": "https://ndownloader.figshare.com/files/46742320",
+      "computed_md5": "5293a10af37e5490694589c07f410bc5",
+      "supplied_md5": "5293a10af37e5490694589c07f410bc5"
+    },
+    {
+      "id": 46742326,
+      "name": "IAI50.fasta",
+      "size": 5198467,
+      "download_url": "https://ndownloader.figshare.com/files/46742326",
+      "computed_md5": "a73c37f7c28426b9cb9ebd4a69530112",
+      "supplied_md5": "a73c37f7c28426b9cb9ebd4a69530112"
+    },
+    {
+      "id": 46742329,
+      "name": "IAI51.fasta",
+      "size": 4980726,
+      "download_url": "https://ndownloader.figshare.com/files/46742329",
+      "computed_md5": "85801f39368dacb99c68f94d216c99cd",
+      "supplied_md5": "85801f39368dacb99c68f94d216c99cd"
+    },
+    {
+      "id": 46742335,
+      "name": "IAI53.fasta",
+      "size": 4977936,
+      "download_url": "https://ndownloader.figshare.com/files/46742335",
+      "computed_md5": "1d685edc1602e28c61591d16f7e8a337",
+      "supplied_md5": "1d685edc1602e28c61591d16f7e8a337"
+    },
+    {
+      "id": 46742332,
+      "name": "IAI54.fasta",
+      "size": 5176067,
+      "download_url": "https://ndownloader.figshare.com/files/46742332",
+      "computed_md5": "e040f7df73b1e18c166be5cf5cbd37c4",
+      "supplied_md5": "e040f7df73b1e18c166be5cf5cbd37c4"
+    },
+    {
+      "id": 46742344,
+      "name": "IAI55.fasta",
+      "size": 4967389,
+      "download_url": "https://ndownloader.figshare.com/files/46742344",
+      "computed_md5": "7405d7903e48bfb08bcf21436a42e9d9",
+      "supplied_md5": "7405d7903e48bfb08bcf21436a42e9d9"
+    },
+    {
+      "id": 46742338,
+      "name": "IAI56.fasta",
+      "size": 5186888,
+      "download_url": "https://ndownloader.figshare.com/files/46742338",
+      "computed_md5": "de3aa38b5134ee2c49c0c118cba58cee",
+      "supplied_md5": "de3aa38b5134ee2c49c0c118cba58cee"
+    },
+    {
+      "id": 46742341,
+      "name": "IAI57.fasta",
+      "size": 5059194,
+      "download_url": "https://ndownloader.figshare.com/files/46742341",
+      "computed_md5": "b67c6974b9d8dd5c9d9545e6f3213dc0",
+      "supplied_md5": "b67c6974b9d8dd5c9d9545e6f3213dc0"
+    },
+    {
+      "id": 46742347,
+      "name": "IAI58.fasta",
+      "size": 5202563,
+      "download_url": "https://ndownloader.figshare.com/files/46742347",
+      "computed_md5": "8ffbafbe4eaab64fed71044d3779a503",
+      "supplied_md5": "8ffbafbe4eaab64fed71044d3779a503"
+    },
+    {
+      "id": 46742350,
+      "name": "IAI59.fasta",
+      "size": 5022078,
+      "download_url": "https://ndownloader.figshare.com/files/46742350",
+      "computed_md5": "804bb5ddd491658002f2562a113eb650",
+      "supplied_md5": "804bb5ddd491658002f2562a113eb650"
+    },
+    {
+      "id": 46742353,
+      "name": "IAI60.fasta",
+      "size": 5133482,
+      "download_url": "https://ndownloader.figshare.com/files/46742353",
+      "computed_md5": "8265080ea76209f2adcb546470bb0ee4",
+      "supplied_md5": "8265080ea76209f2adcb546470bb0ee4"
+    },
+    {
+      "id": 46742356,
+      "name": "IAI61.fasta",
+      "size": 5028709,
+      "download_url": "https://ndownloader.figshare.com/files/46742356",
+      "computed_md5": "63ba85d71dabc3c32d91caa0173a2a0e",
+      "supplied_md5": "63ba85d71dabc3c32d91caa0173a2a0e"
+    },
+    {
+      "id": 46742359,
+      "name": "IAI62.fasta",
+      "size": 5089082,
+      "download_url": "https://ndownloader.figshare.com/files/46742359",
+      "computed_md5": "27bd64f9f82bc5c0cb1a94329454fedc",
+      "supplied_md5": "27bd64f9f82bc5c0cb1a94329454fedc"
+    },
+    {
+      "id": 46742365,
+      "name": "IAI63.fasta",
+      "size": 5221777,
+      "download_url": "https://ndownloader.figshare.com/files/46742365",
+      "computed_md5": "9f940cbc97facf3d54c42eef0594f869",
+      "supplied_md5": "9f940cbc97facf3d54c42eef0594f869"
+    },
+    {
+      "id": 46742362,
+      "name": "IAI64.fasta",
+      "size": 4983921,
+      "download_url": "https://ndownloader.figshare.com/files/46742362",
+      "computed_md5": "5497bd1167dfad676806573dc904479f",
+      "supplied_md5": "5497bd1167dfad676806573dc904479f"
+    },
+    {
+      "id": 46742368,
+      "name": "IAI65.fasta",
+      "size": 4954869,
+      "download_url": "https://ndownloader.figshare.com/files/46742368",
+      "computed_md5": "82c297c0a1e4fc17ff4a3fb30c4de01d",
+      "supplied_md5": "82c297c0a1e4fc17ff4a3fb30c4de01d"
+    },
+    {
+      "id": 46742371,
+      "name": "IAI66.fasta",
+      "size": 4982553,
+      "download_url": "https://ndownloader.figshare.com/files/46742371",
+      "computed_md5": "b415d48685626c0b54bdf1be0f17fde4",
+      "supplied_md5": "b415d48685626c0b54bdf1be0f17fde4"
+    },
+    {
+      "id": 46742374,
+      "name": "IAI67.fasta",
+      "size": 5355157,
+      "download_url": "https://ndownloader.figshare.com/files/46742374",
+      "computed_md5": "659ef5036ec023c4e29a89685295a8e5",
+      "supplied_md5": "659ef5036ec023c4e29a89685295a8e5"
+    },
+    {
+      "id": 46742377,
+      "name": "IAI68.fasta",
+      "size": 5097083,
+      "download_url": "https://ndownloader.figshare.com/files/46742377",
+      "computed_md5": "76a36d60ee378ee6347afef3d328cfc9",
+      "supplied_md5": "76a36d60ee378ee6347afef3d328cfc9"
+    },
+    {
+      "id": 46742380,
+      "name": "IAI69.fasta",
+      "size": 5138249,
+      "download_url": "https://ndownloader.figshare.com/files/46742380",
+      "computed_md5": "cb4d0b228112edf113166387d47232f9",
+      "supplied_md5": "cb4d0b228112edf113166387d47232f9"
+    },
+    {
+      "id": 46742383,
+      "name": "IAI70.fasta",
+      "size": 5261941,
+      "download_url": "https://ndownloader.figshare.com/files/46742383",
+      "computed_md5": "280eeb0755e58a20d1d0ff17b226065a",
+      "supplied_md5": "280eeb0755e58a20d1d0ff17b226065a"
+    },
+    {
+      "id": 46742386,
+      "name": "IAI71.fasta",
+      "size": 5194280,
+      "download_url": "https://ndownloader.figshare.com/files/46742386",
+      "computed_md5": "2761a6a9fe7045ef75d892bd7f50c340",
+      "supplied_md5": "2761a6a9fe7045ef75d892bd7f50c340"
+    },
+    {
+      "id": 46742389,
+      "name": "IAI72.fasta",
+      "size": 5170863,
+      "download_url": "https://ndownloader.figshare.com/files/46742389",
+      "computed_md5": "c7bdfccbed615ded1dbe9382d7d08563",
+      "supplied_md5": "c7bdfccbed615ded1dbe9382d7d08563"
+    },
+    {
+      "id": 46742392,
+      "name": "IAI73.fasta",
+      "size": 5222139,
+      "download_url": "https://ndownloader.figshare.com/files/46742392",
+      "computed_md5": "c69447f3f917eff00aef17fbd8df6c5b",
+      "supplied_md5": "c69447f3f917eff00aef17fbd8df6c5b"
+    },
+    {
+      "id": 46742395,
+      "name": "IAI74.fasta",
+      "size": 5173260,
+      "download_url": "https://ndownloader.figshare.com/files/46742395",
+      "computed_md5": "0712edaf94e1412787b95d31eb24c60f",
+      "supplied_md5": "0712edaf94e1412787b95d31eb24c60f"
+    },
+    {
+      "id": 46742398,
+      "name": "IAI75.fasta",
+      "size": 5019223,
+      "download_url": "https://ndownloader.figshare.com/files/46742398",
+      "computed_md5": "2ffea413285453517f91caf4642693ab",
+      "supplied_md5": "2ffea413285453517f91caf4642693ab"
+    },
+    {
+      "id": 46742401,
+      "name": "IAI76.fasta",
+      "size": 5002279,
+      "download_url": "https://ndownloader.figshare.com/files/46742401",
+      "computed_md5": "382421fec1e3a0533e1656a248ab2cf4",
+      "supplied_md5": "382421fec1e3a0533e1656a248ab2cf4"
+    },
+    {
+      "id": 46742404,
+      "name": "IAI77.fasta",
+      "size": 5135930,
+      "download_url": "https://ndownloader.figshare.com/files/46742404",
+      "computed_md5": "b787cea037d12737561230fb88b1f1d9",
+      "supplied_md5": "b787cea037d12737561230fb88b1f1d9"
+    },
+    {
+      "id": 46742407,
+      "name": "IAI78.fasta",
+      "size": 5253018,
+      "download_url": "https://ndownloader.figshare.com/files/46742407",
+      "computed_md5": "ad5e1714d09f91d33bbfc868cf5d9466",
+      "supplied_md5": "ad5e1714d09f91d33bbfc868cf5d9466"
+    },
+    {
+      "id": 46742410,
+      "name": "IAI79.fasta",
+      "size": 5307975,
+      "download_url": "https://ndownloader.figshare.com/files/46742410",
+      "computed_md5": "16a7067686d1ead6179d0a8cd6d471c6",
+      "supplied_md5": "16a7067686d1ead6179d0a8cd6d471c6"
+    },
+    {
+      "id": 46742413,
+      "name": "IAI80.fasta",
+      "size": 5388508,
+      "download_url": "https://ndownloader.figshare.com/files/46742413",
+      "computed_md5": "ba56e48c5f2290e369f6e56bb15561d5",
+      "supplied_md5": "ba56e48c5f2290e369f6e56bb15561d5"
+    },
+    {
+      "id": 46742416,
+      "name": "IAI81.fasta",
+      "size": 5290773,
+      "download_url": "https://ndownloader.figshare.com/files/46742416",
+      "computed_md5": "d83a7fabbc504c0f16d31cab03337f1a",
+      "supplied_md5": "d83a7fabbc504c0f16d31cab03337f1a"
+    },
+    {
+      "id": 46742419,
+      "name": "IAI82.fasta",
+      "size": 4961554,
+      "download_url": "https://ndownloader.figshare.com/files/46742419",
+      "computed_md5": "712c214cf715f09d4121f6f7baa055f7",
+      "supplied_md5": "712c214cf715f09d4121f6f7baa055f7"
+    },
+    {
+      "id": 46742431,
+      "name": "LF31.fasta",
+      "size": 5152232,
+      "download_url": "https://ndownloader.figshare.com/files/46742431",
+      "computed_md5": "51ccdd627ed0cfbccf91681ffb169c80",
+      "supplied_md5": "51ccdd627ed0cfbccf91681ffb169c80"
+    },
+    {
+      "id": 46742434,
+      "name": "LF50.fasta",
+      "size": 4885507,
+      "download_url": "https://ndownloader.figshare.com/files/46742434",
+      "computed_md5": "775e7f64b6e9a31d1b3bc96805f51087",
+      "supplied_md5": "775e7f64b6e9a31d1b3bc96805f51087"
+    },
+    {
+      "id": 46742443,
+      "name": "LF7074.fasta",
+      "size": 5265268,
+      "download_url": "https://ndownloader.figshare.com/files/46742443",
+      "computed_md5": "6bd605add722a876f165b3a4a1fddf7b",
+      "supplied_md5": "6bd605add722a876f165b3a4a1fddf7b"
+    },
+    {
+      "id": 46742437,
+      "name": "LF73.fasta",
+      "size": 4912203,
+      "download_url": "https://ndownloader.figshare.com/files/46742437",
+      "computed_md5": "c46ceabc19543bf83a310bfc3815c18d",
+      "supplied_md5": "c46ceabc19543bf83a310bfc3815c18d"
+    },
+    {
+      "id": 46742440,
+      "name": "LF82.fasta",
+      "size": 4930302,
+      "download_url": "https://ndownloader.figshare.com/files/46742440",
+      "computed_md5": "b592e89e6ff00c076b39928fc7d8e527",
+      "supplied_md5": "b592e89e6ff00c076b39928fc7d8e527"
+    },
+    {
+      "id": 46742446,
+      "name": "LI10.fasta",
+      "size": 5313940,
+      "download_url": "https://ndownloader.figshare.com/files/46742446",
+      "computed_md5": "a1586c8c502248aa58bb6cd5ae2d62da",
+      "supplied_md5": "a1586c8c502248aa58bb6cd5ae2d62da"
+    },
+    {
+      "id": 46742449,
+      "name": "LM02.fasta",
+      "size": 5179497,
+      "download_url": "https://ndownloader.figshare.com/files/46742449",
+      "computed_md5": "fa77b49de45d6b57f44fa98ed1cc8d1d",
+      "supplied_md5": "fa77b49de45d6b57f44fa98ed1cc8d1d"
+    },
+    {
+      "id": 46742452,
+      "name": "LM07.fasta",
+      "size": 5162163,
+      "download_url": "https://ndownloader.figshare.com/files/46742452",
+      "computed_md5": "77fd43784bcf59a9648b8238ec7788a9",
+      "supplied_md5": "77fd43784bcf59a9648b8238ec7788a9"
+    },
+    {
+      "id": 46742455,
+      "name": "LM08.fasta",
+      "size": 5380640,
+      "download_url": "https://ndownloader.figshare.com/files/46742455",
+      "computed_md5": "6d70934decfaaebd7bc56e8586bae6ff",
+      "supplied_md5": "6d70934decfaaebd7bc56e8586bae6ff"
+    },
+    {
+      "id": 46742458,
+      "name": "LM33.fasta",
+      "size": 5437367,
+      "download_url": "https://ndownloader.figshare.com/files/46742458",
+      "computed_md5": "6f23f78fdd08877822f9b1c116da3609",
+      "supplied_md5": "6f23f78fdd08877822f9b1c116da3609"
+    },
+    {
+      "id": 46742461,
+      "name": "LM40.fasta",
+      "size": 5352285,
+      "download_url": "https://ndownloader.figshare.com/files/46742461",
+      "computed_md5": "23eea0f47b6da9af21446f41a17bef02",
+      "supplied_md5": "23eea0f47b6da9af21446f41a17bef02"
+    },
+    {
+      "id": 46742464,
+      "name": "LMR-3158.fasta",
+      "size": 5486450,
+      "download_url": "https://ndownloader.figshare.com/files/46742464",
+      "computed_md5": "e1e64f1a25ac0489552c09fa110ec568",
+      "supplied_md5": "e1e64f1a25ac0489552c09fa110ec568"
+    },
+    {
+      "id": 46742467,
+      "name": "M863.fasta",
+      "size": 5412809,
+      "download_url": "https://ndownloader.figshare.com/files/46742467",
+      "computed_md5": "46f6f8bd416c29efbdd1a2a30c4fd1ea",
+      "supplied_md5": "46f6f8bd416c29efbdd1a2a30c4fd1ea"
+    },
+    {
+      "id": 46742470,
+      "name": "MT1B1.fasta",
+      "size": 5202179,
+      "download_url": "https://ndownloader.figshare.com/files/46742470",
+      "computed_md5": "2cce8edc3e7c0be261d1b1cab514dbb6",
+      "supplied_md5": "2cce8edc3e7c0be261d1b1cab514dbb6"
+    },
+    {
+      "id": 46742473,
+      "name": "NAN33.fasta",
+      "size": 5114959,
+      "download_url": "https://ndownloader.figshare.com/files/46742473",
+      "computed_md5": "d80d68efc6762058ea15e43c6df4905d",
+      "supplied_md5": "d80d68efc6762058ea15e43c6df4905d"
+    },
+    {
+      "id": 46742476,
+      "name": "NIC06.fasta",
+      "size": 5157447,
+      "download_url": "https://ndownloader.figshare.com/files/46742476",
+      "computed_md5": "ef2f8af0bed3d1cd250e7bc6b51522c8",
+      "supplied_md5": "ef2f8af0bed3d1cd250e7bc6b51522c8"
+    },
+    {
+      "id": 46742479,
+      "name": "NILS01.fasta",
+      "size": 5588130,
+      "download_url": "https://ndownloader.figshare.com/files/46742479",
+      "computed_md5": "125e150040b726b3fc89d175dbe6b062",
+      "supplied_md5": "125e150040b726b3fc89d175dbe6b062"
+    },
+    {
+      "id": 46742482,
+      "name": "NILS02.fasta",
+      "size": 4835883,
+      "download_url": "https://ndownloader.figshare.com/files/46742482",
+      "computed_md5": "2a993674cf14a8ead2c5e8722bee109d",
+      "supplied_md5": "2a993674cf14a8ead2c5e8722bee109d"
+    },
+    {
+      "id": 46742485,
+      "name": "NILS03.fasta",
+      "size": 5148501,
+      "download_url": "https://ndownloader.figshare.com/files/46742485",
+      "computed_md5": "37c51a7c62b31a5f48e4290249263b49",
+      "supplied_md5": "37c51a7c62b31a5f48e4290249263b49"
+    },
+    {
+      "id": 46742488,
+      "name": "NILS04.fasta",
+      "size": 4896002,
+      "download_url": "https://ndownloader.figshare.com/files/46742488",
+      "computed_md5": "b1fd9ea289ea311ca39059d91d6e53cc",
+      "supplied_md5": "b1fd9ea289ea311ca39059d91d6e53cc"
+    },
+    {
+      "id": 46742491,
+      "name": "NILS05.fasta",
+      "size": 5420623,
+      "download_url": "https://ndownloader.figshare.com/files/46742491",
+      "computed_md5": "b6ff725b330ca923bb1609d4511f10c2",
+      "supplied_md5": "b6ff725b330ca923bb1609d4511f10c2"
+    },
+    {
+      "id": 46742494,
+      "name": "NILS06.fasta",
+      "size": 4712005,
+      "download_url": "https://ndownloader.figshare.com/files/46742494",
+      "computed_md5": "5949f742b634f873057164f9d59ec0e6",
+      "supplied_md5": "5949f742b634f873057164f9d59ec0e6"
+    },
+    {
+      "id": 46742497,
+      "name": "NILS07.fasta",
+      "size": 5252763,
+      "download_url": "https://ndownloader.figshare.com/files/46742497",
+      "computed_md5": "ee0cab6bbe71ad1bbcb57765998adca6",
+      "supplied_md5": "ee0cab6bbe71ad1bbcb57765998adca6"
+    },
+    {
+      "id": 46742500,
+      "name": "NILS08.fasta",
+      "size": 5038104,
+      "download_url": "https://ndownloader.figshare.com/files/46742500",
+      "computed_md5": "d79f8348816960b7e6b44c3575a781dd",
+      "supplied_md5": "d79f8348816960b7e6b44c3575a781dd"
+    },
+    {
+      "id": 46742503,
+      "name": "NILS09.fasta",
+      "size": 5088449,
+      "download_url": "https://ndownloader.figshare.com/files/46742503",
+      "computed_md5": "cf956823229f9dde095e5f53c6056168",
+      "supplied_md5": "cf956823229f9dde095e5f53c6056168"
+    },
+    {
+      "id": 46742506,
+      "name": "NILS10.fasta",
+      "size": 4642506,
+      "download_url": "https://ndownloader.figshare.com/files/46742506",
+      "computed_md5": "879518a7977318eca6ed7b17a1b74783",
+      "supplied_md5": "879518a7977318eca6ed7b17a1b74783"
+    },
+    {
+      "id": 46742509,
+      "name": "NILS11.fasta",
+      "size": 5193311,
+      "download_url": "https://ndownloader.figshare.com/files/46742509",
+      "computed_md5": "06b193546a09f1a4c6cb161aa65216ae",
+      "supplied_md5": "06b193546a09f1a4c6cb161aa65216ae"
+    },
+    {
+      "id": 46742512,
+      "name": "NILS12.fasta",
+      "size": 5358572,
+      "download_url": "https://ndownloader.figshare.com/files/46742512",
+      "computed_md5": "1ea85575e32cbf70cb35db88b23a3999",
+      "supplied_md5": "1ea85575e32cbf70cb35db88b23a3999"
+    },
+    {
+      "id": 46742515,
+      "name": "NILS13.fasta",
+      "size": 5117628,
+      "download_url": "https://ndownloader.figshare.com/files/46742515",
+      "computed_md5": "f4189d2a58b8328c894a70c1c1613064",
+      "supplied_md5": "f4189d2a58b8328c894a70c1c1613064"
+    },
+    {
+      "id": 46742518,
+      "name": "NILS14.fasta",
+      "size": 4930873,
+      "download_url": "https://ndownloader.figshare.com/files/46742518",
+      "computed_md5": "fa530f2e7ac1ffe5b8711505761d420d",
+      "supplied_md5": "fa530f2e7ac1ffe5b8711505761d420d"
+    },
+    {
+      "id": 46742521,
+      "name": "NILS15.fasta",
+      "size": 5184305,
+      "download_url": "https://ndownloader.figshare.com/files/46742521",
+      "computed_md5": "0f9b7aa0731b8231e8d155b7cd6a9eec",
+      "supplied_md5": "0f9b7aa0731b8231e8d155b7cd6a9eec"
+    },
+    {
+      "id": 46742524,
+      "name": "NILS16.fasta",
+      "size": 5084715,
+      "download_url": "https://ndownloader.figshare.com/files/46742524",
+      "computed_md5": "570ed5fd50e0ad111be445c5d3ea8b3d",
+      "supplied_md5": "570ed5fd50e0ad111be445c5d3ea8b3d"
+    },
+    {
+      "id": 46742527,
+      "name": "NILS17.fasta",
+      "size": 4895438,
+      "download_url": "https://ndownloader.figshare.com/files/46742527",
+      "computed_md5": "c0ce60559ade91f212fe9fcbb6666c73",
+      "supplied_md5": "c0ce60559ade91f212fe9fcbb6666c73"
+    },
+    {
+      "id": 46742530,
+      "name": "NILS18.fasta",
+      "size": 5451123,
+      "download_url": "https://ndownloader.figshare.com/files/46742530",
+      "computed_md5": "08471c6304cc23d9317d7556b77f890e",
+      "supplied_md5": "08471c6304cc23d9317d7556b77f890e"
+    },
+    {
+      "id": 46742533,
+      "name": "NILS19.fasta",
+      "size": 5363135,
+      "download_url": "https://ndownloader.figshare.com/files/46742533",
+      "computed_md5": "572eba8e22f82cb35ade6443a6ff8192",
+      "supplied_md5": "572eba8e22f82cb35ade6443a6ff8192"
+    },
+    {
+      "id": 46742536,
+      "name": "NILS20.fasta",
+      "size": 5539024,
+      "download_url": "https://ndownloader.figshare.com/files/46742536",
+      "computed_md5": "7337bc2a4228f4b5a4652ec493b838dd",
+      "supplied_md5": "7337bc2a4228f4b5a4652ec493b838dd"
+    },
+    {
+      "id": 46742617,
+      "name": "NILS21.fasta",
+      "size": 5639927,
+      "download_url": "https://ndownloader.figshare.com/files/46742617",
+      "computed_md5": "2d0e4279d1ee5952020bdec883f48874",
+      "supplied_md5": "2d0e4279d1ee5952020bdec883f48874"
+    },
+    {
+      "id": 46742620,
+      "name": "NILS22.fasta",
+      "size": 5009973,
+      "download_url": "https://ndownloader.figshare.com/files/46742620",
+      "computed_md5": "4cec7b42060b7b258e7fb7fa13fcb87c",
+      "supplied_md5": "4cec7b42060b7b258e7fb7fa13fcb87c"
+    },
+    {
+      "id": 46742623,
+      "name": "NILS23.fasta",
+      "size": 5183799,
+      "download_url": "https://ndownloader.figshare.com/files/46742623",
+      "computed_md5": "d647761ba7378f9a1aebc29628004767",
+      "supplied_md5": "d647761ba7378f9a1aebc29628004767"
+    },
+    {
+      "id": 46742626,
+      "name": "NILS24.fasta",
+      "size": 4972579,
+      "download_url": "https://ndownloader.figshare.com/files/46742626",
+      "computed_md5": "387abfbd7d0813d6ed7afeb55d4b4dc2",
+      "supplied_md5": "387abfbd7d0813d6ed7afeb55d4b4dc2"
+    },
+    {
+      "id": 46742629,
+      "name": "NILS25.fasta",
+      "size": 5423858,
+      "download_url": "https://ndownloader.figshare.com/files/46742629",
+      "computed_md5": "2649aa1e2ff832fbebb5c43be08037e8",
+      "supplied_md5": "2649aa1e2ff832fbebb5c43be08037e8"
+    },
+    {
+      "id": 46742632,
+      "name": "NILS26.fasta",
+      "size": 5170903,
+      "download_url": "https://ndownloader.figshare.com/files/46742632",
+      "computed_md5": "80ceefd4eb990bed6008ae8c8feb3e05",
+      "supplied_md5": "80ceefd4eb990bed6008ae8c8feb3e05"
+    },
+    {
+      "id": 46742635,
+      "name": "NILS27.fasta",
+      "size": 5153324,
+      "download_url": "https://ndownloader.figshare.com/files/46742635",
+      "computed_md5": "80ade17a08cd329d8043a8d4bbc44cf9",
+      "supplied_md5": "80ade17a08cd329d8043a8d4bbc44cf9"
+    },
+    {
+      "id": 46742641,
+      "name": "NILS28.fasta",
+      "size": 5144476,
+      "download_url": "https://ndownloader.figshare.com/files/46742641",
+      "computed_md5": "cef9d004ce12e98ed3d1496f12bf2abe",
+      "supplied_md5": "cef9d004ce12e98ed3d1496f12bf2abe"
+    },
+    {
+      "id": 46742638,
+      "name": "NILS29.fasta",
+      "size": 5174797,
+      "download_url": "https://ndownloader.figshare.com/files/46742638",
+      "computed_md5": "a447d9ce9827d275a87dce52675bc062",
+      "supplied_md5": "a447d9ce9827d275a87dce52675bc062"
+    },
+    {
+      "id": 46742644,
+      "name": "NILS30.fasta",
+      "size": 5135563,
+      "download_url": "https://ndownloader.figshare.com/files/46742644",
+      "computed_md5": "7dda492d35c6d1c1df9fe3e14b1477c0",
+      "supplied_md5": "7dda492d35c6d1c1df9fe3e14b1477c0"
+    },
+    {
+      "id": 46742647,
+      "name": "NILS31.fasta",
+      "size": 5308584,
+      "download_url": "https://ndownloader.figshare.com/files/46742647",
+      "computed_md5": "88c4d56abc7abe65b888c2d22a50b3c2",
+      "supplied_md5": "88c4d56abc7abe65b888c2d22a50b3c2"
+    },
+    {
+      "id": 46742650,
+      "name": "NILS32.fasta",
+      "size": 5201927,
+      "download_url": "https://ndownloader.figshare.com/files/46742650",
+      "computed_md5": "68bd51655089481c632dd647ade41d18",
+      "supplied_md5": "68bd51655089481c632dd647ade41d18"
+    },
+    {
+      "id": 46742653,
+      "name": "NILS33.fasta",
+      "size": 5217820,
+      "download_url": "https://ndownloader.figshare.com/files/46742653",
+      "computed_md5": "836f0670bd4aadba5ca7765df546b4b2",
+      "supplied_md5": "836f0670bd4aadba5ca7765df546b4b2"
+    },
+    {
+      "id": 46742665,
+      "name": "NILS34.fasta",
+      "size": 5137187,
+      "download_url": "https://ndownloader.figshare.com/files/46742665",
+      "computed_md5": "01bb644c0c240381526c3f992c46ade4",
+      "supplied_md5": "01bb644c0c240381526c3f992c46ade4"
+    },
+    {
+      "id": 46742656,
+      "name": "NILS35.fasta",
+      "size": 5030856,
+      "download_url": "https://ndownloader.figshare.com/files/46742656",
+      "computed_md5": "87064ddc04ebfa1eb66f1d8aee2f2b5e",
+      "supplied_md5": "87064ddc04ebfa1eb66f1d8aee2f2b5e"
+    },
+    {
+      "id": 46742659,
+      "name": "NILS36.fasta",
+      "size": 5295276,
+      "download_url": "https://ndownloader.figshare.com/files/46742659",
+      "computed_md5": "63e068af64468485ce4ecd25a72f6d20",
+      "supplied_md5": "63e068af64468485ce4ecd25a72f6d20"
+    },
+    {
+      "id": 46742662,
+      "name": "NILS37.fasta",
+      "size": 5324053,
+      "download_url": "https://ndownloader.figshare.com/files/46742662",
+      "computed_md5": "0a1aa7688aed644835f0595e690a8eff",
+      "supplied_md5": "0a1aa7688aed644835f0595e690a8eff"
+    },
+    {
+      "id": 46742668,
+      "name": "NILS38.fasta",
+      "size": 5140767,
+      "download_url": "https://ndownloader.figshare.com/files/46742668",
+      "computed_md5": "50683e7822e833d21d1a2e2f4e91dd2f",
+      "supplied_md5": "50683e7822e833d21d1a2e2f4e91dd2f"
+    },
+    {
+      "id": 46742671,
+      "name": "NILS39.fasta",
+      "size": 5470291,
+      "download_url": "https://ndownloader.figshare.com/files/46742671",
+      "computed_md5": "6813750489631a5745974e1cbda9136c",
+      "supplied_md5": "6813750489631a5745974e1cbda9136c"
+    },
+    {
+      "id": 46742674,
+      "name": "NILS40.fasta",
+      "size": 5162405,
+      "download_url": "https://ndownloader.figshare.com/files/46742674",
+      "computed_md5": "1819459bac4210efd8f3a9f07df25664",
+      "supplied_md5": "1819459bac4210efd8f3a9f07df25664"
+    },
+    {
+      "id": 46742677,
+      "name": "NILS41.fasta",
+      "size": 4989368,
+      "download_url": "https://ndownloader.figshare.com/files/46742677",
+      "computed_md5": "6c03bd3b5856feee21b9ff6cae27a996",
+      "supplied_md5": "6c03bd3b5856feee21b9ff6cae27a996"
+    },
+    {
+      "id": 46742680,
+      "name": "NILS42.fasta",
+      "size": 5450652,
+      "download_url": "https://ndownloader.figshare.com/files/46742680",
+      "computed_md5": "a43e5c6bbaa8d0518d323626f2e4b18c",
+      "supplied_md5": "a43e5c6bbaa8d0518d323626f2e4b18c"
+    },
+    {
+      "id": 46742683,
+      "name": "NILS43.fasta",
+      "size": 4648327,
+      "download_url": "https://ndownloader.figshare.com/files/46742683",
+      "computed_md5": "bc1354cf61a2cd917ace0e35e5823ea6",
+      "supplied_md5": "bc1354cf61a2cd917ace0e35e5823ea6"
+    },
+    {
+      "id": 46742686,
+      "name": "NILS44.fasta",
+      "size": 5123234,
+      "download_url": "https://ndownloader.figshare.com/files/46742686",
+      "computed_md5": "09fb6d35e2a6cbfc1f7c28a215d39443",
+      "supplied_md5": "09fb6d35e2a6cbfc1f7c28a215d39443"
+    },
+    {
+      "id": 46742689,
+      "name": "NILS45.fasta",
+      "size": 4972667,
+      "download_url": "https://ndownloader.figshare.com/files/46742689",
+      "computed_md5": "8bf6b112840662391874e0d48a6c3126",
+      "supplied_md5": "8bf6b112840662391874e0d48a6c3126"
+    },
+    {
+      "id": 46742692,
+      "name": "NILS46.fasta",
+      "size": 5417424,
+      "download_url": "https://ndownloader.figshare.com/files/46742692",
+      "computed_md5": "378220bc34c5b41e9ce7f6dca86c6242",
+      "supplied_md5": "378220bc34c5b41e9ce7f6dca86c6242"
+    },
+    {
+      "id": 46742695,
+      "name": "NILS47.fasta",
+      "size": 5174322,
+      "download_url": "https://ndownloader.figshare.com/files/46742695",
+      "computed_md5": "4d9a2864330331616ad3159ce805c2a2",
+      "supplied_md5": "4d9a2864330331616ad3159ce805c2a2"
+    },
+    {
+      "id": 46742698,
+      "name": "NILS48.fasta",
+      "size": 5084436,
+      "download_url": "https://ndownloader.figshare.com/files/46742698",
+      "computed_md5": "430d02efe8a9695c7689f514e5c6b693",
+      "supplied_md5": "430d02efe8a9695c7689f514e5c6b693"
+    },
+    {
+      "id": 46742701,
+      "name": "NILS49.fasta",
+      "size": 5366139,
+      "download_url": "https://ndownloader.figshare.com/files/46742701",
+      "computed_md5": "b4b9fc52018347884b7aa2e82058a1ad",
+      "supplied_md5": "b4b9fc52018347884b7aa2e82058a1ad"
+    },
+    {
+      "id": 46742704,
+      "name": "NILS50.fasta",
+      "size": 5420707,
+      "download_url": "https://ndownloader.figshare.com/files/46742704",
+      "computed_md5": "f8cedeca0b9947d3b738896da9831126",
+      "supplied_md5": "f8cedeca0b9947d3b738896da9831126"
+    },
+    {
+      "id": 46742707,
+      "name": "NILS51.fasta",
+      "size": 5038943,
+      "download_url": "https://ndownloader.figshare.com/files/46742707",
+      "computed_md5": "d4cabe994223212ab3b24f48df2e2494",
+      "supplied_md5": "d4cabe994223212ab3b24f48df2e2494"
+    },
+    {
+      "id": 46742710,
+      "name": "NILS52.fasta",
+      "size": 5215560,
+      "download_url": "https://ndownloader.figshare.com/files/46742710",
+      "computed_md5": "21136f0729159369671bbac2dbf369c6",
+      "supplied_md5": "21136f0729159369671bbac2dbf369c6"
+    },
+    {
+      "id": 46742713,
+      "name": "NILS53.fasta",
+      "size": 5038715,
+      "download_url": "https://ndownloader.figshare.com/files/46742713",
+      "computed_md5": "68fdd0d8d5362fd3079b53d500c3be97",
+      "supplied_md5": "68fdd0d8d5362fd3079b53d500c3be97"
+    },
+    {
+      "id": 46742716,
+      "name": "NILS54.fasta",
+      "size": 5298152,
+      "download_url": "https://ndownloader.figshare.com/files/46742716",
+      "computed_md5": "49eeff305d04c741d9d210828048d82a",
+      "supplied_md5": "49eeff305d04c741d9d210828048d82a"
+    },
+    {
+      "id": 46742719,
+      "name": "NILS55.fasta",
+      "size": 5308261,
+      "download_url": "https://ndownloader.figshare.com/files/46742719",
+      "computed_md5": "d55c71231eb25541419c71c1ef163d2d",
+      "supplied_md5": "d55c71231eb25541419c71c1ef163d2d"
+    },
+    {
+      "id": 46742722,
+      "name": "NILS56.fasta",
+      "size": 5242163,
+      "download_url": "https://ndownloader.figshare.com/files/46742722",
+      "computed_md5": "5cd4cc6edf0c7cae9a74c8db72c7aa9e",
+      "supplied_md5": "5cd4cc6edf0c7cae9a74c8db72c7aa9e"
+    },
+    {
+      "id": 46742725,
+      "name": "NILS57.fasta",
+      "size": 5403075,
+      "download_url": "https://ndownloader.figshare.com/files/46742725",
+      "computed_md5": "0aa0785676e26043f867914a6650244f",
+      "supplied_md5": "0aa0785676e26043f867914a6650244f"
+    },
+    {
+      "id": 46742728,
+      "name": "NILS58.fasta",
+      "size": 5368943,
+      "download_url": "https://ndownloader.figshare.com/files/46742728",
+      "computed_md5": "d02f82ebf94a6b3f54fca76441fbc36a",
+      "supplied_md5": "d02f82ebf94a6b3f54fca76441fbc36a"
+    },
+    {
+      "id": 46742731,
+      "name": "NILS59.fasta",
+      "size": 5347186,
+      "download_url": "https://ndownloader.figshare.com/files/46742731",
+      "computed_md5": "af2ba949ff9feb6608666b8c2a2df9c0",
+      "supplied_md5": "af2ba949ff9feb6608666b8c2a2df9c0"
+    },
+    {
+      "id": 46742734,
+      "name": "NILS60.fasta",
+      "size": 5173597,
+      "download_url": "https://ndownloader.figshare.com/files/46742734",
+      "computed_md5": "d321a795158227b01d576179d3e35420",
+      "supplied_md5": "d321a795158227b01d576179d3e35420"
+    },
+    {
+      "id": 46742737,
+      "name": "NILS61.fasta",
+      "size": 5147495,
+      "download_url": "https://ndownloader.figshare.com/files/46742737",
+      "computed_md5": "687e400a4a1ccdbced780406494e44cb",
+      "supplied_md5": "687e400a4a1ccdbced780406494e44cb"
+    },
+    {
+      "id": 46742740,
+      "name": "NILS62.fasta",
+      "size": 5131770,
+      "download_url": "https://ndownloader.figshare.com/files/46742740",
+      "computed_md5": "c9ad7cf3b133af01e49666fbf4b1b456",
+      "supplied_md5": "c9ad7cf3b133af01e49666fbf4b1b456"
+    },
+    {
+      "id": 46742743,
+      "name": "NILS63.fasta",
+      "size": 5051658,
+      "download_url": "https://ndownloader.figshare.com/files/46742743",
+      "computed_md5": "d42d6d494b070375d5716410427b610f",
+      "supplied_md5": "d42d6d494b070375d5716410427b610f"
+    },
+    {
+      "id": 46742746,
+      "name": "NILS64.fasta",
+      "size": 5485478,
+      "download_url": "https://ndownloader.figshare.com/files/46742746",
+      "computed_md5": "2bcb1fdc4bfeffbc5adcb8b3e81e64e1",
+      "supplied_md5": "2bcb1fdc4bfeffbc5adcb8b3e81e64e1"
+    },
+    {
+      "id": 46742749,
+      "name": "NILS65.fasta",
+      "size": 5325699,
+      "download_url": "https://ndownloader.figshare.com/files/46742749",
+      "computed_md5": "31aad7a92cf1ea9844c03a091ed22cb2",
+      "supplied_md5": "31aad7a92cf1ea9844c03a091ed22cb2"
+    },
+    {
+      "id": 46742752,
+      "name": "NILS66.fasta",
+      "size": 5387659,
+      "download_url": "https://ndownloader.figshare.com/files/46742752",
+      "computed_md5": "efccf70055b1ec54e570ddccde1f9e17",
+      "supplied_md5": "efccf70055b1ec54e570ddccde1f9e17"
+    },
+    {
+      "id": 46742755,
+      "name": "NILS67.fasta",
+      "size": 5192694,
+      "download_url": "https://ndownloader.figshare.com/files/46742755",
+      "computed_md5": "735e5b14b7cb575076a32c1749a65416",
+      "supplied_md5": "735e5b14b7cb575076a32c1749a65416"
+    },
+    {
+      "id": 46742758,
+      "name": "NILS68.fasta",
+      "size": 5487105,
+      "download_url": "https://ndownloader.figshare.com/files/46742758",
+      "computed_md5": "29f705938acea3609acdd5c0da00360f",
+      "supplied_md5": "29f705938acea3609acdd5c0da00360f"
+    },
+    {
+      "id": 46742761,
+      "name": "NILS69.fasta",
+      "size": 5076128,
+      "download_url": "https://ndownloader.figshare.com/files/46742761",
+      "computed_md5": "2c4df51cd91623d6fb8b8860d098216e",
+      "supplied_md5": "2c4df51cd91623d6fb8b8860d098216e"
+    },
+    {
+      "id": 46742764,
+      "name": "NILS70.fasta",
+      "size": 5526407,
+      "download_url": "https://ndownloader.figshare.com/files/46742764",
+      "computed_md5": "4a22621dbd5aa0c151d6e64260e38500",
+      "supplied_md5": "4a22621dbd5aa0c151d6e64260e38500"
+    },
+    {
+      "id": 46742767,
+      "name": "NILS71.fasta",
+      "size": 5284337,
+      "download_url": "https://ndownloader.figshare.com/files/46742767",
+      "computed_md5": "021e10c65d0d1381ec44eec215e21884",
+      "supplied_md5": "021e10c65d0d1381ec44eec215e21884"
+    },
+    {
+      "id": 46742770,
+      "name": "NILS72.fasta",
+      "size": 5583274,
+      "download_url": "https://ndownloader.figshare.com/files/46742770",
+      "computed_md5": "6704c68aaca625a8a5d80b851619e9c9",
+      "supplied_md5": "6704c68aaca625a8a5d80b851619e9c9"
+    },
+    {
+      "id": 46742773,
+      "name": "NILS73.fasta",
+      "size": 5484751,
+      "download_url": "https://ndownloader.figshare.com/files/46742773",
+      "computed_md5": "ba9d7e41990015733febdfbed3976e9c",
+      "supplied_md5": "ba9d7e41990015733febdfbed3976e9c"
+    },
+    {
+      "id": 46742776,
+      "name": "NILS74.fasta",
+      "size": 5254416,
+      "download_url": "https://ndownloader.figshare.com/files/46742776",
+      "computed_md5": "5879ddf83fbd8db84cd5e7c3b5d17e46",
+      "supplied_md5": "5879ddf83fbd8db84cd5e7c3b5d17e46"
+    },
+    {
+      "id": 46742779,
+      "name": "NILS75.fasta",
+      "size": 5508685,
+      "download_url": "https://ndownloader.figshare.com/files/46742779",
+      "computed_md5": "36be9e08938c07b3579876574f58a906",
+      "supplied_md5": "36be9e08938c07b3579876574f58a906"
+    },
+    {
+      "id": 46742782,
+      "name": "NILS76.fasta",
+      "size": 5145840,
+      "download_url": "https://ndownloader.figshare.com/files/46742782",
+      "computed_md5": "3182b24fac8cdba4cb83c274e01a432d",
+      "supplied_md5": "3182b24fac8cdba4cb83c274e01a432d"
+    },
+    {
+      "id": 46742785,
+      "name": "NILS77.fasta",
+      "size": 5190557,
+      "download_url": "https://ndownloader.figshare.com/files/46742785",
+      "computed_md5": "15807370188af9d6ecc0b2172289d160",
+      "supplied_md5": "15807370188af9d6ecc0b2172289d160"
+    },
+    {
+      "id": 46742788,
+      "name": "NILS78.fasta",
+      "size": 5322007,
+      "download_url": "https://ndownloader.figshare.com/files/46742788",
+      "computed_md5": "6e06da0b31f3f4d5586d2055215d9c70",
+      "supplied_md5": "6e06da0b31f3f4d5586d2055215d9c70"
+    },
+    {
+      "id": 46742791,
+      "name": "NILS79.fasta",
+      "size": 5157725,
+      "download_url": "https://ndownloader.figshare.com/files/46742791",
+      "computed_md5": "f3a149f517c263415e1213029e70deda",
+      "supplied_md5": "f3a149f517c263415e1213029e70deda"
+    },
+    {
+      "id": 46742794,
+      "name": "NILS80.fasta",
+      "size": 5118957,
+      "download_url": "https://ndownloader.figshare.com/files/46742794",
+      "computed_md5": "97ca75aaf0cf84c8fffcdaf9cee1c40f",
+      "supplied_md5": "97ca75aaf0cf84c8fffcdaf9cee1c40f"
+    },
+    {
+      "id": 46742797,
+      "name": "NILS81.fasta",
+      "size": 5585132,
+      "download_url": "https://ndownloader.figshare.com/files/46742797",
+      "computed_md5": "8e23326d194ca52cbfe9d952890f0d5d",
+      "supplied_md5": "8e23326d194ca52cbfe9d952890f0d5d"
+    },
+    {
+      "id": 46742800,
+      "name": "NILS82.fasta",
+      "size": 5193674,
+      "download_url": "https://ndownloader.figshare.com/files/46742800",
+      "computed_md5": "cbb8896633d70f64822a4145df46ccd3",
+      "supplied_md5": "cbb8896633d70f64822a4145df46ccd3"
+    },
+    {
+      "id": 46742812,
+      "name": "NRG807C.fasta",
+      "size": 4964800,
+      "download_url": "https://ndownloader.figshare.com/files/46742812",
+      "computed_md5": "cb90907489556b796c2289fc3217d242",
+      "supplied_md5": "cb90907489556b796c2289fc3217d242"
+    },
+    {
+      "id": 46742818,
+      "name": "PDP110.fasta",
+      "size": 5413928,
+      "download_url": "https://ndownloader.figshare.com/files/46742818",
+      "computed_md5": "5f2392964b3dc42271a793eb5fd608a2",
+      "supplied_md5": "5f2392964b3dc42271a793eb5fd608a2"
+    },
+    {
+      "id": 46742815,
+      "name": "PDP21.fasta",
+      "size": 5351200,
+      "download_url": "https://ndownloader.figshare.com/files/46742815",
+      "computed_md5": "7eb421e047cdda955db2a65b240e1949",
+      "supplied_md5": "7eb421e047cdda955db2a65b240e1949"
+    },
+    {
+      "id": 46742821,
+      "name": "PDP351.fasta",
+      "size": 5009502,
+      "download_url": "https://ndownloader.figshare.com/files/46742821",
+      "computed_md5": "e5e9b63a54320ce9a299c7ceb9d05815",
+      "supplied_md5": "e5e9b63a54320ce9a299c7ceb9d05815"
+    },
+    {
+      "id": 46742824,
+      "name": "ROAR012.fasta",
+      "size": 5300606,
+      "download_url": "https://ndownloader.figshare.com/files/46742824",
+      "computed_md5": "725f8197e55de3a9fdfb997ebfd23418",
+      "supplied_md5": "725f8197e55de3a9fdfb997ebfd23418"
+    },
+    {
+      "id": 46742827,
+      "name": "ROAR019.fasta",
+      "size": 4727436,
+      "download_url": "https://ndownloader.figshare.com/files/46742827",
+      "computed_md5": "f6c21645e5671cc70c9add7d7c65a4aa",
+      "supplied_md5": "f6c21645e5671cc70c9add7d7c65a4aa"
+    },
+    {
+      "id": 46742830,
+      "name": "ROAR029.fasta",
+      "size": 5393536,
+      "download_url": "https://ndownloader.figshare.com/files/46742830",
+      "computed_md5": "888b78170e254e3ece5435ad20263c90",
+      "supplied_md5": "888b78170e254e3ece5435ad20263c90"
+    },
+    {
+      "id": 46742833,
+      "name": "ROAR036.fasta",
+      "size": 5573053,
+      "download_url": "https://ndownloader.figshare.com/files/46742833",
+      "computed_md5": "27a3e62fc8483d01fc1c2bc51510c7b5",
+      "supplied_md5": "27a3e62fc8483d01fc1c2bc51510c7b5"
+    },
+    {
+      "id": 46742836,
+      "name": "ROAR043.fasta",
+      "size": 4934569,
+      "download_url": "https://ndownloader.figshare.com/files/46742836",
+      "computed_md5": "3e3b560c80f39b4fa568e45c0b52187b",
+      "supplied_md5": "3e3b560c80f39b4fa568e45c0b52187b"
+    },
+    {
+      "id": 46742839,
+      "name": "ROAR047.fasta",
+      "size": 5045561,
+      "download_url": "https://ndownloader.figshare.com/files/46742839",
+      "computed_md5": "de76a6fdce385057fb962e78495ccf38",
+      "supplied_md5": "de76a6fdce385057fb962e78495ccf38"
+    },
+    {
+      "id": 46742842,
+      "name": "ROAR059.fasta",
+      "size": 5694916,
+      "download_url": "https://ndownloader.figshare.com/files/46742842",
+      "computed_md5": "15dcd5167ca7981ffe08bf034475ef36",
+      "supplied_md5": "15dcd5167ca7981ffe08bf034475ef36"
+    },
+    {
+      "id": 46742845,
+      "name": "ROAR061.fasta",
+      "size": 5045961,
+      "download_url": "https://ndownloader.figshare.com/files/46742845",
+      "computed_md5": "4321ef9c45985a9e04b2c05ad537d74a",
+      "supplied_md5": "4321ef9c45985a9e04b2c05ad537d74a"
+    },
+    {
+      "id": 46742848,
+      "name": "ROAR072.fasta",
+      "size": 5049550,
+      "download_url": "https://ndownloader.figshare.com/files/46742848",
+      "computed_md5": "4f5e8f37bb6fccbab2cd1c60fb0f0453",
+      "supplied_md5": "4f5e8f37bb6fccbab2cd1c60fb0f0453"
+    },
+    {
+      "id": 46742851,
+      "name": "ROAR082.fasta",
+      "size": 4904109,
+      "download_url": "https://ndownloader.figshare.com/files/46742851",
+      "computed_md5": "d22ed97dd025c0e2558e515c0018bbf6",
+      "supplied_md5": "d22ed97dd025c0e2558e515c0018bbf6"
+    },
+    {
+      "id": 46742854,
+      "name": "ROAR116.fasta",
+      "size": 4763679,
+      "download_url": "https://ndownloader.figshare.com/files/46742854",
+      "computed_md5": "0115cb73c0b7db98732f2e81f0c3ad02",
+      "supplied_md5": "0115cb73c0b7db98732f2e81f0c3ad02"
+    },
+    {
+      "id": 46742857,
+      "name": "ROAR129.fasta",
+      "size": 5134284,
+      "download_url": "https://ndownloader.figshare.com/files/46742857",
+      "computed_md5": "7aeebaee319b34b13c548e28648ff043",
+      "supplied_md5": "7aeebaee319b34b13c548e28648ff043"
+    },
+    {
+      "id": 46742860,
+      "name": "ROAR130.fasta",
+      "size": 4786999,
+      "download_url": "https://ndownloader.figshare.com/files/46742860",
+      "computed_md5": "da5dece98213d5fa0aa0a7bbfef210e9",
+      "supplied_md5": "da5dece98213d5fa0aa0a7bbfef210e9"
+    },
+    {
+      "id": 46742863,
+      "name": "ROAR131.fasta",
+      "size": 5635704,
+      "download_url": "https://ndownloader.figshare.com/files/46742863",
+      "computed_md5": "9b130d2cb42a036e755662d61b087a06",
+      "supplied_md5": "9b130d2cb42a036e755662d61b087a06"
+    },
+    {
+      "id": 46742866,
+      "name": "ROAR145.fasta",
+      "size": 4929352,
+      "download_url": "https://ndownloader.figshare.com/files/46742866",
+      "computed_md5": "2d9531c7443a5b7542ff2dfd3815c8ee",
+      "supplied_md5": "2d9531c7443a5b7542ff2dfd3815c8ee"
+    },
+    {
+      "id": 46742869,
+      "name": "ROAR176.fasta",
+      "size": 4717162,
+      "download_url": "https://ndownloader.figshare.com/files/46742869",
+      "computed_md5": "d2671eb2569762d892e63613e6b818c2",
+      "supplied_md5": "d2671eb2569762d892e63613e6b818c2"
+    },
+    {
+      "id": 46742872,
+      "name": "ROAR178.fasta",
+      "size": 5052847,
+      "download_url": "https://ndownloader.figshare.com/files/46742872",
+      "computed_md5": "178ae4f1721d6937f9ac1f1b799d334a",
+      "supplied_md5": "178ae4f1721d6937f9ac1f1b799d334a"
+    },
+    {
+      "id": 46742875,
+      "name": "ROAR185.fasta",
+      "size": 5399738,
+      "download_url": "https://ndownloader.figshare.com/files/46742875",
+      "computed_md5": "551743cf7289302de3fd9932f3ade780",
+      "supplied_md5": "551743cf7289302de3fd9932f3ade780"
+    },
+    {
+      "id": 46742878,
+      "name": "ROAR205.fasta",
+      "size": 5189402,
+      "download_url": "https://ndownloader.figshare.com/files/46742878",
+      "computed_md5": "c55c977b8a3baa72df63354b82d4dd05",
+      "supplied_md5": "c55c977b8a3baa72df63354b82d4dd05"
+    },
+    {
+      "id": 46742881,
+      "name": "ROAR220.fasta",
+      "size": 4672046,
+      "download_url": "https://ndownloader.figshare.com/files/46742881",
+      "computed_md5": "ac37b0fd835a01feb90ea0cb452e1874",
+      "supplied_md5": "ac37b0fd835a01feb90ea0cb452e1874"
+    },
+    {
+      "id": 46742884,
+      "name": "ROAR274.fasta",
+      "size": 5352384,
+      "download_url": "https://ndownloader.figshare.com/files/46742884",
+      "computed_md5": "f6404c1ddfc1287aaaec815fdfcc0921",
+      "supplied_md5": "f6404c1ddfc1287aaaec815fdfcc0921"
+    },
+    {
+      "id": 46742887,
+      "name": "ROAR291.fasta",
+      "size": 4604575,
+      "download_url": "https://ndownloader.figshare.com/files/46742887",
+      "computed_md5": "d5683da2867a2ee2e06a64674dc5b97a",
+      "supplied_md5": "d5683da2867a2ee2e06a64674dc5b97a"
+    },
+    {
+      "id": 46742890,
+      "name": "ROAR292.fasta",
+      "size": 5084855,
+      "download_url": "https://ndownloader.figshare.com/files/46742890",
+      "computed_md5": "35eaf45815b5fa1a9fbd6421dc998513",
+      "supplied_md5": "35eaf45815b5fa1a9fbd6421dc998513"
+    },
+    {
+      "id": 46742893,
+      "name": "ROAR334.fasta",
+      "size": 5048304,
+      "download_url": "https://ndownloader.figshare.com/files/46742893",
+      "computed_md5": "22d846c1c9f4438987683947ca80e396",
+      "supplied_md5": "22d846c1c9f4438987683947ca80e396"
+    },
+    {
+      "id": 46742896,
+      "name": "ROAR344.fasta",
+      "size": 4764809,
+      "download_url": "https://ndownloader.figshare.com/files/46742896",
+      "computed_md5": "df143e06953f4a646adcb7d27b32cc11",
+      "supplied_md5": "df143e06953f4a646adcb7d27b32cc11"
+    },
+    {
+      "id": 46742899,
+      "name": "ROAR387.fasta",
+      "size": 5397704,
+      "download_url": "https://ndownloader.figshare.com/files/46742899",
+      "computed_md5": "5c910f733a930468134cc5b9a1cefbb9",
+      "supplied_md5": "5c910f733a930468134cc5b9a1cefbb9"
+    },
+    {
+      "id": 46742902,
+      "name": "ROAR400.fasta",
+      "size": 5120977,
+      "download_url": "https://ndownloader.figshare.com/files/46742902",
+      "computed_md5": "0bd478291aaaa3f5cfa85055994f75ee",
+      "supplied_md5": "0bd478291aaaa3f5cfa85055994f75ee"
+    },
+    {
+      "id": 46742905,
+      "name": "ROAR419.fasta",
+      "size": 5054454,
+      "download_url": "https://ndownloader.figshare.com/files/46742905",
+      "computed_md5": "e3615d5da8e1faf4068fab0708611361",
+      "supplied_md5": "e3615d5da8e1faf4068fab0708611361"
+    },
+    {
+      "id": 46742908,
+      "name": "ROAR434.fasta",
+      "size": 5248728,
+      "download_url": "https://ndownloader.figshare.com/files/46742908",
+      "computed_md5": "3275c41dd043073baff8b5bce3b7cae6",
+      "supplied_md5": "3275c41dd043073baff8b5bce3b7cae6"
+    },
+    {
+      "id": 46742911,
+      "name": "ROAR438.fasta",
+      "size": 4644082,
+      "download_url": "https://ndownloader.figshare.com/files/46742911",
+      "computed_md5": "a56ed614ecf0d41c4f9e06b324180112",
+      "supplied_md5": "a56ed614ecf0d41c4f9e06b324180112"
+    },
+    {
+      "id": 46742926,
+      "name": "S1-109.fasta",
+      "size": 4882348,
+      "download_url": "https://ndownloader.figshare.com/files/46742926",
+      "computed_md5": "e4fb18e8bd8d4059a979f272e7953476",
+      "supplied_md5": "e4fb18e8bd8d4059a979f272e7953476"
+    },
+    {
+      "id": 46742914,
+      "name": "S1-11.fasta",
+      "size": 4817851,
+      "download_url": "https://ndownloader.figshare.com/files/46742914",
+      "computed_md5": "92a3c773ed808c8ef7fefccb4ebae8ca",
+      "supplied_md5": "92a3c773ed808c8ef7fefccb4ebae8ca"
+    },
+    {
+      "id": 46742917,
+      "name": "S1-76.fasta",
+      "size": 5342463,
+      "download_url": "https://ndownloader.figshare.com/files/46742917",
+      "computed_md5": "0eebdca37999ab3ebd2a94e291a47810",
+      "supplied_md5": "0eebdca37999ab3ebd2a94e291a47810"
+    },
+    {
+      "id": 46742920,
+      "name": "S1-84.fasta",
+      "size": 4781170,
+      "download_url": "https://ndownloader.figshare.com/files/46742920",
+      "computed_md5": "64799bdf5f637dc568d95d86b1031a23",
+      "supplied_md5": "64799bdf5f637dc568d95d86b1031a23"
+    },
+    {
+      "id": 46742923,
+      "name": "S1-91.fasta",
+      "size": 5084766,
+      "download_url": "https://ndownloader.figshare.com/files/46742923",
+      "computed_md5": "7861614d7ede989d772e15d8577ab56e",
+      "supplied_md5": "7861614d7ede989d772e15d8577ab56e"
+    },
+    {
+      "id": 46742929,
+      "name": "S2-1.fasta",
+      "size": 4958142,
+      "download_url": "https://ndownloader.figshare.com/files/46742929",
+      "computed_md5": "df0e7e0966135b30aedbd4dacaaed1e3",
+      "supplied_md5": "df0e7e0966135b30aedbd4dacaaed1e3"
+    },
+    {
+      "id": 46742932,
+      "name": "T145.fasta",
+      "size": 5394973,
+      "download_url": "https://ndownloader.figshare.com/files/46742932",
+      "computed_md5": "d15f5e2d5a314a1401f7f7b3613431d4",
+      "supplied_md5": "d15f5e2d5a314a1401f7f7b3613431d4"
+    },
+    {
+      "id": 46742938,
+      "name": "T147.fasta",
+      "size": 5358349,
+      "download_url": "https://ndownloader.figshare.com/files/46742938",
+      "computed_md5": "68710b55923c19024e69e1b04cc8a100",
+      "supplied_md5": "68710b55923c19024e69e1b04cc8a100"
+    },
+    {
+      "id": 46742944,
+      "name": "T205.fasta",
+      "size": 5226739,
+      "download_url": "https://ndownloader.figshare.com/files/46742944",
+      "computed_md5": "85b90029dc9cd6513157825fe5538c3e",
+      "supplied_md5": "85b90029dc9cd6513157825fe5538c3e"
+    },
+    {
+      "id": 46742941,
+      "name": "TW10509.fasta",
+      "size": 5492317,
+      "download_url": "https://ndownloader.figshare.com/files/46742941",
+      "computed_md5": "adccca8a97ab22a41674e263b3fcb742",
+      "supplied_md5": "adccca8a97ab22a41674e263b3fcb742"
+    },
+    {
+      "id": 46742947,
+      "name": "VDG427.fasta",
+      "size": 5178216,
+      "download_url": "https://ndownloader.figshare.com/files/46742947",
+      "computed_md5": "b70f433fa8e21c30e8ead2f7603c5bb4",
+      "supplied_md5": "b70f433fa8e21c30e8ead2f7603c5bb4"
+    },
+    {
+      "id": 46741573,
+      "name": "colF12g.fasta",
+      "size": 5455925,
+      "download_url": "https://ndownloader.figshare.com/files/46741573",
+      "computed_md5": "91524f40acd46b03c634d42255e1ab54",
+      "supplied_md5": "91524f40acd46b03c634d42255e1ab54"
+    }
+  ]
+}

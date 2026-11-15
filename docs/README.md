@@ -23,6 +23,7 @@ Frozen protocols and verified outputs live in [`data/studies/`](../data/studies/
 | Matched new-host comparison, 94 candidates | [Protocol](new-host-retrieval-protocol.md), [results](new-host-retrieval-results.md) |
 | Missed candidates and source evidence, 94 candidates | [Complete miss/exclusion ledger and reproduction](missed-candidate-audit.md) |
 | Training-only complementary panels, two-test budget | [Results, named rescues and newly missed hosts](complementary-panel-results.md) |
+| Picard same-source extension, 138 new-group hosts | [Admission, frozen-panel replication and source cases](picard-extension-results.md) |
 | GenoPHI | [Demo and runbook](genophi-demo-reproduction.md), [aligned comparator](genophi-frozen-comparator.md), [seed sensitivity](genophi-seed-sensitivity.md) |
 | Screening budgets from existing scores | [Hit/cost audit](screening-budget-audit.md) |
 | Known-library retrieval | [Annotation baseline](host-retrieval-benchmark.md), [host 4-mer comparison](genome-host-retrieval.md) |

@@ -1,0 +1,42 @@
+{
+  "study_id": "picard-same-source-extension-v1",
+  "status": "exploratory_protocol_fixed_before_admission_and_panel_scoring",
+  "base_commit": "52a55dc9650dfabec64641b0e179e27b2d8e5251",
+  "source_revision": "99656d8c020fcd1dbbc30a02ee10274a07655562",
+  "purpose": "First audit the 225 matrix-host records outside the existing 177. Then evaluate the already fixed complementary panels on eligible previously unused genomic groups, without reselection or refitting.",
+  "evidence_scope": "Same primary study, previously inspected public matrix and metadata. This is an exploratory development extension, not blind, cross-study or independent release validation.",
+  "endpoint": "Pinned original aggregate source MLC > 0; original values 0 through 4. Blanks remain unknown. No productive-infection, mixture or clinical endpoint claim.",
+  "admission": {
+    "roster": "The 402 matrix records minus the 177 frozen source_bacterium crosswalk names; all 225 records remain in the ledger regardless of admission.",
+    "aliases": "Uppercase and remove hyphens, as in the existing cohort. Require one-to-one keys within each source, metadata and Figshare roster. No fuzzy repairs.",
+    "taxon_scope": ["A", "B1", "B2", "C", "D", "E", "F", "G"],
+    "taxon_semantics": "Operational scope from the source Clermont_Phylo field only. Exclude named non-coli species and cryptic clades from this primary extension; do not claim independent sequence-based species certification or rewrite the original cohort.",
+    "sequence": "Use Figshare article 25941691 version 1 only; verify each new FASTA's recorded size and MD5, validate IUPAC contigs, record raw SHA-256 and the existing canonical assembly digest. Reuse old canonical digests from the frozen split only after matching the 177 existing Figshare file IDs, sizes and MD5s to the original resource lock.",
+    "grouping": "Use every row of the pinned 404-host core-distance table, including its two matrix-absent bridge records. Connect pairs at distance strictly less than 0.0001 and exact canonical assembly matches among the 402 matrix hosts. Use transitive components; any component containing an original-cohort host is excluded from the primary extension. Unmeasured distance-only records never enter evaluation.",
+    "core_distance_threshold": 0.0001,
+    "complete_panel": "Require all 94 original library readings observed for primary evaluation, including hosts with all 94 observed zeros. Retain incomplete records and their unknown pairs in the admission ledger.",
+    "forbidden_criteria": ["positive label count", "MLC intensity", "panel success", "rescue contribution", "model score", "choice of a favorable subgroup"]
+  },
+  "evaluation": {
+    "budget": 2,
+    "primary_pair": ["DIJ07_P2", "LF73_P1"],
+    "secondary_pair": ["536_P7", "LF110_P2"],
+    "prevalence": "Recompute the original (positive+1)/(observed+2) rates from each original training split only. Preserve all 94 candidates and exact-score tie expectations. No extension label selects a candidate or ordering.",
+    "primary_contrast": "Primary fixed pair minus original grouped_host training prevalence on all admitted new-group hosts.",
+    "secondary_contrast": "Secondary fixed pair minus original non-B2 training prevalence on the same admitted hosts.",
+    "subgroups": ["all admitted hosts", "source metadata B2", "source metadata non-B2"],
+    "metrics": ["Hit@1", "Hit@2", "capped tests consumed = 2 - Hit@1", "rescued hosts", "newly missed hosts"],
+    "uncertainty": "2000 paired whole-component percentile bootstrap draws, seed 20261115, 95% pointwise intervals, conditional on fixed panels. Omit intervals for fewer than two groups. Do not pool methods or strata as independent samples.",
+    "replication_rule": "A positive primary Hit@2 interval lower bound is supportive same-source replication only. Retain cost, secondary and B2 failures regardless; no serving default or promotion change.",
+    "model_training_or_candidate_reselection": false,
+    "genome_model_scoring": false,
+    "biological_mechanism_analysis": false
+  },
+  "resources": {
+    "source_metadata": {"url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/picard_collection.csv", "sha256": "e880b60cdc3df6f000b2f0e74985415bd11737d474ab68dd35d0085940cf5b13", "size_bytes": 42739},
+    "source_mlc": {"url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv", "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829", "size_bytes": 158199},
+    "core_distances": {"url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/genomics/bacteria/isolation_strains/panacota/tree/370+host_distance_matrix_orignames.tsv", "sha256": "1e65a30083d33f8f67b1c009049b473ae38ab3f3d6c7d91fb8639c013af64eb8", "size_bytes": 1917070},
+    "figshare_metadata": {"url": "https://api.figshare.com/v2/articles/25941691/versions/1", "version": 1, "expected_files": 403, "license": "CC BY 4.0"}
+  },
+  "reuse": "Reuse the existing primary-archive byte-correspondence review and Figshare genome license record. No original genome payload or full MLC matrix will be committed. Attribution: Gaborieau, Vaysset, Tesson et al., DOI 10.1038/s41564-024-01832-5; Zenodo 10.5281/zenodo.13831957; genome assemblies Figshare 10.6084/m9.figshare.25941691.v1."
+}

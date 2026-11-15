@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "imports_runner": false,
+  "new_assemblies_rehashed": 225,
+  "old_canonical_digests_reused": 177,
+  "graph_nodes_reconstructed": 404,
+  "graph_edges_checked": 183,
+  "admission_records_checked": 225,
+  "unknown_pairs_checked": 115,
+  "eligible_hosts": 138,
+  "eligible_groups": 114,
+  "verifier_sha256": "eba97172a8b307663f4404d79005fbaac366915db382536e38554dffea7c112f",
+  "admission_receipt_sha256": "0cc84918ca6a59fa48c674ebe2b1cc2dfc59394050f737d01dc222e57be0fe33"
+}

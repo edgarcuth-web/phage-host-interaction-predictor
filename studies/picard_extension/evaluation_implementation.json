@@ -1,0 +1,9 @@
+{
+  "status": "frozen_before_first_extension_panel_scoring",
+  "files_sha256": {
+    "studies/picard_extension/evaluate_panels.py": "4e2c22c9aca44620ce5a29f3dc2fd7d3ed40c1aa661c40cfec14075213bb5c47",
+    "studies/complementary_panel/run_comparison.py": "d4eaabaa1ed2741a917acfb8b8ccd5bd367e22af1197287fa79cff7932f3a991",
+    "studies/picard_extension/cohort_freeze.json": "8ef0d9fb9eab915a25d4a03b037b01c9b0a86a30781a8c8ea94cfb2617b1aa38",
+    "studies/picard_extension/protocol.json": "92ad7ee4a3ec05a1c07b7c56364a8bc1e80c4c5b02dbd1e762ea493082933c01"
+  }
+}

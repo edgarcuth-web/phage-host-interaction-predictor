@@ -95,6 +95,13 @@ it does not admit a dataset. Source tables, reads and genomes stay outside Git.
 
 ## Public-panel follow-up, 2026-11-14
 
+Subsequently, the [Picard extension](picard-extension-results.md) verified all
+225 additional source assemblies and admitted 138 complete, in-scope hosts in
+114 components disjoint from the original cohort. Its fixed LF73_P1 panel gains
+eight net hits; LF110_P2 loses nine. This resolves the new-assembly check for
+that same-source extension, while the independent-release reservation above
+remains unchanged. The following historical intake records remain intact.
+
 The [follow-up source receipt](../data/studies/public_panel_followup.v1.json)
 records an inspection of Vitt's actual supplementary files and Kaneko's public
 sequence metadata. These are candidates for a separate E. coli panel, not
