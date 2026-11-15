@@ -84,6 +84,7 @@ error 1.11e-16). The independent cutoff-based verifier imports no runner helpers
 it checks 854 decisions, 80,276 candidate rank intervals and 11,979 locally
 exported raw annotation rows. QA receipts and the
 [publication manifest](../data/studies/results/missed_candidate_audit.v1/PUBLICATION.json)
-bind the checked code and retained outputs. The next coverage-selection
-hypothesis remains untested; this audit neither changes the frozen models nor
-establishes a biological cause of their misses.
+bind the checked code and retained outputs. The subsequent
+[training-only coverage comparison](complementary-panel-results.md) retains its
+primary gain and B2 loss separately. This audit neither changes the frozen models
+nor establishes a biological cause of their misses.

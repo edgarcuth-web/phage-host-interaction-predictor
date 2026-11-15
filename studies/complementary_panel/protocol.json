@@ -1,0 +1,52 @@
+{
+  "study_id": "complementary-fixed-panel-v1",
+  "status": "exploratory_protocol_fixed_before_this_comparison",
+  "source_revision": "18470e4b92aab6184d96c711f4ed24b86d9b086d",
+  "hypothesis": "Training-only complementary coverage can rescue source-positive hosts missed by prevalence at the same two-test budget, including held-out host groups.",
+  "endpoint": "Original source aggregate MLC > 0; missing MLC stays unknown. Not productive infection, cocktail efficacy or treatment outcome.",
+  "evidence_scope": "Already-inspected development data. No independent validation or promotion claim. Do not pool overlapping panels or methods as independent observations.",
+  "budget": 2,
+  "panels": {
+    "grouped_host": {"train_hosts": 117, "test_hosts": 34, "validation_hosts": 26},
+    "phylogroup:B2": {"train_hosts": 115, "test_hosts": 62, "validation_hosts": 0}
+  },
+  "selection": {
+    "objective": "At each step maximize the count of distinct training hosts with an observed positive among the selected candidates. Use all training hosts, retaining incomplete hosts' known-positive contributions; unknown pairs do not count as negatives or positives.",
+    "tie_break": ["larger Laplace-smoothed training prevalence (positive+1)/(observed+2)", "ascending phage identifier"],
+    "refit_or_validation_selection": false,
+    "fixed_panel": "Select one ordered pair per training split, used unchanged for every target host.",
+    "low_prevalence_definition": "Strictly below the median of the 94 smoothed training prevalence rates, separately per split; descriptive, never an eligibility filter."
+  },
+  "comparators": ["phage_prevalence", "host_4mer", "genophi"],
+  "comparator_ties": "Exact expectation over uniform permutations within exact-score ties, matching saved results; no lexical score perturbation.",
+  "evaluation": {
+    "primary": "All complete-panel test hosts, including source-all-negative hosts; separate results per panel.",
+    "secondary": "Primary-panel validation hosts and eligible-complete-host summaries; no selection using these labels.",
+    "metrics": ["Hit@1", "Hit@2", "tests consumed capped at 2 = 2 - Hit@1", "expected rescued hosts", "expected newly missed hosts"],
+    "incomplete_panels": "Exclude whole host from primary summaries, retain known-positive and all-unknown-positive bounds separately.",
+    "uncertainty": "2000 paired held-out host-group percentile bootstrap draws per partition; fixed fitted comparators and panel. Pointwise descriptive 95% intervals, no significance or independence claim.",
+    "seed": 20261115,
+    "no_cross_panel_pooling": true
+  },
+  "stability": {
+    "training_group_bootstrap_draws": 2000,
+    "seed": 20261115,
+    "procedure": "Resample training groups uniformly with replacement, retain all member hosts and their multiplicities; reselect the two candidates using weighted known-positive coverage and weighted prevalence. Report selection frequency, not independent replication."
+  },
+  "candidate_diagnostics": "For all 94 candidates report observed training prevalence and extra known-positive coverage beyond the selected first candidate, plus target known-positive coverage on first-candidate-negative hosts. Target unknown-anchor hosts remain unresolved. These target diagnostics never choose a candidate or amend the frozen pair.",
+  "case_rule": "Retain NILS53, NILS78, AL505 regardless of result, with all selected and comparator top-two source readings. Retain every rescue and newly missed host with original source row/column links. No test-selected biological mechanism claim.",
+  "inputs_sha256": {
+    "data/studies/results/paired_interaction.v1/observed_pairs.csv.gz": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0",
+    "data/studies/results/paired_interaction.v1/excluded_unknown_pairs.csv": "cf45ec993e669860dabcbef0665f47c9e33e94e8b3b67f89baf9e8ae287cd3c5",
+    "data/studies/results/genophi_comparator.v1/scenario_splits.csv": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+    "data/studies/results/new_host_retrieval.v1/scores.csv.gz": "989c9a1a6b43ae5cc64fc4981ed84f17c786d6b66372beebee5f94a7af664b7d",
+    "data/studies/results/new_host_retrieval.v1/per_host_metrics.csv": "451017664392029c5d32f636afcaff0f9d7bfb332235a19570e015cea5c934af",
+    "data/studies/results/missed_candidate_audit.v1/source_evidence.csv": "4689ac74777055fdf5e2957a869e7eb805a8299fc4386ebd529801ed2012c131"
+  },
+  "source_matrix": {
+    "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv",
+    "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829",
+    "size_bytes": 158199,
+    "attribution": "Gaborieau, Vaysset, Tesson et al.; DOI 10.1038/s41564-024-01832-5; primary archive Zenodo 10.5281/zenodo.13831957. See paired_data_reuse_review.v1.json; source matrix is fetched locally, not republished here."
+  }
+}
