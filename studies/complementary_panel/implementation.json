@@ -1,0 +1,8 @@
+{
+  "status": "implementation_committed_before_first_full_comparison",
+  "files_sha256": {
+    "studies/complementary_panel/protocol.json": "ffa7085bba0a1c9a14fe0265004682dd88c3fbe87542e5d1b0f633f5799582a1",
+    "studies/complementary_panel/run_comparison.py": "d4eaabaa1ed2741a917acfb8b8ccd5bd367e22af1197287fa79cff7932f3a991",
+    "tests/test_complementary_panel.py": "79b86116cffd5326486fe700f147cd821bfee5b4fd57a6b735f3088afb21c052"
+  }
+}
