@@ -86,3 +86,12 @@ See the [runbook](../docs/research-fasta-ranking.md) for output identity,
 applicability, relocation and real-FASTA checks. The local report is separate
 from PairPrediction and SDL decision admission.
 
+## Kaneko 42-candidate weights
+
+The separate [Kaneko study](../docs/kaneko-baseline-results.md) stores its
+[host 4-mer model](../data/studies/results/kaneko_baselines.v1/fit/host_4mer_model.json)
+and [prevalence model](../data/studies/results/kaneko_baselines.v1/fit/prevalence_model.json)
+with the [fit receipt](../data/studies/results/kaneko_baselines.v1/fit/FIT.json).
+These use 123 training hosts, 42 named candidates and a grade-3 complete-clearing
+target. Neither improvement criterion passed. They are uncalibrated research
+artifacts and are not part of the 94-candidate `phage-research-rank` registry.

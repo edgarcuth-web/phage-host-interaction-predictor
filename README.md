@@ -1,75 +1,39 @@
 # Phage–Host Interaction Predictor
 
-Given a bacterial genome and a versioned library of existing phages, the research
-goal is to rank candidates for experimental screening. Current code provides
-source-label baselines, fixed-library retrieval studies and an SDL file interface.
-It does not yet provide a validated genome-to-candidate service or cocktail model.
+Rank existing phages for experimental screening from an assembled bacterial
+genome. The current research command supports E. coli and a frozen 94-phage
+library, using either host 4-mer features or training-only phage prevalence.
+No model has established the evidence needed for promotion.
 
-## Current progress
+## Current results
 
-- **Data:** 177 E. coli hosts, 94 phages and 16,597 observed source-MLC labels;
-  41 missing primary readings are excluded. Missing observations stay unknown.
-- **Evaluation:** completed annotation, host 4-mer, additive host–phage and
-  GenoPHI comparisons, with grouped splits, exact-tie retrieval metrics and
-  uncertainty estimates. No model has established the evidence needed for promotion.
-- **Evo2 (paused):** published-score reproduction and bounded hosted pilots are
-  retained as optional research records. Full-cohort extraction and further Evo2
-  infrastructure are outside the current work plan; retrieval work can proceed
-  independently. See the [decision](docs/host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch).
-- **Integration:** ModelInputBundle / PairPrediction validation and abstention
-  work. Trained baseline serving through that interface is pending. The offline
-  two-route evaluator audits supplied score files; it does not train a retriever.
-- **Research inference:** [FASTA-to-ranking command](docs/research-fasta-ranking.md)
-  now loads the frozen primary host 4-mer or prevalence baseline, preserves all
-  94 candidates and records input/model/library identity. Its local report is
-  separate from SDL admission and does not promote a model.
+Hit@2 measures finding at least one source-positive candidate in the first two
+tests. These are inspected development results; each panel retains its own
+endpoint, candidate library and frozen split.
 
-Test Hit@2 on the frozen 94-phage panel, including all complete-label hosts:
+| Test panel | Candidates | Prevalence Hit@2 | Host 4-mer Hit@2 | GenoPHI Hit@2 |
+| --- | ---: | ---: | ---: | ---: |
+| Primary seed 42, 34 hosts | 94 | 73.53% | 88.24% | 91.18% |
+| B2 holdout, 61 hosts | 94 | 90.16% | 75.41% | 78.69% |
+| Kaneko, 7 hosts in 5 genomic groups | 42 | 42.86% | 42.86% | Not evaluated |
 
-| Panel | GenoPHI | Host 4-mer | Train-only phage prevalence |
-| --- | ---: | ---: | ---: |
-| Primary seed 42, 34 hosts | 91.18% | 88.24% | 73.53% |
-| B2 holdout, 61 hosts | 78.69% | 75.41% | 90.16% |
+- **94-phage studies:** 177 hosts and 16,597 observed source-MLC labels; 41
+  missing primary readings remain unknown. The [matched comparison](docs/new-host-retrieval-results.md)
+  retains the bilinear model's failure against prevalence on both test panels.
+  [GenoPHI seed sensitivity](docs/genophi-seed-sensitivity.md) did not establish
+  the registered robustness criterion.
+- **Kaneko:** a separate 143-host, 42-candidate study targeting grade-3 complete
+  spot clearing. Both methods tie on test Hit@2; capped tests consumed are 1.571
+  for prevalence and 1.714 for host 4-mer. [Neither improvement criterion passed](docs/kaneko-baseline-results.md).
+  The seven-host test has limited precision and does not validate the 94-output models.
 
-The [seed-43/44 sensitivity](docs/genophi-seed-sensitivity.md) retains positive
-GenoPHI/prevalence point differences, but both gain intervals cross zero and the
-registered robustness criterion is **not established**. These inspected development
-results do not establish superiority on new data. See the
-[full comparator report](docs/genophi-frozen-comparator.md).
-
-The [existing-score budget audit](docs/screening-budget-audit.md) finds test-cost
-savings on the grouped-host splits, with B2 failure and mixed validation results.
-
-The [external-evaluation intake gate](docs/external-evaluation-intake.md) can audit
-source-lineage and exact assembly overlap for proposed new data. This is a
-conservative software check, **not** an independently validated holdout.
-
-A [published BASEL/ECOR source intake](docs/basel-ecor-published-reference.md)
-pins a 25-host / 52-phage spotting assay matrix. Only 3 hosts have complete
-52-phage labels, so this is a development reference rather than a directly
-usable independent full-panel Hit@K benchmark or a promoted model.
-Its [frozen evaluation protocol](docs/basel-ecor-identity-protocol-freeze.md)
-specifies Hit@2 missing-label bounds before model scoring. The subsequent
-[sequence audit](docs/basel-ecor-sequence-audit.md) resolves all 52 accessions:
-no training overlap at the declared 95% identity boundary, but eight candidates
-share training components at 90%. All 25 host IDs are known, while their cited
-assemblies differ from the training FASTAs. The subsequent
-[v2 assembly policy and fixed controls](docs/basel-ecor-controls.md) use explicitly
-bound sequence features: cosine Hit@2 is 4.00% versus random identification bounds
-of 37.32%–44.06%. The [learned bilinear comparison](docs/paired-interaction-results.md)
-now reaches BASEL Hit@2 bounds of 48%–60%, but fails the primary cold-phage
-development AP criterion (0.5063 versus additive 0.5516). Both results are retained;
-the model is not a promoted recommender.
-
-The [matched new-host comparison](docs/new-host-retrieval-results.md) now uses
-the same 94-candidate library and host-only splits for all methods. Bilinear
-test Hit@2 is 64.71% versus prevalence's 73.53% on the primary panel, and 63.93%
-versus 90.16% on B2. Neither primary hit/cost improvement criterion passes.
-The complete scores, weights, failures and independent numerical checks are retained.
+Scores are uncalibrated source-endpoint scores. They do not establish productive
+infection, cocktail efficacy or treatment benefit. Missing observations stay
+unknown; see [endpoint semantics](docs/endpoint-semantics.md).
 
 ## Quick start
 
-Use Python 3.11+ in an activated virtual environment, from the repository root:
+Use Python 3.11+ from the repository root:
 
 ```bash
 python -m venv .venv
@@ -79,61 +43,37 @@ pip install -e ".[dev]"
 python -m pytest -q
 ```
 
-Optional extras: `.[cloud]` for S3, `.[proteomes]` for pinned gene calling,
-and `.[reference]` for GenoPHI. Its MMseqs2 dependency and conda setup are in the
-[demo runbook](docs/genophi-demo-reproduction.md#run-the-pinned-demo).
-The Python import path remains `phage_cocktail` for compatibility.
-
-Fetch and inspect the checksum-verified source table:
-
-```bash
-python scripts/fetch_genophi.py
-python scripts/explore_interactions.py
-```
-
-This table contains 16,638 source-coded entries; the studies reconcile primary
-MLC readings before retaining the 16,597 observed labels. Genome downloads and
-receipts are documented in [data/README.md](data/README.md#rebuilding-the-locked-genome-inputs).
-
-Validate the synthetic SDL exchange fixture:
-
-```bash
-phage-model-interface validate-bundle tests/fixtures/input_bundle/bundle.json --require-sequence host
-```
-
-See the [model-interface runbook](docs/model-interface.md) for a complete round trip.
-The fixture verifies software, not prediction quality.
-
-Rank an assembled host FASTA with an explicitly selected research baseline:
+Rank an assembled host FASTA with an explicitly selected method:
 
 ```bash
 phage-research-rank --fasta host.fasta --method host-4mer --top-k 5 \
   --host-species "Escherichia coli" --out artifacts/host_ranking.json
 ```
 
-The [runbook](docs/research-fasta-ranking.md) explains the two methods, exact ties,
-applicability flags, unavailable results and real-FASTA conformance checks.
+Use `--method prevalence` for the non-genomic control. The command reuses frozen
+weights, keeps all 94 candidates, and records score ties, provenance,
+applicability and unavailable estimates. The [runbook](docs/research-fasta-ranking.md)
+covers inputs and verification. Its local report is separate from SDL admission.
 
-## Research boundary and next work
+Optional extras: `.[cloud]` for S3, `.[proteomes]` for pinned gene calling,
+and `.[reference]` for GenoPHI; the [GenoPHI runbook](docs/genophi-demo-reproduction.md#run-the-pinned-demo)
+includes MMseqs2 setup. CI tests install `.[dev,cloud,proteomes]`.
+The Python import path remains `phage_cocktail` for compatibility.
 
-The target is the named source assay label. It is not automatically a measure of
-adsorption, productive infection, resistance emergence or treatment success;
-see [endpoint semantics](docs/endpoint-semantics.md).
-Known-library retrieval does not establish unseen-phage performance, and pairwise
-scores do not establish cocktail efficacy.
+## Next work
 
-The [matched comparison](docs/new-host-retrieval-results.md) and
-[research ranking command](docs/research-fasta-ranking.md) are complete.
-Next: audit public new-host data and reserve suitable validation inputs. The
-[staged checklist](docs/host-conditioned-phage-retrieval-roadmap.md#next-work)
-tracks evaluation and a research FASTA-to-ranking command. Public-data intake
-can proceed alongside this work; independent release validation remains pending.
+Inspect the saved Kaneko failures before choosing one data or representation
+hypothesis for a separately frozen experiment. Continue auditing suitable
+validation inputs; independent release validation remains pending.
+See the [roadmap](docs/host-conditioned-phage-retrieval-roadmap.md#next-work).
+Evo2 full-cohort extraction remains [paused](docs/host-conditioned-phage-retrieval-roadmap.md#paused-evo2-branch).
 
 ## Where to look
 
-- [Documentation index](docs/README.md): results, runbooks and proposed studies.
-- [Data and protocols](data/README.md): resource locks, labels and rebuild commands.
-- [Research weights](models/README.md): frozen development artifacts and limitations.
-- `src/phage_cocktail/`, `scripts/`, `tests/`: implementation, commands and checks.
-- `studies/annotation_recall_audit/`: separate evidence-coverage audit and outputs.
-
+| Need | Entry point |
+| --- | --- |
+| Study results, protocols and reproduction | [Documentation index](docs/README.md) |
+| Source data, resource locks and downloads | [Data guide](data/README.md) |
+| Frozen weights and loading instructions | [Model cards](models/README.md) |
+| SDL bundle validation and unresolved predictions | [Model interface](docs/model-interface.md) |
+| Implementation and checks | `src/phage_cocktail/`, `scripts/`, `tests/` |

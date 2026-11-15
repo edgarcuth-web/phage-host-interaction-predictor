@@ -16,33 +16,22 @@ as the measured engineering pilot. Both strands are retained. An explicit
 32-window sampling, including partial tails; it is not whole-genome coverage.
 No labels, fitting, ranking, or prediction metrics enter this executor.
 
-## Running Phase 1 without a preexisting local FASTA folder
+## Reproducing the offline preflight
 
-The manual [Evo2 full-host offline preflight](../.github/workflows/evo2-host-offline-preflight.yml)
-GitHub Actions workflow reconstructs the missing input folder directly from the
-177 published and SHA-256-pinned host FASTA URLs. It has no NVIDIA credentials,
-performs no inference, and is not a budget approval. The downloaded raw genomes
-stay on the ephemeral Actions runner and are **not uploaded**.
+The dedicated GitHub Actions preflight workflow has been removed. Its
+[historical definition](https://github.com/edgarcuth-web/phage-host-interaction-predictor/blob/59b2921bec9bd6bcf39e3d04bcd8ffe6aa2f5877/.github/workflows/evo2-host-offline-preflight.yml)
+remains in Git history. The same source verification and zero-request plan can
+be reproduced locally with the retained scripts:
 
-After the workflow has been merged into the default branch, open **Actions →
-Evo2 full-host offline preflight → Run workflow**. A PR that adds or changes the
-workflow can also exercise it. Its run uploads a seven-day artifact named
-`full-host-evo2-offline-preflight`, containing only:
+```bash
+python scripts/fetch_pinned_host_fastas.py \
+  --out artifacts/host_fasta_source_receipt.json
+```
 
-- `host_fasta_source_receipt.json` — SHA-256-locked source download/verification receipt;
-- `full_hosted_plan_zero_budget.json` — immutable zero-call, zero-response-budget plan;
-- `full_hosted_plan_preflight.json` — verified host coverage, request count and projected transfer.
-
-This step fetches about 910 MB of public source FASTAs on the Actions runner,
-but transfers **zero token-level Evo2 outputs** and makes **zero NVIDIA calls**.
-If a public source is unavailable or differs from its pinned SHA-256/size, the
-workflow fails closed; it never substitutes a sequence or runs provider inference.
-The source fetch helper uses limited retries only for transient HTTP/network
-errors and will not overwrite an existing mismatched resource.
-
-The output plan is bound to the exact code and immutable manifest of that run.
-Do not edit its budgets or assume it can be replayed under changed code. A
-separate reviewed execution plan would be necessary for any future paid run.
+This fetches about 910 MB of checksum-locked public FASTAs and makes no NVIDIA
+calls. Then run the zero-request plan and preflight commands below. Use new
+output paths; plans bind exact code and manifests. Changing a budget requires
+a separate reviewed execution plan.
 
 ## Full-cohort budget review (no provider calls)
 
