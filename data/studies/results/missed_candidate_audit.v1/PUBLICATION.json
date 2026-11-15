@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "study_id": "missed-candidate-audit:v1",
+  "analysis_type": "descriptive_reanalysis_of_inspected_saved_rankings",
+  "source_repository_revision": "5962f5caed0221455ec34b542e400a6438bb49e7",
+  "endpoint": "observed primary source MLC > 0; missing MLC remains unknown",
+  "budget_k": 2,
+  "candidates": 94,
+  "host_panel_occurrences": 122,
+  "distinct_scored_hosts": 93,
+  "deterministic_methods": 7,
+  "host_method_decisions": 854,
+  "confirmed_ranking_miss_records": 179,
+  "distinct_hosts_with_ranking_miss": 47,
+  "source_no_positive_scored_records": 14,
+  "incomplete_panel_records": 7,
+  "new_fits": 0,
+  "new_model_inference": 0,
+  "code": [
+    {
+      "path": "studies/missed_candidate_audit/build_audit.py",
+      "size_bytes": 23044,
+      "sha256": "34cf2d9696c9106554154ece314eb714d445ad010785b275a0f50b547565d025"
+    },
+    {
+      "path": "studies/missed_candidate_audit/verify_audit.py",
+      "size_bytes": 5542,
+      "sha256": "46b5bd41f1c5b62f77fb281f229db229c9623a8c1eb6cb09fde376c91391424c"
+    }
+  ],
+  "inputs": {
+    "path": "studies/missed_candidate_audit/input_manifest.json",
+    "size_bytes": 5025,
+    "sha256": "05472162b404fba7d2035971c091ac23efd9941925f3feedc99a549245c25dbd"
+  },
+  "outputs": [
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/INDEPENDENT_QA.json",
+      "size_bytes": 293,
+      "sha256": "fc60578bf3e32dad763a0ad1bc7ad0d42803ba6fab31c5d737893936d6a6e53b"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/QA.json",
+      "size_bytes": 1240,
+      "sha256": "8dfcf77ffed22324c2822910eb249f68f1ea3189d16ba970fc5468d0540063c7"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/all_host_method_decisions.csv",
+      "size_bytes": 183689,
+      "sha256": "3a79b5e304326c4d32c7e9fba76a7c8ee465590d7066eaffec8dea2592b4ab76"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/focus_cases.csv",
+      "size_bytes": 197953,
+      "sha256": "0834a1a8c67e709691bcdcca399290258fc11ff05fd2968bfd6ecacb22751ebf"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/focus_positive_candidates.csv",
+      "size_bytes": 16366,
+      "sha256": "4fbff2fe177b2bb85cdfc469303445d5ceca06fc7fdb85061cf36aba5bb91c93"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/missed_hosts.csv",
+      "size_bytes": 46984,
+      "sha256": "4198b647ee0ef4af191de55906c6f4568107cafc30d9510e9f04bb5398d42673"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/random_reference.csv",
+      "size_bytes": 350124,
+      "sha256": "84b8d75ac6c7a061c5d96b58cde42ffedeb21cca5394122a0aac14a8d7647e4c"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/ranked_candidates.csv.gz",
+      "size_bytes": 1778861,
+      "sha256": "a3fefb3fa06228da388497e8514348a3f966d096a60967973e8e607cf240f49e"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/rescue_candidates.csv",
+      "size_bytes": 625272,
+      "sha256": "0ac07309653b9dd2f30758999a9400e769aa4142170c01e5d61dc58ce50f53f6"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/source_evidence.csv",
+      "size_bytes": 530021,
+      "sha256": "4689ac74777055fdf5e2957a869e7eb805a8299fc4386ebd529801ed2012c131"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/source_host_status.csv",
+      "size_bytes": 9126,
+      "sha256": "400bb5e3a121e238bef8c8d2ed9dcd603126baae7355c65cbcdb03bf599e8fef"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/summary.csv",
+      "size_bytes": 1570,
+      "sha256": "ad893c5006d05fe86f7280294e58e84edb54c55a4746d72913b42a54f8af82f5"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/top2_candidates.csv",
+      "size_bytes": 350827,
+      "sha256": "dfaf2c28a874083f39158582f11b47dcaf519cf3c5ac9dbbbec93b24b93a5d3c"
+    },
+    {
+      "path": "data/studies/results/missed_candidate_audit.v1/unknown_pairs.csv",
+      "size_bytes": 14959,
+      "sha256": "28b188efb46767f064c4c6b49cafc7929787b4e7478edb9900dce252cbd78510"
+    }
+  ],
+  "locally_regenerated_outputs": [
+    "raw_annotations.csv.gz",
+    "workbook_data.json"
+  ],
+  "notes": [
+    "Repeated methods and overlapping panels are not independent observations.",
+    "No method or model is promoted.",
+    "Full source tables and raw annotation extracts remain local.",
+    "The independent verifier uses locally regenerated raw annotations."
+  ]
+}

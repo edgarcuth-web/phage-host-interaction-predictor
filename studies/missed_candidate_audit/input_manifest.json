@@ -1,0 +1,82 @@
+{
+  "snapshot": "5962f5caed0221455ec34b542e400a6438bb49e7",
+  "inputs": [
+    {
+      "path": "repo/data/studies/new_host_retrieval.v1.json",
+      "git_blob_sha": "9bfb8e093d0f14c593328f0082ab382c32a2092e",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/new_host_retrieval.v1.json",
+      "sha256": "d75017e4831bad99dbb4fabd5e8f0a1c0c99b7b1eeb20ff3162d558c983ed289",
+      "size_bytes": 18657
+    },
+    {
+      "path": "repo/data/studies/genophi_host_baseline.resources.v1.json",
+      "git_blob_sha": "58ba0786f7cf836ed6146316f865d5c4fc322a9e",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/genophi_host_baseline.resources.v1.json",
+      "sha256": "952c969be8cf52c79e89c06d5acdb0acd759e3f7c58665a623b7dd6ac3964fed",
+      "size_bytes": 119967
+    },
+    {
+      "path": "repo/data/studies/results/new_host_retrieval.v1/scores.csv.gz",
+      "git_blob_sha": "82c0c7f265a585ede7599b2d4d31df74bc0fc178",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/results/new_host_retrieval.v1/scores.csv.gz",
+      "sha256": "989c9a1a6b43ae5cc64fc4981ed84f17c786d6b66372beebee5f94a7af664b7d",
+      "size_bytes": 853743
+    },
+    {
+      "path": "repo/data/studies/results/new_host_retrieval.v1/per_host_metrics.csv",
+      "git_blob_sha": "c25b7d09b7c1c1369566ef9c6dcb9788afdd02b3",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/results/new_host_retrieval.v1/per_host_metrics.csv",
+      "sha256": "451017664392029c5d32f636afcaff0f9d7bfb332235a19570e015cea5c934af",
+      "size_bytes": 173787
+    },
+    {
+      "path": "repo/data/studies/results/paired_interaction.v1/observed_pairs.csv.gz",
+      "git_blob_sha": "978e0a2b0c6447d1a6dd09aace829fb77429c5b5",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/results/paired_interaction.v1/observed_pairs.csv.gz",
+      "sha256": "a2ef0d0c22bf5d3d797d7af6a0a10399cc50edee56be6c54bc7a16baf07257c0",
+      "size_bytes": 60630
+    },
+    {
+      "path": "repo/data/studies/results/paired_interaction.v1/excluded_unknown_pairs.csv",
+      "git_blob_sha": "d978f27dc282b28089f26a9bbdbad6d66bcdadd2",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/results/paired_interaction.v1/excluded_unknown_pairs.csv",
+      "sha256": "cf45ec993e669860dabcbef0665f47c9e33e94e8b3b67f89baf9e8ae287cd3c5",
+      "size_bytes": 1678
+    },
+    {
+      "path": "repo/data/studies/results/genophi_comparator.v1/scenario_splits.csv",
+      "git_blob_sha": "7ac256badefca676044667c9845421a8f2cda7a6",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/results/genophi_comparator.v1/scenario_splits.csv",
+      "sha256": "4dbe81bd6b63614d422ed8060833b669253d0944efc7245a09d1ac424c65312b",
+      "size_bytes": 38323
+    },
+    {
+      "path": "repo/data/studies/results/paired_split_freeze.v1/phage_groups_i95.csv",
+      "git_blob_sha": "9e01f0e4f47209cedcbbb723030bf0000086589f",
+      "url": "https://raw.githubusercontent.com/edgarcuth-web/phage-host-interaction-predictor/5962f5caed0221455ec34b542e400a6438bb49e7/data/studies/results/paired_split_freeze.v1/phage_groups_i95.csv",
+      "sha256": "71267049e38cdd6c686e9e9d0bbfaa1278cb8fdb7c9744d003126a9514d93670",
+      "size_bytes": 7685
+    },
+    {
+      "path": "sources/mlc.csv",
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/interaction_matrix.csv",
+      "sha256": "ec0aa5553a726e2161ea15d687a677ee2ed623873fb2a897432d0777582ad829",
+      "size_bytes": 158199,
+      "git_blob_sha": "25a3f894c5a3832e81b42c8de60c12ffb9429569"
+    },
+    {
+      "path": "sources/subset.csv",
+      "url": "https://raw.githubusercontent.com/Noonanav/GenoPHI/f7e30abc1b0bbba1ae76b8f58a3363bbbc5cd54f/data/interaction_matrices/ecoli_interaction_matrix_subset.csv",
+      "sha256": "9a7caa8c48d475a2d0fa153ae61dab3b3484be8c266b0ef965f171218606a6e6",
+      "size_bytes": 283309,
+      "git_blob_sha": "96c39e704538c59cb35f4f51da4f7ee504c562ad"
+    },
+    {
+      "path": "sources/raw_interactions.csv",
+      "git_blob_sha": "bee02ea5e74ad9c546bb20240c97476ac5ba6871",
+      "sha256": "56f7ba5e01d00d1780978f8922397137a42458fa0b6583c91d92425ac9bf3401",
+      "size_bytes": 14567034,
+      "url": "https://raw.githubusercontent.com/mdmparis/coli_phage_interactions_2023/99656d8c020fcd1dbbc30a02ee10274a07655562/data/interactions/raw/raw_interactions.csv"
+    }
+  ]
+}

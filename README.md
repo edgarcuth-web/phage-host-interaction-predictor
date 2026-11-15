@@ -22,6 +22,9 @@ endpoint, candidate library and frozen split.
   retains the bilinear model's failure against prevalence on both test panels.
   [GenoPHI seed sensitivity](docs/genophi-seed-sensitivity.md) did not establish
   the registered robustness criterion.
+  The [source-evidence audit](docs/missed-candidate-audit.md) separates ranking
+  misses, source-all-negative hosts and missing readings, with named candidates
+  and source pointers.
 - **Kaneko:** a separate 143-host, 42-candidate study targeting grade-3 complete
   spot clearing. Both methods tie on test Hit@2; capped tests consumed are 1.571
   for prevalence and 1.714 for host 4-mer. [Neither improvement criterion passed](docs/kaneko-baseline-results.md).
