@@ -1,0 +1,18 @@
+{
+  "study_id": "picard-same-source-extension-v1",
+  "status": "cohort_frozen_after_independent_identity_and_grouping_QA_before_panel_scoring",
+  "protocol_commit": "ec5c8c3a8af23cce7d5f60309f7f402668923029",
+  "admission_implementation_commit": "bd414170b26cb6ae564c86920d6be67fdd7bfa5d",
+  "eligible_hosts": 138,
+  "eligible_groups": 114,
+  "evidence_scope": "same-source inspected development extension, not independent or blind validation",
+  "admission_output_sha256": {
+    "ADMISSION.json": "0cc84918ca6a59fa48c674ebe2b1cc2dfc59394050f737d01dc222e57be0fe33",
+    "INDEPENDENT_QA.json": "9d6054f9b559bbbe34bdcc2bde5c07948df3afa2ead640a7d547f1a384b6122a",
+    "admitted_hosts.csv": "fdb895069bcf28f60de0cddd34f90e75bcf9fffbd131c22c4e769b2fbb018956",
+    "component_members.csv": "7621d6f9e60f0bd184d3217df9bf92bd1d2f94948a9d79ff4a6e9d4c89c75be8",
+    "grouping_edges.csv": "71d7b36a1fa079a02b961588fb090e18cdf0b90be5b2fecca6a9cf5202a596e8",
+    "host_admission.csv": "4ebb023653e4a9af111bec49b13c3a47e0a958f4aa5c5e81e187f1494f8d4c97",
+    "unknown_pairs.csv": "3d4d31dbefd25c4eae7d29e04ae24bb13de03d1414a6e2a7466333a491fffc1d"
+  }
+}
