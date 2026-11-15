@@ -1,0 +1,24 @@
+{
+  "status": "verified",
+  "imports_runner": false,
+  "source_pairs_checked": 16638,
+  "host_metric_rows_checked": 488,
+  "paired_transitions_checked": 363,
+  "training_group_bootstrap_draws_checked": 4000,
+  "paired_interval_draws_checked": 36000,
+  "source_evidence_rows_checked": 978,
+  "verifier_sha256": "2f678f883d8b988098cc84857c2a00cc063adba67eb07f6e64b2a4a39ab5bdb5",
+  "checked_output_sha256": {
+    "QA.json": "a224d00201912b72d1b9a6c054eb7cad5aeb73d1ee88f3afb69f3d999524132e",
+    "candidate_marginal_coverage.csv": "b8a465146bd9a2c01000d3fd408a5b6548226935e1ff60d0fd95b60328fd2881",
+    "changed_host_evidence.csv": "61363650601323b73085523698bf73de62b26e935d5d4ecd18b030fa7ce6480a",
+    "focus_source_evidence.csv": "81b22e519a01d5074bc2613154437c32e306c6db2e7d20ad1f55bbfe0dd8a608",
+    "host_transitions.csv": "02455d84eb1134633a5b8023341ee60e4df4a958c28aad3a8cfd4261c58036cd",
+    "paired_comparisons.csv": "94ba684fabc27bd8721c2f9d424a97bdb5d08e0ba4b4fc131d3027f2f715cccb",
+    "per_host_metrics.csv": "0175847b9ef9d44f62bff4508e85451eb12b0fd7b604ff2f067955b52c403c70",
+    "selected_panels.csv": "bff3592104490ff48d2947487e555df59a6de8a1a0cd4fe7bce7e850a93b4a84",
+    "summary.csv": "d1dd4628e666c2566551d03271708d53957294968accf9233b394c16808ea95d",
+    "top2_source_evidence.csv": "ec1e3140f021ce515ac22804042543eb4f89d8fca0a15998d652c6c6945b9e6f",
+    "training_bootstrap_selection.csv": "2e95e556436d90777a0ed1cbb0c339f73e3c7702e2ecdf72967b5afb67b1c5fa"
+  }
+}
