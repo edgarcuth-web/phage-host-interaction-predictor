@@ -25,6 +25,9 @@ endpoint, candidate library and frozen split.
   The [source-evidence audit](docs/missed-candidate-audit.md) separates ranking
   misses, source-all-negative hosts and missing readings, with named candidates
   and source pointers.
+  The [training-only complementary panel comparison](docs/complementary-panel-results.md)
+  rescues four primary-test hosts versus prevalence at two tests, but newly
+  misses four on B2. A stable benefit is not established.
 - **Kaneko:** a separate 143-host, 42-candidate study targeting grade-3 complete
   spot clearing. Both methods tie on test Hit@2; capped tests consumed are 1.571
   for prevalence and 1.714 for host 4-mer. [Neither improvement criterion passed](docs/kaneko-baseline-results.md).

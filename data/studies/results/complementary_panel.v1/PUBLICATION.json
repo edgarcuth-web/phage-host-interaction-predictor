@@ -1,0 +1,33 @@
+{
+  "study_id": "complementary-fixed-panel-v1",
+  "source_revision": "18470e4b92aab6184d96c711f4ed24b86d9b086d",
+  "protocol_commit": "7b12a954a911bf9e50a84dca107178a8f8060ed8",
+  "implementation_commit": "0f4d78ce9b93f74db39a6d3ae37b16a85460dcff",
+  "evidence_status": "exploratory inspected development data; no cross-panel pooling or promotion",
+  "code_sha256": {
+    "studies/complementary_panel/protocol.json": "ffa7085bba0a1c9a14fe0265004682dd88c3fbe87542e5d1b0f633f5799582a1",
+    "studies/complementary_panel/implementation.json": "fdad40767edba009e6f7a4a77749aa68816f0d308fb0edcc6b67d8c355026a8a",
+    "studies/complementary_panel/run_comparison.py": "d4eaabaa1ed2741a917acfb8b8ccd5bd367e22af1197287fa79cff7932f3a991",
+    "studies/complementary_panel/verify_comparison.py": "2f678f883d8b988098cc84857c2a00cc063adba67eb07f6e64b2a4a39ab5bdb5",
+    "tests/test_complementary_panel.py": "79b86116cffd5326486fe700f147cd821bfee5b4fd57a6b735f3088afb21c052"
+  },
+  "retained_output_sha256": {
+    "INDEPENDENT_QA.json": "e8dbf25b445f75eb5d0d58f6a84d511f8b7a3d389b766a8b31bb353bad458226",
+    "QA.json": "a224d00201912b72d1b9a6c054eb7cad5aeb73d1ee88f3afb69f3d999524132e",
+    "candidate_marginal_coverage.csv": "b8a465146bd9a2c01000d3fd408a5b6548226935e1ff60d0fd95b60328fd2881",
+    "changed_host_evidence.csv": "61363650601323b73085523698bf73de62b26e935d5d4ecd18b030fa7ce6480a",
+    "focus_source_evidence.csv": "81b22e519a01d5074bc2613154437c32e306c6db2e7d20ad1f55bbfe0dd8a608",
+    "host_transitions.csv": "02455d84eb1134633a5b8023341ee60e4df4a958c28aad3a8cfd4261c58036cd",
+    "paired_comparisons.csv": "94ba684fabc27bd8721c2f9d424a97bdb5d08e0ba4b4fc131d3027f2f715cccb",
+    "per_host_metrics.csv": "0175847b9ef9d44f62bff4508e85451eb12b0fd7b604ff2f067955b52c403c70",
+    "selected_panels.csv": "bff3592104490ff48d2947487e555df59a6de8a1a0cd4fe7bce7e850a93b4a84",
+    "summary.csv": "d1dd4628e666c2566551d03271708d53957294968accf9233b394c16808ea95d",
+    "top2_source_evidence.csv": "ec1e3140f021ce515ac22804042543eb4f89d8fca0a15998d652c6c6945b9e6f",
+    "training_bootstrap_selection.csv": "2e95e556436d90777a0ed1cbb0c339f73e3c7702e2ecdf72967b5afb67b1c5fa"
+  },
+  "reproduction": {
+    "runner_files_byte_identical": 11,
+    "changed_outcome_rejected": true,
+    "existing_output_rejected": true
+  }
+}
