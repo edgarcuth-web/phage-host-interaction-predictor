@@ -1,0 +1,22 @@
+{
+  "status": "verified",
+  "imports_evaluation_runner": false,
+  "target_source_pairs_checked": 12972,
+  "old_observed_pairs_checked": 16597,
+  "host_metric_rows_checked": 552,
+  "paired_transitions_checked": 276,
+  "evidence_rows_checked": 1104,
+  "paired_interval_draws_checked": 24000,
+  "verifier_sha256": "8ef7e233580662c5c75b851bbf14e48f527489a3633b23763f62862f479c1742",
+  "checked_output_sha256": {
+    "QA.json": "310b9f4130d2539e2f846f8cf6a12c22488a1dfe245d1b5bd5009db8d3d0dd66",
+    "candidate_marginal_coverage.csv": "8443a4fd5fe1cc1e030e89f46256d9cc5cd7dd52ee7e83b4b75c389cdfea8a83",
+    "changed_host_evidence.csv": "b36de182c1e00f1cb8eef130e1ef8998ed99fa01e0e06e1d78aaf858dfe3ab0f",
+    "host_transitions.csv": "f3cb829b8f383a074249b277cb9bdb2c41c4a2c1135665c9b7d328bcbb3fe492",
+    "paired_comparisons.csv": "ad96b83e6c33b7f67cae8c60a3cd3db1c83e8a1f39a216cd7e1c0b23b9a945f7",
+    "per_host_metrics.csv": "4779096dd088024ded3ea944c48d29d00b2e0a3690619c978224027b0f2e893f",
+    "summary.csv": "c3a69ff31b165bba7ae302a41f842d6d21a30e97ad6921f244cd0ae25e286735",
+    "top2_source_evidence.csv": "def69d179933a8762413323f3379717c745509c45fdd31a80ba5f7ac54e83bf2",
+    "training_prevalence.csv": "566ff11c41c7feeeff30e2397697957676396b936bdb3c608488d8389cfddb55"
+  }
+}

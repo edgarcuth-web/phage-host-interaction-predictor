@@ -1,0 +1,22 @@
+{
+  "status": "verified_by_runner",
+  "admitted_hosts": 138,
+  "admitted_groups": 114,
+  "source_known_pairs_reconciled": 16597,
+  "new_models_fitted": 0,
+  "new_candidate_selections": 0,
+  "genome_models_scored": 0,
+  "cohort_freeze_sha256": "8ef0d9fb9eab915a25d4a03b037b01c9b0a86a30781a8c8ea94cfb2617b1aa38",
+  "protocol_sha256": "92ad7ee4a3ec05a1c07b7c56364a8bc1e80c4c5b02dbd1e762ea493082933c01",
+  "code_sha256": "4e2c22c9aca44620ce5a29f3dc2fd7d3ed40c1aa661c40cfec14075213bb5c47",
+  "output_sha256": {
+    "candidate_marginal_coverage.csv": "8443a4fd5fe1cc1e030e89f46256d9cc5cd7dd52ee7e83b4b75c389cdfea8a83",
+    "changed_host_evidence.csv": "b36de182c1e00f1cb8eef130e1ef8998ed99fa01e0e06e1d78aaf858dfe3ab0f",
+    "host_transitions.csv": "f3cb829b8f383a074249b277cb9bdb2c41c4a2c1135665c9b7d328bcbb3fe492",
+    "paired_comparisons.csv": "ad96b83e6c33b7f67cae8c60a3cd3db1c83e8a1f39a216cd7e1c0b23b9a945f7",
+    "per_host_metrics.csv": "4779096dd088024ded3ea944c48d29d00b2e0a3690619c978224027b0f2e893f",
+    "summary.csv": "c3a69ff31b165bba7ae302a41f842d6d21a30e97ad6921f244cd0ae25e286735",
+    "top2_source_evidence.csv": "def69d179933a8762413323f3379717c745509c45fdd31a80ba5f7ac54e83bf2",
+    "training_prevalence.csv": "566ff11c41c7feeeff30e2397697957676396b936bdb3c608488d8389cfddb55"
+  }
+}

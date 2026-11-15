@@ -9,6 +9,7 @@ receptor/defense annotations do not exclude a candidate.
 | Component | Status and evidence |
 | --- | --- |
 | 94-phage development comparisons | [Matched comparison](new-host-retrieval-results.md) and [budget audit](screening-budget-audit.md) complete; bilinear improvement not established |
+| Fixed panels and Picard extension | [Initial comparison](complementary-panel-results.md); [138-host extension](picard-extension-results.md) gives LF73_P1 eight net extra hits; LF110_P2's negative result is retained; same-source evidence only |
 | Research FASTA-to-ranking | [Command available](research-fasta-ranking.md) for frozen host 4-mer and prevalence models; no model promotion |
 | Kaneko 42-candidate comparison | [Complete](kaneko-baseline-results.md): both methods reach test Hit@2 of 42.86%; host 4-mer has higher point-estimate cost |
 | BASEL/ECOR reference | [Fixed controls](basel-ecor-controls.md) and [bilinear comparison](paired-interaction-results.md) complete; remains an inspected cold-phage reference |
@@ -22,14 +23,16 @@ acceptance decisions, scores, weights and negative results remain frozen.
 
 ## Next work
 
-Updated 2026-11-14. The matched 94-candidate comparison, research ranking command
-and first Kaneko comparison are complete.
+Updated 2026-11-15. The matched 94-candidate comparison, research ranking command,
+first Kaneko comparison and fixed complementary-panel extension are complete.
 
-1. **Inspect saved Kaneko failures.** Use the [per-host metrics and per-phage
-   diagnostics](kaneko-baseline-results.md#frozen-implementation-and-saved-artifacts)
-   to choose one data or representation hypothesis. Any new fit or selection
-   needs a separate protocol; retain the existing split, endpoint and negative
-   result. Seven test hosts in five groups limit precision.
+1. **Prepare a matched check of LF73_P1's marginal coverage.** The
+   [11 rescued and three newly missed extension hosts](picard-extension-results.md#all-primary-changed-cases)
+   give a concrete strain/candidate comparison with DIJ07_P2 and 536_P7 controls.
+   Independent measurements or another laboratory/assay are still needed;
+   retain LF110_P2's unfavorable result and source MLC's endpoint limits.
+   Kaneko remains a separate 42-candidate task; its seven test hosts in five
+   groups do not validate the named 94-library candidates.
 2. **Finish source checks.** Resolve phenotype reuse/stock questions, assess
    contamination/completeness and compare near-duplicate hosts across sources
    before making broader claims. Host 127 and 38 phage assemblies remain

@@ -1,0 +1,52 @@
+{
+  "study_id": "picard-same-source-extension-v1",
+  "base_commit": "52a55dc9650dfabec64641b0e179e27b2d8e5251",
+  "protocol_commit": "ec5c8c3a8af23cce7d5f60309f7f402668923029",
+  "admission_implementation_commit": "bd414170b26cb6ae564c86920d6be67fdd7bfa5d",
+  "cohort_and_evaluation_freeze_commit": "11cdac4b0135d473ca3b8ea794f3783bd34cabd3",
+  "evidence_scope": "already-inspected same-primary-source development extension, not blind or independent release validation",
+  "python": "3.12.14",
+  "code_and_specification_sha256": {
+    "docs/picard-extension-results.md": "87e9121083923716ee2656dfa4c51a5d4c2e46209adcb86fb851277b783c6f3c",
+    "studies/complementary_panel/run_comparison.py": "d4eaabaa1ed2741a917acfb8b8ccd5bd367e22af1197287fa79cff7932f3a991",
+    "studies/picard_extension/README.md": "a94d9d382ab7097dc7993d6dd8ad45085a69c59b91207d0092d78b99fa06ac53",
+    "studies/picard_extension/audit_cohort.py": "7426efdc48f346ed7ea5081dd906b12e48e50fb9f60ef1e4fb962f6b1c058df6",
+    "studies/picard_extension/cohort_freeze.json": "8ef0d9fb9eab915a25d4a03b037b01c9b0a86a30781a8c8ea94cfb2617b1aa38",
+    "studies/picard_extension/evaluate_panels.py": "4e2c22c9aca44620ce5a29f3dc2fd7d3ed40c1aa661c40cfec14075213bb5c47",
+    "studies/picard_extension/evaluation_implementation.json": "b0a6afbe95d431f15c7cb299d5ee42289c744dfcc06b87766d4155e1d310d596",
+    "studies/picard_extension/fetch_genomes.py": "db7a4add7917177c28439e25ccced00112e1b6cf582f04fc8355bdeec908498c",
+    "studies/picard_extension/genome_sources.json": "c02adb638799048a329ef822c165f393eba90f5456a4d7664686898ade9cd45a",
+    "studies/picard_extension/implementation.json": "a848543e92a9c2e79babf69554ffdc7fc733f2530cd064c8d4bd2764dfe9e8e7",
+    "studies/picard_extension/input_manifest.json": "287ba9f2e8f98564d87434a9be9aebf3ec922431d25466e8ce7c056f3648461d",
+    "studies/picard_extension/protocol.json": "92ad7ee4a3ec05a1c07b7c56364a8bc1e80c4c5b02dbd1e762ea493082933c01",
+    "studies/picard_extension/verify_admission.py": "eba97172a8b307663f4404d79005fbaac366915db382536e38554dffea7c112f",
+    "studies/picard_extension/verify_evaluation.py": "8ef7e233580662c5c75b851bbf14e48f527489a3633b23763f62862f479c1742",
+    "tests/test_picard_extension.py": "dd2de0153ba611f87bd65b02408a137e75cb2253b7e1a9a595deecd6c0fdc770"
+  },
+  "result_sha256": {
+    "admission/ADMISSION.json": "0cc84918ca6a59fa48c674ebe2b1cc2dfc59394050f737d01dc222e57be0fe33",
+    "admission/INDEPENDENT_QA.json": "9d6054f9b559bbbe34bdcc2bde5c07948df3afa2ead640a7d547f1a384b6122a",
+    "admission/admitted_hosts.csv": "fdb895069bcf28f60de0cddd34f90e75bcf9fffbd131c22c4e769b2fbb018956",
+    "admission/component_members.csv": "7621d6f9e60f0bd184d3217df9bf92bd1d2f94948a9d79ff4a6e9d4c89c75be8",
+    "admission/grouping_edges.csv": "71d7b36a1fa079a02b961588fb090e18cdf0b90be5b2fecca6a9cf5202a596e8",
+    "admission/host_admission.csv": "4ebb023653e4a9af111bec49b13c3a47e0a958f4aa5c5e81e187f1494f8d4c97",
+    "admission/unknown_pairs.csv": "3d4d31dbefd25c4eae7d29e04ae24bb13de03d1414a6e2a7466333a491fffc1d",
+    "evaluation/INDEPENDENT_QA.json": "9124e9b2ae883369d3c29e36b527fd5f43a25da3ff57b1a68e2ef3187c50703a",
+    "evaluation/QA.json": "310b9f4130d2539e2f846f8cf6a12c22488a1dfe245d1b5bd5009db8d3d0dd66",
+    "evaluation/candidate_marginal_coverage.csv": "8443a4fd5fe1cc1e030e89f46256d9cc5cd7dd52ee7e83b4b75c389cdfea8a83",
+    "evaluation/changed_host_evidence.csv": "b36de182c1e00f1cb8eef130e1ef8998ed99fa01e0e06e1d78aaf858dfe3ab0f",
+    "evaluation/host_transitions.csv": "f3cb829b8f383a074249b277cb9bdb2c41c4a2c1135665c9b7d328bcbb3fe492",
+    "evaluation/paired_comparisons.csv": "ad96b83e6c33b7f67cae8c60a3cd3db1c83e8a1f39a216cd7e1c0b23b9a945f7",
+    "evaluation/per_host_metrics.csv": "4779096dd088024ded3ea944c48d29d00b2e0a3690619c978224027b0f2e893f",
+    "evaluation/summary.csv": "c3a69ff31b165bba7ae302a41f842d6d21a30e97ad6921f244cd0ae25e286735",
+    "evaluation/top2_source_evidence.csv": "def69d179933a8762413323f3379717c745509c45fdd31a80ba5f7ac54e83bf2",
+    "evaluation/training_prevalence.csv": "566ff11c41c7feeeff30e2397697957676396b936bdb3c608488d8389cfddb55"
+  },
+  "reproduction": {
+    "admission_runner_files_byte_identical": 6,
+    "evaluation_runner_files_byte_identical": 9,
+    "altered_host_outcome_rejected": true,
+    "existing_outputs_rejected": true
+  },
+  "new_fasta_payloads_in_git": false
+}

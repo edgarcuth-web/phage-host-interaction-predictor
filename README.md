@@ -28,6 +28,10 @@ endpoint, candidate library and frozen split.
   The [training-only complementary panel comparison](docs/complementary-panel-results.md)
   rescues four primary-test hosts versus prevalence at two tests, but newly
   misses four on B2. A stable benefit is not established.
+  A [same-source extension](docs/picard-extension-results.md) admits 138 additional
+  hosts in 114 new genomic groups. The fixed DIJ07_P2 + LF73_P1 pair rescues 11
+  and newly misses three versus prevalence, with unchanged mean test consumption;
+  the LF110_P2 pair loses nine net hits. This is not independent validation.
 - **Kaneko:** a separate 143-host, 42-candidate study targeting grade-3 complete
   spot clearing. Both methods tie on test Hit@2; capped tests consumed are 1.571
   for prevalence and 1.714 for host 4-mer. [Neither improvement criterion passed](docs/kaneko-baseline-results.md).
