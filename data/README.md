@@ -1,11 +1,18 @@
 # Data provenance
 
-Raw and processed datasets are intentionally not committed. The pinned source,
-checksum, label semantics and expected summary for the first dataset are recorded
-in the machine-readable registry at
-[`registry/genophi_ecoli_subset.v1.json`](registry/genophi_ecoli_subset.v1.json).
+Raw genomes and bulk source phenotype tables stay outside Git. Resource locks,
+protocols, receipts, selected feature caches and study outputs are committed
+under [`studies/`](studies/) and [`receipts/`](receipts/).
 
-## Step 1 dataset: GenoPHI E. coli subset
+| Input set | Scope | Sources and reproduction |
+| --- | --- | --- |
+| GenoPHI / primary MLC | 177 hosts, 94 phages; 16,597 observed labels after excluding 41 missing readings | [Registry](registry/genophi_ecoli_subset.v1.json); rebuild commands below |
+| Kaneko | 144 × 42 study-phage grades plus 432 control grades; 143 host assemblies available | [Workbook intake](../docs/kaneko-workbook-intake.md), [sequence intake](../docs/kaneko-sequence-intake.md), [143-host / 42-candidate protocol](../docs/kaneko-baseline-protocol.md) |
+| BASEL/ECOR | 25 hosts, 52 phages; incomplete pair labels | [Source intake](../docs/basel-ecor-published-reference.md), [sequence audit](../docs/basel-ecor-sequence-audit.md) |
+
+Each study retains its own endpoint, candidate identities and frozen inputs.
+
+## GenoPHI E. coli subset
 
 Source project: GenoPHI by Noonan et al.
 
@@ -74,13 +81,7 @@ DOI 10.5281/zenodo.21696332.
 
 ## Rebuilding the locked genome inputs
 
-The 177 host genomes and 94 phage genomes are not committed either, and they are
-large enough that losing the machine that held them is a realistic event. They
-are fully reconstructible: every file is pinned by URL, SHA-256 and exact byte
-size in a resource lock under [`studies/`](studies/), so a rebuild is a
-verification, not a re-derivation.
-
-Which lock covers what:
+Resource locks pin every genome by URL, SHA-256 and byte size:
 
 | Lock | Contents | Download hosts |
 | --- | --- | --- |
@@ -119,9 +120,8 @@ needed. Filtering the lock fetches the non-figshare half on its own:
     verify_resources(lock, Path('data/raw/genophi_host_study'), fetch=True)
     "
 
-That retrieves 94 phage genomes and 5 tables, 9.1 MB on disk, in about 9 seconds,
-each verified against its locked SHA-256. Dropping the filter line verifies the
-whole lock including the host genomes.
+That retrieves 94 phage genomes and 5 tables, 9.1 MB on disk, each verified
+against its locked SHA-256. Dropping the filter includes the host genomes.
 
 ### Fetching as part of a study
 

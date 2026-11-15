@@ -10,16 +10,14 @@ The later [paired baseline study](paired-baseline-results.md) adds explicit phag
 4-mer representations and frozen cold-phage/double-cold evaluation. Its primary
 improvement criterion was not met; it does not redefine this first task's endpoint.
 
-## Future retrieval-first objective is separate
+## Relationship to current retrieval work
 
-The proposed [host-conditioned phage discovery roadmap](host-conditioned-phage-retrieval-roadmap.md)
-adds a **new**, independently frozen research objective: discover existing
-phages from an explicitly versioned candidate library, including source-positive
-candidates not supported by currently annotated mechanisms. It is **not** a
-reinterpretation or replacement of this first pairwise task. It does not
-retroactively change this document's source label, genomic splits, baseline
-comparators, output semantics, or experimental claims. A future retrieval
-result needs its own versioned admission contract and independent validation.
+This document preserves the first pairwise task and its acceptance criteria.
+The later [matched ranking study](new-host-retrieval-results.md) and
+[FASTA-to-ranking command](research-fasta-ranking.md) are implemented under
+separate protocols. They do not change this task's endpoint, splits or claims.
+Retrieval-to-SDL admission and independent validation remain pending; see the
+[current roadmap](host-conditioned-phage-retrieval-roadmap.md).
 
 ## Task and evidence
 

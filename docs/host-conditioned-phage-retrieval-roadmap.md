@@ -1,222 +1,93 @@
 # Host-conditioned phage retrieval roadmap
 
 **Objective:** given an admitted bacterial genome and a versioned library of
-existing phages, rank candidates with activity under a named source endpoint.
-Candidates with missing receptor/defense annotations remain eligible: unknown
-mechanism evidence is not evidence of non-infection.
-
-[Reference cases and project decisions](reference-cases.md) connects the
-literature to the priorities below, with separate evidence and applicability
-limits for each case.
+existing phages, rank candidates under a named source endpoint. Missing
+receptor/defense annotations do not exclude a candidate.
 
 ## Implemented and pending
 
-| Component | Status |
+| Component | Status and evidence |
 | --- | --- |
-| Annotation, host 4-mer, additive pair and GenoPHI comparisons | Completed development studies; see the [results index](README.md#results-and-reproduction) |
-| Two-route score/rescue audit | [Offline evaluator implemented](offline-retrieval-rescue-evaluator.md); consumes supplied scores |
-| Fixed-library screening budgets | [Existing-score audit complete](screening-budget-audit.md); grouped-host test cost savings coexist with B2 failure |
-| Published BASEL/ECOR reference | [Sequence audit](basel-ecor-sequence-audit.md), [fixed controls](basel-ecor-controls.md) and [bilinear comparison](paired-interaction-results.md) complete. Bilinear primary Hit@2 bounds 48%–60%; not a release holdout |
-| Evo2 host representation | Paused optional branch; bounded pilots and extraction/comparison software retained; full-cohort comparison unexecuted |
-| Learned host–phage interaction ranking | [Bilinear sequence model trained and compared](paired-interaction-results.md); primary development AP improvement not established. No validated serving/retriever release |
-| New-host fixed-library comparison | [Matched comparison complete](new-host-retrieval-results.md); bilinear hit/cost improvement not established |
-| Research FASTA-to-ranking | [Command delivered](research-fasta-ranking.md) for primary host 4-mer and prevalence; software conformance checked, no model promotion |
-| Public new-host data intake | [Initial five-panel review](external-evaluation-intake.md#public-source-review-2026-11-13) and [Vitt/Kaneko follow-up](external-evaluation-intake.md#public-panel-follow-up-2026-11-14) complete; source-data blockers recorded, no independent cohort admitted |
-| Kaneko workbook intake | [Seven-workbook audit complete](kaneko-workbook-intake.md): 6,048 study-phage grades plus 432 controls, no missing matrix cells; metadata routes for 144 hosts and 42 study phages. Genome/stock verification and study admission remain pending |
-| Kaneko sequence sources | [143 host assemblies and four phage genomes retrieved](kaneko-sequence-intake.md), with source-run links, byte checks, basic QC and exact-hash comparisons; host 127 and 38 phage assemblies remain pending |
-| Kaneko 42-candidate baseline | [Frozen comparison complete](kaneko-baseline-results.md): test Hit@2 is 42.86% for both methods; host 4-mer cost is higher at the point estimate. No improvement established; seven test hosts in five groups limit precision |
-| Retrieval benchmark v0 | [Proposed design](retrieval-rescue-benchmark-v0.md); scientific protocol not frozen |
-| RetrievalResult-to-SDL admission | Proposed; no serving/admission contract implemented |
+| 94-phage development comparisons | [Matched comparison](new-host-retrieval-results.md) and [budget audit](screening-budget-audit.md) complete; bilinear improvement not established |
+| Research FASTA-to-ranking | [Command available](research-fasta-ranking.md) for frozen host 4-mer and prevalence models; no model promotion |
+| Kaneko 42-candidate comparison | [Complete](kaneko-baseline-results.md): both methods reach test Hit@2 of 42.86%; host 4-mer has higher point-estimate cost |
+| BASEL/ECOR reference | [Fixed controls](basel-ecor-controls.md) and [bilinear comparison](paired-interaction-results.md) complete; remains an inspected cold-phage reference |
+| Public-data intake | [Source review](external-evaluation-intake.md), [Kaneko workbooks](kaneko-workbook-intake.md) and [sequence audit](kaneko-sequence-intake.md) recorded; independent release validation pending |
+| SDL integration | [PairPrediction exchange](model-interface.md) validates files and abstention; trained serving and retrieval-result admission remain pending |
+| Two-route retrieval | [Supplied-score evaluator](offline-retrieval-rescue-evaluator.md) implemented; [benchmark design](retrieval-rescue-benchmark-v0.md) remains unfrozen |
 
-The 177-host/94-phage cohort is an already-inspected development benchmark.
-Its 16,597 observed MLC labels exclude 41 missing readings. Known-library results
-cannot establish unseen-phage, cross-species or release performance. The latest
-[GenoPHI sensitivity](genophi-seed-sensitivity.md) did not establish its registered
-robustness claim.
+The [results index](README.md#results-and-reproduction) links earlier annotation,
+host 4-mer, additive, GenoPHI and evidence-coverage studies. Their protocols,
+acceptance decisions, scores, weights and negative results remain frozen.
+
+## Next work
+
+Updated 2026-11-14. The matched 94-candidate comparison, research ranking command
+and first Kaneko comparison are complete.
+
+1. **Inspect saved Kaneko failures.** Use the [per-host metrics and per-phage
+   diagnostics](kaneko-baseline-results.md#frozen-implementation-and-saved-artifacts)
+   to choose one data or representation hypothesis. Any new fit or selection
+   needs a separate protocol; retain the existing split, endpoint and negative
+   result. Seven test hosts in five groups limit precision.
+2. **Finish source checks.** Resolve phenotype reuse/stock questions, assess
+   contamination/completeness and compare near-duplicate hosts across sources
+   before making broader claims. Host 127 and 38 phage assemblies remain
+   unavailable; the latter are needed for later paired-sequence comparisons.
+   Vitt's pair-level table remains unlocated.
+3. **Reserve suitable validation inputs.** The reviewed panels do not supply an
+   eligible independent cohort for the current 94 stocks. The 100 prospective
+   source files remain quarantined pending identity, endpoint, reuse and
+   partial-label review. Additional same-study hosts and independent
+   laboratory/assay validation have different roles.
+4. **Freeze a follow-up only when justified.** Specify inputs, comparison,
+   resource limits and acceptance before fitting; select using validation only
+   and retain all held-out failures. No new experiment is authorized by this
+   roadmap alone.
+
+Kaneko has its own grade-3 complete-clearing endpoint and 42 named candidates.
+Its within-source results do not validate the earlier 94-output models.
+The earlier 177-host cohort is also inspected development data: 16,597 observed
+MLC labels, with 41 missing readings excluded. Neither cohort establishes
+unseen-phage, cross-species or release performance.
 
 ## Candidate discovery and ownership
 
-Evidence retrieval and learned retrieval query a defined library independently.
-Their versioned union retains route provenance and missingness, so a model can
-nominate candidates unsupported by available annotations. A source-positive pair
-rescued by a model shows ranking complementarity; causal mechanism discovery
-requires separate experimental evidence.
-
 | Predictor owns | SDL owns |
 | --- | --- |
-| Model-specific representations and library encoding | Source library snapshots and HostProfile/HostState identity |
-| Candidate scores, training and evaluation | Mechanism evidence and provenance |
-| Model preprocessing, applicability and calibration | Union/decision policies, assay context, experiments and feedback |
+| Model-specific representations, library encoding and preprocessing | Source library snapshots and HostProfile/HostState identity |
+| Candidate scores, training, evaluation and calibration | Mechanism evidence, experimental context and provenance |
+| Applicability and model artifacts | Union/decision policies, experiments and feedback |
 
-Exhaustive pair scoring is sufficient for the current 94-phage library. A separate
-two-tower encoder, approximate-neighbour index or reranker must justify its added
-complexity through comparison with that scorer. Untrained Evo2 cosine similarity
-is not a validated infection score.
+Exhaustive pair scoring is sufficient for the current 94-phage library. New
+encoders, neighbour indexes or rerankers need evidence of added value. The
+[reference cases](reference-cases.md) record the rationale.
+
+Later two-route retrieval would preserve the versioned union of evidence and
+model nominations, including route provenance and missingness. A rescued
+source-positive pair demonstrates ranking complementarity; mechanism discovery
+requires separate evidence. Fusion, engineered variants and cocktail studies
+are follow-up work.
+
+Retrieval-to-SDL admission still needs a versioned result contract binding the
+host/genome/context, library snapshot, per-candidate identity and route,
+missingness, endpoint score or `not_estimated`, model/preprocessing hashes,
+applicability, considered-pool counts, filtering reasons and K/tie policy.
+The [existing pair exchange](model-interface.md) remains separate. Source
+activity cannot be relabelled as `productive_infection`; see
+[endpoint semantics](endpoint-semantics.md).
 
 ## Paused Evo2 branch
 
 Decision, 2026-11-13: pause new Evo2 development and full-cohort extraction.
-The completed engineering pilots establish access and cache integrity, with no
-strain-level ranking result. The current hosted plan projects about 1.425 TB of
-intermediate responses for roughly 5.8 MB of final host-vector payload; see the
-[source-verified preflight](https://github.com/edgarcuth-web/phage-host-interaction-predictor/issues/24#issuecomment-6488966629).
-Issue #24 is closed as `not_planned`.
+Bounded pilots establish access and cache integrity, with no strain-level
+ranking result. The [source-verified preflight](https://github.com/edgarcuth-web/phage-host-interaction-predictor/issues/24#issuecomment-6488966629)
+projects about 1.425 TB of intermediate responses for roughly 5.8 MB of final
+host vectors. Issue #24 is closed as `not_planned`.
 
-Retain protocols, pilots, scores and extraction code for reproducibility. Shared
-input validation and evaluation remain available to the main retrieval work.
-This is a resource-priority decision, with Evo2 predictive value still untested
-on this cohort. Any revival needs a separately frozen, bounded experiment and
-prespecified acceptance against inexpensive baselines. It cannot block the work
-below or reuse a zero-budget plan as authorization for inference.
-
-## Next work
-
-Plan updated 2026-11-14. Steps 1–3 are complete: the matched comparison retains
-its negative bilinear result and the [research command](research-fasta-ranking.md)
-reuses declared baselines. The [first public-data review](external-evaluation-intake.md#public-source-review-2026-11-13)
-is complete, with no eligible independent cohort for the fixed 94 stocks.
-**Next: obtain suitable validation inputs; reservation remains blocked.** The
-prospective same-study files are quarantined, not an admitted release set. Any
-model change needs a separate protocol.
-The [Kaneko workbook audit](kaneko-workbook-intake.md) now supplies original
-ordinal pair grades and number/name sequence routes. It supersedes the initial
-workbook-access blocker while retaining the accession-range discrepancy.
-The [sequence follow-up](kaneko-sequence-intake.md) supplies 143 host assemblies
-and four phage genomes. The [42-candidate protocol](kaneko-baseline-protocol.md)
-fixes a source-grade-3 endpoint, 27 genomic groups and a single split. The
-[completed prevalence/host 4-mer comparison](kaneko-baseline-results.md) did not
-establish improved Hit@2 or lower capped test cost. Retain the seven-host/five-group
-test limitation. Next: inspect the saved per-host/per-phage failures to choose
-one data or representation hypothesis before any separately frozen experiment.
-Broader reuse/stock/quality questions
-and cross-source near-duplicate checks remain documented. Paired-sequence
-comparisons need the remaining phage assemblies.
-Vitt's pair table remains unlocated.
-
-### 1. Align the new-host, fixed-library comparison
-
-- [x] Reuse the completed budget audit and availability ledger; record only the
-  remaining gaps for prevalence, annotation, host 4-mer, GenoPHI and bilinear
-  scoring. Check full candidate support, endpoint, sequence/feature identity,
-  training hosts/phages, preprocessing and validation selection. Separate
-  reusable scores, score-only regeneration, required refits and unavailable
-  methods. Sparse paired-test exports cannot stand in for a full library.
-- [x] Freeze a new study protocol for unseen E. coli host groups and the existing
-  94-phage library, with all library phages available to training. Reuse the
-  existing primary grouped-host split and retain B2 as a prespecified stress
-  test. Bind inputs, source-MLC labels/unknowns, exact sequences, feature
-  availability, training/validation scopes, method versions and selection rules
-  before any new fit or scoring.
-- [x] Reuse a fitted artifact only when those scopes match. The current crossed
-  bilinear fit uses a restricted training phage set; comparing it directly with
-  models trained on all 94 is not this matched experiment. Freeze necessary
-  refits and resource limits, or report the method unavailable.
-
-**Done when:** a compact compatibility ledger and a hash-bound executable study
-protocol specify the comparison. Historical protocols and acceptance decisions
-remain unchanged; the inspected cohort remains development data.
-
-### 2. Run the matched ranking comparison and diagnose failures
-
-- [x] Score every candidate using the existing retrieval and budget evaluators.
-  Keep all-negative complete hosts. Preserve the frozen incomplete-label-host
-  exclusions and all 94 candidates; no test-label-based candidate filtering.
-- [x] Report host-macro Hit@2 as primary; K=1,3,5, Recall/MRR, capped tests consumed,
-  coverage/abstention and subgroup failures as secondary. Freeze contrasts,
-  acceptance/tradeoff rules and paired host-group intervals in step 1. Pair AP
-  remains a diagnostic, not a replacement for within-host ranking.
-- [x] Retain validation, primary and B2 outcomes, including failures against
-  prevalence and GenoPHI. Inspect existing score/feature errors to choose one
-  concrete data or representation hypothesis, without another test-seed search.
-
-**Done when:** one reproducible report contains matched methods, per-host scores,
-costs, exclusions and a recorded next decision. Reanalysis of inspected data
-cannot promote a model, even if a new development contrast is favorable.
-
-### 3. Deliver a research FASTA-to-ranking command
-
-- [x] Load declared frozen preprocessing and weights, verify host FASTA and the
-  library snapshot, then emit scores/ranks, endpoint, model/sequence hashes,
-  applicability, missingness and explicit unavailable results.
-- [x] Reproduce the step-2 scorer on admitted inputs; check wrong inputs, unknown
-  candidates and incomplete score support. A software demo can use a declared
-  baseline even if the learned comparison fails; it must report that limitation.
-
-**Done when:** one documented command produces a reproducible research candidate
-list. Source scores remain uncalibrated. This does not implement SDL decision
-admission; serving into decisions needs the retrieval contract and receiver
-policy below.
-
-### Public-data intake alongside steps 1–3
-
-- [x] Review the five proposed public panels for linked genome identities, measured
-  positive/negative outcomes, source assay definitions and explicit unknowns.
-  Record source lineage, available host/phage identity evidence, reuse terms,
-  evidence gaps and a frozen role or rejection reason in the
-  [intake](../data/studies/public_new_host_intake.v1.json). No source is admitted.
-- [x] Inspect Vitt's supplementary documents and reconcile Kaneko's published
-  accession intervals with public run metadata. Keep the
-  [follow-up receipt](../data/studies/public_panel_followup.v1.json) separate from
-  the original frozen intake; neither source has admitted pair labels.
-- [x] Read all seven Kaneko workbooks, preserve the 0–3 spot-clearing grades,
-  reconcile all 135 source aggregate counts, and locate number/name metadata
-  routes for all 144 hosts and 42 study phages. See the
-  [audit and replay command](kaneko-workbook-intake.md). This is not genome/stock
-  verification or admission to training.
-- [x] Search across the original BioSamples, retrieve 143 host assemblies with
-  original-run provenance and four versioned phage genomes, and record file
-  integrity, basic sequence QC and frozen-reference exact-hash comparisons.
-  See the [sequence audit](kaneko-sequence-intake.md); no cohort is admitted.
-- [x] Compute all host similarities and freeze the available-genome cohort,
-  explicit grade-3 complete-clearing endpoint, genomic groups, partitions and
-  first 42-candidate baseline protocol. Host 127 is explicitly excluded; no
-  source grade was changed and no model was fit during this freeze. See the
-  [protocol and limited test support](kaneko-baseline-protocol.md).
-- [x] Implement and run the two fixed baselines under that protocol. Keep all
-  42 candidates, endpoint-specific artifact semantics, train-only preprocessing,
-  exact tie metrics, grouped intervals and all held-out failures. The
-  [saved comparison and independent checks](kaneko-baseline-results.md) retain
-  the negative result; no split, hyperparameter or target was changed.
-- [ ] Resolve broader phenotype reuse/stock questions, assess contamination/
-  completeness and compare near-duplicate hosts across sources before making
-  claims beyond this inspected, within-source research comparison.
-- [ ] Obtain or assemble host 127 and the 38 read-only phage routes. Phage genomes
-  support later paired-sequence comparisons; prevalence/host 4-mer controls use
-  the host sequences and source labels.
-- [ ] Locate Vitt's pair-level source table. Aggregate host-range counts do not
-  supply individual pair labels.
-- [ ] Reserve suitable evaluation data before model selection. Distinguish
-  additional same-study hosts from independent laboratory/assay validation.
-  BASEL has known host IDs and stays an inspected cold-phage reference.
-  The reviewed panels do not supply an eligible independent cohort for the
-  current 94 stocks. The 100 prospective source files are quarantined pending
-  identity, endpoint, reuse and partial-label protocol review; no new fit or
-  scoring is authorized by that reservation.
-
-**Done when:** each proposed source has an intake decision and a frozen role,
-or a concrete rejection reason. If no suitable release cohort is available,
-research work continues and release validation remains pending.
-
-### Conditional follow-up
-
-- [ ] If failure analysis supports a change, freeze one bounded feature/model
-  experiment and compare it with the same controls. Select using validation
-  only; retain all held-out failures. Revise later tasks from that evidence.
-
-Evo2 full-cohort extraction remains paused. New retrieval infrastructure,
-two-route fusion/union, engineered variants and cocktail efficacy are later
-studies, not prerequisites for the matched baseline or research command.
-
-A retrieval result must bind the host/genome/context, library snapshot,
-per-candidate identity and route, missingness, endpoint score or `not_estimated`,
-model/preprocessing hashes, applicability, considered-pool counts, filtering
-reasons and K/tie policy. This contract is still proposed. The existing
-[PairPrediction exchange](model-interface.md) remains a separate interface.
-
-Source activity does not become `productive_infection` by renaming a field.
-Mechanistic targets, engineered phage generation, cocktail benefit and clinical
-efficacy are outside the evidence supplied by these retrieval studies. See
-[endpoint semantics](endpoint-semantics.md) and the
-[benchmark design](retrieval-rescue-benchmark-v0.md) for the detailed boundaries.
-
-
+Protocols, pilots, scores and extraction code remain available for reproduction.
+The dedicated preflight Actions workflow has been removed; the
+[local runbook](nvidia-evo2-extraction.md) retains source verification and
+zero-request planning. Revival requires a separately frozen, bounded experiment
+and acceptance against inexpensive baselines. A zero-budget plan does not
+authorize inference.
