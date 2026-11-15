@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "independent_of_builder": true,
+  "source_matrix_cells_checked": 1478,
+  "observed_source_labels_checked": 16597,
+  "unknown_source_cells_checked": 41,
+  "host_cutoff_checks": 854,
+  "candidate_rank_intervals_checked": 80276,
+  "raw_annotation_rows_checked": 11979
+}

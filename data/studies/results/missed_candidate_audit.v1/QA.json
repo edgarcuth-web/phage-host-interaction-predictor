@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "snapshot": "5962f5caed0221455ec34b542e400a6438bb49e7",
+  "source_hosts": 177,
+  "candidate_phages": 94,
+  "observed_pairs": 16597,
+  "source_positive_pairs": 3813,
+  "unknown_pairs": 41,
+  "scored_host_panel_occurrences": 122,
+  "unique_scored_hosts": 93,
+  "deterministic_host_method_records": 854,
+  "random_reference_records": 122,
+  "ranked_candidate_rows": 80276,
+  "original_metric_comparisons": 4840,
+  "maximum_hit_metric_error": 1.1102230246251565e-16,
+  "miss_or_unknown_records": 200,
+  "confirmed_ranking_miss_records": 179,
+  "tie_risk_records": 0,
+  "exported_source_pairs": 1478,
+  "exported_raw_annotations": 11979,
+  "no_source_positive_hosts_all177": [
+    "DEC2A",
+    "NILS22",
+    "NILS24"
+  ],
+  "incomplete_hosts_all177": [
+    {
+      "bacterium": "370D",
+      "positive_candidates": 7,
+      "unknown_candidates": 39
+    },
+    {
+      "bacterium": "ECOR53",
+      "positive_candidates": 16,
+      "unknown_candidates": 2
+    }
+  ],
+  "focus_positive_counts": {
+    "NILS53": 11,
+    "NILS78": 7,
+    "AL505": 41
+  },
+  "focus_raw_annotation_counts": {
+    "NILS53": 846,
+    "NILS78": 846,
+    "AL505": 0
+  },
+  "new_fits": 0,
+  "new_model_inference": 0,
+  "verified_input_files": 11
+}
