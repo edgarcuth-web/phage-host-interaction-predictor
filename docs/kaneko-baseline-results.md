@@ -43,6 +43,42 @@ costs of 1.429 for prevalence and 1.571 for host 4-mer. The complete report also
 retains K=1,3,5, positive-eligible recall, MRR and per-phage selection diagnostics.
 These descriptive readouts do not replace the primary endpoint.
 
+## What two tests recovered on the inspected splits
+
+A lab that runs both tests can ask how many grade-3 host–phage pairs it would
+recover. A lab that stops at the first positive can ask how many hosts it would
+cover and how many tests it would consume. The same frozen rankings give
+different answers to these questions.
+
+| Partition | Method | Hosts with a hit in the first two | Positive pairs if both tests run | Tests consumed if stopping at first hit |
+| --- | --- | ---: | ---: | ---: |
+| Validation (13 hosts) | Prevalence | 10/13 | 10/26 | 16 |
+| Validation (13 hosts) | Host 4-mer | 10/13 | 17/26 | 18 |
+| Test (7 hosts) | Prevalence | 3/7 | 3/14 | 11 |
+| Test (7 hosts) | Host 4-mer | 3/7 | 5/14 | 12 |
+
+The test-set tie in host coverage hides one gain and one loss. Host 125 gained
+a hit on its second test, while host 082 lost its first-test hit. Hosts 025 and
+126 each contributed one extra positive pair when both tests ran. These two
+hosts and host 082 share genomic group 025. Host 094 had five grade-3 candidates
+in the source panel and both methods missed all five at this budget. Hosts 092
+and 135 had no grade-3 candidate among the 42 and remain in the denominator.
+
+To reproduce the pair counts, filter the saved per-host metrics to the primary
+grade-3 endpoint. Within each partition and method, sum `positive_candidates`
+times `recall@2`, assigning zero contributions to hosts with zero positives.
+The totals agree with an independent sum of `expected_positive_top2_selections`
+in the per-phage diagnostics. Both calculations retain the frozen score-tie
+expectation. Pair counts refer to host–phage pairs, so one phage can count on
+more than one host.
+
+This post hoc readout preserves the original acceptance decision. It motivates
+a prospective distinction for the next comparison: if the question is how many
+positives a fixed screening budget buys, prespecify mean positive pairs per host
+after both tests as the primary measure. Report host coverage and first-hit cost
+alongside it. A claim about learned representations would also require a matched
+annotation baseline and a cohort reserved before model selection.
+
 ## Frozen implementation and saved artifacts
 
 The [protocol](kaneko-baseline-protocol.md) and its bound design, input hashes,
